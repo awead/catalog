@@ -40,7 +40,8 @@ Blacklight.configure(:shared) do |config|
         "pub_date",
         "subject_era_facet",
         "subject_geo_facet",
-        "subject_topic_facet"]
+        "subject_topic_facet",
+        "genre_facet"]
     }  
   }
   
@@ -81,7 +82,8 @@ Blacklight.configure(:shared) do |config|
       "language_facet",
       "lc_1letter_facet",
       "subject_geo_facet",
-      "subject_era_facet"
+      "subject_era_facet",
+      "genre_facet"
     ],
     :labels => {
       "format"              => "Format",
@@ -90,7 +92,8 @@ Blacklight.configure(:shared) do |config|
       "language_facet"      => "Language",
       "lc_1letter_facet"    => "Call Number",
       "subject_era_facet"   => "Era",
-      "subject_geo_facet"   => "Region"
+      "subject_geo_facet"   => "Region",
+      "genre_facet"         => "Genre"
     },
     # Setting a limit will trigger Blacklight's 'more' facet values link.
     # If left unset, then all facet values returned by solr will be displayed.
@@ -116,7 +119,7 @@ Blacklight.configure(:shared) do |config|
       "language_facet",
       "published_display",
       "published_vern_display",
-      "lc_callnum_display"
+      "lc_callnum_display",
     ],
     :labels => {
       "title_display"           => "Title:",
@@ -127,7 +130,7 @@ Blacklight.configure(:shared) do |config|
       "language_facet"          => "Language:",
       "published_display"       => "Published:",
       "published_vern_display"  => "Published:",
-      "lc_callnum_display"      => "Call number:"
+      "lc_callnum_display"      => "Call number:",
     }
   }
 
@@ -137,36 +140,72 @@ Blacklight.configure(:shared) do |config|
     :field_names => [
       "title_display",
       "title_vern_display",
-      "subtitle_display",
-      "subtitle_vern_display",
+      "unititle_display",
+      "title_addl_display",
       "author_display",
       "author_vern_display",
+      "edition_display",
+      "series_display",
       "format",
+      "participants_display",
+      "recinfo_display",
+      "summary_display",
+      "contents_display",
+      "notes_display",
+      "arcsource_display",
+      "collection_display",
+      "donor_display",
+      "access_display",
+      "subject_display",
+      "genre_display",
+      "contributors_display",
+      "inclworks_display",
       "url_fulltext_display",
       "url_suppl_display",
       "material_type_display",
+      "medium_display",
       "language_facet",
       "published_display",
       "published_vern_display",
       "lc_callnum_display",
-      "isbn_t"
+      "isbn_t",
+      "upc_display",
+      "pubnum_display"
     ],
     :labels => {
       "title_display"           => "Title:",
       "title_vern_display"      => "Title:",
-      "subtitle_display"        => "Subtitle:",
-      "subtitle_vern_display"   => "Subtitle:",
+      "unititle_display"        => "Uniform Title:",
+      "title_addl_display"      => "Additional Title:",
       "author_display"          => "Author:",
       "author_vern_display"     => "Author:",
+      "edition_display"         => "Edition:",
+      "series_display"          => "Series:",
       "format"                  => "Format:",
+      "participants_display"    => "Participants:",
+      "recinfo_display"         => "Recording Info:",
+      "summary_display"         => "Summary",
+      "contents_display"        => "Contents:",
+      "notes_display"           => "Notes:",
+      "arcsource_display"       => "Archive Source:",
+      "collection_display"      => "Collection Name:",
+      "donor_display"           => "Donor:",
+      "access_display"          => "Access:",
+      "subject_display"         => "Subjects:",
+      "genre_display"           => "Form/Genre:",
+      "contributors_display"    => "Contributors:",
+      "inclworks_display"       => "Includes Works:",
       "url_fulltext_display"    => "URL:",
       "url_suppl_display"       => "More Information:",
       "material_type_display"   => "Physical description:",
+      "medium_display"          => "Medium Details:",
       "language_facet"          => "Language:",
       "published_display"       => "Published:",
       "published_vern_display"  => "Published:",
       "lc_callnum_display"      => "Call number:",
-      "isbn_t"                  => "ISBN:"
+      "isbn_t"                  => "ISBN:",
+      "upc_display"             => "UPC:",
+      "pubnum_display"          => "Publisher Number:"
     }
   }
 
