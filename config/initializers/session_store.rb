@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
   :key         => '_blacklight-app_session',
-  :secret      => 'eb9217b5c421370589d36b27e1bc37f451e82ad7d38136b0c70f9d9c90bf6773ee54e56c2960544845c956ab4f2df8c72ca08ada2463bd48c6ba334cf0fb7ae8'
+  :secret      => '5d5a47207cef6c4d5dd98ad5265900458427fc9b63235e78ba780bd2eeb883d90e727e79e968b7faf61f69f5d17a5a4dfc696bd1b6ac6ddb154d3d535e060a84'
 }
 
 # Use the database for sessions instead of the cookie-based default,
