@@ -1,0 +1,53 @@
+/* Top Banner */
+h1.site_title {
+    background: url(../images/logo.png) no-repeat top left; 
+    height: 65px; 
+    width: 120px;
+}
+
+.first h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+/**
+h1.site_title a {
+  display:block; 
+  height: 35px; 
+  width:120px; 
+  text-indent: -9999px; 
+  overflow: hidden; 
+  text-decoration: none; 
+  border: 0px;
+} 
+**/
+
+h1.site_title a:link, h1.site_title a:visited, h1.site_title a:hover, h1.site_title a:active {border: 0px;}
+
+h2.search {margin:0; display:inline;}
+
+
+/* Modifications to Blacklight */
+body { font-size: .8em }
+
+dl.defList    { 
+  width: 620px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+dl.defList dt { 
+  clear: left;
+  float: left;
+  width: 150px;
+  margin: 0;
+  padding: 1px 5px 1px;
+  font-weight: bold;
+}
+
+dl.defList dd { 
+  float: left;
+  width: 450px;
+  margin: 0;
+  padding: 1px 5px 1px;
+}
