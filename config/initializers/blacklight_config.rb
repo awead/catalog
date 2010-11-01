@@ -98,8 +98,14 @@ Blacklight.configure(:shared) do |config|
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.     
     :limits => {
-      "subject_facet" => 20,
-      "language_facet" => true
+      "format"              => 10,
+      "pub_date"            => 10,
+      "subject_topic_facet" => 10,
+      "language_facet"      => true,
+      "lc_1letter_facet"    => 10,
+      "subject_era_facet"   => 10,
+      "subject_geo_facet"   => 10,
+      "genre_facet"         => 10
     }
   }
 
@@ -140,7 +146,7 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display 
   config[:show_fields] = {
     :field_names => [
-"title_display",
+      "title_display",
       "title_vern_display",
       "unititle_display",
       "title_addl_display",
