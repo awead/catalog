@@ -1,8 +1,8 @@
 production:
-    url: http://127.0.0.1:8983/solr/blacklight
+    url: http://127.0.0.1:8984/solr/blacklight
 development:
-    url: http://127.0.0.1:8983/solr/blacklight
+    url: http://127.0.0.1:8984/solr/blacklight
 test: &TEST
-    url: http://127.0.0.1:8983/solr/blacklight
+    url: http://127.0.0.1:8984/solr/blacklight
 cucumber:
     <<: *TEST
