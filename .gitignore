@@ -6,8 +6,6 @@ nohup.out
 *~
 *.swp
 
-vendor/plugins/blacklight
-
 log/*
 
 public/plugin_assets
