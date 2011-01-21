@@ -1,8 +1,39 @@
+/* Rockhall.com bits */
+
+html { height: 100%; width:100%; } 
+
+body {
+    font-size: 12px;
+    font-family: Georgia, Times, serif;
+    background: #1d1d19 url(../images/header_tile_bg.jpg) 0 0 repeat-x;
+    padding: 0;
+}
+
+#hd-helper {
+	margin: 0 auto;
+	background: transparent url(../images/header_bg.jpg) top center no-repeat;
+	padding: 0;
+}
+
+#hd {
+	width: 893px;
+	margin: 0 auto;
+	display: block;
+	height: 198px;
+	position: relative;
+	padding: 0;
+}
+
 /* Top Banner */
 h1.site_title {
-    background: url(../images/logo.png) no-repeat top left; 
-    height: 65px; 
-    width: 120px;
+	text-indent: -9999px;
+	background: transparent url(../images/logo_flag.png) 0 0 no-repeat;
+	width: 149px;
+	height: 183px;
+
+	position: absolute;
+	left: -28px;
+	top: 0;
 }
 
 .first h1 {
@@ -28,7 +59,10 @@ h2.search {margin:0; display:inline;}
 
 
 /* Modifications to Blacklight */
-body { font-size: .8em }
+
+#doc4 {
+  clear;
+}
 
 dl.defList    { 
   width: 620px;

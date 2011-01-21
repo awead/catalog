@@ -8,6 +8,9 @@ nohup.out
 
 log/*
 
+vendor/plugins/*
+vendor/plugins/blacklight/*
+
 public/plugin_assets
 public/plugin_assets/
 
