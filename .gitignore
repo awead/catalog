@@ -17,3 +17,4 @@ public/plugin_assets/
 tmp/**/*
 tmp/performance 
 
+config/solr.yml

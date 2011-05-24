@@ -66,6 +66,8 @@ Blacklight.configure(:shared) do |config|
   config[:facet] = {
     :field_names => (facet_fields = [
       "format",
+      "ead_facet",
+      "material_facet",
       "pub_date",
       "subject_topic_facet",
       "language_facet",
@@ -76,6 +78,8 @@ Blacklight.configure(:shared) do |config|
     ]),
     :labels => {
       "format"              => "Format",
+      "ead_facet"           => "Archival Component",
+      "material_facet"      => "Archival Material",
       "pub_date"            => "Publication Year",
       "subject_topic_facet" => "Topic",
       "language_facet"      => "Language",
@@ -162,6 +166,8 @@ Blacklight.configure(:shared) do |config|
       "notes_display",
       "arcsource_display",
       "collection_display",
+      "unitdate_display",
+      "location_display",
       "donor_display",
       "access_display",
       "subject_display",
@@ -194,9 +200,11 @@ Blacklight.configure(:shared) do |config|
       "recinfo_display"         => "Recording Info:",
       "summary_display"         => "Summary",
       "contents_display"        => "Contents:",
+      "location_display"        => "Location:",
       "notes_display"           => "Notes:",
       "arcsource_display"       => "Archive Source:",
       "collection_display"      => "Collection Name:",
+      "unitdate_display"        => "Unit Date:",
       "donor_display"           => "Donor:",
       "access_display"          => "Access:",
       "subject_display"         => "Subjects:",
