@@ -131,7 +131,9 @@ Blacklight.configure(:shared) do |config|
       "language_facet",
       "published_display",
       "published_vern_display",
-      "lc_callnum_display"
+      "lc_callnum_display",
+      "unitdate_display",
+      "collection_display"
     ],
     :labels => {
       "title_display"           => "Title:",
@@ -142,7 +144,9 @@ Blacklight.configure(:shared) do |config|
       "language_facet"          => "Language:",
       "published_display"       => "Published:",
       "published_vern_display"  => "Published:",
-      "lc_callnum_display"      => "Call number:"
+      "lc_callnum_display"      => "Call number:",
+      "unitdate_display"        => "Dates:",
+      "collection_display"      => "Collection:"
     }
   }
 
@@ -153,6 +157,9 @@ Blacklight.configure(:shared) do |config|
       "title_display",
       "title_vern_display",
       "unititle_display",
+      "unitdate_display",
+      "accessrestrict_display",
+      "processinfo_display",
       "title_addl_display",
       "author_display",
       "author_vern_display",
@@ -166,7 +173,6 @@ Blacklight.configure(:shared) do |config|
       "notes_display",
       "arcsource_display",
       "collection_display",
-      "unitdate_display",
       "location_display",
       "donor_display",
       "access_display",
@@ -205,6 +211,8 @@ Blacklight.configure(:shared) do |config|
       "arcsource_display"       => "Archive Source:",
       "collection_display"      => "Collection Name:",
       "unitdate_display"        => "Unit Date:",
+      "accessrestrict_display"  => "Access Restrictions:",
+      "processinfo_display"     => "Process Info:",
       "donor_display"           => "Donor:",
       "access_display"          => "Access:",
       "subject_display"         => "Subjects:",
