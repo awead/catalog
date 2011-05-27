@@ -66,7 +66,6 @@ Blacklight.configure(:shared) do |config|
   config[:facet] = {
     :field_names => (facet_fields = [
       "format",
-      "ead_facet",
       "material_facet",
       "collection_display",
       "pub_date",
@@ -79,7 +78,6 @@ Blacklight.configure(:shared) do |config|
     ]),
     :labels => {
       "format"              => "Format",
-      "ead_facet"           => "Archival Component",
       "material_facet"      => "Archival Material",
       "collection_display"  => "Archival Collection",
       "pub_date"            => "Publication Year",
