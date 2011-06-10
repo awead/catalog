@@ -8,6 +8,10 @@ nohup.out
 
 log/*
 
+rerun.txt
+
+spec/fixtures/ead/*
+
 vendor/plugins/*
 vendor/plugins/blacklight/*
 
