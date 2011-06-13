@@ -1,0 +1,21 @@
+<% extra_head_content << capture do %>
+  <%= stylesheet_link_tag 'blacklight_ext_ead_simple', :plugin => :blacklight_ext_ead_simple %>
+<% end %>
+
+<% sidebar_items << capture do %>
+  <%= render :partial => '/components/sidebar' %>
+<% end %>
+
+<h1> <%= @documents.first["collection_display"] %> ( <%= @documents.first["ead_id"] %> ) </h1>
+<h2> Collection Inventory </h2>
+
+<%= component_trail(@documents.first) %>
+
+<% @documents.each do |document| %>
+  
+  <%= render :partial => "catalog/_show_partials/_ead/component", :locals => {  
+    :level => params[:level],
+    :document => document,
+    :children => document["component_children_b"] } %>
+
+<% end %>

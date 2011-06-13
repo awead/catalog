@@ -1,0 +1,12 @@
+<% element.xpath('list').each do |list| %>
+  <% if !list.xpath('head').first.blank? -%>
+    <h3> 
+      <%= list.xpath('head').first.text  %>
+    </h3>
+  <% end -%>
+  <% list.xpath('item').each do |listitem| %>
+    <ul>
+      <li><%= listitem.text %></li>
+    </ul>
+  <% end %>
+<% end %>

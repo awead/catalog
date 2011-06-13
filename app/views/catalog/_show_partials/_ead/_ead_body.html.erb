@@ -1,0 +1,36 @@
+<% xml = Rockhall::EadMethods.ead_xml(@document) %>
+<div id="ead_body">
+
+  <!-- this section has a separate config -->
+  <h2> General Information </h2>
+  <%= gen_info(xml) %>
+
+  <!-- display the rest of the body elements -->
+  <% ead_xpaths.each do |xpath| %>
+    <% content = xml.xpath(xpath[1]).first %>
+    <% if content %>
+      <% link_id = content.attribute('id') || xpath[1].split('/').last  %>
+      <h2 id="<%= Rockhall::EadMethods.ead_link_id(content, xpath[1]) %>"><%= xpath[0] %></h2>
+      <% xpath_type = xpath[2] %>
+      <% if xpath_type == :p %>
+        <%= Rockhall::EadMethods.ead_paragraphs(content) %>
+      <% elsif xpath_type == :text %>
+        <p><%= content.text %></p>
+      <% elsif xpath_type == :acshed %>
+        <%= ead_tblock(@document, xpath[1]) %>
+      <% elsif xpath_type == :bioghist %>
+        <%= render :partial => 'catalog/_show_partials/_ead/chronlist',
+          :locals => {:element => content} %>
+        <%= Rockhall::EadMethods.ead_paragraphs(content) %>
+        <%= render :partial => 'catalog/_show_partials/_ead/sources',
+          :locals => {:element => content} %>
+      <% elsif xpath_type == :dsc %>
+        <%= render :partial => 'catalog/_show_partials/_ead/dsc',
+          :locals => {:element => content, :start => 'c01'} %>
+      <% end %>
+
+    <% end %>
+  <% end %>
+
+</div>
+
