@@ -106,13 +106,13 @@ namespace :solr do
       require 'nokogiri'
       require 'pp'
       include Rockhall::EadMethods
-      
-      xml = Rockhall::EadMethods.ead_rake_xml(fetch_env_file) 
+
+      xml = Rockhall::EadMethods.ead_rake_xml(fetch_env_file)
       id = Rockhall::EadMethods.ead_id(xml)
       collection = xml.xpath("//archdesc/did/unittitle").first.text.gsub("\n",'').gsub(/\s+/, ' ').strip
-      
-      puts "ID is #{id}"
-      
+
+      puts "Indexing #{id}"
+
       # gather subject fields splitting on --
       subject_fields = ['corpname','famname','occupation','persname', 'subject', 'genreform']
       subject = subject_fields.map do |field|
@@ -121,11 +121,12 @@ namespace :solr do
             value.strip.sub(/\.$/, '')
           end
         end
-      end      
-            
+      end
+
       # index components
       level = 5
       while level > 0
+        puts "... level #{level}"
         xml.search("//c0#{level.to_s}").each do |node|
           doc = Rockhall::EadMethods.get_component_doc(node,level)
           doc.merge!({:subject_topic_facet => subject.flatten.uniq})
@@ -136,31 +137,20 @@ namespace :solr do
         end
         level = level - 1
       end
-      
+
       # remove component levels 2 and higher
       xml.search("//c02").each { |node| node.remove }
 
-      title = xml.at('//eadheader/filedesc/titlestmt/titleproper').text.gsub("\n",'').gsub(/\s+/, ' ').strip
-      num = xml.at('//eadheader/filedesc/titlestmt/titleproper/num').text
-      title.sub!(num, '(' + num + ')')
-
-      solr_doc = {
-        :format => 'ead',
-        :title_display => title,
-        :institution_t => xml.at('//publicationstmt/publisher').text,
-        :ead_filename_s => xml.at('//eadheader/eadid').text,
-        :id => id,
-        :xml_display => xml.to_xml,
-        :text => xml.text,
-        :subject_topic_facet => subject.flatten.uniq
-      }
-      pp solr_doc[:title_display]
+      solr_doc = Rockhall::EadMethods.get_ead_doc(xml)
+      solr_doc.merge!({:subject_topic_facet => subject.flatten.uniq})
       if !solr_doc[:title_display].blank?
+        puts "... document "
         response = Blacklight.solr.add solr_doc
         commit = Blacklight.solr.commit
-        pp response; puts
-        pp commit; puts
       end
+
+      puts "Done"
+
     end
   end
 end

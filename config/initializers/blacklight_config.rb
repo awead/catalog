@@ -302,5 +302,69 @@ Blacklight.configure(:shared) do |config|
   config[:unapi] = {
     'oai_dc_xml' => { :content_type => 'text/xml' }
   }
+
+  # EAD config
+  # Important! Any changes below will require you to reindex all your EAD documents
+  # Only fields with a given label will appear under the "General Information"
+  # section of the display.  Otherwise, field names will need to be called directly
+  # in the view.
+  config[:ead_fields] = {
+    :field_names => [
+      "ead_title_display",
+      "ead_repository_display",
+      "ead_publisher_display",
+      "ead_extent_display",
+      "ead_bulk_date_display",
+      "ead_inc_date_display",
+      "ead_lang_display",
+      "ead_lang_coll_display",
+      "ead_abstract_display",
+      "ead_bio_display",
+      "ead_bionote_display",
+      "ead_citation_display",
+      "ead_provenance_display",
+      "ead_use_display",
+      "ead_access_display",
+      "ead_process_display"
+    ],
+    :labels => {
+      "ead_title_display"       => "Title",
+      "ead_repository_display"  => "Repository",
+      "ead_publisher_display"   => "Publisher",
+      "ead_extent_display"      => "Extent",
+      "ead_bulk_date_display"   => "Bulk Date",
+      "ead_inc_date_display"    => "Inclusive Dates",
+      "ead_lang_display"        => "Language of Finding Aid",
+      "ead_lang_coll_display"   => "Languate of Collection"
+    },
+    :headings => {
+      "ead_abstract_display"    => "Abstract",
+      "ead_bio_display"         => "Biography/History",
+      "ead_citation_display"    => "Preferred Citation",
+      "ead_provenance_display"  => "Provenance",
+      "ead_use_display"         => "Use Restrictions",
+      "ead_access_display"      => "Access Restrictions",
+      "ead_process_display"     => "Processing Information",
+      "ead_bionote_display"     => "Biographical Note"
+    },
+    :xpath => {
+      "ead_title_display"       => "/ead/eadheader/filedesc/titlestmt/titleproper",
+      "ead_repository_display"  => "/ead/archdesc/did/repository/corpname",
+      "ead_publisher_display"   => "/ead/eadheader/filedesc/publicationstmt/address/addressline",
+      "ead_extent_display"      => "/ead/archdesc/did/physdesc/extent",
+      "ead_bulk_date_display"   => "/ead/archdesc/did/unitdate[@type='bulk']",
+      "ead_inc_date_display"    => "/ead/archdesc/did/unitdate[@type='inclusive']",
+      "ead_lang_display"        => "/ead/eadheader/profiledesc/langusage",
+      "ead_lang_coll_display"   => "/ead/archdesc/did/langmaterial/language/@langcode",
+      "ead_abstract_display"    => "/ead/archdesc/did/abstract",
+      "ead_bio_display"         => "/ead/archdesc/bioghist",
+      "ead_citation_display"    => "/ead/archdesc/prefercite/p",
+      "ead_provenance_display"  => "/ead/archdesc/acqinfo/p",
+      "ead_use_display"         => "/ead/archdesc/userestrict/p",
+      "ead_access_display"      => "/ead/archdesc/accessrestrict/p",
+      "ead_process_display"     => "/ead/archdesc/processinfo/p",
+      "ead_bionote_display"     => "/ead/archdesc/separatedmaterial/p"
+    }
+  }
 end
 

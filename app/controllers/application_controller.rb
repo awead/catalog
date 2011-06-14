@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   # these methods in order to perform user specific actions.
 
   # addresses helper problem?
-  #helper :all # include all helpers, all the time
+  helper :all # include all helpers, all the time
   protect_from_forgery
 
   before_filter :add_local_assets

@@ -2,7 +2,7 @@ module ComponentsHelper
 
   require 'rexml/document'
   include REXML
-  
+
   def parent_ead_id
     parts = params[:id].split(":")
     return parts[0]
@@ -11,7 +11,7 @@ module ComponentsHelper
   # not working...
   def render_components(documents)
     documents.each do |document|
-      render :partial => "catalog/_show_partials/_ead/component", :locals => {  
+      render :partial => "catalog/_show_partials/_ead/component", :locals => {
         :level => params[:level],
         :document => document,
         :children => document["component_children_b"] }
@@ -49,5 +49,5 @@ module ComponentsHelper
     return result
   end
 
-  
+
 end
