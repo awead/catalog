@@ -24,10 +24,15 @@ module EadHelper
     results = String.new
     Blacklight.config[:ead_fields][:field_names].each do | field |
       label = Blacklight.config[:ead_fields][:headings][field.to_s]
-      unless @document[field.to_s].nil? or label.nil?
-        results << "<h2 id=\"#{field}\">#{label}</h2>"
-        @document[field.to_s].each do | v|
-          results << "<p>#{v}</p>"
+      unless label.nil?
+        # Override display from Solr field with partial
+        if self.respond_to?(field.to_sym)
+          results << self.send(field.to_sym)
+        else
+          results << "<h2 id=\"#{field}\">#{label}</h2>"
+          @document[field.to_s].each do | v|
+            results << "<p>#{v}</p>"
+          end
         end
       end
     end
@@ -43,6 +48,39 @@ module EadHelper
       results << "<li>#{v}</li>"
     end
     results << "</ul>"
+    return results.html_safe
+  end
+
+
+  def ead_bio_display
+    results = String.new
+    results << "<h2 id=\"ead_bio_display\">#{Blacklight.config[:ead_fields][:headings]["ead_bio_display"]}</h2>"
+
+    xml = Rockhall::EadMethods.ead_xml(@document)
+    element = xml.xpath(Blacklight.config[:ead_fields][:xpath]["ead_bio_display"])
+    list   = element.xpath('chronlist')
+    items  = list.xpath('chronitem')
+
+    # Timeline table
+    results << "<table>"
+    items.each do |chronitem|
+      results << "<tr><td>" + chronitem.xpath('date').first + "</td><td>"
+      chronitem.xpath('.//event').each do |chronevent|
+        results << chronevent.text + "<br/>"
+      end
+      results << "</td></tr>"
+    end
+    results << "</table>"
+
+    # Paragraphs
+    results << ead_paragraphs(element)
+
+    # Sources
+    results << "<h3>Sources</h3>"
+    element.xpath("./list/item").each do |source|
+      results << "<p>#{source.text}</p>"
+    end
+
     return results.html_safe
   end
 
