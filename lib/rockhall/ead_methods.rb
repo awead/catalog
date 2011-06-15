@@ -1,17 +1,5 @@
 module Rockhall::EadMethods
 
-  require 'rexml/document'
-  include REXML
-
-  def self.ead_link_id(element, xpath)
-    element.attribute('id') || xpath.split('/').last
-  end
-
-  def self.ead_increment_start(start)
-    number = start[1,5].to_i + 1
-    start_number = "%02d" % number
-    'c' + start_number
-  end
 
   def self.ead_rake_xml(file)
     raw = File.read(file)
@@ -42,28 +30,6 @@ module Rockhall::EadMethods
     xml_doc.gsub!(/xmlns=".*"/, '')
     xml_doc.gsub!('ns2:', '')
     Document.new(xml_doc)
-  end
-
-  def self.ead_text(element, xpath)
-    first = element.xpath(xpath).first
-    if first
-      first.text
-    end
-  end
-
-  def self.ead_paragraphs(element)
-    if element
-      element.xpath('p').map do |p|
-        if !p.xpath('list').blank?
-          p.xpath('list').map do |list|
-            '<p>' + ead_list(list) + '</p>'
-          end
-        else
-          '<p>' +  p.text + '</p>'
-        end
-
-      end
-    end
   end
 
 

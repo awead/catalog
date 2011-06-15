@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   # Please be sure to impelement current_user and user_session. Blacklight depends on
   # these methods in order to perform user specific actions.
 
-  # addresses helper problem?
   helper :all # include all helpers, all the time
   protect_from_forgery
 
@@ -17,6 +16,5 @@ class ApplicationController < ActionController::Base
 
   def add_local_assets
       stylesheet_links << "rockhall"
-      #javascript_includes << "my_js"
   end
 end

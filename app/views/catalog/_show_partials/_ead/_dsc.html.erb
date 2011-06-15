@@ -1,4 +1,4 @@
-<% element.xpath(start).each do |c| %>
-  <% #render :partial => 'catalog/_show_partials/_ead/component_part', :locals => {:component_part => c, :start => start} %>
-  <%= render :partial => 'catalog/_show_partials/_ead/c01', :locals => {:element => c}%>
+<% xml = Rockhall::EadMethods.ead_xml(@document) %>
+<% xml.xpath("/ead/archdesc/dsc/c01").each do |e| %>
+  <%= render :partial => 'catalog/_show_partials/_ead/c01', :locals => {:element => e}%>
 <% end %>

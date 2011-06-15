@@ -2,17 +2,17 @@
 <% odd = element.xpath('odd').first %>
 
 <div class="component_part clearfix c01">
-<h5 id="<%= Rockhall::EadMethods.ead_link_id(element, '') %>">
-  <span class="unittitle"><%= Rockhall::EadMethods.ead_text(did, 'unittitle') %></span>
-  <span class="unitdate"><%= Rockhall::EadMethods.ead_text(did, 'unitdate') %></span>
-  <span class="unitid"><%= Rockhall::EadMethods.ead_text(did, 'unitid') %></span>
+<h5 id="<%= ead_link_id(element, '') %>">
+  <span class="unittitle"><%= ead_text(did, 'unittitle') %></span>
+  <span class="unitdate"><%= ead_text(did, 'unitdate') %></span>
+  <span class="unitid"><%= ead_text(did, 'unitid') %></span>
 </h5>
 
 <% unless odd.nil? %>
-  <p><%= Rockhall::EadMethods.ead_text(odd, 'p') %></p>
+  <p><%= ead_text(odd, 'p').safe_html %></p>
 <% end %>
 
-<%= Rockhall::EadMethods.ead_paragraphs(element.xpath('scopecontent').first) %>
+<%= ead_paragraphs(element.xpath('scopecontent').first) %>
 
 <% if did.xpath('container').first %>
   <span class="container">
@@ -22,7 +22,7 @@
   </span>
 <% else %>
   <%= link_to "More", components_path(
-      :parent_ref => Rockhall::EadMethods.ead_link_id(element, ''),
+      :parent_ref => ead_link_id(element, ''),
       :ead_id     => params[:id],
       :level      => 2) %>
 <% end %>

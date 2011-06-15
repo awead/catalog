@@ -4,10 +4,9 @@
 
 <% sidebar_items << capture do -%>
   <%= render :partial => '/catalog/_show_partials/_ead/toc' %>
-  <%= dig_message %>
 <% end -%>
 
 <% cache(:action_suffix => 'ead_body') do -%>
-  <%= render :partial => 'catalog/_show_partials/_ead/ead_body' %>
+  <%= render :partial => 'catalog/_show_partials/_ead/body' %>
 <% end -%>
 
