@@ -1,5 +1,5 @@
 <% extra_head_content << capture do %>
-  <%= stylesheet_link_tag 'blacklight_ext_ead_simple', :plugin => :blacklight_ext_ead_simple %>
+  <%= stylesheet_link_tag 'blacklight_ext_ead_simple' %>
 <% end %>
 
 <% sidebar_items << capture do %>
@@ -12,8 +12,8 @@
 <%= component_trail(@documents.first) %>
 
 <% @documents.each do |document| %>
-  
-  <%= render :partial => "catalog/_show_partials/_ead/component", :locals => {  
+
+  <%= render :partial => "catalog/_show_partials/_ead/component", :locals => {
     :level => params[:level],
     :document => document,
     :children => document["component_children_b"] } %>

@@ -5,17 +5,19 @@
     <span class="unitdate"><%= document["unitdate_display"] %></span>
     <span class="unitid"><%= document["unitid_display"] %></span>
   </h5>
-  
+
   <p><span class="summary"><%= document["summary_display"] %></span></p>
- 
+
   <span class="odd"><%= document["odd_display"] %></span>
 
   <span class="physdesc"><%= document["physdesc_display"] %></span>
-  
+
   <span class="scopecontent"><%= document["scopecontent_display"] %></span>
-  
-  <span class="container">[<%= document["location_display"] %>]</span>
-  
+
+  <% unless document["location_display"].nil? %>
+    <span class="container">[<%= document["location_display"] %>]</span>
+  <% end %>
+
   <% if children %>
     <% level = params[:level].to_i + 1 %>
     <%= link_to "More", components_path(
@@ -23,5 +25,5 @@
         :ead_id      => params[:ead_id],
         :level       => level ) %>
   <% end %>
-  
+
 </div>

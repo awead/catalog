@@ -9,7 +9,7 @@
 </h5>
 
 <% unless odd.nil? %>
-  <p><%= ead_text(odd, 'p').safe_html %></p>
+  <p><%= ead_text(odd, 'p') %></p>
 <% end %>
 
 <%= ead_paragraphs(element.xpath('scopecontent').first) %>

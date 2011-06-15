@@ -1,22 +1,11 @@
 module ComponentsHelper
 
-  require 'rexml/document'
-  include REXML
 
   def parent_ead_id
     parts = params[:id].split(":")
     return parts[0]
   end
 
-  # not working...
-  def render_components(documents)
-    documents.each do |document|
-      render :partial => "catalog/_show_partials/_ead/component", :locals => {
-        :level => params[:level],
-        :document => document,
-        :children => document["component_children_b"] }
-     end
-  end
 
   # warning: ugly, spaghetti code follows...
   def component_trail(doc)
@@ -46,7 +35,7 @@ module ComponentsHelper
       index = index + 1
       link  = link - 1
     end
-    return result
+    return result.html_safe
   end
 
 
