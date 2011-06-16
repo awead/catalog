@@ -22,3 +22,5 @@ tmp/**/*
 tmp/performance 
 
 Gemfile.lock
+
+.rvmrc

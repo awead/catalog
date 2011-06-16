@@ -1,9 +1,9 @@
 <div class="component_part clearfix c0<%= params[:level] %>">
 
   <h5 id="<%= document["parent_ref"] %>">
-    <span class="unittitle"><%= document["title_display"] %></span>
-    <span class="unitdate"><%= document["unitdate_display"] %></span>
-    <span class="unitid"><%= document["unitid_display"] %></span>
+    <span>
+      <%= comma_list( [document["title_display"], document["unitdate_display"], document["unitid_display"]] ) %>
+    </span>
   </h5>
 
   <p><span class="summary"><%= document["summary_display"] %></span></p>
