@@ -1,15 +1,19 @@
 Feature: Catalog Home Page
-  In order to make sure the site is working
-  As any user
-  I want to be able to view the home page
+  In order to use the catalog
+  As a patron or staff member
+  I would like to limit my searches in the discovery interface using facets
 
-  Scenario:
+  Scenario: Facets for limiting search (BL-14)
     Given I am on the home page
     Then I should see "Rock and Roll Hall of Fame Library and Archives"
     And I should see a facet for "Format"
     And I should see a facet for "Archival Material"
     And I should see a facet for "Archival Collection"
     And I should see a facet for "Topic"
+    And I should see a facet for "Name"
+    And I should see a facet for "Event/Series"
+    And I should see a facet for "Genre"
+    And I should see a facet for "Collection Name"
 
   Scenario: Terms for "Format" facet (BL-15)
     Given I am on the home page

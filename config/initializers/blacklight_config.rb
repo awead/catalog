@@ -46,12 +46,13 @@ Blacklight.configure(:shared) do |config|
       "format",
       "material_facet",
       "collection_display",
+      "collection_facet",
       "pub_date",
-      "subject_topic_facet",
+      "topic_facet",
+      "name_facet",
+      "series_facet",
       "language_facet",
       "lc_1letter_facet",
-      "subject_geo_facet",
-      "subject_era_facet",
       "genre_facet"
     ]),
     :labels => {
@@ -59,11 +60,12 @@ Blacklight.configure(:shared) do |config|
       "material_facet"      => "Archival Material",
       "collection_display"  => "Archival Collection",
       "pub_date"            => "Publication Year",
-      "subject_topic_facet" => "Topic",
+      "topic_facet"         => "Topic",
+      "name_facet"          => "Name",
+      "series_facet"        => "Event/Series",
       "language_facet"      => "Language",
       "lc_1letter_facet"    => "Call Number",
-      "subject_era_facet"   => "Era",
-      "subject_geo_facet"   => "Region",
+      "collection_facet"    => "Collection Name",
       "genre_facet"         => "Genre"
     },
     # Setting a limit will trigger Blacklight's 'more' facet values link.
