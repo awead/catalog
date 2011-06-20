@@ -86,15 +86,6 @@ module EadHelper
     return results.html_safe
   end
 
-  def component_title(did)
-    fields = Array.new
-    [ead_text(did, 'unittitle'), ead_text(did, 'unitdate'), ead_text(did, 'unitid')].each do |text|
-      unless text.nil?
-        fields << text
-      end
-    end
-    return fields.join(", ")
-  end
 
   def comma_list(args)
     fields = Array.new
