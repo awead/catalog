@@ -13,7 +13,7 @@
 
 <% @documents.each do |document| %>
 
-  <%= render :partial => "catalog/_show_partials/_ead/component", :locals => {
+  <%= render :partial => "catalog/_show_partials/_archival_collection/component", :locals => {
     :level => params[:level],
     :document => document,
     :children => document["component_children_b"] } %>

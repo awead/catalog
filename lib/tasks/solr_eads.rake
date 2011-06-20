@@ -1,7 +1,7 @@
 namespace :eads do
   desc 'delete all from solr'
   task :delete_solr => :environment do
-    ["ead","component"].each do |format|
+    [Blacklight.config[:ead_format_name],"component"].each do |format|
       result = Blacklight.solr.find( :q => "{!raw f=format rows=1000000}#{format}" )
       result["response"]["docs"].each do |doc|
         doc_id = doc["id"]

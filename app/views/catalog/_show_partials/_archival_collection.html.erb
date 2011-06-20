@@ -3,10 +3,10 @@
 <% end -%>
 
 <% sidebar_items << capture do -%>
-  <%= render :partial => '/catalog/_show_partials/_ead/toc' %>
+  <%= render :partial => '/catalog/_show_partials/_archival_collection/toc' %>
 <% end -%>
 
 <% cache(:action_suffix => 'ead_body') do -%>
-  <%= render :partial => 'catalog/_show_partials/_ead/body' %>
+  <%= render :partial => 'catalog/_show_partials/_archival_collection/body' %>
 <% end -%>
 

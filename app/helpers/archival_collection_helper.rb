@@ -1,4 +1,4 @@
-module EadHelper
+module ArchivalCollectionHelper
 
 
   def general_info
