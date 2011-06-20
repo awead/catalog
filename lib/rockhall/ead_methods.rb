@@ -85,6 +85,7 @@ module Rockhall::EadMethods
       "unitdate_display"           => "//c0#{level}/did/unitdate",
       "physdesc_display"           => "//c0#{level}/did/physdesc",
       "odd_display"                => "//c0#{level}/odd/p",
+      "odd_label_display"          => "//c0#{level}/odd/head",
       "scopecontent_display"       => "//c0#{level}/scopecontent/p",
       "accessrestrict_display"     => "//c0#{level}/accessrestrict/p",
       "processinfo_display"        => "//c0#{level}/processinfo/p",

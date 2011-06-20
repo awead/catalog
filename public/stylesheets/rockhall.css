@@ -1,6 +1,6 @@
 /* Rockhall.com bits */
 
-html { height: 100%; width:100%; } 
+html { height: 100%; width:100%; }
 
 body {
     font-size: 12px;
@@ -43,19 +43,49 @@ h1.site_title {
 
 /**
 h1.site_title a {
-  display:block; 
-  height: 35px; 
-  width:120px; 
-  text-indent: -9999px; 
-  overflow: hidden; 
-  text-decoration: none; 
+  display:block;
+  height: 35px;
+  width:120px;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
   border: 0px;
-} 
+}
 **/
 
 h1.site_title a:link, h1.site_title a:visited, h1.site_title a:hover, h1.site_title a:active {border: 0px;}
 
 h2.search {margin:0; display:inline;}
+
+/*
+  Side-by-side definition list label-value pairs
+  (stole this from Hydrangea's css
+*/
+
+
+dl {
+    overflow:hidden;
+    margin-top:0;
+    padding-top:0;
+}
+
+dl dt {
+    clear: left;
+    float:left;
+    width:11em;
+    text-align: right;
+    font-weight: bold;
+    font-size: .9em;
+    margin-top: 5px;
+    }
+
+dl dd {
+    float: left;
+    width: 30em;
+    margin-top: 4px; /* dd tags look oddly out-of-line unless slightly smaller than dt tags */
+    margin-right: 0;
+    position: relative;
+    }
 
 
 /* Modifications to Blacklight */
@@ -64,13 +94,13 @@ h2.search {margin:0; display:inline;}
   clear;
 }
 
-dl.defList    { 
+dl.defList    {
   width: 620px;
   margin: 1em 0;
   padding: 0;
 }
 
-dl.defList dt { 
+dl.defList dt {
   clear: left;
   float: left;
   width: 150px;
@@ -79,7 +109,7 @@ dl.defList dt {
   font-weight: bold;
 }
 
-dl.defList dd { 
+dl.defList dd {
   float: left;
   width: 450px;
   margin: 0;

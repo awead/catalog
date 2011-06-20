@@ -32,3 +32,17 @@ Feature: EAD display
     Given I am on the ead page for ARC-0001
     When I follow "Controlled Access Headings"
     Then I should see "Collins, Nikki"
+
+  Scenario: Don't show heading for fields that aren't there
+    Given I am on the ead page for ARC-0065
+    Then I should not see "Biographical Note"
+
+  Scenario: Dimensions note (BL-8)
+    Given I am on the component page for ARC-0065:2:ref43
+    Then I should see "Limited Print Run"
+    And I should see "Non-numbered edition of 200"
+    And I should see "Dimensions:"
+    And I should see "23"
+    And I should see "29"
+    And I should see "Location:"
+    And I should see "Folder: 10, Object: 2, Drawer: FF.1.4"

@@ -29,9 +29,11 @@ module EadHelper
         if self.respond_to?(field.to_sym)
           results << self.send(field.to_sym)
         else
-          results << "<h2 id=\"#{field}\">#{label}</h2>"
-          @document[field.to_s].each do | v|
-            results << "<p>#{v}</p>"
+          unless @document[field.to_s].nil?
+            results << "<h2 id=\"#{field}\">#{label}</h2>"
+            @document[field.to_s].each do | v|
+              results << "<p>#{v}</p>"
+            end
           end
         end
       end
@@ -146,7 +148,7 @@ module EadHelper
   def ead_contents
     results = String.new
     Blacklight.config[:ead_fields][:field_names].each do |f|
-      unless Blacklight.config[:ead_fields][:headings][f.to_s].nil?
+      unless Blacklight.config[:ead_fields][:headings][f.to_s].nil? or @document[f.to_s].nil?
         results << "<li>"
         results << link_to(Blacklight.config[:ead_fields][:headings][f.to_s], catalog_path(@document["ead_id"], :anchor => f))
         results << "</li>"
