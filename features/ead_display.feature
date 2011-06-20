@@ -23,10 +23,12 @@ Feature: EAD display
     And I should see "Series VII: Printed Materials"
     And I should not see "Series VII: Printed Materials,"
 
-  Scenario: Date expression in sub component level (BL-9)
+  Scenario: Date expression in sub component level (BL-9) and accession numbers
     Given I am on the component page for ARC-0105:2:ref17
     Then I should see "Series I: Awards and Certificates"
     And I should see "Awards and certificates, 1976-1986"
+    And I should see "Museum Accession Numbers:"
+    And I should see "A1994.4.10-A1994.4.22"
 
   Scenario: Names (BL-7)
     Given I am on the ead page for ARC-0001
