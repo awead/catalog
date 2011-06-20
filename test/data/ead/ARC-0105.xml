@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Completed" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0105</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Big Joe Turner Papers
+                    <num>ARC.0105</num>
+                </titleproper>
+                <titleproper type="filing">Turner, Big Joe Papers</titleproper>
+                <author>Finding aid prepared by Rachel Somerville, Project Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>Rock and Roll Hall of Fame and Museum</addressline>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>June 2, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2011-06-15T14:31-0400</date>
+            </creation>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>Big Joe Turner Papers</unittitle>
+            <unitid>ARC.0105</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>1.0 Linear feet</extent>
+                <extent>One records carton</extent>
+            </physdesc>
+            <unitdate normal="1976/1986" type="bulk">Bulk, 1976-1986</unitdate>
+            <unitdate normal="1945/1986" type="inclusive">1945-1986</unitdate>
+            <langmaterial id="ref1" label="Language of Materials">Materials are in English.</langmaterial>
+            <abstract id="ref4" label="Collection Overview">The Big Joe Turner Papers highlight the latter part of Turner's sixty-year career as a pioneering and influential blues singer. The collection dates from 1945 to 1986, with the bulk of the material focusing on the period from 1976 to 1986. Materials include documents, correspondence, printed materials, telegrams, certificates of recognition, blues festival programs, photographs, and negatives. The collection features Turner's 1984 and 1985 Grammy Award nomination cards and corresponding information regarding the events, documentation surrounding Turners's search for his birth certificate, and correspondence from notable figures, such as Jann Wenner, Ahmet Ertegun, Dick Clark, and Doc Pomus. The Big Joe Turner Papers include information regarding the benefit concert Joe's wife, Pat, and his friends were organizing to help pay for the artist's skyrocketing medical bills. Turner passed away two weeks before the scheduled show in 1985. The collection contains two guestbooks from his funeral, as well as letters of condolence to Pat acknowledging her husband's significant contributions to the music world and the history of rock and roll.</abstract>
+        </did>
+        <prefercite id="ref2">
+            <head>Preferred Citation</head>
+            <p>[Identification of item], Big Joe Turner Papers, Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <processinfo id="ref3">
+            <head>Processing Information</head>
+            <p>Processed by Rachel Somerville, Project Archivist. Completed May 27, 2011.</p>
+            <p>Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <bioghist id="ref5">
+            <head>Biographical Note</head>
+            <chronlist>
+                <chronitem>
+                    <date>1911 May 18</date>
+                    <event>Born Joseph Vernon Turner, Jr. in Kansas City, Missouri</event>
+                </chronitem>
+                <chronitem>
+                    <date>1938 December 23</date>
+                    <event>Appears at "Spirituals to Swing" concert at Carnegie Hall in New York City</event>
+                </chronitem>
+                <chronitem>
+                    <date>1939</date>
+                    <eventgrp>
+                        <event>Releases first single, "Roll 'em Pete," with boogie woogie pianist Pete Johnson</event>
+                        <event>With Albert Ammons and Meade Lux Lewis, begins a five-year residency at New York's Cafe Society</event>
+                    </eventgrp>
+                </chronitem>
+                <chronitem>
+                    <date>1946 August 3</date>
+                    <event>"My Gal's a Jockey" becomes Turner's first single to make the Billboard R&amp;B chart</event>
+                </chronitem>
+                <chronitem>
+                    <date>1954 May 8</date>
+                    <event>"Shake, Rattle and Roll" enters the Billboard charts, peaks at #1 on the R&amp;B charts, and #2 on the Pop charts</event>
+                </chronitem>
+                <chronitem>
+                    <date>1956</date>
+                    <event>Appears in the film 
+                        <title render="italic">Shake, Rattle and Roll</title></event>
+                </chronitem>
+                <chronitem>
+                    <date>1983</date>
+                    <eventgrp>
+                        <event>Album &lt;title render="italic"&gt;Blues Train&lt;/title&gt; is released</event>
+                        <event>Inducted into the Blues Hall of Fame</event>
+                    </eventgrp>
+                </chronitem>
+                <chronitem>
+                    <date>1985 November 24</date>
+                    <event>Dies in Inglewood, California</event>
+                </chronitem>
+                <chronitem>
+                    <date>1987 January 21</date>
+                    <event>Posthumously inducted into the Rock and Roll Hall of Fame</event>
+                </chronitem>
+            </chronlist>
+            <p>Big Joe Turner was among the first to mix R&amp;B with boogie-woogie, resulting in jump blues, a style that presaged the birth of rock and roll. Turner’s original recording of “Shake, Rattle and Roll,” cut for Atlantic Records in 1954, remains one of the cornerstones of the rock and roll revolution. Turner’s lengthy career touched on most developments in popular music, taking him from the big bands of the Swing Era to boogie-woogie, rhythm &amp; blues, and rock and roll. Turner recorded prolifically in the Forties for various labels, including Decca, National, and Aladdin. He worked with Pete Johnson as well as a number of other pianists, including such giants as Albert Ammons, Willie “the Lion” Smith, and Meade Lux Lewis. In 1946, Turner had his first R&amp;B hit, “My Gal’s a Jockey,” released on Herb Abramson’s National label. Abramson would go on to cofound Atlantic Records with Ahmet Ertegun 1948. In 1951, Ertegun brought Turner to Atlantic Records, where he cut a string of rhythm &amp; blues and early rock and roll classics over the next decade; among them were “Chains of Love,” “Sweet Sixteen,” “Honey Hush,” Shake, Rattle and Roll,” “Flip Flop and Fly,” and “Corrine Corinna.” Pianist Fats Domino accompanied Turner on the romping “TV Mama.” “Shake, Rattle and Roll” and “Honey Hush” topped the R&amp;B charts for three and eight weeks, respectively.</p>
+            <p>In the Sixties, after the first wave of rock and roll had died down, Turner returned to blues and boogie-woogie. He moved to Los Angeles, where he recorded with jazz legends like Dizzy Gillespie, Count Basie, and Roy Eldridge for some well-received albums on the Pablo label. The 1983 album Blues Train, on which he was backed by Roomful of Blues and produced by Doc Pomus, was a late-career success. Having outlasting trends until his sound had became timeless, Big Joe Turner continued to record and perform until his death in 1985.</p>
+            <list numeration="lowerroman" type="ordered">
+                <head>Sources</head>
+                <item>"Big Joe Turner Biography." Rock and Roll Hall of Fame and Museum. Accessed May 26, 2011. http://rockhall.com/inductees/big-joe-turner/bio/.</item>
+            </list>
+        </bioghist>
+        <scopecontent id="ref6">
+            <head>Scope and Contents</head>
+            <p>The Big Joe Turner Papers span the years 1945-1986. The papers are arranged by series and then alphabetically.</p>
+        </scopecontent>
+        <accessrestrict id="ref7">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Provacy Rights form before using this collection. Please contact staff before visiting the Library and Archives to use this collection.</p>
+        </accessrestrict>
+        <userestrict id="ref8">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Musuem, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <separatedmaterial id="ref55">
+            <head>Separated Materials</head>
+            <p>Periodicals have been transferred to the library collection. Search "Big Joe Turner Papers" in the library catalog for a complete list of titles.</p>
+        </separatedmaterial>
+        <acqinfo id="ref9">
+            <head>Provenance</head>
+            <p>The Big Joe Turner Papers were recieved by The Rock and Roll Hall of Fame and Museum, Inc. as a gift from Pat Turner in 1994.</p>
+        </acqinfo>
+        <controlaccess>
+            <corpname rules="aacr" role="Donor (dnr)">Atlantic Recording Corporation</corpname>
+            <persname rules="aacr" role="Musician (mus)">Turner, Joe, 1911-1985</persname>
+            <subject source="lcsh">Blues (Music).</subject>
+            <subject source="lcsh">Blues-rock music.</subject>
+            <subject source="lcsh">Boogie woogie (Music)</subject>
+            <genreform source="lcsh">Correspondence.</genreform>
+            <subject source="lcsh">Doo-Wop (Music)</subject>
+            <subject source="lcsh">Guitar music (Rock)</subject>
+            <subject source="local">Legal documents--Music trade.</subject>
+            <subject source="lcsh">Musicians--United States--Biography.</subject>
+            <genreform source="lcsh">Photographs.</genreform>
+            <subject source="lcsh">Popular music--United States.</subject>
+            <subject source="lcsh">Rhythm and blues music.</subject>
+            <subject source="lcsh">Singers--United States--Biography.</subject>
+        </controlaccess>
+        <dsc>
+            <c01 id="ref17" level="series">
+                <did>
+                    <unittitle>Series I: Awards and Certificates</unittitle>
+                    <unitdate>1976-1986</unitdate>
+                </did>
+                <c02 id="ref42" level="file">
+                    <did>
+                        <unittitle>Awards and certificates</unittitle>
+                        <container id="cid386006" type="Box" label="Text">1</container>
+                        <container parent="cid386006" type="Folder">1</container>
+                        <unitdate>1976-1986</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref43">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.10-A1994.4.22</p>
+                    </odd>
+                </c02>
+                <c02 id="ref40" level="file">
+                    <did>
+                        <unittitle>Grammy awards nomination and information</unittitle>
+                        <container id="cid386005" type="Box" label="Text">1</container>
+                        <container parent="cid386005" type="Folder">2</container>
+                        <unitdate>1984-1985</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref41">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.90-A1994.4.91</p>
+                    </odd>
+                </c02>
+            </c01>
+            <c01 id="ref45" level="series">
+                <did>
+                    <unittitle>Series II: Business Files</unittitle>
+                    <unitdate>1945-1946, 1983-1984, and undated</unitdate>
+                </did>
+                <c02 id="ref34" level="file">
+                    <did>
+                        <unittitle>Business papers</unittitle>
+                        <container id="cid386002" type="Box" label="Text">1</container>
+                        <container parent="cid386002" type="Folder">3</container>
+                        <unitdate>1945-1946</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref35">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.77-A1994.4.83</p>
+                    </odd>
+                </c02>
+                <c02 id="ref63" level="file">
+                    <did>
+                        <unittitle>California Afro-American Museum artifact control sheets</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid416001" type="Box" label="Text">1</container>
+                        <container parent="cid416001" type="Folder">4</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref32" level="file">
+                    <did>
+                        <unittitle>Flyers</unittitle>
+                        <container id="cid386001" type="Box" label="Text">1</container>
+                        <container parent="cid386001" type="Folder">5</container>
+                        <unitdate>1983-1984</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref33">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.84-A1994.4.85, A1994.4.94</p>
+                    </odd>
+                </c02>
+                <c02 id="ref19" level="file">
+                    <did>
+                        <unittitle>Printed lyrics</unittitle>
+                        <container id="cid383004" type="Box" label="Text">1</container>
+                        <container parent="cid383004" type="Folder">6</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref20">
+                        <head>Musuem Accession Numbers</head>
+                        <p>A1994.4.23a-A1994.4.23j, A1994.4.24a-A1994.4.24b, A1994.25a-A1994.25j</p>
+                    </odd>
+                </c02>
+            </c01>
+            <c01 id="ref21" level="series">
+                <did>
+                    <unittitle>Series III: Correspondence</unittitle>
+                    <unitdate>1942-1987</unitdate>
+                </did>
+                <c02 id="ref38" level="file">
+                    <did>
+                        <unittitle>Letters</unittitle>
+                        <container id="cid386004" type="Box" label="Text">1</container>
+                        <container parent="cid386004" type="Folder">7</container>
+                        <unitdate>1942-1987</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref39">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.26-A.1994.4.58, A1994.4.74-A1994.4.76</p>
+                    </odd>
+                </c02>
+                <c02 id="ref36" level="file">
+                    <did>
+                        <unittitle>Telegrams</unittitle>
+                        <container id="cid386003" type="Box" label="Text">1</container>
+                        <container parent="cid386003" type="Folder">8</container>
+                        <unitdate>1974</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref37">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.88a-A1994.4.88e, A1994.4.89a-A.1994.4.89c</p>
+                    </odd>
+                </c02>
+            </c01>
+            <c01 id="ref16" level="series">
+                <did>
+                    <unittitle>Series IV: Memorial Files</unittitle>
+                    <unitdate>1985-1986</unitdate>
+                </did>
+                <c02 id="ref10" level="file">
+                    <did>
+                        <unittitle>Big Joe Turner memorial service, "Friends Who Called" book from Angelus Funeral Home</unittitle>
+                        <container id="cid383001" type="Box" label="Text">1</container>
+                        <container parent="cid383001" type="Folder">9</container>
+                        <unitdate>circa 1985</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref11">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.1a-A1994.4.1b</p>
+                    </odd>
+                </c02>
+                <c02 id="ref12" level="file">
+                    <did>
+                        <unittitle>Memorial and benefit concerts</unittitle>
+                        <container id="cid383002" type="Box" label="Text">1</container>
+                        <container parent="cid383002" type="Folder">10</container>
+                        <unitdate>1985-1986</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref13">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.2-A1994.4.8</p>
+                    </odd>
+                </c02>
+            </c01>
+            <c01 id="ref44" level="series">
+                <did>
+                    <unittitle>Series V: Personal Files</unittitle>
+                    <unitdate>1971-1977 and undated</unitdate>
+                </did>
+                <c02 id="ref14" level="file">
+                    <did>
+                        <unittitle>Biographical information</unittitle>
+                        <container id="cid383003" type="Box" label="Text">1</container>
+                        <container parent="cid383003" type="Folder">11</container>
+                        <unitdate>1976-1977 and undated</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref15">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.9, A1994.4.86-A1994.4.87</p>
+                    </odd>
+                </c02>
+                <c02 id="ref23" level="file">
+                    <did>
+                        <unittitle>Passport information</unittitle>
+                        <container id="cid383007" type="Box" label="Text">1</container>
+                        <container parent="cid383007" type="Folder">12</container>
+                        <unitdate>1971-1977</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref24">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.60-A1994.4.64</p>
+                    </odd>
+                </c02>
+                <c02 id="ref25" level="file">
+                    <did>
+                        <unittitle>Work permit</unittitle>
+                        <container id="cid383008" type="Box" label="Text">1</container>
+                        <container parent="cid383008" type="Folder">13</container>
+                        <unitdate>1974 August 30</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref26">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.65</p>
+                    </odd>
+                </c02>
+            </c01>
+            <c01 id="ref27" level="series">
+                <did>
+                    <unittitle>Series VI: Photographic Materials</unittitle>
+                    <unitdate>undated</unitdate>
+                </did>
+                <c02 id="ref28" level="file">
+                    <did>
+                        <unittitle>Negatives and transparencies</unittitle>
+                        <container id="cid383009" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid383009" type="Folder">14</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref29">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.66-A1994.4.1972</p>
+                    </odd>
+                </c02>
+                <c02 id="ref30" level="file">
+                    <did>
+                        <unittitle>Black and white publicity photographs</unittitle>
+                        <container id="cid383010" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid383010" type="Folder">15</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd audience="internal" id="ref31">
+                        <head>Museum Accession Numbers</head>
+                        <p>A1994.4.73</p>
+                    </odd>
+                </c02>
+            </c01>
+            <c01 id="ref56" level="series">
+                <did>
+                    <unittitle>Series VII: Printed Materials</unittitle>
+                </did>
+                <c02 id="ref57" level="file">
+                    <did>
+                        <unittitle>Clippings</unittitle>
+                        <container id="cid409001" type="Box" label="Text">1</container>
+                        <container parent="cid409001" type="Folder">16</container>
+                        <unitdate>1970-1974</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref59" level="file">
+                    <did>
+                        <unittitle>Clippings</unittitle>
+                        <container id="cid409002" type="Box" label="Text">1</container>
+                        <container parent="cid409002" type="Folder">17</container>
+                        <unitdate>1975-1979</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref60" level="file">
+                    <did>
+                        <unittitle>Clippings</unittitle>
+                        <container id="cid409003" type="Box" label="Text">1</container>
+                        <container parent="cid409003" type="Folder">18</container>
+                        <unitdate>1980-1984</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref61" level="file">
+                    <did>
+                        <unittitle>Clippings</unittitle>
+                        <container id="cid409004" type="Box" label="Text">1</container>
+                        <container parent="cid409004" type="Folder">19</container>
+                        <unitdate>1985-1990</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref62" level="file">
+                    <did>
+                        <unittitle>Pamphlets</unittitle>
+                        <container id="cid409005" type="Box" label="Text">1</container>
+                        <container parent="cid409005" type="Folder">20</container>
+                        <unitdate>1974 and 1982</unitdate>
+                    </did>
+                </c02>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

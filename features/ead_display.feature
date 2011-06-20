@@ -27,3 +27,8 @@ Feature: EAD display
     Given I am on the component page for ARC-0105:2:ref17
     Then I should see "Series I: Awards and Certificates"
     And I should see "Awards and certificates, 1976-1986"
+
+  Scenario: Names (BL-7)
+    Given I am on the ead page for ARC-0001
+    When I follow "Controlled Access Headings"
+    Then I should see "Collins, Nikki"
