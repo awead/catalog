@@ -24,3 +24,5 @@ tmp/performance
 Gemfile.lock
 
 .rvmrc
+
+lib/solrmarc.log*
