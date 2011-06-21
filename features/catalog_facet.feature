@@ -20,3 +20,4 @@ Feature: Catalog Home Page
     Then I should see the facet term "Book"
     And I should see the facet term "Archival Collection"
     And I should see the facet term "Score"
+    And I should see the facet term "Website"
