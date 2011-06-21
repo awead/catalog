@@ -24,6 +24,9 @@ module NavigationHelpers
       params = $1.split(/:/)
       components_path(:ead_id=>params[0], :level=>params[1], :parent_ref=>params[2])
 
+    when /^the bib record page for (.+)/
+      catalog_path($1)
+
     else
       begin
         page_name =~ /^the (.*) page$/
