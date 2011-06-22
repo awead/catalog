@@ -75,6 +75,7 @@ module Rockhall::EadMethods
       :parent_ref_list => ead_parent_refs(node,level),
       :parent_unittitle_list => ead_parent_unittitles(node,level),
       :collection_display => ead_collection(node),
+      :collection_facet => ead_collection(node),
       :text => part.text,
       :xml_display => part.to_xml
     }

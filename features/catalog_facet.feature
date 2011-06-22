@@ -8,7 +8,7 @@ Feature: Catalog Home Page
     Then I should see "Rock and Roll Hall of Fame Library and Archives"
     And I should see a facet for "Format"
     And I should see a facet for "Archival Material"
-    And I should see a facet for "Archival Collection"
+    And I should see a facet for "Collection Name"
     And I should see a facet for "Topic"
     And I should see a facet for "Name"
     And I should see a facet for "Event/Series"

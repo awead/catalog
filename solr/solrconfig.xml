@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--  
+<!--
     For information on how to customize this file, please see
-    http://wiki.apache.org/solr/SolrConfigXml. The page also has a link to 
-    an extensively commented version of this file. 
+    http://wiki.apache.org/solr/SolrConfigXml. The page also has a link to
+    an extensively commented version of this file.
 -->
 <config>
   <abortOnConfigurationError>${solr.abortOnConfigurationError:true}</abortOnConfigurationError>
-  
+
   <!-- lib directives can be used to instruct Solr to load an Jars identified
        and use them to resolve any "plugins" specified in your solrconfig.xml or
        schema.xml (ie: Analyzers, Request Handlers, etc...).
@@ -32,9 +32,9 @@
        that matches, it will be ignored
     -->
   <!-- <lib dir="../../contrib/clustering/lib/downloads/" /> -->
-  
+
   <dataDir>${solr.data.dir:./solr/data}</dataDir>
-  
+
   <!-- index time configurations -->
   <indexDefaults>
     <useCompoundFile>false</useCompoundFile>
@@ -61,7 +61,7 @@
       (For backwards compatibility with Solr 1.2, 'simple' is the default
        if not specified.)
     -->
-    <lockType>native</lockType>  
+    <lockType>native</lockType>
   </indexDefaults>
   <mainIndex>
     <useCompoundFile>false</useCompoundFile>
@@ -71,10 +71,10 @@
     <maxFieldLength>10000</maxFieldLength>
     <unlockOnStartup>false</unlockOnStartup>
     <deletionPolicy class="solr.SolrDeletionPolicy">
-      <str name="keepOptimizedOnly">false</str>      
+      <str name="keepOptimizedOnly">false</str>
       <str name="maxCommitsToKeep">1</str>
       <!-- The number of optimized commit points to be kept -->
-      <str name="maxOptimizedCommitsToKeep">1</str>      
+      <str name="maxOptimizedCommitsToKeep">1</str>
       <!--
           Delete all commit points once they have reached the given age.
           Supports DateMathParser syntax e.g.
@@ -112,7 +112,7 @@
       <arr name="queries">
         <!-- query for all objects (default query) for home page facets -->
         <lst>
-          <str name="rows">0</str> 
+          <str name="rows">0</str>
           <str name="fl">score</str>
           <str name="facet">true</str>
           <str name="facet.mincount">1</str>
@@ -158,7 +158,7 @@
       <arr name="queries">
         <!-- query for all objects (default query) for home page facets -->
         <lst>
-          <str name="rows">0</str> 
+          <str name="rows">0</str>
           <str name="fl">score</str>
           <str name="facet">true</str>
           <str name="facet.mincount">1</str>
@@ -218,12 +218,12 @@
   <requestHandler name="search" class="solr.SearchHandler" default="true" >
     <lst name="defaults">
       <str name="defType">dismax</str>
-      <str name="echoParams">explicit</str>      
+      <str name="echoParams">explicit</str>
       <str name="q.alt">*:*</str>
       <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
       <!-- this qf and pf are used by default, if not otherwise specified by
            client. The default blacklight_config will use these for the
-           "keywords" search. See the author_qf/author_pf, title_qf, etc 
+           "keywords" search. See the author_qf/author_pf, title_qf, etc
            below, which the default blacklight_config will specify for
            those searches. You may also be interested in:
            http://wiki.apache.org/solr/LocalParams
@@ -327,22 +327,22 @@
         subject_addl_unstem_search^100
         subject_addl_t^10
       </str>
-      
-      
+
+
       <int name="ps">3</int>
       <float name="tie">0.01</float>
 
       <!-- NOT using marc_display because it is large and will slow things down for search results -->
       <str name="fl">
-        id, 
+        id,
         score,
         author_display,
-        author_vern_display, 
-        format, 
-        isbn_t, 
-        language_facet, 
+        author_vern_display,
+        format,
+        isbn_t,
+        language_facet,
         lc_callnum_display,
-        material_type_display, 
+        material_type_display,
         published_display,
         published_vern_display,
         pub_date,
@@ -360,11 +360,9 @@
         ref,
         parent_ref,
         parent_unittitle_list,
-        parent_ref_list,
-        unitdate_display,
-        collection_display
+        parent_ref_list
       </str>
-     
+
       <str name="facet">true</str>
       <str name="facet.mincount">1</str>
       <str name="facet.limit">10</str>
@@ -377,7 +375,7 @@
       <str name="facet.field">subject_era_facet</str>
       <str name="facet.field">subject_geo_facet</str>
       <str name="facet.field">subject_topic_facet</str>
-      
+
       <str name="spellcheck">true</str>
       <str name="spellcheck.dictionary">default</str>
       <str name="spellcheck.onlyMorePopular">true</str>
@@ -389,7 +387,7 @@
       <str>spellcheck</str>
     </arr>
   </requestHandler>
-  
+
   <!-- for requests to get a single document; use id=666 instead of q=id:666 -->
   <requestHandler name="document" class="solr.SearchHandler" >
     <lst name="defaults">
@@ -399,22 +397,22 @@
       <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
     </lst>
   </requestHandler>
-  
+
   <!--  For Advanced Search  -->
   <requestHandler name="advanced" class="solr.SearchHandler" >
     <lst name="defaults">
       <str name="defType">lucene</str>
       <str name="echoParams">explicit</str>
-      <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>   
-      <str name="df">text</str> 
-      <str name="q.op">AND</str> 
+      <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+      <str name="df">text</str>
+      <str name="q.op">AND</str>
       <str name="qs">1</str>
 
       <!-- used for dismax query parser -->
-      <str name="mm">1</str> 
-      <str name="ps">3</str> 
+      <str name="mm">1</str>
+      <str name="ps">3</str>
       <float name="tie">0.01</float>
-      
+
       <!-- for user query terms in author text box -->
       <str name="qf_author">
         author_unstem_search^200
@@ -428,7 +426,7 @@
         author_t^200
         author_addl_t^10
       </str>
-      
+
       <!-- for user query terms in title text box -->
       <str name="qf_title">
         title_unstem_search^50000
@@ -454,7 +452,7 @@
         title_series_t^50
         title_series_unstem_search^10
       </str>
-      
+
       <!-- for user query terms in subject text box -->
       <str name="qf_subject">
         subject_topic_unstem_search^200
@@ -472,25 +470,25 @@
         subject_addl_unstem_search^100
         subject_addl_t^10
       </str>
-      
+
       <!-- for user query terms in number text box -->
       <str name="qf_number">isbn_t</str>
-      
+
       <!-- for user query terms in keyword text box -->
       <str name="qf_keyword">text</str>
       <str name="pf_keyword">text^10</str>
-      
+
       <!-- NOT using marc_display because it is large and will slow things down for search results -->
       <str name="fl">
-        id, 
+        id,
         score,
         author_display,
-        author_vern_display, 
-        format, 
-        isbn_t, 
-        language_facet, 
+        author_vern_display,
+        format,
+        isbn_t,
+        language_facet,
         lc_callnum_display,
-        material_type_display, 
+        material_type_display,
         published_display,
         published_vern_display,
         pub_date,
@@ -508,11 +506,9 @@
         ref,
         parent_ref,
         parent_unittitle_list,
-        parent_ref_list,
-        unitdate_display,
-        collection_display
+        parent_ref_list
       </str>
-      
+
       <str name="facet">true</str>
       <str name="facet.mincount">1</str>
       <str name="facet.limit">10</str>
@@ -525,7 +521,7 @@
       <str name="facet.field">subject_era_facet</str>
       <str name="facet.field">subject_geo_facet</str>
       <str name="facet.field">subject_topic_facet</str>
-      
+
       <str name="spellcheck">true</str>
       <str name="spellcheck.dictionary">subject</str>
       <str name="spellcheck.onlyMorePopular">true</str>
@@ -537,7 +533,7 @@
       <str>spellcheck</str>
     </arr>
   </requestHandler>
-  
+
   <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
     <str name="queryAnalyzerFieldType">textSpell</str>
     <lst name="spellchecker">

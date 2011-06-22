@@ -19,21 +19,21 @@
 Blacklight.configure(:shared) do |config|
 
   config[:default_solr_params] = {
-    :qt => "search",
+    :qt       => "search",
     :per_page => 10
   }
 
   # solr field values given special treatment in the show (single result) view
   config[:show] = {
-    :html_title => "title_display",
-    :heading => "title_display",
+    :html_title   => "title_display",
+    :heading      => "title_display",
     :display_type => "format"
   }
 
   # solr fld values given special treatment in the index (search results) view
   config[:index] = {
-    :show_link => "title_display",
-    :record_display_type => "format"
+    :show_link            => "title_display",
+    :record_display_type  => "format"
   }
 
   # solr fields that will be treated as facets by the blacklight application
@@ -44,9 +44,8 @@ Blacklight.configure(:shared) do |config|
   config[:facet] = {
     :field_names => (facet_fields = [
       "format",
-      "material_facet",
-      "collection_display",
       "collection_facet",
+      "material_facet",
       "pub_date",
       "topic_facet",
       "name_facet",
@@ -57,15 +56,14 @@ Blacklight.configure(:shared) do |config|
     ]),
     :labels => {
       "format"              => "Format",
+      "collection_facet"    => "Collection Name",
       "material_facet"      => "Archival Material",
-      "collection_display"  => "Archival Collection",
       "pub_date"            => "Publication Year",
       "topic_facet"         => "Topic",
       "name_facet"          => "Name",
       "series_facet"        => "Event/Series",
       "language_facet"      => "Language",
       "lc_1letter_facet"    => "Call Number",
-      "collection_facet"    => "Collection Name",
       "genre_facet"         => "Genre"
     },
     # Setting a limit will trigger Blacklight's 'more' facet values link.
@@ -83,12 +81,16 @@ Blacklight.configure(:shared) do |config|
     # app code to actually have it echo'd back to see it.
     :limits => {
       "format"              => 10,
+      "material_facet"      => 10,
+      "collection_facet"    => 10,
       "pub_date"            => 10,
+      "topic_facet"         => 10,
+      "name_facet"          => 10,
+      "series_facet"        => 10,
       "language_facet"      => true,
       "lc_1letter_facet"    => 10,
-      "subject_era_facet"   => 10,
-      "subject_geo_facet"   => 10,
       "genre_facet"         => 10
+
     }
   }
 
