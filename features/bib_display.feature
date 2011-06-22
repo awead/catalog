@@ -22,3 +22,8 @@ Feature:
     Given I am on the bib record page for 74495434
     When I follow "Inside the Beatles vaults"
     Then I should see "Lifting latches / John C. Winn"
+
+  Scenario: Donor information
+    Given I am on the bib record page for 45008581
+    Then I should see "Donor:"
+    And I should see "Art Collins Papers"
