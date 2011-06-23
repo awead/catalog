@@ -147,6 +147,7 @@ Blacklight.configure(:shared) do |config|
       "contents_display",
       "notes_display",
       "donor_display",
+      "collection_display",
       "access_display",
       "subject_display",
       "genre_display",
@@ -168,7 +169,6 @@ Blacklight.configure(:shared) do |config|
       "pubnum_display",
       # EAD-only fields
       "arcsource_display",
-      "collection_display",
       "unitdate_display",
       "accessrestrict_display",
       "processinfo_display",
@@ -190,6 +190,7 @@ Blacklight.configure(:shared) do |config|
       "contents_display"        => "Contents:",
       "notes_display"           => "Notes:",
       "donor_display"           => "Donor:",
+      "collection_display"      => "Archival Collection:",
       "access_display"          => "Access:",
       "subject_display"         => "Subjects:",
       "genre_display"           => "Genre/Form:",
@@ -211,7 +212,6 @@ Blacklight.configure(:shared) do |config|
       "pubnum_display"          => "Publisher Number:",
       # EAD-only fields
       "arcsource_display"       => "Archive Source:",
-      "collection_display"      => "Collection Name:",
       "unitdate_display"        => "Unit Date:",
       "accessrestrict_display"  => "Access Restrictions:",
       "processinfo_display"     => "Process Info:",
@@ -225,7 +225,8 @@ Blacklight.configure(:shared) do |config|
     "subject_display",
     "genre_display",
     "contributors_display",
-    "relworks_display"
+    "relworks_display",
+    "collection_display"
   ]
 
 

@@ -27,7 +27,7 @@ module LocalBlacklightHelper
         result << field_value_separator
       end
     else
-      result = [value].to_s
+      result << link_to(value, catalog_index_path(:search_field => args[:field].to_sym, :q => value))
     end
     return result.html_safe
   end

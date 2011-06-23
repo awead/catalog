@@ -23,10 +23,12 @@ Feature:
     When I follow "Inside the Beatles vaults"
     Then I should see "Lifting latches / John C. Winn"
 
-  Scenario: Donor information
+  Scenario: Donor information and collection linkage (BL-39)
     Given I am on the bib record page for 45008581
     Then I should see "Donor:"
-    And I should see "Art Collins Papers"
+    And I should see "Gift: Nikki Collins; LA.2007.01.001"
+    And I should see "Archival Collection:"
+    And I should be able to follow "Art Collins Papers"
 
   Scenario: rhlocal link (BL-40)
     Given I am on the bib record page for 477045389
