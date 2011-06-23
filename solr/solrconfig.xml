@@ -33,7 +33,9 @@
     -->
   <!-- <lib dir="../../contrib/clustering/lib/downloads/" /> -->
 
+  <!-- commenting out data directory for multicore usage
   <dataDir>${solr.data.dir:./solr/data}</dataDir>
+  -->
 
   <!-- index time configurations -->
   <indexDefaults>
