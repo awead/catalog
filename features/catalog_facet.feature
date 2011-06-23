@@ -21,6 +21,7 @@ Feature: Catalog Home Page
     And I should see the facet term "Archival Collection"
     And I should see the facet term "Score"
     And I should see the facet term "Website"
+    And I should see the facet term "Periodical"
 
   Scenario: Collection name facet (BL-14)
     Given I am on the home page
