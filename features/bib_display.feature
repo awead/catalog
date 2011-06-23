@@ -27,3 +27,13 @@ Feature:
     Given I am on the bib record page for 45008581
     Then I should see "Donor:"
     And I should see "Art Collins Papers"
+
+  Scenario: rhlocal link (BL-40)
+    Given I am on the bib record page for 477045389
+    Then I should not see "rhlocal"
+
+  Scenario: searching for rhlocal via index (BL-40)
+    Given I am on the home page
+    And I fill in "q" with "rhlocal"
+    When I press "search"
+    Then I should see "The Beatles quiz book / compiled by Jack House"
