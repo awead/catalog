@@ -39,3 +39,12 @@ Feature:
     And I fill in "q" with "rhlocal"
     When I press "search"
     Then I should see "The Beatles quiz book / compiled by Jack House"
+
+  # TODO: depsite not using removeTralingPunct, it still seems to do it anyway
+  Scenario: Displaying uniform title from 240 field (BL-48)
+    Given I am on the bib record page for 3536869
+    Then I should see "Songs. Selections"
+
+  Scenario: Display resource links (BL-48)
+    Given I am on the bib record page for 33827620
+    Then I should see "Resource Link:"
