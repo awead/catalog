@@ -24,7 +24,7 @@ namespace :solr do
 
     desc 'delete all marc records'
     task :delete => :environment do
-      ["Book","Score","Website","Periodical"].each do |format|
+      ["Book","Score","Website","Periodical","Video"].each do |format|
         result = Blacklight.solr.find( :q => "{!raw f=format rows=1000000}#{format}" )
         result["response"]["docs"].each do |doc|
           doc_id = doc["id"]
