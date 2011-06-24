@@ -23,6 +23,7 @@ Feature: Catalog Home Page
     And I should see the facet term "Website"
     And I should see the facet term "Periodical"
     And I should see the facet term "Video"
+    And I should see the facet term "Audio"
 
   Scenario: Collection name facet (BL-14)
     Given I am on the home page
