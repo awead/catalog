@@ -1,0 +1,29 @@
+import org.marc4j.marc.Record;
+import org.solrmarc.tools.Utils;
+import org.solrmarc.tools.CallNumUtils;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+// define the base level indexer so that its methods can be called from the script.
+// note that the SolrIndexer code will set this value before the script methods are called.
+org.solrmarc.index.SolrIndexer indexer = null;
+
+Set getCollectionFacet(Record record)
+{
+
+  String val     = indexer.getFirstFieldVal(record, "710a");
+  String pattern = "Rock and Roll Hall of Fame and Museum";
+  Pattern p = Pattern.compile(pattern);
+
+
+  if (val != null)
+  {
+    Matcher m = p.matcher(val);
+    return val;
+  }
+  else
+  {
+      return null;
+  }
+
+}
