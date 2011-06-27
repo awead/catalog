@@ -11,19 +11,27 @@ org.solrmarc.index.SolrIndexer indexer = null;
 Set getCollectionFacet(Record record)
 {
 
-  String val     = indexer.getFirstFieldVal(record, "710a");
-  String pattern = "Rock and Roll Hall of Fame and Museum";
-  Pattern p = Pattern.compile(pattern);
+  Set fields710a   = indexer.getFieldList(record, "710a");
+  Set result       = new LinkedHashSet();
 
+  if (fields710a != null) {
 
-  if (val != null)
-  {
-    Matcher m = p.matcher(val);
-    return val;
+    for ( String f710a : fields710a ) {
+
+      String pattern = "Rock and Roll Hall of Fame and Museum";
+      Pattern p      = Pattern.compile(pattern);
+      Matcher m      = p.matcher(f710a);
+
+      if (m.find()) {
+        String[] parts = f710a.split(" \\(");
+        result.add(parts[0]);
+      }
+
+    }
+
   }
-  else
-  {
-      return null;
-  }
+
+  return result;
+
 
 }
