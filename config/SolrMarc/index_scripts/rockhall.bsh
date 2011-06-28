@@ -1,4 +1,5 @@
-import org.marc4j.marc.Record;
+import org.marc4j.*;
+import org.marc4j.marc.*;
 import org.solrmarc.tools.Utils;
 import org.solrmarc.tools.CallNumUtils;
 import java.util.regex.Pattern;
@@ -33,5 +34,29 @@ Set getCollectionFacet(Record record)
 
   return result;
 
+
+}
+
+Set supressRockHall(Record record, String fieldSpec)
+{
+
+  result = indexer.getFieldList(record, fieldSpec);
+  newResult = new LinkedHashSet();
+  for (String s : result)
+  {
+
+    String pattern = "Rock and Roll Hall of Fame and Museum";
+    Pattern p      = Pattern.compile(pattern);
+    Matcher m      = p.matcher(s);
+
+    if (m.find()) {
+      String[] parts = s.split(" \\(");
+      newResult.add(Utils.cleanData(parts[0]));
+    }
+    else {
+      newResult.add(Utils.cleanData(s));
+    }
+  }
+  return newResult;
 
 }
