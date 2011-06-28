@@ -1,14 +1,13 @@
-<% cache(:action_suffix => 'toc') do %>
-  <div id="ead_sidebar">
-    <div id="ead_toc">
-      <h3>Table of Contents</h3>
-      <ol>
-        <li><a href="#">Top</a></li>
-        <%= ead_contents %>
-        <li><%= link_to "Controlled Access Headings", catalog_path(@document["ead_id"], :anchor => "access_headings") %></li>
-        <li><%= link_to "Collection Inventory", catalog_path(@document["ead_id"], :anchor => "inventory") %></li>
-      </ol>
-    </div>
+<div id="ead_sidebar">
+  <div id="ead_toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#">Top</a></li>
+      <%= ead_contents %>
+      <li><%= link_to "Controlled Access Headings", catalog_path(@document["ead_id"], :anchor => "access_headings") %></li>
+      <li><%= link_to "Collection Inventory", catalog_path(@document["ead_id"], :anchor => "inventory") %></li>
+    </ol>
   </div>
-<% end %>
+</div>
+
 
