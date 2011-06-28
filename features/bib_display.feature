@@ -1,3 +1,5 @@
+@marc
+
 Feature:
   In order to find bibiographic information useful
   As a library patron

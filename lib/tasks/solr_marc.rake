@@ -38,3 +38,20 @@ namespace :solr do
 
   end
 end
+
+vendored_cucumber_bin = Dir["#{Rails.root}/vendor/{gems,plugins}/cucumber*/bin/cucumber"].first
+$LOAD_PATH.unshift(File.dirname(vendored_cucumber_bin) + '/../lib') unless vendored_cucumber_bin.nil?
+
+begin
+  require 'cucumber/rake/task'
+
+  namespace :cucumber do
+
+    Cucumber::Rake::Task.new({:marc => 'db:test:prepare'}, 'Run marc features') do |t|
+      t.binary = vendored_cucumber_bin
+      t.fork = true # You may get faster startup if you set this to false
+      t.profile = 'marc'
+    end
+
+  end
+end
