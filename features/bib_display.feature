@@ -52,3 +52,8 @@ Feature:
     Then I should see the field title "blacklight-resource_link_display" contain "Resource Link:"
     And I should see the field content "blacklight-resource_link_display" contain "Rock and Roll Hall of Fame and Museum"
     And I should be able to follow "Rock and Roll Hall of Fame and Museum"
+
+  Scenario: Deriving call numbers for display (BL-41)
+    Given I am on the bib record page for 45008581
+    Then I should see "ML420.L466 S54 2000"
+    And I should not see "ML420.L38 A5 2000"
