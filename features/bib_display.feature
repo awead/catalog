@@ -47,6 +47,8 @@ Feature:
     Given I am on the bib record page for 3536869
     Then I should see "Songs. Selections"
 
-  Scenario: Display resource links (BL-48)
+  Scenario: Display resource links and urls (BL-48/42)
     Given I am on the bib record page for 33827620
-    Then I should see "Resource Link:"
+    Then I should see the field title "blacklight-resource_link_display" contain "Resource Link:"
+    And I should see the field content "blacklight-resource_link_display" contain "Rock and Roll Hall of Fame and Museum"
+    And I should be able to follow "Rock and Roll Hall of Fame and Museum"

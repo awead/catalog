@@ -229,6 +229,11 @@ Blacklight.configure(:shared) do |config|
     "collection_display"
   ]
 
+  # Fields that link to external sites
+  config[:external_links] = {
+    "resource_link_display" => "title_display"
+  }
+
 
   # "fielded" search configuration. Used by pulldown among other places.
   # For supported keys in hash, see rdoc for Blacklight::SearchFields
