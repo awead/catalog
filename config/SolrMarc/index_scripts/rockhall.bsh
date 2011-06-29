@@ -9,6 +9,7 @@ import java.util.regex.Matcher;
 // note that the SolrIndexer code will set this value before the script methods are called.
 org.solrmarc.index.SolrIndexer indexer = null;
 
+// Not used at this time
 Set getCollectionFacet(Record record)
 {
 
@@ -37,6 +38,11 @@ Set getCollectionFacet(Record record)
 
 }
 
+
+// Supresses the collection name from a field or set of fields.  For example, any field containing:
+//   Art Collins Papers (Rock and Roll Hall of Fame and Museum)
+// would not be included in the result set.  This is specifically for 710$a fields that have this
+// type of formatted term.
 Set supressRockHall(Record record, String fieldSpec)
 {
 
@@ -49,14 +55,11 @@ Set supressRockHall(Record record, String fieldSpec)
     Pattern p      = Pattern.compile(pattern);
     Matcher m      = p.matcher(s);
 
-    if (m.find()) {
-      String[] parts = s.split(" \\(");
-      newResult.add(Utils.cleanData(parts[0]));
-    }
-    else {
+    if (!m.find())
       newResult.add(Utils.cleanData(s));
-    }
+
   }
+
   return newResult;
 
 }
