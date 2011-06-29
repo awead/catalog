@@ -48,3 +48,8 @@ Feature: EAD display
     And I should see "29"
     And I should see "Location:"
     And I should see "Folder: 10, Object: 2, Drawer: FF.1.4"
+
+  Scenario: I need to see all sub-components (BL-58)
+    Given I am on the component page for ARC-0065:2:ref42
+    Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
+    And I should see "Ultras with Dale, Dick"
