@@ -330,6 +330,7 @@ Blacklight.configure(:shared) do |config|
   # Only fields with a given label will appear under the "General Information"
   # section of the display.  Otherwise, field names will need to be called directly
   # in the view.
+  config[:ead_dir] = "test/data/ead"
   config[:ead_format_name] = "Archival Collection"
   config[:ead_fields] = {
     :field_names => [

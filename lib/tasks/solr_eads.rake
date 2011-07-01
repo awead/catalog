@@ -80,7 +80,11 @@ namespace :solr do
   namespace :index do
     desc "index a directory of ead files"
     task :ead_dir=>:environment do
-      d = ENV['DIR']
+      if ENV['DIR'].nil?
+        d = Blacklight.config[:ead_dir]
+      else
+        d = ENV['DIR']
+      end
       raise "Please specify a directory, like DIR=/home/you/folder." unless d and File.exists?(d)
       files = Dir.entries(d)
       files.each do |f|
