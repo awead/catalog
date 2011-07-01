@@ -44,12 +44,14 @@ module ArchivalCollectionHelper
 
   def ead_access_headings
     results = String.new
-    results << "<ul>"
-    values = @document["subject_topic_facet"].sort
-    values.each do |v|
-      results << "<li>#{v}</li>"
+    unless @document["subject_topic_facet"].nil?
+      results << "<h2 id=\"access_headings\">Controlled Access Headings</h2>"
+      results << "<ul>"
+      @document["subject_topic_facet"].sort.each do |v|
+        results << "<li>#{v}</li>"
+      end
+      results << "</ul>"
     end
-    results << "</ul>"
     return results.html_safe
   end
 
