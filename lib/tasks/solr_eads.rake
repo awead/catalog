@@ -86,13 +86,17 @@ namespace :solr do
       files.each do |f|
         doc  = File.catname(f, d)
         if File.extname(doc) == ".xml"
+          puts "[-----------------------------------------]"
           puts "indexing #{doc}"
           ENV['FILE'] = doc
-          Rake::Task["solr:index:ead"].invoke
+          begin
+            Rake::Task["solr:index:ead"].invoke
+          rescue StandardError => bang
+            puts "OOPPS!!!: #{ bang} "
+          end
           Rake::Task["solr:index:ead"].reenable
         end
       end
-      pp Blacklight.solr.commit
     end
 
     desc "index ead sample data from NCSU"
