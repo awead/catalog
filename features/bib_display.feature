@@ -57,3 +57,11 @@ Feature:
     Given I am on the bib record page for 45008581
     Then I should see "ML420.L466 S54 2000"
     And I should not see "ML420.L38 A5 2000"
+
+  Scenario: Multiple collection headings in 541$3 (BL-59)
+    Given I am on the bib record page for 663101343
+    Then I should see "Archival Collection"
+    And I should see "Terry Stewart Collection"
+    And I should see "Northeast Ohio Popular Music Archives"
+    And I should be able to follow "Terry Stewart Collection"
+    And I should be able to follow "Northeast Ohio Popular Music Archives"
