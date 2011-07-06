@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Completed" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0058</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Jermaine Rogers Collection
+                    <num>ARC.0058</num>
+                </titleproper>
+                <titleproper type="filing">Rogers, Jermaine Collection</titleproper>
+                <author>Finding aid prepared by James A. Kohler, Project Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>Rock and Roll Hall of Fame and Museum</addressline>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>February 21, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2011-06-24T13:40-0400</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>Jermaine Rogers Posters</unittitle>
+            <unitid>ARC.0058</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>1.92 Linear feet</extent>
+                <extent>18 loose oversize items</extent>
+            </physdesc>
+            <unitdate>2003-2005</unitdate>
+            <abstract id="ref75" label="Collection Overview">Jermaine Rogers Posters spans the years 2003-2005. The collection consists of 18 concert posters for various bands and venues by the artist Jermaine Rogers. Bands include ...And You Will Know Us By the Trail of Dead, The Cure, Jane's Addiction, and Queens of the Stone Age. The collection provides a sampling of Rogers' artistic work for various concerts in the United States. Seen in a broader context, the collection provides insights into how alternative rock bands and venues promoted their shows from 2003-2005 and the bands that played during that era.</abstract>
+            <langmaterial id="ref78" label="Language of Materials">Materials are in English.</langmaterial>
+        </did>
+        <userestrict id="ref19">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Museum, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <accessrestrict id="ref71">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibilities and Privacy Rights Form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+        </accessrestrict>
+        <processinfo id="ref72">
+            <head>Processing Information</head>
+            <p>Processed by James A. Kohler, Project Archivist. Completed February 22, 2011.</p>
+            <p>Descriptive sources and standards used to create this inventory: DACS and local Style Guide.</p>
+        </processinfo>
+        <acqinfo id="ref73">
+            <head>Provenance</head>
+            <p>Jermaine Rogers Posters was received by the Rock and Roll Hall of Fame and Museum as a gift from Jermaine Rogers on June 14, 2005.</p>
+        </acqinfo>
+        <scopecontent id="ref74">
+            <head>Scope and Contents</head>
+            <p>The materials are arranged chronologically.</p>
+        </scopecontent>
+        <bioghist id="ref76">
+            <head>Biographical Note</head>
+            <p>Jermaine Rogers is an artist and painter located in Brooklyn, New York and best known for his work in the field of modern rock poster art. Rogers began creating posters in 1994, and it became a full-time job in 1996. He has designed over eight hundred posters for performers such as Radiohead, Neil Young, Tool, and Weezer.</p>
+            <p>Rogers also has corporate clients like Verizon, Sony, and Budweiser. His work has appeared in various publications, including 
+                <title render="italic">New Musical Express</title>, 
+                <title render="italic">Esquire</title>, and 
+                <title render="italic">Entertainment Weekly</title>.</p>
+            <list numeration="lowerroman" type="ordered">
+                <head>Sources</head>
+                <item>“About.” JERMAINEROGERS.COM. Accessed February 22, 2011. http://www.jermainerogers.com/about.html.</item>
+            </list>
+        </bioghist>
+        <prefercite id="ref77">
+            <head>Preferred Citation</head>
+            <p>[Identification of item], Jermaine Rogers Posters, Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <controlaccess>
+            <corpname rules="aacr" role="Musician (mus)">--And You Will Know Us by the Trail of Dead  (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">A.F.I. (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Audioslave (Musical group)</corpname>
+            <persname rules="aacr" role="Musician (mus)">Auf der Maur, Melissa</persname>
+            <corpname rules="aacr" role="Musician (mus)">Blue October (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Burden Brothers</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Burning Brides (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Coheed and Cambria (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Cooper Temple Clause (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Copeland (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Cure (Musical group)</corpname>
+            <corpname rules="aacr" source="local">Curiosa Festival.</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Darkness (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Deftones (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Denali (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Drums and Tuba (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Dälek (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Falcon. (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Further Seems Forever (Musical group)</corpname>
+            <corpname rules="aacr" source="local" role="Musician (mus)">Galactic (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Head Automatica (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Jane's Addiction (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Mogwai (Musical group)</corpname>
+            <persname rules="aacr" role="Musician (mus)">Morrison, Jim, 1943-1971</persname>
+            <corpname rules="aacr" role="Musician (mus)">Muse (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Octopus Project (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Perfect Circle (Rock group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Posion the Well (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Queens of the Stone Age</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Rapture (Rock group)</corpname>
+            <corpname rules="aacr">South by Southwest Music and Media Conference (SXSW)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Sparta (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Sunshine (Musical group : Czech Republic)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Throw Rag (Musical group)</corpname>
+            <corpname rules="aacr" source="local" role="Musician (mus)">Tiger Named Love (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Wildhearts (Musical group)</corpname>
+            <subject source="lcsh">Alternative rock music.</subject>
+            <subject source="lcsh">Graphic artists</subject>
+            <genreform source="lcsh">Posters.</genreform>
+            <subject source="lcsh">Rock concerts.</subject>
+            <subject source="lcsh">Rock music--Posters</subject>
+        </controlaccess>
+        <dsc>
+            <c01 id="ref2" level="item">
+                <did>
+                    <unittitle>...And You Will Know Us By the Trail of Dead</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265001" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265001" type="Folder">5</container>
+                    <container parent="cid265001" type="Object">1</container>
+                    <unitdate>2003 January 31-2003 February 1</unitdate>
+                    <physdesc id="ref3" label="Dimensions">
+                        <dimensions>34.5" x 22.5"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref4">
+                    <head>Artist's Proof</head>
+                    <p>Artist's Proof</p>
+                </odd>
+            </c01>
+            <c01 id="ref6" level="item">
+                <did>
+                    <unittitle>Galatic; Drums and Tuba</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265002" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265002" type="Folder">5</container>
+                    <container parent="cid265002" type="Object">2</container>
+                    <unitdate>2003 February 20</unitdate>
+                    <physdesc id="ref7" label="Dimensions">
+                        <dimensions>21" x 16.5"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref8">
+                    <head>Limited Print Run</head>
+                    <p>15/75</p>
+                </odd>
+            </c01>
+            <c01 id="ref10" level="item">
+                <did>
+                    <unittitle>Queens of the Stone Age</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265003" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265003" type="Folder">5</container>
+                    <container parent="cid265003" type="Object">3</container>
+                    <unitdate>2003 March 11</unitdate>
+                    <physdesc id="ref11" label="Dimensions">
+                        <dimensions>19.5" x 10.25"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref12">
+                    <head>Limited Print Run</head>
+                    <p>Gold 17/25</p>
+                </odd>
+            </c01>
+            <c01 id="ref14" level="item">
+                <did>
+                    <unittitle>Mogwai; ...And You Will Know Us By the Trail of Dead; Dälek</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265004" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265004" type="Folder">5</container>
+                    <container parent="cid265004" type="Object">4</container>
+                    <unitdate>2003 September 15</unitdate>
+                    <physdesc id="ref15" label="Dimensions">
+                        <dimensions>24" x 18"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref16">
+                    <head>Limited Print Run</head>
+                    <p>52/175</p>
+                </odd>
+            </c01>
+            <c01 id="ref18" level="item">
+                <did>
+                    <unittitle>...And You Will Know Us By the Trail of Dead; Mogwai; Octopus Project; A Tiger Named Love; The Falcon</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265005" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265005" type="Folder">5</container>
+                    <container parent="cid265005" type="Object">5</container>
+                    <unitdate>2003 September 16</unitdate>
+                    <physdesc id="ref20" label="Dimensions">
+                        <dimensions>24" x 18"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref21">
+                    <head>Limited Print Run</head>
+                    <p>36/175</p>
+                </odd>
+            </c01>
+            <c01 id="ref23" level="item">
+                <did>
+                    <unittitle>Deftones; Posion the Well; Denali</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265006" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265006" type="Folder">5</container>
+                    <container parent="cid265006" type="Object">6</container>
+                    <unitdate>2003 November 5</unitdate>
+                    <physdesc id="ref24" label="Dimensions">
+                        <dimensions>20" x 20.25"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref25">
+                    <head>Limited Print Run</head>
+                    <p>71/200</p>
+                </odd>
+                <odd id="ref26">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.31.5</p>
+                </odd>
+            </c01>
+            <c01 id="ref27" level="item">
+                <did>
+                    <unittitle>Jane's Addiction; Burden Brothers; Blue October</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265007" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265007" type="Folder">5</container>
+                    <container parent="cid265007" type="Object">7</container>
+                    <unitdate>2003 December 21</unitdate>
+                    <physdesc id="ref29" label="Dimensions">
+                        <dimensions>33" x 13"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref30">
+                    <head>Limited Print Run</head>
+                    <p>6/200</p>
+                </odd>
+            </c01>
+            <c01 id="ref28" level="item">
+                <did>
+                    <unittitle>A.F.I.; Coheed and Cambria</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265008" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265008" type="Folder">5</container>
+                    <container parent="cid265008" type="Object">8</container>
+                    <unitdate>2004 March 12</unitdate>
+                    <physdesc id="ref32" label="Dimensions">
+                        <dimensions>21.25" x 18"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref33">
+                    <head>Limited Print Run</head>
+                    <p>90/250</p>
+                </odd>
+                <odd id="ref34">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.31.4</p>
+                </odd>
+            </c01>
+            <c01 id="ref35" level="item">
+                <did>
+                    <unittitle>South by Southwest Music and Media Conference (SXSW)</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265009" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265009" type="Folder">5</container>
+                    <container parent="cid265009" type="Object">9</container>
+                    <unitdate>2004 March 17-2004 March20</unitdate>
+                    <physdesc id="ref36" label="Dimensions">
+                        <dimensions>34.5" x 21"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref37">
+                    <head>Limited Print Run</head>
+                    <p>35/200</p>
+                </odd>
+            </c01>
+            <c01 id="ref39" level="item">
+                <did>
+                    <unittitle>The Darkness; The Wildheart</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265010" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265010" type="Folder">5</container>
+                    <container parent="cid265010" type="Object">10</container>
+                    <unitdate>2004 April 11</unitdate>
+                    <physdesc id="ref40" label="Dimensions">
+                        <dimensions>29.5" x 19"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref41">
+                    <head>Artist's Proof</head>
+                    <p>Artist's Proof</p>
+                </odd>
+            </c01>
+            <c01 id="ref43" level="item">
+                <did>
+                    <unittitle>A Perfect Circle; Burning Brides</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265011" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265011" type="Folder">5</container>
+                    <container parent="cid265011" type="Object">11</container>
+                    <unitdate>2004 May 29</unitdate>
+                    <physdesc id="ref44" label="Dimensions">
+                        <dimensions>31" x 21.5"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref45">
+                    <head>Artist's Proof</head>
+                    <p>Artist's Proof</p>
+                </odd>
+            </c01>
+            <c01 id="ref47" level="item">
+                <did>
+                    <unittitle>Curiosa Festival</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265012" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265012" type="Folder">5</container>
+                    <container parent="cid265012" type="Object">12</container>
+                    <unitdate>2004 August 15</unitdate>
+                    <physdesc id="ref48" label="Dimensions">
+                        <dimensions>33.25" x 21.75"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref49">
+                    <head>Limited Print Run</head>
+                    <p>8/100</p>
+                </odd>
+            </c01>
+            <c01 id="ref51" level="item">
+                <did>
+                    <unittitle>Sparta; Further Seems Forever; Copeland; Sunshine</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265013" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265013" type="Folder">5</container>
+                    <container parent="cid265013" type="Object">13</container>
+                    <unitdate>2004</unitdate>
+                    <physdesc id="ref52" label="Dimensions">
+                        <dimensions>21"x 18.75"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref53">
+                    <head>Limited Print Run</head>
+                    <p>31/325</p>
+                </odd>
+            </c01>
+            <c01 id="ref55" level="item">
+                <did>
+                    <unittitle>Queens of the Stone Age</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265014" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265014" type="Folder">5</container>
+                    <container parent="cid265014" type="Object">14</container>
+                    <unitdate>2005 March 28</unitdate>
+                    <physdesc id="ref56" label="Dimensions">
+                        <dimensions>19.75" x 16.5"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref57">
+                    <head>Limited Print Run</head>
+                    <p>75/250</p>
+                </odd>
+            </c01>
+            <c01 id="ref59" level="item">
+                <did>
+                    <unittitle>Queens of the Stone Age; Throw Rag</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265015" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265015" type="Folder">5</container>
+                    <container parent="cid265015" type="Object">15</container>
+                    <unitdate>2005 April 16</unitdate>
+                    <physdesc id="ref60" label="Dimensions">
+                        <dimensions>21" x 28.5"</dimensions>
+                    </physdesc>
+                </did>
+            </c01>
+            <c01 id="ref62" level="item">
+                <did>
+                    <unittitle>Mars Volta</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265016" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265016" type="Folder">5</container>
+                    <container parent="cid265016" type="Object">16</container>
+                    <unitdate>2005 April 25</unitdate>
+                    <physdesc id="ref63" label="Dimensions">
+                        <dimensions>19" x 26"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref64">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.31.15</p>
+                </odd>
+            </c01>
+            <c01 id="ref65" level="item">
+                <did>
+                    <unittitle>Audioslave - 
+                        <title render="italic">Love</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265017" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265017" type="Folder">5</container>
+                    <container parent="cid265017" type="Object">17</container>
+                    <unitdate>2005 May 16</unitdate>
+                    <physdesc id="ref66" label="Dimensions">
+                        <dimensions>22" x 33"</dimensions>
+                    </physdesc>
+                </did>
+            </c01>
+            <c01 id="ref68" level="item">
+                <did>
+                    <unittitle>Morrison, Jim - 
+                        <title render="italic">Wake Up</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid265018" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid265018" type="Folder">5</container>
+                    <container parent="cid265018" type="Object">18</container>
+                    <unitdate>2005</unitdate>
+                    <physdesc id="ref69" label="Dimensions">
+                        <dimensions>23" x 30"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref70">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.31.18</p>
+                </odd>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

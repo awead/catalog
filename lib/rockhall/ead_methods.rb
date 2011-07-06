@@ -32,6 +32,49 @@ module Rockhall::EadMethods
     Document.new(xml_doc)
   end
 
+  # Note: only handles ranges in the last set of digits
+  def self.ead_accession_range(range)
+    results = Array.new
+    first, last = range.split(/-/)
+    numbers = range.split(/,/)
+
+    if numbers.length > 1
+      numbers.each do |n|
+
+      first, last = n.split(/-/)
+        if last
+          fparts = first.strip.split(/\./)
+          lparts = last.strip.split(/\./)
+          (fparts[2]..lparts[2]).each { |n| results << fparts[0] + "." + fparts[1] + "." + n }
+        else
+          results << n.strip
+        end
+
+      end
+    elsif last
+      fparts = first.strip.split(/\./)
+      lparts = last.strip.split(/\./)
+      (fparts[2]..lparts[2]).each { |n| results << fparts[0] + "." + fparts[1] + "." + n }
+    else
+      results << range.strip
+    end
+
+    return results
+
+  end
+
+  def self.ead_accessions(node)
+    results = Array.new
+    node.xpath('//head[contains(., "Museum Accession Number")]').each do | n |
+      ead_accession_range(n.next_element.text).each { |a| results << a }
+    end
+
+    if results.length > 1
+      return results.uniq
+    else
+      return nil
+    end
+  end
 
   def self.get_ead_doc(xml)
 
@@ -40,13 +83,13 @@ module Rockhall::EadMethods
     title.sub!(num, '(' + num + ')')
 
     solr_doc = {
-    :format => Blacklight.config[:ead_format_name],
-    :title_display => title,
-    :institution_t => xml.at('//publicationstmt/publisher').text,
-    :ead_filename_s => xml.at('//eadheader/eadid').text,
-    :id => Rockhall::EadMethods.ead_id(xml),
-    :xml_display => xml.to_xml,
-    :text => xml.text,
+      :format => Blacklight.config[:ead_format_name],
+      :title_display => title,
+      :institution_t => xml.at('//publicationstmt/publisher').text,
+      :ead_filename_s => xml.at('//eadheader/eadid').text,
+      :id => Rockhall::EadMethods.ead_id(xml),
+      :xml_display => xml.to_xml,
+      :text => xml.text,
     }
 
     Blacklight.config[:ead_fields][:xpath].each do | field, xpath |
@@ -112,6 +155,12 @@ module Rockhall::EadMethods
     material = ead_material(part)
     unless material.nil?
       doc.merge!({ :material_facet => material })
+    end
+
+    # index accession numbers and ranges
+    accessions = ead_accessions(part)
+    unless accessions.nil?
+      doc.merge!({ :accessions_t => accessions })
     end
 
     return doc
@@ -188,5 +237,7 @@ module Rockhall::EadMethods
     end
     return results
   end
+
+
 
 end
