@@ -57,3 +57,8 @@ Feature: EAD display
   Scenario: EAD that has no collection headings (BL-60)
     Given I am on the ead page for RG-0001
     Then I should not see "Controlled Access Headings"
+
+  @wip
+  Scenario: Hide accession numbers (BL-49)
+    Given I am on the ead page for ARC-0058
+    Then I should not see "A2005.31.15"

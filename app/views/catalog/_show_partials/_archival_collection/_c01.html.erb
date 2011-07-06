@@ -8,10 +8,6 @@
   </span>
 </h5>
 
-<% unless odd.nil? %>
-  <p><%= ead_text(odd, 'p') %></p>
-<% end %>
-
 <%= ead_paragraphs(element.xpath('scopecontent').first) %>
 
 <% if did.xpath('container').first %>

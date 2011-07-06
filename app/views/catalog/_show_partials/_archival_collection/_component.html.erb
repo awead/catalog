@@ -11,7 +11,7 @@
   <% end %>
 
   <dl>
-    <% unless document["odd_display"].nil? %>
+    <% unless document["odd_display"].nil? and document["odd_label_display"].nil? or document["odd_label_display"].first.match("Accession") %>
       <dt><%= document["odd_label_display"] %>:</dt>
       <dd class="odd"><%= document["odd_display"] %></span></dd>
     <% end %>
