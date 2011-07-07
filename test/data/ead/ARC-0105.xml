@@ -24,8 +24,9 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2011-06-15T14:31-0400</date>
+                <date>2011-06-24T13:54-0400</date>
             </creation>
+            <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
         </profiledesc>
     </eadheader>
@@ -85,7 +86,7 @@
                 </chronitem>
                 <chronitem>
                     <date>1956</date>
-                    <event>Appears in the film 
+                    <event>Appears in the film
                         <title render="italic">Shake, Rattle and Roll</title></event>
                 </chronitem>
                 <chronitem>
@@ -160,10 +161,6 @@
                         <container parent="cid386006" type="Folder">1</container>
                         <unitdate>1976-1986</unitdate>
                     </did>
-                    <odd audience="internal" id="ref43">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.10-A1994.4.22</p>
-                    </odd>
                 </c02>
                 <c02 id="ref40" level="file">
                     <did>
@@ -172,10 +169,6 @@
                         <container parent="cid386005" type="Folder">2</container>
                         <unitdate>1984-1985</unitdate>
                     </did>
-                    <odd audience="internal" id="ref41">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.90-A1994.4.91</p>
-                    </odd>
                 </c02>
             </c01>
             <c01 id="ref45" level="series">
@@ -190,10 +183,6 @@
                         <container parent="cid386002" type="Folder">3</container>
                         <unitdate>1945-1946</unitdate>
                     </did>
-                    <odd audience="internal" id="ref35">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.77-A1994.4.83</p>
-                    </odd>
                 </c02>
                 <c02 id="ref63" level="file">
                     <did>
@@ -213,10 +202,6 @@
                         <container parent="cid386001" type="Folder">5</container>
                         <unitdate>1983-1984</unitdate>
                     </did>
-                    <odd audience="internal" id="ref33">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.84-A1994.4.85, A1994.4.94</p>
-                    </odd>
                 </c02>
                 <c02 id="ref19" level="file">
                     <did>
@@ -225,10 +210,6 @@
                         <container parent="cid383004" type="Folder">6</container>
                         <unitdate>undated</unitdate>
                     </did>
-                    <odd audience="internal" id="ref20">
-                        <head>Musuem Accession Numbers</head>
-                        <p>A1994.4.23a-A1994.4.23j, A1994.4.24a-A1994.4.24b, A1994.25a-A1994.25j</p>
-                    </odd>
                 </c02>
             </c01>
             <c01 id="ref21" level="series">
@@ -243,10 +224,6 @@
                         <container parent="cid386004" type="Folder">7</container>
                         <unitdate>1942-1987</unitdate>
                     </did>
-                    <odd audience="internal" id="ref39">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.26-A.1994.4.58, A1994.4.74-A1994.4.76</p>
-                    </odd>
                 </c02>
                 <c02 id="ref36" level="file">
                     <did>
@@ -255,10 +232,6 @@
                         <container parent="cid386003" type="Folder">8</container>
                         <unitdate>1974</unitdate>
                     </did>
-                    <odd audience="internal" id="ref37">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.88a-A1994.4.88e, A1994.4.89a-A.1994.4.89c</p>
-                    </odd>
                 </c02>
             </c01>
             <c01 id="ref16" level="series">
@@ -273,10 +246,6 @@
                         <container parent="cid383001" type="Folder">9</container>
                         <unitdate>circa 1985</unitdate>
                     </did>
-                    <odd audience="internal" id="ref11">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.1a-A1994.4.1b</p>
-                    </odd>
                 </c02>
                 <c02 id="ref12" level="file">
                     <did>
@@ -285,10 +254,6 @@
                         <container parent="cid383002" type="Folder">10</container>
                         <unitdate>1985-1986</unitdate>
                     </did>
-                    <odd audience="internal" id="ref13">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.2-A1994.4.8</p>
-                    </odd>
                 </c02>
             </c01>
             <c01 id="ref44" level="series">
@@ -303,10 +268,6 @@
                         <container parent="cid383003" type="Folder">11</container>
                         <unitdate>1976-1977 and undated</unitdate>
                     </did>
-                    <odd audience="internal" id="ref15">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.9, A1994.4.86-A1994.4.87</p>
-                    </odd>
                 </c02>
                 <c02 id="ref23" level="file">
                     <did>
@@ -315,10 +276,6 @@
                         <container parent="cid383007" type="Folder">12</container>
                         <unitdate>1971-1977</unitdate>
                     </did>
-                    <odd audience="internal" id="ref24">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.60-A1994.4.64</p>
-                    </odd>
                 </c02>
                 <c02 id="ref25" level="file">
                     <did>
@@ -327,10 +284,6 @@
                         <container parent="cid383008" type="Folder">13</container>
                         <unitdate>1974 August 30</unitdate>
                     </did>
-                    <odd audience="internal" id="ref26">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.65</p>
-                    </odd>
                 </c02>
             </c01>
             <c01 id="ref27" level="series">
@@ -345,10 +298,6 @@
                         <container parent="cid383009" type="Folder">14</container>
                         <unitdate>undated</unitdate>
                     </did>
-                    <odd audience="internal" id="ref29">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.66-A1994.4.1972</p>
-                    </odd>
                 </c02>
                 <c02 id="ref30" level="file">
                     <did>
@@ -357,10 +306,6 @@
                         <container parent="cid383010" type="Folder">15</container>
                         <unitdate>undated</unitdate>
                     </did>
-                    <odd audience="internal" id="ref31">
-                        <head>Museum Accession Numbers</head>
-                        <p>A1994.4.73</p>
-                    </odd>
                 </c02>
             </c01>
             <c01 id="ref56" level="series">

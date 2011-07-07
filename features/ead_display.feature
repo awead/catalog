@@ -31,9 +31,9 @@ Feature: EAD display
     And I should not see "A1994.4.10-A1994.4.22"
 
   Scenario: Names (BL-7)
-    Given I am on the ead page for ARC-0001
+    Given I am on the ead page for ARC-0058
     When I follow "Controlled Access Headings"
-    Then I should see "Collins, Nikki"
+    Then I should see "Auf der Maur, Melissa"
 
   Scenario: Don't show heading for fields that aren't there
     Given I am on the ead page for ARC-0065
@@ -47,7 +47,7 @@ Feature: EAD display
     And I should see "23"
     And I should see "29"
     And I should see "Location:"
-    And I should see "Folder: 7, Object: 2, Drawer: FF.1.4"
+    And I should see "Folder: 7, Object: 1, Drawer: FF.1.4"
 
   Scenario: I need to see all sub-components (BL-58)
     Given I am on the component page for ARC-0065:2:ref42
