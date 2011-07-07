@@ -364,7 +364,10 @@
         parent_ref,
         parent_unittitle_list,
         parent_ref_list,
-        accession_s
+        accession_s,
+        heading_display,
+        unitdate_display,
+        collection_display
       </str>
 
       <str name="facet">true</str>
@@ -510,7 +513,11 @@
         ref,
         parent_ref,
         parent_unittitle_list,
-        parent_ref_list
+        parent_ref_list,
+        accession_s,
+        heading_display,
+        unitdate_display,
+        collection_display
       </str>
 
       <str name="facet">true</str>

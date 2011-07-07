@@ -85,6 +85,7 @@ module Rockhall::EadMethods
     solr_doc = {
       :format => Blacklight.config[:ead_format_name],
       :title_display => title,
+      :heading_display => "Finding Aid: " + title,
       :institution_t => xml.at('//publicationstmt/publisher').text,
       :ead_filename_s => xml.at('//eadheader/eadid').text,
       :id => Rockhall::EadMethods.ead_id(xml),
@@ -106,19 +107,23 @@ module Rockhall::EadMethods
 
   def self.get_component_doc(node,level)
     part, children = ead_prep_component(node,level)
+    collection = ead_collection(node)
+    title = ead_solr_field(part,"//c0#{level}/did/unittitle","unittitle_display").values.first.to_s
+
     # Required fields
     doc = {
       :id => [ead_id(node), level, node.attr("id")].join(":"),
       :ead_id => ead_id(node),
       #:ead_facet => node.attr("level"),
+      :heading_display => collection + ": " + ead_parent_unittitles(node,level).join(" - ") + " - " + title,
       :component_level => level,
       :component_children_b => children,
       :ref => node.attr("id"),
       :parent_ref => node.parent.attr("id"),
       :parent_ref_list => ead_parent_refs(node,level),
       :parent_unittitle_list => ead_parent_unittitles(node,level),
-      :collection_display => ead_collection(node),
-      :collection_facet => ead_collection(node),
+      :collection_display => collection,
+      :collection_facet => collection,
       :text => part.text,
       :xml_display => part.to_xml
     }

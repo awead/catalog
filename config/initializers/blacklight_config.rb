@@ -32,7 +32,7 @@ Blacklight.configure(:shared) do |config|
 
   # solr fld values given special treatment in the index (search results) view
   config[:index] = {
-    :show_link            => "title_display",
+    :show_link            => "heading_display",
     :record_display_type  => "format"
   }
 
@@ -112,7 +112,8 @@ Blacklight.configure(:shared) do |config|
       "lc_callnum_display",
       # EAD-only fields
       "unitdate_display",
-      "collection_display"
+      "collection_display",
+      "parent_unittitle_list"
     ],
     :labels => {
       "title_display"           => "Title:",
@@ -123,7 +124,8 @@ Blacklight.configure(:shared) do |config|
       "lc_callnum_display"      => "Call Number:",
       # EAD-only fields
       "unitdate_display"        => "Dates:",
-      "collection_display"      => "Collection:"
+      "collection_display"      => "Archival Collection:",
+      "parent_unittitle_list"   => "Series:"
     }
   }
 
