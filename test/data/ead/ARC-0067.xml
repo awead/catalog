@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Completed" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0067</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Curtis Mayfield Collection
+                    <num>ARC.0067</num>
+                </titleproper>
+                <titleproper type="filing">Mayfield, Curtis Collection</titleproper>
+                <author>Finding aid prepared by James A. Kohler, Project Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>Rock and Roll Hall of Fame and Museum</addressline>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>April 26, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2011-07-07T12:00-0400</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>Curtis Mayfield Collection</unittitle>
+            <unitid>ARC.0067</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>3.54 Linear feet</extent>
+                <extent>7 oversize items, 1 shared half Hollinger box</extent>
+            </physdesc>
+            <unitdate>1958-1990</unitdate>
+            <abstract id="ref9" label="Collection Overview">The Curtis Mayfield Collection spans the years 1958 to 1994. The collection consists of a pre-publication version of Mayfield's book, 
+                <title render="italic">Poetic License: In Poem and Song</title> without the illustrations by David Soto; three negatives and ten original photographs from various stages of Mayfield's solo career and his time with The Impressions, all circa 1958 to the early-1990s--there are three oversize photographic reproductions in the collection as well. The collection also contains a Curtis Mayfield poster from an April 6, 1990 concert in Barcelona, Spain and two concert programs: one with Curtis Mayfield and the Superfly Band for a 1979 tour of South Africa; the other, the 1983 Silver Anniversary Tour of the Impressions. The collection provides a glimpse into the career of Curtis Mayfield through images, his lyrics, and poetry. Seen in a broader context, the collection provides insights to the changing rhythm and blues scene from the late-1950s into the 1990s.</abstract>
+            <langmaterial id="ref11" label="Language of Materials note">Collection is primarily in English; materials in Spanish are indicated at the folder level.</langmaterial>
+        </did>
+        <userestrict id="ref6">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Museum, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <accessrestrict id="ref7">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibilities and Privacy Rights Form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+        </accessrestrict>
+        <processinfo id="ref8">
+            <head>Processing Information note</head>
+            <p>Processed by James A. Kohler, Project Archivist. Completed April 26, 2011.</p>
+            <p>Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <bioghist id="ref10">
+            <head>Biographical Note</head>
+            <p>Curtis Lee Mayfield (June 3, 1942–December 26, 1999) was a singer, songwriter, and record producer primarily in the rhythm and blues, soul, and funk genres. He was born on the North Side of Chicago and was performing by the age 7. He quickly gained an appreciation for the gospel and electric blues music found in the Chicago area and by his teens had taught himself to play the electric guitar. Ultimately, he would become a multi-instrumentalist who played the guitar, bass, piano, saxophone, and drums. After leaving school at the age of 16 to pursue his music career, Mayfield score his first hit (“For Your Precious Love”) with his band, The Impressions. By the 1970s, Mayfield had gone solo and had his own record label, Curtom Records, and was creating his most commercially successful record, the soundtrack to the “blaxploitation” film Superfly. Songs from the album include the title track and “Freddie’s Dead,”and the album is still considered an influential landmark of the period. Through the decade, Mayfield and the artists on Curtom Records would be disturbed by different labels, including Buddah Records, Warner Bros., RSO Records, and Artista. The label ceased to exist by 1980 and its master tapes are now controlled by Warner Music Group and the Mayfield Family Mayfield continued making albums, writing soundtracks, and performing live over the next two decades. Unfortunately, during a soundcheck on August 13, 1990 at an outdoor concert venue, Mayfield was crushed under the stage lighting rig, which had toppled from the high winds, crushing his spine in three places, and leaving him paralyzed from the neck down and unable to play any instrument. But, he was still able to sing, and continued to writing and produce new material for his 1997 album, “New World Order.” Mayfield was awarded the Grammy Legend Award in 1994 and received the Grammy Lifetime Achievement Award in 1995. He was also inducted into The Rock and Roll Hall of Fame as a member of the Impressions in 1991 and as a solo artist in 1999. Curtis Mayfield passed away at the age of 57 on December 26, 1999.</p>
+            <list type="ordered">
+                <head>Resources</head>
+                <item>"Biography." Curtis Mayfield. Accessed April 25, 2011. http://curtismayfield.com/biography.html.</item>
+                <item>"Curtom Records." Wikipedia. Last modified March 23, 2011. http://en.wikipedia.org/wiki/Curtom_Records.</item>
+                <item>"Curtis Mayfield." Wikipedia. Last modified April 21, 2011. http://en.wikipedia.org/wiki/Curtis_Mayfield.</item>
+            </list>
+        </bioghist>
+        <acqinfo id="ref12">
+            <head>Immediate Source of Acquisition note</head>
+            <p>The Curtis Mayfield Collection was received by the Rock and Roll Hall of Fame and Museum as a gift from Curtis Mayfield in December 1994.</p>
+        </acqinfo>
+        <prefercite id="ref13">
+            <head>Preferred Citation note</head>
+            <p>[Identification of item], Curtis Mayfield Collection, Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <altformavail id="ref26">
+            <head>Existence and Location of Copies note</head>
+            <p>Both the negatives and oversize objects 1, 3, and 4 were created by the Rock and Roll Hall of Fame and Museum for exhibition purposes. Two of the reproduced images are of 8 x 10" photographs in this collection.</p>
+        </altformavail>
+        <controlaccess>
+            <corpname rules="aacr" role="Musician (mus)">Impressions (Musical group)</corpname>
+            <persname rules="aacr" role="Donor (dnr)">Mayfield, Curtis</persname>
+            <persname rules="aacr" role="Musician (mus)">Mayfield, Curtis</persname>
+            <genreform source="lcsh">Photographs.</genreform>
+            <genreform source="lcsh">Photography--Negatives.</genreform>
+            <subject source="lcsh">Rhythm and blues music.</subject>
+        </controlaccess>
+        <dsc>
+            <c01 id="ref5" level="file">
+                <did>
+                    <unittitle>Book: 
+                        <title render="italic">Poetic License: In Poem and Song</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid324005" type="Box" label="Books">1</container>
+                    <container parent="cid324005" type="Folder">4</container>
+                    <container parent="cid324005" type="Object">1</container>
+                    <unitdate>circa 1994</unitdate>
+                </did>
+                <odd id="ref20">
+                    <head>Museum Accession Number</head>
+                    <p>A1994.34.10</p>
+                </odd>
+            </c01>
+            <c01 id="ref1" level="file">
+                <did>
+                    <unittitle>Negatives</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid324001" type="Box" label="Graphic materials">1</container>
+                    <container parent="cid324001" type="Folder">5</container>
+                    <container parent="cid324001" type="Object">1-3</container>
+                    <unitdate>1958, 1972, 1983</unitdate>
+                </did>
+            </c01>
+            <c01 id="ref3" level="file">
+                <did>
+                    <unittitle>Photographs</unittitle>
+                    <container id="cid324003" type="Box" label="Graphic materials">1</container>
+                    <container parent="cid324003" type="Folder">6</container>
+                    <container parent="cid324003" type="Object">1-7</container>
+                    <unitdate>1958-1994</unitdate>
+                </did>
+                <odd id="ref21">
+                    <head>Museum Accession Numbers</head>
+                    <p>A1994.34.12-A1994.34.18</p>
+                </odd>
+            </c01>
+            <c01 id="ref2" level="file">
+                <did>
+                    <unittitle>Programs</unittitle>
+                    <container id="cid324002" type="Box" label="Books">1</container>
+                    <container parent="cid324002" type="Folder">7</container>
+                    <container parent="cid324002" type="Object">1-2</container>
+                    <unitdate>1980, 1983</unitdate>
+                </did>
+                <odd id="ref22">
+                    <head>Museum Accession Numbers</head>
+                    <p>A1994.34.19-A1994.34.20</p>
+                </odd>
+            </c01>
+            <c01 id="ref4" level="file">
+                <did>
+                    <unittitle>Oversize Materials</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid324006" type="Drawer" label="Graphic materials">FF.1.2</container>
+                    <container parent="cid324006" type="Folder">4</container>
+                    <container parent="cid324006" type="Object">1-7</container>
+                    <unitdate>1958-1990</unitdate>
+                    <langmaterial id="ref19" label="Language of Materials note">Materials are in English and Spanish.</langmaterial>
+                </did>
+                <odd id="ref23">
+                    <head>Museum Accession Numbers</head>
+                    <p>A1994.34.4, A1994.34.7-A1994.34.9</p>
+                </odd>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

@@ -253,6 +253,7 @@
         title_series_t^10
         isbn_t
         text
+        accession_s
       </str>
       <str name="pf">
         title_unstem_search^1000000
@@ -362,7 +363,8 @@
         ref,
         parent_ref,
         parent_unittitle_list,
-        parent_ref_list
+        parent_ref_list,
+        accession_s
       </str>
 
       <str name="facet">true</str>

@@ -11,3 +11,10 @@ Feature: EAD display
     And I fill in "q" with "A2005.31.15"
     When I press "search"
     Then I should see "Jermaine Rogers Collection (ARC.0058)"
+
+  Scenario: Searching by accession number (BL-49)
+    Given I am on the home page
+    And I fill in "q" with "A1994.34.7"
+    When I press "search"
+    Then I should see "Curtis Mayfield Collection (ARC.0067)"
+    And I should see "Oversize Materials"
