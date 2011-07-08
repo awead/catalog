@@ -47,5 +47,33 @@ module LocalBlacklightHelper
     '<br/>'
   end
 
+  def document_icon doc
+    result = String.new
+
+    if doc.get("format").nil?
+      result << image_tag("icons/component.png")
+    else
+      case doc.get("format")
+      when "Archival Collection"
+        result << image_tag("icons/collection.png")
+      when "Book"
+        result << image_tag("icons/book.png")
+      when "Audio"
+        result << image_tag("icons/audio.png")
+      when "Score"
+        result << image_tag("icons/score.png")
+      when "Video"
+        result << image_tag("icons/video.png")
+      when "Periodical"
+        result << image_tag("icons/periodical.png")
+      when "Website"
+        result << image_tag("icons/website.png")
+      else
+        result = doc.get("format")
+      end
+    end
+    return result.html_safe
+  end
+
 
 end
