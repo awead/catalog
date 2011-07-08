@@ -314,6 +314,7 @@ Blacklight.configure(:shared) do |config|
   config[:sort_fields] << ['year', 'pub_date_sort desc, title_sort asc']
   config[:sort_fields] << ['author', 'author_sort asc, title_sort asc']
   config[:sort_fields] << ['title', 'title_sort asc, pub_date_sort desc']
+  config[:sort_fields] << ['format', 'format asc']
 
   # If there are more than this many search results, no spelling ("did you
   # mean") suggestion is offered.
