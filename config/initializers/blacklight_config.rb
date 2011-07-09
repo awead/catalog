@@ -113,7 +113,8 @@ Blacklight.configure(:shared) do |config|
       # EAD-only fields
       "unitdate_display",
       "collection_display",
-      "parent_unittitle_list"
+      "parent_unittitle_list",
+      "location_display"
     ],
     :labels => {
       "title_display"           => "Title:",
@@ -125,7 +126,8 @@ Blacklight.configure(:shared) do |config|
       # EAD-only fields
       "unitdate_display"        => "Dates:",
       "collection_display"      => "Archival Collection:",
-      "parent_unittitle_list"   => "Series:"
+      "parent_unittitle_list"   => "Series:",
+      "location_display"        => "Location:"
     }
   }
 
