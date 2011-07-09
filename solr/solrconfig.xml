@@ -254,6 +254,7 @@
         isbn_t
         text
         accession_s
+        series_b
       </str>
       <str name="pf">
         title_unstem_search^1000000
@@ -367,7 +368,8 @@
         accession_s,
         heading_display,
         unitdate_display,
-        collection_display
+        collection_display,
+        location_display
       </str>
 
       <str name="facet">true</str>
@@ -390,6 +392,13 @@
       <str name="spellcheck.collate">false</str>
       <str name="spellcheck.count">5</str>
     </lst>
+
+    <!--
+      Docs with the series_b field present are suppressed. Those that do not have the field
+      are allowed. Note: the field isn't set to FALSE for any record, it's just absent.
+    -->
+    <lst name="appends"><str name="fq">-series_b:["" TO *]</str></lst>
+
     <arr name="last-components">
       <str>spellcheck</str>
     </arr>
@@ -517,7 +526,8 @@
         accession_s,
         heading_display,
         unitdate_display,
-        collection_display
+        collection_display,
+        location_display
       </str>
 
       <str name="facet">true</str>

@@ -24,3 +24,19 @@ Feature: EAD display
     And I fill in "q" with "A1994.34.15"
     When I press "search"
     And I should see "Photographs"
+
+  Scenario: Searching for component archival materials (BL-55)
+    Given I am on the home page
+    And I fill in "q" with "Negatives"
+    When I press "search"
+    Then I should see "Negatives"
+    And I should see "Curtis Mayfield Collection (ARC.0067)"
+    And I should see "Book: Poetic License: In Poem and Song"
+
+  Scenario: Series components suppressed from search results (BL-55)
+    Given I am on the home page
+    And I fill in "q" with "Correspondence"
+    When I press "search"
+    Then I should see "Big Joe Turner Papers (ARC.0105)" within "dd"
+    And I should see "Awards and certificates"
+    And I should not see "Series I: Awards and Certificates" within "h3"

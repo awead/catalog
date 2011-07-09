@@ -156,9 +156,12 @@ module Rockhall::EadMethods
       doc.merge!({ :location_display => location })
     end
 
-    # only components with containers will get faceted
+    # Components with containers get faceted or marked as
+    # a series and suppressed from search results
     material = ead_material(part)
-    unless material.nil?
+    if material.nil?
+      doc.merge!({ :series_b => TRUE })
+    else
       doc.merge!({ :material_facet => material })
     end
 
