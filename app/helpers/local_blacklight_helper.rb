@@ -9,10 +9,10 @@ module LocalBlacklightHelper
       label = render_document_index_label doc, opts
       if doc[:format].nil?
         vars = doc[:id].split(/:/)
-        if vars[1].to_i == 1
-          link_to_with_data(label, catalog_path(vars[0], :anchor => "inventory"), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
+        if vars[1].to_i > 1
+          link_to_with_data(label, components_path({ :ead_id => doc[:ead_id], :level => doc[:component_level], :parent_ref => doc[:parent_ref] })).html_safe
         else
-          return "TBD: #{doc[:id]}, #{vars.join(", ")}"
+          link_to_with_data(label, catalog_path(vars[0], :anchor => "inventory"), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
         end
       else
         link_to_with_data(label, catalog_path(doc[:id]), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
