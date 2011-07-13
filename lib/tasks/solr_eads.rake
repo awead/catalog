@@ -137,7 +137,6 @@ namespace :solr do
         puts "... level #{level}"
         xml.search("//c0#{level.to_s}").each do |node|
           doc = Rockhall::EadMethods.get_component_doc(node,level)
-          doc.merge!({:subject_topic_facet => subject.flatten.uniq})
           if !doc[:title_display].blank?
             response = Blacklight.solr.add doc
             commit = Blacklight.solr.commit
