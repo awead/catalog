@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.8'
+gem 'rails'
 
 # These are the gems this app uses
 gem 'sqlite3'
