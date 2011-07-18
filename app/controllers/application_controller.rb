@@ -16,5 +16,6 @@ class ApplicationController < ActionController::Base
 
   def add_local_assets
       stylesheet_links << "rockhall"
+      javascript_includes << "rockhall/rockhall.js"
   end
 end

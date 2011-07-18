@@ -6,7 +6,11 @@ class ComponentsController < ApplicationController
   def index
     solr_params = Hash.new
     solr_params[:fl]   = "id"
-    solr_params[:q]    = "parent_ref:#{params[:parent_ref]} AND _query_:\"ead_id:#{params[:ead_id]}\""
+    if params[:component_level].to_i > 1
+      solr_params[:q]    = "parent_ref:#{params[:parent_ref]} AND _query_:\"ead_id:#{params[:ead_id]}\""
+    else
+      solr_params[:q]    = "component_level:#{params[:component_level]} AND _query_:\"ead_id:#{params[:ead_id]}\""
+    end
     solr_params[:qt]   = "standard"
     solr_params[:rows] = 1000
     solr_response = Blacklight.solr.find(solr_params)
@@ -18,5 +22,9 @@ class ComponentsController < ApplicationController
       @documents << d
     end
   end
+
+  def hide
+  end
+
 
 end

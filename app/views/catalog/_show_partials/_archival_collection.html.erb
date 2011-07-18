@@ -1,5 +1,7 @@
 <% extra_head_content << capture do -%>
   <%= stylesheet_link_tag 'blacklight_ext_ead_simple', :plugin => :blacklight_ext_ead_simple %>
+  <%= javascript_include_tag "jquery-1.6.2.min", "rails.js" %>
+  <%= csrf_meta_tag %>
 <% end -%>
 
 <% sidebar_items << capture do -%>

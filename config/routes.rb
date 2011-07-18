@@ -6,7 +6,11 @@ BlacklightApp::Application.routes.draw do
   devise_for :users
 
   # For EAD
-  resources :components
+
+  resources :components, :only => [:index]
+  match "/components/hide", :as => "components_hide"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
