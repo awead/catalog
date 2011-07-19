@@ -2,6 +2,19 @@
   <%= stylesheet_link_tag 'blacklight_ext_ead_simple', :plugin => :blacklight_ext_ead_simple %>
   <%= javascript_include_tag "jquery-1.6.2.min", "rails.js" %>
   <%= csrf_meta_tag %>
+
+  <!-- automatically unfolds the first component level after the page has loaded -->
+  <script>
+    $(document).ready(function() {
+      jQuery.ajax({
+        url: "<%= escape_javascript url_for components_path(:ead_id => params[:id], :component_level => 1 ) %>",
+        success: function(data) {
+          $("#c01-section").html(data);
+        }
+      });
+    });
+  </script>
+
 <% end -%>
 
 <% sidebar_items << capture do -%>
