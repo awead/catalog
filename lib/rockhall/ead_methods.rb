@@ -156,13 +156,15 @@ module Rockhall::EadMethods
       doc.merge!({ :location_display => location })
     end
 
-    # Components with containers get faceted or marked as
-    # a series and suppressed from search results
+    # Components with containers, representing individual items,
+	# get faceted with their material type and a general format type
+	# Otherwise, they are marked as a series and supressed from search results.
     material = ead_material(part)
     if material.nil?
       doc.merge!({ :series_b => TRUE })
     else
       doc.merge!({ :material_facet => material })
+	  doc.merge!({ :format => Blacklight.config[:ead_component_name] })
     end
 
     # index accession numbers and ranges

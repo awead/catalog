@@ -337,6 +337,7 @@ Blacklight.configure(:shared) do |config|
   # in the view.
   config[:ead_dir] = "test/data/ead"
   config[:ead_format_name] = "Archival Collection"
+  config[:ead_component_name] = "Archival Item"
   config[:ead_fields] = {
     :field_names => [
       "ead_title_display",
