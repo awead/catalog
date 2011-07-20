@@ -1,22 +1,22 @@
 module LocalBlacklightHelper
 
 
+  # These methods override those in BlacklightHelper
+  # [plugin]/app/helpers/blacklight_helper.rb
+
   def application_name
     'Mockalog'
   end
 
   def link_to_document(doc, opts={:label=>Blacklight.config[:index][:show_link].to_sym, :counter => nil, :results_view => true})
-      label = render_document_index_label doc, opts
-      if doc[:format].nil?
-        vars = doc[:id].split(/:/)
-        if vars[1].to_i > 1
-          link_to_with_data(label, components_path({ :ead_id => doc[:ead_id], :level => doc[:component_level], :parent_ref => doc[:parent_ref] })).html_safe
-        else
-          link_to_with_data(label, catalog_path(vars[0], :anchor => "inventory"), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
-        end
-      else
-        link_to_with_data(label, catalog_path(doc[:id]), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
-      end
+    label = render_document_index_label doc, opts
+    if doc[:format].nil?
+      id = doc[:id].split(/:/)[0]
+      list = doc[:parent_ref_list].join(",")
+      link_to_with_data(label, catalog_path({ :id => id, :parent_ref_list => list }), {:method => :get, :class => label.parameterize, :data => opts}).html_safe
+    else
+      link_to_with_data(label, catalog_path(doc[:id]), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
+    end
   end
 
 
@@ -32,6 +32,9 @@ module LocalBlacklightHelper
     end
   end
 
+  # end of overriding methods
+
+  # Local methods
 
   def render_field_link args
     result = String.new
