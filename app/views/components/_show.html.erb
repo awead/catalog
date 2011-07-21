@@ -4,9 +4,7 @@
 
   <div id="<%= document[:ref] %>" class="component_part clearfix c0<%= document[:component_level] %>">
 
-    <h5><%= document[:id] if RAILS_ENV == "development" %></h5>
-
-    <h5 id="<%= document["parent_ref"] %>">
+    <h5 id="<%= document[:id] %>">
       <span>
         <%= comma_list( [document["title_display"], document["unitdate_display"], document["unitid_display"]] ) %>
       </span>
