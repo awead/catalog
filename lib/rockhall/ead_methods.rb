@@ -85,7 +85,6 @@ module Rockhall::EadMethods
     solr_doc = {
       :format => Blacklight.config[:ead_format_name],
       :title_display => title,
-      :heading_display => "Finding Aid: " + title,
       :institution_t => xml.at('//publicationstmt/publisher').text,
       :ead_filename_s => xml.at('//eadheader/eadid').text,
       :id => Rockhall::EadMethods.ead_id(xml),
@@ -93,6 +92,12 @@ module Rockhall::EadMethods
       :xml_display => xml.to_xml,
       :text => xml.text,
     }
+
+    if Blacklight.config[:ead_display_title_preface].nil?
+      solr_doc.merge!({ :heading_display => title })
+    else
+      solr_doc.merge!({ :heading_display => Blacklight.config[:ead_display_title_preface] + " " + title })
+    end
 
     Blacklight.config[:ead_fields][:xpath].each do | field, xpath |
       result = ead_solr_field(xml,xpath,field)
@@ -116,7 +121,7 @@ module Rockhall::EadMethods
       :id => [ead_id(node), level, node.attr("id")].join(":"),
       :ead_id => ead_id(node),
       #:ead_facet => node.attr("level"),
-      :heading_display => collection + ": " + ead_parent_unittitles(node,level).join(" - ") + " - " + title,
+
       :component_level => level,
       :component_children_b => children,
       :ref => node.attr("id"),
@@ -157,9 +162,19 @@ module Rockhall::EadMethods
       doc.merge!({ :location_display => location })
     end
 
+    if Blacklight.config[:ead_component_title_separator].nil?
+      doc.merge!({ :heading_display => title })
+    else
+      elements = Array.new
+      elements << collection
+      elements << ead_parent_unittitles(node,level) unless ead_parent_unittitles(node,level).length < 1
+      elements << title
+      doc.merge!({ :heading_display => elements.join(Blacklight.config[:ead_component_title_separator]) })
+    end
+
     # Components with containers, representing individual items,
-	# get faceted with their material type and a general format type
-	# Otherwise, they are marked as a series and supressed from search results.
+    # get faceted with their material type and a general format type
+	  # Otherwise, they are marked as a series and supressed from search results.
     material = ead_material(part)
     if material.nil?
       doc.merge!({ :series_b => TRUE })

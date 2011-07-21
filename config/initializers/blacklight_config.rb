@@ -396,5 +396,9 @@ Blacklight.configure(:shared) do |config|
       "ead_bionote_display"     => "/ead/archdesc/separatedmaterial/p"
     }
   }
+
+  # Optional EAD things
+  config[:ead_display_title_preface] = "Guide to the"
+  config[:ead_component_title_separator] = ">>"
 end
 
