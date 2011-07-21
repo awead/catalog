@@ -30,5 +30,17 @@ module ComponentsHelper
     return results.html_safe
   end
 
+  def hide_component_button
+    results = String.new
+    if params[:component_level].to_i > 1
+      results << link_to("- Hide",
+        components_hide_path(:ead_id => params[:ead_id], :component_level => params[:component_level], :parent_ref => params["parent_ref"]),
+        :id => "#{params["parent_ref"]}-switch",
+        :remote => true)
+      results << "<div id=\"#{params[:parent_ref]}-list\">"
+    end
+    return results.html_safe
+  end
+
 
 end
