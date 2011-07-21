@@ -22,7 +22,7 @@ module ComponentsHelper
     results = String.new
     if document["component_children_b"]
       level = document[:component_level].to_i + 1
-      results << link_to("+ Show",
+      results << link_to( image_tag("icons/button_open.png", :alt => "+ Show"),
         components_path( :parent_ref => document[:ref], :ead_id => document[:ead_id], :component_level => level ),
         :id => "#{document[:ref]}-switch",
         :remote => true)
@@ -33,7 +33,7 @@ module ComponentsHelper
   def hide_component_button
     results = String.new
     if params[:component_level].to_i > 1
-      results << link_to("- Hide",
+      results << link_to( image_tag("icons/button_close.png", :alt => "- Hide"),
         components_hide_path(:ead_id => params[:ead_id], :component_level => params[:component_level], :parent_ref => params["parent_ref"]),
         :id => "#{params["parent_ref"]}-switch",
         :remote => true)
