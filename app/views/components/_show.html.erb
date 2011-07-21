@@ -1,13 +1,4 @@
-<% if params[:component_level].to_i > 1 %>
-  <%= link_to "- Hide", components_hide_path(:ead_id => params[:ead_id], :component_level => params[:component_level], :parent_ref => params["parent_ref"]), :id => "#{params["parent_ref"]}-switch", :remote => true %>
-  <div id="<%= params[:parent_ref] %>-list">
-<% else %>
-  <%= link_to "- Hide Inventory", components_hide_path(:ead_id => params[:ead_id], :component_level => params[:component_level]), :id => "c0#{params[:component_level]}-switch", :remote => true %>
-  <div id="c0<%= params[:component_level] %>-list">
-<% end %>
-
-
-<% @documents.each do |document| %>
+<% documents.each do |document| %>
 
   <div id="<%= document[:ref] %>" class="component_part clearfix c0<%= document[:component_level] %>">
 
@@ -45,12 +36,8 @@
       <% end %>
     </dl>
 
-    <% if document["component_children_b"] %>
-      <% level = document[:component_level].to_i + 1 %>
-      <%= link_to "+ Show", components_path( :parent_ref => document["ref"], :ead_id => params[:ead_id], :component_level => level ), :id => "#{document["ref"]}-switch",  :remote => true %>
-    <% end %>
+    <%= continue_components(document) %>
 
   </div>
 
 <% end %>
-</div>

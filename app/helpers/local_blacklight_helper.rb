@@ -8,18 +8,6 @@ module LocalBlacklightHelper
     'Mockalog'
   end
 
-  def link_to_document(doc, opts={:label=>Blacklight.config[:index][:show_link].to_sym, :counter => nil, :results_view => true})
-    label = render_document_index_label doc, opts
-    if doc[:format].nil?
-      id = doc[:id].split(/:/)[0]
-      list = doc[:parent_ref_list].join(",")
-      link_to_with_data(label, catalog_path({ :id => id, :parent_ref_list => list }), {:method => :get, :class => label.parameterize, :data => opts}).html_safe
-    else
-      link_to_with_data(label, catalog_path(doc[:id]), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
-    end
-  end
-
-
   def render_document_show_field_value args
     value = args[:value]
     value ||= args[:document].get(args[:field], :sep => nil) if args[:document] and args[:field]

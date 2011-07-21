@@ -6,36 +6,28 @@ module ComponentsHelper
     return parts[0]
   end
 
-
-  # warning: ugly, spaghetti code follows...
-  def component_trail(doc)
-    result = String.new
-    titles = doc["parent_unittitle_list"].reverse
-    refs   = doc["parent_ref_list"].reverse
-    level  = 1
-    index  = 0
-    link = doc["component_level"] - 2
-    while level < doc["component_level"]
-      next_level = level + 1
-      result << "<div class=\"component_part clearfix c0#{level}\">"
-      result << "<h5 id=\"#{refs[index]}\">"
-      if link > 0
-        result << "<span class=\"unittitle\">"
-        result << link_to(titles[index], components_path(
-          :parent_ref => refs[index],
-          :ead_id     => params[:ead_id],
-          :level      => next_level ))
-        result << "</span>"
+  def continue_components(document)
+    if @components.nil?
+      next_component_button(document)
+    else
+      if @components.has_key?(document[:ref].to_sym)
+        render :partial => "components/show", :locals => { :documents => @components[document[:ref].to_sym] }
       else
-        result << "<span class=\"unittitle\">#{titles[index]}</span>"
+        next_component_button(document)
       end
-      result << "</h5>"
-      result << "</div>"
-      level = level + 1
-      index = index + 1
-      link  = link - 1
     end
-    return result.html_safe
+  end
+
+  def next_component_button(document)
+    results = String.new
+    if document["component_children_b"]
+      level = document[:component_level].to_i + 1
+      results << link_to("+ Show",
+        components_path( :parent_ref => document[:ref], :ead_id => document[:ead_id], :component_level => level ),
+        :id => "#{document[:ref]}-switch",
+        :remote => true)
+    end
+    return results.html_safe
   end
 
 

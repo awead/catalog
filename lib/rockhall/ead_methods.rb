@@ -89,6 +89,7 @@ module Rockhall::EadMethods
       :institution_t => xml.at('//publicationstmt/publisher').text,
       :ead_filename_s => xml.at('//eadheader/eadid').text,
       :id => Rockhall::EadMethods.ead_id(xml),
+      :ead_id => Rockhall::EadMethods.ead_id(xml),
       :xml_display => xml.to_xml,
       :text => xml.text,
     }

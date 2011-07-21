@@ -1,7 +1,2 @@
-<% if params[:component_level].to_i > 1 %>
-  $("#<%= params[:parent_ref] %>").append("<%= escape_javascript render :partial => "show" %>");
-  $("#<%= params[:parent_ref] %>-switch").remove();
-<% else %>
-  $("#c01-section").append("<%= escape_javascript render :partial => "show" %>");
-  $("#c01-switch").remove();
-<% end %>
+$("#<%= params[:parent_ref] %>").append("<%= escape_javascript render :partial => "show", :locals => { :documents => @documents } %>");
+$("#<%= params[:parent_ref] %>-switch").remove();

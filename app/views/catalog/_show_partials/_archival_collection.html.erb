@@ -2,14 +2,6 @@
   <%= stylesheet_link_tag 'blacklight_ext_ead_simple', :plugin => :blacklight_ext_ead_simple %>
   <%= javascript_include_tag "jquery-1.6.2.min", "rails.js" %>
   <%= csrf_meta_tag %>
-
-  <!-- automatically unfolds to the first component level after the page has loaded -->
-  <script>
-    $(document).ready(
-      showComponents( "<%= escape_javascript params[:id] %>" )
-    );
-  </script>
-
 <% end -%>
 
 <% sidebar_items << capture do -%>

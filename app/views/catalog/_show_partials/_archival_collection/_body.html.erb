@@ -8,7 +8,9 @@
   <%= ead_access_headings %>
 
   <h2 id="inventory">Collection Inventory</h2>
-  <div id="c01-section"></div>
+  <div id="c01-section">
+    <%= render :partial => "components/show", :locals => { :documents => @components[:first] } %>
+  </div>
 
 </div>
 
