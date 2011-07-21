@@ -1,3 +1,5 @@
+@ead
+
 Feature: EAD display
   In order to view finding aids in Blacklight
   As a public user
@@ -24,7 +26,7 @@ Feature: EAD display
     And I should not see "Series VII: Printed Materials,"
 
   Scenario: Date expression in sub component level (BL-9) and accession numbers
-    Given I am on the component page for ARC-0105:2:ref17
+    Given I am on the ead page for ARC-0105:2:ref42
     Then I should see "Series I: Awards and Certificates"
     And I should see "Awards and certificates, 1976-1986"
     And I should not see "Museum Accession Numbers:"
@@ -40,7 +42,7 @@ Feature: EAD display
     Then I should not see "Biographical Note"
 
   Scenario: Dimensions note (BL-8)
-    Given I am on the component page for ARC-0065:2:ref43
+    Given I am on the ead page for ARC-0065:2:ref10
     Then I should see "Limited Print Run"
     And I should see "Non-numbered edition of 200"
     And I should see "Dimensions:"
@@ -50,15 +52,19 @@ Feature: EAD display
     And I should see "Folder: 7, Object: 1, Drawer: FF.1.4"
 
   Scenario: I need to see all sub-components (BL-58)
-    Given I am on the component page for ARC-0065:2:ref42
+    Given I am on the ead page for ARC-0065:2:ref62
     Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
     And I should see "Ultras with Dale, Dick"
 
+  @wip
   Scenario: EAD that has no collection headings (BL-60)
     Given I am on the ead page for RG-0001
     Then I should not see "Controlled Access Headings"
 
-  @wip
   Scenario: Hide accession numbers (BL-49)
     Given I am on the ead page for ARC-0058
     Then I should not see "A2005.31.15"
+
+  Scenario: HTTP calls for components should still work (BL-55)
+    Given I am on the component page for ARC-0065:2:ref42
+    Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"

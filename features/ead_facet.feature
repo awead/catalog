@@ -1,3 +1,5 @@
+@ead
+
 Feature: Catalog Home Page
   In order to use the catalog
   As a patron or staff member
