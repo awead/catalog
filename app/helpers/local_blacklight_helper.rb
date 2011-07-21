@@ -56,26 +56,10 @@ module LocalBlacklightHelper
     result = String.new
 
     if doc.get("format").nil?
-      result << image_tag("icons/component.png")
+      result << image_tag("icons/unknown.png")
     else
-      case doc.get("format")
-      when "Archival Collection"
-        result << image_tag("icons/collection.png")
-      when "Book"
-        result << image_tag("icons/book.png")
-      when "Audio"
-        result << image_tag("icons/audio.png")
-      when "Score"
-        result << image_tag("icons/score.png")
-      when "Video"
-        result << image_tag("icons/video.png")
-      when "Periodical"
-        result << image_tag("icons/periodical.png")
-      when "Website"
-        result << image_tag("icons/website.png")
-      else
-        result = doc.get("format")
-      end
+      filename = doc.get("format").downcase.gsub(/\s/,"_")
+      result << image_tag("icons/#{filename}.png")
     end
     return result.html_safe
   end
