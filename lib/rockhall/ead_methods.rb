@@ -244,7 +244,7 @@ module Rockhall::EadMethods
       results << parent.attr("id")
       node = parent
     end
-    return results
+    return results.reverse
   end
 
   def ead_parent_unittitles(node,level)
@@ -261,7 +261,7 @@ module Rockhall::EadMethods
       node = parent
       level = level - 1
     end
-    return results
+    return results.reverse
   end
 
 
