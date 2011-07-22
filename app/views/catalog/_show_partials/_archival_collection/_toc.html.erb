@@ -5,9 +5,9 @@
       <li><a href="#">Top</a></li>
       <%= ead_contents %>
       <% unless @document["subject_topic_facet"].nil? %>
-        <li><%= link_to "Controlled Access Headings", catalog_path(@document["ead_id"], :anchor => "access_headings") %></li>
+        <li><a href="#access_headings">Controlled Access Headings</a></li>
       <% end %>
-      <li><%= link_to "Collection Inventory", catalog_path(@document["ead_id"], :anchor => "inventory") %></li>
+      <li><a href="#inventory">Collection Inventory</a></li>
     </ol>
   </div>
 </div>
