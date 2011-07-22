@@ -2,6 +2,13 @@
   <%= stylesheet_link_tag 'blacklight_ext_ead_simple', :plugin => :blacklight_ext_ead_simple %>
   <%= javascript_include_tag "jquery-1.6.2.min", "rails.js" %>
   <%= csrf_meta_tag %>
+
+  <script>
+    function showWaiting(ref) {
+      $("#" + ref + "-switch").remove();
+      $("#" + ref).append("<div id=\"" + ref + "-switch\">" + "<%= escape_javascript image_tag("icons/waiting.gif", :alt => "Loading...") %>" + "</div>");
+    }
+  </script>
 <% end -%>
 
 <% sidebar_items << capture do -%>
