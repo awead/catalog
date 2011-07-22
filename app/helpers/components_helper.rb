@@ -25,7 +25,8 @@ module ComponentsHelper
       results << link_to( image_tag("icons/button_open.png", :alt => "+ Show"),
         components_path( :parent_ref => document[:ref], :ead_id => document[:ead_id], :component_level => level ),
         :id => "#{document[:ref]}-switch",
-        :remote => true)
+        :remote => true,
+        :onclick => "showWaiting('#{document[:ref]}');")
     end
     return results.html_safe
   end

@@ -1,9 +1,3 @@
-<% if params[:component_level].to_i > 1 %>
-  $("#<%= escape_javascript params[:parent_ref] %>-list").remove();
-  $("#<%= escape_javascript params[:parent_ref] %>-switch").remove();
-  $("#<%= escape_javascript params[:parent_ref] %>").append("<%= escape_javascript link_to image_tag("icons/button_open.png", :alt => "+ Show"), components_path( :parent_ref => params[:parent_ref], :ead_id => params[:ead_id], :component_level => params[:component_level] ), :id => "#{params[:parent_ref]}-switch",  :remote => true %>");
-<% else %>
-  $("#c0" + <%= escape_javascript params[:component_level] %> + "-list").remove();
-  $("#c0" + <%= escape_javascript params[:component_level] %> + "-switch").remove();
-  $("#c0" + <%= escape_javascript params[:component_level] %> + "-section").append("<%= escape_javascript link_to " + Show Inventory", components_path(:ead_id => params[:ead_id], :component_level => params[:component_level]), :id => "c01-switch", :remote => true %>");
-<% end %>
+$("#<%= escape_javascript params[:parent_ref] %>-list").remove();
+$("#<%= escape_javascript params[:parent_ref] %>-switch").remove();
+$("#<%= escape_javascript params[:parent_ref] %>").append("<%= escape_javascript link_to image_tag("icons/button_open.png", :alt => "+ Show"), components_path( :parent_ref => params[:parent_ref], :ead_id => params[:ead_id], :component_level => params[:component_level] ), :id => "#{params[:parent_ref]}-switch",  :remote => true, :onclick => "showWaiting('#{params[:parent_ref]}')" %>");

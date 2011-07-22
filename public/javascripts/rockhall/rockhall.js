@@ -1,16 +1,8 @@
 // Rockhall Javascript
 
-function showComponents( id, ref ) {
+function showWaiting(ref) {
 
-  $.when( c1(id)).done(function(c1_data) {
-    $("#c01-section").html(c1_data);
-  });
+  $("#" + ref + "-switch").remove();
+  $("#" + ref).append("<div id=\"" + ref + "-switch\"><img alt='Loading...' src='/images/icons/waiting.gif' /></div>");
 
-};
-
-function c1( id ) {
-  return $.ajax({
-    url:     "/components?component_level=1&ead_id=" + id,
-    success: function(c1_data){ }
-  });
-};
+}
