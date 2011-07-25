@@ -350,7 +350,7 @@ Blacklight.configure(:shared) do |config|
       "ead_lang_coll_display",
       "ead_abstract_display",
       "ead_bio_display",
-      "ead_bionote_display",
+      "ead_sepmaterial_display",
       "ead_citation_display",
       "ead_provenance_display",
       "ead_use_display",
@@ -375,7 +375,7 @@ Blacklight.configure(:shared) do |config|
       "ead_use_display"         => "Use Restrictions",
       "ead_access_display"      => "Access Restrictions",
       "ead_process_display"     => "Processing Information",
-      "ead_bionote_display"     => "Biographical Note"
+      "ead_sepmaterial_display" => "Separated Materials Note"
     },
     :xpath => {
       "ead_title_display"       => "/ead/eadheader/filedesc/titlestmt/titleproper",
@@ -393,7 +393,7 @@ Blacklight.configure(:shared) do |config|
       "ead_use_display"         => "/ead/archdesc/userestrict/p",
       "ead_access_display"      => "/ead/archdesc/accessrestrict/p",
       "ead_process_display"     => "/ead/archdesc/processinfo/p",
-      "ead_bionote_display"     => "/ead/archdesc/separatedmaterial/p"
+      "ead_sepmaterial_display" => "/ead/archdesc/separatedmaterial/p"
     }
   }
 

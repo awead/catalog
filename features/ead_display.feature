@@ -69,10 +69,15 @@ Feature: EAD display
     Given I am on the component page for ARC-0065:2:ref42
     Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
 
-  @wip
   Scenario: Displaying italics (BL-33)
     Given I am on the ead page for ARC-0058
     Then I should see "New Musical Express" in italics
     And I should see "Love" in italics
     Given I am on the ead page for ARC-0105
     Then I should see "Blues Train" in italics
+
+  Scenario: Separated materials notes (BL-43)
+    Given I am on the ead page for ARC-0105
+    Then I should see "Separated Materials Note"
+    And I should not see "Biographical Note"
+
