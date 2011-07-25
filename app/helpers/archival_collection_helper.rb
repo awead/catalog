@@ -1,10 +1,5 @@
 module ArchivalCollectionHelper
 
-  # Unable to include this module without getting
-  # Routing Error:
-  #  undefined method `class_inheritable_accessor'
-  #include Blacklight::SolrHelper
-
 
   def general_info
     results = String.new
@@ -65,10 +60,9 @@ module ArchivalCollectionHelper
     results = String.new
     results << "<h2 id=\"ead_bio_display\">#{Blacklight.config[:ead_fields][:headings]["ead_bio_display"]}</h2>"
 
-    xml = Rockhall::EadMethods.ead_xml(@document)
-    element = xml.xpath(Blacklight.config[:ead_fields][:xpath]["ead_bio_display"])
-    list   = element.xpath('chronlist')
-    items  = list.xpath('chronitem')
+    xml   = Rockhall::EadMethods.ead_xml(@document)
+    list  = xml.xpath("/ead/archdesc/bioghist/chronlist")
+    items = list.xpath('chronitem')
 
     # Timeline table
     results << "<table>"
@@ -81,33 +75,20 @@ module ArchivalCollectionHelper
     end
     results << "</table>"
 
-    # Paragraphs
-    results << ead_paragraphs(element)
+    @document[:ead_bio_display].each do | v|
+      results << "<p>#{v}</p>"
+    end
 
     # Sources
     results << "<h3>Sources</h3>"
-    element.xpath("./list/item").each do |source|
+    xml.xpath("/ead/archdesc/bioghist/list/item").each do |source|
       results << "<p>#{source.text}</p>"
     end
 
+    results.gsub!("<title render=\"italic\">","<i>")
+    results.gsub!("</title>","</i>")
+
     return results.html_safe
-  end
-
-  # Trying to have the helper serach for c1 levels and return them
-  def ead_c1
-    solr_params = Hash.new
-    solr_params[:fl]   = "id"
-    solr_params[:q]    = "component_level:\"1\" AND _query_:\"ead_id:#{params[:id]}\""
-    solr_params[:qt]   = "standard"
-    solr_params[:rows] = 1000
-    solr_response = Blacklight.solr.find(solr_params)
-    document_list = solr_response.docs.collect {|doc| SolrDocument.new(doc, solr_response)}
-
-    @documents = Array.new
-    document_list.each do |doc|
-      r, d = Blacklight::SolrHelper.get_solr_response_for_doc_id(doc.id)
-      @documents << d
-    end
   end
 
 
@@ -118,47 +99,9 @@ module ArchivalCollectionHelper
         fields << text
       end
     end
-    return fields.join(", ")
+    return fields.join(", ").html_safe
   end
 
-
-  # These methods originated from the blacklight_ext_ead_simple plugin
-
-  def ead_link_id(element, xpath)
-    element.attribute('id') || xpath.split('/').last
-  end
-
-  def ead_text(element, xpath)
-    first = element.xpath(xpath).first
-    if first
-      first.text
-    end
-  end
-
-  def ead_paragraphs(element)
-    results = String.new
-    if element
-      element.xpath('p').map do |p|
-        if !p.xpath('list').blank?
-          p.xpath('list').map do |list|
-            results << '<p>' + ead_list(list) + '</p>'
-          end
-        else
-          results << "<p>#{p.text}</p>"
-        end
-      end
-    end
-    return results.html_safe
-  end
-
-  def ead_list(list)
-    ol = ['<ol>']
-    list.xpath('item').map do |item|
-      ol << '<li>' + item.text + '</li>'
-    end
-    ol << '</ol>'
-    ol.join('')
-  end
 
   def ead_contents
     results = String.new
@@ -171,5 +114,6 @@ module ArchivalCollectionHelper
     end
     return results.html_safe
   end
+
 
 end

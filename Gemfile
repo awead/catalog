@@ -7,6 +7,7 @@ gem 'sqlite3'
 gem 'blacklight'
 gem "devise"
 gem 'nokogiri'
+gem 'sanitize'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

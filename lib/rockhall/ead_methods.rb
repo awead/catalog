@@ -199,7 +199,7 @@ module Rockhall::EadMethods
         if line.text.empty?
           lines << "[Blank]"
         else
-          lines << line.text.gsub("\n",'').gsub(/\s+/, ' ').strip
+          lines << ead_clean_xml(line.to_xml)
         end
       end
       { field.to_sym => lines }
@@ -264,6 +264,12 @@ module Rockhall::EadMethods
     return results.reverse
   end
 
+  def ead_clean_xml(string)
+    string.gsub!("<title render=\"italic\">","<i>")
+    string.gsub!("</title>","</i>")
+    sanitize = Sanitize.clean(string, Sanitize::Config::RESTRICTED)
+    sanitize.gsub("\n",'').gsub(/\s+/, ' ').strip
+  end
 
 
 end
