@@ -4,15 +4,15 @@ module ArchivalCollectionHelper
   def general_info
     results = String.new
     results << "<table>"
-    Blacklight.config[:ead_fields][:field_names].each do | field |
-      label = Blacklight.config[:ead_fields][:labels][field.to_s]
-      unless @document[field.to_s].nil? or label.nil?
-        results << "<tr><td><b>#{label}:</b></td>"
-        results << "<td>"
-        @document[field.to_s].each do |v|
-          results << "#{v}<br/>"
-        end
-        results << "</td></tr>"
+    Blacklight.config[:ead_geninfo].each do | field |
+      label = get_ead_label(field.to_sym)
+      unless @document[field.to_sym].nil?
+         results << "<tr><td><b>#{label}:</b></td>"
+         results << "<td>"
+         @document[field.to_sym].each do |v|
+           results << "#{v}<br/>"
+         end
+         results << "</td></tr>"
       end
     end
     results << "</table>"
@@ -22,18 +22,16 @@ module ArchivalCollectionHelper
 
   def ead_headings
     results = String.new
-    Blacklight.config[:ead_fields][:field_names].each do | field |
-      label = Blacklight.config[:ead_fields][:headings][field.to_s]
-      unless label.nil?
-        # Override display from Solr field with partial
-        if self.respond_to?(field.to_sym)
-          results << self.send(field.to_sym)
-        else
-          unless @document[field.to_s].nil?
-            results << "<h2 id=\"#{field}\">#{label}</h2>"
-            @document[field.to_s].each do | v|
-              results << "<p>#{v}</p>"
-            end
+    Blacklight.config[:ead_headings].each do | field |
+      label = get_ead_label(field.to_sym)
+      # Override display from Solr field with partial
+      if self.respond_to?(field.to_sym)
+        results << self.send(field.to_sym)
+      else
+        unless @document[field.to_s].nil?
+          results << "<h2 id=\"#{field.to_s}\">#{label}</h2>"
+          @document[field.to_s].each do | v|
+            results << "<p>#{v}</p>"
           end
         end
       end
@@ -58,7 +56,8 @@ module ArchivalCollectionHelper
 
   def ead_bio_display
     results = String.new
-    results << "<h2 id=\"ead_bio_display\">#{Blacklight.config[:ead_fields][:headings]["ead_bio_display"]}</h2>"
+    label = get_ead_label("ead_bio_display")
+    results << "<h2 id=\"ead_bio_display\">#{label}</h2>"
 
     xml   = Rockhall::EadMethods.ead_xml(@document)
     list  = xml.xpath("/ead/archdesc/bioghist/chronlist")
@@ -105,14 +104,25 @@ module ArchivalCollectionHelper
 
   def ead_contents
     results = String.new
-    Blacklight.config[:ead_fields][:field_names].each do |f|
-      unless Blacklight.config[:ead_fields][:headings][f.to_s].nil? or @document[f.to_s].nil?
+    Blacklight.config[:ead_headings].each do | f |
+      unless @document[f.to_sym].nil?
+        label = get_ead_label(f.to_sym)
         results << "<li>"
-        results << "<a href=\"#" + f + "\">#{Blacklight.config[:ead_fields][:headings][f.to_s]}</a>"
+        results << "<a href=\"#" + f.to_s + "\">#{label}</a>"
         results << "</li>"
       end
     end
     return results.html_safe
+  end
+
+  def get_ead_label(field)
+    if Blacklight.config[:ead_fields][field.to_sym][:is_xpath]
+      xml   = Rockhall::EadMethods.ead_xml(@document)
+      label = xml.xpath(Blacklight.config[:ead_fields][field.to_sym][:label]).text
+    else
+      label = Blacklight.config[:ead_fields][field.to_sym][:label]
+    end
+    return label
   end
 
 

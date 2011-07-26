@@ -339,63 +339,127 @@ Blacklight.configure(:shared) do |config|
   config[:ead_format_name] = "Archival Collection"
   config[:ead_component_name] = "Archival Item"
   config[:ead_fields] = {
-    :field_names => [
-      "ead_title_display",
-      "ead_repository_display",
-      "ead_publisher_display",
-      "ead_extent_display",
-      "ead_bulk_date_display",
-      "ead_inc_date_display",
-      "ead_lang_display",
-      "ead_lang_coll_display",
-      "ead_abstract_display",
-      "ead_bio_display",
-      "ead_sepmaterial_display",
-      "ead_citation_display",
-      "ead_provenance_display",
-      "ead_use_display",
-      "ead_access_display",
-      "ead_process_display"
-    ],
-    :labels => {
-      "ead_title_display"       => "Title",
-      "ead_repository_display"  => "Repository",
-      "ead_publisher_display"   => "Publisher",
-      "ead_extent_display"      => "Extent",
-      "ead_bulk_date_display"   => "Bulk Date",
-      "ead_inc_date_display"    => "Inclusive Dates",
-      "ead_lang_display"        => "Language of Finding Aid",
-      "ead_lang_coll_display"   => "Languate of Collection"
+    :ead_title_display => {
+      :xpath      => "/ead/eadheader/filedesc/titlestmt/titleproper",
+      :label      => "Title",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
-    :headings => {
-      "ead_abstract_display"    => "Abstract",
-      "ead_bio_display"         => "Biography/History",
-      "ead_citation_display"    => "Preferred Citation",
-      "ead_provenance_display"  => "Provenance",
-      "ead_use_display"         => "Use Restrictions",
-      "ead_access_display"      => "Access Restrictions",
-      "ead_process_display"     => "Processing Information",
-      "ead_sepmaterial_display" => "Separated Materials Note"
+    :ead_repository_display => {
+      :xpath      => "/ead/archdesc/did/repository/corpname",
+      :label      => "Repository",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
-    :xpath => {
-      "ead_title_display"       => "/ead/eadheader/filedesc/titlestmt/titleproper",
-      "ead_repository_display"  => "/ead/archdesc/did/repository/corpname",
-      "ead_publisher_display"   => "/ead/eadheader/filedesc/publicationstmt/address/addressline",
-      "ead_extent_display"      => "/ead/archdesc/did/physdesc/extent",
-      "ead_bulk_date_display"   => "/ead/archdesc/did/unitdate[@type='bulk']",
-      "ead_inc_date_display"    => "/ead/archdesc/did/unitdate[@type='inclusive']",
-      "ead_lang_display"        => "/ead/eadheader/profiledesc/langusage",
-      "ead_lang_coll_display"   => "/ead/archdesc/did/langmaterial/language/@langcode",
-      "ead_abstract_display"    => "/ead/archdesc/did/abstract/p",
-      "ead_bio_display"         => "/ead/archdesc/bioghist/p",
-      "ead_citation_display"    => "/ead/archdesc/prefercite/p",
-      "ead_provenance_display"  => "/ead/archdesc/acqinfo/p",
-      "ead_use_display"         => "/ead/archdesc/userestrict/p",
-      "ead_access_display"      => "/ead/archdesc/accessrestrict/p",
-      "ead_process_display"     => "/ead/archdesc/processinfo/p",
-      "ead_sepmaterial_display" => "/ead/archdesc/separatedmaterial/p"
+    :ead_publisher_display => {
+      :xpath      => "/ead/eadheader/filedesc/publicationstmt/address/addressline",
+      :label      => "Publisher",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :ead_extent_display => {
+      :xpath      => "/ead/archdesc/did/physdesc/extent",
+      :label      => "Extant",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :ead_bulk_date_display => {
+      :xpath      => "/ead/archdesc/did/unitdate[@type='bulk']",
+      :label      => "Bulk Date",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :ead_inc_date_display => {
+      :xpath      => "/ead/archdesc/did/unitdate[@type='inclusive']",
+      :label      => "Inclusive Dates",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :ead_lang_display => {
+      :xpath      => "/ead/eadheader/profiledesc/langusage",
+      :label      => "Language of Finding Aid",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :ead_lang_coll_display => {
+      :xpath      => "/ead/archdesc/did/langmaterial/language/@langcode",
+      :label      => "Language of Collection",
+      :is_xpath   => FALSE,
+      :formatted  => FALSE,
+    },
+    :ead_abstract_display => {
+      :xpath      => "/ead/archdesc/did/abstract/p",
+      :label      => "Abstract",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :ead_bio_display => {
+      :xpath      => "/ead/archdesc/bioghist/p",
+      :label      => "/ead/archdesc/bioghist/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
+    :ead_sepmaterial_display => {
+      :xpath      => "/ead/archdesc/separatedmaterial/p",
+      :label      => "/ead/archdesc/separatedmaterial/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
+    :ead_citation_display => {
+      :xpath      => "/ead/archdesc/prefercite/p",
+      :label      => "/ead/archdesc/prefercite/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
+    :ead_provenance_display => {
+      :xpath      => "/ead/archdesc/acqinfo/p",
+      :label      => "/ead/archdesc/acqinfo/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
+    :ead_use_display => {
+      :xpath      => "/ead/archdesc/userestrict/p",
+      :label      => "/ead/archdesc/userestrict/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
+    :ead_access_display => {
+      :xpath      => "/ead/archdesc/accessrestrict/p",
+      :label      => "/ead/archdesc/accessrestrict/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
+    :ead_process_display => {
+      :xpath      => "/ead/archdesc/processinfo/p",
+      :label      => "/ead/archdesc/processinfo/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
     }
   }
+
+  config[:ead_headings] = [
+    "ead_abstract_display",
+    "ead_bio_display",
+    "ead_sepmaterial_display",
+    "ead_citation_display",
+    "ead_provenance_display",
+    "ead_use_display",
+    "ead_access_display",
+    "ead_process_display"
+  ]
+  config[:ead_geninfo]  = [
+    "ead_title_display",
+    "ead_repository_display",
+    "ead_publisher_display",
+    "ead_extent_display",
+    "ead_bulk_date_display",
+    "ead_inc_date_display",
+    "ead_lang_display",
+    "ead_lang_coll_display"
+  ]
+
+
+
 
   # Optional EAD things
   config[:ead_display_title_preface] = "Guide to the"

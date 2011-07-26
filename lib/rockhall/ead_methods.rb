@@ -99,7 +99,8 @@ module Rockhall::EadMethods
       solr_doc.merge!({ :heading_display => Blacklight.config[:ead_display_title_preface] + " " + title })
     end
 
-    Blacklight.config[:ead_fields][:xpath].each do | field, xpath |
+    Blacklight.config[:ead_fields].keys.each do | field |
+      xpath = Blacklight.config[:ead_fields][field.to_sym][:xpath]
       result = ead_solr_field(xml,xpath,field)
       unless result.nil?
         solr_doc.merge!(result)
@@ -144,7 +145,7 @@ module Rockhall::EadMethods
       "scopecontent_display"       => "//c0#{level}/scopecontent/p",
       "accessrestrict_display"     => "//c0#{level}/accessrestrict/p",
       "processinfo_display"        => "//c0#{level}/processinfo/p",
-      "separatedmaterial_display"  => "//c0#{level}/originalsloc/p",
+      "separatedmaterial_display"  => "//c0#{level}/separatedmaterial/p",
       "originalsloc_display"       => "//c0#{level}/originalsloc/p",
       "phystech_display"           => "//c0#{level}/phystech/p",
       "altformavail_display"       => "//c0#{level}/altformavail/p",
@@ -199,7 +200,11 @@ module Rockhall::EadMethods
         if line.text.empty?
           lines << "[Blank]"
         else
-          lines << ead_clean_xml(line.to_xml)
+          if Blacklight.config[:ead_fields][field.to_sym].nil? or Blacklight.config[:ead_fields][field.to_sym][:formatted]
+            lines << ead_clean_xml(line.to_xml)
+          else
+            lines << line.text
+          end
         end
       end
       { field.to_sym => lines }

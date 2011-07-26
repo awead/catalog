@@ -7,7 +7,7 @@ Feature: EAD display
 
   Scenario: Biographical Note and Administrative History (BL-5)
     Given I am on the ead page for ARC-0105
-    When I follow "Biography/History"
+    When I follow "Biographical Note"
     Then I should see "1911 May 18"
     And I should see "Born Joseph Vernon Turner, Jr. in Kansas City, Missouri"
     And I should see "1939"
@@ -36,10 +36,6 @@ Feature: EAD display
     Given I am on the ead page for ARC-0058
     When I follow "Controlled Access Headings"
     Then I should see "Auf der Maur, Melissa"
-
-  Scenario: Don't show heading for fields that aren't there
-    Given I am on the ead page for ARC-0065
-    Then I should not see "Biographical Note"
 
   Scenario: Dimensions note (BL-8)
     Given I am on the ead page for ARC-0065:2:ref10
@@ -78,6 +74,6 @@ Feature: EAD display
 
   Scenario: Separated materials notes (BL-43)
     Given I am on the ead page for ARC-0105
-    Then I should see "Separated Materials Note"
-    And I should not see "Biographical Note"
+    Then I should see "Separated Materials"
+    And I should see "Biographical Note"
 
