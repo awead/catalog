@@ -5,7 +5,6 @@ Feature:
   As a library patron
   I should be able to search for items
 
-  @wip
   Scenario: Searching for related works as titles (BL-64 and BL-65)
     Given I am on the home page
     And I fill in "q" with "in my life"
