@@ -41,7 +41,6 @@ Feature: EAD display
     And I should not see "Awards and certificates"
     And I should not see "Series I: Awards and Certificates" within "h3"
 
-  @wip
   Scenario: Display of archival component titles (BL-68)
     Given I am on the home page
     And I fill in "q" with "Negatives"

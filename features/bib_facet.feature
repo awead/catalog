@@ -31,7 +31,6 @@ Feature: Catalog Home Page
     Then I should see a facet for "Format"
     And I should see the facet term "Book"
 
-  @wip
   Scenario: Collection Headings in Name Facet (BL-63)
     Given I am on the home page
     Then I should not see "Jeff Gold Collection (Rock and Roll Hall of Fame and Museum. Library and Archives)"

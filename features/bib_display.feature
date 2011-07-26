@@ -13,12 +13,13 @@ Feature:
   Scenario: Subject field links (BL-10)
     Given I am on the bib record page for 5774581
     When I follow "Music United States Bibliography"
-    Then I should see "The all music book of hit albums / compiled by Dave McAleer"
+    Then I should see "ASCAP supplementary index of performed compositions"
 
-  Scenario: Contributors field links (BL-10)
+  Scenario: Contributors field links (BL-10, BL-76)
     Given I am on the bib record page for 5774581
     When I follow "Gabler, Lee, donor"
     Then I should see "ASCAP index of performed compositions"
+    And I should see "ASCAP index of performed compositions"
 
   Scenario: Related works field links (BL-10)
     Given I am on the bib record page for 74495434

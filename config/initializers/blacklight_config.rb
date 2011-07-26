@@ -224,14 +224,15 @@ Blacklight.configure(:shared) do |config|
   }
 
   # These are fields that will appear as links in the results page.
-  # For now, links ex
-  config[:linked_fields] = [
-    "subject_display",
-    "genre_display",
-    "contributors_display",
-    "relworks_display",
-    "collection_display"
-  ]
+  # Value of each key indicates the search type as defined below
+  # in config[:search_types]
+  config[:linked_fields] = {
+    :subject_display       => "all_fields",
+    :genre_display         => "all_fields",
+    :contributors_display  => "all_fields",
+    :relworks_display      => "all_fields",
+    :collection_display    => "all_fields",
+  }
 
   # Fields that link to external sites
   config[:external_links] = {
@@ -305,6 +306,16 @@ Blacklight.configure(:shared) do |config|
       :pf => "$subject_pf"
     }
   }
+
+  # Contributor search
+  config[:search_fields] << {
+    :key => 'contributor',
+    :qt=> 'search',
+    :solr_local_parameters => {
+      :f => "$contributors_qf"
+    }
+  }
+
 
   # "sort results by" select (pulldown)
   # label in pulldown is followed by the name of the SOLR field to sort by and
