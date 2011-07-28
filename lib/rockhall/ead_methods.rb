@@ -115,7 +115,8 @@ module Rockhall::EadMethods
   def self.get_component_doc(node,level)
     part, children = ead_prep_component(node,level)
     collection = ead_collection(node)
-    title = ead_solr_field(part,"//c0#{level}/did/unittitle","unittitle_display").values.first.to_s
+    #title = ead_solr_field(part,"//c0#{level}/did/unittitle","unittitle_display").values.first.to_s
+    title = node.at("//c0#{level}/did/unittitle","unittitle_display").text.gsub("\n",'').gsub(/\s+/, ' ').strip
 
     # Required fields
     doc = {

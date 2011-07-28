@@ -346,9 +346,10 @@ Blacklight.configure(:shared) do |config|
   # Only fields with a given label will appear under the "General Information"
   # section of the display.  Otherwise, field names will need to be called directly
   # in the view.
-  config[:ead_dir] = "test/data/ead"
-  config[:ead_format_name] = "Archival Collection"
+  config[:ead_dir]            = "test/data/ead"
+  config[:ead_format_name]    = "Archival Collection"
   config[:ead_component_name] = "Archival Item"
+
   config[:ead_fields] = {
     :ead_title_display => {
       :xpath      => "/ead/eadheader/filedesc/titlestmt/titleproper",
@@ -399,7 +400,7 @@ Blacklight.configure(:shared) do |config|
       :formatted  => TRUE,
     },
     :ead_abstract_display => {
-      :xpath      => "/ead/archdesc/did/abstract/p",
+      :xpath      => "/ead/archdesc/did/abstract",
       :label      => "Abstract",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
@@ -468,9 +469,6 @@ Blacklight.configure(:shared) do |config|
     "ead_lang_display",
     "ead_lang_coll_display"
   ]
-
-
-
 
   # Optional EAD things
   config[:ead_display_title_preface] = "Guide to the"
