@@ -393,10 +393,10 @@ Blacklight.configure(:shared) do |config|
       :formatted  => TRUE,
     },
     :ead_lang_coll_display => {
-      :xpath      => "/ead/archdesc/did/langmaterial/language/@langcode",
-      :label      => "Language of Collection",
+      :xpath      => "/ead/archdesc/did/langmaterial",
+      :label      => "Language of Materials",
       :is_xpath   => FALSE,
-      :formatted  => FALSE,
+      :formatted  => TRUE,
     },
     :ead_abstract_display => {
       :xpath      => "/ead/archdesc/did/abstract/p",
