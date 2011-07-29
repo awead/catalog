@@ -401,7 +401,7 @@ Blacklight.configure(:shared) do |config|
     },
     :ead_abstract_display => {
       :xpath      => "/ead/archdesc/did/abstract",
-      :label      => "Abstract",
+      :label      => "Collection Overview",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
