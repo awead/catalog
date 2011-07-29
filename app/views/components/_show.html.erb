@@ -11,28 +11,27 @@
     </h5>
 
     <% unless document["summary_display"].nil? %>
-      <p><span class="summary"><%= document["summary_display"] %></span></p>
+      <p><span class="summary"><%= display_field(document["summary_display"]) %></span></p>
     <% end %>
 
     <dl>
       <% unless document["odd_display"].nil? and document["odd_label_display"].nil? or document["odd_label_display"].first.match("Accession") %>
-        <dt><%= document["odd_label_display"] %>:</dt>
-        <dd class="odd"><%= document["odd_display"] %></span></dd>
+        <%= display_odd_fields(document["odd_display"], document["odd_label_display"]) %>
       <% end %>
 
       <% unless document["physdesc_display"].nil? %>
         <dt>Dimensions:</dt>
-        <dd class="physdesc"><%= document["physdesc_display"] %></dd>
+        <dd class="physdesc"><%= display_field(document["physdesc_display"]) %></dd>
       <% end %>
 
       <% unless document["scopecontent_display"].nil? %>
-        <dt>Scope:</dt>
-        <dd class="scopecontent"><%= document["scopecontent_display"] %></dd>
+        <dt>Scope and Content:</dt>
+        <dd class="scopecontent"><%= display_field(document["scopecontent_display"]) %></dd>
       <% end %>
 
       <% unless document["location_display"].nil? %>
         <dt>Location:</dt>
-        <dd class="container"><%= document["location_display"] %></dd>
+        <dd class="container"><%= display_field(document["location_display"]) %></dd>
       <% end %>
     </dl>
 

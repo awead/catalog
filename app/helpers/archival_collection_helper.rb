@@ -101,6 +101,24 @@ module ArchivalCollectionHelper
     return fields.join(", ").html_safe
   end
 
+  def display_field(field)
+    field.join("<br/>").html_safe
+  end
+
+  def display_odd_fields(fields,labels)
+    results = String.new
+    if labels.length == fields.length
+      last_index = labels.length - 1
+      (0..last_index).each do |index|
+        results << "<dt>#{labels[index]}</dt>"
+        results << "<dd class=\"odd\">#{fields[index]}</dd>"
+      end
+    else
+      results << "Unable to display additional fields"
+    end
+    return results.html_safe
+  end
+
 
   def ead_contents
     results = String.new
