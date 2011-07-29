@@ -11,3 +11,9 @@ Feature:
     And I select "Title" from "search_field"
     When I press "search"
     Then I should see "Rubber soul [sound recording] / the Beatles"
+
+  Scenario: Stop words in searches (BL-82)
+    Given I am on the home page
+    And I fill in "q" with "legalize it"
+    When I press "search"
+    Then I should see "Legalize it [sound recording] / Peter Tosh"
