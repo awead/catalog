@@ -24,7 +24,7 @@ module ArchivalCollectionHelper
     results = String.new
     Blacklight.config[:ead_headings].each do | field |
       label = get_ead_label(field.to_sym)
-      # Override display from Solr field with partial
+      # Override display from Solr field with a method
       if self.respond_to?(field.to_sym)
         results << self.send(field.to_sym)
       else
@@ -63,25 +63,33 @@ module ArchivalCollectionHelper
     list  = xml.xpath("/ead/archdesc/bioghist/chronlist")
     items = list.xpath('chronitem')
 
-    # Timeline table
-    results << "<table>"
-    items.each do |chronitem|
-      results << "<tr><td>" + chronitem.xpath('date').first + "</td><td>"
-      chronitem.xpath('.//event').each do |chronevent|
-        results << chronevent.text + "<br/>"
+    unless list.empty?
+      # Timeline table
+      results << "<table>"
+      items.each do |chronitem|
+        results << "<tr><td>" + chronitem.xpath('date').first + "</td><td>"
+        chronitem.xpath('.//event').each do |chronevent|
+          results << chronevent.text + "<br/>"
+        end
+        results << "</td></tr>"
       end
-      results << "</td></tr>"
+      results << "</table>"
     end
-    results << "</table>"
 
-    @document[:ead_bio_display].each do | v|
-      results << "<p>#{v}</p>"
+    unless @document[:ead_bio_display].nil?
+      @document[:ead_bio_display].each do | v|
+        results << "<p>#{v}</p>"
+      end
     end
 
     # Sources
-    results << "<h3>Sources</h3>"
+    sources = String.new
     xml.xpath("/ead/archdesc/bioghist/list/item").each do |source|
-      results << "<p>#{source.text}</p>"
+      sources << "<p>#{source.text}</p>"
+    end
+    unless sources.empty?
+      results << "<h3>Sources</h3>"
+      results << sources
     end
 
     results.gsub!("<title render=\"italic\">","<i>")
@@ -123,7 +131,8 @@ module ArchivalCollectionHelper
   def ead_contents
     results = String.new
     Blacklight.config[:ead_headings].each do | f |
-      unless @document[f.to_sym].nil?
+      # Always show the link if we're overriden it as above
+      if !@document[f.to_sym].nil? or self.respond_to?(f.to_sym)
         label = get_ead_label(f.to_sym)
         results << "<li>"
         results << "<a href=\"#" + f.to_s + "\">#{label}</a>"
