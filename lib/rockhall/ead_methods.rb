@@ -83,14 +83,14 @@ module Rockhall::EadMethods
     title.sub!(num, '(' + num + ')')
 
     solr_doc = {
-      :format => Blacklight.config[:ead_format_name],
-      :title_display => title,
-      :institution_t => xml.at('//publicationstmt/publisher').text,
+      :format         => Blacklight.config[:ead_format_name],
+      :title_display  => title,
+      :institution_t  => xml.at('//publicationstmt/publisher').text,
       :ead_filename_s => xml.at('//eadheader/eadid').text,
-      :id => Rockhall::EadMethods.ead_id(xml),
-      :ead_id => Rockhall::EadMethods.ead_id(xml),
-      :xml_display => xml.to_xml,
-      :text => xml.text,
+      :id             => Rockhall::EadMethods.ead_id(xml),
+      :ead_id         => Rockhall::EadMethods.ead_id(xml),
+      :xml_display    => xml.to_xml,
+      :text           => xml.text,
     }
 
     if Blacklight.config[:ead_display_title_preface].nil?
@@ -123,35 +123,22 @@ module Rockhall::EadMethods
       :ead_id => ead_id(node),
       #:ead_facet => node.attr("level"),
 
-      :component_level => level,
-      :component_children_b => children,
-      :ref => node.attr("id"),
-      :parent_ref => node.parent.attr("id"),
-      :parent_ref_list => ead_parent_refs(node,level),
-      :parent_unittitle_list => ead_parent_unittitles(node,level),
-      :collection_display => collection,
-      :collection_facet => collection,
-      :text => part.text,
-      :xml_display => part.to_xml
+      :component_level        => level,
+      :component_children_b   => children,
+      :ref                    => node.attr("id"),
+      :parent_ref             => node.parent.attr("id"),
+      :parent_ref_list        => ead_parent_refs(node,level),
+      :parent_unittitle_list  => ead_parent_unittitles(node,level),
+      :collection_display     => collection,
+      :collection_facet       => collection,
+      :text                   => part.text,
+      :xml_display            => part.to_xml,
+      :title_display          => title
     }
 
     # Optional fields
-    {
-      "title_display"              => "//c0#{level}/did/unittitle",
-      "unitdate_display"           => "//c0#{level}/did/unitdate",
-      "physdesc_display"           => "//c0#{level}/did/physdesc",
-      "odd_display"                => "//c0#{level}/odd/p",
-      "odd_label_display"          => "//c0#{level}/odd/head",
-      "scopecontent_display"       => "//c0#{level}/scopecontent/p",
-      "accessrestrict_display"     => "//c0#{level}/accessrestrict/p",
-      "processinfo_display"        => "//c0#{level}/processinfo/p",
-      "separatedmaterial_display"  => "//c0#{level}/separatedmaterial/p",
-      "originalsloc_display"       => "//c0#{level}/originalsloc/p",
-      "phystech_display"           => "//c0#{level}/phystech/p",
-      "altformavail_display"       => "//c0#{level}/altformavail/p",
-      "userestrict_display"        => "//c0#{level}/userestrict/p",
-      "bioghist_display"           => "//c0#{level}/bioghist/p"
-    }.each do | field, xpath |
+    Blacklight.config[:component_fields].each do |field|
+      xpath = "//c0#{level}/#{Blacklight.config[:ead_fields][field.to_sym][:xpath]}"
       result = ead_solr_field(part,xpath,field)
       unless result.nil?
         doc.merge!(result)
@@ -200,10 +187,14 @@ module Rockhall::EadMethods
         if line.text.empty?
           lines << "[Blank]"
         else
-          if Blacklight.config[:ead_fields][field.to_sym].nil? or Blacklight.config[:ead_fields][field.to_sym][:formatted]
-            lines << ead_clean_xml(line.to_xml)
-          else
+          if Blacklight.config[:ead_fields][field.to_sym].nil?
             lines << line.text
+          else
+            if Blacklight.config[:ead_fields][field.to_sym][:formatted]
+              lines << ead_clean_xml(line.to_xml)
+            else
+              lines << line.text
+            end
           end
         end
       end

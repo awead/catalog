@@ -446,7 +446,63 @@ Blacklight.configure(:shared) do |config|
       :label      => "/ead/archdesc/processinfo/head",
       :is_xpath   => TRUE,
       :formatted  => TRUE,
-    }
+    },
+    :c_title_display => {
+      :xpath      => "did/unittitle",
+      :formatted  => TRUE
+    },
+    :unitdate_display => {
+      :xpath      => "did/unitdate",
+      :formatted  => FALSE
+    },
+    :physdesc_display  => {
+      :xpath      => "did/physdesc",
+      :formatted  => FALSE
+    },
+    :odd_display  => {
+      :xpath      => "odd/p",
+      :formatted  => TRUE
+    },
+    :odd_label_display  => {
+      :xpath      => "odd/head",
+      :formatted  => FALSE
+    },
+    :scopecontent_display  => {
+      :xpath      => "scopecontent/p",
+      :formatted  => TRUE
+    },
+    :accessrestrict_display  => {
+      :xpath      => "accessrestrict/p",
+      :formatted  => TRUE
+    },
+    :processinfo_display  => {
+      :xpath      => "processinfo/p",
+      :formatted  => TRUE
+    },
+    :separatedmaterial_display  => {
+      :xpath      => "separatedmaterial/p",
+      :formatted  => TRUE
+    },
+    :originalsloc_display  => {
+      :xpath      => "originalsloc/p",
+      :formatted  => TRUE
+    },
+    :phystech_display  => {
+      :xpath      => "phystech/p",
+      :formatted  => FALSE
+    },
+    :altformavail_display  => {
+      :xpath      => "altformavail/p",
+      :formatted  => FALSE
+    },
+    :userestrict_display  => {
+      :xpath      => "userestrict/p",
+      :formatted  => TRUE
+    },
+    :bioghist_display  => {
+      :xpath      => "bioghist/p",
+      :formatted  => TRUE
+    },
   }
 
   config[:ead_headings] = [
@@ -468,6 +524,22 @@ Blacklight.configure(:shared) do |config|
     "ead_inc_date_display",
     "ead_lang_display",
     "ead_lang_coll_display"
+  ]
+  config[:component_fields] = [
+    "c_title_display",
+    "unitdate_display",
+    "physdesc_display",
+    "odd_display",
+    "odd_label_display",
+    "scopecontent_display",
+    "accessrestrict_display",
+    "processinfo_display",
+    "separatedmaterial_display",
+    "originalsloc_display",
+    "phystech_display",
+    "altformavail_display",
+    "userestrict_display",
+    "bioghist_display",
   ]
 
   # Optional EAD things
