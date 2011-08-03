@@ -118,7 +118,7 @@ module ArchivalCollectionHelper
     if labels.length == fields.length
       last_index = labels.length - 1
       (0..last_index).each do |index|
-        results << "<dt>#{labels[index]}</dt>"
+        results << "<dt>#{labels[index]}:</dt>"
         results << "<dd class=\"odd\">#{fields[index]}</dd>"
       end
     else
