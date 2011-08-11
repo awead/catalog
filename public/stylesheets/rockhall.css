@@ -115,3 +115,70 @@ dl.defList dd {
   margin: 0;
   padding: 1px 5px 1px;
 }
+
+/* EAD css */
+
+span.container {
+	font-size: 90%;
+	margin-left: 25px;
+}
+
+div.component_part {
+	padding: 3px;
+	margin: 2px 0;
+}
+
+h5 {
+	margin: 0px;
+}
+
+div.c01{
+	margin: 2px 2px 2px 12px;
+	background-color: #CCC;
+}
+
+div.c02 {
+	margin: 2px 2px 2px 12px;
+	background-color: #DDD;
+}
+
+div.c03 {
+	margin: 0 0 0 12px;
+	background-color: #EEE;
+}
+
+div.c04 {
+	margin: 0 0 0 12px;
+	background-color: #FFF;
+}
+
+div.c05 {
+	margin: 0 0 0 12px;
+	border: 1px solid #CCC;
+}
+
+#ead_sidebar {
+  position: fixed;
+}
+
+#ead_toc {
+  position: relative;
+}
+
+div#ead_toc ol {
+  margin:0;
+}
+
+div#ead_toc ol li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+div#ead_body p {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+div#ead_body ul li {
+  list-style-type: none;
+}
