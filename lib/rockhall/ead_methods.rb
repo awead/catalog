@@ -205,13 +205,10 @@ module Rockhall::EadMethods
 
   def ead_location(node)
     r = Array.new
-    ["box", "folder", "object", "bin", "cassette", "disk", "drawer", "shelf"].each do |type|
-      value = node.search("container[@type='#{type.capitalize}']").text
-      unless value.empty?
-        r << [type.capitalize, value].join(": ")
-      end
+    node.xpath("//did/container").each do |container|
+      r << container.attr("type") + ": " + container.text
     end
-    return r.join(", ")
+   return r.join(", ")
   end
 
   def ead_material(node)

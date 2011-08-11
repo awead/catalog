@@ -352,7 +352,7 @@ Blacklight.configure(:shared) do |config|
 
   config[:ead_fields] = {
     :ead_title_display => {
-      :xpath      => "/ead/eadheader/filedesc/titlestmt/titleproper",
+      :xpath      => "/ead/archdesc/did/unittitle",
       :label      => "Title",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
@@ -371,7 +371,7 @@ Blacklight.configure(:shared) do |config|
     },
     :ead_extent_display => {
       :xpath      => "/ead/archdesc/did/physdesc/extent",
-      :label      => "Extant",
+      :label      => "Extent",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },

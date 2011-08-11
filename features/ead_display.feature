@@ -45,7 +45,7 @@ Feature: EAD display
     And I should see "23"
     And I should see "29"
     And I should see "Location:"
-    And I should see "Folder: 7, Object: 1, Drawer: FF.1.4"
+    And I should see "Drawer: FF.1.4, Folder: 7, Object: 1"
 
   Scenario: I need to see all sub-components (BL-58)
     Given I am on the ead page for ARC-0065:2:ref62
