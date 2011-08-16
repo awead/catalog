@@ -2,6 +2,41 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Rockhall::EadMethods do
 
+  include Rockhall::EadMethods
+
+  before(:all) do
+    file = "#{RAILS_ROOT}/test/data/ead/ARC-0065.xml"
+    @xml = Rockhall::EadMethods.ead_rake_xml(file)
+  end
+
+
+  describe "ead_rake_xml" do
+    it "should return an xml document from an ead" do
+      @xml.should be_kind_of(Nokogiri::XML::Document)
+    end
+  end
+
+  describe "ead_id" do
+    it "should return the ead id from an ead xml file" do
+      id = Rockhall::EadMethods.ead_id(@xml)
+      id.should == "ARC-0065"
+    end
+  end
+
+  describe "ead_collection" do
+    it "should return the name of a collection from the ead document" do
+      name = Rockhall::EadMethods.ead_collection(@xml)
+      name.should == "John Seabury Flyers and Posters"
+    end
+  end
+
+  describe "ead_xml" do
+    it "should return the ead xml portion from a solr document" do
+      solr_response = Blacklight.solr.find({ :q => "id:ARC-0065", :qt => "standard" })
+      xml = Rockhall::EadMethods.ead_xml(solr_response[:response][:docs].first)
+    end
+  end
+
   describe "ead_accession_range" do
 
     it "should return an array of a single accession number" do
@@ -60,5 +95,57 @@ describe Rockhall::EadMethods do
 
   end
 
+  describe "ead_solr_field" do
+    it "should return all the configured fields from and ead document" do
+
+      solr_doc = Hash.new
+      Blacklight.config[:ead_fields].keys.each do | field |
+        xpath = Blacklight.config[:ead_fields][field.to_sym][:xpath]
+        result = ead_solr_field(@xml,xpath,field)
+        unless result.nil?
+          solr_doc.merge!(result)
+        end
+      end
+
+      solr_doc[:ead_title_display].first.should == "John Seabury Flyers and Posters"
+
+    end
+  end
+
+  describe "ead_loction" do
+    it "should return the formatted location of ead component" do
+      pending
+    end
+  end
+
+  describe "ead_material" do
+    it "should return the material type from the label attribute" do
+      pending
+    end
+  end
+
+  describe "ead_prep_component" do
+    it "should return individual ead component stripped of its parents and children" do
+      pending
+    end
+  end
+
+  describe "ead_parent_refs" do
+    it "should return an array of parent components" do
+      pending
+    end
+  end
+
+  describe "ead_parent_unittitles" do
+    it "should return an array of parent titles for a component" do
+      pending
+    end
+  end
+
+  describe "ead_clean_xml" do
+    it "should strip out unwanted characters from ead fields and correct for ead->html formatting" do
+      pending
+    end
+  end
 
 end

@@ -25,13 +25,6 @@ module Rockhall::EadMethods
     Nokogiri::XML(xml_doc)
   end
 
-  def self.ead_rexml(document)
-    xml_doc = document['xml_display'].first
-    xml_doc.gsub!(/xmlns=".*"/, '')
-    xml_doc.gsub!('ns2:', '')
-    Document.new(xml_doc)
-  end
-
   # Note: only handles ranges in the last set of digits
   def self.ead_accession_range(range)
     results = Array.new
