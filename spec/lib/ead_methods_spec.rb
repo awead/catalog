@@ -5,7 +5,7 @@ describe Rockhall::EadMethods do
   include Rockhall::EadMethods
 
   before(:all) do
-    file = "#{RAILS_ROOT}/test/data/ead/ARC-0065.xml"
+    file = "#{RAILS_ROOT}/test/data/ead/ARC-0005.xml"
     @xml = Rockhall::EadMethods.ead_rake_xml(file)
   end
 
@@ -19,20 +19,20 @@ describe Rockhall::EadMethods do
   describe "ead_id" do
     it "should return the ead id from an ead xml file" do
       id = Rockhall::EadMethods.ead_id(@xml)
-      id.should == "ARC-0065"
+      id.should == "ARC-0005"
     end
   end
 
   describe "ead_collection" do
     it "should return the name of a collection from the ead document" do
       name = Rockhall::EadMethods.ead_collection(@xml)
-      name.should == "John Seabury Flyers and Posters"
+      name.should == "Eddie Cochran Historical Organization Collection"
     end
   end
 
   describe "ead_xml" do
     it "should return the ead xml portion from a solr document" do
-      solr_response = Blacklight.solr.find({ :q => "id:ARC-0065", :qt => "standard" })
+      solr_response = Blacklight.solr.find({ :q => "id:ARC-0005", :qt => "standard" })
       xml = Rockhall::EadMethods.ead_xml(solr_response[:response][:docs].first)
     end
   end
@@ -107,44 +107,60 @@ describe Rockhall::EadMethods do
         end
       end
 
-      solr_doc[:ead_title_display].first.should == "John Seabury Flyers and Posters"
+      solr_doc[:ead_title_display].first.should == "Eddie Cochran Historical Organization Collection"
 
-    end
-  end
-
-  describe "ead_loction" do
-    it "should return the formatted location of ead component" do
-      pending
-    end
-  end
-
-  describe "ead_material" do
-    it "should return the material type from the label attribute" do
-      pending
     end
   end
 
   describe "ead_prep_component" do
-    it "should return individual ead component stripped of its parents and children" do
-      pending
-    end
-  end
 
-  describe "ead_parent_refs" do
-    it "should return an array of parent components" do
-      pending
+    before(:each) do
+      @node = @xml.search("//c03")
+      @part, children = ead_prep_component(@node,"3")
     end
-  end
 
-  describe "ead_parent_unittitles" do
-    it "should return an array of parent titles for a component" do
-      pending
+    describe "ead_location" do
+      it "should return the formatted location of ead component" do
+        location = ead_location(@part)
+        location.should == "Box: 2, Folder: 1"
+      end
     end
+
+    describe "ead_material" do
+      it "should return the material type from the label attribute" do
+        material = ead_material(@part)
+        material.should == "Graphic materials"
+      end
+    end
+
+    describe "ead_parent_refs" do
+      it "should return an array of parent components" do
+        refs = ead_parent_refs(@node.first,3)
+        refs.should be_kind_of(Array)
+        refs.should =~ ["ref11", "ref14"]
+      end
+    end
+
+    describe "ead_parent_unittitles" do
+      it "should return an array of parent titles for a component" do
+        titles = ead_parent_unittitles(@node.first,3)
+        titles.should be_kind_of(Array)
+        titles.should =~ ["Series II: Graphic Materials", "Subseries 1: Photographic Materials"]
+      end
+    end
+
   end
 
   describe "ead_clean_xml" do
     it "should strip out unwanted characters from ead fields and correct for ead->html formatting" do
-      pending
+      sample = '
+        <title render="italic">Spin</title> magazine and working on three book projects:
+        <title render="italic">Tupac Shakur</title>,
+        <title render="italic">The Vibe History of Hip Hop</title>, and
+        <title render="italic">The Skills to Pay the Bills: The Story of the Beastie Boys</title>.
+      '
+      clean = ead_clean_xml(sample)
+      clean.should == "<i>Spin</i> magazine and working on three book projects: <i>Tupac Shakur</i>, <i>The Vibe History of Hip Hop</i>, and <i>The Skills to Pay the Bills: The Story of the Beastie Boys</i>."
     end
   end
 

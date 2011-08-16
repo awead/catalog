@@ -227,7 +227,7 @@ module Rockhall::EadMethods
     while level > 0
       level = level - 1
       parent = node.parent
-      results << parent.attr("id")
+      results << parent.attr("id") unless parent.attr("id").nil?
       node = parent
     end
     return results.reverse
