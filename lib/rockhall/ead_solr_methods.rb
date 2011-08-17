@@ -1,9 +1,9 @@
 module Rockhall::EadSolrMethods
 
-  def get_field_from_solr(field)
+  def get_field_from_solr(field,id)
     solr_params = Hash.new
     solr_params[:fl]   = "#{field.to_s}"
-    solr_params[:q]    = "id:\"#{params[:id]}\""
+    solr_params[:q]    = "id:\"#{id.to_s}\""
     solr_params[:qt]   = "standard"
     solr_params[:rows] = 1
     solr_response = Blacklight.solr.find(solr_params)
