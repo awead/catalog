@@ -1,61 +1,63 @@
-/* Rockhall.com bits */
+/* Blacklight css overrides */
 
-html { height: 100%; width:100%; }
-
-body {
-    font-size: 12px;
-    font-family: Georgia, Times, serif;
-    background: #1d1d19 url(../images/header_tile_bg.jpg) 0 0 repeat-x;
-    padding: 0;
+html {
+  background: #DDD
 }
 
-#hd-helper {
-	margin: 0 auto;
-	background: transparent url(../images/header_bg.jpg) top center no-repeat;
-	padding: 0;
+body {
+  background: url(../images/header_tile_bg.jpg) 0 0 repeat-x;
+  font: 0.7em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+  line-height: 1.4;
+  color:#333;
+  margin: 0px;
+  padding: 0px;
+}
+
+select,input,button,textarea {
+  font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+}
+
+
+/* yui overrides */
+
+
+#custom-doc {
+  background: transparent url(../images/header_bg.jpg) top center no-repeat;
+  width: 1100 px;
 }
 
 #hd {
-	width: 893px;
-	margin: 0 auto;
-	display: block;
+	width: 100%;
+  position: relative;
 	height: 198px;
-	position: relative;
-	padding: 0;
 }
 
-/* Top Banner */
-h1.site_title {
-	text-indent: -9999px;
-	background: transparent url(../images/logo_flag.png) 0 0 no-repeat;
-	width: 149px;
-	height: 183px;
-
-	position: absolute;
-	left: -28px;
-	top: 0;
+#rockhall-seal {
+  height: 198px;
+  width: 160 px;
+  padding-left: 75 px;
 }
 
-.first h1 {
-    margin: 0px;
-    padding: 0px;
+#rockhall-seal a {
+  border: none;
 }
 
-/**
-h1.site_title a {
-  display:block;
-  height: 35px;
-  width:120px;
-  text-indent: -9999px;
-  overflow: hidden;
-  text-decoration: none;
-  border: 0px;
+#library-banner {
+  height: 198 px;
+  width: 850 px;
+  color: #fff;
+
 }
-**/
 
-h1.site_title a:link, h1.site_title a:visited, h1.site_title a:hover, h1.site_title a:active {border: 0px;}
+#banner-text {
+  position:absolute;
+  top:75%
+}
 
-h2.search {margin:0; display:inline;}
+#banner-text span {
+
+}
+
 
 /*
   Side-by-side definition list label-value pairs

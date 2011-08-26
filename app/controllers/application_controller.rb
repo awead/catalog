@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def add_local_assets
+    stylesheet_links[0].delete("blacklight/blacklight")
     stylesheet_links << "rockhall"
     javascript_includes << "rockhall/rockhall.js"
   end
