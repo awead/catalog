@@ -1,7 +1,7 @@
 /* Blacklight css overrides */
 
 html {
-  background: #DDD
+  background: #DDD;
 }
 
 body {
@@ -17,16 +17,22 @@ select,input,button,textarea {
   font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
 }
 
+#rockhall-seal a {
+  border: none;
+}
+
 
 /* yui overrides */
 
 
 #custom-doc {
   background: transparent url(../images/header_bg.jpg) top center no-repeat;
-  width: 1100 px;
+  width: 1100px;
 }
 
 #hd {
+	margin: 0px;
+	padding: 0px;
 	width: 100%;
   position: relative;
 	height: 198px;
@@ -34,28 +40,25 @@ select,input,button,textarea {
 
 #rockhall-seal {
   height: 198px;
-  width: 160 px;
-  padding-left: 75 px;
+  width: 160px;
+  padding-left: 75px;
 }
 
-#rockhall-seal a {
-  border: none;
-}
+
 
 #library-banner {
-  height: 198 px;
-  width: 850 px;
+  height: 198px;
+  width: 850px;
   color: #fff;
-
 }
 
 #banner-text {
-  position:absolute;
-  top:75%
+  position: absolute;
+  top: 70%
 }
 
 #banner-text span {
-
+  font-size: xx-large;
 }
 
 
@@ -92,8 +95,10 @@ dl dd {
 
 /* Modifications to Blacklight */
 
-#doc4 {
-  clear;
+
+
+.blacklight-book,.index_title,.document {
+  background: #DDD;
 }
 
 dl.defList    {
