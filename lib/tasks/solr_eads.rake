@@ -137,10 +137,8 @@ namespace :solr do
         puts "... level #{level}"
         xml.search("//c0#{level.to_s}").each do |node|
           doc = Rockhall::EadMethods.get_component_doc(node,level)
-          if !doc[:title_display].blank?
-            response = Blacklight.solr.add doc
-            commit = Blacklight.solr.commit
-          end
+          response = Blacklight.solr.add doc
+          commit = Blacklight.solr.commit
         end
         level = level - 1
       end
@@ -150,11 +148,9 @@ namespace :solr do
 
       solr_doc = Rockhall::EadMethods.get_ead_doc(xml)
       solr_doc.merge!({:subject_topic_facet => subject.flatten.uniq})
-      if !solr_doc[:title_display].blank?
-        puts "... document "
-        response = Blacklight.solr.add solr_doc
-        commit = Blacklight.solr.commit
-      end
+      puts "... document "
+      response = Blacklight.solr.add solr_doc
+      commit = Blacklight.solr.commit
 
       puts "Done"
 

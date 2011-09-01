@@ -5,6 +5,10 @@ describe Rockhall::EadMethods do
   include Rockhall::EadMethods
 
   before(:all) do
+    class TestClass
+      include Rockhall::EadMethods
+    end
+    @test = TestClass.new
     file = "#{RAILS_ROOT}/test/data/ead/ARC-0005.xml"
     @xml = Rockhall::EadMethods.ead_rake_xml(file)
   end
@@ -162,6 +166,46 @@ describe Rockhall::EadMethods do
       clean = ead_clean_xml(sample)
       clean.should == "<i>Spin</i> magazine and working on three book projects: <i>Tupac Shakur</i>, <i>The Vibe History of Hip Hop</i>, and <i>The Skills to Pay the Bills: The Story of the Beastie Boys</i>."
     end
+  end
+
+  describe "get_title" do
+
+    it "should return unitdate if unittitle is blank" do
+      sample = '
+        <c02 id="ref2433" level="subseries">
+          <did>
+            <unittitle></unittitle>
+            <unitdate>1995</unitdate>
+        </did>
+      '
+      xml = Nokogiri::XML(sample)
+      @test.get_title(xml,"2").should == "1995"
+    end
+
+    it "should return unittitle if there is one" do
+      sample = '
+        <c02 id="ref2433" level="subseries">
+          <did>
+            <unittitle>Sample Title</unittitle>
+            <unitdate>1995</unitdate>
+        </did>
+      '
+      xml = Nokogiri::XML(sample)
+      @test.get_title(xml,"2").should == "Sample Title"
+    end
+
+    it "should return a missing title" do
+      sample = '
+        <c02 id="ref2433" level="subseries">
+          <did>
+            <junk></junk>
+            <moreJunk>1995</moreJunk>
+        </did>
+      '
+      xml = Nokogiri::XML(sample)
+      @test.get_title(xml,"2").should == "[No title available]"
+    end
+
   end
 
 end

@@ -108,7 +108,7 @@ module Rockhall::EadMethods
   def self.get_component_doc(node,level)
     part, children = ead_prep_component(node,level)
     collection = ead_collection(node)
-    title = ead_solr_field(part,"//c0#{level}/did/unittitle","unittitle_display").values.first.to_s
+    title = get_title(part,level)
 
     # Required fields
     doc = {
@@ -177,9 +177,7 @@ module Rockhall::EadMethods
     unless part.at(xpath).nil?
       lines = Array.new
       part.xpath(xpath).each do |line|
-        if line.text.empty?
-          lines << "[Blank]"
-        else
+        unless line.text.empty?
           if Blacklight.config[:ead_fields][field.to_sym].nil?
             lines << line.text
           else
@@ -240,10 +238,7 @@ module Rockhall::EadMethods
     while level > 0
       parent = node.parent
       part = Nokogiri::XML(parent.to_xml)
-      field = part.at("//c0#{level}/did/unittitle")
-      unless field.nil?
-        results << field.text.gsub("\n",'').gsub(/\s+/, ' ').strip
-      end
+      results << get_title(part,level)
       node = parent
       level = level - 1
     end
@@ -257,5 +252,16 @@ module Rockhall::EadMethods
     sanitize.gsub("\n",'').gsub(/\s+/, ' ').strip
   end
 
+  def get_title(xml,level)
+    title = xml.at("//c0#{level}/did/unittitle")
+    date  = xml.at("//c0#{level}/did/unitdate")
+    if !title.nil? and !title.content.empty?
+      return ead_clean_xml(title.content)
+    elsif !date.nil? and !date.content.empty?
+      return ead_clean_xml(date.content)
+    else
+      return "[No title available]"
+    end
+  end
 
 end
