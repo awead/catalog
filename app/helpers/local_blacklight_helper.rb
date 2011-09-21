@@ -1,5 +1,6 @@
 module LocalBlacklightHelper
 
+  include Rockhall::Innovative
 
   # These methods override those in BlacklightHelper
   # [plugin]/app/helpers/blacklight_helper.rb
@@ -65,5 +66,20 @@ module LocalBlacklightHelper
     return result.html_safe
   end
 
+  def check_availability(iii_id)
+    results = String.new
+    status = Rockhall::Innovative.get_status(iii_id.first.to_s)
+    if status
+      results << "<h3>Status: " + status + "</h3>"
+      return results.html_safe
+    end
+  end
+
+  def opac_link(iii_id)
+    results = String.new
+    link = Rockhall::Innovative.link(iii_id.first.to_s)
+    results << "<h5>" + link_to("View in opac", link) + "</h5>"
+    return results.html_safe
+  end
 
 end

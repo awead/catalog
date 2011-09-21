@@ -66,3 +66,9 @@ Feature:
     And I should see "Northeast Ohio Popular Music Archives"
     And I should be able to follow "Terry Stewart Collection"
     And I should be able to follow "Northeast Ohio Popular Music Archives"
+
+  Scenario: Viewing item in CWRU opac (BL-99)
+    Given I am on the bib record page for 45080162
+    Then I should see "Status:"
+    And I should see "View in opac"
+
