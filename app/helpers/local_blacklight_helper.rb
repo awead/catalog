@@ -68,11 +68,17 @@ module LocalBlacklightHelper
 
   def check_availability(iii_id)
     results = String.new
-    status = Rockhall::Innovative.get_status(iii_id.first.to_s)
-    if status
-      results << "<h3>Status: " + status + "</h3>"
-      return results.html_safe
+    status = Rockhall::Innovative.get_holdings(iii_id.first.to_s)
+    if status.first
+      results << "<h3>Holdings</h3>"
+      results << "<table>"
+      results << "<tr><th>Location</th><th>Call Number</th><th>Availability</th></tr>"
+      status.each do |s|
+        results << "<tr><td>" + s.to_s + "</td></tr>"
+      end
+      results << "</table>"
     end
+    return results.html_safe
   end
 
   def opac_link(iii_id)

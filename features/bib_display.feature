@@ -69,6 +69,7 @@ Feature:
 
   Scenario: Viewing item in CWRU opac (BL-99)
     Given I am on the bib record page for 45080162
-    Then I should see "Status:"
+    Then I should see "Holdings"
+    And I should see "Rock Hall Reference"
     And I should see "View in opac"
 
