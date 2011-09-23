@@ -63,3 +63,34 @@ Set supressRockHall(Record record, String fieldSpec)
   return newResult;
 
 }
+
+// Searches a set of results for the a ".b" at the beginning
+// indicating that this is an Innovative record id.  Returns the
+// string with the period removed as well as the last character.
+// Ex: ".b12345678" is returned as "b1234567"
+Set getInnovativeId(Record record, String fieldSpec)
+{
+
+  result = indexer.getFieldList(record, fieldSpec);
+  newResult = new LinkedHashSet();
+  for (String s : result)
+  {
+
+    String pattern = "b";
+    Pattern p      = Pattern.compile(pattern);
+    Matcher m      = p.matcher(s);
+
+    if (m.find()) {
+      // Remove first and last chacter from the cleaned result
+      String f = Utils.cleanData(s);
+      int strLen = f.length();
+      int lastIdx = strLen - 1;
+      String id = f.substring(1, lastIdx);
+      newResult.add(id);
+    }
+
+  }
+
+  return newResult;
+
+}

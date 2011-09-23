@@ -21,6 +21,7 @@ gem 'json'
 #end
 
 gem 'jquery-rails'
+gem 'rspec-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -41,7 +42,6 @@ group :development, :test do
   gem 'cucumber'
   gem 'database_cleaner'
   gem 'cucumber-rails'
-  gem 'rspec-rails'
   gem 'capybara'
 end
 
@@ -50,7 +50,6 @@ group :cucumber do
   gem 'database_cleaner'
   gem 'cucumber-rails'
   gem 'cucumber'
-  gem 'rspec-rails'
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
 end
