@@ -6,9 +6,11 @@ BlacklightApp::Application.routes.draw do
   devise_for :users
 
   # For EAD
-
   resources :components, :only => [:index]
   match "/components/hide", :as => "components_hide"
+
+  # Holdings
+  resources :holdings
 
 
 

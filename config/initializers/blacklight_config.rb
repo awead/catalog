@@ -110,6 +110,7 @@ Blacklight.configure(:shared) do |config|
       "language_display",
       "publisher_display",
       "lc_callnum_display",
+      #"innovative_display",
       # EAD-only fields
       "unitdate_display",
       "collection_display",
@@ -123,6 +124,7 @@ Blacklight.configure(:shared) do |config|
       "language_display"        => "Language:",
       "publisher_display"       => "Publisher:",
       "lc_callnum_display"      => "Call Number:",
+      #"innovative_display"      => "Status:",
       # EAD-only fields
       "unitdate_display"        => "Dates:",
       "collection_display"      => "Archival Collection:",
