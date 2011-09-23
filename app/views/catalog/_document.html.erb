@@ -9,6 +9,7 @@
 
         <% # main title container for doc partial view -%>
         <div class="yui-u">
+
           <h3 class="index_title">
             <%= document_counter + 1 + @response.params[:start].to_i %>.
             <%= document_icon document %>
@@ -18,6 +19,8 @@
       </div>
 
       <% # main container for doc partial view -%>
+
+      <div class="innovative_status" id="<%= document[:innovative_display] %>"><b>Status: </b></div>
       <%= render_document_partial document, :index %>
 
       <%= render_document_unapi_microformat document %>
