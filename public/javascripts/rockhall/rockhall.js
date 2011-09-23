@@ -11,7 +11,7 @@ function returnStatus() {
   $('.innovative_status').each(function() {
 
     var id  = $(this).attr("id");
-    var url = "/holdings/" + id;
+    var url = "holdings/" + id;
 
     $.ajax({
       url: url,
