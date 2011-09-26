@@ -20,7 +20,9 @@
 
       <% # main container for doc partial view -%>
 
-      <div class="innovative_status" id="<%= document[:innovative_display] %>"><b>Status: </b></div>
+      <% if document[:innovative_display] %>
+        <div class="innovative_status" id="<%= document[:innovative_display] %>"><b>Status: </b></div>
+      <% end %>
       <%= render_document_partial document, :index %>
 
       <%= render_document_unapi_microformat document %>
