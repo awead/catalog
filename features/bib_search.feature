@@ -17,3 +17,9 @@ Feature:
     And I fill in "q" with "legalize it"
     When I press "search"
     Then I should see "Legalize it [sound recording] / Peter Tosh"
+
+  Scenario: Status display for bib searches (BL-103)
+    Given I am on the home page
+    And I fill in "q" with "Kennedy"
+    When I press "search"
+    Then I should see "Status:"
