@@ -3,19 +3,19 @@ module ArchivalCollectionHelper
 
   def general_info
     results = String.new
-    results << "<table>"
+    results << "<dl class=\"defList\">"
     Blacklight.config[:ead_geninfo].each do | field |
       label = get_ead_label(field.to_sym)
       unless @document[field.to_sym].nil?
-         results << "<tr><td><b>#{label}:</b></td>"
-         results << "<td>"
+         results << "<dt>#{label}:</dt>"
+         results << "<dd>"
          @document[field.to_sym].each do |v|
            results << "#{v}<br/>"
          end
-         results << "</td></tr>"
+         results << "</dd>"
       end
     end
-    results << "</table>"
+    results << "</dl>"
     return results.html_safe
   end
 
@@ -65,15 +65,16 @@ module ArchivalCollectionHelper
 
     unless list.empty?
       # Timeline table
-      results << "<table>"
+      results << "<dl class=\"defList\">"
       items.each do |chronitem|
-        results << "<tr><td>" + chronitem.xpath('date').first + "</td><td>"
+        results << "<dt>" + chronitem.xpath('date').first + "</dt>"
+        results << "<dd>"
         chronitem.xpath('.//event').each do |chronevent|
           results << chronevent.text + "<br/>"
         end
-        results << "</td></tr>"
+        results << "</dd>"
       end
-      results << "</table>"
+      results << "</dl>"
     end
 
     unless @document[:ead_bio_display].nil?
@@ -151,6 +152,5 @@ module ArchivalCollectionHelper
     end
     return label
   end
-
 
 end
