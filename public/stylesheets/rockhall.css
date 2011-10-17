@@ -26,13 +26,13 @@ body {
 
 /* Top Banner */
 h1.site_title {
-	text-indent: -9999px;
+	text-indent: 0px;
 	background: transparent url(../images/logo_flag.png) 0 0 no-repeat;
 	width: 149px;
 	height: 183px;
 
 	position: absolute;
-	left: -28px;
+	left: 0px;
 	top: 0;
 }
 
@@ -114,6 +114,10 @@ dl.defList dd {
   width: 450px;
   margin: 0;
   padding: 1px 5px 1px;
+}
+
+.user_util_links {
+  margin: 20px 0px 0px 0px;
 }
 
 /* EAD css */
