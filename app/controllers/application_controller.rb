@@ -15,7 +15,14 @@ class ApplicationController < ActionController::Base
   protected
 
   def add_local_assets
-      stylesheet_links << "rockhall"
-      javascript_includes << "rockhall/rockhall.js"
+    #stylesheet_links[0].delete("blacklight/blacklight")
+    #stylesheet_links[0].delete("yui")
+    #stylesheet_links[0].delete("mediaall")
+    #stylesheet_links[0].delete("jquery/ui-lightness/jquery-ui-1.8.1.custom.css")
+    #stylesheet_links << "yui-2.9.0"
+    stylesheet_links << "rockhall"
+    javascript_includes << "rockhall/rockhall.js"
+    logger.info("Stylesheets: #{stylesheet_links.join(" - ")}")
   end
+
 end
