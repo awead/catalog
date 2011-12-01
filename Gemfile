@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.3'
 
 gem 'blacklight'
 
@@ -9,6 +9,7 @@ gem 'blacklight'
 gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
+gem 'rsolr', '=1.0.2'
 
 # Asset pipeline is disabled for now
 #
