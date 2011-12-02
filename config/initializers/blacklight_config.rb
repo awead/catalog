@@ -82,7 +82,7 @@ Blacklight.configure(:shared) do |config|
     :limits => {
       "format"              => 10,
       "material_facet"      => 10,
-      "collection_facet"    => 10,
+      "collection_facet"    => 20,
       "pub_date"            => 10,
       "topic_facet"         => 10,
       "name_facet"          => 10,
@@ -523,7 +523,11 @@ Blacklight.configure(:shared) do |config|
     },
     :langmaterial_display => {
       :xpath      => "did/langmaterial",
-      :formatted  => FALSE
+      :formatted  => TRUE
+    },
+    :acqinfo_display => {
+      :xpath      => "acqinfo/p",
+      :formatted  => TRUE
     },
   }
 
@@ -566,6 +570,7 @@ Blacklight.configure(:shared) do |config|
     "bioghist_display",
     "originalsloc_display",
     "langmaterial_display",
+    "acqinfo_display",
 
   ]
 

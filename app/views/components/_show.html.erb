@@ -53,6 +53,11 @@
         <dt>Language:</dt>
         <dd class="langmaterial"><%= display_field(document["langmaterial_display"]) %></dd>
       <% end %>
+
+      <% unless document["acqinfo_display"].nil? %>
+        <dt>Custodial History:</dt>
+        <dd class="acqinfo"><%= display_field(document["acqinfo_display"]) %></dd>
+      <% end %>
     </dl>
 
     <%= continue_components(document) %>

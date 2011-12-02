@@ -100,3 +100,9 @@ Feature: EAD display
     Then I should see "Material is in French."
     And I should see "A2010.1.18"
     And I should see "Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information."
+
+  Scenario: Provenance (BL-120)
+    Given I am on the ead page for ARC-0037
+    Then I should see "Jeff Gold purchased these files from Toby Gleason."
+    And I should not see "Provenance"
+    And I should see "Custodial History"
