@@ -74,6 +74,15 @@ describe Rockhall::EadMethods do
       results.include?("A1994.34.9").should be_true
     end
 
+    it "should return an array of accessions from a range including different letters" do
+      results = Rockhall::EadMethods.ead_accession_range("A2001.93.2a-A2001.93.2c, L2002.86.30")
+      results.length.should == 4
+      results.include?("A2001.93.2a").should be_true
+      results.include?("A2001.93.2b").should be_true
+      results.include?("A2001.93.2c").should be_true
+      results.include?("L2002.86.30").should be_true
+    end
+
   end
 
   describe "ead_accessions" do
