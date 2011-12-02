@@ -419,6 +419,18 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
+    :ead_relatedmaterial_display => {
+      :xpath      => "/ead/archdesc/relatedmaterial/p",
+      :label      => "/ead/archdesc/relatedmaterial/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
+    :ead_accruals_display => {
+      :xpath      => "/ead/archdesc/accruals/p",
+      :label      => "/ead/archdesc/accruals/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
+    },
     :ead_citation_display => {
       :xpath      => "/ead/archdesc/prefercite/p",
       :label      => "/ead/archdesc/prefercite/head",
@@ -459,7 +471,7 @@ Blacklight.configure(:shared) do |config|
     },
     :physdesc_display  => {
       :xpath      => "did/physdesc",
-      :formatted  => FALSE
+      :formatted  => TRUE
     },
     :odd_display  => {
       :xpath      => "odd/p",
@@ -505,12 +517,18 @@ Blacklight.configure(:shared) do |config|
       :xpath      => "bioghist/p",
       :formatted  => TRUE
     },
+    :originalsloc_display => {
+      :xpath      => "originalsloc/p",
+      :formatted  => TRUE
+    },
   }
 
   config[:ead_headings] = [
     "ead_abstract_display",
     "ead_bio_display",
     "ead_sepmaterial_display",
+    "ead_relatedmaterial_display",
+    "ead_accruals_display",
     "ead_citation_display",
     "ead_provenance_display",
     "ead_use_display",
@@ -542,6 +560,8 @@ Blacklight.configure(:shared) do |config|
     "altformavail_display",
     "userestrict_display",
     "bioghist_display",
+    "originalsloc_display",
+
   ]
 
   # Optional EAD things

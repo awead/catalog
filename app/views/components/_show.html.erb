@@ -19,11 +19,6 @@
         <%= display_odd_fields(document["odd_display"], document["odd_label_display"]) %>
       <% end %>
 
-      <% unless document["physdesc_display"].nil? %>
-        <dt>Dimensions:</dt>
-        <dd class="physdesc"><%= display_field(document["physdesc_display"]) %></dd>
-      <% end %>
-
       <% unless document["scopecontent_display"].nil? %>
         <dt>Scope and Content:</dt>
         <dd class="scopecontent"><%= display_field(document["scopecontent_display"]) %></dd>
@@ -37,6 +32,16 @@
       <% unless document["accessrestrict_display"].nil? %>
         <dt>Access Restrictions:</dt>
         <dd class="separatedmaterial"><%= display_field(document["accessrestrict_display"]) %></dd>
+      <% end %>
+
+      <% unless document["originalsloc_display"].nil? %>
+        <dt>Existence and Location of Originals:</dt>
+        <dd class="originalsloc"><%= display_field(document["originalsloc_display"]) %></dd>
+      <% end %>
+
+      <% unless document["physdesc_display"].nil? %>
+        <dt>Physical Description:</dt>
+        <dd class="physdesc"><%= display_field(document["physdesc_display"]) %></dd>
       <% end %>
 
       <% unless document["location_display"].nil? %>
