@@ -29,6 +29,16 @@
         <dd class="scopecontent"><%= display_field(document["scopecontent_display"]) %></dd>
       <% end %>
 
+      <% unless document["separatedmaterial_display"].nil? %>
+        <dt>Separated Materials:</dt>
+        <dd class="separatedmaterial"><%= display_field(document["separatedmaterial_display"]) %></dd>
+      <% end %>
+
+      <% unless document["accessrestrict_display"].nil? %>
+        <dt>Access Restrictions:</dt>
+        <dd class="separatedmaterial"><%= display_field(document["accessrestrict_display"]) %></dd>
+      <% end %>
+
       <% unless document["location_display"].nil? %>
         <dt>Location:</dt>
         <dd class="container"><%= display_field(document["location_display"]) %></dd>

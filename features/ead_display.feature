@@ -52,7 +52,7 @@ Feature: EAD display
     Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
     And I should see "Ultras with Dale, Dick"
 
-  @wip
+  @future-work
   Scenario: EAD that has no collection headings (BL-60)
     Given I am on the ead page for RG-0001
     Then I should not see "Controlled Access Headings"
@@ -77,3 +77,13 @@ Feature: EAD display
     Then I should see "Separated Materials"
     And I should see "Biographical Note"
 
+  @wip
+  Scenario: Related materials and accruals (BL-115)
+    Given I am on the EAD page for ARC-0006
+    Then I should see "Related materials providing content on Alan Freed may be found in the following collections in this repository: Terry Stewart Collection."
+    And I should see "Where possible, accruals were interfiled with preexisting collection materials; otherwise, accruals can be found at the end of Series V: Personal Papers."
+
+  Scenario: Separated materials and access restrictions (BL-116)
+    Given I am on the ead page for ARC-0003
+    Then I should see "Ten-inch LPs, 78s, 78 sets, 45s, 45 RPM EPs, and LPs have been transferred to the library collection."
+    And I should see "The 1/4-inch audiotapes in this series are on defunct media and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available."
