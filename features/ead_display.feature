@@ -57,9 +57,9 @@ Feature: EAD display
     Given I am on the ead page for RG-0001
     Then I should not see "Controlled Access Headings"
 
-  Scenario: Hide accession numbers (BL-49)
+  Scenario: Show accession numbers (BL-118) Note: this is revoked from BL-49
     Given I am on the ead page for ARC-0058
-    Then I should not see "A2005.31.15"
+    Then I should see "A2005.31.15"
 
   Scenario: HTTP calls for components should still work (BL-55)
     Given I am on the component page for ARC-0065:2:ref42
@@ -94,3 +94,9 @@ Feature: EAD display
   Scenario: Physical description (BL-119)
     Given I am on the ead page for ARC-0006:3:ref876
     Then I should see "Linen-backed. Unframed at the L&A."
+
+  Scenario: Language of Materials, Museum Acc. #, Separated Materials (BL-118)
+    Given I am on the ead page for ARC-0006:3:ref690
+    Then I should see "Material is in French."
+    And I should see "A2010.1.18"
+    And I should see "Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information."

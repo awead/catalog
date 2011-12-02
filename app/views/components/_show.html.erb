@@ -15,7 +15,7 @@
     <% end %>
 
     <dl>
-      <% unless document["odd_display"].nil? and document["odd_label_display"].nil? or document["odd_label_display"].first.match("Accession") %>
+      <% unless document["odd_display"].nil? and document["odd_label_display"].nil? %>
         <%= display_odd_fields(document["odd_display"], document["odd_label_display"]) %>
       <% end %>
 
@@ -47,6 +47,11 @@
       <% unless document["location_display"].nil? %>
         <dt>Location:</dt>
         <dd class="container"><%= display_field(document["location_display"]) %></dd>
+      <% end %>
+
+      <% unless document["langmaterial_display"].nil? %>
+        <dt>Language:</dt>
+        <dd class="langmaterial"><%= display_field(document["langmaterial_display"]) %></dd>
       <% end %>
     </dl>
 

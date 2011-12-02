@@ -521,6 +521,10 @@ Blacklight.configure(:shared) do |config|
       :xpath      => "originalsloc/p",
       :formatted  => TRUE
     },
+    :langmaterial_display => {
+      :xpath      => "did/langmaterial",
+      :formatted  => FALSE
+    },
   }
 
   config[:ead_headings] = [
@@ -561,6 +565,7 @@ Blacklight.configure(:shared) do |config|
     "userestrict_display",
     "bioghist_display",
     "originalsloc_display",
+    "langmaterial_display",
 
   ]
 
