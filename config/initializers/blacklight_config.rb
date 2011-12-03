@@ -470,7 +470,7 @@ Blacklight.configure(:shared) do |config|
       :formatted  => FALSE
     },
     :physdesc_display  => {
-      :xpath      => "did/physdesc",
+      :xpath      => "did/physdesc[not(dimensions)]",
       :formatted  => TRUE
     },
     :odd_display  => {
@@ -529,6 +529,10 @@ Blacklight.configure(:shared) do |config|
       :xpath      => "acqinfo/p",
       :formatted  => TRUE
     },
+    :dimensions_display => {
+      :xpath      => "did/physdesc/dimensions",
+      :formatted  => TRUE
+    },
   }
 
   config[:ead_headings] = [
@@ -571,6 +575,7 @@ Blacklight.configure(:shared) do |config|
     "originalsloc_display",
     "langmaterial_display",
     "acqinfo_display",
+    "dimensions_display",
 
   ]
 

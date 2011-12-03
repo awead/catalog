@@ -37,11 +37,12 @@ Feature: EAD display
     When I follow "Controlled Access Headings"
     Then I should see "Auf der Maur, Melissa"
 
-  Scenario: Dimensions note (BL-8); Dimensions replaced with Physical Description (BL-119)
+  Scenario: Dimensions note (see BL-124)
     Given I am on the ead page for ARC-0065:2:ref10
     Then I should see "Limited Print Run"
     And I should see "Non-numbered edition of 200"
-    And I should not see "Dimensions:"
+    And I should see "Dimensions:"
+    And I should see "ChormaDepth 3D image with required glass for viewing"
     And I should see "23"
     And I should see "29"
     And I should see "Location:"

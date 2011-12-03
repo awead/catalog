@@ -174,7 +174,7 @@ module Rockhall::EadMethods
   end
 
   def ead_solr_field(part,xpath,field)
-    unless part.at(xpath).nil?
+    unless part.xpath(xpath).text.empty?
       lines = Array.new
       part.xpath(xpath).each do |line|
         unless line.text.empty?

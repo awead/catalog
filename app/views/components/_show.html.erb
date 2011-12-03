@@ -44,6 +44,11 @@
         <dd class="physdesc"><%= display_field(document["physdesc_display"]) %></dd>
       <% end %>
 
+      <% unless document["dimensions_display"].nil? %>
+        <dt>Dimensions:</dt>
+        <dd class="dimensions"><%= display_field(document["dimensions_display"]) %></dd>
+      <% end %>
+
       <% unless document["location_display"].nil? %>
         <dt>Location:</dt>
         <dd class="container"><%= display_field(document["location_display"]) %></dd>
