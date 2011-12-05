@@ -167,7 +167,7 @@ module Rockhall::EadMethods
     # index accession numbers and ranges
     accessions = ead_accessions(part)
     unless accessions.nil?
-      doc.merge!({ :accession_s => accessions })
+      doc.merge!({ :accession_t => accessions })
     end
 
     return doc

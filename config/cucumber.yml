@@ -6,6 +6,6 @@ std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} --strict --tags ~@wip
 default: <%= std_opts %> features
 wip: --tags @wip:5 --wip features
 rerun: <%= rerun_opts %> --format rerun --out rerun.txt --strict --tags ~@wip
-marc: --tags @marc features
-ead: --tags @ead features
+marc: --tags @marc --tags ~@future-work features
+ead: --tags @ead --tags ~@future-work features
 future-work: --tags @future-work features
