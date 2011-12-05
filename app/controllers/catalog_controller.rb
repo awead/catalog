@@ -4,6 +4,8 @@ require 'blacklight/catalog'
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include BlacklightHighlight::ControllerExtension
+
   include Rockhall::EadSolrMethods
 
   def show

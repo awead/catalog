@@ -104,8 +104,8 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display
   config[:index_fields] = {
     :field_names => [
-      "title_display",
-      "author_display",
+      "title_t",
+      "author_t",
       "format",
       "language_display",
       "publisher_display",
@@ -118,8 +118,8 @@ Blacklight.configure(:shared) do |config|
       "location_display"
     ],
     :labels => {
-      "title_display"           => "Title:",
-      "author_display"          => "Author:",
+      "title_t"           => "Title:",
+      "author_t"                => "Author:",
       "format"                  => "Format:",
       "language_display"        => "Language:",
       "publisher_display"       => "Publisher:",
@@ -138,10 +138,10 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display
   config[:show_fields] = {
     :field_names => [
-      "title_display",
+      "title_t",
       "unititle_display",
       "title_addl_display",
-      "author_display",
+      "author_t",
       "edition_display",
       "series_display",
       "format",
@@ -181,10 +181,10 @@ Blacklight.configure(:shared) do |config|
       "location_display"
     ],
     :labels => {
-      "title_display"           => "Title:",
+      "title_t"           => "Title:",
       "unititle_display"        => "Uniform Title:",
       "title_addl_display"      => "Additional Titles:",
-      "author_display"          => "Author:",
+      "author_t"          => "Author:",
       "edition_display"         => "Edition:",
       "series_display"          => "Series:",
       "format"                  => "Format:",

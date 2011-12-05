@@ -34,6 +34,7 @@ gem 'rspec-rails'
 # gem 'ruby-debug'
 
 gem "devise"
+gem "blacklight_highlight", :git => "git://github.com/awead/blacklight_highlight.git"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
