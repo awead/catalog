@@ -43,23 +43,34 @@ module ComponentsHelper
     return results.html_safe
   end
 
-  def render_component_field(field,opts={})
+  def render_component_field(document,field,opts={})
     results = String.new
     if opts[:label]
       label = opts[:label]
     else
-      if @document[(field.to_s + "_label").to_sym].nil?
-        label = Blacklight.config[:ead_fields][field.to_sym][:label]
+      if document[(field.to_s + "_label").to_sym].nil?
+        label = Blacklight.config[:ead_fields][field.to_sym][:label].to_s
       else
-        label = @document[(field.to_s + "_label")]
+        label = document[(field.to_s + "_label")].to_s
       end
     end
-    unless @document[field.to_s].nil?
+    unless document[field.to_s].nil?
       results << "<dt>" + label + ":</dt>"
-      results << "<dd class=\"#{field.to_s}\">" + display_field(@document[field.to_s]) + "</dd>"
+      results << "<dd class=\"#{field.to_s}\">" + display_field(document[field.to_s]) + "</dd>"
     end
     return results.html_safe
   end
 
+  def render_odd_field(document)
+    results = String.new
+    unless document["odd_display"].nil?
+      document["odd_display"].each_index do |i|
+        results << "<dt>" + document["odd_display_label"][i] + ":</dt>"
+        results << "<dd class=\"odd_display\">" + document["odd_display"][i] + "</dd>"
+      end
+    end
+    return results.html_safe
+
+  end
 
 end

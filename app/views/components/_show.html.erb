@@ -4,29 +4,29 @@
 
   <div id="<%= document[:ref] %>" class="component_part clearfix c0<%= document[:component_level] %>">
 
-    <!-- unitid_display was removed from the comma_list -->
+    <!-- unitid_display was removed from the comma_list because it's not in solr anymore -->
     <h5 id="<%= document[:id] %>">
       <span>
         <%= comma_list( [document["c_title_display"], document["unitdate_display"]] ) %>
       </span>
     </h5>
 
-    <!-- removed summary_dislpay field -->
+    <!-- removed summary_display field because it's not in solr anymore -->
 
     <dl>
-      <% # render_component_field "odd_display" %>
-      <% #render_component_field "scopecontent_display" %>
-      <% #render_component_field "separatedmaterial_display" %>
-      <%#render_component_field "accessrestrict_display" %>
-      <%#render_component_field "originalsloc_display" %>
-      <%#render_component_field "physdesc_display" %>
-      <%#render_component_field("dimensions_display") %>
+      <%= render_odd_field(document) %>
+      <%= render_component_field(document, "scopecontent_display") %>
+      <%= render_component_field(document, "separatedmaterial_display") %>
+      <%= render_component_field(document, "accessrestrict_display") %>
+      <%= render_component_field(document, "originalsloc_display") %>
+      <%= render_component_field(document, "physdesc_display") %>
+      <%= render_component_field(document, "dimensions_display") %>
 
       <!-- location_display is not in Blacklight config -->
-      <%#render_component_field("location_display", { :label => "Location" }) %>
+      <%= render_component_field(document, "location_display", { :label => "Location" }) %>
 
-      <%#render_component_field("langmaterial_display") %>
-      <%#render_component_field("acqinfo_display") %>
+      <%= render_component_field(document, "langmaterial_display") %>
+      <%= render_component_field(document, "acqinfo_display") %>
 
     </dl>
 

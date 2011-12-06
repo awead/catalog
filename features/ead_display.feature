@@ -106,4 +106,4 @@ Feature: EAD display
     Given I am on the ead page for ARC-0037
     Then I should see "Jeff Gold purchased these files from Toby Gleason."
     And I should not see "Provenance"
-    And I should see "Custodial History"
+    And I should see "Immediate Source of Acquisition note"
