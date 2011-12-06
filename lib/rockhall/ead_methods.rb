@@ -112,10 +112,8 @@ module Rockhall::EadMethods
 
     # Required fields
     doc = {
-      :id => [ead_id(node), level, node.attr("id")].join(":"),
-      :ead_id => ead_id(node),
-      #:ead_facet => node.attr("level"),
-
+      :id                     => [ead_id(node), level, node.attr("id")].join(":"),
+      :ead_id                 => ead_id(node),
       :component_level        => level,
       :component_children_b   => children,
       :ref                    => node.attr("id"),
@@ -126,11 +124,11 @@ module Rockhall::EadMethods
       :collection_display     => collection,
       :collection_facet       => collection,
       :text                   => part.text,
-      :xml_display            => part.to_xml,
+      #:xml_display            => part.to_xml,
       :title_display          => title
     }
 
-    # Optional fields
+    # Optional fields take from Blacklight.config
     Blacklight.config[:component_fields].each do |field|
       xpath = "//c0#{level}/#{Blacklight.config[:ead_fields][field.to_sym][:xpath]}"
       result = ead_solr_field(part,xpath,field, { :component => TRUE })
@@ -147,11 +145,13 @@ module Rockhall::EadMethods
       end
     end
 
+    # Location field gets special treatment
     location = ead_location(part)
     unless location.nil?
       doc.merge!({ :location_display => location })
     end
 
+    # Formulate special heading display, if configured
     if Blacklight.config[:ead_component_title_separator].nil?
       doc.merge!({ :heading_display => title })
     else
