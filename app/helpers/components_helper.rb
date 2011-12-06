@@ -43,5 +43,23 @@ module ComponentsHelper
     return results.html_safe
   end
 
+  def render_component_field(field,opts={})
+    results = String.new
+    if opts[:label]
+      label = opts[:label]
+    else
+      if @document[(field.to_s + "_label").to_sym].nil?
+        label = Blacklight.config[:ead_fields][field.to_sym][:label]
+      else
+        label = @document[(field.to_s + "_label")]
+      end
+    end
+    unless @document[field.to_s].nil?
+      results << "<dt>" + label + ":</dt>"
+      results << "<dd class=\"#{field.to_s}\">" + display_field(@document[field.to_s]) + "</dd>"
+    end
+    return results.html_safe
+  end
+
 
 end

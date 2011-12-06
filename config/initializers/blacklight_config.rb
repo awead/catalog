@@ -463,75 +463,105 @@ Blacklight.configure(:shared) do |config|
     },
     :c_title_display => {
       :xpath      => "did/unittitle",
+      :label      => "Title",
+      :is_xpath   => FALSE,
       :formatted  => TRUE
     },
     :unitdate_display => {
       :xpath      => "did/unitdate",
-      :formatted  => FALSE
+      :label      => "Date",
+      :is_xpath   => FALSE,
+      :formatted  => FALSE,
     },
     :physdesc_display  => {
       :xpath      => "did/physdesc[not(dimensions)]",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :odd_display  => {
       :xpath      => "odd/p",
-      :formatted  => TRUE
-    },
-    :odd_label_display  => {
-      :xpath      => "odd/head",
-      :formatted  => FALSE
+      :label      => "odd/head",
+      :is_xpath   => TRUE,
+      :formatted  => TRUE,
     },
     :scopecontent_display  => {
       :xpath      => "scopecontent/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :accessrestrict_display  => {
       :xpath      => "accessrestrict/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :processinfo_display  => {
       :xpath      => "processinfo/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :separatedmaterial_display  => {
       :xpath      => "separatedmaterial/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :originalsloc_display  => {
       :xpath      => "originalsloc/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :phystech_display  => {
       :xpath      => "phystech/p",
-      :formatted  => FALSE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => FALSE,
     },
     :altformavail_display  => {
       :xpath      => "altformavail/p",
-      :formatted  => FALSE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => FALSE,
     },
     :userestrict_display  => {
       :xpath      => "userestrict/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :bioghist_display  => {
       :xpath      => "bioghist/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :originalsloc_display => {
       :xpath      => "originalsloc/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :langmaterial_display => {
       :xpath      => "did/langmaterial",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :acqinfo_display => {
       :xpath      => "acqinfo/p",
-      :formatted  => TRUE
+      :label      => "Field name",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
     :dimensions_display => {
       :xpath      => "did/physdesc/dimensions",
-      :formatted  => TRUE
+      :label      => "Dimensions",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
     },
   }
 
@@ -562,7 +592,6 @@ Blacklight.configure(:shared) do |config|
     "unitdate_display",
     "physdesc_display",
     "odd_display",
-    "odd_label_display",
     "scopecontent_display",
     "accessrestrict_display",
     "processinfo_display",

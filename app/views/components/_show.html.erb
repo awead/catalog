@@ -4,65 +4,30 @@
 
   <div id="<%= document[:ref] %>" class="component_part clearfix c0<%= document[:component_level] %>">
 
+    <!-- unitid_display was removed from the comma_list -->
     <h5 id="<%= document[:id] %>">
       <span>
-        <%= comma_list( [document["c_title_display"], document["unitdate_display"], document["unitid_display"]] ) %>
+        <%= comma_list( [document["c_title_display"], document["unitdate_display"]] ) %>
       </span>
     </h5>
 
-    <% unless document["summary_display"].nil? %>
-      <p><span class="summary"><%= display_field(document["summary_display"]) %></span></p>
-    <% end %>
+    <!-- removed summary_dislpay field -->
 
     <dl>
-      <% unless document["odd_display"].nil? and document["odd_label_display"].nil? %>
-        <%= display_odd_fields(document["odd_display"], document["odd_label_display"]) %>
-      <% end %>
+      <% # render_component_field "odd_display" %>
+      <% #render_component_field "scopecontent_display" %>
+      <% #render_component_field "separatedmaterial_display" %>
+      <%#render_component_field "accessrestrict_display" %>
+      <%#render_component_field "originalsloc_display" %>
+      <%#render_component_field "physdesc_display" %>
+      <%#render_component_field("dimensions_display") %>
 
-      <% unless document["scopecontent_display"].nil? %>
-        <dt>Scope and Content:</dt>
-        <dd class="scopecontent"><%= display_field(document["scopecontent_display"]) %></dd>
-      <% end %>
+      <!-- location_display is not in Blacklight config -->
+      <%#render_component_field("location_display", { :label => "Location" }) %>
 
-      <% unless document["separatedmaterial_display"].nil? %>
-        <dt>Separated Materials:</dt>
-        <dd class="separatedmaterial"><%= display_field(document["separatedmaterial_display"]) %></dd>
-      <% end %>
+      <%#render_component_field("langmaterial_display") %>
+      <%#render_component_field("acqinfo_display") %>
 
-      <% unless document["accessrestrict_display"].nil? %>
-        <dt>Access Restrictions:</dt>
-        <dd class="separatedmaterial"><%= display_field(document["accessrestrict_display"]) %></dd>
-      <% end %>
-
-      <% unless document["originalsloc_display"].nil? %>
-        <dt>Existence and Location of Originals:</dt>
-        <dd class="originalsloc"><%= display_field(document["originalsloc_display"]) %></dd>
-      <% end %>
-
-      <% unless document["physdesc_display"].nil? %>
-        <dt>Physical Description:</dt>
-        <dd class="physdesc"><%= display_field(document["physdesc_display"]) %></dd>
-      <% end %>
-
-      <% unless document["dimensions_display"].nil? %>
-        <dt>Dimensions:</dt>
-        <dd class="dimensions"><%= display_field(document["dimensions_display"]) %></dd>
-      <% end %>
-
-      <% unless document["location_display"].nil? %>
-        <dt>Location:</dt>
-        <dd class="container"><%= display_field(document["location_display"]) %></dd>
-      <% end %>
-
-      <% unless document["langmaterial_display"].nil? %>
-        <dt>Language:</dt>
-        <dd class="langmaterial"><%= display_field(document["langmaterial_display"]) %></dd>
-      <% end %>
-
-      <% unless document["acqinfo_display"].nil? %>
-        <dt>Custodial History:</dt>
-        <dd class="acqinfo"><%= display_field(document["acqinfo_display"]) %></dd>
-      <% end %>
     </dl>
 
     <%= continue_components(document) %>

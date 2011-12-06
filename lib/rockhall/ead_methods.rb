@@ -132,9 +132,17 @@ module Rockhall::EadMethods
     # Optional fields
     Blacklight.config[:component_fields].each do |field|
       xpath = "//c0#{level}/#{Blacklight.config[:ead_fields][field.to_sym][:xpath]}"
-      result = ead_solr_field(part,xpath,field)
+      result = ead_solr_field(part,xpath,field, { :component => TRUE })
       unless result.nil?
         doc.merge!(result)
+      end
+      if Blacklight.config[:ead_fields][field.to_sym][:is_xpath]
+        xpath = "//c0#{level}/#{Blacklight.config[:ead_fields][field.to_sym][:label]}"
+        label = field + "_label"
+        result = ead_solr_field(part,xpath,label, { :component => TRUE })
+        unless result.nil?
+          doc.merge!(result)
+        end
       end
     end
 
@@ -173,7 +181,7 @@ module Rockhall::EadMethods
     return doc
   end
 
-  def ead_solr_field(part,xpath,field)
+  def ead_solr_field(part,xpath,field,opts={})
     unless part.xpath(xpath).text.empty?
       lines = Array.new
       part.xpath(xpath).each do |line|
