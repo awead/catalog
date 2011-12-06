@@ -119,6 +119,7 @@ module Rockhall::EadMethods
       :component_level        => level,
       :component_children_b   => children,
       :ref                    => node.attr("id"),
+      :sort_i                 => node.attr("id").gsub(/ref/,""),
       :parent_ref             => node.parent.attr("id"),
       :parent_ref_list        => ead_parent_refs(node,level),
       :parent_unittitle_list  => ead_parent_unittitles(node,level),
