@@ -20,7 +20,8 @@ Blacklight.configure(:shared) do |config|
 
   config[:default_solr_params] = {
     :qt       => "search",
-    :per_page => 10
+    :per_page => 10,
+    ("hl.fl").to_sym => "*"
   }
 
   # solr field values given special treatment in the show (single result) view
@@ -104,8 +105,8 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display
   config[:index_fields] = {
     :field_names => [
-      "title_t",
-      "author_t",
+      "title_display",
+      "author_display",
       "format",
       "language_display",
       "publisher_display",
@@ -118,8 +119,8 @@ Blacklight.configure(:shared) do |config|
       "location_display"
     ],
     :labels => {
-      "title_t"           => "Title:",
-      "author_t"                => "Author:",
+      "title_display"           => "Title:",
+      "author_display"          => "Author:",
       "format"                  => "Format:",
       "language_display"        => "Language:",
       "publisher_display"       => "Publisher:",
@@ -138,10 +139,10 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display
   config[:show_fields] = {
     :field_names => [
-      "title_t",
+      "title_display",
       "unititle_display",
       "title_addl_display",
-      "author_t",
+      "author_display",
       "edition_display",
       "series_display",
       "format",
@@ -181,10 +182,10 @@ Blacklight.configure(:shared) do |config|
       "location_display"
     ],
     :labels => {
-      "title_t"           => "Title:",
+      "title_display"           => "Title:",
       "unititle_display"        => "Uniform Title:",
       "title_addl_display"      => "Additional Titles:",
-      "author_t"          => "Author:",
+      "author_display"          => "Author:",
       "edition_display"         => "Edition:",
       "series_display"          => "Series:",
       "format"                  => "Format:",
