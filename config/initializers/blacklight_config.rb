@@ -605,7 +605,7 @@ Blacklight.configure(:shared) do |config|
 
   # Optional EAD things
   config[:ead_display_title_preface] = "Guide to the"
-  config[:ead_component_title_separator] = ">>"
+  config[:ead_component_title_separator] = " > "
 
   config[:opac_ip] = "129.22.104.30"
 end

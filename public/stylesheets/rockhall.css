@@ -1,12 +1,13 @@
 /* Blacklight css overrides */
 
 html {
-  background: #DDD;
+  background: #FFF;
 }
 
 body {
   background: url(../images/header_tile_bg.jpg) 0 0 repeat-x;
-  font: 0.7em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+  font-size: .85em;
+  font-family: Georgia, Times, serif;
   line-height: 1.4;
   color:#333;
   margin: 0px;
@@ -21,9 +22,32 @@ select,input,button,textarea {
   border: none;
 }
 
+a:link, a:visited, a:active  {
+color: #AC1313;
+}
 
-/* yui overrides */
+.sidebar p {
+ padding: 0;
+ margin: 0;
+}
 
+/* yui overrides
+
+.yui-t1 #yui-main .yui-b, .yui-t2 #yui-main .yui-b, .yui-t3 #yui-main .yui-b {
+  margin-left: 250px;
+  margin-right: 0px;
+  padding: 0px;
+
+}
+
+.sidebar p {padding-top: 2em;}
+.sidebar {
+  margin: 0;
+}
+#facets{
+  padding: 0;
+}
+*/
 
 #custom-doc {
   background: transparent url(../images/header_bg.jpg) top center no-repeat;
@@ -95,11 +119,24 @@ dl dd {
 
 /* Modifications to Blacklight */
 
-
-
-.blacklight-book,.index_title,.document {
-  background: #DDD;
+/* Changed blue colors to reds in the "You searched for" section */
+.appliedFilter {
+  background:#efd2d2;
+  border:1px solid #be4646;
 }
+
+.appliedFilter .btnRemove{
+  border-left:1px solid #efd2d2;
+ }
+.appliedFilter .btnRemove:active, .appliedFilter .btnRemove:focus {
+  border: 1px dotted #FFD27A;
+}
+
+.page_links span.current {
+background:none repeat scroll 0 0 #be4646;
+border:1px solid #be4646;
+}
+
 
 dl.defList    {
   width: 620px;
@@ -128,6 +165,8 @@ dl.defList dd {
 }
 
 /* EAD css */
+
+
 
 span.container {
 	font-size: 90%;

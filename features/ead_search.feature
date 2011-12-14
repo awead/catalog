@@ -47,7 +47,7 @@ Feature: EAD display
     When I press "search"
     Then I should not see "Finding Aid"
     And I should see "Guide to the Curtis Mayfield Collection"
-    And I should see "Big Joe Turner Papers>>Series VI: Photographic Materials>>Negatives and transparencies"
+    And I should see "Big Joe Turner Papers > Series VI: Photographic Materials > Negatives and transparencies"
 
   Scenario: Suppress status display from ead-related items (BL-103)
     Given I am on the home page
