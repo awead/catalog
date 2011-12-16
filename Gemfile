@@ -2,14 +2,15 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 
-gem 'blacklight'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'blacklight', '=3.1.1'
 gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
 gem 'rsolr', '=1.0.2'
+gem 'jquery-rails'
+gem 'rspec-rails'
+gem "devise"
+gem "blacklight_highlight"
 
 # Asset pipeline is disabled for now
 #
@@ -20,21 +21,6 @@ gem 'rsolr', '=1.0.2'
 #  gem 'coffee-rails', "~> 3.1.0"
 #  gem 'uglifier'
 #end
-
-gem 'jquery-rails'
-gem 'rspec-rails'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
-gem "devise"
-gem "blacklight_highlight", :git => "git://github.com/awead/blacklight_highlight.git"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
