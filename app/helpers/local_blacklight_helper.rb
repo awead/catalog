@@ -2,9 +2,7 @@ module LocalBlacklightHelper
 
   include Rockhall::Innovative
 
-  # These methods override those in BlacklightHelper
-  # [plugin]/app/helpers/blacklight_helper.rb
-
+  # These methods override helper methods in the Blacklight gem
   def application_name
     'Mockalog'
   end
@@ -20,6 +18,18 @@ module LocalBlacklightHelper
       render_field_value value
     end
   end
+
+  def link_to_document(doc, opts={:label=>Blacklight.config[:index][:show_link].to_sym, :counter => nil, :results_view => true})
+    label = render_document_index_label doc, opts
+    if doc["format"] == "Archival Item"
+      ("<a href=\"#{catalog_path(doc.id)}##{doc["ref"]}\">" + label + "</a>").html_safe
+      #link_to(label, {:controller=>"catalog", :action=>"show", :id=>doc.id, :anchor=>"asdfadf"}).html_safe
+      #link_to_with_data(label, {:controller=>"catalog", :action=>"show", :id=>doc.id, :anchor=>doc["ref"]}, {:method => :put, :class => label.parameterize, :data => opts}).html_safe
+    else
+      link_to_with_data(label, catalog_path(doc.id), {:method => :put, :class => label.parameterize, :data => opts}).html_safe
+    end
+  end
+
 
   # end of overriding methods
 
