@@ -73,7 +73,6 @@ Feature:
     And I should see "Rock Hall Reference"
     And I should see "View in opac"
 
-  @wip
   Scenario: Series Index should include MARC field 811 (BL-104)
     Given I am on the bib record page for 754843822
     Then I should see the field content "blacklight-series_display" contain "Annual induction ceremony (Rock and Roll Hall of Fame Foundation). ; 2003"
