@@ -2,7 +2,7 @@
 
 <% documents.each do |document| %>
 
-  <div id="<%= document[:ref] %>" class="component_part clearfix c0<%= document[:component_level] %>">
+  <div id="<%= document[:ref] %>" <%= highlight?(document[:ref]) %> class="component_part clearfix c0<%= document[:component_level] %>">
 
     <!-- unitid_display was removed from the comma_list because it's not in solr anymore -->
     <h5 id="<%= document[:id] %>">

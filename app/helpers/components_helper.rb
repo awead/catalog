@@ -73,4 +73,15 @@ module ComponentsHelper
 
   end
 
+  def highlight?(ref)
+    results = String.new
+    if params[:solr_id]
+      parts = params[:solr_id].split(":")
+      if ref.to_s == parts.last.to_s
+        results << 'style="background-color:yellow"'
+      end
+    end
+    return results.html_safe
+  end
+
 end

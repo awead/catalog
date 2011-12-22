@@ -23,6 +23,7 @@ class CatalogController < ApplicationController
         end
       end
 
+      params[:solr_id] = params[:id]
       params[:id] = ead_id
       super
 
