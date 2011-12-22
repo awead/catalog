@@ -34,3 +34,9 @@ Feature: Catalog Home Page
   Scenario: Collection Headings in Name Facet (BL-63)
     Given I am on the home page
     Then I should not see "Jeff Gold Collection (Rock and Roll Hall of Fame and Museum. Library and Archives)"
+
+  Scenario: Subject headings for library materials are under the Topic facet
+    Given I am on the home page
+    When I follow "Rock music"
+    Then I should see "1950s radio in color"
+    And I should see "Classic rock"
