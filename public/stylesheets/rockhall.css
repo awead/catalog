@@ -77,14 +77,15 @@ color: #AC1313;
 }
 
 #banner-text {
-  position: absolute;
-  top: 70%
+  /*position: absolute;*/
+  top: 70%;
+  margin-right: 40px;
+  margin-top: 142px;
 }
 
 #banner-text span {
   font-size: xx-large;
 }
-
 
 /*
   Side-by-side definition list label-value pairs
