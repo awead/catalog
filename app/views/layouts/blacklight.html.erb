@@ -43,11 +43,13 @@
         </div>
 
         <div class="yui-b sidebar">
-          <p>
-            <%= link_to("Go to Rockhall.com", "http://rockhall.com") %>
-            <br/>
-            <%= link_to("Go to Libguides", "http://rockhall.com") %>
-          </p>
+          <div class="links">
+            <h2>Links</h2>
+            <ul>
+              <li><%= link_to("Rock and Roll Hall of Fame and Museum", "http://rockhall.com") %></li>
+              <li><%= link_to("Library and Archives", "http://rockhall.com") %></li>
+            </ul>
+          </div>
           <%= sidebar_items.join('').html_safe %>
         </div>
 

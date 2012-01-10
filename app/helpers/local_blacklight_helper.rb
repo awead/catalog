@@ -4,7 +4,7 @@ module LocalBlacklightHelper
 
   # These methods override helper methods in the Blacklight gem
   def application_name
-    'Mockalog'
+    'Rock and Roll Hall of Fame and Museum | Library and Archives | Catalog'
   end
 
   def render_document_show_field_value args
