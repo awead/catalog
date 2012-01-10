@@ -7,8 +7,7 @@ Feature: Catalog Home Page
 
   Scenario: Facets for limiting search (BL-14)
     Given I am on the home page
-    Then I should see "Rock and Roll Hall of Fame Library and Archives"
-    And I should see a facet for "Format"
+    Then I should see a facet for "Format"
     And I should see a facet for "Collection Name"
     And I should see a facet for "Topic"
     And I should see a facet for "Name"
