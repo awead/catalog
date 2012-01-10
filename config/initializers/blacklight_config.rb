@@ -360,12 +360,6 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_repository_display => {
-      :xpath      => "/ead/archdesc/did/repository/corpname",
-      :label      => "Repository",
-      :is_xpath   => FALSE,
-      :formatted  => TRUE,
-    },
     :ead_publisher_display => {
       :xpath      => "/ead/eadheader/filedesc/publicationstmt/address/addressline",
       :label      => "Publisher",
@@ -574,7 +568,6 @@ Blacklight.configure(:shared) do |config|
   ]
   config[:ead_geninfo]  = [
     "ead_title_display",
-    "ead_repository_display",
     "ead_publisher_display",
     "ead_extent_display",
     "ead_bulk_date_display",
