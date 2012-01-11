@@ -5,7 +5,7 @@ Feature: Catalog Home Page
   As a patron or staff member
   I would like to limit my searches in the discovery interface using facets
 
-  Scenario: Facets for limiting search (BL-14)
+  Scenario: Facets for limiting search (BL-14, BL-137)
     Given I am on the home page
     Then I should see a facet for "Format"
     And I should see a facet for "Collection Name"
@@ -14,6 +14,7 @@ Feature: Catalog Home Page
     And I should see a facet for "Event/Series"
     And I should see a facet for "Genre"
     And I should see a facet for "Collection Name"
+    And I should not see a facet for "Call Number"
 
   Scenario: Terms for "Format" facet (BL-15)
     Given I am on the home page

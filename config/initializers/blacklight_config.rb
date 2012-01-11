@@ -52,7 +52,6 @@ Blacklight.configure(:shared) do |config|
       "name_facet",
       "series_facet",
       "language_facet",
-      "lc_1letter_facet",
       "genre_facet"
     ]),
     :labels => {
@@ -64,7 +63,6 @@ Blacklight.configure(:shared) do |config|
       "name_facet"          => "Name",
       "series_facet"        => "Event/Series",
       "language_facet"      => "Language",
-      "lc_1letter_facet"    => "Call Number",
       "genre_facet"         => "Genre"
     },
     # Setting a limit will trigger Blacklight's 'more' facet values link.
