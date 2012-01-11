@@ -13,7 +13,7 @@
             <publicationstmt>
                 <publisher>Library and Archives</publisher>
                 <address>
-                    <addressline>Rock and Roll Hall of Fame and Museum</addressline>
+                    <addressline>Library and Archives</addressline>
                     <addressline>2809 Woodland Ave</addressline>
                     <addressline>Cleveland, OH, 44115</addressline>
                     <addressline>216-515-1956</addressline>
@@ -24,7 +24,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2011-06-24T13:40-0400</date>
+                <date>2011-12-07T14:55-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -32,7 +32,7 @@
     </eadheader>
     <archdesc level="collection">
         <did>
-            <unittitle>Jermaine Rogers Posters</unittitle>
+            <unittitle>[CLOSED] Jermaine Rogers Posters [DRAFT]</unittitle>
             <unitid>ARC.0058</unitid>
             <repository>
                 <corpname>Library and Archives</corpname>
@@ -41,8 +41,8 @@
                 <language langcode="eng"/>
             </langmaterial>
             <physdesc>
-                <extent>1.92 Linear feet</extent>
-                <extent>18 loose oversize items</extent>
+                <extent>4.0 Linear feet</extent>
+                <extent>18 oversize items</extent>
             </physdesc>
             <unitdate>2003-2005</unitdate>
             <abstract id="ref75" label="Collection Overview">Jermaine Rogers Posters spans the years 2003-2005. The collection consists of 18 concert posters for various bands and venues by the artist Jermaine Rogers. Bands include ...And You Will Know Us By the Trail of Dead, The Cure, Jane's Addiction, and Queens of the Stone Age. The collection provides a sampling of Rogers' artistic work for various concerts in the United States. Seen in a broader context, the collection provides insights into how alternative rock bands and venues promoted their shows from 2003-2005 and the bands that played during that era.</abstract>
@@ -54,17 +54,17 @@
         </userestrict>
         <accessrestrict id="ref71">
             <head>Access Restrictions</head>
-            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibilities and Privacy Rights Form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
         </accessrestrict>
         <processinfo id="ref72">
             <head>Processing Information</head>
             <p>Processed by James A. Kohler, Project Archivist. Completed February 22, 2011.</p>
             <p>Descriptive sources and standards used to create this inventory: DACS and local Style Guide.</p>
         </processinfo>
-        <acqinfo id="ref73">
-            <head>Provenance</head>
+        <custodhist id="ref73">
+            <head>Custodial History note</head>
             <p>Jermaine Rogers Posters was received by the Rock and Roll Hall of Fame and Museum as a gift from Jermaine Rogers on June 14, 2005.</p>
-        </acqinfo>
+        </custodhist>
         <scopecontent id="ref74">
             <head>Scope and Contents</head>
             <p>The materials are arranged chronologically.</p>
@@ -97,7 +97,7 @@
             <corpname rules="aacr" role="Musician (mus)">Cooper Temple Clause (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Copeland (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Cure (Musical group)</corpname>
-            <corpname rules="aacr" source="local">Curiosa Festival.</corpname>
+            <corpname rules="aacr" source="local">Curiosa Festival</corpname>
             <corpname rules="aacr" role="Musician (mus)">Darkness (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Deftones (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Denali (Musical group)</corpname>
@@ -135,8 +135,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265001" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265001" type="Folder">5</container>
+                    <container id="cid265001" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265001" type="Object">1</container>
                     <unitdate>2003 January 31-2003 February 1</unitdate>
                     <physdesc id="ref3" label="Dimensions">
@@ -154,8 +153,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265002" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265002" type="Folder">5</container>
+                    <container id="cid265002" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265002" type="Object">2</container>
                     <unitdate>2003 February 20</unitdate>
                     <physdesc id="ref7" label="Dimensions">
@@ -173,8 +171,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265003" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265003" type="Folder">5</container>
+                    <container id="cid265003" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265003" type="Object">3</container>
                     <unitdate>2003 March 11</unitdate>
                     <physdesc id="ref11" label="Dimensions">
@@ -192,8 +189,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265004" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265004" type="Folder">5</container>
+                    <container id="cid265004" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265004" type="Object">4</container>
                     <unitdate>2003 September 15</unitdate>
                     <physdesc id="ref15" label="Dimensions">
@@ -211,8 +207,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265005" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265005" type="Folder">5</container>
+                    <container id="cid265005" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265005" type="Object">5</container>
                     <unitdate>2003 September 16</unitdate>
                     <physdesc id="ref20" label="Dimensions">
@@ -230,8 +225,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265006" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265006" type="Folder">5</container>
+                    <container id="cid265006" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265006" type="Object">6</container>
                     <unitdate>2003 November 5</unitdate>
                     <physdesc id="ref24" label="Dimensions">
@@ -253,8 +247,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265007" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265007" type="Folder">5</container>
+                    <container id="cid265007" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265007" type="Object">7</container>
                     <unitdate>2003 December 21</unitdate>
                     <physdesc id="ref29" label="Dimensions">
@@ -272,8 +265,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265008" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265008" type="Folder">5</container>
+                    <container id="cid265008" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265008" type="Object">8</container>
                     <unitdate>2004 March 12</unitdate>
                     <physdesc id="ref32" label="Dimensions">
@@ -295,8 +287,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265009" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265009" type="Folder">5</container>
+                    <container id="cid265009" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265009" type="Object">9</container>
                     <unitdate>2004 March 17-2004 March20</unitdate>
                     <physdesc id="ref36" label="Dimensions">
@@ -314,8 +305,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265010" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265010" type="Folder">5</container>
+                    <container id="cid265010" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265010" type="Object">10</container>
                     <unitdate>2004 April 11</unitdate>
                     <physdesc id="ref40" label="Dimensions">
@@ -333,8 +323,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265011" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265011" type="Folder">5</container>
+                    <container id="cid265011" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265011" type="Object">11</container>
                     <unitdate>2004 May 29</unitdate>
                     <physdesc id="ref44" label="Dimensions">
@@ -352,8 +341,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265012" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265012" type="Folder">5</container>
+                    <container id="cid265012" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265012" type="Object">12</container>
                     <unitdate>2004 August 15</unitdate>
                     <physdesc id="ref48" label="Dimensions">
@@ -371,8 +359,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265013" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265013" type="Folder">5</container>
+                    <container id="cid265013" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265013" type="Object">13</container>
                     <unitdate>2004</unitdate>
                     <physdesc id="ref52" label="Dimensions">
@@ -390,8 +377,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265014" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265014" type="Folder">5</container>
+                    <container id="cid265014" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265014" type="Object">14</container>
                     <unitdate>2005 March 28</unitdate>
                     <physdesc id="ref56" label="Dimensions">
@@ -409,8 +395,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265015" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265015" type="Folder">5</container>
+                    <container id="cid265015" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265015" type="Object">15</container>
                     <unitdate>2005 April 16</unitdate>
                     <physdesc id="ref60" label="Dimensions">
@@ -424,8 +409,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265016" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265016" type="Folder">5</container>
+                    <container id="cid265016" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265016" type="Object">16</container>
                     <unitdate>2005 April 25</unitdate>
                     <physdesc id="ref63" label="Dimensions">
@@ -444,8 +428,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265017" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265017" type="Folder">5</container>
+                    <container id="cid265017" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265017" type="Object">17</container>
                     <unitdate>2005 May 16</unitdate>
                     <physdesc id="ref66" label="Dimensions">
@@ -460,8 +443,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid265018" type="Drawer" label="Graphic materials">FF.1.2</container>
-                    <container parent="cid265018" type="Folder">5</container>
+                    <container id="cid265018" type="Drawer-Folder" label="Graphic materials">FF.1.2-5</container>
                     <container parent="cid265018" type="Object">18</container>
                     <unitdate>2005</unitdate>
                     <physdesc id="ref69" label="Dimensions">

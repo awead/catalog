@@ -13,7 +13,7 @@
             <publicationstmt>
                 <publisher>Library and Archives</publisher>
                 <address>
-                    <addressline>Rock and Roll Hall of Fame and Museum</addressline>
+                    <addressline>Library and Archives</addressline>
                     <addressline>2809 Woodland Ave</addressline>
                     <addressline>Cleveland, OH, 44115</addressline>
                     <addressline>216-515-1956</addressline>
@@ -24,7 +24,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2011-06-24T13:54-0400</date>
+                <date>2011-12-07T14:59-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -32,7 +32,7 @@
     </eadheader>
     <archdesc level="collection">
         <did>
-            <unittitle>Big Joe Turner Papers</unittitle>
+            <unittitle>[CLOSED] Big Joe Turner Papers [DRAFT]</unittitle>
             <unitid>ARC.0105</unitid>
             <repository>
                 <corpname>Library and Archives</corpname>
@@ -42,12 +42,12 @@
             </langmaterial>
             <physdesc>
                 <extent>1.0 Linear feet</extent>
-                <extent>One records carton</extent>
+                <extent>(1 records carton)</extent>
             </physdesc>
             <unitdate normal="1976/1986" type="bulk">Bulk, 1976-1986</unitdate>
             <unitdate normal="1945/1986" type="inclusive">1945-1986</unitdate>
             <langmaterial id="ref1" label="Language of Materials">Materials are in English.</langmaterial>
-            <abstract id="ref4" label="Collection Overview">The Big Joe Turner Papers highlight the latter part of Turner's sixty-year career as a pioneering and influential blues singer. The collection dates from 1945 to 1986, with the bulk of the material focusing on the period from 1976 to 1986. Materials include documents, correspondence, printed materials, telegrams, certificates of recognition, blues festival programs, photographs, and negatives. The collection features Turner's 1984 and 1985 Grammy Award nomination cards and corresponding information regarding the events, documentation surrounding Turners's search for his birth certificate, and correspondence from notable figures, such as Jann Wenner, Ahmet Ertegun, Dick Clark, and Doc Pomus. The Big Joe Turner Papers include information regarding the benefit concert Joe's wife, Pat, and his friends were organizing to help pay for the artist's skyrocketing medical bills. Turner passed away two weeks before the scheduled show in 1985. The collection contains two guestbooks from his funeral, as well as letters of condolence to Pat acknowledging her husband's significant contributions to the music world and the history of rock and roll.</abstract>
+            <abstract id="ref4" label="Collection Overview">The Big Joe Turner Papers highlight the latter part of Turner's 60-year career as a pioneering and influential blues singer. The collection dates from 1945 to 1986, with the bulk of the material focusing on the period from 1976 to 1986. Materials include documents, correspondence, printed materials, telegrams, certificates of recognition, blues festival programs, photographs, and negatives. The collection features Turner's 1984 and 1985 Grammy Award nomination cards, corresponding information regarding the events and documentation surrounding Turners' search for his birth certificate, and correspondence from notable figures, including Jann Wenner, Ahmet Ertegun, Dick Clark, and Doc Pomus. The collection also includes information regarding the benefit concert Joe's wife, Pat, and his friends were organizing to help pay for the artist's skyrocketing medical bills. Turner passed away two weeks before the scheduled show in 1985. The collection contains two guest books from his funeral, as well as letters of condolence to Pat acknowledging her husband's significant contributions to the music world and the history of rock and roll. Periodicals have been transferred to the library collection. Search "Big Joe Turner Papers" in the library catalog for a complete list of titles.</abstract>
         </did>
         <prefercite id="ref2">
             <head>Preferred Citation</head>
@@ -86,7 +86,7 @@
                 </chronitem>
                 <chronitem>
                     <date>1956</date>
-                    <event>Appears in the film
+                    <event>Appears in the film 
                         <title render="italic">Shake, Rattle and Roll</title></event>
                 </chronitem>
                 <chronitem>
@@ -114,11 +114,11 @@
         </bioghist>
         <scopecontent id="ref6">
             <head>Scope and Contents</head>
-            <p>The Big Joe Turner Papers span the years 1945-1986. The papers are arranged by series and then alphabetically.</p>
+            <p>Arranged into series and then alphabetically.</p>
         </scopecontent>
         <accessrestrict id="ref7">
             <head>Access Restrictions</head>
-            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Provacy Rights form before using this collection. Please contact staff before visiting the Library and Archives to use this collection.</p>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Please contact staff before visiting the Library and Archives to use this collection.</p>
         </accessrestrict>
         <userestrict id="ref8">
             <head>Use Restrictions</head>
@@ -128,10 +128,10 @@
             <head>Separated Materials</head>
             <p>Periodicals have been transferred to the library collection. Search "Big Joe Turner Papers" in the library catalog for a complete list of titles.</p>
         </separatedmaterial>
-        <acqinfo id="ref9">
-            <head>Provenance</head>
+        <custodhist id="ref9">
+            <head>Custodial History note</head>
             <p>The Big Joe Turner Papers were recieved by The Rock and Roll Hall of Fame and Museum, Inc. as a gift from Pat Turner in 1994.</p>
-        </acqinfo>
+        </custodhist>
         <controlaccess>
             <corpname rules="aacr" role="Donor (dnr)">Atlantic Recording Corporation</corpname>
             <persname rules="aacr" role="Musician (mus)">Turner, Joe, 1911-1985</persname>
@@ -141,7 +141,7 @@
             <genreform source="lcsh">Correspondence.</genreform>
             <subject source="lcsh">Doo-Wop (Music)</subject>
             <subject source="lcsh">Guitar music (Rock)</subject>
-            <subject source="local">Legal documents--Music trade.</subject>
+            <genreform source="lcsh">Legal instruments.</genreform>
             <subject source="lcsh">Musicians--United States--Biography.</subject>
             <genreform source="lcsh">Photographs.</genreform>
             <subject source="lcsh">Popular music--United States.</subject>
@@ -174,7 +174,7 @@
             <c01 id="ref45" level="series">
                 <did>
                     <unittitle>Series II: Business Files</unittitle>
-                    <unitdate>1945-1946, 1983-1984, and undated</unitdate>
+                    <unitdate>1945-1946, 1983-1984, undated</unitdate>
                 </did>
                 <c02 id="ref34" level="file">
                     <did>
@@ -259,7 +259,7 @@
             <c01 id="ref44" level="series">
                 <did>
                     <unittitle>Series V: Personal Files</unittitle>
-                    <unitdate>1971-1977 and undated</unitdate>
+                    <unitdate>1971-1977, undated</unitdate>
                 </did>
                 <c02 id="ref14" level="file">
                     <did>

@@ -13,7 +13,7 @@
             <publicationstmt>
                 <publisher>Library and Archives</publisher>
                 <address>
-                    <addressline>Rock and Roll Hall of Fame and Museum</addressline>
+                    <addressline>Library and Archives</addressline>
                     <addressline>2809 Woodland Ave</addressline>
                     <addressline>Cleveland, OH, 44115</addressline>
                     <addressline>216-515-1956</addressline>
@@ -24,7 +24,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2011-07-05T15:28-0400</date>
+                <date>2011-10-14T14:12-0400</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -32,7 +32,7 @@
     </eadheader>
     <archdesc level="collection">
         <did>
-            <unittitle>Bryan Ehlinger Poster Collection</unittitle>
+            <unittitle>Bryan Ehlinger Collection of Posters [DRAFT]</unittitle>
             <unitid>ARC.0118</unitid>
             <repository>
                 <corpname>Library and Archives</corpname>
@@ -45,7 +45,7 @@
                 <extent>56 oversize items</extent>
             </physdesc>
             <unitdate>1978-1989, 1994, undated</unitdate>
-            <abstract id="ref131" label="Collection Overview">The Bryan Ehlinger Poster Collection consists of promtional posters used by record companies for advertising and in-store displays from 1978-1989, and 1994. Perofrmers in David Bowie, Genesis, Jefferson Starship, Moody Blues, The Scorpions, and Trooper. The collection provides a glimpse into how recorded companies promoted their artists and the records that they released during the late 1970s and 1980s. Seen in a broader context, the collection provides insight into the images and styles used promote rock and roll music and those who performed it.</abstract>
+            <abstract id="ref131" label="Collection Overview">The Bryan Ehlinger Poster Collection consists of promotional posters used by record companies for advertising and in-store displays from 1978 to 1989 and 1994. Performers include David Bowie, Genesis, Jefferson Starship, Moody Blues, The Scorpions, and Trooper. The collection provides a glimpse into how record companies promoted their artists and the records they released during the late 1970s and 1980s. Seen in a broader context, the collection provides insight into the images and styles used to promote rock and roll music.</abstract>
             <langmaterial id="ref132" label="Language of Materials note">Materials are in English.</langmaterial>
         </did>
         <userestrict id="ref127">
@@ -54,16 +54,16 @@
         </userestrict>
         <accessrestrict id="ref128">
             <head>Access Restrictions</head>
-            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibilities and Privacy Rights Form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
         </accessrestrict>
         <processinfo id="ref129">
             <head>Processing Information note</head>
-            <p>Processed by James A. Kohler, Project Archivist. Completed May 24, 2011.</p>
+            <p>Processed by James A. Kohler, Project Archivist. Completed June 29, 2011.</p>
             <p>Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
         </processinfo>
         <scopecontent id="ref130">
             <head>Scope and Contents</head>
-            <p>Items are arranged alphabetically.</p>
+            <p>Arranged alphabetically.</p>
         </scopecontent>
         <bioghist id="ref137">
             <head>Biographical Note</head>
@@ -73,10 +73,10 @@
                 <item>"Bryan Ehlinger." Oneida Healthcare Center: Exceptional Care...Always. Last modified 2011. Accessed June 29, 2011. http://www.oneidahealthcare.org/news/index.cfm?action=view&amp;newsitem_id=98.</item>
             </list>
         </bioghist>
-        <acqinfo id="ref133">
-            <head>Immediate Source of Acquisition note</head>
-            <p>The Bryan Ehlinger Poster Collection was received by the Rock and Roll Hall of Fame and Museum from Bryan Ehlinger on July 7, 2005.</p>
-        </acqinfo>
+        <custodhist id="ref133">
+            <head>Custodial History note</head>
+            <p>The Bryan Ehlinger Poster Collection was received by the Rock and Roll Hall of Fame and Museum, Inc. from Bryan Ehlinger on July 7, 2005.</p>
+        </custodhist>
         <prefercite id="ref134">
             <head>Preferred Citation note</head>
             <p>[Identification of item], Bryan Ehlinger Poster Collection, Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
@@ -95,8 +95,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid438001" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid438001" type="Folder">1</container>
+                    <container id="cid438001" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid438001" type="Object">1</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -112,8 +111,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid438002" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid438002" type="Folder">1</container>
+                    <container id="cid438002" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid438002" type="Object">2</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -125,8 +123,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid438003" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid438003" type="Folder">2</container>
+                    <container id="cid438003" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid438003" type="Object">1</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -142,8 +139,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid438004" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid438004" type="Folder">2</container>
+                    <container id="cid438004" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid438004" type="Object">2</container>
                     <unitdate>1994</unitdate>
                 </did>
@@ -159,8 +155,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid438005" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid438005" type="Folder">1</container>
+                    <container id="cid438005" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid438005" type="Object">3</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -177,8 +172,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid438006" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid438006" type="Folder">2</container>
+                    <container id="cid438006" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid438006" type="Object">3</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -193,8 +187,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid438007" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid438007" type="Folder">2</container>
+                    <container id="cid438007" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid438007" type="Object">4</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -209,8 +202,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441012" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441012" type="Folder">2</container>
+                    <container id="cid441012" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441012" type="Object">5</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -225,8 +217,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439001" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439001" type="Folder">1</container>
+                    <container id="cid439001" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439001" type="Object">4</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -242,8 +233,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439002" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439002" type="Folder">1</container>
+                    <container id="cid439002" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439002" type="Object">5</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -258,8 +248,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439003" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439003" type="Folder">1</container>
+                    <container id="cid439003" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439003" type="Object">6-7</container>
                     <unitdate>1984</unitdate>
                 </did>
@@ -275,8 +264,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441013" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441013" type="Folder">2</container>
+                    <container id="cid441013" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441013" type="Object">6</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -291,8 +279,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441014" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441014" type="Folder">2</container>
+                    <container id="cid441014" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441014" type="Object">7</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -308,8 +295,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441015" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441015" type="Folder">2</container>
+                    <container id="cid441015" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441015" type="Object">8</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -325,8 +311,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441016" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441016" type="Folder">2</container>
+                    <container id="cid441016" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441016" type="Object">9</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -342,8 +327,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439004" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439004" type="Folder">1</container>
+                    <container id="cid439004" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439004" type="Object">8</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -359,8 +343,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439005" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439005" type="Folder">1</container>
+                    <container id="cid439005" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439005" type="Object">9</container>
                     <unitdate>1988</unitdate>
                 </did>
@@ -375,8 +358,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439006" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439006" type="Folder">1</container>
+                    <container id="cid439006" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439006" type="Object">10</container>
                     <unitdate>1980</unitdate>
                 </did>
@@ -392,8 +374,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439008" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439008" type="Folder">1</container>
+                    <container id="cid439008" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439008" type="Object">11</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -409,8 +390,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439007" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439007" type="Folder">1</container>
+                    <container id="cid439007" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439007" type="Object">12</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -422,8 +402,7 @@
             <c01 id="ref123" level="item">
                 <did>
                     <unittitle>Genesis on Atlantic Records and Tapes</unittitle>
-                    <container id="cid439009" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439009" type="Folder">1</container>
+                    <container id="cid439009" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439009" type="Object">13</container>
                     <unitdate>circa 1981</unitdate>
                 </did>
@@ -438,8 +417,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441017" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441017" type="Folder">2</container>
+                    <container id="cid441017" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441017" type="Object">10</container>
                     <unitdate>circa 1986</unitdate>
                 </did>
@@ -454,11 +432,9 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439010" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439010" type="Folder">1</container>
+                    <container id="cid439010" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439010" type="Object">14</container>
-                    <container id="cid441018" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441018" type="Folder">2</container>
+                    <container id="cid441018" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441018" type="Object">11</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -474,8 +450,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439012" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439012" type="Folder">1</container>
+                    <container id="cid439012" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439012" type="Object">15</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -491,8 +466,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439011" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439011" type="Folder">1</container>
+                    <container id="cid439011" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439011" type="Object">16</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -508,8 +482,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439014" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439014" type="Folder">1</container>
+                    <container id="cid439014" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439014" type="Object">17</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -525,8 +498,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441020" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441020" type="Folder">2</container>
+                    <container id="cid441020" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441020" type="Object">12</container>
                     <unitdate>1980</unitdate>
                 </did>
@@ -542,8 +514,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439015" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439015" type="Folder">1</container>
+                    <container id="cid439015" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439015" type="Object">18</container>
                     <unitdate>1979</unitdate>
                 </did>
@@ -559,8 +530,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441019" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441019" type="Folder">2</container>
+                    <container id="cid441019" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441019" type="Object">13</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -575,8 +545,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439013" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439013" type="Folder">1</container>
+                    <container id="cid439013" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439013" type="Object">19</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -592,8 +561,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441021" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441021" type="Folder">2</container>
+                    <container id="cid441021" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441021" type="Object">14</container>
                     <unitdate>1980</unitdate>
                 </did>
@@ -609,8 +577,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441022" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441022" type="Folder">2</container>
+                    <container id="cid441022" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441022" type="Object">15</container>
                     <unitdate>1989</unitdate>
                 </did>
@@ -626,8 +593,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439016" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439016" type="Folder">1</container>
+                    <container id="cid439016" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439016" type="Object">20</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -643,8 +609,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439017" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439017" type="Folder">1</container>
+                    <container id="cid439017" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439017" type="Object">21</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -660,8 +625,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439018" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439018" type="Folder">1</container>
+                    <container id="cid439018" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439018" type="Object">22</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -677,8 +641,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439019" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439019" type="Folder">1</container>
+                    <container id="cid439019" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439019" type="Object">23</container>
                 </did>
                 <odd id="ref70">
@@ -692,8 +655,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439020" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439020" type="Folder">1</container>
+                    <container id="cid439020" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439020" type="Object">24</container>
                     <unitdate>undated</unitdate>
                 </did>
@@ -709,8 +671,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439021" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439021" type="Folder">1</container>
+                    <container id="cid439021" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439021" type="Object">25</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -726,8 +687,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441023" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441023" type="Folder">2</container>
+                    <container id="cid441023" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441023" type="Object">16-18</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -743,8 +703,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid439022" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid439022" type="Folder">1</container>
+                    <container id="cid439022" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid439022" type="Object">26</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -760,8 +719,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441001" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441001" type="Folder">2</container>
+                    <container id="cid441001" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441001" type="Object">19</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -777,8 +735,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441002" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441002" type="Folder">1</container>
+                    <container id="cid441002" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441002" type="Object">27</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -794,8 +751,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441003" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441003" type="Folder">1</container>
+                    <container id="cid441003" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441003" type="Object">28</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -811,8 +767,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441004" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441004" type="Folder">1</container>
+                    <container id="cid441004" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441004" type="Object">29</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -828,8 +783,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441005" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441005" type="Folder">1</container>
+                    <container id="cid441005" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441005" type="Object">30</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -845,8 +799,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441006" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441006" type="Folder">1</container>
+                    <container id="cid441006" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441006" type="Object">31</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -862,8 +815,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441007" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441007" type="Folder">1</container>
+                    <container id="cid441007" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441007" type="Object">32</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -879,8 +831,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441009" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441009" type="Folder">1</container>
+                    <container id="cid441009" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441009" type="Object">33</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -896,8 +847,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441024" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441024" type="Folder">2</container>
+                    <container id="cid441024" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441024" type="Object">20</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -913,8 +863,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441027" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441027" type="Folder">2</container>
+                    <container id="cid441027" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441027" type="Object">21</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -930,8 +879,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441025" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441025" type="Folder">2</container>
+                    <container id="cid441025" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441025" type="Object">22</container>
                     <unitdate>1984</unitdate>
                 </did>
@@ -946,8 +894,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441008" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441008" type="Folder">1</container>
+                    <container id="cid441008" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441008" type="Object">34</container>
                     <unitdate>1985 April 26</unitdate>
                 </did>
@@ -962,8 +909,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441026" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441026" type="Folder">2</container>
+                    <container id="cid441026" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441026" type="Object">23</container>
                     <unitdate>1986</unitdate>
                 </did>
@@ -978,8 +924,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441028" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441028" type="Folder">2</container>
+                    <container id="cid441028" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441028" type="Object">24</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -995,8 +940,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441029" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441029" type="Folder">2</container>
+                    <container id="cid441029" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441029" type="Object">25</container>
                     <unitdate>1979</unitdate>
                 </did>
@@ -1012,8 +956,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441030" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441030" type="Folder">2</container>
+                    <container id="cid441030" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441030" type="Object">26</container>
                     <unitdate>1981</unitdate>
                 </did>
@@ -1029,8 +972,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441010" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441010" type="Folder">1</container>
+                    <container id="cid441010" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441010" type="Object">35</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -1046,8 +988,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441031" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441031" type="Folder">2</container>
+                    <container id="cid441031" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441031" type="Object">27</container>
                     <unitdate>1978</unitdate>
                 </did>
@@ -1063,8 +1004,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441032" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441032" type="Folder">2</container>
+                    <container id="cid441032" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441032" type="Object">28</container>
                     <unitdate>1983</unitdate>
                 </did>
@@ -1080,8 +1020,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441033" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441033" type="Folder">2</container>
+                    <container id="cid441033" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
                     <container parent="cid441033" type="Object">29</container>
                     <unitdate>1982</unitdate>
                 </did>
@@ -1097,8 +1036,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid441011" type="Drawer" label="Graphic materials">FF.1.7</container>
-                    <container parent="cid441011" type="Folder">1</container>
+                    <container id="cid441011" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
                     <container parent="cid441011" type="Object">36</container>
                     <unitdate>1983</unitdate>
                 </did>

@@ -13,7 +13,6 @@
             <publicationstmt>
                 <publisher>Library and Archives</publisher>
                 <address>
-                    <addressline>Library and Archives</addressline>
                     <addressline>2809 Woodland Ave</addressline>
                     <addressline>Cleveland, OH, 44115</addressline>
                     <addressline>216-515-1956</addressline>
@@ -24,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2011-12-01T22:11-0500</date>
+                <date>2012-01-11T08:49-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -32,7 +31,7 @@
     </eadheader>
     <archdesc level="collection">
         <did>
-            <unittitle>[CLOSED] Alan Freed Collection</unittitle>
+            <unittitle>Alan Freed Collection</unittitle>
             <unitid>ARC.0006</unitid>
             <repository>
                 <corpname>Library and Archives</corpname>
@@ -42,16 +41,16 @@
             </langmaterial>
             <physdesc>
                 <extent>16.01 Linear feet</extent>
-                <extent>(1 records carton, 1 Hollinger box, 3 half-Hollinger boxes, 51 oversize items)</extent>
+                <extent>(1 records carton, 1 Hollinger box, 3 half Hollinger boxes, 1 shared flat file drawer, tube)</extent>
             </physdesc>
             <unitdate normal="1954/1965" type="bulk">Bulk, 1954-1965</unitdate>
-            <unitdate normal="1921/1992" type="inclusive">1921-1992</unitdate>
+            <unitdate normal="1921/1999" type="inclusive">1921-1999, undated</unitdate>
             <abstract id="ref743" label="Collection Overview">The Alan Freed Collection spans the years 1918 to 1992, with the bulk of the collection dating between 1954 and 1964. The collection consists primarily of financial and court documents relating to the commercial bribery case brought by the City of New York against Alan Freed, known as "Payola." These files contain accounting records, Assistant District Attorney notes, cancelled checks, contracts, correspondence, indictments, invoices, memoranda, music clearance sheets, reports, State of New York Grand Jury exhibits, subpoenas, witness statements and summaries, as well as many duplicate and annotated photocopies of documents. Other materials in the collection relate to Freed’s renowned career as a radio, television, and film personality and include lobby cards, magazine articles, movie posters, programs, an audio and video recording, sheet music, and yearbooks. The collection as a whole illustrates Freed's impact on the early history of rock and roll. Seen in a broader context, the collection provides insights to the recording and broadcasting industries in the 1950s and early 1960s, the resulting “Payola” scandal, and its long-lasting effects.</abstract>
-            <langmaterial id="ref1007" label="Language of Materials">English is the primary language of these materials. There is some material in languages other than English. For those items, the language of the materials has been noted. Additional languages include: French, Spanish.</langmaterial>
+            <langmaterial id="ref1200" label="Language of Materials">Collection is primarily in English; materials in French and Spanish are indicated at the item level.</langmaterial>
         </did>
         <accessrestrict id="ref748">
             <head>Access Restrictions</head>
-            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Some of the materials in the collection are confidential and, therefore, are RESTRICTED. Redacted access copies of the confidential documents are available in the collection. Some of the audiovisual materials in the collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Series VII: 2011 Accruals is CLOSED until a signed gift agreement can be secured from the donor. Some of the materials in the collection are confidential and, therefore, are RESTRICTED. Redacted access copies of the confidential documents are available in the collection. The condition of some of the audiovisual materials in the collection has not yet been determined for playback purposes. Some of the audiovisual materials in the collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
         </accessrestrict>
         <userestrict id="ref749">
             <head>Use Restrictions</head>
@@ -63,18 +62,14 @@
         </custodhist>
         <processinfo id="ref745">
             <head>Processing Information</head>
-            <p>Processed by James A. Kohler, Project Archivist. Completed February 2, 2011. Descriptive sources and standards used to create this inventory: DACS and local Style Guide. Accrual added and finding aid revised by James A. Kohler, Project Archivist. Completed September 7, 2011.</p>
+            <p>Processed by James A. Kohler, Project Archivist. Completed February 2, 2011. Descriptive sources and standards used to create this inventory: DACS and local processing manual. Accrual added and finding aid revised by James A. Kohler, Project Archivist. Completed September 7, 2011.</p>
         </processinfo>
-        <relatedmaterial id="ref1091">
-            <head>Related Archival Materials</head>
-            <p>Related materials providing content on Alan Freed may be found in the following collections in this repository: Terry Stewart Collection.</p>
-        </relatedmaterial>
         <bioghist id="ref744">
             <head>Biographical Note</head>
             <chronlist>
                 <chronitem>
                     <date>1921 December 15</date>
-                    <event>Albert James Freed is born in Johnston, Pennsylvania.</event>
+                    <event>Albert James Freed is born in Johnston, Pa.</event>
                 </chronitem>
                 <chronitem>
                     <date>1933</date>
@@ -82,7 +77,7 @@
                 </chronitem>
                 <chronitem>
                     <date>1942</date>
-                    <event>Freed is hired for his first broadcasting job by WKST in New Castle, Pennsylvania, as host of a nightly classical music program.</event>
+                    <event>Freed is hired for his first broadcasting job by WKST in New Castle, Pa., as host of a nightly classical music program.</event>
                 </chronitem>
                 <chronitem>
                     <date>1943</date>
@@ -106,7 +101,7 @@
                 </chronitem>
                 <chronitem>
                     <date>1954 September</date>
-                    <event>Hired as a disc jockey by WINS in New York, New York.</event>
+                    <event>Hired as a disc jockey by WINS in New York, N.Y.</event>
                 </chronitem>
                 <chronitem>
                     <date>1955</date>
@@ -114,12 +109,12 @@
                 </chronitem>
                 <chronitem>
                     <date>1956</date>
-                    <event>Stars in
+                    <event>Stars in 
                         <title render="italic">Rock Around The Rock</title> as himself, the first of five film appearances.</event>
                 </chronitem>
                 <chronitem>
                     <date>1957</date>
-                    <event>Hired by ABC-TV to emcee a rock and roll dance show
+                    <event>Hired by ABC-TV to emcee a rock and roll dance show 
                         <title render="italic">Alan Freed’s Big Beat</title>; show is canceled months later after controversy over performer Frankie Lymon dancing with a white teenager.</event>
                 </chronitem>
                 <chronitem>
@@ -127,7 +122,7 @@
                     <eventgrp>
                         <event>Arrested and charged with inciting a riot at a Boston, Massachusetts concert he promoted; the charges are dropped.</event>
                         <event>Fired by WINS.</event>
-                        <event>Hired by WABC in New York, New York.</event>
+                        <event>Hired by WABC in New York, N.Y.</event>
                     </eventgrp>
                 </chronitem>
                 <chronitem>
@@ -135,7 +130,7 @@
                     <event>Fired by WABC.</event>
                 </chronitem>
                 <chronitem>
-                    <date>1960, February 26</date>
+                    <date>1960 February 26</date>
                     <event>Indicted for commercial bribery in the state of New York.</event>
                 </chronitem>
                 <chronitem>
@@ -148,7 +143,7 @@
                 </chronitem>
                 <chronitem>
                     <date>1965 January 20</date>
-                    <event>Dies of complications from alcoholism in Palm Springs, California.</event>
+                    <event>Dies of complications from alcoholism in Palm Springs, Ca.</event>
                 </chronitem>
                 <chronitem>
                     <date>1986 January 23</date>
@@ -168,17 +163,17 @@
             <p>Freed never again enjoyed the success or influence he had in the 1950s, moving from radio station to radio station in California and Florida, and eventually died of kidney and liver failure from alcoholism. Regardless, his reputation as a pioneer in the history of radio, and rock and roll in particular, remains intact. He was inducted into the Rock and Roll Hall of Fame as part of its inaugural class in 1986 and into the Radio Hall of Fame in 1988. Finally in 2002, as part of an exhibit dedicated to the “Architects of Rock and Roll,” Alan Freed’s ashes were interred at the Rock and Roll Hall of Fame and Museum in Cleveland, Ohio.</p>
             <list type="ordered">
                 <head>Sources</head>
-                <item>"Alan Freed Biography."
+                <item>"Alan Freed Biography." 
                     <title render="italic">Rock and Roll Hall of Fame and Museum</title>. Accessed June 1, 2010. http://rockhall.com/inductees/alan-freed/bio/.</item>
                 <item>Fong-Torres, Ben. “Alan Freed Biography.” Accessed June 1, 2010. http://www.alanfreed.com/biography.html</item>
-                <item>“Freed, Alan.”
+                <item>“Freed, Alan.” 
                     <title render="italic">eNotes</title>. Accessed June 21, 2010. http://www.enotes.com/contemporary-musicians/freed-alan-biography.</item>
             </list>
             <list type="ordered">
                 <head>Recommended Resources</head>
-                <item>Freed, Judith Fisher.
+                <item>Freed, Judith Fisher. 
                     <title render="italic">Alan Freed</title>. Accessed October 10, 2011. http://www.alanfreed.com.</item>
-                <item>Jackson, John A.
+                <item>Jackson, John A. 
                     <title render="italic">Big Beat Heat: Alan Freed and the Early Years of Rock &amp; Roll</title>. New York: Schirmer Books, 1991.</item>
             </list>
         </bioghist>
@@ -188,12 +183,16 @@
         </prefercite>
         <accruals id="ref1161">
             <head>Accruals note</head>
-            <p>Where possible, accruals were interfiled with preexisting collection materials; otherwise, accruals can be found at the end of Series V: Personal Papers.</p>
+            <p>Accruals to the collection are located in Series VII.</p>
         </accruals>
         <separatedmaterial id="ref1198">
             <head>Separated Materials</head>
             <p>Commercial recordings and publications have been transferred to the library collection. Please search for the "Alan Freed Collection" in the library catalog for a list of donated titles.</p>
         </separatedmaterial>
+        <relatedmaterial id="ref1202">
+            <head>Related Archival Materials</head>
+            <p>Related materials providing content on Alan Freed may be found in the following collections in this repository: Terry Stewart Collection. Related materials may also be found in other collections that constitute a part of the Northeast Ohio Popular Music Archives.</p>
+        </relatedmaterial>
         <controlaccess>
             <persname rules="aacr" role="Performer (prf)">Berry, Chuck</persname>
             <persname rules="aacr" role="Performer (prf)">Clanton, Jimmy</persname>
@@ -202,13 +201,13 @@
             <persname rules="dacs" source="local" role="Donor (dnr)">Freed, Judith Fisher</persname>
             <persname rules="aacr" role="Musician (mus)">Haley, Bill, 1925-1981</persname>
             <corpname rules="aacr" source="local">Northeast Ohio Popular Music Archives</corpname>
-            <genreform source="lcsh">Correspondence.</genreform>
+            <genreform source="lcsh">Correspondence</genreform>
             <subject source="lcsh">Disc jockeys</subject>
             <genreform source="lcsh">Film posters</genreform>
             <subject source="lcsh">Music trade--United States.</subject>
-            <genreform source="lcsh">Periodicals.</genreform>
+            <genreform source="lcsh">Periodicals</genreform>
             <subject source="lcsh">Radio personalities</subject>
-            <subject source="lcsh">Rock concerts.</subject>
+            <subject source="lcsh">Rock concerts</subject>
             <subject source="lcsh">Rock music--To 1961.</subject>
             <subject source="lcsh">Rock music--United States.</subject>
             <subject source="lcsh">Sound recording industry--United States--Corrupt practices.</subject>
@@ -232,7 +231,7 @@
                 </scopecontent>
                 <c02 id="ref7" level="subseries">
                     <did>
-                        <unittitle>Subseries I: Action Records</unittitle>
+                        <unittitle>Subseries 1: Action Records</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -304,7 +303,7 @@
                 </c02>
                 <c02 id="ref15" level="subseries">
                     <did>
-                        <unittitle>Subseries II: Alpha Distributing Company (ADC)</unittitle>
+                        <unittitle>Subseries 2: Alpha Distributing Company (ADC)</unittitle>
                         <unitdate>1956-1957, undated</unitdate>
                     </did>
                     <scopecontent id="ref1068">
@@ -367,7 +366,7 @@
                 </c02>
                 <c02 id="ref21" level="subseries">
                     <did>
-                        <unittitle>Subseries III: American Broadcasting Company (ABC)</unittitle>
+                        <unittitle>Subseries 3: American Broadcasting Company (ABC)</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -375,7 +374,7 @@
                     </did>
                     <scopecontent id="ref1065">
                         <head>Scope and Contents</head>
-                        <p>Subseries III: ABC includes files related to accounting, advertising, contracts with local facilities, correspondence, and music clearance sheets from the
+                        <p>Subseries III: ABC includes files related to accounting, advertising, contracts with local facilities, correspondence, and music clearance sheets from the 
                             <title render="italic">Alan Freed Show</title>. Files are in alphabetical order by title. Items in the files are arranged chronologically. Some of the items in this subseries are photocopies of original documents; some are annotated.</p>
                     </scopecontent>
                     <c03 id="ref22" level="file">
@@ -663,18 +662,6 @@
                             <unittitle>Advertising</unittitle>
                             <unitdate>1957-1958</unitdate>
                         </did>
-                        <c04 id="ref1109" level="item">
-                            <did>
-                                <unittitle>ABC Advertising and Promotion Department audience promotion presskit with photographs</unittitle>
-                                <langmaterial>
-                                    <language langcode="eng"/>
-                                </langmaterial>
-                                <container id="cid557001" type="Box" label="Mixed materials">1</container>
-                                <container parent="cid557001" type="Folder">4</container>
-                                <container parent="cid557001" type="Object">1</container>
-                                <unitdate>1957 May 4</unitdate>
-                            </did>
-                        </c04>
                         <c04 id="ref47" level="item">
                             <did>
                                 <unittitle>Rate Card #19</unittitle>
@@ -683,7 +670,7 @@
                                 </langmaterial>
                                 <container id="cid215033" type="Box" label="Text">1</container>
                                 <container parent="cid215033" type="Folder">4</container>
-                                <container parent="cid215033" type="Object">2</container>
+                                <container parent="cid215033" type="Object">1</container>
                                 <unitdate>1958 August 1</unitdate>
                             </did>
                         </c04>
@@ -803,7 +790,7 @@
                         </c04>
                         <c04 id="ref58" level="item">
                             <did>
-                                <unittitle>Interdepartmental correspondence - subject:
+                                <unittitle>Interdepartmental correspondence - subject: 
                                     <title render="italic">The Alan Freed Show</title></unittitle>
                                 <langmaterial>
                                     <language langcode="eng"/>
@@ -924,7 +911,6 @@
                                 <container parent="cid215051" type="Folder">6</container>
                                 <container parent="cid215051" type="Object">22-24</container>
                                 <unitdate>1959 November 21</unitdate>
-                                <physloc audience="internal" id="ref1166" label="Location note">Object 22 on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                             </did>
                             <odd id="ref988">
                                 <head>Museum Accession Number</head>
@@ -974,7 +960,7 @@
                     </c03>
                     <c03 id="ref71" level="file">
                         <did>
-                            <unittitle>Music clearance sheets for the
+                            <unittitle>Music clearance sheets for the 
                                 <title render="italic">Alan Freed Show</title></unittitle>
                             <unitdate>1959 November</unitdate>
                         </did>
@@ -1108,7 +1094,6 @@
                                 <container parent="cid215064" type="Folder">7</container>
                                 <container parent="cid215064" type="Object">11</container>
                                 <unitdate>1959 November 16</unitdate>
-                                <physloc audience="internal" id="ref1167" label="Location note">Pages 1-3 on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                             </did>
                             <separatedmaterial id="ref976">
                                 <head>Separated Materials</head>
@@ -1159,7 +1144,7 @@
                 </c02>
                 <c02 id="ref1060" level="subseries">
                     <did>
-                        <unittitle>Subseries IV: American Guild of Variety Artists</unittitle>
+                        <unittitle>Subseries 4: American Guild of Variety Artists</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -1188,7 +1173,7 @@
                 </c02>
                 <c02 id="ref89" level="subseries">
                     <did>
-                        <unittitle>Subseries V: Barracuda Music, Incorporated</unittitle>
+                        <unittitle>Subseries 5: Barracuda Music, Inc.</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -1258,7 +1243,7 @@
                 </c02>
                 <c02 id="ref96" level="subseries">
                     <did>
-                        <unittitle>Subseries VI: Bonaire Music, Incorporated</unittitle>
+                        <unittitle>Subseries 6: Bonaire Music, Inc.</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -1376,7 +1361,7 @@
                 </c02>
                 <c02 id="ref106" level="subseries">
                     <did>
-                        <unittitle>Subseries VII: John Brantley</unittitle>
+                        <unittitle>Subseries 7: John Brantley</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -1626,7 +1611,7 @@
                 </c02>
                 <c02 id="ref127" level="subseries">
                     <did>
-                        <unittitle>Subseries VIII: Broadcast Music, Incorporated (BMI)</unittitle>
+                        <unittitle>Subseries 8: Broadcast Music, Inc. (BMI)</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -1765,7 +1750,7 @@
                 </c02>
                 <c02 id="ref136" level="file">
                     <did>
-                        <unittitle>Subseries IX: Cosnat Distributing Corporation</unittitle>
+                        <unittitle>Subseries 9: Cosnat Distributing Corporation</unittitle>
                         <unitdate>1959 October, 1960 February</unitdate>
                     </did>
                     <scopecontent id="ref1075">
@@ -1799,7 +1784,7 @@
                 </c02>
                 <c02 id="ref139" level="subseries">
                     <did>
-                        <unittitle>Subseries X: Fabian Theatres Corporation – Brooklyn Fox Theatre</unittitle>
+                        <unittitle>Subseries 10: Fabian Theatres Corporation – Brooklyn Fox Theatre</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -2979,7 +2964,7 @@
                 </c02>
                 <c02 id="ref206" level="subseries">
                     <did>
-                        <unittitle>Subseries XII: Alan Freed [RESTRICTED]</unittitle>
+                        <unittitle>Subseries 11: Alan Freed [RESTRICTED]</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -3301,7 +3286,7 @@
                 </c02>
                 <c02 id="ref197" level="subseries">
                     <did>
-                        <unittitle>Subseries XI: Firm Amusement Corporation</unittitle>
+                        <unittitle>Subseries 12: Firm Amusement Corporation</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -3404,7 +3389,7 @@
                 </c02>
                 <c02 id="ref232" level="subseries">
                     <did>
-                        <unittitle>Subseries XIII: Gotham Broadcasting Corporation/WINS</unittitle>
+                        <unittitle>Subseries 13: Gotham Broadcasting Corporation / WINS</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -3777,7 +3762,6 @@
                                 <container parent="cid221040" type="Folder">25</container>
                                 <container parent="cid221040" type="Object">7-9</container>
                                 <unitdate>1954 August 10</unitdate>
-                                <physloc audience="internal" id="ref1169" label="Location note">Object 8 on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                             </did>
                             <odd id="ref999">
                                 <head>Museum Accession Number</head>
@@ -4065,7 +4049,7 @@
                         </did>
                         <c04 id="ref282" level="item">
                             <did>
-                                <unittitle>Jablons, Josephine, “'Moondog,' Blues, Jazz Disk Ace Gets N.Y. Show,”
+                                <unittitle>Jablons, Josephine, “'Moondog,' Blues, Jazz Disk Ace Gets N.Y. Show,” 
                                     <title render="italic">The New York Herald Tribune</title>.</unittitle>
                                 <langmaterial>
                                     <language langcode="eng"/>
@@ -4101,7 +4085,7 @@
                 </c02>
                 <c02 id="ref285" level="subseries">
                     <did>
-                        <unittitle>Subseries XIV: Stamford Productions</unittitle>
+                        <unittitle>Subseries 14: Stamford Productions</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -4531,7 +4515,7 @@
                 </c02>
                 <c02 id="ref321" level="subseries">
                     <did>
-                        <unittitle>Subseries XV: Storz Broadcasting Company</unittitle>
+                        <unittitle>Subseries 15: Storz Broadcasting Company</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -4557,7 +4541,7 @@
                 </c02>
                 <c02 id="ref324" level="subseries">
                     <did>
-                        <unittitle>Subseries XVI: Superior Records Sales Company, Incorporated</unittitle>
+                        <unittitle>Subseries 16: Superior Records Sales Company, Inc.</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -4711,7 +4695,7 @@
                 </c02>
                 <c02 id="ref337" level="subseries">
                     <did>
-                        <unittitle>Subseries XVII: United Artists Records, Incorporated</unittitle>
+                        <unittitle>Subseries 17: United Artists Records, Inc.</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -4934,7 +4918,7 @@
                 </c02>
                 <c02 id="ref357" level="subseries">
                     <did>
-                        <unittitle>Subseries XVIII: WNEW-TV</unittitle>
+                        <unittitle>Subseries 18: WNEW-TV</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -5618,7 +5602,7 @@
                     </c03>
                     <c03 id="ref410" level="file">
                         <did>
-                            <unittitle>Profit/loss statements -
+                            <unittitle>Profit/loss statements - 
                                 <title render="italic">Alan Freed Show</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
@@ -5949,65 +5933,9 @@
                         </c04>
                     </c03>
                 </c02>
-                <c02 id="ref1104" level="subseries">
-                    <did>
-                        <unittitle>Subseries XIX: LCL Productions, Incorporated</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>1955</unitdate>
-                    </did>
-                    <c03 id="ref1158" level="file">
-                        <did>
-                            <unittitle>Correspondence</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <unitdate>1955 June 6</unitdate>
-                        </did>
-                        <c04 id="ref1105" level="item">
-                            <did>
-                                <unittitle>From Lew Platt to Glenn</unittitle>
-                                <langmaterial>
-                                    <language langcode="eng"/>
-                                </langmaterial>
-                                <container id="cid563007" type="Box" label="Text">3</container>
-                                <container parent="cid563007" type="Folder">7</container>
-                                <container parent="cid563007" type="Object">1</container>
-                            </did>
-                        </c04>
-                    </c03>
-                </c02>
-                <c02 id="ref1100" level="subseries">
-                    <did>
-                        <unittitle>Subseries XX: Paramount Pictures Corporation</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>1958</unitdate>
-                    </did>
-                    <c03 id="ref1159" level="file">
-                        <did>
-                            <unittitle>Accounting</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <unitdate>1958 June 28</unitdate>
-                        </did>
-                        <c04 id="ref1103" level="item">
-                            <did>
-                                <unittitle>
-                                    <title render="italic">Mister Rock and Roll</title> cumulative statement of account with Aurora Productions, Incorporated</unittitle>
-                                <container id="cid563006" type="Box" label="Text">3</container>
-                                <container parent="cid563006" type="Folder">8</container>
-                                <container parent="cid563006" type="Object">1</container>
-                            </did>
-                        </c04>
-                    </c03>
-                </c02>
                 <c02 id="ref1154" level="file">
                     <did>
-                        <unittitle>Subseries XXI: Payees</unittitle>
+                        <unittitle>Subseries 21: Payees</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
@@ -6027,8 +5955,8 @@
                                 <langmaterial>
                                     <language langcode="eng"/>
                                 </langmaterial>
-                                <container id="cid563008" type="Box" label="Text">3</container>
-                                <container parent="cid563008" type="Folder">9</container>
+                                <container id="cid563008" type="Box" label="Text">2</container>
+                                <container parent="cid563008" type="Folder">10</container>
                                 <container parent="cid563008" type="Object">1</container>
                                 <unitdate>1959 December 4</unitdate>
                             </did>
@@ -7705,12 +7633,7 @@
                             <container parent="cid233078" type="Folder">48</container>
                             <container parent="cid233078" type="Object">2-3</container>
                             <unitdate>1959 November 27</unitdate>
-                            <physloc audience="internal" id="ref1171" label="Location note">Object 1 on exhibit. Building: Museum Floor: 2 Room: Leo M. Mintz Gallery Coordinates: Architects of Rock and Roll</physloc>
                         </did>
-                        <odd audience="internal" id="ref990">
-                            <head>Museum Accession Number</head>
-                            <p>A2010.1.7</p>
-                        </odd>
                         <separatedmaterial id="ref1170">
                             <head>Separated Materials</head>
                             <p>Object 1 on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
@@ -8222,8 +8145,8 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid564001" type="Box" label="Text">3</container>
-                            <container parent="cid564001" type="Folder">10</container>
+                            <container id="cid564001" type="Box" label="Text">2</container>
+                            <container parent="cid564001" type="Folder">11</container>
                             <container parent="cid564001" type="Object">1</container>
                         </did>
                     </c03>
@@ -8255,8 +8178,8 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid563004" type="Box" label="Text">3</container>
-                            <container parent="cid563004" type="Folder">11</container>
+                            <container id="cid563004" type="Box" label="Text">1</container>
+                            <container parent="cid563004" type="Folder">54</container>
                             <container parent="cid563004" type="Object">1</container>
                         </did>
                     </c03>
@@ -8266,8 +8189,8 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid563005" type="Box" label="Text">3</container>
-                            <container parent="cid563005" type="Folder">11</container>
+                            <container id="cid563005" type="Box" label="Text">1</container>
+                            <container parent="cid563005" type="Folder">54</container>
                             <container parent="cid563005" type="Object">2</container>
                         </did>
                     </c03>
@@ -8282,67 +8205,41 @@
                     </did>
                     <c03 id="ref759" level="item">
                         <did>
-                            <unittitle>Freed, Alan. "Alan Freed Says: I Told You So..."
+                            <unittitle>Freed, Alan. "Alan Freed Says: I Told You So..." 
                                 <title render="italic">Down Beat</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233118" type="Box" label="Text">1</container>
-                            <container parent="cid233118" type="Folder">54</container>
-                            <container parent="cid233118" type="Object">1</container>
+                            <container id="cid746011" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746011" type="Folder">55</container>
+                            <container parent="cid746011" type="Object">1</container>
                             <unitdate>1956 September 19</unitdate>
-                        </did>
-                    </c03>
-                    <c03 id="ref1112" level="item">
-                        <did>
-                            <unittitle>
-                                <title render="italic">Teenage Rock and Roll Review</title></unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid557002" type="Box" label="Graphic materials">1</container>
-                            <container parent="cid557002" type="Folder">54</container>
-                            <container parent="cid557002" type="Object">2</container>
-                            <unitdate>1956 October</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref760" level="item">
                         <did>
                             <unittitle>Henry, Mark. "
-                                <title render="italic">Rock, Rock, Rock</title>."
+                                <title render="italic">Rock, Rock, Rock</title>." 
                                 <title render="italic">Film Review</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233119" type="Box" label="Text">1</container>
-                            <container parent="cid233119" type="Folder">54</container>
-                            <container parent="cid233119" type="Object">3</container>
+                            <container id="cid746012" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746012" type="Folder">55</container>
+                            <container parent="cid746012" type="Object">2</container>
                             <unitdate>1957 April</unitdate>
-                        </did>
-                    </c03>
-                    <c03 id="ref1114" level="item">
-                        <did>
-                            <unittitle>"Rock 'N' Roll -- Music."
-                                <title render="italic">TV Guide</title> [Cleveland Edition]</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid557003" type="Box" label="Graphic materials">1</container>
-                            <container parent="cid557003" type="Folder">54</container>
-                            <container parent="cid557003" type="Object">4</container>
-                            <unitdate>1957 May 4-10</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref761" level="item">
                         <did>
-                            <unittitle>Irwin, Theodore. "Rock 'n Roll 'n Alan Freed."
+                            <unittitle>Irwin, Theodore. "Rock 'n Roll 'n Alan Freed." 
                                 <title render="italic">Pageant</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233124" type="Box" label="Text">1</container>
-                            <container parent="cid233124" type="Folder">54</container>
-                            <container parent="cid233124" type="Object">5-6</container>
+                            <container id="cid746013" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746013" type="Folder">55</container>
+                            <container parent="cid746013" type="Object">3</container>
                             <unitdate>1957 July</unitdate>
                         </did>
                     </c03>
@@ -8353,9 +8250,9 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233120" type="Box" label="Text">1</container>
-                            <container parent="cid233120" type="Folder">54</container>
-                            <container parent="cid233120" type="Object">7</container>
+                            <container id="cid746014" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746014" type="Folder">55</container>
+                            <container parent="cid746014" type="Object">4</container>
                             <unitdate>1957 August</unitdate>
                         </did>
                     </c03>
@@ -8375,62 +8272,58 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233121" type="Box" label="Text">1</container>
-                            <container parent="cid233121" type="Folder">55</container>
-                            <container parent="cid233121" type="Object">1</container>
+                            <container id="cid746008" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746008" type="Folder">56</container>
+                            <container parent="cid746008" type="Object">1</container>
                             <unitdate>1958 January</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref613" level="item">
                         <did>
-                            <unittitle>“The Case For and Against Rock ‘n’ Roll.”
+                            <unittitle>“The Case For and Against Rock ‘n’ Roll.” 
                                 <title render="italic">New York Herald Tribune TV and Radio Magazine</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233122" type="Box" label="Text">1</container>
-                            <container parent="cid233122" type="Folder">55</container>
-                            <container parent="cid233122" type="Object">2</container>
+                            <container id="cid746009" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746009" type="Folder">56</container>
+                            <container parent="cid746009" type="Object">2</container>
                             <unitdate>1958 August 10-16</unitdate>
                         </did>
                     </c03>
-                    <c03 id="ref614" level="item">
+                    <c03 id="ref614" level="fonds">
                         <did>
-                            <unittitle>Behrman, Anita. “What Alan Freed Really Thinks About Rock ‘n’ Roll.”
+                            <unittitle>Behrman, Anita. “What Alan Freed Really Thinks About Rock ‘n’ Roll.” 
                                 <title render="italic">People Today</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233123" type="Box" label="Text">1</container>
-                            <container parent="cid233123" type="Folder">55</container>
-                            <container parent="cid233123" type="Object">3-4</container>
+                            <container id="cid746010" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746010" type="Folder">56</container>
+                            <container parent="cid746010" type="Object">3</container>
                             <unitdate>1958 October</unitdate>
                         </did>
-                        <odd audience="internal" id="ref991">
-                            <head>Museum Accession Number</head>
-                            <p>A2010.1.8</p>
-                        </odd>
                     </c03>
                     <c03 id="ref764" level="item">
                         <did>
-                            <unittitle>Bolstad, Helen. "The Big Sound For 1959."
+                            <unittitle>Bolstad, Helen. "The Big Sound For 1959." 
                                 <title render="italic">TV Radio Mirror</title></unittitle>
-                            <container id="cid233126" type="Box" label="Text">1</container>
-                            <container parent="cid233126" type="Folder">55</container>
-                            <container parent="cid233126" type="Object">5-6</container>
+                            <container id="cid746016" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746016" type="Folder">56</container>
+                            <container parent="cid746016" type="Object">4</container>
                             <unitdate>1958 November</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref763" level="item">
                         <did>
-                            <unittitle>"Daddy of the Big Beat: Alan Freed."
+                            <unittitle>"Daddy of the Big Beat: Alan Freed." 
                                 <title render="italic">Hit Parader</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233125" type="Box" label="Text">1</container>
-                            <container parent="cid233125" type="Folder">55</container>
-                            <container parent="cid233125" type="Object">7-8</container>
+                            <container id="cid746015" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746015" type="Folder">56</container>
+                            <container parent="cid746015" type="Object">5</container>
                             <unitdate>1958 December</unitdate>
                         </did>
                     </c03>
@@ -8441,21 +8334,8 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <unitdate>1959-1960, 1962</unitdate>
+                        <unitdate>1960, 1962</unitdate>
                     </did>
-                    <c03 id="ref1115" level="item">
-                        <did>
-                            <unittitle>"Show Business: Disc Jockeys: "Now Don't Cry."
-                                <title render="italic">Time</title></unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid602006" type="Box" label="Text">1</container>
-                            <container parent="cid602006" type="Folder">56</container>
-                            <container parent="cid602006" type="Object">1</container>
-                            <unitdate>1959 December 7</unitdate>
-                        </did>
-                    </c03>
                     <c03 id="ref615" level="item">
                         <did>
                             <unittitle>
@@ -8463,22 +8343,22 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233127" type="Box" label="Text">1</container>
-                            <container parent="cid233127" type="Folder">56</container>
-                            <container parent="cid233127" type="Object">2</container>
+                            <container id="cid746021" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746021" type="Folder">57</container>
+                            <container parent="cid746021" type="Object">1</container>
                             <unitdate>1960 June 23</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref765" level="item">
                         <did>
-                            <unittitle>"Alan Freed's Moon Dog Ball."
+                            <unittitle>"Alan Freed's Moon Dog Ball." 
                                 <title render="italic">The Cleveland Press TV Magazine</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233128" type="Box" label="Text">1</container>
-                            <container parent="cid233128" type="Folder">56</container>
-                            <container parent="cid233128" type="Object">3</container>
+                            <container id="cid746022" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746022" type="Folder">57</container>
+                            <container parent="cid746022" type="Object">2</container>
                             <unitdate>1963 March 23-30</unitdate>
                         </did>
                     </c03>
@@ -8498,9 +8378,9 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233129" type="Box" label="Text">1</container>
-                            <container parent="cid233129" type="Folder">57</container>
-                            <container parent="cid233129" type="Object">1</container>
+                            <container id="cid746023" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746023" type="Folder">58</container>
+                            <container parent="cid746023" type="Object">1</container>
                             <unitdate>1988</unitdate>
                         </did>
                     </c03>
@@ -8511,9 +8391,9 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233130" type="Box" label="Text">1</container>
-                            <container parent="cid233130" type="Folder">57</container>
-                            <container parent="cid233130" type="Object">2</container>
+                            <container id="cid746024" type="Box" label="Graphic materials">1</container>
+                            <container parent="cid746024" type="Folder">58</container>
+                            <container parent="cid746024" type="Object">2</container>
                             <unitdate>1992</unitdate>
                         </did>
                     </c03>
@@ -8533,7 +8413,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233131" type="Box" label="Text">1</container>
-                            <container parent="cid233131" type="Folder">58</container>
+                            <container parent="cid233131" type="Folder">59</container>
                             <container parent="cid233131" type="Object">1</container>
                             <unitdate>1954</unitdate>
                         </did>
@@ -8545,7 +8425,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233132" type="Box" label="Text">1</container>
-                            <container parent="cid233132" type="Folder">58</container>
+                            <container parent="cid233132" type="Folder">59</container>
                             <container parent="cid233132" type="Object">2</container>
                             <unitdate>circa 1954</unitdate>
                         </did>
@@ -8557,14 +8437,10 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233133" type="Box" label="Text">1</container>
-                            <container parent="cid233133" type="Folder">58</container>
+                            <container parent="cid233133" type="Folder">59</container>
                             <container parent="cid233133" type="Object">3</container>
                             <unitdate>1955</unitdate>
                         </did>
-                        <odd audience="internal" id="ref992">
-                            <head>Museum Accession Number</head>
-                            <p>A2010.1.14</p>
-                        </odd>
                     </c03>
                     <c03 id="ref625" level="item">
                         <did>
@@ -8573,7 +8449,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233134" type="Box" label="Text">1</container>
-                            <container parent="cid233134" type="Folder">58</container>
+                            <container parent="cid233134" type="Folder">59</container>
                             <container parent="cid233134" type="Object">4</container>
                             <unitdate>1955</unitdate>
                         </did>
@@ -8585,7 +8461,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233135" type="Box" label="Text">1</container>
-                            <container parent="cid233135" type="Folder">58</container>
+                            <container parent="cid233135" type="Folder">59</container>
                             <container parent="cid233135" type="Object">5</container>
                             <unitdate>1955</unitdate>
                         </did>
@@ -8597,7 +8473,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233136" type="Box" label="Text">1</container>
-                            <container parent="cid233136" type="Folder">58</container>
+                            <container parent="cid233136" type="Folder">59</container>
                             <container parent="cid233136" type="Object">6</container>
                             <unitdate>1955</unitdate>
                         </did>
@@ -8609,7 +8485,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233137" type="Box" label="Text">1</container>
-                            <container parent="cid233137" type="Folder">58</container>
+                            <container parent="cid233137" type="Folder">59</container>
                             <container parent="cid233137" type="Object">7</container>
                             <unitdate>1955</unitdate>
                         </did>
@@ -8622,7 +8498,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233138" type="Box" label="Text">1</container>
-                            <container parent="cid233138" type="Folder">58</container>
+                            <container parent="cid233138" type="Folder">59</container>
                             <container parent="cid233138" type="Object">8</container>
                             <unitdate>circa 1955</unitdate>
                         </did>
@@ -8634,7 +8510,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233139" type="Box" label="Text">1</container>
-                            <container parent="cid233139" type="Folder">58</container>
+                            <container parent="cid233139" type="Folder">59</container>
                             <container parent="cid233139" type="Object">9</container>
                             <unitdate>1956</unitdate>
                         </did>
@@ -8646,7 +8522,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233140" type="Box" label="Text">1</container>
-                            <container parent="cid233140" type="Folder">58</container>
+                            <container parent="cid233140" type="Folder">59</container>
                             <container parent="cid233140" type="Object">10</container>
                             <unitdate>1956</unitdate>
                         </did>
@@ -8658,7 +8534,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233141" type="Box" label="Text">1</container>
-                            <container parent="cid233141" type="Folder">58</container>
+                            <container parent="cid233141" type="Folder">59</container>
                             <container parent="cid233141" type="Object">11</container>
                             <unitdate>1956</unitdate>
                         </did>
@@ -8670,7 +8546,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233142" type="Box" label="Text">1</container>
-                            <container parent="cid233142" type="Folder">58</container>
+                            <container parent="cid233142" type="Folder">59</container>
                             <container parent="cid233142" type="Object">12</container>
                             <unitdate>1957</unitdate>
                         </did>
@@ -8682,78 +8558,43 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233143" type="Box" label="Text">1</container>
-                            <container parent="cid233143" type="Folder">58</container>
+                            <container parent="cid233143" type="Folder">59</container>
                             <container parent="cid233143" type="Object">13</container>
                             <unitdate>1982</unitdate>
                         </did>
                     </c03>
                 </c02>
-                <c02 id="ref1093" level="file">
-                    <did>
-                        <unittitle>Yearbook -
-                            <title render="italic">The Quaker Annual</title></unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>1937-1939</unitdate>
-                    </did>
-                    <c03 id="ref1095" level="item">
-                        <did>
-                            <unittitle></unittitle>
-                            <container id="cid581005" type="Box" label="Books">2</container>
-                            <container parent="cid581005" type="Folder">1</container>
-                            <container parent="cid581005" type="Object">1</container>
-                            <unitdate>1937</unitdate>
-                        </did>
-                    </c03>
-                    <c03 id="ref1098" level="item">
-                        <did>
-                            <unittitle></unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid581006" type="Box" label="Books">2</container>
-                            <container parent="cid581006" type="Folder">2</container>
-                            <container parent="cid581006" type="Object">1</container>
-                            <unitdate>1938</unitdate>
-                        </did>
-                    </c03>
-                    <c03 id="ref636" level="item">
-                        <did>
-                            <unittitle></unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid233144" type="Box" label="Books">2</container>
-                            <container parent="cid233144" type="Folder">3</container>
-                            <container parent="cid233144" type="Object">1</container>
-                            <container id="cid581004" type="Box" label="Books">2</container>
-                            <container parent="cid581004" type="Folder">4</container>
-                            <container parent="cid581004" type="Object">1</container>
-                            <unitdate>1939</unitdate>
-                        </did>
-                    </c03>
-                </c02>
                 <c02 id="ref637" level="file">
                     <did>
-                        <unittitle>Yearbook -
+                        <unittitle>Yearbook - 
                             <title render="italic">The Quaker Annual</title></unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
                         <unitdate>1940</unitdate>
                     </did>
+                    <c03 id="ref1225" level="item">
+                        <did>
+                            <unittitle></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid748003" type="Box" label="Books">1</container>
+                            <container parent="cid748003" type="Folder">60</container>
+                            <container parent="cid748003" type="Object">1</container>
+                            <unitdate>1939</unitdate>
+                        </did>
+                    </c03>
                     <c03 id="ref638" level="item">
                         <did>
                             <unittitle></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233145" type="Box" label="Books">2</container>
-                            <container parent="cid233145" type="Folder">5</container>
+                            <container id="cid233145" type="Box" label="Books">1</container>
+                            <container parent="cid233145" type="Folder">61</container>
                             <container parent="cid233145" type="Object">1</container>
                             <unitdate>1940</unitdate>
-                            <physloc audience="internal" id="ref1173" label="Location note">Item on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                         </did>
                         <odd id="ref993">
                             <head>Museum Accession Number</head>
@@ -8764,23 +8605,14 @@
                             <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
                         </separatedmaterial>
                     </c03>
-                    <c03 id="ref1195" level="item">
-                        <did>
-                            <unittitle>[Copy 2]</unittitle>
-                            <container id="cid605009" type="Box" label="Books">2</container>
-                            <container parent="cid605009" type="Folder">6</container>
-                            <container parent="cid605009" type="Object">1</container>
-                            <unitdate>1940</unitdate>
-                        </did>
-                    </c03>
                     <c03 id="ref639" level="item">
                         <did>
                             <unittitle>Page 25 photocopy</unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid581003" type="Box" label="Books">2</container>
-                            <container parent="cid581003" type="Folder">5</container>
+                            <container id="cid581003" type="Box" label="Books">1</container>
+                            <container parent="cid581003" type="Folder">61</container>
                             <container parent="cid581003" type="Object">2-3</container>
                             <unitdate>1940</unitdate>
                         </did>
@@ -8794,6 +8626,7 @@
                         <language langcode="eng"/>
                     </langmaterial>
                     <unitdate>1955-1961, 1978</unitdate>
+                    <langmaterial id="ref1199" label="Language of Materials">Collection is primarily in English; materials in French and Spanish are indicated at the item level.</langmaterial>
                 </did>
                 <scopecontent id="ref753">
                     <head>Scope and Contents note</head>
@@ -8805,11 +8638,11 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <unitdate>1957-1961, 1978</unitdate>
+                        <unitdate>1957, 1961</unitdate>
                     </did>
                     <c03 id="ref687" level="item">
                         <did>
-                            <unittitle>Coral Records/"Atomic!" Alan Freed - Page 46 of
+                            <unittitle>Coral Records/"Atomic!" Alan Freed - Page 46 of 
                                 <title render="italic">The Billboard Music-Record Programming Guide</title></unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
@@ -8817,18 +8650,17 @@
                             <container id="cid204002" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204002" type="Object">27</container>
                             <unitdate>1957 November 11</unitdate>
-                            <physdesc audience="internal" id="ref887" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref641" level="item">
                         <did>
-                            <unittitle>Photocopy of plaque-mounted promotional photo from
+                            <unittitle>Photocopy of plaque-mounted promotional photo from 
                                 <title render="italic">Cash Box Magazine</title> of Alan Freed, Ral Donnor, George Goldner for Gone-End record label</unittitle>
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233147" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid233147" type="Folder">7</container>
+                            <container parent="cid233147" type="Folder">1</container>
                             <container parent="cid233147" type="Object">1</container>
                             <unitdate>1961 December 16</unitdate>
                         </did>
@@ -8836,18 +8668,6 @@
                             <head>Existence and Location of Originals</head>
                             <p>The original plaque is in the care of the Rock and Roll Hall of Fame &amp; Museum.</p>
                         </originalsloc>
-                    </c03>
-                    <c03 id="ref1116" level="item">
-                        <did>
-                            <unittitle>
-                                <title render="italic">American Hot Wax</title> soundtrack album magazine ad</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid565002" type="Drawer-Folder" label="Graphic materials">FF.1.8-3</container>
-                            <container parent="cid565002" type="Object">1</container>
-                            <unitdate>1978</unitdate>
-                        </did>
                     </c03>
                 </c02>
                 <c02 id="ref689" level="file">
@@ -8869,7 +8689,6 @@
                             <container parent="cid204003" type="Object">8</container>
                             <unitdate>1956</unitdate>
                             <langmaterial id="ref1009" label="Language of Materials">Material is in French.</langmaterial>
-                            <physloc audience="internal" id="ref1177" label="Location note">Item on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                         </did>
                         <odd id="ref1013">
                             <head>Museum Accession Number</head>
@@ -8890,7 +8709,6 @@
                             <container id="cid204004" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204004" type="Object">9</container>
                             <unitdate>1957</unitdate>
-                            <physdesc audience="internal" id="ref888" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                             <langmaterial id="ref1010" label="Language of Materials">Material is in French.</langmaterial>
                         </did>
                     </c03>
@@ -8911,22 +8729,9 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233148" type="Box" label="Text">2</container>
-                            <container parent="cid233148" type="Folder">8</container>
-                            <container parent="cid233148" type="Object">1-2</container>
+                            <container parent="cid233148" type="Folder">2</container>
+                            <container parent="cid233148" type="Object">1</container>
                             <unitdate>1956</unitdate>
-                        </did>
-                    </c03>
-                    <c03 id="ref1117" level="item">
-                        <did>
-                            <unittitle>
-                                <title render="italic">American Hot Wax</title></unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid557008" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid557008" type="Folder">8</container>
-                            <container parent="cid557008" type="Object">3</container>
-                            <unitdate>1978</unitdate>
                         </did>
                     </c03>
                 </c02>
@@ -8948,7 +8753,6 @@
                             <container id="cid204005" type="Drawer-Folder" label="Graphic materials">FF.1.8-2</container>
                             <container parent="cid204005" type="Object">1</container>
                             <unitdate>1978</unitdate>
-                            <physdesc audience="internal" id="ref889" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref693" level="item">
@@ -8961,7 +8765,6 @@
                             <container id="cid204006" type="Drawer-Folder" label="Graphic materials">FF.1.8-2</container>
                             <container parent="cid204006" type="Object">2</container>
                             <unitdate>1978</unitdate>
-                            <physdesc audience="internal" id="ref890" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                 </c02>
@@ -8982,31 +8785,7 @@
                             <container id="cid204007" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204007" type="Object">28</container>
                             <unitdate>1958 April 25</unitdate>
-                            <physdesc audience="internal" id="ref891" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref1118" level="file">
-                    <did>
-                        <unittitle>Folders</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>circa 1965</unitdate>
-                    </did>
-                    <c03 id="ref1120" level="item">
-                        <did>
-                            <unittitle>KNOB-FM</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid565003" type="Drawer-Folder" label="Graphic materials">FF.1.8-3</container>
-                            <container parent="cid565003" type="Object">2</container>
-                        </did>
-                        <odd id="ref1122">
-                            <head>General note</head>
-                            <p>Last station to employ Alan Freed.</p>
-                        </odd>
                     </c03>
                 </c02>
                 <c02 id="ref696" level="file">
@@ -9027,7 +8806,6 @@
                             <container id="cid204008" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204008" type="Object">3</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref892" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref697" level="item">
@@ -9040,7 +8818,6 @@
                             <container id="cid204009" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204009" type="Object">4</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref893" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref875" level="item">
@@ -9053,7 +8830,6 @@
                             <container id="cid204011" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204011" type="Object">5</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref908" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref874" level="item">
@@ -9066,7 +8842,6 @@
                             <container id="cid204010" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204010" type="Object">6</container>
                             <unitdate>1957</unitdate>
-                            <physdesc audience="internal" id="ref894" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref698" level="item">
@@ -9079,7 +8854,6 @@
                             <container id="cid204012" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204012" type="Object">7</container>
                             <unitdate>1957</unitdate>
-                            <physdesc audience="internal" id="ref895" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                 </c02>
@@ -9101,7 +8875,6 @@
                             <container id="cid204013" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204013" type="Object">17</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref897" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref870" level="item">
@@ -9114,7 +8887,6 @@
                             <container id="cid204014" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204014" type="Object">18</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref898" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref871" level="item">
@@ -9127,7 +8899,6 @@
                             <container id="cid204015" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204015" type="Object">19</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref899" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref701" level="item">
@@ -9140,7 +8911,6 @@
                             <container id="cid204016" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204016" type="Object">20</container>
                             <unitdate>1957</unitdate>
-                            <physloc audience="internal" id="ref1181" label="Location note">Item on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                         </did>
                         <odd id="ref1014">
                             <head>Museum Accession Number</head>
@@ -9194,7 +8964,6 @@
                             <container id="cid204022" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204022" type="Object">34</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref901" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref864" level="item">
@@ -9207,7 +8976,6 @@
                             <container id="cid204023" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204023" type="Object">35</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref902" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref865" level="item">
@@ -9220,7 +8988,6 @@
                             <container id="cid204024" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204024" type="Object">36</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref903" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref706" level="item">
@@ -9245,7 +9012,6 @@
                             <container id="cid204026" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204026" type="Object">38</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref904" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref707" level="item">
@@ -9270,7 +9036,6 @@
                             <container id="cid204028" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204028" type="Object">40</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref905" label="Physical Description">Unframed and placed in a mylar at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref868" level="item">
@@ -9283,7 +9048,6 @@
                             <container id="cid204029" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204029" type="Object">41</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref906" label="Physical Description">Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref703" level="item">
@@ -9308,7 +9072,6 @@
                             <container id="cid204031" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid204031" type="Object">43-44</container>
                             <unitdate>1959</unitdate>
-                            <physdesc audience="internal" id="ref907" label="Physical Description">Object #43 and #44 unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                 </c02>
@@ -9332,7 +9095,6 @@
                             <container parent="cid205001" type="Object">29</container>
                             <unitdate>1956</unitdate>
                             <langmaterial id="ref1011" label="Language of Materials">Material is in Spanish.</langmaterial>
-                            <physloc audience="internal" id="ref1183" label="Location note">Item on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                         </did>
                         <odd id="ref1016">
                             <head>Museum Accession Number</head>
@@ -9355,30 +9117,15 @@
                             <container parent="cid205002" type="Object">30-31</container>
                             <unitdate>1957</unitdate>
                             <langmaterial id="ref1012" label="Language of Materials">Materials are in Spanish.</langmaterial>
-                            <materialspec id="ref1015" label="Museum Accession Number">Object 31: A2010.1.21</materialspec>
-                            <physloc audience="internal" id="ref1185" label="Location note">Object 31 on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                         </did>
+                        <odd id="ref1015">
+                            <head>Museum Accession Number</head>
+                            <p>Object 31: A2010.1.21</p>
+                        </odd>
                         <separatedmaterial id="ref1184">
                             <head>Separated Materials</head>
                             <p>Object 31 on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
                         </separatedmaterial>
-                    </c03>
-                </c02>
-                <c02 id="ref1121" level="file">
-                    <did>
-                        <unittitle>Menus</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>1948 January 23</unitdate>
-                    </did>
-                    <c03 id="ref1123" level="item">
-                        <did>
-                            <unittitle>Brass Rail dinner menu and wine list</unittitle>
-                            <container id="cid557009" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid557009" type="Folder">9</container>
-                            <container parent="cid557009" type="Object">1</container>
-                        </did>
                     </c03>
                 </c02>
                 <c02 id="ref711" level="file">
@@ -9399,7 +9146,6 @@
                             <container id="cid205003" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205003" type="Object">1</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref909" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                         <odd id="ref910">
                             <head>Museum Accession Number</head>
@@ -9416,7 +9162,6 @@
                             <container id="cid205005" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205005" type="Object">2</container>
                             <unitdate>1978</unitdate>
-                            <physdesc audience="internal" id="ref911" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                 </c02>
@@ -9426,7 +9171,7 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <unitdate>1955, 1978</unitdate>
+                        <unitdate>1955</unitdate>
                     </did>
                     <c03 id="ref717" level="item">
                         <did>
@@ -9437,59 +9182,10 @@
                             <container id="cid205021" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205021" type="Object">26</container>
                             <unitdate>1955</unitdate>
-                            <physdesc audience="internal" id="ref913" label="Physical Description">Item was unframed and placed in a mylar at the L&amp;A.</physdesc>
                         </did>
                         <odd id="ref914">
                             <head>Museum Accession Number</head>
                             <p>A2010.1.3</p>
-                        </odd>
-                    </c03>
-                    <c03 id="ref1124" level="item">
-                        <did>
-                            <unittitle>
-                                <title render="italic">American Hot Wax</title></unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid557010" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid557010" type="Folder">10</container>
-                            <container parent="cid557010" type="Object">1-3</container>
-                            <unitdate>1978</unitdate>
-                        </did>
-                    </c03>
-                </c02>
-                <c02 id="ref1125" level="file">
-                    <did>
-                        <unittitle>Postcards</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>circa 1955</unitdate>
-                    </did>
-                    <c03 id="ref1126" level="item">
-                        <did>
-                            <unittitle>Al &amp; Dick's Steak House</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid559001" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid559001" type="Folder">11</container>
-                            <container parent="cid559001" type="Object">1</container>
-                        </did>
-                    </c03>
-                    <c03 id="ref1127" level="item">
-                        <did>
-                            <unittitle>Castro, Frankie</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid559002" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid559002" type="Folder">11</container>
-                            <container parent="cid559002" type="Object">2</container>
-                        </did>
-                        <odd id="ref1128">
-                            <head>General note</head>
-                            <p>Autographed.</p>
                         </odd>
                     </c03>
                 </c02>
@@ -9508,7 +9204,6 @@
                             <container id="cid205022" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205022" type="Object">22</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref915" label="Physical Description">Placed in mylar at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref719" level="item">
@@ -9522,7 +9217,6 @@
                             <container id="cid205023" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205023" type="Object">23</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref916" label="Physical Description">Placed in mylar at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref721" level="item">
@@ -9544,7 +9238,6 @@
                             <container id="cid205025" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205025" type="Object">25</container>
                             <unitdate>1959</unitdate>
-                            <physdesc audience="internal" id="ref917" label="Physical Description">Unframed and placed in mylar &amp; the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref783" level="item">
@@ -9555,7 +9248,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233149" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid233149" type="Folder">12</container>
+                            <container parent="cid233149" type="Folder">3</container>
                             <container parent="cid233149" type="Object">1</container>
                             <unitdate>1978</unitdate>
                         </did>
@@ -9576,7 +9269,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233152" type="Box" label="Text">2</container>
-                            <container parent="cid233152" type="Folder">13</container>
+                            <container parent="cid233152" type="Folder">4</container>
                             <container parent="cid233152" type="Object">1</container>
                             <unitdate>1955 April</unitdate>
                         </did>
@@ -9588,7 +9281,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233153" type="Box" label="Text">2</container>
-                            <container parent="cid233153" type="Folder">13</container>
+                            <container parent="cid233153" type="Folder">4</container>
                             <container parent="cid233153" type="Object">2</container>
                             <unitdate>1955 December</unitdate>
                         </did>
@@ -9600,7 +9293,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233163" type="Box" label="Text">2</container>
-                            <container parent="cid233163" type="Folder">13</container>
+                            <container parent="cid233163" type="Folder">4</container>
                             <container parent="cid233163" type="Object">3</container>
                             <unitdate>1956 April</unitdate>
                         </did>
@@ -9612,10 +9305,9 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233158" type="Box" label="Text">2</container>
-                            <container parent="cid233158" type="Folder">13</container>
+                            <container parent="cid233158" type="Folder">4</container>
                             <container parent="cid233158" type="Object">4</container>
                             <unitdate>1956 September</unitdate>
-                            <physloc audience="internal" id="ref1175" label="Location note">Item on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                         </did>
                         <odd id="ref994">
                             <head>Museum Accession Number</head>
@@ -9633,7 +9325,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid234001" type="Box" label="Text">2</container>
-                            <container parent="cid234001" type="Folder">13</container>
+                            <container parent="cid234001" type="Folder">4</container>
                             <container parent="cid234001" type="Object">5</container>
                             <unitdate>1956 December</unitdate>
                         </did>
@@ -9645,7 +9337,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233156" type="Box" label="Text">2</container>
-                            <container parent="cid233156" type="Folder">13</container>
+                            <container parent="cid233156" type="Folder">4</container>
                             <container parent="cid233156" type="Object">6</container>
                             <unitdate>1957 February</unitdate>
                         </did>
@@ -9657,7 +9349,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233150" type="Box" label="Text">2</container>
-                            <container parent="cid233150" type="Folder">13</container>
+                            <container parent="cid233150" type="Folder">4</container>
                             <container parent="cid233150" type="Object">7</container>
                             <unitdate>1957 July</unitdate>
                         </did>
@@ -9669,7 +9361,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233159" type="Box" label="Text">2</container>
-                            <container parent="cid233159" type="Folder">13</container>
+                            <container parent="cid233159" type="Folder">4</container>
                             <container parent="cid233159" type="Object">8</container>
                             <unitdate>1957 September</unitdate>
                         </did>
@@ -9681,7 +9373,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233154" type="Box" label="Text">2</container>
-                            <container parent="cid233154" type="Folder">13</container>
+                            <container parent="cid233154" type="Folder">4</container>
                             <container parent="cid233154" type="Object">9</container>
                             <unitdate>1957 December</unitdate>
                         </did>
@@ -9702,7 +9394,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid234002" type="Box" label="Text">2</container>
-                            <container parent="cid234002" type="Folder">14</container>
+                            <container parent="cid234002" type="Folder">5</container>
                             <container parent="cid234002" type="Object">1</container>
                             <unitdate>1958 April</unitdate>
                         </did>
@@ -9714,7 +9406,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233157" type="Box" label="Text">2</container>
-                            <container parent="cid233157" type="Folder">14</container>
+                            <container parent="cid233157" type="Folder">5</container>
                             <container parent="cid233157" type="Object">2</container>
                             <unitdate>1958 September</unitdate>
                         </did>
@@ -9726,7 +9418,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233161" type="Box" label="Text">2</container>
-                            <container parent="cid233161" type="Folder">14</container>
+                            <container parent="cid233161" type="Folder">5</container>
                             <container parent="cid233161" type="Object">3</container>
                             <unitdate>1958 December</unitdate>
                         </did>
@@ -9738,7 +9430,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233162" type="Box" label="Text">2</container>
-                            <container parent="cid233162" type="Folder">14</container>
+                            <container parent="cid233162" type="Folder">5</container>
                             <container parent="cid233162" type="Object">4</container>
                             <unitdate>1959 April</unitdate>
                         </did>
@@ -9750,7 +9442,7 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233160" type="Box" label="Text">2</container>
-                            <container parent="cid233160" type="Folder">14</container>
+                            <container parent="cid233160" type="Folder">5</container>
                             <container parent="cid233160" type="Object">5</container>
                             <unitdate>1959 September</unitdate>
                         </did>
@@ -9762,22 +9454,9 @@
                                 <language langcode="eng"/>
                             </langmaterial>
                             <container id="cid233151" type="Box" label="Text">2</container>
-                            <container parent="cid233151" type="Folder">14</container>
+                            <container parent="cid233151" type="Folder">5</container>
                             <container parent="cid233151" type="Object">6</container>
                             <unitdate>1959 December</unitdate>
-                        </did>
-                    </c03>
-                    <c03 id="ref1129" level="item">
-                        <did>
-                            <unittitle>
-                                <title render="italic">American Hot Wax</title> reproduction of Alan Freed and his "Rock 'N Roll Holiday Jubilee</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid559003" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid559003" type="Folder">14</container>
-                            <container parent="cid559003" type="Object">7</container>
-                            <unitdate>1978</unitdate>
                         </did>
                     </c03>
                 </c02>
@@ -9798,33 +9477,9 @@
                             </langmaterial>
                             <container id="cid457001" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid457001" type="Object">21</container>
-                            <container id="cid233164" type="Box" label="Graphic materials">2</container>
-                            <container parent="cid233164" type="Folder">15</container>
-                            <container parent="cid233164" type="Object">1</container>
-                            <container id="cid565001" type="Drawer-Folder" label="Graphic materials">FF.1.8-3</container>
-                            <container parent="cid565001" type="Object">3</container>
-                            <unitdate>1977</unitdate>
-                        </did>
-                    </c03>
-                </c02>
-                <c02 id="ref1130" level="file">
-                    <did>
-                        <unittitle>Scripts</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>1977 October 26</unitdate>
-                    </did>
-                    <c03 id="ref1131" level="item">
-                        <did>
-                            <unittitle>
-                                <title render="italic">American Hot Wax</title> second draft</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid559004" type="Box" label="Text">3</container>
-                            <container parent="cid559004" type="Folder">1</container>
-                            <container parent="cid559004" type="Object">1</container>
+                            <container id="cid743001" type="Box" label="Graphic materials">2</container>
+                            <container parent="cid743001" type="Folder">6</container>
+                            <container parent="cid743001" type="Object">1</container>
                         </did>
                     </c03>
                 </c02>
@@ -9842,54 +9497,10 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233155" type="Box" label="Text">3</container>
-                            <container parent="cid233155" type="Folder">2</container>
+                            <container id="cid233155" type="Box" label="Text">2</container>
+                            <container parent="cid233155" type="Folder">7</container>
                             <container parent="cid233155" type="Object">1</container>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref1132" level="file">
-                    <did>
-                        <unittitle>Stamps</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>1999</unitdate>
-                    </did>
-                    <c03 id="ref1133" level="item">
-                        <did>
-                            <unittitle>1950s - Celebrate the Century United States postage stamps</unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <container id="cid559005" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559005" type="Folder">3</container>
-                            <container parent="cid559005" type="Object">1</container>
-                        </did>
-                    </c03>
-                </c02>
-                <c02 id="ref731" level="file">
-                    <did>
-                        <unittitle>Six-Sheets (81” x 81”)</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <unitdate>1957</unitdate>
-                    </did>
-                    <c03 id="ref732" level="item">
-                        <did>
-                            <unittitle>
-                                <title render="italic">Mister Rock and Roll</title></unittitle>
-                            <langmaterial>
-                                <language langcode="eng"/>
-                            </langmaterial>
-                            <unitdate>1957</unitdate>
-                            <physloc audience="internal" id="ref1164" label="Location note">Building: Library and Archives Floor: 1 Room: Library Reading Room Coordinates: N/A</physloc>
-                        </did>
-                        <separatedmaterial id="ref925">
-                            <head>Separated Materials</head>
-                            <p>On exhibit in the Rock and Roll Hall of Fame &amp; Museum Library and Archives</p>
-                        </separatedmaterial>
                     </c03>
                 </c02>
                 <c02 id="ref729" level="file">
@@ -9909,7 +9520,6 @@
                             </langmaterial>
                             <container id="cid205033" type="Tube-Object" label="Graphic materials">2-1</container>
                             <unitdate>1957</unitdate>
-                            <physdesc audience="internal" id="ref924" label="Physical Description">Linen-backed.</physdesc>
                         </did>
                     </c03>
                 </c02>
@@ -9927,8 +9537,8 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid233165" type="Box" label="Text">3</container>
-                            <container parent="cid233165" type="Folder">4</container>
+                            <container id="cid233165" type="Box" label="Text">2</container>
+                            <container parent="cid233165" type="Folder">8</container>
                             <container parent="cid233165" type="Object">1</container>
                             <unitdate>1959 October 22</unitdate>
                         </did>
@@ -9952,7 +9562,6 @@
                             <container id="cid205026" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205026" type="Object">10</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref918" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref872" level="item">
@@ -9965,7 +9574,6 @@
                             <container id="cid205028" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205028" type="Object">11</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref919" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref724" level="item">
@@ -9978,7 +9586,6 @@
                             <container id="cid205027" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205027" type="Object">12</container>
                             <unitdate>1956</unitdate>
-                            <physdesc audience="internal" id="ref920" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref725" level="item">
@@ -9992,7 +9599,6 @@
                             <container parent="cid205029" type="Object">13</container>
                             <unitdate>1956</unitdate>
                             <physdesc id="ref1196" label="Physical Description">Trimmed.</physdesc>
-                            <physloc audience="internal" id="ref1179" label="Location note">Item on exhibit in the Leo M. Mintz Gallery for "Architects of Rock and Roll."</physloc>
                         </did>
                         <odd id="ref1017">
                             <head>Museum Accession Number</head>
@@ -10013,7 +9619,6 @@
                             <container id="cid205030" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205030" type="Object">14</container>
                             <unitdate>1957</unitdate>
-                            <physdesc audience="internal" id="ref921" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
                     <c03 id="ref727" level="item">
@@ -10026,7 +9631,6 @@
                             <container id="cid205031" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205031" type="Object">15</container>
                             <unitdate>1957</unitdate>
-                            <physdesc audience="internal" id="ref922" label="Physical Description">Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                         <odd id="ref998">
                             <head>Museum Accession Number</head>
@@ -10043,59 +9647,8 @@
                             <container id="cid205032" type="Drawer-Folder" label="Graphic materials">FF.1.8-1</container>
                             <container parent="cid205032" type="Object">16</container>
                             <unitdate>1957</unitdate>
-                            <physdesc audience="internal" id="ref923" label="General Description">Trimmed. Linen-backed. Unframed at the L&amp;A.</physdesc>
                         </did>
                     </c03>
-                </c02>
-            </c01>
-            <c01 id="ref5" level="series">
-                <did>
-                    <unittitle>Series VI: Audiovisual Materials [RESTRICTED]</unittitle>
-                    <langmaterial>
-                        <language langcode="eng"/>
-                    </langmaterial>
-                    <unitdate>1959, 1978, undated</unitdate>
-                </did>
-                <scopecontent id="ref754">
-                    <head>Scope and Contents note</head>
-                    <p>Series VI: Audiovisual Materials contains materials related to Alan Freed and his career, including an 8-track audiocassette soundtrack from a film based on his life, and a videotape of
-                        <title render="italic">The Big Beat</title> with Bobby Darin as host.</p>
-                </scopecontent>
-                <accessrestrict id="ref1163">
-                    <head>Access Restrictions</head>
-                    <p>Some of the audiovisual materials in this series are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
-                </accessrestrict>
-                <separatedmaterial id="ref1090">
-                    <head>Separated Materials</head>
-                    <p>An audiocassette, videocassette, various singles, and LPs have been transferred to the library collection. Please search for the "Alan Freed Collection" in the library catalog for a list of donated titles.</p>
-                </separatedmaterial>
-                <c02 id="ref669" level="item">
-                    <did>
-                        <unittitle>8-track audiocassette,
-                            <title render="italic">American Hot Wax</title> [RESTRICTED]</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <container id="cid233177" type="Box" label="Audio">4</container>
-                        <container parent="cid233177" type="Object">1</container>
-                        <unitdate>1978</unitdate>
-                    </did>
-                    <accessrestrict id="ref1197">
-                        <head>Access Restrictions</head>
-                        <p>This audiovisual material is on a defunct media formats and, therefore, is RESTRICTED. An access copy of this materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
-                    </accessrestrict>
-                </c02>
-                <c02 id="ref680" level="item">
-                    <did>
-                        <unittitle>VHS videocassette,
-                            <title render="italic">The Big Beat</title> with Bobby Darin as host</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <container id="cid233186" type="Box" label="Moving Images">4</container>
-                        <container parent="cid233186" type="Object">2</container>
-                        <unitdate>1959 July 17</unitdate>
-                    </did>
                 </c02>
             </c01>
             <c01 id="ref847" level="series">
@@ -10105,7 +9658,7 @@
                         <language langcode="eng"/>
                     </langmaterial>
                     <unitdate normal="1940/1965" type="bulk">Bulk, 1940-1965</unitdate>
-                    <unitdate normal="1918/1965" type="inclusive">1918-1965</unitdate>
+                    <unitdate normal="1918/1965" type="inclusive">1921-1965</unitdate>
                 </did>
                 <accessrestrict id="ref1089">
                     <head>Access Restrictions</head>
@@ -10113,7 +9666,7 @@
                 </accessrestrict>
                 <scopecontent id="ref980">
                     <head>Scope and Contents</head>
-                    <p>Series V: Personal Papers [RESTRICTED] contains documents pertaining to the life, employment, and death of Alan Freed, including birth and death certificates, photogrpahs, and his pathology report. The materials are arranged chronologically.</p>
+                    <p>Series V: Personal Papers [RESTRICTED] contains documents pertaining to the life, employment, and death of Alan Freed, including birth and death certificates, and his pathology report. The materials are arranged chronologically.</p>
                 </scopecontent>
                 <c02 id="ref849" level="item">
                     <did>
@@ -10121,10 +9674,22 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <container id="cid233166" type="Box" label="Text">3</container>
-                        <container parent="cid233166" type="Folder">5</container>
+                        <container id="cid233166" type="Box" label="Text">2</container>
+                        <container parent="cid233166" type="Folder">9</container>
                         <container parent="cid233166" type="Object">1</container>
                         <unitdate>1921 December 20</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref853" level="item">
+                    <did>
+                        <unittitle>Freed, Albert J. Certification of Military Service</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid233172" type="Box" label="Text">2</container>
+                        <container parent="cid233172" type="Folder">9</container>
+                        <container parent="cid233172" type="Object">6</container>
+                        <unitdate>1941 May 16</unitdate>
                     </did>
                 </c02>
                 <c02 id="ref858" level="item">
@@ -10133,8 +9698,8 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <container id="cid605010" type="Box" label="Redacted Copy">3</container>
-                        <container parent="cid605010" type="Folder">5</container>
+                        <container id="cid605010" type="Box" label="Redacted Copy">2</container>
+                        <container parent="cid605010" type="Folder">9</container>
                         <container parent="cid605010" type="Object">2</container>
                         <container id="cid605011" type="Box" label="Original Copy">5</container>
                         <container parent="cid605011" type="Folder">2</container>
@@ -10152,22 +9717,10 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <container id="cid233168" type="Box" label="Text">3</container>
-                        <container parent="cid233168" type="Folder">5</container>
+                        <container id="cid233168" type="Box" label="Text">2</container>
+                        <container parent="cid233168" type="Folder">9</container>
                         <container parent="cid233168" type="Object">3</container>
                         <unitdate>1943 August 14</unitdate>
-                    </did>
-                </c02>
-                <c02 id="ref1136" level="item">
-                    <did>
-                        <unittitle>Freed, Alan certificate of appreciation</unittitle>
-                        <langmaterial>
-                            <language langcode="eng"/>
-                        </langmaterial>
-                        <container id="cid559006" type="Box" label="Text">3</container>
-                        <container parent="cid559006" type="Folder">5</container>
-                        <container parent="cid559006" type="Object">4</container>
-                        <unitdate>1959 November 25</unitdate>
                     </did>
                 </c02>
                 <c02 id="ref857" level="item">
@@ -10176,9 +9729,9 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <container id="cid233171" type="Box" label="Text">3</container>
-                        <container parent="cid233171" type="Folder">5</container>
-                        <container parent="cid233171" type="Object">5</container>
+                        <container id="cid233171" type="Box" label="Text">2</container>
+                        <container parent="cid233171" type="Folder">9</container>
+                        <container parent="cid233171" type="Object">4</container>
                         <unitdate>1965 January 20</unitdate>
                     </did>
                 </c02>
@@ -10188,23 +9741,404 @@
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <container id="cid233170" type="Box" label="Text">3</container>
-                        <container parent="cid233170" type="Folder">5</container>
-                        <container parent="cid233170" type="Object">6-7</container>
+                        <container id="cid233170" type="Box" label="Text">2</container>
+                        <container parent="cid233170" type="Folder">9</container>
+                        <container parent="cid233170" type="Object">5</container>
                         <unitdate>1965 January 21</unitdate>
                     </did>
                 </c02>
-                <c02 id="ref853" level="item">
+            </c01>
+            <c01 id="ref5" level="series">
+                <did>
+                    <unittitle>Series VI: Audiovisual Materials [RESTRICTED]</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <unitdate>1959, 1978, undated</unitdate>
+                </did>
+                <scopecontent id="ref754">
+                    <head>Scope and Contents note</head>
+                    <p>Series VI: Audiovisual Materials contains materials related to Alan Freed and his career, including an 8-track audiocassette soundtrack from a film based on his life, and a videotape of 
+                        <title render="italic">The Big Beat</title> with Bobby Darin as host.</p>
+                </scopecontent>
+                <accessrestrict id="ref1163">
+                    <head>Access Restrictions</head>
+                    <p>Some of the audiovisual materials in this series are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                </accessrestrict>
+                <separatedmaterial id="ref1090">
+                    <head>Separated Materials</head>
+                    <p>An audiocassette, videocassette, various singles, and LPs have been transferred to the library collection. Please search for the "Alan Freed Collection" in the library catalog for a list of donated titles.</p>
+                </separatedmaterial>
+                <c02 id="ref669" level="item">
                     <did>
-                        <unittitle>Freed, Albert J. Certification of Military Service</unittitle>
+                        <unittitle>8-track audiocassette, 
+                            <title render="italic">American Hot Wax</title> [RESTRICTED]</unittitle>
                         <langmaterial>
                             <language langcode="eng"/>
                         </langmaterial>
-                        <container id="cid233172" type="Box" label="Text">3</container>
-                        <container parent="cid233172" type="Folder">5</container>
-                        <container parent="cid233172" type="Object">8-9</container>
-                        <unitdate>1965 February 18</unitdate>
+                        <container id="cid233177" type="Box" label="Audio">3</container>
+                        <container parent="cid233177" type="Object">1</container>
+                        <unitdate>1978</unitdate>
                     </did>
+                    <accessrestrict id="ref1197">
+                        <head>Access Restrictions</head>
+                        <p>This audiovisual material is on a defunct media formats and, therefore, is RESTRICTED. An access copy of this materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                    </accessrestrict>
+                </c02>
+                <c02 id="ref680" level="item">
+                    <did>
+                        <unittitle>VHS videocassette, 
+                            <title render="italic">The Big Beat</title> with Bobby Darin as host</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid233186" type="Box" label="Moving Images">3</container>
+                        <container parent="cid233186" type="Object">2</container>
+                        <unitdate>1959 July 17</unitdate>
+                    </did>
+                    <accessrestrict id="ref1228">
+                        <head>Access Restrictions</head>
+                        <p>The condition of this item has not yet been determined for playback purposes. An access copy of this item may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to this item is available.</p>
+                    </accessrestrict>
+                </c02>
+            </c01>
+            <c01 id="ref1203" level="series">
+                <did>
+                    <unittitle>Series VII: 2011 Accruals [RESTRICTED]</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <unitdate>1918-1978, 1999</unitdate>
+                </did>
+                <scopecontent id="ref1226">
+                    <head>Scope and Contents</head>
+                    <p>Series VII: 2011 [RESTRICTED] contains documents, magazines, and photographs pertaining to the life, employment, and death of Alan Freed, including birth and death certificates, his pathology report, high school yearbooks, and the accounting from one of his films. The materials are arranged alphabetically by type, then chronologically.</p>
+                </scopecontent>
+                <accessrestrict id="ref1227">
+                    <head>Access Restrictions</head>
+                    <p>The materials in this series are CLOSED until a signed gift agreement can be secured from the donor. Some of the materials in the collection are confidential and are, therefore, RESTRICTED. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                </accessrestrict>
+                <c02 id="ref1109" level="item">
+                    <did>
+                        <unittitle>ABC Advertising and Promotion Department audience promotion presskit with photographs</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid746001" type="Box" label="Mixed materials">4</container>
+                        <container parent="cid746001" type="Folder">1</container>
+                        <container parent="cid746001" type="Object">1</container>
+                        <unitdate>1957 May 4</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref1222" level="file">
+                    <did>
+                        <unittitle>American Hot Wax</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <unitdate>1977-1978</unitdate>
+                    </did>
+                    <c03 id="ref1117" level="item">
+                        <did>
+                            <unittitle>Cast and credit</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746002" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746002" type="Folder">2</container>
+                            <container parent="cid746002" type="Object">1</container>
+                            <unitdate>1978</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1217" level="item">
+                        <did>
+                            <unittitle>Promotional cards</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid744001" type="Drawer-Folder" label="Graphic materials">FF.1.8-3</container>
+                            <container parent="cid744001" type="Object">3</container>
+                            <unitdate>1978</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1129" level="item">
+                        <did>
+                            <unittitle>Reproduction of Alan Freed and his "Rock 'N Roll Holiday Jubilee"</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746004" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746004" type="Folder">2</container>
+                            <container parent="cid746004" type="Object">2</container>
+                            <unitdate>1978</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1131" level="item">
+                        <did>
+                            <unittitle>Script - second draft</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746005" type="Box" label="Text">4</container>
+                            <container parent="cid746005" type="Folder">3</container>
+                            <container parent="cid746005" type="Object">1</container>
+                            <unitdate>1977 October 26</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1116" level="item">
+                        <did>
+                            <unittitle>Soundtrack album magazine advertisement</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid565002" type="Drawer-Folder" label="Graphic materials">FF.1.8-3</container>
+                            <container parent="cid565002" type="Object">1</container>
+                            <unitdate>1978</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1124" level="item">
+                        <did>
+                            <unittitle>Promotional photographs</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746003" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746003" type="Folder">2</container>
+                            <container parent="cid746003" type="Object">2-5</container>
+                            <unitdate>1978</unitdate>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="ref1123" level="item">
+                    <did>
+                        <unittitle>Brass Rail dinner menu and wine list</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid557009" type="Box" label="Graphic materials">4</container>
+                        <container parent="cid557009" type="Folder">4</container>
+                        <container parent="cid557009" type="Object">1</container>
+                        <unitdate>1948 January 23</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref1218" level="item">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Don't Knock The Rock</title> cast and credits</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid746006" type="Box" label="Text">4</container>
+                        <container parent="cid746006" type="Folder">5</container>
+                        <container parent="cid746006" type="Object">1</container>
+                        <unitdate>1956</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref1120" level="item">
+                    <did>
+                        <unittitle>KNOB-FM folder</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid565003" type="Drawer-Folder" label="Graphic materials">FF.1.8-3</container>
+                        <container parent="cid565003" type="Object">2</container>
+                        <unitdate>circa 1965</unitdate>
+                    </did>
+                    <odd id="ref1122">
+                        <head>General note</head>
+                        <p>Last station to employ Alan Freed.</p>
+                    </odd>
+                </c02>
+                <c02 id="ref1105" level="item">
+                    <did>
+                        <unittitle>LCL Productions, Incorporated correspondence from Lew Platt to Glenn</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid563007" type="Box" label="Text">4</container>
+                        <container parent="cid563007" type="Folder">6</container>
+                        <container parent="cid563007" type="Object">1</container>
+                        <unitdate>1955 June 6</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref1103" level="item">
+                    <did>
+                        <unittitle>
+                            <title render="italic">Mister Rock and Roll</title> Paramount Pictures Corporation cumulative statement of account with Aurora Productions, Incorporated</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid563006" type="Box" label="Text">4</container>
+                        <container parent="cid563006" type="Folder">7</container>
+                        <container parent="cid563006" type="Object">1</container>
+                        <unitdate>1958 June 28</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref1133" level="item">
+                    <did>
+                        <unittitle>1950s - Celebrate the Century United States postage stamps</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <container id="cid559005" type="Box" label="Graphic materials">4</container>
+                        <container parent="cid559005" type="Folder">8</container>
+                        <container parent="cid559005" type="Object">1</container>
+                        <unitdate>1999</unitdate>
+                    </did>
+                </c02>
+                <c02 id="ref1209" level="file">
+                    <did>
+                        <unittitle>Magazines</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <unitdate>1956-1957</unitdate>
+                    </did>
+                    <c03 id="ref1112" level="item">
+                        <did>
+                            <unittitle>
+                                <title render="italic">Teenage Rock and Roll Review</title></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid557002" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid557002" type="Folder">9</container>
+                            <container parent="cid557002" type="Object">1</container>
+                            <unitdate>1956 October</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1114" level="item">
+                        <did>
+                            <unittitle>"Rock 'N' Roll -- Music." 
+                                <title render="italic">TV Guide</title> [Cleveland Edition]</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid557003" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid557003" type="Folder">9</container>
+                            <container parent="cid557003" type="Object">2</container>
+                            <unitdate>1957 May 4-10</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1212" level="item">
+                        <did>
+                            <unittitle>Irwin, Theodore. "Rock 'n Roll 'n Alan Freed." 
+                                <title render="italic">Pageant</title></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746007" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746007" type="Folder">9</container>
+                            <container parent="cid746007" type="Object">3</container>
+                            <unitdate>1957 July</unitdate>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="ref1224" level="file">
+                    <did>
+                        <unittitle>Magazines</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <unitdate>1958-1959</unitdate>
+                    </did>
+                    <c03 id="ref1210" level="item">
+                        <did>
+                            <unittitle>Behrman, Anita. “What Alan Freed Really Thinks About Rock ‘n’ Roll.” 
+                                <title render="italic">People Today</title></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746018" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746018" type="Folder">10</container>
+                            <container parent="cid746018" type="Object">1</container>
+                            <unitdate>1958 October</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1213" level="item">
+                        <did>
+                            <unittitle>Bolstad, Helen. "The Big Sound For 1959." 
+                                <title render="italic">TV Radio Mirror</title></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746019" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746019" type="Folder">10</container>
+                            <container parent="cid746019" type="Object">2</container>
+                            <unitdate>1958 November</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1214" level="item">
+                        <did>
+                            <unittitle>"Daddy of the Big Beat: Alan Freed." 
+                                <title render="italic">Hit Parader</title></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746020" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746020" type="Folder">10</container>
+                            <container parent="cid746020" type="Object">3</container>
+                            <unitdate>1958 December</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1115" level="item">
+                        <did>
+                            <unittitle>"Show Business: Disc Jockeys: "Now Don't Cry." 
+                                <title render="italic">Time</title></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746017" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid746017" type="Folder">10</container>
+                            <container parent="cid746017" type="Object">4</container>
+                            <unitdate>1959 December 7</unitdate>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="ref1223" level="file">
+                    <did>
+                        <unittitle>Personal Papers</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <unitdate>1941, 1959-1965</unitdate>
+                    </did>
+                    <c03 id="ref1219" level="item">
+                        <did>
+                            <unittitle>Freed, Albert J. Certification of Military Service (photocopy)</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746025" type="Box" label="Text">4</container>
+                            <container parent="cid746025" type="Folder">11</container>
+                            <container parent="cid746025" type="Object">1</container>
+                            <unitdate>1941 May 16</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1136" level="item">
+                        <did>
+                            <unittitle>Freed, Alan certificate of appreciation</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid559006" type="Box" label="Text">4</container>
+                            <container parent="cid559006" type="Folder">11</container>
+                            <container parent="cid559006" type="Object">2</container>
+                            <unitdate>1959 November 25</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1220" level="item">
+                        <did>
+                            <unittitle>Freed, Alan Pathological Report (photocopy)</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid746026" type="Box" label="Text">4</container>
+                            <container parent="cid746026" type="Folder">11</container>
+                            <container parent="cid746026" type="Object">3</container>
+                            <unitdate>1965 January 21</unitdate>
+                        </did>
+                    </c03>
                 </c02>
                 <c02 id="ref1134" level="subseries">
                     <did>
@@ -10214,8 +10148,8 @@
                     <c03 id="ref1135" level="item">
                         <did>
                             <unittitle>Freed, Sr., Charles Sydney and Maude Palmer Freed</unittitle>
-                            <container id="cid559007" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559007" type="Folder">6</container>
+                            <container id="cid559007" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559007" type="Folder">12</container>
                             <container parent="cid559007" type="Object">1</container>
                             <unitdate>1918</unitdate>
                         </did>
@@ -10226,27 +10160,27 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid559008" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559008" type="Folder">6</container>
-                            <container parent="cid559008" type="Object">2</container>
+                            <container id="cid559008" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559008" type="Folder">12</container>
+                            <container parent="cid559008" type="Object">16</container>
                             <unitdate>1922, 1966</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1138" level="item">
                         <did>
                             <unittitle>Freed, David, Alan Freed, and Charles Freed, Jr.</unittitle>
-                            <container id="cid559009" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559009" type="Folder">6</container>
-                            <container parent="cid559009" type="Object">3</container>
+                            <container id="cid559009" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559009" type="Folder">12</container>
+                            <container parent="cid559009" type="Object">2</container>
                             <unitdate>circa 1930</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1139" level="item">
                         <did>
                             <unittitle>Freed, Alan</unittitle>
-                            <container id="cid559010" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559010" type="Folder">6</container>
-                            <container parent="cid559010" type="Object">4</container>
+                            <container id="cid559010" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559010" type="Folder">12</container>
+                            <container parent="cid559010" type="Object">3</container>
                             <unitdate>1939</unitdate>
                         </did>
                     </c03>
@@ -10256,119 +10190,209 @@
                             <langmaterial>
                                 <language langcode="eng"/>
                             </langmaterial>
-                            <container id="cid559011" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559011" type="Folder">6</container>
-                            <container parent="cid559011" type="Object">5</container>
+                            <container id="cid559011" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559011" type="Folder">12</container>
+                            <container parent="cid559011" type="Object">4</container>
                             <unitdate>1940</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1141" level="item">
                         <did>
                             <unittitle>Parker, Jack, Alan Freed, Olive Mae (Bean) Parker, and unidentified on Alan and Betty Lou's wedding day in Columbiana County, Ohio</unittitle>
-                            <container id="cid559012" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559012" type="Folder">6</container>
-                            <container parent="cid559012" type="Object">6</container>
+                            <container id="cid559012" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559012" type="Folder">12</container>
+                            <container parent="cid559012" type="Object">5</container>
                             <unitdate>1943 August 22</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1142" level="item">
                         <did>
                             <unittitle>Freed, Alan with four unidentified people</unittitle>
-                            <container id="cid559013" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559013" type="Folder">6</container>
-                            <container parent="cid559013" type="Object">7</container>
+                            <container id="cid559013" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559013" type="Folder">12</container>
+                            <container parent="cid559013" type="Object">17</container>
                             <unitdate>ca. 1946</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1143" level="item">
                         <did>
                             <unittitle>Freed, Alana, Alan Freed, Betty Lou Freed, and Lance Freed</unittitle>
-                            <container id="cid559014" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559014" type="Folder">6</container>
-                            <container parent="cid559014" type="Object">8</container>
+                            <container id="cid559014" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559014" type="Folder">12</container>
+                            <container parent="cid559014" type="Object">6</container>
                             <unitdate>1948</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1144" level="item">
                         <did>
                             <unittitle>Freed, Alan</unittitle>
-                            <container id="cid559015" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559015" type="Folder">6</container>
-                            <container parent="cid559015" type="Object">9</container>
+                            <container id="cid559015" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559015" type="Folder">12</container>
+                            <container parent="cid559015" type="Object">7</container>
                             <unitdate>circa 1950</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1145" level="item">
                         <did>
                             <unittitle>Freed, Maude and Alan Freed</unittitle>
-                            <container id="cid559016" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559016" type="Folder">6</container>
-                            <container parent="cid559016" type="Object">10</container>
+                            <container id="cid559016" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559016" type="Folder">12</container>
+                            <container parent="cid559016" type="Object">8</container>
                             <unitdate>circa 1956</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1147" level="item">
                         <did>
                             <unittitle>Flaming Hotel swimming pool</unittitle>
-                            <container id="cid559018" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559018" type="Folder">6</container>
-                            <container parent="cid559018" type="Object">11</container>
+                            <container id="cid559018" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559018" type="Folder">12</container>
+                            <container parent="cid559018" type="Object">9</container>
                             <unitdate>circa 1956</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1146" level="item">
                         <did>
                             <unittitle>Freed, Lance and Alan Freed at Shippan Point rented house in Stamford, Connecticut</unittitle>
-                            <container id="cid559017" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559017" type="Folder">6</container>
-                            <container parent="cid559017" type="Object">12</container>
+                            <container id="cid559017" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559017" type="Folder">12</container>
+                            <container parent="cid559017" type="Object">10</container>
                             <unitdate>circa 1956</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1148" level="item">
                         <did>
-                            <unittitle>Freed, Alan and Inga Boling on the set of
+                            <unittitle>Freed, Alan and Inga Boling on the set of 
                                 <title render="italic">Go, Johnny Go!</title></unittitle>
-                            <container id="cid559019" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559019" type="Folder">6</container>
-                            <container parent="cid559019" type="Object">13</container>
+                            <container id="cid559019" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559019" type="Folder">12</container>
+                            <container parent="cid559019" type="Object">11</container>
                             <unitdate>1958 April</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1149" level="item">
                         <did>
                             <unittitle>Freed's Palm Springs, California home</unittitle>
-                            <container id="cid559020" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559020" type="Folder">6</container>
-                            <container parent="cid559020" type="Object">14</container>
+                            <container id="cid559020" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559020" type="Folder">12</container>
+                            <container parent="cid559020" type="Object">12</container>
                             <unitdate>1962 October 28</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1150" level="item">
                         <did>
                             <unittitle>Freed, Alan</unittitle>
-                            <container id="cid559021" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559021" type="Folder">6</container>
-                            <container parent="cid559021" type="Object">15</container>
+                            <container id="cid559021" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559021" type="Folder">12</container>
+                            <container parent="cid559021" type="Object">13</container>
                             <unitdate>circa 1962</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1151" level="item">
                         <did>
                             <unittitle>Freed, Inga Boling, Alan Freed, and Lance Freed at Palm Springs, California home</unittitle>
-                            <container id="cid559022" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559022" type="Folder">6</container>
-                            <container parent="cid559022" type="Object">16</container>
+                            <container id="cid559022" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559022" type="Folder">12</container>
+                            <container parent="cid559022" type="Object">14</container>
                             <unitdate>1963 December</unitdate>
                         </did>
                     </c03>
                     <c03 id="ref1152" level="item">
                         <did>
                             <unittitle>Freed, Alan on roof of Palm Springs, California home</unittitle>
-                            <container id="cid559023" type="Box" label="Graphic materials">3</container>
-                            <container parent="cid559023" type="Folder">6</container>
-                            <container parent="cid559023" type="Object">17</container>
+                            <container id="cid559023" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559023" type="Folder">12</container>
+                            <container parent="cid559023" type="Object">15</container>
                             <unitdate>1964 June 6</unitdate>
+                        </did>
+                    </c03>
+                </c02>
+                <c02 id="ref1125" level="file">
+                    <did>
+                        <unittitle>Postcards</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <unitdate>circa 1955</unitdate>
+                    </did>
+                    <c03 id="ref1126" level="item">
+                        <did>
+                            <unittitle>Al &amp; Dick's Steak House</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid559001" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559001" type="Folder">13</container>
+                            <container parent="cid559001" type="Object">1</container>
+                        </did>
+                    </c03>
+                    <c03 id="ref1127" level="item">
+                        <did>
+                            <unittitle>Castro, Frankie</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid559002" type="Box" label="Graphic materials">4</container>
+                            <container parent="cid559002" type="Folder">13</container>
+                            <container parent="cid559002" type="Object">2</container>
+                        </did>
+                        <odd id="ref1128">
+                            <head>General note</head>
+                            <p>Autographed.</p>
+                        </odd>
+                    </c03>
+                </c02>
+                <c02 id="ref1205" level="file">
+                    <did>
+                        <unittitle>Yearbook - 
+                            <title render="italic">Quaker Annual</title></unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <unitdate>1937-1940</unitdate>
+                    </did>
+                    <c03 id="ref1095" level="item">
+                        <did>
+                            <unittitle></unittitle>
+                            <container id="cid581005" type="Box" label="Books">4</container>
+                            <container parent="cid581005" type="Folder">14</container>
+                            <container parent="cid581005" type="Object">1</container>
+                            <unitdate>1937</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1098" level="item">
+                        <did>
+                            <unittitle></unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid581006" type="Box" label="Books">4</container>
+                            <container parent="cid581006" type="Folder">15</container>
+                            <container parent="cid581006" type="Object">1</container>
+                            <unitdate>1938</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1206" level="item">
+                        <did>
+                            <unittitle>1939</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid748001" type="Box" label="Books">4</container>
+                            <container parent="cid748001" type="Folder">16</container>
+                            <container parent="cid748001" type="Object">1</container>
+                            <unitdate>1939</unitdate>
+                        </did>
+                    </c03>
+                    <c03 id="ref1207" level="item">
+                        <did>
+                            <unittitle>1940</unittitle>
+                            <langmaterial>
+                                <language langcode="eng"/>
+                            </langmaterial>
+                            <container id="cid748002" type="Box" label="Books">4</container>
+                            <container parent="cid748002" type="Folder">17</container>
+                            <container parent="cid748002" type="Object">1</container>
+                            <unitdate>1940</unitdate>
                         </did>
                     </c03>
                 </c02>
