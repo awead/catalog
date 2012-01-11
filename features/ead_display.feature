@@ -21,7 +21,7 @@ Feature: EAD display
   Scenario: Date Expression in first component level (BL-9)
     Given I am on the ead page for ARC-0105
     When I follow "Collection Inventory"
-    Then I should see "Series II: Business Files, 1945-1946, 1983-1984, and undated"
+    Then I should see "Series II: Business Files, 1945-1946, 1983-1984, undated"
     And I should see "Series VII: Printed Materials"
     And I should not see "Series VII: Printed Materials,"
 
@@ -46,7 +46,7 @@ Feature: EAD display
     And I should see "23"
     And I should see "29"
     And I should see "Location:"
-    And I should see "Drawer: FF.1.4, Folder: 7, Object: 1"
+    And I should see "Drawer-Folder: FF.1.4-7, Object: 1"
 
   Scenario: I need to see all sub-components (BL-58)
     Given I am on the ead page for ARC-0065:2:ref62
@@ -80,21 +80,20 @@ Feature: EAD display
 
   Scenario: Related materials and accruals (BL-115)
     Given I am on the ead page for ARC-0006
-    Then I should see "Related materials providing content on Alan Freed may be found in the following collections in this repository: Terry Stewart Collection."
-    And I should see "Where possible, accruals were interfiled with preexisting collection materials; otherwise, accruals can be found at the end of Series V: Personal Papers."
+    Then I should see "Related materials providing content on Alan Freed may be found in the following collections"
 
   Scenario: Separated materials and access restrictions (BL-116)
     Given I am on the ead page for ARC-0003
-    Then I should see "Ten-inch LPs, 78s, 78 sets, 45s, 45 RPM EPs, and LPs have been transferred to the library collection."
-    And I should see "The 1/4-inch audiotapes in this series are on defunct media and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available."
+    Then I should see "Some print and audiovisual materials have been transferred to the library collection"
+    And I should see "Collection is open for research"
 
   Scenario: Existence and Location of Originals (BL-117)
     Given I am on the ead page for ARC-0006:3:ref641
     Then I should see "original plaque"
 
   Scenario: Physical description (BL-119)
-    Given I am on the ead page for ARC-0006:3:ref876
-    Then I should see "Linen-backed. Unframed at the L&A."
+    Given I am on the ead page for ARC-0006:3:ref725
+    Then I should see "Trimmed"
 
   Scenario: Language of Materials, Museum Acc. #, Separated Materials (BL-118)
     Given I am on the ead page for ARC-0006:3:ref690

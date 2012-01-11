@@ -16,8 +16,8 @@ Feature: EAD display
     Given I am on the home page
     And I fill in "q" with "A1994.34.7"
     When I press "search"
-    Then I should see "Curtis Mayfield Collection (ARC.0067)"
-    And I should see "Oversize Materials"
+    Then I should see "Guide to the Curtis Mayfield Collection (ARC.0067)"
+    And I should see "Photographs"
 
   Scenario: Searching by accession number (BL-49)
     Given I am on the home page
@@ -47,7 +47,7 @@ Feature: EAD display
     When I press "search"
     Then I should not see "Finding Aid"
     And I should see "Guide to the Curtis Mayfield Collection"
-    And I should see "Big Joe Turner Papers > Series VI: Photographic Materials > Negatives and transparencies"
+    And I should see "Negatives and transparencies"
 
   Scenario: Suppress status display from ead-related items (BL-103)
     Given I am on the home page
