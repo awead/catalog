@@ -26,16 +26,9 @@
       </li>
     <% end %>
 
-    <% if @document.respond_to?( :to_email_text ) %>
-      <li class="email">
-         <%= link_to "Email This", email_catalog_path(:id => @document[:id]), {:id => 'emailLink', :name => 'email', :class => 'lightboxLink'} %>
-      </li>
-    <%- end -%>
-    <%- if @document.respond_to?( :to_sms_text ) -%>
-      <li class="sms">
-         <%= link_to "SMS This", sms_catalog_path(:id => @document[:id]), {:id => 'smsLink', :name => 'sms', :class => 'lightboxLink'} %>
-      </li>
-    <%- end -%>
+    <li class="worldcat">
+      <%= link_to "Check nearby libraries", "http://www.worldcat.org/oclc/#{@document[:id]}" %>
+    </li>
 
     <% if @document.respond_to?(:to_marc) %>
       <li class="librarian_view">
@@ -47,5 +40,4 @@
 
   <% if @document[:innovative_display] %>
     <%= check_availability(@document[:innovative_display]) %>
-    <%= opac_link(@document[:innovative_display]) %>
   <% end %>

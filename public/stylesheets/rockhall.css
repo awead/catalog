@@ -88,6 +88,13 @@ color: #AC1313;
   font-size: xx-large;
 }
 
+#ft {
+  background-color: #7d0000;
+  color: #ffffff;
+  text-align: center;
+  font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+}
+
 /*
   Side-by-side definition list label-value pairs
   (stole this from Hydrangea's css

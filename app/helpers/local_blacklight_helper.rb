@@ -92,10 +92,11 @@ module LocalBlacklightHelper
   end
 
   def opac_link(iii_id)
+    # TODO: BL-136: change this to a 'Check nearby libraries' link to Worldcat
     results = String.new
     link = Rockhall::Innovative.link(iii_id.first.to_s)
     results << "<h5>" + link_to("View in opac", link) + "</h5>"
-    return results.html_safe
+    return nil
   end
 
 end
