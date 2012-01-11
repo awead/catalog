@@ -105,7 +105,7 @@ module Rockhall::EadMethods
   end
 
 
-  def self.get_component_doc(node,level)
+  def self.get_component_doc(node,level,counter)
     part, children = ead_prep_component(node,level)
     collection = ead_collection(node)
     title = get_title(part,level)
@@ -117,7 +117,7 @@ module Rockhall::EadMethods
       :component_level        => level,
       :component_children_b   => children,
       :ref                    => node.attr("id"),
-      :sort_i                 => node.attr("id").gsub(/ref/,""),
+      :sort_i                 => counter,
       :parent_ref             => node.parent.attr("id"),
       :parent_ref_list        => ead_parent_refs(node,level),
       :parent_unittitle_list  => ead_parent_unittitles(node,level),

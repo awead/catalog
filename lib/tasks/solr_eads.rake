@@ -135,10 +135,12 @@ namespace :solr do
       level = 5
       while level > 0
         puts "... level #{level}"
+        counter = 1
         xml.search("//c0#{level.to_s}").each do |node|
-          doc = Rockhall::EadMethods.get_component_doc(node,level)
+          doc = Rockhall::EadMethods.get_component_doc(node,level,counter)
           response = Blacklight.solr.add doc
           commit = Blacklight.solr.commit
+          counter = counter + 1
         end
         level = level - 1
       end
