@@ -431,8 +431,8 @@ Blacklight.configure(:shared) do |config|
       :formatted  => TRUE,
     },
     :ead_provenance_display => {
-      :xpath      => "/ead/archdesc/acqinfo/p",
-      :label      => "/ead/archdesc/acqinfo/head",
+      :xpath      => "/ead/archdesc/custodhist/p",
+      :label      => "/ead/archdesc/custodhist/head",
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },

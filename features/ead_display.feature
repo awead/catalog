@@ -102,8 +102,12 @@ Feature: EAD display
     And I should see "A2010.1.18"
     And I should see "Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information."
 
-  Scenario: Provenance (BL-120)
+  Scenario: Custodial history (BL-120, BL-130)
     Given I am on the ead page for ARC-0037
-    Then I should see "Jeff Gold purchased these files from Toby Gleason."
+    Then I should see "The Jeff Gold Collection was received by the Rock and Roll Hall of Fame Museum"
     And I should not see "Provenance"
-    And I should see "Immediate Source of Acquisition note"
+    And I should not see "Immediate Source of Acquisition note"
+    And I should see "Custodial History"
+    Given I am on the ead page for ARC-0067
+    Then I should see "The Curtis Mayfield Collection was received by the Rock and Roll Hall of Fame and Museum as a gift from Curtis Mayfield in December 1994."
+    And I should see "Custodial History"
