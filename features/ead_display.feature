@@ -110,3 +110,7 @@ Feature: EAD display
     Given I am on the ead page for ARC-0067
     Then I should see "The Curtis Mayfield Collection was received by the Rock and Roll Hall of Fame and Museum as a gift from Curtis Mayfield in December 1994."
     And I should see "Custodial History"
+
+  Scenario: Publisher note in finding aids (BL-142)
+    Given I am on the ead page for ARC-0006
+    Then I should not see "Publisher"
