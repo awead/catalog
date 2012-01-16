@@ -92,7 +92,23 @@ color: #AC1313;
   background-color: #7d0000;
   color: #ffffff;
   text-align: center;
-  font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+#white_link {
+  clear;
+  color: #ffffff;
+  border: none;
+}
+
+/*
+  bottom margin is there to let this area push down and be flush with facets on the left.
+  as we put more content in the home page, this margin can be removed.
+*/
+#mural {
+  margin-top: 1em;
+  margin-bottom: 5em;
 }
 
 /*

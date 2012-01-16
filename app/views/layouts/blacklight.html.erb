@@ -1,39 +1,35 @@
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <title><%= h(@page_title || application_name) %></title>
     <link href="<%= opensearch_catalog_path %>" title="<%= application_name%>" type="application/opensearchdescription+xml" rel="search"/>
-
+    <%= favicon_link_tag %>
     <%= raw(render_head_content) %>
-
-
   </head>
+
   <% if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
-  <body onload="$('input#q').focus();" class="<%= render_body_class %>">
-    <% else %>
-  <body class="<%= render_body_class.html_safe %>">
-    <% end %>
-      <div id="custom-doc" class="yui-t3">
-	    <div id="hd">
+    <body onload="$('input#q').focus();" class="<%= render_body_class %>">
+  <% else %>
+    <body class="<%= render_body_class.html_safe %>">
+  <% end %>
+
+    <div id="custom-doc" class="yui-t3">
+
+      <div id="hd">
         <div class="yui-g">
           <div class="yui-u first" id="rockhall-seal">
             <%= link_to image_tag("logo_flag.png"), "http://www.rockhall.com" %>
           </div>
           <div class="yui-u" id="library-banner">
-            <div id="banner-text">
-              <%= image_tag("text_la.png") %>
-            </div>
+            <div id="banner-text"><%= image_tag("text_la.png") %></div>
           </div>
         </div>
       </div>
 
-	    <div id="bd">
+      <div id="bd">
 
-      	<div id="yui-main">
+        <div id="yui-main">
           <div class="yui-b">
             <%= render :partial=>'/flash_msg' %>
             <%= (params[:controller] == "catalog" and !params[:id]) ? "<span id='results_text'>Search Results</span>".html_safe : "" %>
@@ -53,13 +49,15 @@
           <%= sidebar_items.join('').html_safe %>
         </div>
 
-	    </div>
-	    <div id="ft">
-	      <%= raw(@footer) %>
-	      <span>Rock and Roll Hall of Fame and Museum | Library and Archives</span><br/>
-	      <span>2809 Woodland Avenue | Cleveland, OH 44115 | 216.515.1956 | library@rockhall.org</span>
-	    </div>
-	  </div>
-    </body>
+      </div>
 
-    </html>
+      <div id="ft">
+        <%= raw(@footer) %>
+        <span><%= link_to("Rock and Roll Hall of Fame and Museum", "http://rockhall.com", { :id=>"white_link" }) %> | Library and Archives</span><br/>
+        <span>2809 Woodland Avenue | Cleveland, OH 44115 | 216.515.1956 | <%= mail_to("library@rockhall.org", "library@rockhall.org", {:id=>"white_link"}) %></span>
+      </div>
+
+    </div>
+
+  </body>
+</html>
