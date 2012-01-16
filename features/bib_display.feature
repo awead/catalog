@@ -82,5 +82,12 @@ Feature:
     And I should not see "SMS This"
     And I should see "Check nearby libraries"
 
+  Scenario: Displaying Contents Coded as Enhanced 505s (BL-106)
+    Given I am on the bib record page for 37138367
+    Then I should see the field content "blacklight-contents_display" contain "I looked away"
+    Then I should see the field title "blacklight-contents_display" contain "Contents:"
+
+
+
 
 
