@@ -109,6 +109,8 @@ module Rockhall::EadMethods
     part, children = ead_prep_component(node,level)
     collection = ead_collection(node)
     title = get_title(part,level)
+    parent_titles = ead_parent_unittitles(node,level)
+    full_text = part.text + parent_titles.join(" ")
 
     # Required fields
     doc = {
@@ -120,11 +122,10 @@ module Rockhall::EadMethods
       :sort_i                 => counter,
       :parent_ref             => node.parent.attr("id"),
       :parent_ref_list        => ead_parent_refs(node,level),
-      :parent_unittitle_list  => ead_parent_unittitles(node,level),
+      :parent_unittitle_list  => parent_titles,
       :collection_display     => collection,
       :collection_facet       => collection,
-      :text                   => part.text,
-      #:xml_display            => part.to_xml,
+      :text                   => full_text,
       :title_display          => title
     }
 
@@ -272,5 +273,6 @@ module Rockhall::EadMethods
       return "[No title available]"
     end
   end
+
 
 end

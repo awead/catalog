@@ -54,3 +54,9 @@ Feature: EAD display
     And I fill in "q" with "Negatives"
     When I press "search"
     Then I should not see "Status:"
+
+  Scenario: Searchability of EAD (BL-140)
+    Given I am on the home page
+    And I fill in "q" with "rolling stones tour documents 1981"
+    When I press "search"
+    Then I should see "1981 tour documents"
