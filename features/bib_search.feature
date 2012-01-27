@@ -23,3 +23,9 @@ Feature:
     And I fill in "q" with "Kennedy"
     When I press "search"
     Then I should see "Status:"
+
+  Scenario: Recently created bib records in Millennium are not appearing in Blacklight (BL-151)
+    Given I am on the home page
+    And I fill in "q" with "Père Ubu"
+    When I press "search"
+    Then I should see "The modern dance [sound recording] / Père Ubu"
