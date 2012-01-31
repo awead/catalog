@@ -319,6 +319,16 @@ Blacklight.configure(:shared) do |config|
     }
   }
 
+  # OCLC search
+  config[:search_fields] << {
+    :key => 'OCLC No.',
+    :qt=> 'search',
+    :solr_local_parameters => {
+      :qf => "$oclc_qf",
+      :pf => "$oclc_pf"
+    }
+  }
+
 
   # "sort results by" select (pulldown)
   # label in pulldown is followed by the name of the SOLR field to sort by and

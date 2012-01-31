@@ -29,3 +29,11 @@ Feature:
     And I fill in "q" with "Père Ubu"
     When I press "search"
     Then I should see "The modern dance [sound recording] / Père Ubu"
+
+  @wip
+  Scenario: Make OCLC Bib Record Numbers Searchable (BL-145)
+    Given I am on the home page
+    And I fill in "q" with "458698760"
+    And I select "Oclc No." from "search_field"
+    When I press "search"
+    Then I should see "John Coltrane : his life and music / Lewis Porter"
