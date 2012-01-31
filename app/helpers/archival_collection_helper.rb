@@ -3,19 +3,27 @@ module ArchivalCollectionHelper
 
   def general_info
     results = String.new
+
     results << "<dl class=\"defList\">"
-    Blacklight.config[:ead_geninfo].each do | field |
-      label = get_ead_label(field.to_sym)
-      unless @document[field.to_sym].nil?
-         results << "<dt>#{label}:</dt>"
-         results << "<dd>"
-         @document[field.to_sym].each do |v|
-           results << "#{v}<br/>"
-         end
-         results << "</dd>"
+    results << gen_info_format(:ead_title_display) unless @document[:ead_title_display].nil?
+    results << gen_info_format(:ead_extent_display) unless @document[:ead_extent_display].nil?
+
+    # Dates get special treatment
+    unless @document[:ead_inc_date_display].nil? and @document[:ead_bulk_date_display].nil?
+      results << "<dt>Dates:</dt>"
+      results << "<dd>"
+      results << @document[:ead_inc_date_display].to_s
+      unless @document[:ead_bulk_date_display].nil?
+        results << "; "
+        results << @document[:ead_bulk_date_display].to_s
       end
+      results << "</dd>"
     end
+
+    results << gen_info_format(:ead_lang_display) unless @document[:ead_lang_display].nil?
+    results << gen_info_format(:ead_lang_coll_display) unless @document[:ead_lang_coll_display].nil?
     results << "</dl>"
+
     return results.html_safe
   end
 
@@ -40,13 +48,15 @@ module ArchivalCollectionHelper
   end
 
 
-  def ead_access_headings
+  def ead_subject_headings
     results = String.new
     unless @document["subject_topic_facet"].nil?
-      results << "<h2 id=\"access_headings\">Controlled Access Headings</h2>"
+      results << "<h2 id=\"subject_headings\">Subject Headings</h2>"
       results << "<ul>"
       @document["subject_topic_facet"].sort.each do |v|
-        results << "<li>#{v}</li>"
+        results << "<li>"
+        results << link_to(v, add_facet_params_and_redirect("subject_topic_facet", v), :class=>"facet_select label")
+        results << "</li>"
       end
       results << "</ul>"
     end
@@ -151,6 +161,18 @@ module ArchivalCollectionHelper
       label = Blacklight.config[:ead_fields][field.to_sym][:label]
     end
     return label
+  end
+
+  def gen_info_format(field)
+      results = String.new
+      label = get_ead_label(field.to_sym)
+      content = String.new
+      @document[field.to_sym].each do |v|
+        content << "#{v}<br/>"
+      end
+      results << "<dt>" + label + ":</dt>"
+      results << "<dd>" + content + "</dd>"
+      return results
   end
 
 end

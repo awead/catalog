@@ -32,9 +32,9 @@ Feature: EAD display
     And I should not see "Museum Accession Numbers:"
     And I should not see "A1994.4.10-A1994.4.22"
 
-  Scenario: Names (BL-7)
+  Scenario: Names (BL-7, BL-147)
     Given I am on the ead page for ARC-0058
-    When I follow "Controlled Access Headings"
+    When I follow "Subject Headings"
     Then I should see "Auf der Maur, Melissa"
 
   Scenario: Dimensions note (see BL-124)
@@ -114,3 +114,13 @@ Feature: EAD display
   Scenario: Publisher note in finding aids (BL-142)
     Given I am on the ead page for ARC-0006
     Then I should not see "Publisher"
+
+  Scenario: Order and titles of EAD fields as they appear in Blacklight (BL-147)
+    Given I am on the ead page for ARC-0003
+    Then I should see "Dates:"
+    And I should see "1928-2006, undated; Bulk, 1938-1969"
+    And I should see "Custodial History"
+    And I should not see "Custodial History note"
+    And I should see "Subject Headings"
+    And I should not see "Controlled Access Headings"
+

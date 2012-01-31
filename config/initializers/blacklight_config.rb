@@ -378,13 +378,13 @@ Blacklight.configure(:shared) do |config|
     },
     :ead_bulk_date_display => {
       :xpath      => "/ead/archdesc/did/unitdate[@type='bulk']",
-      :label      => "Bulk Date",
+      :label      => "Dates",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
     :ead_inc_date_display => {
       :xpath      => "/ead/archdesc/did/unitdate[@type='inclusive']",
-      :label      => "Inclusive Dates",
+      :label      => "Dates",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
@@ -438,8 +438,8 @@ Blacklight.configure(:shared) do |config|
     },
     :ead_provenance_display => {
       :xpath      => "/ead/archdesc/custodhist/p",
-      :label      => "/ead/archdesc/custodhist/head",
-      :is_xpath   => TRUE,
+      :label      => "Custodial History",
+      :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
     :ead_use_display => {
@@ -561,14 +561,14 @@ Blacklight.configure(:shared) do |config|
   config[:ead_headings] = [
     "ead_abstract_display",
     "ead_bio_display",
-    "ead_sepmaterial_display",
-    "ead_relatedmaterial_display",
-    "ead_accruals_display",
-    "ead_citation_display",
     "ead_provenance_display",
     "ead_use_display",
     "ead_access_display",
-    "ead_process_display"
+    "ead_sepmaterial_display",
+    "ead_citation_display",
+    "ead_process_display",
+    "ead_relatedmaterial_display",
+    "ead_accruals_display",
   ]
   config[:ead_geninfo]  = [
     "ead_title_display",
