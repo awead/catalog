@@ -61,7 +61,6 @@ Feature: EAD display
     When I press "search"
     Then I should see "1981 tour documents"
 
-  @wip
   Scenario: Title field for EAD finding aids as it appears in Blacklight results (BL-148)
     Given I am on the home page
     And I fill in "q" with "Johnny Otis"
