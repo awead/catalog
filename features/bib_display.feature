@@ -87,6 +87,11 @@ Feature:
     Then I should see the field content "blacklight-contents_display" contain "I looked away"
     Then I should see the field title "blacklight-contents_display" contain "Contents:"
 
+  Scenario: Display OCLC bib record numbers (BL-144)
+    Given I am on the bib record page for 458698760
+    Then I should see the field title "blacklight-id" contain "OCLC No.:"
+    And I should see the field content "blacklight-id" contain "458698760"
+
 
 
 

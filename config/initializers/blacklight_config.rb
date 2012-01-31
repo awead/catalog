@@ -172,6 +172,7 @@ Blacklight.configure(:shared) do |config|
       "issn_display",
       "upc_display",
       "pubnum_display",
+      "id",
       # EAD-only fields
       "arcsource_display",
       "unitdate_display",
@@ -215,6 +216,7 @@ Blacklight.configure(:shared) do |config|
       "issn_display"            => "ISSN:",
       "upc_display"             => "UPC:",
       "pubnum_display"          => "Publisher Number:",
+      "id"                      => "OCLC No.:",
       # EAD-only fields
       "arcsource_display"       => "Archive Source:",
       "unitdate_display"        => "Unit Date:",
