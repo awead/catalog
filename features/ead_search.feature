@@ -60,3 +60,10 @@ Feature: EAD display
     And I fill in "q" with "rolling stones tour documents 1981"
     When I press "search"
     Then I should see "1981 tour documents"
+
+  @wip
+  Scenario: Title field for EAD finding aids as it appears in Blacklight results (BL-148)
+    Given I am on the home page
+    And I fill in "q" with "Johnny Otis"
+    When I press "search"
+    Then I should see the field content "blacklight-title_display" contain "3rd Annual Long Beach Blues Festival: Taj Mahal, Little Milton, Ester Phillips, The Johnny Otis Show, Gatemouth Brown"

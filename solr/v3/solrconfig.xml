@@ -1672,7 +1672,7 @@
                   default="true"
                   class="solr.highlight.GapFragmenter">
         <lst name="defaults">
-          <int name="hl.fragsize">100</int>
+          <int name="hl.fragsize">100000</int>
         </lst>
       </fragmenter>
 
@@ -1683,7 +1683,7 @@
                   class="solr.highlight.RegexFragmenter">
         <lst name="defaults">
           <!-- slightly smaller fragsizes work better because of slop -->
-          <int name="hl.fragsize">70</int>
+          <int name="hl.fragsize">100000</int>
           <!-- allow 50% slop on fragment sizes -->
           <float name="hl.regex.slop">0.5</float>
           <!-- a basic sentence pattern -->
