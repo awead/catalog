@@ -30,7 +30,6 @@ Feature:
     When I press "search"
     Then I should see "The modern dance [sound recording] / Père Ubu"
 
-  @wip
   Scenario: Make OCLC Bib Record Numbers Searchable (BL-145)
     Given I am on the home page
     And I fill in "q" with "458698760"
