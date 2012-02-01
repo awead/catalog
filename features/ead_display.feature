@@ -117,7 +117,7 @@ Feature: EAD display
   Scenario: Order and titles of EAD fields as they appear in Blacklight (BL-147)
     Given I am on the ead page for ARC-0003
     Then I should see "Dates:"
-    And I should see "1928-2006, undated; Bulk, 1938-1969"
+    And I should see "Inclusive, 1928-2006, undated; Bulk, 1938-1969"
     And I should see "Custodial History"
     And I should not see "Custodial History note"
     And I should see "Subject Headings"

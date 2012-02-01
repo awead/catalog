@@ -12,6 +12,7 @@ module ArchivalCollectionHelper
     unless @document[:ead_inc_date_display].nil? and @document[:ead_bulk_date_display].nil?
       results << "<dt>Dates:</dt>"
       results << "<dd>"
+      results << "Inclusive, "
       results << @document[:ead_inc_date_display].to_s
       unless @document[:ead_bulk_date_display].nil?
         results << "; "
