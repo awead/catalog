@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-01-11T08:49-0500</date>
+                <date>2012-01-19T09:42-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -52,7 +52,7 @@
         </did>
         <separatedmaterial id="ref168">
             <head>Separated Materials</head>
-            <p>Commercial publications and audio recordings in this collection have been transferred to the library. Please search for the "Eddie Cochran Historical Organization Collection" in the library catalog for a list of donated titles.</p>
+            <p>Commercially-released publications and audio recordings in this collection have been transferred to the library. Please search for the "Eddie Cochran Historical Organization Collection" in the library catalog for a list of donated titles. If you are unable to find what you are looking for, consult the Library and Archives staff to ensure these materials are available.</p>
         </separatedmaterial>
         <relatedmaterial id="ref169">
             <head>Related Archival Materials</head>
@@ -139,9 +139,11 @@
             <persname rules="aacr" role="Musician (mus)">Cochran, Eddie, 1938-1960</persname>
             <persname rules="aacr">Sheeley, Sharon, 1940-2002</persname>
             <persname rules="aacr">Vincent, Gene, 1935-1971</persname>
+            <genreform source="lcsh">Clippings (Books, newspapers, etc.)</genreform>
             <subject source="lcsh">Fan clubs</subject>
             <genreform source="lcsh">Files (Records)</genreform>
             <subject source="lcsh">Guitar music (Rock)</subject>
+            <genreform source="local">Minidisc</genreform>
             <subject source="lcsh">Music appreciation</subject>
             <subject source="lcsh">Music fans</subject>
             <genreform source="lcsh">Newspapers</genreform>
@@ -149,12 +151,16 @@
             <genreform source="lcsh">Periodicals</genreform>
             <genreform source="lcsh">Photographs</genreform>
             <genreform source="lcsh">Postcards</genreform>
+            <genreform source="lcsh">Posters</genreform>
+            <genreform source="aat">Printed ephemera</genreform>
             <subject source="lcsh">Rock music</subject>
             <subject source="lcsh">Rockabilly music</subject>
             <subject source="lcsh">Rockabilly musicians</subject>
             <genreform source="lcsh">Sheet music</genreform>
             <subject source="lcsh">Traffic fatalities</subject>
+            <genreform source="aat">VHS (TM)</genreform>
             <genreform source="lcsh">Video tapes</genreform>
+            <genreform source="lcsh">Videocassettes</genreform>
         </controlaccess>
         <dsc>
             <c01 id="ref10" level="series">
@@ -1218,11 +1224,11 @@
                 </separatedmaterial>
                 <scopecontent id="ref41">
                     <head>Scope and Contents</head>
-                    <p>Series IV: Audiovisual Materials is divided into two subseries: VHS videocassettes and video mini-discs. Each subseries contains materials recorded by or relating to Eddie Cochran. The items are arranged alphabetically within each subseries.</p>
+                    <p>Series IV: Audiovisual Materials is divided into two subseries: VHS videocassettes and video minidiscs. Each subseries contains materials recorded by or relating to Eddie Cochran. The items are arranged alphabetically within each subseries.</p>
                 </scopecontent>
-                <accessrestrict id="ref173">
+                <accessrestrict id="ref174">
                     <head>Access Restrictions</head>
-                    <p>The condition of some of the materials in this series has not yet been determined for playback purposes. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                    <p>The condition of some of these materials has not yet been determined for playback purposes and they are, therefore, RESTRICTED. Access copies of these materials may have to be created prior to use. Some of the audiovisual materials in the collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                 </accessrestrict>
                 <c02 id="ref23" level="subseries">
                     <did>
@@ -1237,8 +1243,8 @@
                         <did>
                             <unittitle>
                                 <title render="italic">Bobby Cochran and the Rhythm Rockers</title></unittitle>
-                            <container id="cid50034" type="Box" label="Moving images">4</container>
-                            <container parent="cid50034" type="Object">21</container>
+                            <container id="cid787001" type="Box" label="Moving Images">4</container>
+                            <container parent="cid787001" type="Object">21</container>
                             <unitdate>undated</unitdate>
                         </did>
                     </c03>
@@ -1246,8 +1252,8 @@
                         <did>
                             <unittitle>
                                 <title render="italic">Bobby Cochran and the Rock Around the Clock Show</title></unittitle>
-                            <container id="cid50035" type="Box" label="Moving images">4</container>
-                            <container parent="cid50035" type="Object">22</container>
+                            <container id="cid787002" type="Box" label="Moving Images">4</container>
+                            <container parent="cid787002" type="Object">22</container>
                             <unitdate>undated</unitdate>
                         </did>
                     </c03>
@@ -1255,8 +1261,8 @@
                         <did>
                             <unittitle>
                                 <title render="italic">Go, Johnny, Go</title></unittitle>
-                            <container id="cid50036" type="Box" label="Moving images">4</container>
-                            <container parent="cid50036" type="Object">23</container>
+                            <container id="cid787003" type="Box" label="Moving Images">4</container>
+                            <container parent="cid787003" type="Object">23</container>
                             <unitdate>1985</unitdate>
                         </did>
                     </c03>
@@ -1264,17 +1270,21 @@
                         <did>
                             <unittitle>
                                 <title render="italic">Tear it Up: The Rockabilly Documentary</title></unittitle>
-                            <container id="cid50037" type="Box" label="Moving images">4</container>
-                            <container parent="cid50037" type="Object">24</container>
+                            <container id="cid787004" type="Box" label="Moving Images">4</container>
+                            <container parent="cid787004" type="Object">24</container>
                             <unitdate>undated</unitdate>
                         </did>
                     </c03>
                 </c02>
                 <c02 id="ref26" level="subseries">
                     <did>
-                        <unittitle>Subseries 2: Mini-Discs</unittitle>
+                        <unittitle>Subseries 2: Minidiscs [RESTRICTED]</unittitle>
                         <unitdate>undated</unitdate>
                     </did>
+                    <accessrestrict id="ref175">
+                        <head>Access Restrictions</head>
+                        <p>Some of the audiovisual materials in the collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                    </accessrestrict>
                     <c03 id="ref163" level="item">
                         <did>
                             <unittitle>Eddie Cochran. 

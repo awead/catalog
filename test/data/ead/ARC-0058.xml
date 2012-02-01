@@ -7,13 +7,12 @@
                 <titleproper>Jermaine Rogers Collection
                     <num>ARC.0058</num>
                 </titleproper>
-                <titleproper type="filing">Rogers, Jermaine Collection</titleproper>
+                <titleproper type="filing">Rogers Jermaine Collection</titleproper>
                 <author>Finding aid prepared by James A. Kohler, Project Archivist</author>
             </titlestmt>
             <publicationstmt>
                 <publisher>Library and Archives</publisher>
                 <address>
-                    <addressline>Library and Archives</addressline>
                     <addressline>2809 Woodland Ave</addressline>
                     <addressline>Cleveland, OH, 44115</addressline>
                     <addressline>216-515-1956</addressline>
@@ -24,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2011-12-07T14:55-0500</date>
+                <date>2012-01-23T11:52-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -32,7 +31,7 @@
     </eadheader>
     <archdesc level="collection">
         <did>
-            <unittitle>[CLOSED] Jermaine Rogers Posters [DRAFT]</unittitle>
+            <unittitle>[CLOSED] Jermaine Rogers Posters</unittitle>
             <unitid>ARC.0058</unitid>
             <repository>
                 <corpname>Library and Archives</corpname>
@@ -42,11 +41,11 @@
             </langmaterial>
             <physdesc>
                 <extent>4.0 Linear feet</extent>
-                <extent>18 oversize items</extent>
+                <extent>(1 shared flat file drawer)</extent>
             </physdesc>
-            <unitdate>2003-2005</unitdate>
-            <abstract id="ref75" label="Collection Overview">Jermaine Rogers Posters spans the years 2003-2005. The collection consists of 18 concert posters for various bands and venues by the artist Jermaine Rogers. Bands include ...And You Will Know Us By the Trail of Dead, The Cure, Jane's Addiction, and Queens of the Stone Age. The collection provides a sampling of Rogers' artistic work for various concerts in the United States. Seen in a broader context, the collection provides insights into how alternative rock bands and venues promoted their shows from 2003-2005 and the bands that played during that era.</abstract>
-            <langmaterial id="ref78" label="Language of Materials">Materials are in English.</langmaterial>
+            <unitdate normal="2003/2005" type="inclusive">2003-2005</unitdate>
+            <abstract id="ref75" label="Collection Overview">The Jermaine Rogers Posters span the years 2003 to 2005. The collection consists of 18 concert posters for various bands by artist, Jermaine Rogers. Bands include ...And You Will Know Us By the Trail of Dead, The Cure, Jane's Addiction, and Queens of the Stone Age. The collection provides a sampling of Rogers' artistic work for various concerts in the United States. Seen in a broader context, the collection provides insight to how alternative rock bands promoted their shows in the early 2000s, and the bands that played during that era.</abstract>
+            <langmaterial id="ref78" label="Language of Materials">English</langmaterial>
         </did>
         <userestrict id="ref19">
             <head>Use Restrictions</head>
@@ -54,20 +53,19 @@
         </userestrict>
         <accessrestrict id="ref71">
             <head>Access Restrictions</head>
-            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+            <p>Collection is CLOSED.</p>
         </accessrestrict>
         <processinfo id="ref72">
             <head>Processing Information</head>
-            <p>Processed by James A. Kohler, Project Archivist. Completed February 22, 2011.</p>
-            <p>Descriptive sources and standards used to create this inventory: DACS and local Style Guide.</p>
+            <p>Processed by James A. Kohler, Project Archivist. Completed February 22, 2011. Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
         </processinfo>
         <custodhist id="ref73">
             <head>Custodial History note</head>
-            <p>Jermaine Rogers Posters was received by the Rock and Roll Hall of Fame and Museum as a gift from Jermaine Rogers on June 14, 2005.</p>
+            <p>The Jermaine Rogers Posters were received by the Rock and Roll Hall of Fame and Museum, Inc. as a gift from Jermaine Rogers on June 14, 2005.</p>
         </custodhist>
         <scopecontent id="ref74">
             <head>Scope and Contents</head>
-            <p>The materials are arranged chronologically.</p>
+            <p>The Jermaine Rogers Posters are arranged chronologically.</p>
         </scopecontent>
         <bioghist id="ref76">
             <head>Biographical Note</head>
@@ -113,7 +111,7 @@
             <corpname rules="aacr" role="Musician (mus)">Muse (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Octopus Project (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Perfect Circle (Rock group)</corpname>
-            <corpname rules="aacr" role="Musician (mus)">Posion the Well (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Poison the Well (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Queens of the Stone Age</corpname>
             <corpname rules="aacr" role="Musician (mus)">Rapture (Rock group)</corpname>
             <corpname rules="aacr">South by Southwest Music and Media Conference (SXSW)</corpname>
@@ -122,10 +120,12 @@
             <corpname rules="aacr" role="Musician (mus)">Throw Rag (Musical group)</corpname>
             <corpname rules="aacr" source="local" role="Musician (mus)">Tiger Named Love (Musical group)</corpname>
             <corpname rules="aacr" role="Musician (mus)">Wildhearts (Musical group)</corpname>
-            <subject source="lcsh">Alternative rock music.</subject>
+            <subject source="lcsh">Alternative rock music</subject>
+            <title source="local">Audioslave (Musical group) Love</title>
             <subject source="lcsh">Graphic artists</subject>
-            <genreform source="lcsh">Posters.</genreform>
-            <subject source="lcsh">Rock concerts.</subject>
+            <title source="local">Morrison, Jim. Wake up</title>
+            <genreform source="lcsh">Posters</genreform>
+            <subject source="lcsh">Rock concerts</subject>
             <subject source="lcsh">Rock music--Posters</subject>
         </controlaccess>
         <dsc>
@@ -149,7 +149,7 @@
             </c01>
             <c01 id="ref6" level="item">
                 <did>
-                    <unittitle>Galatic; Drums and Tuba</unittitle>
+                    <unittitle>Galatic, Drums and Tuba</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -185,7 +185,7 @@
             </c01>
             <c01 id="ref14" level="item">
                 <did>
-                    <unittitle>Mogwai; ...And You Will Know Us By the Trail of Dead; Dälek</unittitle>
+                    <unittitle>Mogwai, ...And You Will Know Us By the Trail of Dead, Dälek</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -203,7 +203,7 @@
             </c01>
             <c01 id="ref18" level="item">
                 <did>
-                    <unittitle>...And You Will Know Us By the Trail of Dead; Mogwai; Octopus Project; A Tiger Named Love; The Falcon</unittitle>
+                    <unittitle>...And You Will Know Us By the Trail of Dead, Mogwai, Octopus Project, A Tiger Named Love, The Falcon</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -221,7 +221,7 @@
             </c01>
             <c01 id="ref23" level="item">
                 <did>
-                    <unittitle>Deftones; Posion the Well; Denali</unittitle>
+                    <unittitle>Deftones, Poison the Well, Denali</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -243,7 +243,7 @@
             </c01>
             <c01 id="ref27" level="item">
                 <did>
-                    <unittitle>Jane's Addiction; Burden Brothers; Blue October</unittitle>
+                    <unittitle>Jane's Addiction, Burden Brothers, Blue October</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -261,7 +261,7 @@
             </c01>
             <c01 id="ref28" level="item">
                 <did>
-                    <unittitle>A.F.I.; Coheed and Cambria</unittitle>
+                    <unittitle>A.F.I., Coheed and Cambria</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -301,7 +301,7 @@
             </c01>
             <c01 id="ref39" level="item">
                 <did>
-                    <unittitle>The Darkness; The Wildheart</unittitle>
+                    <unittitle>The Darkness, The Wildheart</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -319,7 +319,7 @@
             </c01>
             <c01 id="ref43" level="item">
                 <did>
-                    <unittitle>A Perfect Circle; Burning Brides</unittitle>
+                    <unittitle>A Perfect Circle, Burning Brides</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -355,7 +355,7 @@
             </c01>
             <c01 id="ref51" level="item">
                 <did>
-                    <unittitle>Sparta; Further Seems Forever; Copeland; Sunshine</unittitle>
+                    <unittitle>Sparta, Further Seems Forever, Copeland, Sunshine</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -391,7 +391,7 @@
             </c01>
             <c01 id="ref59" level="item">
                 <did>
-                    <unittitle>Queens of the Stone Age; Throw Rag</unittitle>
+                    <unittitle>Queens of the Stone Age, Throw Rag</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
@@ -438,8 +438,7 @@
             </c01>
             <c01 id="ref68" level="item">
                 <did>
-                    <unittitle>Morrison, Jim - 
-                        <title render="italic">Wake Up</title></unittitle>
+                    <unittitle>Morrison, Jim - "Wake Up"</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>

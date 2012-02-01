@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-01-11T14:21-0500</date>
+                <date>2012-01-16T11:13-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -31,7 +31,7 @@
     </eadheader>
     <archdesc level="collection">
         <did>
-            <unittitle>Jeff Gold Collection [DRAFT]</unittitle>
+            <unittitle>Jeff Gold Collection</unittitle>
             <unitid>ARC.0037</unitid>
             <repository>
                 <corpname>Library and Archives</corpname>
@@ -41,7 +41,7 @@
             </langmaterial>
             <physdesc>
                 <extent>35.33 Linear feet</extent>
-                <extent>(14 records cartons, 3 Hollinger boxes, 3 oversize boxes, 1 audiocassette box, 1 card box, and 4 flat file drawers)</extent>
+                <extent>(14 records cartons, 3 Hollinger boxes, 3 oversize boxes, 1 audiovisual box, 1 card box, 4 flat file drawers)</extent>
             </physdesc>
             <unitdate>1938-2010, undated</unitdate>
             <langmaterial id="ref1862" label="Language of Materials">Materials are in English.</langmaterial>
@@ -68,7 +68,7 @@
         </processinfo>
         <separatedmaterial id="ref1903">
             <head>Separated Materials</head>
-            <p>Books, periodicals, and commercial audiovisual materials have been transferred to the library collection. Please search for the "Jeff Gold Collection" in the library catalog for a list of donated items.</p>
+            <p>Books, periodicals, and commercial audiovisual materials have been transferred to the library collection. Please search for the "Jeff Gold Collection" in the library catalog for a list of donated items. If you are unable to find what you are looking for, consult the Library and Archives staff to ensure these materials are available.</p>
         </separatedmaterial>
         <accessrestrict id="ref1861">
             <head>Access Restrictions</head>
@@ -111,21 +111,24 @@
             <persname rules="dacs" source="local" role="Donor (dnr)">Uttal, Jody</persname>
             <corpname rules="aacr">Who (Musical group)</corpname>
             <genreform source="local">1/4-inch audiotapes</genreform>
+            <title source="lcsh">16 magazine</title>
             <genreform source="local">3/4-inch videocassettes</genreform>
             <genreform source="lcsh">Audiocassettes</genreform>
             <subject source="lcsh">Concert tours</subject>
             <genreform source="lcsh">Contracts</genreform>
-            <genreform source="aat">Ephemera</genreform>
             <subject source="lcsh">Fan clubs</subject>
+            <genreform source="aat">Hi-8</genreform>
             <occupation source="lcsh">Music journalists--United States.</occupation>
             <subject source="lcsh">Music trade--Management.</subject>
             <genreform source="lcsh">Photographs</genreform>
             <genreform source="lcsh">Postcards</genreform>
             <genreform source="lcsh">Posters</genreform>
             <genreform source="aat">Press kits</genreform>
+            <genreform source="aat">Printed ephemera</genreform>
             <subject source="lcsh">Psychedelic rock music--California--San Francisco.</subject>
             <subject source="lcsh">Rock groups--United States.</subject>
             <subject source="lcsh">Rock music--England</subject>
+            <genreform source="aat">VHS (TM)</genreform>
             <genreform source="lcsh">Video tapes</genreform>
             <genreform source="lcsh">Videocassettes</genreform>
         </controlaccess>
@@ -1866,8 +1869,8 @@
                 <c02 id="ref67" level="file">
                     <did>
                         <unittitle>MC5</unittitle>
-                        <container id="cid346041" type="Box" label="Text">AF2</container>
-                        <container parent="cid346041" type="Folder">35</container>
+                        <container id="cid763002" type="Box" label="Graphic materials">AF2</container>
+                        <container parent="cid763002" type="Folder">35</container>
                         <unitdate>undated</unitdate>
                     </did>
                     <odd id="ref403">
@@ -1878,6 +1881,10 @@
                         <head>General note</head>
                         <p>contains one photograph</p>
                     </odd>
+                    <separatedmaterial id="ref2224">
+                        <head>Separated Materials</head>
+                        <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
                 </c02>
                 <c02 id="ref374" level="file">
                     <did>
@@ -2103,6 +2110,10 @@
                         <head>General note</head>
                         <p>press kit</p>
                     </odd>
+                    <separatedmaterial id="ref2225">
+                        <head>Separated Materials</head>
+                        <p>"The New York Dolls Fact Sheet" on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
                 </c02>
                 <c02 id="ref1360" level="file">
                     <did>
@@ -2609,7 +2620,9 @@
                         <c04 id="ref807" level="item">
                             <did>
                                 <unittitle>US tour</unittitle>
-                                <container id="cid363072" type="Object" label="Graphic materials">Museum exhibit</container>
+                                <container id="cid765002" type="Box" label="Graphic materials">AF2</container>
+                                <container parent="cid765002" type="Folder">68</container>
+                                <container parent="cid765002" type="Object">13</container>
                                 <unitdate>1972</unitdate>
                             </did>
                             <odd id="ref808">
@@ -2966,7 +2979,8 @@
                     <c03 id="ref343" level="file">
                         <did>
                             <unittitle>Business card</unittitle>
-                            <container id="cid378002" type="Object" label="Text">Museum exhibit</container>
+                            <container id="cid765001" type="Box" label="Text">AF6</container>
+                            <container parent="cid765001" type="Folder">16</container>
                             <unitdate>circa 1976</unitdate>
                         </did>
                         <odd id="ref345">
@@ -3464,7 +3478,6 @@
                         <unittitle>The Yardbirds</unittitle>
                         <container id="cid353043" type="Box" label="Text">AF3</container>
                         <container parent="cid353043" type="Folder">46</container>
-                        <container id="cid686001" type="Object" label="Text">Museum exhibit</container>
                         <unitdate>1965, undated</unitdate>
                     </did>
                     <odd id="ref348">
@@ -3798,7 +3811,6 @@
                             <container parent="cid464020" type="Object">1</container>
                             <container id="cid378018" type="Box" label="Graphic materials">SF1</container>
                             <container parent="cid378018" type="Folder">22</container>
-                            <container id="cid686002" type="Object" label="Graphic materials">Museum exhibit</container>
                             <container id="cid686003" type="Object" label="Graphic materials">Museum storage</container>
                             <unitdate>1977-1989, undated</unitdate>
                         </did>
@@ -4253,6 +4265,10 @@
                             <head>Location</head>
                             <p>Avalon Ballroom, San Francisco</p>
                         </odd>
+                        <separatedmaterial id="ref2228">
+                            <head>Separated Materials</head>
+                            <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                        </separatedmaterial>
                     </c03>
                     <c03 id="ref1200" level="item">
                         <did>
@@ -5759,7 +5775,8 @@
                     <did>
                         <unittitle>Jazz programs</unittitle>
                         <container id="cid475001" type="Box" label="Text">RG3</container>
-                        <unitdate>1950-1976</unitdate>
+                        <container parent="cid475001" type="Folder">1-10</container>
+                        <unitdate>1950-1976, undated</unitdate>
                     </did>
                     <accessrestrict id="ref2114">
                         <head>Access Restrictions</head>
@@ -6052,19 +6069,11 @@
                             <title render="italic">Live at Leeds</title></p>
                     </odd>
                 </c02>
-                <c02 id="ref246" level="file">
-                    <did>
-                        <unittitle>Williams, Hank</unittitle>
-                        <container id="cid447013" type="Box" label="Text">RG2</container>
-                        <container parent="cid447013" type="Folder">14</container>
-                        <unitdate>1949-1957; 1969</unitdate>
-                    </did>
-                </c02>
                 <c02 id="ref1855" level="file">
                     <did>
                         <unittitle>Wilson, Wes</unittitle>
                         <container id="cid447007" type="Box" label="Text">RG2</container>
-                        <container parent="cid447007" type="Folder">15</container>
+                        <container parent="cid447007" type="Folder">14</container>
                         <unitdate>1966-1967</unitdate>
                     </did>
                 </c02>
@@ -6072,7 +6081,7 @@
                     <did>
                         <unittitle>Wonder, Stevie</unittitle>
                         <container id="cid447008" type="Box" label="Text">RG2</container>
-                        <container parent="cid447008" type="Folder">16</container>
+                        <container parent="cid447008" type="Folder">15</container>
                         <unitdate>1973</unitdate>
                     </did>
                 </c02>
@@ -6080,7 +6089,7 @@
                     <did>
                         <unittitle>Woodstock</unittitle>
                         <container id="cid447009" type="Box" label="Text">RG2</container>
-                        <container parent="cid447009" type="Folder">17</container>
+                        <container parent="cid447009" type="Folder">16</container>
                         <unitdate>1969-1972</unitdate>
                     </did>
                 </c02>
@@ -6097,7 +6106,7 @@
                     <did>
                         <unittitle>The Youngbloods</unittitle>
                         <container id="cid447014" type="Box" label="Text">RG2</container>
-                        <container parent="cid447014" type="Folder">18</container>
+                        <container parent="cid447014" type="Folder">17</container>
                         <unitdate>1966-1973</unitdate>
                     </did>
                 </c02>
@@ -6105,7 +6114,7 @@
                     <did>
                         <unittitle>Various artists and subjects</unittitle>
                         <container id="cid447015" type="Box" label="Text">RG2</container>
-                        <container parent="cid447015" type="Folder">19</container>
+                        <container parent="cid447015" type="Folder">18</container>
                         <unitdate>1955-1970</unitdate>
                     </did>
                 </c02>
@@ -6485,17 +6494,14 @@
                     <c03 id="ref845" level="file">
                         <did>
                             <unittitle>Devo</unittitle>
-                            <container id="cid365068" type="Object" label="Graphic materials">Museum storage</container>
+                            <container id="cid765007" type="Drawer-Folder" label="Graphic materials">FF.3.2-7</container>
+                            <container parent="cid765007" type="Object">12-13</container>
                             <unitdate>circa 1978</unitdate>
                         </did>
                         <odd id="ref846">
                             <head>Museum Accession Number</head>
                             <p>A2004.54.106-A2004.54.107</p>
                         </odd>
-                        <separatedmaterial id="ref1961">
-                            <head>Separated Materials</head>
-                            <p>Items in Museum storage. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
-                        </separatedmaterial>
                         <odd id="ref847">
                             <head>General note</head>
                             <p>
@@ -7327,14 +7333,14 @@
                                 <container parent="cid375023" type="Object">3</container>
                                 <unitdate>undated</unitdate>
                             </did>
-                            <separatedmaterial id="ref301">
-                                <head>Separated Materials</head>
-                                <p>On exhibit at the Rock and Roll Hall of Fame Museum (Elvis exhibit)</p>
-                            </separatedmaterial>
                             <odd id="ref331">
                                 <head>Museum Accession Number</head>
                                 <p>A2002.82.4</p>
                             </odd>
+                            <separatedmaterial id="ref2230">
+                                <head>Separated Materials</head>
+                                <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                            </separatedmaterial>
                         </c04>
                         <c04 id="ref305" level="item">
                             <did>
@@ -9020,8 +9026,9 @@
                     </c03>
                     <c03 id="ref1354" level="item">
                         <did>
-                            <unittitle>Lollapalooza</unittitle>
-                            <container id="cid366073" type="Object" label="Graphic materials">Museum storage</container>
+                            <unittitle>Lollapalooza, King County Fairgrounds, WA</unittitle>
+                            <container id="cid765004" type="Drawer-Folder" label="Graphic materials">FF.3.5-5</container>
+                            <container parent="cid765004" type="Object">2</container>
                             <unitdate>undated</unitdate>
                         </did>
                         <odd id="ref1355">
@@ -9032,10 +9039,10 @@
                             <head>Featured artists</head>
                             <p>Jane's Addiction, Siouxsie and the Banshees, Violent Femmes, Ice-T, Fishbone, Henry Rollins Band</p>
                         </odd>
-                        <odd id="ref1357">
-                            <head>Location</head>
-                            <p>King County Fairgrounds, WA</p>
-                        </odd>
+                        <separatedmaterial id="ref2237">
+                            <head>Separated Materials</head>
+                            <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                        </separatedmaterial>
                     </c03>
                     <c03 id="ref588" level="item">
                         <did>
@@ -9198,12 +9205,12 @@
                     <c03 id="ref1338" level="file">
                         <did>
                             <unittitle>Mother Love Bone</unittitle>
-                            <unitdate>undated</unitdate>
                         </did>
                         <c04 id="ref1339" level="item">
                             <did>
                                 <unittitle>With Alice in Chaines at OZ, Seattle</unittitle>
                                 <container id="cid366074" type="Object" label="Graphic materials">Museum storage</container>
+                                <unitdate>undated</unitdate>
                             </did>
                             <odd id="ref1340">
                                 <head>Museum Accession Number</head>
@@ -9213,17 +9220,24 @@
                         <c04 id="ref1341" level="item">
                             <did>
                                 <unittitle>With Alice in Chains at The Central Tavern, Seattle</unittitle>
-                                <container id="cid366075" type="Object" label="Graphic materials">Museum storage</container>
+                                <container id="cid765003" type="Drawer-Folder" label="Graphic materials">FF.3.5-5</container>
+                                <container parent="cid765003" type="Object">1</container>
+                                <unitdate>undated</unitdate>
                             </did>
                             <odd id="ref1342">
                                 <head>Museum Accession Number</head>
                                 <p>A2005.105.28</p>
                             </odd>
+                            <separatedmaterial id="ref2235">
+                                <head>Separated Materials</head>
+                                <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                            </separatedmaterial>
                         </c04>
                         <c04 id="ref1387" level="item">
                             <did>
                                 <unittitle>With Shotgun Mama, Talks Cheap</unittitle>
                                 <container id="cid363100" type="Object" label="Graphic materials">Museum storage</container>
+                                <unitdate>undated</unitdate>
                             </did>
                             <odd id="ref1388">
                                 <head>Museum Accession Number</head>
@@ -9242,13 +9256,18 @@
                     <c03 id="ref1383" level="item">
                         <did>
                             <unittitle>Nirvana, Screaming Jay Hawkins, Fitz of Depression</unittitle>
-                            <container id="cid363098" type="Object" label="Graphic materials">Museum storage</container>
+                            <container id="cid765005" type="Drawer-Folder" label="Graphic materials">FF.3.5-5</container>
+                            <container parent="cid765005" type="Object">3</container>
                             <unitdate>undated</unitdate>
                         </did>
                         <odd id="ref1384">
                             <head>Museum Accession Number</head>
                             <p>A2005.105.45</p>
                         </odd>
+                        <separatedmaterial id="ref2239">
+                            <head>Separated Materials</head>
+                            <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                        </separatedmaterial>
                     </c03>
                     <c03 id="ref1719" level="file">
                         <did>
@@ -9765,11 +9784,11 @@
                 </did>
                 <accessrestrict id="ref1902">
                     <head>Access Restrictions</head>
-                    <p>Some of the audiovisual materials in this collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                    <p>The condition of some of these materials has not yet been determined for playback purposes. Some of the audiovisual materials in the collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                 </accessrestrict>
                 <scopecontent id="ref2003">
                     <head>Scope and Contents</head>
-                    <p>Series VII: Audiovisual Materials contains both audio recordings and video tapes that date from the years 1967-2001. These materials are arranged by format, and alphabetically by artist or event name.</p>
+                    <p>Series VII: Audiovisual Materials contains both audio recordings and video tapes that date from the years 1967-2001. These materials are arranged by audio or video format, and then alphabetically by artist name or event title.</p>
                 </scopecontent>
                 <c02 id="ref2213" level="subseries">
                     <did>
@@ -9778,11 +9797,15 @@
                     </did>
                     <accessrestrict id="ref2220">
                         <head>Access Restrictions</head>
-                        <p>The condition of these materials has not yet been determined for playback purposes. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                        <p>The condition of some of these materials has not yet been determined for playback purposes. Some of the audiovisual materials in the series are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                     </accessrestrict>
+                    <scopecontent id="ref2222">
+                        <head>Scope and Contents</head>
+                        <p>The audio recordings found here are primarily either audiocassettes or 1/4-inch audio tapes. The content of the former is mostly artists' appearances on radio shows, such as Howard Stern or other morning shows from the Los Angeles area. The reels contain studio work, such as demo recordings.</p>
+                    </scopecontent>
                     <c03 id="ref1983" level="file">
                         <did>
-                            <unittitle>Boone, Pat</unittitle>
+                            <unittitle>Boone, Pat (audiocassette)</unittitle>
                             <container id="cid480001" type="Box" label="Audio">AV1</container>
                             <container parent="cid480001" type="Cassette">1</container>
                             <unitdate>1996 July 18</unitdate>
@@ -9790,23 +9813,15 @@
                     </c03>
                     <c03 id="ref1897" level="file">
                         <did>
-                            <unittitle>Bowie, David [RESTRICTED]</unittitle>
+                            <unittitle>Bowie, David (1/4-inch reel)</unittitle>
                             <container id="cid486011" type="Box" label="Audio">AV5</container>
                             <container parent="cid486011" type="Reel">1</container>
                             <unitdate>undated</unitdate>
                         </did>
                     </c03>
-                    <c03 id="ref2002" level="file">
-                        <did>
-                            <unittitle>Bumbershoot: the Seattle Arts Festival promo tape</unittitle>
-                            <container id="cid480029" type="Box" label="Moving Images">AV4</container>
-                            <container parent="cid480029" type="Cassette">14</container>
-                            <unitdate>undated</unitdate>
-                        </did>
-                    </c03>
                     <c03 id="ref2004" level="file">
                         <did>
-                            <unittitle>The Byrds [RESTRICTED]</unittitle>
+                            <unittitle>The Byrds (1/4-inch reel)</unittitle>
                             <container id="cid486001" type="Box" label="Audio">AV5</container>
                             <container parent="cid486001" type="Reel">2</container>
                             <unitdate>1977</unitdate>
@@ -9814,7 +9829,7 @@
                     </c03>
                     <c03 id="ref1994" level="file">
                         <did>
-                            <unittitle>Checker, Chubby [RESTRICTED]</unittitle>
+                            <unittitle>Checker, Chubby (1/4-inch reel)</unittitle>
                             <container id="cid480018" type="Box" label="Audio">AV2</container>
                             <container parent="cid480018" type="Reel">4</container>
                             <unitdate>1980 December 8</unitdate>
@@ -9822,7 +9837,7 @@
                     </c03>
                     <c03 id="ref1991" level="file">
                         <did>
-                            <unittitle>Coolidge, Rita [RESTRICTED]</unittitle>
+                            <unittitle>Coolidge, Rita (1/4-inch reel)</unittitle>
                             <container id="cid480015" type="Box" label="Audio">AV2</container>
                             <container parent="cid480015" type="Reel">2</container>
                             <unitdate>undated</unitdate>
@@ -9830,7 +9845,7 @@
                     </c03>
                     <c03 id="ref1896" level="file">
                         <did>
-                            <unittitle>Dylan, Bob [RESTRICTED]</unittitle>
+                            <unittitle>Dylan, Bob (1/4-inch reels)</unittitle>
                             <container id="cid486009" type="Box" label="Audio">AV5</container>
                             <container parent="cid486009" type="Reel">3-4</container>
                             <unitdate>circa 1966, 1974</unitdate>
@@ -9838,7 +9853,7 @@
                     </c03>
                     <c03 id="ref2005" level="file">
                         <did>
-                            <unittitle>Elliott, Cass [RESTRICTED]</unittitle>
+                            <unittitle>Elliott, Cass (1/4-inch reel)</unittitle>
                             <container id="cid486002" type="Box" label="Audio">AV5</container>
                             <container parent="cid486002" type="Reel">5</container>
                             <unitdate>undated</unitdate>
@@ -9846,7 +9861,7 @@
                     </c03>
                     <c03 id="ref2011" level="file">
                         <did>
-                            <unittitle>Erickson, Roky [RESTRICTED]</unittitle>
+                            <unittitle>Erickson, Roky (1/4-inch reel)</unittitle>
                             <container id="cid486003" type="Box" label="Audio">AV5</container>
                             <container parent="cid486003" type="Reel">10</container>
                             <unitdate>undated</unitdate>
@@ -9854,7 +9869,7 @@
                     </c03>
                     <c03 id="ref1899" level="file">
                         <did>
-                            <unittitle>Fairport Convention [RESTRICTED]</unittitle>
+                            <unittitle>Fairport Convention (1/4-inch reels)</unittitle>
                             <container id="cid486012" type="Box" label="Audio">AV5</container>
                             <container parent="cid486012" type="Reel">6-9</container>
                             <unitdate>1973, 1979</unitdate>
@@ -9862,7 +9877,7 @@
                     </c03>
                     <c03 id="ref1891" level="file">
                         <did>
-                            <unittitle>Fogerty, John</unittitle>
+                            <unittitle>Fogerty, John (audiocassettes)</unittitle>
                             <container id="cid480008" type="Box" label="Audio">AV1</container>
                             <container parent="cid480008" type="Cassette">2-5</container>
                             <unitdate>1997</unitdate>
@@ -9870,7 +9885,7 @@
                     </c03>
                     <c03 id="ref2006" level="file">
                         <did>
-                            <unittitle>Golden Earring [RESTRICTED]</unittitle>
+                            <unittitle>Golden Earring (1/4-inch reels)</unittitle>
                             <container id="cid486004" type="Box" label="Audio">AV5</container>
                             <container parent="cid486004" type="Reel">10-11</container>
                             <unitdate>undated</unitdate>
@@ -9878,7 +9893,7 @@
                     </c03>
                     <c03 id="ref1885" level="file">
                         <did>
-                            <unittitle>Goo Goo Dolls</unittitle>
+                            <unittitle>Goo Goo Dolls (audiocassettes)</unittitle>
                             <container id="cid480004" type="Box" label="Audio">AV1</container>
                             <container parent="cid480004" type="Cassette">6-10</container>
                             <unitdate>1999-2001</unitdate>
@@ -9890,7 +9905,7 @@
                     </c03>
                     <c03 id="ref1890" level="file">
                         <did>
-                            <unittitle>Hagar, Sammy</unittitle>
+                            <unittitle>Hagar, Sammy (audiocassettes)</unittitle>
                             <container id="cid480007" type="Box" label="Audio">AV1</container>
                             <container parent="cid480007" type="Cassette">11-14</container>
                             <unitdate>1997</unitdate>
@@ -9898,7 +9913,7 @@
                     </c03>
                     <c03 id="ref2216" level="file">
                         <did>
-                            <unittitle>Hendrix, Jimi [RESTRICTED]</unittitle>
+                            <unittitle>Hendrix, Jimi (1/4-inch reels)</unittitle>
                             <container id="cid751002" type="Box" label="Audio">AV5</container>
                             <container parent="cid751002" type="Reel">12-13</container>
                             <unitdate>undated</unitdate>
@@ -9906,7 +9921,7 @@
                     </c03>
                     <c03 id="ref2009" level="file">
                         <did>
-                            <unittitle>International Artists [RESTRICTED]</unittitle>
+                            <unittitle>International Artists (1/4-inch reels)</unittitle>
                             <container id="cid486005" type="Box" label="Audio">AV5</container>
                             <container parent="cid486005" type="Reel">14-15</container>
                             <unitdate>undated</unitdate>
@@ -9914,7 +9929,7 @@
                     </c03>
                     <c03 id="ref1988" level="file">
                         <did>
-                            <unittitle>Jackson, Joe</unittitle>
+                            <unittitle>Jackson, Joe (audiocassettes)</unittitle>
                             <container id="cid480011" type="Box" label="Audio">AV2</container>
                             <container parent="cid480011" type="Cassette">1-2</container>
                             <unitdate>1988</unitdate>
@@ -9922,7 +9937,7 @@
                     </c03>
                     <c03 id="ref2209" level="file">
                         <did>
-                            <unittitle>Jagger, Mick [RESTRICTED]</unittitle>
+                            <unittitle>Jagger, Mick (1/4-inch reel)</unittitle>
                             <container id="cid732008" type="Box" label="Audio">AV2</container>
                             <container parent="cid732008" type="Reel">5</container>
                             <unitdate>undated</unitdate>
@@ -9930,7 +9945,7 @@
                     </c03>
                     <c03 id="ref2007" level="file">
                         <did>
-                            <unittitle>Jan and Dean [RESTRICTED]</unittitle>
+                            <unittitle>Jan and Dean (1/4-inch reel)</unittitle>
                             <container id="cid486006" type="Box" label="Audio">AV5</container>
                             <container parent="cid486006" type="Reel">16</container>
                             <unitdate>undated</unitdate>
@@ -9938,7 +9953,7 @@
                     </c03>
                     <c03 id="ref2008" level="file">
                         <did>
-                            <unittitle>John, Elton [RESTRICTED]</unittitle>
+                            <unittitle>John, Elton (1/4-inch reel)</unittitle>
                             <container id="cid486007" type="Box" label="Audio">AV5</container>
                             <container parent="cid486007" type="Reel">17</container>
                             <unitdate>undated</unitdate>
@@ -9946,7 +9961,7 @@
                     </c03>
                     <c03 id="ref2010" level="file">
                         <did>
-                            <unittitle>Lofgren, Nils [RESTRICTED]</unittitle>
+                            <unittitle>Lofgren, Nils (1/4-inch reel)</unittitle>
                             <container id="cid486008" type="Box" label="Audio">AV5</container>
                             <container parent="cid486008" type="Reel">18</container>
                             <unitdate>1977</unitdate>
@@ -9954,7 +9969,7 @@
                     </c03>
                     <c03 id="ref2217" level="file">
                         <did>
-                            <unittitle>Los Lobos</unittitle>
+                            <unittitle>Los Lobos (audiocassette)</unittitle>
                             <container id="cid751003" type="Box" label="Audio">AV1</container>
                             <container parent="cid751003" type="Cassette">15</container>
                             <unitdate>1996 May 16</unitdate>
@@ -9962,14 +9977,14 @@
                     </c03>
                     <c03 id="ref1898" level="file">
                         <did>
-                            <unittitle>Nico (with John Cale) [RESTRICTED]</unittitle>
+                            <unittitle>Nico (with John Cale; 1/4-inch reel)</unittitle>
                             <container id="cid486020" type="Box" label="Audio">AV5</container>
                             <container parent="cid486020" type="Reel">19</container>
                         </did>
                     </c03>
                     <c03 id="ref1984" level="file">
                         <did>
-                            <unittitle>Nugent, Ted</unittitle>
+                            <unittitle>Nugent, Ted (audiocassette)</unittitle>
                             <container id="cid480002" type="Box" label="Audio">AV1</container>
                             <container parent="cid480002" type="Cassette">16</container>
                             <unitdate>undated</unitdate>
@@ -9977,7 +9992,7 @@
                     </c03>
                     <c03 id="ref2013" level="file">
                         <did>
-                            <unittitle>Parker, Graham [RESTRICTED]</unittitle>
+                            <unittitle>Parker, Graham (1/4-inch reels)</unittitle>
                             <container id="cid486014" type="Box" label="Audio">AV6</container>
                             <container parent="cid486014" type="Reel">1-2</container>
                             <unitdate>1978</unitdate>
@@ -9985,7 +10000,7 @@
                     </c03>
                     <c03 id="ref2014" level="file">
                         <did>
-                            <unittitle>Petty, Tom [RESTRICTED]</unittitle>
+                            <unittitle>Petty, Tom (1/4-inch reel)</unittitle>
                             <container id="cid486015" type="Box" label="Audio">AV6</container>
                             <container parent="cid486015" type="Reel">3</container>
                             <unitdate>1978</unitdate>
@@ -9994,7 +10009,7 @@
                     <c03 id="ref1993" level="file">
                         <did>
                             <unittitle>
-                                <title render="italic">Playboy</title> Awards [RESTRICTED]</unittitle>
+                                <title render="italic">Playboy</title> Awards (1/4-inch reel)</unittitle>
                             <container id="cid480016" type="Box" label="Audio">AV2</container>
                             <container parent="cid480016" type="Reel">3</container>
                             <unitdate>undated</unitdate>
@@ -10003,7 +10018,7 @@
                     <c03 id="ref1990" level="file">
                         <did>
                             <unittitle>
-                                <title render="italic">Rolling Stone</title> magazine promotional minidisc [RESTRICTED]</unittitle>
+                                <title render="italic">Rolling Stone</title> magazine promotional minidisc (Sony minidisc)</unittitle>
                             <container id="cid480012" type="Box" label="Audio">AV2</container>
                             <container parent="cid480012" type="Disk">1</container>
                             <unitdate>1994</unitdate>
@@ -10011,7 +10026,7 @@
                     </c03>
                     <c03 id="ref1893" level="file">
                         <did>
-                            <unittitle>The Rolling Stones [RESTRICTED]</unittitle>
+                            <unittitle>The Rolling Stones (audiocassette, 1/4-inch reel)</unittitle>
                             <container id="cid480033" type="Box" label="Audio">AV1</container>
                             <container parent="cid480033" type="Cassette">24</container>
                             <container id="cid480014" type="Box" label="Audio">AV2</container>
@@ -10021,7 +10036,7 @@
                     </c03>
                     <c03 id="ref1892" level="file">
                         <did>
-                            <unittitle>Roth, David Lee</unittitle>
+                            <unittitle>Roth, David Lee (audiocassette)</unittitle>
                             <container id="cid480009" type="Box" label="Audio">AV1</container>
                             <container parent="cid480009" type="Cassette">17</container>
                             <unitdate>1996</unitdate>
@@ -10029,7 +10044,7 @@
                     </c03>
                     <c03 id="ref1992" level="file">
                         <did>
-                            <unittitle>Seatrain [RESTRICTED]</unittitle>
+                            <unittitle>Seatrain (1/4-inch reel)</unittitle>
                             <container id="cid480017" type="Box" label="Audio">AV2</container>
                             <container parent="cid480017" type="Reel">1</container>
                             <unitdate>undated</unitdate>
@@ -10037,7 +10052,7 @@
                     </c03>
                     <c03 id="ref2015" level="file">
                         <did>
-                            <unittitle>Silver Apples [RESTRICTED]</unittitle>
+                            <unittitle>Silver Apples (1/4-inch reels)</unittitle>
                             <container id="cid486016" type="Box" label="Audio">AV6</container>
                             <container parent="cid486016" type="Reel">4-7</container>
                             <unitdate>1969</unitdate>
@@ -10045,7 +10060,7 @@
                     </c03>
                     <c03 id="ref1888" level="file">
                         <did>
-                            <unittitle>Spirit [RESTRICTED]</unittitle>
+                            <unittitle>Spirit (1/4-inch reels)</unittitle>
                             <container id="cid486019" type="Box" label="Audio">AV6</container>
                             <container parent="cid486019" type="Reel">8-15</container>
                             <unitdate>1967, undated</unitdate>
@@ -10053,7 +10068,7 @@
                     </c03>
                     <c03 id="ref2016" level="file">
                         <did>
-                            <unittitle>Spooky Tooth [RESTRICTED]</unittitle>
+                            <unittitle>Spooky Tooth (1/4-inch reels)</unittitle>
                             <container id="cid486017" type="Box" label="Audio">AV5</container>
                             <container parent="cid486017" type="Reel">9</container>
                             <container id="cid486018" type="Box" label="Audio">AV6</container>
@@ -10063,7 +10078,7 @@
                     </c03>
                     <c03 id="ref1889" level="file">
                         <did>
-                            <unittitle>Springsteen, Bruce</unittitle>
+                            <unittitle>Springsteen, Bruce (audiocassettes)</unittitle>
                             <container id="cid480006" type="Box" label="Audio">AV1</container>
                             <container parent="cid480006" type="Cassette">18-20</container>
                             <unitdate>undated</unitdate>
@@ -10071,7 +10086,7 @@
                     </c03>
                     <c03 id="ref2012" level="file">
                         <did>
-                            <unittitle>Steel Mill [RESTRICTED]</unittitle>
+                            <unittitle>Steel Mill (1/4-inch reels)</unittitle>
                             <container id="cid486023" type="Box" label="Audio">AV6</container>
                             <container parent="cid486023" type="Reel">17</container>
                             <container id="cid486013" type="Box" label="Audio">AV5</container>
@@ -10081,7 +10096,7 @@
                     </c03>
                     <c03 id="ref1985" level="file">
                         <did>
-                            <unittitle>Stern, Howard</unittitle>
+                            <unittitle>Stern, Howard (audiocassette)</unittitle>
                             <container id="cid480003" type="Box" label="Audio">AV1</container>
                             <container parent="cid480003" type="Cassette">21</container>
                             <unitdate>1997</unitdate>
@@ -10089,7 +10104,7 @@
                     </c03>
                     <c03 id="ref2017" level="file">
                         <did>
-                            <unittitle>Stevens, Cat [RESTRICTED]</unittitle>
+                            <unittitle>Stevens, Cat (1/4-inch reel)</unittitle>
                             <container id="cid486021" type="Box" label="Audio">AV6</container>
                             <container parent="cid486021" type="Reel">18</container>
                             <unitdate>1979</unitdate>
@@ -10097,7 +10112,7 @@
                     </c03>
                     <c03 id="ref2018" level="file">
                         <did>
-                            <unittitle>Turner, Ike and Tina [RESTRICTED]</unittitle>
+                            <unittitle>Turner, Ike and Tina (1/4-inch reel)</unittitle>
                             <container id="cid486022" type="Box" label="Audio">AV6</container>
                             <container parent="cid486022" type="Reel">19</container>
                             <unitdate>1979</unitdate>
@@ -10105,7 +10120,7 @@
                     </c03>
                     <c03 id="ref2219" level="file">
                         <did>
-                            <unittitle>Van Halen</unittitle>
+                            <unittitle>Van Halen (audiocassettes)</unittitle>
                             <container id="cid751001" type="Box" label="Audio">AV1</container>
                             <container parent="cid751001" type="Cassette">22-23</container>
                             <unitdate>1996, undated</unitdate>
@@ -10113,7 +10128,7 @@
                     </c03>
                     <c03 id="ref1900" level="file">
                         <did>
-                            <unittitle>The Who [RESTRICTED]</unittitle>
+                            <unittitle>The Who (1/4-inch reels)</unittitle>
                             <container id="cid486025" type="Box" label="Audio">AV7</container>
                             <container parent="cid486025" type="Reel">1-2</container>
                             <unitdate>undated</unitdate>
@@ -10121,7 +10136,7 @@
                     </c03>
                     <c03 id="ref2019" level="file">
                         <did>
-                            <unittitle>Various artists [RESTRICTED]</unittitle>
+                            <unittitle>Various artists (1/4-inch reels)</unittitle>
                             <container id="cid486024" type="Box" label="Audio">AV7</container>
                             <container parent="cid486024" type="Reel">3-7</container>
                             <unitdate>1979</unitdate>
@@ -10137,9 +10152,21 @@
                         <head>Access Restrictions</head>
                         <p>The condition of these materials has not yet been determined for playback purposes. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                     </accessrestrict>
+                    <scopecontent id="ref2223">
+                        <head>Scope and Contents</head>
+                        <p>The videos found here are primarily VHS, and contain either television appearances or promotional content, including in-store events and concerts. There is also 8mm and 16mm film and H-8.</p>
+                    </scopecontent>
+                    <c03 id="ref2002" level="file">
+                        <did>
+                            <unittitle>Bumbershoot: the Seattle Arts Festival promo tape (VHS videocassette)</unittitle>
+                            <container id="cid480029" type="Box" label="Moving Images">AV4</container>
+                            <container parent="cid480029" type="Cassette">14</container>
+                            <unitdate>undated</unitdate>
+                        </did>
+                    </c03>
                     <c03 id="ref1999" level="file">
                         <did>
-                            <unittitle>The Concert for the Rock and Roll Hall of Fame</unittitle>
+                            <unittitle>The Concert for the Rock and Roll Hall of Fame (VHS videocassette)</unittitle>
                             <container id="cid480024" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480024" type="Cassette">23</container>
                             <unitdate>1996 September 6</unitdate>
@@ -10147,7 +10174,7 @@
                     </c03>
                     <c03 id="ref1995" level="file">
                         <did>
-                            <unittitle>Crosby, Stills, Nash and Young</unittitle>
+                            <unittitle>Crosby, Stills, Nash and Young (VHS videocassette)</unittitle>
                             <container id="cid480019" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480019" type="Cassette">16-17</container>
                             <unitdate>2000</unitdate>
@@ -10155,7 +10182,7 @@
                     </c03>
                     <c03 id="ref2215" level="file">
                         <did>
-                            <unittitle>Goo Goo Dolls</unittitle>
+                            <unittitle>Goo Goo Dolls (VHS videocassette)</unittitle>
                             <container id="cid751004" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid751004" type="Cassette">11-15</container>
                             <unitdate>1999-2001</unitdate>
@@ -10163,7 +10190,7 @@
                     </c03>
                     <c03 id="ref2000" level="file">
                         <did>
-                            <unittitle>Grand Funk Railroad [RESTRICTED]</unittitle>
+                            <unittitle>Grand Funk Railroad (16mm film reel)</unittitle>
                             <container id="cid480025" type="Box" label="Moving Images">AV4</container>
                             <container parent="cid480025" type="Reel">17</container>
                             <unitdate>undated</unitdate>
@@ -10171,7 +10198,7 @@
                     </c03>
                     <c03 id="ref1894" level="file">
                         <did>
-                            <unittitle>Hendrix, Jimi</unittitle>
+                            <unittitle>Hendrix, Jimi (VHS videocassette)</unittitle>
                             <container id="cid480032" type="Box" label="Moving Images">AV4</container>
                             <container parent="cid480032" type="Cassette">1-4</container>
                             <unitdate>1995, undated</unitdate>
@@ -10179,7 +10206,7 @@
                     </c03>
                     <c03 id="ref1886" level="file">
                         <did>
-                            <unittitle>lang, k.d.</unittitle>
+                            <unittitle>lang, k.d. (VHS videocassette)</unittitle>
                             <container id="cid480022" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480022" type="Cassette">1-10</container>
                             <unitdate>1995-2001</unitdate>
@@ -10187,7 +10214,7 @@
                     </c03>
                     <c03 id="ref1998" level="file">
                         <did>
-                            <unittitle>Lennon, John</unittitle>
+                            <unittitle>Lennon, John (VHS videocassette)</unittitle>
                             <container id="cid480026" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480026" type="Cassette">22</container>
                             <unitdate>1971, 1975</unitdate>
@@ -10195,7 +10222,7 @@
                     </c03>
                     <c03 id="ref1986" level="file">
                         <did>
-                            <unittitle>Los Lobos</unittitle>
+                            <unittitle>Los Lobos (VHS videotape)</unittitle>
                             <container id="cid480023" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480023" type="Cassette">18-19</container>
                             <unitdate>1996 May 16</unitdate>
@@ -10203,7 +10230,7 @@
                     </c03>
                     <c03 id="ref1895" level="file">
                         <did>
-                            <unittitle>R.E.M.</unittitle>
+                            <unittitle>R.E.M. (VHS videotape)</unittitle>
                             <container id="cid732011" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid732011" type="Cassette">24-27</container>
                             <unitdate>2001</unitdate>
@@ -10211,7 +10238,7 @@
                     </c03>
                     <c03 id="ref2218" level="file">
                         <did>
-                            <unittitle>The Rolling Stones [RESTRICTED]</unittitle>
+                            <unittitle>The Rolling Stones (8mm film reel, 16mm film reel)</unittitle>
                             <container id="cid751005" type="Box" label="Moving Images">AV4</container>
                             <container parent="cid751005" type="Reel">15-16</container>
                             <unitdate>undated</unitdate>
@@ -10219,7 +10246,7 @@
                     </c03>
                     <c03 id="ref1987" level="file">
                         <did>
-                            <unittitle>Screaming Lord Sutch</unittitle>
+                            <unittitle>Screaming Lord Sutch (8mm film reel, DVD transfer)</unittitle>
                             <container id="cid732009" type="Box" label="Moving Images">AV2</container>
                             <container parent="cid732009" type="Disk">2</container>
                             <container id="cid732010" type="Box" label="Moving Images">AV2</container>
@@ -10233,7 +10260,7 @@
                     </c03>
                     <c03 id="ref1996" level="file">
                         <did>
-                            <unittitle>Simon, Paul</unittitle>
+                            <unittitle>Simon, Paul (VHS videocassette)</unittitle>
                             <container id="cid480020" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480020" type="Cassette">20</container>
                             <unitdate>2000</unitdate>
@@ -10241,7 +10268,7 @@
                     </c03>
                     <c03 id="ref1887" level="file">
                         <did>
-                            <unittitle>Van Halen</unittitle>
+                            <unittitle>Van Halen (VHS videocassette)</unittitle>
                             <container id="cid480030" type="Box" label="Moving Images">AV4</container>
                             <container parent="cid480030" type="Cassette">5-13</container>
                             <unitdate>1998-1999, undated</unitdate>
@@ -10249,7 +10276,7 @@
                     </c03>
                     <c03 id="ref2001" level="file">
                         <did>
-                            <unittitle>Williams Brothers</unittitle>
+                            <unittitle>Williams Brothers (Hi-8)</unittitle>
                             <container id="cid480028" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480028" type="Cassette">28</container>
                             <unitdate>undated</unitdate>
@@ -10257,7 +10284,7 @@
                     </c03>
                     <c03 id="ref1997" level="file">
                         <did>
-                            <unittitle>Young, Neil</unittitle>
+                            <unittitle>Young, Neil (VHS videocassette)</unittitle>
                             <container id="cid480027" type="Box" label="Moving Images">AV3</container>
                             <container parent="cid480027" type="Cassette">21</container>
                             <unitdate>1994 October 4</unitdate>

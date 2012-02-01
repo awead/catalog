@@ -7,13 +7,12 @@
                 <titleproper>Curtis Mayfield Collection
                     <num>ARC.0067</num>
                 </titleproper>
-                <titleproper type="filing">Mayfield, Curtis Collection</titleproper>
+                <titleproper type="filing">Mayfield Curtis Collection</titleproper>
                 <author>Finding aid prepared by James A. Kohler, Project Archivist</author>
             </titlestmt>
             <publicationstmt>
                 <publisher>Library and Archives</publisher>
                 <address>
-                    <addressline>Library and Archives</addressline>
                     <addressline>2809 Woodland Ave</addressline>
                     <addressline>Cleveland, OH, 44115</addressline>
                     <addressline>216-515-1956</addressline>
@@ -24,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2011-12-07T14:55-0500</date>
+                <date>2012-01-20T11:49-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -32,7 +31,7 @@
     </eadheader>
     <archdesc level="collection">
         <did>
-            <unittitle>[CLOSED] Curtis Mayfield Collection [DRAFT]</unittitle>
+            <unittitle>[CLOSED] Curtis Mayfield Collection</unittitle>
             <unitid>ARC.0067</unitid>
             <repository>
                 <corpname>Library and Archives</corpname>
@@ -41,12 +40,12 @@
                 <language langcode="eng"/>
             </langmaterial>
             <physdesc>
-                <extent>4.21 Linear feet</extent>
-                <extent>7 oversize items, 1 shared half Hollinger box</extent>
+                <extent>4.07 Linear feet</extent>
+                <extent>(1 shared half Hollinger box, 1 shared flat file drawer)</extent>
             </physdesc>
-            <unitdate>1958-1990</unitdate>
-            <abstract id="ref9" label="Collection Overview">The Curtis Mayfield Collection spans the years 1958 to 1994. The collection consists of a pre-publication version of Mayfield's book, 
-                <title render="italic">Poetic License: In Poem and Song</title> without the illustrations by David Soto; three negatives and ten original photographs from various stages of Mayfield's solo career and his time with The Impressions, all circa 1958 to the early-1990s; and three oversize photographic reproductions. The collection also contains a Curtis Mayfield poster from an April 6, 1990 concert in Barcelona, Spain and two concert programs: one with Curtis Mayfield and the Superfly Band for a 1979 tour of South Africa; the other, the 1983 Silver Anniversary Tour of the Impressions. The collection provides a glimpse into the career of Curtis Mayfield through images, lyrics, and poetry. Seen in a broader context, the collection provides insights to the changing rhythm and blues scene from the late-1950s into the 1990s.</abstract>
+            <unitdate normal="1958/1990" type="inclusive">1958-1990</unitdate>
+            <abstract id="ref9" label="Collection Overview">The Curtis Mayfield Collection spans the years 1958 to 1994. The collection consists of a typed manuscript for the posthumously-published book, 
+                <title render="italic">Poetic License: In Poem and Song</title>; three negatives and ten original photographs from various stages of Mayfield's solo career and his time with The Impressions; three oversize photographic reproductions; a concert poster; and two concert programs. The collection provides a glimpse into the career of Curtis Mayfield through images, lyrics, and poetry. Seen in a broader context, the collection provides insight to the changing R&amp;B scene from the late-1950s into the 1990s.</abstract>
             <langmaterial id="ref11" label="Language of Materials note">Collection is primarily in English; materials in Spanish are indicated at the folder level.</langmaterial>
         </did>
         <userestrict id="ref6">
@@ -55,7 +54,7 @@
         </userestrict>
         <accessrestrict id="ref7">
             <head>Access Restrictions</head>
-            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+            <p>Collection is CLOSED.</p>
         </accessrestrict>
         <processinfo id="ref8">
             <head>Processing Information note</head>
@@ -64,12 +63,23 @@
         </processinfo>
         <bioghist id="ref10">
             <head>Biographical Note</head>
-            <p>Curtis Lee Mayfield (June 3, 1942–December 26, 1999) was a singer, songwriter, and record producer primarily in the rhythm and blues, soul, and funk genres. He was born on the North Side of Chicago and was performing by the age 7. He quickly gained an appreciation for the gospel and electric blues music found in the Chicago area and by his teens had taught himself to play the electric guitar. Ultimately, he would become a multi-instrumentalist who played the guitar, bass, piano, saxophone, and drums. After leaving school at the age of 16 to pursue his music career, Mayfield score his first hit (“For Your Precious Love”) with his band, The Impressions. By the 1970s, Mayfield had gone solo and had his own record label, Curtom Records, and was creating his most commercially successful record, the soundtrack to the “blaxploitation” film Superfly. Songs from the album include the title track and “Freddie’s Dead,”and the album is still considered an influential landmark of the period. Through the decade, Mayfield and the artists on Curtom Records would be disturbed by different labels, including Buddah Records, Warner Bros., RSO Records, and Artista. The label ceased to exist by 1980 and its master tapes are now controlled by Warner Music Group and the Mayfield Family Mayfield continued making albums, writing soundtracks, and performing live over the next two decades. Unfortunately, during a soundcheck on August 13, 1990 at an outdoor concert venue, Mayfield was crushed under the stage lighting rig, which had toppled from the high winds, crushing his spine in three places, and leaving him paralyzed from the neck down and unable to play any instrument. But, he was still able to sing, and continued to writing and produce new material for his 1997 album, “New World Order.” Mayfield was awarded the Grammy Legend Award in 1994 and received the Grammy Lifetime Achievement Award in 1995. He was also inducted into The Rock and Roll Hall of Fame as a member of the Impressions in 1991 and as a solo artist in 1999. Curtis Mayfield passed away at the age of 57 on December 26, 1999.</p>
-            <list type="ordered">
+            <p>Curtis Lee Mayfield (June 3, 1942–December 26, 1999) was a singer, songwriter, and record producer primarily in the rhythm and blues, soul, and funk genres. He was born on the North Side of Chicago and was performing by the age 7. He quickly gained an appreciation for the gospel and electric blues music found in the Chicago area, and by his teens had taught himself to play the electric guitar. Ultimately, he would become a multi-instrumentalist, who played the guitar, bass, piano, saxophone, and drums. After leaving school at the age of 16 to pursue his music career, Mayfield scored his first hit (“For Your Precious Love”) with his band, The Impressions.</p>
+            <p>By the 1970s, Mayfield had gone solo and had his own record label, Curtom Records, and was creating his most commercially successful record, the soundtrack to the “blaxploitation” film 
+                <title render="italic">Superfly</title>. Songs from the album include the title track and “Freddie’s Dead,”and the album is still considered an influential landmark of the period. Through the decade, Mayfield and the artists on Curtom Records would be distributed by different labels, including Buddah Records, Warner Bros., RSO Records, and Arista. The label ceased to exist by 1980, and its master tapes are now controlled by Warner Music Group and the Mayfield Family.</p>
+            <p>Mayfield continued making albums, writing soundtracks, and performing live over the next two decades. Unfortunately, during a soundcheck on August 13, 1990, at an outdoor concert venue, Mayfield was crushed under the stage lighting rig, which had toppled from the high winds, crushing his spine in three places, and leaving him paralyzed from the neck down and unable to play any instrument. But, he was still able to sing, and continued to write and produce new material for his 1997 album, 
+                <title render="italic">New World Order</title>.</p>
+            <p>Mayfield was awarded the Grammy Legend Award in 1994 and received the Grammy Lifetime Achievement Award in 1995. He was also inducted into The Rock and Roll Hall of Fame as a member of the Impressions in 1991, and as a solo artist in 1999.</p>
+            <p>Curtis Mayfield passed away at the age of 57 on December 26, 1999.</p>
+            <list numeration="lowerroman" type="ordered">
                 <head>Resources</head>
-                <item>"Biography." Curtis Mayfield. Accessed April 25, 2011. http://curtismayfield.com/biography.html.</item>
-                <item>"Curtom Records." Wikipedia. Last modified March 23, 2011. http://en.wikipedia.org/wiki/Curtom_Records.</item>
-                <item>"Curtis Mayfield." Wikipedia. Last modified April 21, 2011. http://en.wikipedia.org/wiki/Curtis_Mayfield.</item>
+                <item>"Biography." 
+                    <title render="italic">Curtis Mayfield</title>. Accessed April 25, 2011. http://curtismayfield.com/biography.html.</item>
+                <item>"Curtis Mayfield." 
+                    <title render="italic">Wikipedia</title>. Last modified April 21, 2011. http://en.wikipedia.org/wiki/Curtis_Mayfield.</item>
+                <item>"Curtis Mayfield Biography." 
+                    <title render="italic">Rock and Roll Hall of Fame and Museum</title>. Accessed April 25, 2011. http://rockhall.com/inductees/curtis-mayfield/bio/.</item>
+                <item>"Curtom Records." 
+                    <title render="italic">Wikipedia</title>. Last modified March 23, 2011. http://en.wikipedia.org/wiki/Curtom_Records.</item>
             </list>
         </bioghist>
         <custodhist id="ref12">
@@ -88,19 +98,20 @@
             <corpname rules="aacr" role="Musician (mus)">Impressions (Musical group)</corpname>
             <persname rules="aacr" role="Donor (dnr)">Mayfield, Curtis</persname>
             <persname rules="aacr" role="Musician (mus)">Mayfield, Curtis</persname>
-            <genreform source="lcsh">Photographs.</genreform>
+            <genreform source="lcsh">Manuscripts</genreform>
+            <genreform source="lcsh">Photographs</genreform>
             <genreform source="lcsh">Photography--Negatives.</genreform>
-            <subject source="lcsh">Rhythm and blues music.</subject>
+            <subject source="lcsh">Rhythm and blues music</subject>
         </controlaccess>
         <dsc>
             <c01 id="ref5" level="file">
                 <did>
                     <unittitle>
-                        <title render="italic">Poetic License: In Poem and Song</title></unittitle>
+                        <title render="italic">Poetic License: In Poem and Song</title> manuscript</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid324005" type="Box-Folder" label="Books (39156042521141)">1-4</container>
+                    <container id="cid324005" type="Box-Folder" label="Books">1-4</container>
                     <container parent="cid324005" type="Object">1</container>
                     <unitdate>circa 1994</unitdate>
                 </did>
@@ -111,14 +122,14 @@
             </c01>
             <c01 id="ref4" level="file">
                 <did>
-                    <unittitle>Concert Poster</unittitle>
+                    <unittitle>Curtis Mayfield concert poster, Barcelona, Spain</unittitle>
                     <langmaterial>
                         <language langcode="spa"/>
                     </langmaterial>
                     <container id="cid324006" type="Drawer-Folder" label="Graphic materials">FF.1.2-4</container>
                     <container parent="cid324006" type="Object">7</container>
                     <unitdate>1990 April 6</unitdate>
-                    <langmaterial id="ref19" label="Language of Materials note">Materials are in Spanish.</langmaterial>
+                    <langmaterial id="ref19" label="Language of Materials note">Spanish</langmaterial>
                 </did>
                 <odd id="ref23">
                     <head>Museum Accession Numbers</head>
@@ -131,7 +142,7 @@
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
-                    <container id="cid324001" type="Box-Folder" label="Graphic materials (39156042521141)">1-5</container>
+                    <container id="cid324001" type="Box-Folder" label="Graphic materials">1-5</container>
                     <container parent="cid324001" type="Object">1-3</container>
                     <unitdate>1958, 1972, 1983</unitdate>
                 </did>
@@ -139,7 +150,7 @@
             <c01 id="ref3" level="file">
                 <did>
                     <unittitle>Photographs</unittitle>
-                    <container id="cid324003" type="Box-Folder" label="Graphic materials (39156042521141)">1-6</container>
+                    <container id="cid324003" type="Box-Folder" label="Graphic materials">1-6</container>
                     <container parent="cid324003" type="Object">1-7</container>
                     <container id="cid472002" type="Drawer-Folder" label="Graphic materials">FF.1.2-4</container>
                     <container parent="cid472002" type="Object">1-6</container>
@@ -152,10 +163,10 @@
             </c01>
             <c01 id="ref2" level="file">
                 <did>
-                    <unittitle>Programs</unittitle>
-                    <container id="cid324002" type="Box-Folder" label="Books (39156042521141)">1-7</container>
+                    <unittitle>Concert programs for Curtis Mayfield and the Superfly Band, South African tour, and Impressions Silver Anniversary Tour</unittitle>
+                    <container id="cid324002" type="Box-Folder" label="Books">1-7</container>
                     <container parent="cid324002" type="Object">1-2</container>
-                    <unitdate>1980, 1983</unitdate>
+                    <unitdate>1979, 1983</unitdate>
                 </did>
                 <odd id="ref22">
                     <head>Museum Accession Numbers</head>

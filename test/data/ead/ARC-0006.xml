@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-01-11T08:49-0500</date>
+                <date>2012-01-31T16:43-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -37,7 +37,7 @@
                 <corpname>Library and Archives</corpname>
             </repository>
             <langmaterial>
-                <language langcode="eng"/>
+                <language langcode="mul"/>
             </langmaterial>
             <physdesc>
                 <extent>16.01 Linear feet</extent>
@@ -185,14 +185,14 @@
             <head>Accruals note</head>
             <p>Accruals to the collection are located in Series VII.</p>
         </accruals>
-        <separatedmaterial id="ref1198">
-            <head>Separated Materials</head>
-            <p>Commercial recordings and publications have been transferred to the library collection. Please search for the "Alan Freed Collection" in the library catalog for a list of donated titles.</p>
-        </separatedmaterial>
         <relatedmaterial id="ref1202">
             <head>Related Archival Materials</head>
-            <p>Related materials providing content on Alan Freed may be found in the following collections in this repository: Terry Stewart Collection. Related materials may also be found in other collections that constitute a part of the Northeast Ohio Popular Music Archives.</p>
+            <p>Related materials providing content on Alan Freed may be found in the following collections in this repository: Terry Stewart Collection, Dr. Rosario Cambria Collection, John A. Jackson Papers. Related materials may also be found in other collections that constitute a part of the Northeast Ohio Popular Music Archives.</p>
         </relatedmaterial>
+        <separatedmaterial id="ref1229">
+            <head>Separated Materials</head>
+            <p>Commerical recordings and publications have been transferred to the library collection. Please search for the "Alan Freed Collection" in the library catalog for a list of donated titles. If you are unable to find what you are looking for, consult the Library and Archives staff to ensure these materials are available. Some items are on exhibit. These items are noted at the item level. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+        </separatedmaterial>
         <controlaccess>
             <persname rules="aacr" role="Performer (prf)">Berry, Chuck</persname>
             <persname rules="aacr" role="Performer (prf)">Clanton, Jimmy</persname>
@@ -227,7 +227,7 @@
                 </accessrestrict>
                 <scopecontent id="ref750">
                     <head>Scope and Contents note</head>
-                    <p>Series I: Financial Records [RESTRICTED] contains documents pertaining to the employment and business dealings of Alan Freed, including accounting records, cancelled checks, contracts, correspondence, invoices, music clearance sheets, and photographs. Some of the documents in this section were also used as State of New York Grand Jury exhibits for the People v. Freed court case. Files are arranged alphabetically by company and by individual.</p>
+                    <p>Series I: Financial Records [RESTRICTED] contains documents pertaining to the employment and business dealings of Alan Freed, including accounting records, cancelled checks, contracts, correspondence, invoices, music clearance sheets, and photographs. Some of the documents in this section were also used as State of New York Grand Jury exhibits for the People v. Freed court case. Files are arranged alphabetically by company and by individual. Additional financial records may be found in Series VII: 2011 Accruals.</p>
                 </scopecontent>
                 <c02 id="ref7" level="subseries">
                     <did>
@@ -375,7 +375,7 @@
                     <scopecontent id="ref1065">
                         <head>Scope and Contents</head>
                         <p>Subseries III: ABC includes files related to accounting, advertising, contracts with local facilities, correspondence, and music clearance sheets from the 
-                            <title render="italic">Alan Freed Show</title>. Files are in alphabetical order by title. Items in the files are arranged chronologically. Some of the items in this subseries are photocopies of original documents; some are annotated.</p>
+                            <title render="italic">Alan Freed Show</title>. Files are in alphabetical order by title. Items in the files are arranged chronologically. Some of the items in this subseries are photocopies of original documents; some are annotated. Additional ABC material may be found in Series VII: 2011 Accruals.</p>
                     </scopecontent>
                     <c03 id="ref22" level="file">
                         <did>
@@ -8162,7 +8162,7 @@
                 </did>
                 <scopecontent id="ref752">
                     <head>Scope and Contents note</head>
-                    <p>Series III: Publications contains materials related to Alan Freed, including magazine articles, sheet music, and yearbooks. These materials are arranged by publication type and then chronologically.</p>
+                    <p>Series III: Publications contains materials related to Alan Freed, including magazine articles, sheet music, and yearbooks. These materials are arranged by publication type and then chronologically. Additional publications may be found in Series VII: 2011 Accruals.</p>
                 </scopecontent>
                 <c02 id="ref1110" level="file">
                     <did>
@@ -8630,7 +8630,7 @@
                 </did>
                 <scopecontent id="ref753">
                     <head>Scope and Contents note</head>
-                    <p>Series IV: Ephemera contains materials related to Alan Freed and his live appearances and films, including advertisements, photographs, posters, press books, programs, and tickets. The materials are arranged by type and then chronologically. Oversize materials are stored out of sequence due to size and condition concerns.</p>
+                    <p>Series IV: Ephemera contains materials related to Alan Freed and his live appearances and films, including advertisements, photographs, posters, press books, programs, and tickets. The materials are arranged by type and then chronologically. Oversize materials are stored out of sequence due to size and condition concerns. Additional ephemera may be found in Series VII: 2011 Accruals.</p>
                 </scopecontent>
                 <c02 id="ref640" level="file">
                     <did>
@@ -9666,7 +9666,7 @@
                 </accessrestrict>
                 <scopecontent id="ref980">
                     <head>Scope and Contents</head>
-                    <p>Series V: Personal Papers [RESTRICTED] contains documents pertaining to the life, employment, and death of Alan Freed, including birth and death certificates, and his pathology report. The materials are arranged chronologically.</p>
+                    <p>Series V: Personal Papers [RESTRICTED] contains documents pertaining to the life, employment, and death of Alan Freed, including birth and death certificates, and his pathology report. The materials are arranged chronologically. Additional personal papers may be found in Series VII: 2011 Accruals.</p>
                 </scopecontent>
                 <c02 id="ref849" level="item">
                     <did>
@@ -9804,7 +9804,7 @@
             </c01>
             <c01 id="ref1203" level="series">
                 <did>
-                    <unittitle>Series VII: 2011 Accruals [RESTRICTED]</unittitle>
+                    <unittitle>Series VII: 2011 Accrual [CLOSED]</unittitle>
                     <langmaterial>
                         <language langcode="eng"/>
                     </langmaterial>
