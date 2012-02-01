@@ -40,3 +40,8 @@ Feature: Catalog Home Page
     When I follow "Rock music"
     Then I should see "1950s radio in color"
     And I should see "Classic rock"
+
+  Scenario: Add facet for theses and dissertations (BL-153,BL-154)
+    Given I am on the home page
+    Then I should see a facet for "Format"
+    And I should see the facet term "Theses/Dissertations"
