@@ -561,13 +561,8 @@ Blacklight.configure(:shared) do |config|
   config[:ead_headings] = [
     "ead_abstract_display",
     "ead_bio_display",
-    "ead_provenance_display",
-    "ead_use_display",
-    "ead_access_display",
-    "ead_sepmaterial_display",
-    "ead_citation_display",
-    "ead_process_display",
     "ead_relatedmaterial_display",
+    "ead_sepmaterial_display",
     "ead_accruals_display",
   ]
   config[:ead_geninfo]  = [
@@ -576,7 +571,12 @@ Blacklight.configure(:shared) do |config|
     "ead_bulk_date_display",
     "ead_inc_date_display",
     "ead_lang_display",
-    "ead_lang_coll_display"
+    "ead_lang_coll_display",
+    "ead_citation_display",
+    "ead_provenance_display",
+    "ead_use_display",
+    "ead_access_display",
+    "ead_process_display",
   ]
   config[:component_fields] = [
     "c_title_display",
