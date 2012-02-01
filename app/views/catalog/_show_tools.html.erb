@@ -26,11 +26,11 @@
       </li>
     <% end %>
 
-    <li class="worldcat">
-      <%= link_to "Check nearby libraries", "http://www.worldcat.org/oclc/#{@document[:id]}" %>
-    </li>
-
     <% if @document.respond_to?(:to_marc) %>
+      <!-- If it's not marc, this worldcat link won't work either -->
+      <li class="worldcat">
+        <%= link_to "Check nearby libraries", "http://www.worldcat.org/oclc/#{@document[:id]}" %>
+      </li
       <li class="librarian_view">
         <%= link_to "Librarian View", librarian_view_catalog_path(@document[:id]), {:id => 'librarianLink', :name => 'librarian_view', :class => 'lightboxLink'} %>
       </li>
