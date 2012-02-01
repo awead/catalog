@@ -121,9 +121,34 @@ namespace :solr do
 
       puts "Indexing #{id}"
 
-      # gather subject fields splitting on --
-      subject_fields = ['corpname','famname','occupation','persname', 'subject', 'genreform']
+
+      # Facets
+      # Here's a complete list of all our headings used in the EAD:
+      # ["corpname", "genreform", "persname", "subject", "title", "occupation", "geogname", "famname", "function"]
+
+      # topic facets
+      subject_fields = ["subject", "title", "occupation", "geogname", "function"]
       subject = subject_fields.map do |field|
+        xml.xpath('/ead/archdesc/controlaccess/' + field).map do |field_value|
+          field_value.text.split('--').map do |value|
+            value.strip.sub(/\.$/, '')
+          end
+        end
+      end
+
+      # name facets
+      name_fields = ["corpname", "persname", "famname" ]
+      name = name_fields.map do |field|
+        xml.xpath('/ead/archdesc/controlaccess/' + field).map do |field_value|
+          field_value.text.split('--').map do |value|
+            value.strip.sub(/\.$/, '')
+          end
+        end
+      end
+
+      # Genre facets
+      genre_fields = [ "genreform" ]
+      genre = genre_fields.map do |field|
         xml.xpath('/ead/archdesc/controlaccess/' + field).map do |field_value|
           field_value.text.split('--').map do |value|
             value.strip.sub(/\.$/, '')
@@ -150,6 +175,8 @@ namespace :solr do
 
       solr_doc = Rockhall::EadMethods.get_ead_doc(xml)
       solr_doc.merge!({:subject_topic_facet => subject.flatten.uniq})
+      solr_doc.merge!({:name_facet => name.flatten.uniq})
+      solr_doc.merge!({:genre_facet => genre.flatten.uniq})
       puts "... document "
       response = Blacklight.solr.add solr_doc
       commit = Blacklight.solr.commit

@@ -56,16 +56,43 @@ module ArchivalCollectionHelper
 
   def ead_subject_headings
     results = String.new
+    results << "<h2 id=\"subject_headings\">Subject Headings</h2>"
+    results << "<dl class=\"defList\">"
+
+    # Topics
     unless @document["subject_topic_facet"].nil?
-      results << "<h2 id=\"subject_headings\">Subject Headings</h2>"
-      results << "<ul>"
+      results << "<dt>Subjects:</dt>"
+      results << "<dd>"
       @document["subject_topic_facet"].sort.each do |v|
-        results << "<li>"
         results << link_to(v, add_facet_params_and_redirect("subject_topic_facet", v), :class=>"facet_select label")
-        results << "</li>"
+        results << "<br/>"
       end
-      results << "</ul>"
+      results << "</dd>"
     end
+
+    # Names
+    unless @document["name_facet"].nil?
+      results << "<dt>Contributors:</dt>"
+      results << "<dd>"
+      @document["name_facet"].sort.each do |v|
+        results << link_to(v, add_facet_params_and_redirect("name_facet", v), :class=>"facet_select label")
+        results << "<br/>"
+      end
+      results << "</dd>"
+    end
+
+    # Genres
+    unless @document["genre_facet"].nil?
+      results << "<dt>Genres:</dt>"
+      results << "<dd>"
+      @document["genre_facet"].sort.each do |v|
+        results << link_to(v, add_facet_params_and_redirect("genre_facet", v), :class=>"facet_select label")
+        results << "<br/>"
+      end
+      results << "</dd>"
+    end
+
+    results << "</dl>"
     return results.html_safe
   end
 
