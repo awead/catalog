@@ -92,6 +92,11 @@ Feature:
     Then I should see the field title "blacklight-id" contain "OCLC No.:"
     And I should see the field content "blacklight-id" contain "458698760"
 
+  Scenario: Display Thesis Notes (BL-157, BL-158)
+    Given I am on the bib record page for 35618845
+    Then I should see the field content "blacklight-notes_display" contain "Thesis (Ph.D.)--Tulane University, 1995"
+    And I should see the field content "blacklight-notes_display" contain "Photocopy. Ann Arbor, Mich. : UMI Dissertation Services, 2012. iv, 695 p. ; 23 cm"
+
 
 
 
