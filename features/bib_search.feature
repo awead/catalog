@@ -36,3 +36,8 @@ Feature:
     And I select "Oclc No." from "search_field"
     When I press "search"
     Then I should see "John Coltrane : his life and music / Lewis Porter"
+
+  Scenario: Null ids in marc recrods (BL-169)
+    Given I am on the bib record page for 35618845
+    Given I am on the bib record page for 706740
+    Given I am on the bib record page for b3416516

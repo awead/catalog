@@ -4,6 +4,7 @@ import org.solrmarc.tools.Utils;
 import org.solrmarc.tools.CallNumUtils;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import org.marc4j.marc.Record;
 
 // define the base level indexer so that its methods can be called from the script.
 // note that the SolrIndexer code will set this value before the script methods are called.
@@ -94,3 +95,38 @@ Set getInnovativeId(Record record, String fieldSpec)
   return newResult;
 
 }
+
+/**
+ * Determines the id of a marc record in this order:
+ * 001
+ * 907a
+ * 035a
+ */
+public String getRockhallId(Record record) {
+
+  String val  = indexer.getFirstFieldVal(record, "001");
+  String alt1 = indexer.getFirstFieldVal(record, "907a");
+  String alt2 = indexer.getFirstFieldVal(record, "035a");
+
+  if (val != null) {
+    return val;
+  }
+  else {
+
+    if (alt1 != null) {
+      int strLen = alt1.length();
+      int lastIdx = strLen - 1;
+      return alt1.substring(1, lastIdx);
+    }
+    else if (alt2 != null) {
+      int strLen = alt2.length();
+      int lastIdx = strLen - 1;
+      return alt2.substring(1, lastIdx);
+    }
+    else {
+      return null;
+    }
+  }
+
+}
+
