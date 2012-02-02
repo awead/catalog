@@ -37,9 +37,8 @@ Feature: Catalog Home Page
 
   Scenario: Subject headings for library materials are under the Topic facet
     Given I am on the home page
-    When I follow "Rock music"
-    Then I should see "1950s radio in color"
-    And I should see "Classic rock"
+    When I follow "Rock music--History and criticism"
+    Then I should see "Classic rock / edited by Chris Woodstra, John Bush, Stephen Thomas"
 
   Scenario: Add facet for theses and dissertations (BL-153,BL-154)
     Given I am on the home page

@@ -130,9 +130,7 @@ namespace :solr do
       subject_fields = ["subject", "title", "occupation", "geogname", "function"]
       subject = subject_fields.map do |field|
         xml.xpath('/ead/archdesc/controlaccess/' + field).map do |field_value|
-          field_value.text.split('--').map do |value|
-            value.strip.sub(/\.$/, '')
-          end
+          field_value.text.strip.sub(/\.$/, '')
         end
       end
 
@@ -140,9 +138,7 @@ namespace :solr do
       name_fields = ["corpname", "persname", "famname" ]
       name = name_fields.map do |field|
         xml.xpath('/ead/archdesc/controlaccess/' + field).map do |field_value|
-          field_value.text.split('--').map do |value|
-            value.strip.sub(/\.$/, '')
-          end
+          field_value.text.strip.sub(/\.$/, '')
         end
       end
 
@@ -150,9 +146,7 @@ namespace :solr do
       genre_fields = [ "genreform" ]
       genre = genre_fields.map do |field|
         xml.xpath('/ead/archdesc/controlaccess/' + field).map do |field_value|
-          field_value.text.split('--').map do |value|
-            value.strip.sub(/\.$/, '')
-          end
+          field_value.text.strip.sub(/\.$/, '')
         end
       end
 

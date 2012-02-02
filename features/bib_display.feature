@@ -12,7 +12,7 @@ Feature:
 
   Scenario: Subject field links (BL-10)
     Given I am on the bib record page for 5774581
-    When I follow "Music United States Bibliography"
+    When I follow "Music--United States--Bibliography"
     Then I should see "ASCAP supplementary index of performed compositions"
 
   Scenario: Contributors field links (BL-10, BL-76)
