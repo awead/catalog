@@ -37,16 +37,26 @@ module LocalBlacklightHelper
 
   def render_field_link args
     result = String.new
-    search = Blacklight.config[:linked_fields][args[:field].to_sym]
+    search = Blacklight.config[:linked_fields][args[:field].to_sym][:search]
+    facet  = Blacklight.config[:linked_fields][args[:field].to_sym][:facet]
     value = args[:value]
     value ||= args[:document].get(args[:field], :sep => nil) if args[:document] and args[:field]
     if value.is_a? Array
       value.each do |v|
-        result << link_to(v, catalog_index_path( :search_field => search, :q => "\"#{v}\"" ))
-        result << field_value_separator
+        if facet
+          result << link_to(v, add_facet_params_and_redirect(facet, v), :class=>"facet_select label")
+          result << "<br/>"
+        else
+          result << link_to(v, catalog_index_path( :search_field => search, :q => "\"#{v}\"" ))
+          result << field_value_separator
+        end
       end
     else
-      result << link_to(value, catalog_index_path( :search_field => search, :q => "\"#{v}\"" ))
+      if facet
+        result << link_to(v, add_facet_params_and_redirect(facet, v), :class=>"facet_select label")
+      else
+        result << link_to(value, catalog_index_path( :search_field => search, :q => "\"#{v}\"" ))
+      end
     end
     return result.html_safe
   end
