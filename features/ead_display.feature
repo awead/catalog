@@ -9,12 +9,12 @@ Feature: EAD display
     Given I am on the ead page for ARC-0105
     When I follow "Biographical Note"
     Then I should see "1911 May 18"
-    And I should see "Born Joseph Vernon Turner, Jr. in Kansas City, Mo."
+    And I should see "Born Joseph Vernon Turner, Jr. in Kansas City, Missouri"
     And I should see "1939"
     And I should see "Releases first single"
     And I should see "With Albert Ammons and Meade Lux Lewis, begins a five-year residency at New York's Cafe Society"
     And I should see "Big Joe Turner was among the first to mix R&B with boogie-woogie"
-    And I should see "In the 1960s, after the first wave of rock and roll had died down"
+    And I should see "In the Sixties, after the first wave of rock and roll had died down"
     And I should see "Sources"
     And I should see "Big Joe Turner Biography"
 
@@ -22,7 +22,7 @@ Feature: EAD display
     Given I am on the ead page for ARC-0105
     When I follow "Collection Inventory"
     Then I should see "Series II: Business Files, 1945-1946, 1983-1984, undated"
-    And I should see "Series VII: Publications, 1970-1990"
+    And I should see "Series VII: Printed Materials"
 
   Scenario: Date expression in sub component level (BL-9) and accession numbers
     Given I am on the ead page for ARC-0105:2:ref42
@@ -50,7 +50,7 @@ Feature: EAD display
   Scenario: I need to see all sub-components (BL-58)
     Given I am on the ead page for ARC-0065:2:ref62
     Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
-    And I should see "Ultras with Dick Dale, 1992 August 1"
+    And I should see "Ultras with Dale, Dick, 1992 August 1"
 
   @future-work
   Scenario: EAD that has no collection headings (BL-60)
