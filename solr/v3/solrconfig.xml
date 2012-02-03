@@ -764,7 +764,7 @@
          title_series_unstem_search^25
          title_series_t^10
          isbn_t
-         oclc_i
+         oclc_t
          accession_t
          text
        </str>
@@ -847,10 +847,10 @@
          subject_addl_t^10
        </str>
        <str name="oclc_qf">
-         oclc_i
+         oclc_t
        </str>
        <str name="oclc_pf">
-         oclc_i
+         oclc_t
        </str>
 
 
