@@ -400,6 +400,12 @@ Blacklight.configure(:shared) do |config|
       :formatted  => TRUE,
     },
     :ead_inc_date_display => {
+      :xpath      => "/ead/archdesc/did/unitdate[not(@type)]",
+      :label      => "Dates",
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :ead_date_display => {
       :xpath      => "/ead/archdesc/did/unitdate[@type='inclusive']",
       :label      => "Dates",
       :is_xpath   => FALSE,
@@ -587,6 +593,7 @@ Blacklight.configure(:shared) do |config|
     "ead_extent_display",
     "ead_bulk_date_display",
     "ead_inc_date_display",
+    "ead_date_display",
     "ead_lang_display",
     "ead_lang_coll_display",
     "ead_citation_display",
