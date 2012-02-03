@@ -400,13 +400,13 @@ Blacklight.configure(:shared) do |config|
       :formatted  => TRUE,
     },
     :ead_inc_date_display => {
-      :xpath      => "/ead/archdesc/did/unitdate[not(@type)]",
+      :xpath      => "/ead/archdesc/did/unitdate[@type='inclusive']",
       :label      => "Dates",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
     :ead_date_display => {
-      :xpath      => "/ead/archdesc/did/unitdate[@type='inclusive']",
+      :xpath      => "/ead/archdesc/did/unitdate[not(@type)]",
       :label      => "Dates",
       :is_xpath   => FALSE,
       :formatted  => TRUE,

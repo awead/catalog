@@ -15,6 +15,7 @@ module ArchivalCollectionHelper
     else
       unless @document[:ead_inc_date_display].nil? and @document[:ead_bulk_date_display].nil?
         results << "<dt class=\"blacklight-ead_date_display\">Dates:</dt>"
+        results << "Inclusive, "
         results << "<dd class=\"blacklight-ead_date_display\">"
         results << @document[:ead_inc_date_display].to_s
         unless @document[:ead_bulk_date_display].nil?
