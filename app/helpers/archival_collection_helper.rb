@@ -9,15 +9,20 @@ module ArchivalCollectionHelper
     results << gen_info_format(:ead_extent_display) unless @document[:ead_extent_display].nil?
 
     # Dates get special treatment
-    unless @document[:ead_inc_date_display].nil? and @document[:ead_bulk_date_display].nil?
-      results << "<dt>Dates:</dt>"
-      results << "<dd>"
-      results << @document[:ead_inc_date_display].to_s
-      unless @document[:ead_bulk_date_display].nil?
-        results << "; "
-        results << @document[:ead_bulk_date_display].to_s
+    if @document[:ead_date_display]
+      results << "<dt class=\"blacklight-ead_date_display\">Dates:</dt>"
+      results << "<dd class=\"blacklight-ead_date_display\">" + @document[:ead_date_display].to_s + "</dd>"
+    else
+      unless @document[:ead_inc_date_display].nil? and @document[:ead_bulk_date_display].nil?
+        results << "<dt class=\"blacklight-ead_date_display\">Dates:</dt>"
+        results << "<dd class=\"blacklight-ead_date_display\">"
+        results << @document[:ead_inc_date_display].to_s
+        unless @document[:ead_bulk_date_display].nil?
+          results << "; "
+          results << @document[:ead_bulk_date_display].to_s
+        end
+        results << "</dd>"
       end
-      results << "</dd>"
     end
 
     results << gen_info_format(:ead_lang_display) unless @document[:ead_lang_display].nil?
@@ -170,8 +175,8 @@ module ArchivalCollectionHelper
       @document[field.to_sym].each do |v|
         content << "#{v}<br/>"
       end
-      results << "<dt>" + label + ":</dt>"
-      results << "<dd>" + content + "</dd>"
+      results << "<dt class=\"blacklight-#{field}\">" + label + ":</dt>"
+      results << "<dd class=\"blacklight-#{field}\">" + content + "</dd>"
       return results
   end
 
