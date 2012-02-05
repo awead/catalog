@@ -130,3 +130,31 @@ public String getRockhallId(Record record) {
 
 }
 
+
+Set getRockhallSubjects(Record record) {
+
+  String dashedFields   = "610[a-z]:650[a-z]:651[a-z]:630[a-z]";
+  String combinedFields = "600[a-z]:611[a-z]";
+  String sep            = "--";
+
+  Set dashedSet   = indexer.getAllSubfields(record, dashedFields, sep);
+  Set combinedSet = indexer.getFieldList(record, combinedFields);
+
+  Set result       = new LinkedHashSet();
+
+  if (combinedSet != null) {
+    for ( String comb : combinedSet ) {
+      result.add(comb);
+    }
+  }
+
+  if (dashedSet != null) {
+    for ( String dashed : dashedSet ) {
+      result.add(dashed);
+    }
+  }
+
+  return result;
+
+}
+
