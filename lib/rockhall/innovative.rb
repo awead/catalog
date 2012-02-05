@@ -5,13 +5,15 @@ module Rockhall::Innovative
 
   def self.get_holdings(id)
     doc = query_iii(id)
-    snip = doc.xpath("//tr[@class='bibItemsEntry']")
-
     results = Array.new
-    snip.each do |e|
-      string = Sanitize.clean(e.to_s, Sanitize::Config::RESTRICTED)
-      if string.match("Rock")
-        results << string.strip.gsub(/\n+/,"</td><td>")
+
+    unless doc.nil?
+      snip = doc.xpath("//tr[@class='bibItemsEntry']")
+      snip.each do |e|
+        string = Sanitize.clean(e.to_s, Sanitize::Config::RESTRICTED)
+        if string.match("Rock")
+          results << string.strip.gsub(/\n+/,"</td><td>")
+        end
       end
     end
     return results
@@ -24,11 +26,15 @@ module Rockhall::Innovative
 
   def self.query_iii(id)
     url = URI.parse(link(id))
-    req = Net::HTTP::Get.new(url.path)
-    res = Net::HTTP.start(url.host, url.port) {|http|
-      http.request(req)
-    }
-    doc = Nokogiri::HTML(res.body)
+    begin
+      req = Net::HTTP::Get.new(url.path)
+      res = Net::HTTP.start(url.host, url.port) {|http|
+        http.request(req)
+      }
+      doc = Nokogiri::HTML(res.body)
+    rescue
+      doc = nil
+    end
     return doc
   end
 

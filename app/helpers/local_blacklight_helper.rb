@@ -97,6 +97,9 @@ module LocalBlacklightHelper
         results << "<tr><td>" + s.to_s + "</td></tr>"
       end
       results << "</table>"
+    else
+      results << "<h3>Holdings</h3>"
+      results << "Unavailable"
     end
     return results.html_safe
   end
