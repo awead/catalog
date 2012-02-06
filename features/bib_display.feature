@@ -103,5 +103,10 @@ Feature:
     And I should see "Singers--United States--Biography"
     And I should not see "Dylan,Bob,--1941-"
 
+  Scenario: Displaying Eras in Genre Headings (BL-176)
+    Given I am on the bib record page for 668192442
+    Then I should see the field content "blacklight-genre_display" contain "Biography--Juvenile literature"
+    And I should see the field content "blacklight-genre_display" not contain "Biography Juvenile literature"
+
 
 

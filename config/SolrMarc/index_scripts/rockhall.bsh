@@ -134,7 +134,7 @@ public String getRockhallId(Record record) {
 Set getRockhallSubjects(Record record) {
 
   String dashedFields   = "610[a-z]:650[a-z]:651[a-z]:630[a-z]";
-  String combinedFields = "600[a-z]:611[a-z]";
+  String combinedFields = "600[a-d]:611[a-d]";
   String sep            = "--";
 
   Set dashedSet   = indexer.getAllSubfields(record, dashedFields, sep);
