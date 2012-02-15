@@ -13,7 +13,6 @@ Feature:
     Then I should see "Sign up"
     And I should see "By signing up, you can save your searches and export them later if needed."
 
-  @wip
   Scenario: Highlighting search terms (BL-179)
     Given I am on the home page
     When I fill in "q" with "Elvis"
