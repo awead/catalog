@@ -58,3 +58,8 @@ end
 Then /^I should see "([^"]*)" in italics$/ do |arg1|
   page.should have_xpath("//*/i", :text => arg1)
 end
+
+Then /^I should see the word "([^"]*)" highlighted$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+

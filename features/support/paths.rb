@@ -27,6 +27,12 @@ module NavigationHelpers
     when /^the bib record page for (.+)/
       catalog_path($1)
 
+    when /^the login page$/
+      new_user_session_path
+
+    when /^the signup page$/
+      new_user_registration_path
+
     else
       begin
         page_name =~ /^the (.*) page$/
