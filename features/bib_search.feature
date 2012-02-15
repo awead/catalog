@@ -37,6 +37,13 @@ Feature:
     When I press "search"
     Then I should see "John Coltrane : his life and music / Lewis Porter"
 
+  Scenario: Make contributor fields searchable (no ticket)
+    Given I am on the home page
+    And I fill in "q" with "Elvis Presley"
+    And I select "Contributor" from "search_field"
+    When I press "search"
+    Then I should see "Shake, rattle & turn that noise down!"
+
   Scenario: Null ids in marc recrods (BL-169)
     Given I am on the bib record page for 35618845
     Given I am on the bib record page for 706740

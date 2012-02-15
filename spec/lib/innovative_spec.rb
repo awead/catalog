@@ -26,7 +26,7 @@ describe Rockhall::Innovative do
   describe "#link" do
     it "should return a url for a given id" do
       link = Rockhall::Innovative.link("foo")
-      link.should == "http://" + Blacklight.config[:opac_ip] + "/record=foo"
+      link.should == "http://" + Rockhall::Innovative.const_get("OPAC_IP") + "/record=foo"
     end
   end
 

@@ -7,7 +7,8 @@ Feature:
 
   Scenario: Bib record display (BL-10)
     Given I am on the bib record page for 5774581
-    Then I should see "Title:"
+    Then I should see the field title "blacklight-title_display" contain "Title:"
+    And I should see the field content "blacklight-title_display" contain "ASCAP supplementary index of performed compositions"
     And I should not see "Music United States Bibliography, Music United States Indexes, Songs United States Bibliography"
 
   Scenario: Subject field links (BL-10)
