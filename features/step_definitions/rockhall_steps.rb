@@ -60,6 +60,6 @@ Then /^I should see "([^"]*)" in italics$/ do |arg1|
 end
 
 Then /^I should see the word "([^"]*)" highlighted$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  page.should have_xpath("//*/span[contains(@style, 'background-color:yellow')]", :text => arg1)
 end
 
