@@ -24,3 +24,5 @@ tmp/performance
 Gemfile.lock
 
 lib/solrmarc.log*
+
+.sass-cache/*

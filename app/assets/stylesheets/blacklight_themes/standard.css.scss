@@ -8,9 +8,9 @@
 // $total-cols: 24;
 
 /* But the widths are changeable to px, em. */
-// $col-width: 2.5em;
-// $gutter-width: .5em;
-// $side-gutter-width: 2em;
+$col-width: 50px;
+$gutter-width: 50px;
+$side-gutter-width: 50px;
 
 @import 'blacklight/grids/susy';
 
