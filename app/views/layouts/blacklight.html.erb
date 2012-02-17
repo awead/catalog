@@ -14,11 +14,34 @@
     <div id="page">
 
       <div id="hd">
-        <div id="rockhall-seal">
-          <%= link_to image_tag("logo_flag.png"), "http://www.rockhall.com" %>
-          <div id="banner-text">
-            <%= image_tag("text_la.png") %>
-          </div>
+        <h1>
+          <%= link_to("Home", root_path) %>
+        </h1>
+        <br class="clr">
+        <div id="main_nav">
+          <ul>
+            <li>
+              <div>
+                <a href="http://rockhall.com/">Museum Website</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="http://library.rockhall.com/">Library Website</a>
+              </div>
+            </li>
+            <li>
+              <div id="banner-text">
+                <%= image_tag("text_la.png") %>
+              </div>
+            </li>
+            <li style="background: none"/>
+            <li style="background: none"/>
+            <li style="background: none"/>
+            <li style="background: none"/>
+            <li style="background: none"/>
+            <li style="background: none"/>
+          </ul>
         </div>
 
       </div>
@@ -33,13 +56,6 @@
           </div>
         </div>
         <div id="sidebar">
-          <div class="links">
-            <h2>Links</h2>
-            <ul>
-              <li><%= link_to("Rock and Roll Hall of Fame and Museum", "http://rockhall.com") %></li>
-              <li><%= link_to("Library and Archives", "http://library.rockhall.com") %></li>
-            </ul>
-          </div>
           <%= sidebar_items.join('').html_safe %>
         </div>
       </div>

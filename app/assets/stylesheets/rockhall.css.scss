@@ -16,7 +16,9 @@ select, input, button, textarea {
   font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
 }
 
-#rockhall-seal a { border: none; }
+.clr { clear: both; }
+
+.no-background { background: none; }
 
 a {
   &:link, &:visited, &:active {
@@ -42,17 +44,86 @@ a {
 }
 
 
+#hd {
 
-#rockhall-seal {
-  display: inline;
+  width: 893px;
+  margin: 0 auto;
+  display: block;
   height: 198px;
-  width: 160px;
-  padding-left: 75px;
+  position: relative;
+  padding: 0;
+  overflow: visible;
+
+  h1 {
+    text-indent: -9999px;
+    background: transparent url(image_path('logo_flag.png')) 0 0 no-repeat;
+    width: 149px;
+    height: 183px;
+    position: absolute;
+    left: -28px;
+    top: 0;
+    margin: 0;
+    a {
+      display: block;
+      width: 149px;
+      height: 179px;
+      border-bottom: none;
+    }
+  }
+
+  #main_nav {
+    display: block;
+    width: 893px;
+    height: 68px;
+    margin: 110px 0 0 0;
+    padding: 0;
+    ul {
+      float: right;
+      margin: 0;
+      padding: 0;
+      li {
+        width: 85px;
+        height: 69px;
+        background: transparent url(image_path('main_nav_divider.png')) 0 0 no-repeat;
+        float: left;
+        text-indent: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        position: relative;
+        list-style-type: none;
+        div {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 85px;
+          height: 69px;
+          a {
+            display: block;
+            padding-top: 19px;
+            height: 50px;
+            color: white;
+            vertical-align: middle;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+          }
+          a:hover {
+            background: transparent url(image_path('main_nav_over_bg.png')) 0 0 no-repeat;
+          }
+        }
+      }
+    }
+  }
+
 }
 
+
 #banner-text {
-  display: inline;
-  padding-left: 275px;
+  padding: 12px 10px 10px 60px;
 }
 
 
@@ -101,13 +172,7 @@ dl {
   width: 1100px;
 }
 
-#hd {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  position: relative;
-  height: 198px;
-}
+
 
 #main_container {
   padding-top: 25px;
