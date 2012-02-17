@@ -1,13 +1,6 @@
-/* Blacklight css overrides */
+/* Rockhall css stylings */
 
-$col-width: 10em;
-$gutter-width: 10em;
-$side-gutter-width: 10em;
-
-$page_bg_color: #ccc;
-
-html {
-  background: #FFF; }
+html { background: #FFF; }
 
 body {
   background: url(image_path('header_tile_bg.jpg')) 0 0 repeat-x;
@@ -16,13 +9,14 @@ body {
   line-height: 1.4;
   color: #333;
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+}
 
 select, input, button, textarea {
-  font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif; }
+  font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+}
 
-#rockhall-seal a {
-  border: none; }
+#rockhall-seal a { border: none; }
 
 a {
   &:link, &:visited, &:active {
@@ -33,74 +27,40 @@ a {
 .links {
   font-size: 93%;
   padding: 1em 0 0 1em;
+  margin: 0;
   h2 {
     color: #555;
   }
-  li {
-    list-style: none;
+  ul {
+    vertical-align: baseline;
+    padding: 0;
     margin: .3em 0;
   }
-  ul {
-    border-bottom: 1px dotted #ccc;
-    padding-bottom: 1em;
-    margin: 0;
+  li {
+    list-style: none;
   }
 }
 
-/* yui overrides
 
-.yui-t1 #yui-main .yui-b, .yui-t2 #yui-main .yui-b, .yui-t3 #yui-main .yui-b {
-  margin-left: 250px;
-  margin-right: 0px;
-  padding: 0px;
-}
-
-.sidebar p {padding-top: 2em;}
-.sidebar {
-  margin: 0;
-}
-#facets{
-  padding: 0;
-}
-*/
-
-#page {
-  background: transparent url(image_path('header_bg.jpg')) top center no-repeat;
-  width: 1100px; }
-
-#hd {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  position: relative;
-  height: 198px; }
 
 #rockhall-seal {
   display: inline;
   height: 198px;
   width: 160px;
-  padding-left: 75px; }
+  padding-left: 75px;
+}
 
 #banner-text {
   display: inline;
   padding-left: 275px;
 }
 
-#ft {
-  background-color: #7d0000;
-  color: #ffffff;
-  text-align: center;
-  padding: .5em;
-  margin-bottom: 1em; }
+
 
 #white_link {
   color: #ffffff;
-  border: none; }
-
-/*
-  bottom margin is there to let this area push down and be flush with facets on the left.
-  as we put more content in the home page, this margin can be removed.
-*/
+  border: none;
+}
 
 #mural {
   margin-top: 1em;
@@ -108,7 +68,7 @@ a {
 
 /*
   Side-by-side definition list label-value pairs
-  (stole this from Hydrangea's css
+  (stole this from Hydrangea's css)
 */
 
 dl {
@@ -122,21 +82,52 @@ dl {
     text-align: right;
     font-weight: bold;
     font-size: .9em;
-    margin-top: 5px; }
+    margin-top: 5px;
+  }
   dd {
     float: left;
     width: 30em;
     margin-top: 4px;
     /* dd tags look oddly out-of-line unless slightly smaller than dt tags */
     margin-right: 0;
-    position: relative; } }
+    position: relative;
+  }
+}
 
 /* Modifications to Blacklight */
 
-/* Changed blue colors to reds in the "You searched for" section */
+#page {
+  background: transparent url(image_path('header_bg.jpg')) top center no-repeat;
+  width: 1100px;
+}
 
-#bd #main {
-  padding-left: 4.196%;
+#hd {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  position: relative;
+  height: 198px;
+}
+
+#main_container {
+  padding-top: 25px;
+}
+
+#ft {
+  background-color: #7d0000;
+  color: #ffffff;
+  text-align: center;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+#facets h3:hover {
+  background: #DDD;
+}
+
+
+.twiddle {
+  border-bottom: 1px dotted #CCC;
 }
 
 .appliedFilter {
@@ -145,11 +136,15 @@ dl {
   .btnRemove {
     border-left: 1px solid #efd2d2;
     &:active, &:focus {
-      border: 1px dotted #FFD27A; } } }
+      border: 1px dotted #FFD27A;
+    }
+  }
+}
 
 .page_links span.current {
   background: none repeat scroll 0 0 #be4646;
-  border: 1px solid #be4646; }
+  border: 1px solid #be4646;
+}
 
 dl.defList {
   width: 620px;
@@ -166,23 +161,27 @@ dl.defList {
     float: left;
     width: 450px;
     margin: 0;
-    padding: 1px 5px 1px; } }
+    padding: 1px 5px 1px;
+  }
+}
 
-.user_util_links {
-  margin: 20px 0px 0px 0px; }
+.user_util_links { margin: 20px 0px 0px 0px; }
+
+
 
 /* EAD css */
 
 span.container {
   font-size: 90%;
-  margin-left: 25px; }
+  margin-left: 25px;
+}
 
 div.component_part {
   padding: 3px;
-  margin: 2px 0; }
+  margin: 2px 0;
+}
 
-h5 {
-  margin: 0px; }
+h5 { margin: 0px; }
 
 div {
   &.c01 {
@@ -199,23 +198,27 @@ div {
     background-color: #FFF; }
   &.c05 {
     margin: 0 0 0 12px;
-    border: 1px solid #CCC; } }
+    border: 1px solid #CCC;
+  }
+}
 
-#ead_sidebar {
-  position: fixed; }
+#ead_sidebar { position: fixed; }
 
 #ead_toc {
-  position: relative; }
+  position: relative;
+  ol {
+    vertical-align: baseline;
+    padding: 0;
+    margin: .25em;
+  }
+  li {
+    list-style: none;
+  }
+}
 
-div {
-  &#ead_toc ol {
-    margin: 0;
-    li {
-      list-style-type: none;
-      margin-bottom: 5px; } }
-  &#ead_body {
-    p {
-      margin: 0 0 10px 0;
-      padding: 0; }
-    ul li {
-      list-style-type: none; } } }
+#ead_body {
+  p {
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+}
