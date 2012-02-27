@@ -123,7 +123,8 @@ Feature: EAD display
     And I should see "Subject Headings"
     And I should not see "Controlled Access Headings"
 
-  Scenario: Date expression (BL-164)
+  Scenario: Date expression (BL-164) and Accruals note (BL-155)
     Given I am on the ead page for ARC-0037
     Then I should see the field content "blacklight-ead_date_display" contain "1938-2010, undated"
-
+    And I should not see "Accruals note"
+    And I should see "Accruals"

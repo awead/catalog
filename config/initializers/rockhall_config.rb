@@ -113,8 +113,8 @@ Blacklight.configure(:shared) do |config|
     },
     :ead_accruals_display => {
       :xpath      => "/ead/archdesc/accruals/p",
-      :label      => "/ead/archdesc/accruals/head",
-      :is_xpath   => TRUE,
+      :label      => "Accruals",
+      :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
     :ead_citation_display => {
