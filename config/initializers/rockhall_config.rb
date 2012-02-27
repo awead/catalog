@@ -20,6 +20,10 @@ Blacklight.configure(:shared) do |config|
       :search => FALSE,
       :facet  => "name_facet",
     },
+    :series_display => {
+      :search => FALSE,
+      :facet  => "series_facet",
+    },
     :relworks_display => {
       :search => "all_fields",
       :facet  => FALSE,

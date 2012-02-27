@@ -31,3 +31,8 @@ Feature: Catalog Home Page
     When I follow "Art Collins Papers"
     Then I should see a facet for "Format"
     And I should see the facet term "Book"
+
+  Scenario: Series headings need to be linked (BL-100)
+    Given I am on the bib record page for 34407310
+    When I follow "Atlantic & Atco remasters series"
+    Then I should see "I never loved a man the way I love you [sound recording] / Aretha Franklin"
