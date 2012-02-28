@@ -63,3 +63,13 @@ Then /^I should see the word "([^"]*)" highlighted$/ do |arg1|
   page.should have_xpath("//*/span[contains(@style, 'background-color:yellow')]", :text => arg1)
 end
 
+Then /^I should see an image for "([^"]*)"$/ do |arg1|
+  regexp = Regexp.new(arg1)
+
+  if page.respond_to? :should
+    page.should have_xpath("//*/img[contains(@src, arg1)]")
+  else
+    assert page.has_xpath?("//*/img[contains(@src, arg1)]")
+  end
+end
+

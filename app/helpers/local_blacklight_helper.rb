@@ -19,6 +19,16 @@ module LocalBlacklightHelper
     end
   end
 
+  # overrides app/helpers/blacklight/blacklight_helper_behavior.rb
+  def render_document_heading
+    results = String.new
+    results << "<h1>"
+    results << document_icon(@document)
+    results << document_heading
+    results << "</h1>"
+    return results.html_safe
+  end
+
   # end of overriding methods
 
   # Local methods
@@ -64,7 +74,6 @@ module LocalBlacklightHelper
 
   def document_icon doc
     result = String.new
-
     if doc.get("format").nil?
       result << image_tag("icons/unknown.png")
     else

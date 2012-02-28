@@ -109,5 +109,9 @@ Feature:
     Then I should see the field content "blacklight-genre_display" contain "Biography--Juvenile literature"
     And I should see the field content "blacklight-genre_display" not contain "Biography Juvenile literature"
 
+  Scenario: I should see the image of the format type when looking at an item (BL-111_
+    Given I am on the bib record page for "228365502"
+    Then I should see an image for "book"
+
 
 
