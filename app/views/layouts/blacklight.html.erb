@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><%= h(@page_title || application_name) %></title>
     <link href="<%= opensearch_catalog_path(:format => 'xml', :only_path => false) %>" title="<%= application_name%>" type="application/opensearchdescription+xml" rel="search"/>
-    <%= favicon_link_tag %>
+    <%= favicon_link_tag image_tag("favicon.ico") %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -15,24 +15,24 @@
 
       <div id="hd">
         <h1>
-          <%= link_to("Rock Hall", "http://rockhall.com/", {:target => "_blank"}) %>
+          <%= link_to("Home", root_path) %>
         </h1>
         <br class="clr">
         <div id="main_nav">
           <ul>
             <li>
               <div>
-                <%= link_to("Rock Hall", "http://library.rockhall.com/", {:target => "_blank"}) %>
+                <a href="http://rockhall.com/">Museum Website</a>
               </div>
             </li>
             <li>
               <div>
-                <%= link_to("Library + Archives", "http://library.rockhall.com/", {:target => "_blank"}) %>
+                <a href="http://library.rockhall.com/">Library Website</a>
               </div>
             </li>
             <li>
               <div id="banner-text">
-                <span>Library&nbsp;+&nbsp;Archives</span>
+                <%= image_tag("text_la.png") %>
               </div>
             </li>
             <li style="background: none"/>
@@ -61,7 +61,7 @@
       </div>
       <div id="ft">
         <%= raw(@footer) %>
-        <span><%= link_to("Rock and Roll Hall of Fame and Museum", "http://rockhall.com", { :id=>"white_link", :target => "_blank" }) %> | Library and Archives</span><br/>
+        <span><%= link_to("Rock and Roll Hall of Fame and Museum", "http://rockhall.com", { :id=>"white_link" }) %> | Library and Archives</span><br/>
         <span>2809 Woodland Avenue | Cleveland, OH 44115 | 216.515.1956 | <%= mail_to("library@rockhall.org", "library@rockhall.org", {:id=>"white_link"}) %></span>
       </div>
     </div>
