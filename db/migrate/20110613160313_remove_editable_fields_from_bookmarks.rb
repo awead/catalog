@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 class RemoveEditableFieldsFromBookmarks < ActiveRecord::Migration
   def self.up
     remove_column :bookmarks, :notes
