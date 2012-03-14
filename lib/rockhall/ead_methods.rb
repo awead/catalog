@@ -27,6 +27,12 @@ module Rockhall::EadMethods
 
   # Note: only handles ranges in the last set of digits
   def self.ead_accession_range(range)
+
+    # Catch incorrectly formatted ranges
+    if range.match(/[;:]/)
+      raise "Bad accession range"
+    end
+
     results = Array.new
     first, last = range.split(/-/)
     numbers = range.split(/,/)
