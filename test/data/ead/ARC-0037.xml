@@ -45,7 +45,7 @@
             </physdesc>
             <unitdate>1938-2010, undated</unitdate>
             <langmaterial id="ref1862" label="Language of Materials">Materials are in English.</langmaterial>
-            <abstract id="ref1879" label="Collection Overview">The Jeff Gold Collection contains a variety of material that document numerous artists and people in the music industry from the late 1950s through 2010, and includes some undated items. The collection is organized into six series by format, topic, or source; including artist files, subject files, posters, 
+            <abstract id="ref1879" label="Collection Overview">The Jeff Gold Collection contains a variety of material that document numerous artists and people in the music industry from the late 1950s through 2010, and includes some undated items. The collection is organized into six series by format, topic, or source; including artist files, subject files, posters,
                 <title render="italic">16 Magazine</title>, audiovisual materials, and items from the collections of Art Collins and Ralph Gleason. Please note that files may contain only one item about an artist or subject, such as a press release or photograph.</abstract>
             <origination label="creator">
                 <persname rules="aacr" source="local">Collins, Art, 1953-2005</persname>
@@ -84,11 +84,11 @@
         </accruals>
         <bioghist id="ref1880">
             <head>Biographical Note</head>
-            <p>Jeff Gold is a collector of rock and roll memorabilia who operates the Internet-based store Recordmecca. 
+            <p>Jeff Gold is a collector of rock and roll memorabilia who operates the Internet-based store Recordmecca.
                 <title render="italic">Rolling Stone</title> magazine called him one of the top five collectors of music memorabilia in the world, and he acts as a consultant for various cultural institutions, including the Rock and Roll Hall of Fame and the Experience Music Project.</p>
             <list numeration="lowerroman" type="ordered">
                 <head>Sources</head>
-                <item>"About Recordmecca." 
+                <item>"About Recordmecca."
                     <title render="italic">Recordmecca</title>. Accessed July 28, 2011. 2011. http://www.recordmecca.com/content_page.aspx?id=2.</item>
             </list>
         </bioghist>
@@ -257,7 +257,7 @@
                             </did>
                             <odd id="ref1810">
                                 <head>General note</head>
-                                <p>two page feature in 
+                                <p>two page feature in
                                     <title render="italic">West (Los Angeles Times)</title></p>
                             </odd>
                         </c04>
@@ -296,9 +296,9 @@
                         </c04>
                         <c04 id="ref725" level="file">
                             <did>
-                                <unittitle>Press kit for CD release of 
-                                    <title render="italic">Help!</title>, 
-                                    <title render="italic">Rubber Soul</title>, and 
+                                <unittitle>Press kit for CD release of
+                                    <title render="italic">Help!</title>,
+                                    <title render="italic">Rubber Soul</title>, and
                                     <title render="italic">Revolver</title></unittitle>
                                 <container id="cid363004" type="Box" label="Text">AF1</container>
                                 <container parent="cid363004" type="Folder">7</container>
@@ -311,7 +311,7 @@
                         </c04>
                         <c04 id="ref879" level="file">
                             <did>
-                                <unittitle>Press kit for 20th anniversary release of 
+                                <unittitle>Press kit for 20th anniversary release of
                                     <title render="italic">Sgt. Pepper's Lonely Hearts Club Band</title></unittitle>
                                 <container id="cid363007" type="Box" label="Text">AF1</container>
                                 <container parent="cid363007" type="Folder">7</container>
@@ -530,7 +530,7 @@
                         </c04>
                         <c04 id="ref741" level="file">
                             <did>
-                                <unittitle>Press kit for 
+                                <unittitle>Press kit for
                                     <title render="italic">Isolar</title> LP</unittitle>
                                 <container id="cid571009" type="Box" label="Graphic materials">AF1</container>
                                 <container parent="cid571009" type="Folder">17</container>
@@ -798,7 +798,7 @@
                     </did>
                     <c03 id="ref654" level="file">
                         <did>
-                            <unittitle>Press kit for 
+                            <unittitle>Press kit for
                                 <title render="italic">Boomer's Story</title></unittitle>
                             <container id="cid363018" type="Box" label="Text">AF6</container>
                             <container parent="cid363018" type="Folder">4</container>
@@ -1237,7 +1237,7 @@
                 </c02>
                 <c02 id="ref1142" level="item">
                     <did>
-                        <unittitle>The Grateful Dead 
+                        <unittitle>The Grateful Dead
                             <title render="italic">Blues for Allah</title> album slick</unittitle>
                         <container id="cid365077" type="Drawer-Folder" label="Graphic materials">FF.3.2-5</container>
                         <container parent="cid365077" type="Object">2</container>
@@ -1372,7 +1372,7 @@
                         </c04>
                         <c04 id="ref1969" level="item">
                             <did>
-                                <unittitle>Advertisement for 
+                                <unittitle>Advertisement for
                                     <title render="italic">Electric Ladyland</title></unittitle>
                                 <container id="cid464015" type="Box" label="Graphic materials">OS1</container>
                                 <container parent="cid464015" type="Folder">3</container>
@@ -1390,9 +1390,9 @@
                         </did>
                         <odd id="ref945">
                             <head>General note</head>
-                            <p>Primarily consists of materials from The Jimi Hendrix Exhibition: 
-                                <title render="italic">Guitar Player</title> magazine, invitation to release party for 
-                                <title render="italic">Live at the Fillmore East</title> LP, press release for 
+                            <p>Primarily consists of materials from The Jimi Hendrix Exhibition:
+                                <title render="italic">Guitar Player</title> magazine, invitation to release party for
+                                <title render="italic">Live at the Fillmore East</title> LP, press release for
                                 <title render="italic">Crash Landing</title> LP, newspaper advertisement for Devonshire Downs festival.</p>
                         </odd>
                         <odd id="ref2127">
@@ -1414,8 +1414,8 @@
                     </did>
                     <odd id="ref2129">
                         <head>General note</head>
-                        <p>Press kit for 
-                            <title render="italic">Tiger Beat</title>, handwritten note from Peter Noone to 
+                        <p>Press kit for
+                            <title render="italic">Tiger Beat</title>, handwritten note from Peter Noone to
                             <title render="italic">16 Magazine</title></p>
                     </odd>
                     <odd id="ref2130">
@@ -1436,7 +1436,7 @@
                     </did>
                     <odd id="ref946">
                         <head>General note</head>
-                        <p>one newspaper clipping, and a photocopy of 
+                        <p>one newspaper clipping, and a photocopy of
                             <title render="italic">The London Howlin' Wolf Sessions</title> LP cover</p>
                     </odd>
                 </c02>
@@ -1469,8 +1469,8 @@
                     </did>
                     <odd id="ref948">
                         <head>General note</head>
-                        <p>contains copyright forms and lead sheets for 
-                            <title render="doublequote">Shout</title>, 
+                        <p>contains copyright forms and lead sheets for
+                            <title render="doublequote">Shout</title>,
                             <title render="doublequote">Nobody But Me</title></p>
                     </odd>
                 </c02>
@@ -1537,7 +1537,7 @@
                         <odd id="ref2136">
                             <head>General note</head>
                             <p>
-                                <title render="italic">Running Out of Luck</title> press kit, 
+                                <title render="italic">Running Out of Luck</title> press kit,
                                 <title render="doublequote">The Nightingale</title> press kit, and postage stamps.</p>
                         </odd>
                         <odd id="ref2137">
@@ -1600,7 +1600,7 @@
                 </c02>
                 <c02 id="ref1293" level="file">
                     <did>
-                        <unittitle>Jones, Quincy. 
+                        <unittitle>Jones, Quincy.
                             <title render="italic">Mellow Madness</title> album cover art</unittitle>
                         <container id="cid682004" type="Object" label="Graphic materials">Museum storage</container>
                         <unitdate>undated</unitdate>
@@ -1627,7 +1627,7 @@
                     </odd>
                     <odd id="ref2140">
                         <head>General note</head>
-                        <p>Columbia Records press kit, 
+                        <p>Columbia Records press kit,
                             <title render="italic">Newsweek</title> magazine, and newspaper clipping on Joplin's death.</p>
                     </odd>
                     <separatedmaterial id="ref2142">
@@ -1681,9 +1681,9 @@
                     </did>
                     <odd id="ref2144">
                         <head>General note</head>
-                        <p>Includes 
-                            <title render="italic">Schoolboys in Disgrace</title> stamps, 
-                            <title render="italic">Lola Versus Powerman and the Moneygoround</title> LP label copy, and 
+                        <p>Includes
+                            <title render="italic">Schoolboys in Disgrace</title> stamps,
+                            <title render="italic">Lola Versus Powerman and the Moneygoround</title> LP label copy, and
                             <title render="italic">Something Else</title> album cover art.</p>
                     </odd>
                     <odd id="ref2145">
@@ -1792,7 +1792,7 @@
                         </did>
                         <odd id="ref962">
                             <head>General note</head>
-                            <p>Includes photographs and a playbill for the 1982 off-Broadway musical 
+                            <p>Includes photographs and a playbill for the 1982 off-Broadway musical
                                 <title render="italic">Lennon</title>.</p>
                         </odd>
                     </c03>
@@ -1806,7 +1806,7 @@
                     </c03>
                     <c03 id="ref1157" level="file">
                         <did>
-                            <unittitle>Press kit for 
+                            <unittitle>Press kit for
                                 <title render="doublequote">This is not here</title> art show (Everson Museum of Art, Syracuse, NY)</unittitle>
                             <container id="cid587016" type="Drawer-Folder" label="Graphic materials">FF.3.2-5</container>
                             <container parent="cid587016" type="Object">1</container>
@@ -1897,7 +1897,7 @@
                     </did>
                     <odd id="ref2147">
                         <head>General note</head>
-                        <p>Includes 
+                        <p>Includes
                             <title render="italic">Sex</title> pamphlets from Warner Books Inc.</p>
                     </odd>
                     <odd id="ref375">
@@ -2037,7 +2037,7 @@
                     </did>
                     <odd id="ref70">
                         <head>General note</head>
-                        <p>Reggae Guitars; contains one newspaper clipping from 
+                        <p>Reggae Guitars; contains one newspaper clipping from
                             <title render="italic">World Pop News</title></p>
                     </odd>
                 </c02>
@@ -2167,7 +2167,7 @@
                     </did>
                     <odd id="ref977">
                         <head>General note</head>
-                        <p>contains one page of typed lyrics to 
+                        <p>contains one page of typed lyrics to
                             <title render="doublequote">Daddy's Song</title></p>
                     </odd>
                 </c02>
@@ -2180,7 +2180,7 @@
                     </did>
                     <odd id="ref979">
                         <head>General note</head>
-                        <p>includes one pamphlet for 
+                        <p>includes one pamphlet for
                             <title render="italic">Approximately Infinite Universe</title> LP</p>
                     </odd>
                 </c02>
@@ -2245,7 +2245,7 @@
                     </did>
                     <odd id="ref2151">
                         <head>General note</head>
-                        <p>Includes 
+                        <p>Includes
                             <title render="italic">Zigzag</title>, Vol. 3 no. 8, and a handbill for first New York performance.</p>
                     </odd>
                     <odd id="ref2152">
@@ -2309,7 +2309,7 @@
                     </did>
                     <odd id="ref2156">
                         <head>General note</head>
-                        <p>Includes 
+                        <p>Includes
                             <title render="italic">This Is What You Want, This Is What You Get</title> album cover proof.</p>
                     </odd>
                     <odd id="ref2157">
@@ -2364,8 +2364,8 @@
                         </odd>
                         <odd id="ref2160">
                             <head>General note</head>
-                            <p>Includes flyer for show at The Bottom Line, Sire Records promotional photograph, 
-                                <title render="italic">Punk</title> magazine, Vol. 1 no. 3, and 
+                            <p>Includes flyer for show at The Bottom Line, Sire Records promotional photograph,
+                                <title render="italic">Punk</title> magazine, Vol. 1 no. 3, and
                                 <title render="italic">Rock 'n Roll High School</title> promotional item.</p>
                         </odd>
                     </c03>
@@ -2466,7 +2466,7 @@
                     </did>
                     <odd id="ref2165">
                         <head>General note</head>
-                        <p>Includes 
+                        <p>Includes
                             <title render="italic">Blues and Soul Monthly</title> magazine and press releases.</p>
                     </odd>
                     <odd id="ref2166">
@@ -2749,7 +2749,7 @@
                     </did>
                     <odd id="ref1000">
                         <head>General note</head>
-                        <p>contains one 
+                        <p>contains one
                             <title render="italic">Fave</title> magazine questionnaire filled out by Rick Andridge</p>
                     </odd>
                     <odd id="ref387">
@@ -2968,7 +2968,7 @@
                     </did>
                     <odd id="ref100">
                         <head>General note</head>
-                        <p>contains one photocopied book chapter with editorial markings, and two issues of fanzine 
+                        <p>contains one photocopied book chapter with editorial markings, and two issues of fanzine
                             <title render="italic">Electric Warrior</title></p>
                     </odd>
                 </c02>
@@ -3162,7 +3162,7 @@
                         </did>
                         <odd id="ref2169">
                             <head>General note</head>
-                            <p>Includes handwritten note to 
+                            <p>Includes handwritten note to
                                 <title render="italic">16 Magazine</title>.</p>
                         </odd>
                         <odd id="ref2170">
@@ -3204,7 +3204,7 @@
                         </did>
                         <odd id="ref2205">
                             <head>Museum Accession Numbers</head>
-                            <p>A2002.82.43; A2004.54.137a-A2004.54.137g</p>
+                            <p>A2002.82.43, A2004.54.137a-A2004.54.137g</p>
                         </odd>
                     </c03>
                     <c03 id="ref2208" level="item">
@@ -3246,7 +3246,7 @@
                     </did>
                     <odd id="ref1019">
                         <head>General note</head>
-                        <p>contains handwritten draft of 
+                        <p>contains handwritten draft of
                             <title render="doublequote">Blue Valentine</title> lyrics</p>
                     </odd>
                 </c02>
@@ -3352,8 +3352,8 @@
                         </odd>
                         <odd id="ref2174">
                             <head>General note</head>
-                            <p>Includes biography by Polydor Records, press kit for 
-                                <title render="italic">It's Hard</title> LP, "Squeeze Box" sheet music, and press kit for 
+                            <p>Includes biography by Polydor Records, press kit for
+                                <title render="italic">It's Hard</title> LP, "Squeeze Box" sheet music, and press kit for
                                 <title render="italic">Face Dances</title> LP.</p>
                         </odd>
                     </c03>
@@ -4540,7 +4540,7 @@
                     </odd>
                     <odd id="ref146">
                         <head>General note</head>
-                        <p>Includes 
+                        <p>Includes
                             <title render="italic">Easy Rider</title> press kit, and a photograph of James Dean, by Phil Burchman.</p>
                     </odd>
                 </c02>
@@ -5550,7 +5550,7 @@
                 </custodhist>
                 <scopecontent id="ref1904">
                     <head>Scope and Contents</head>
-                    <p>Series IV: Ralph Gleason Files span the years 1949-1981, with the majority of files dating from the 1960s and early 1970s (Gleason died in 1975; any item dated later is an anomaly). The arrangement of this Series is alphabetical by artist or subject. Of particular note in this Series are his files on the subject of payola in the music industry, the psychedelic music scene in San Francisco (as represented by Jefferson Airplane), and Hank Williams, with whom he conducted an extensive interview in 1953. Many of the files contain newspaper clippings, some of which are annotated. Occasionally a file contains correspondence to Gleason, such as that from John Bryan, or notes in Gleason's hand. The last file in the series, "Various artists and subjects", includes a page of notes found in Gleason's copy of 
+                    <p>Series IV: Ralph Gleason Files span the years 1949-1981, with the majority of files dating from the 1960s and early 1970s (Gleason died in 1975; any item dated later is an anomaly). The arrangement of this Series is alphabetical by artist or subject. Of particular note in this Series are his files on the subject of payola in the music industry, the psychedelic music scene in San Francisco (as represented by Jefferson Airplane), and Hank Williams, with whom he conducted an extensive interview in 1953. Many of the files contain newspaper clippings, some of which are annotated. Occasionally a file contains correspondence to Gleason, such as that from John Bryan, or notes in Gleason's hand. The last file in the series, "Various artists and subjects", includes a page of notes found in Gleason's copy of
                         <title render="italic">Song and Dance Man: the Art of Bob Dylan</title>, and notes from an event featuring Timothy Leary; the contents of this file are also arranged alphabetically by topic.</p>
                 </scopecontent>
                 <c02 id="ref224" level="file">
@@ -6065,7 +6065,7 @@
                     </did>
                     <odd id="ref2115">
                         <head>General note</head>
-                        <p>includes album inserts to 
+                        <p>includes album inserts to
                             <title render="italic">Live at Leeds</title></p>
                     </odd>
                 </c02>
@@ -6203,7 +6203,7 @@
                     </c03>
                     <c03 id="ref1792" level="file">
                         <did>
-                            <unittitle>The Beach Boys, 
+                            <unittitle>The Beach Boys,
                                 <title render="italic">Surf's Up</title> promo</unittitle>
                             <container id="cid464006" type="Drawer-Folder" label="Graphic materials">FF.3.3-3</container>
                             <container parent="cid464006" type="Object">2</container>
@@ -6260,7 +6260,7 @@
                         <c04 id="ref1815" level="item">
                             <did>
                                 <unittitle>
-                                    <title render="italic">Yellow Submarine</title> promo, from 
+                                    <title render="italic">Yellow Submarine</title> promo, from
                                     <title render="italic">Billboard</title> magazine</unittitle>
                                 <container id="cid435003" type="Drawer-Folder" label="Graphic materials">FF.3.3-4</container>
                                 <container parent="cid435003" type="Object">1</container>
@@ -6624,7 +6624,7 @@
                     </c03>
                     <c03 id="ref1778" level="file">
                         <did>
-                            <unittitle>The Gun Club, 
+                            <unittitle>The Gun Club,
                                 <title render="italic">Fire of Love</title> promo</unittitle>
                             <container id="cid336082" type="Drawer-Folder" label="Graphic materials">FF.3.5-1</container>
                             <container parent="cid336082" type="Object">4</container>
@@ -6810,7 +6810,7 @@
                     </c03>
                     <c03 id="ref1784" level="file">
                         <did>
-                            <unittitle>King Crimson, 
+                            <unittitle>King Crimson,
                                 <title render="italic">Three Of A Perfect Pair</title> promo</unittitle>
                             <container id="cid464003" type="Drawer-Folder" label="Graphic materials">FF.3.3-1</container>
                             <container parent="cid464003" type="Object">4-5</container>
@@ -6990,7 +6990,7 @@
                         </did>
                         <c04 id="ref559" level="item">
                             <did>
-                                <unittitle>Cotillion Records promo for 
+                                <unittitle>Cotillion Records promo for
                                     <title render="italic">Chances Are</title></unittitle>
                                 <container id="cid406002" type="Drawer-Folder" label="Graphic materials">FF.3.3-3</container>
                                 <container parent="cid406002" type="Object">8</container>
@@ -7771,7 +7771,7 @@
                     </c03>
                     <c03 id="ref1433" level="file">
                         <did>
-                            <unittitle>Scritti Politti, 
+                            <unittitle>Scritti Politti,
                                 <title render="italic">Cupid and Psyche 85</title> promo</unittitle>
                             <container id="cid370005" type="Drawer-Folder" label="Graphic materials">FF.3.2-1</container>
                             <container parent="cid370005" type="Object">12</container>
@@ -7865,7 +7865,7 @@
                     </c03>
                     <c03 id="ref1798" level="file">
                         <did>
-                            <unittitle>Steely Dan, 
+                            <unittitle>Steely Dan,
                                 <title render="italic">Gaucho</title> promo</unittitle>
                             <container id="cid406005" type="Drawer-Folder" label="Graphic materials">FF.3.3-2</container>
                             <container parent="cid406005" type="Object">3</container>
@@ -7914,7 +7914,7 @@
                     </c03>
                     <c03 id="ref1800" level="file">
                         <did>
-                            <unittitle>Stray Cats, 
+                            <unittitle>Stray Cats,
                                 <title render="italic">Built for Speed</title> promo</unittitle>
                             <container id="cid406006" type="Drawer-Folder" label="Graphic materials">FF.3.3-2</container>
                             <container parent="cid406006" type="Object">4</container>
@@ -8042,7 +8042,7 @@
                     </c03>
                     <c03 id="ref1790" level="file">
                         <did>
-                            <unittitle>Van Halen, 
+                            <unittitle>Van Halen,
                                 <title render="italic">Diver Down</title> promo</unittitle>
                             <container id="cid464004" type="Drawer-Folder" label="Graphic materials">FF.3.3-2</container>
                             <container parent="cid464004" type="Object">6</container>
@@ -8322,7 +8322,7 @@
                         </c04>
                         <c04 id="ref599" level="item">
                             <did>
-                                <unittitle>The Mothers of Invention, 
+                                <unittitle>The Mothers of Invention,
                                     <title render="italic">Freak Out!</title></unittitle>
                                 <container id="cid366028" type="Object" label="Graphic materials">Museum storage</container>
                                 <unitdate>undated</unitdate>
@@ -9642,7 +9642,7 @@
                     </c03>
                     <c03 id="ref1767" level="file">
                         <did>
-                            <unittitle>San Francisco 
+                            <unittitle>San Francisco
                                 <title render="italic">Oracle</title> cover, Vol. 1 no. 9</unittitle>
                             <container id="cid336065" type="Drawer-Folder" label="Graphic materials">FF.3.5-1</container>
                             <container parent="cid336065" type="Object">9</container>
@@ -9670,8 +9670,8 @@
                 </did>
                 <scopecontent id="ref1976">
                     <head>Scope and Contents</head>
-                    <p>The 
-                        <title render="italic">16 Magazine</title> Files series contains files kept by 
+                    <p>The
+                        <title render="italic">16 Magazine</title> Files series contains files kept by
                         <title render="italic">16 Magazine</title> over the years 1964-1987. The files document popular artists featured in the magazine, primarily in the form of photographs, some of which are marked on front and/or back with cropping instructions. The exception is two files of fan mail, which highlight other artists who were popular with the magazine's readers, such as the Bay City Rollers.</p>
                 </scopecontent>
                 <c02 id="ref212" level="file">

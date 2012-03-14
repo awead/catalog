@@ -29,7 +29,7 @@ module Rockhall::EadMethods
   def self.ead_accession_range(range)
 
     # Catch incorrectly formatted ranges
-    if range.match(/[;:]/)
+    if range.match(";")
       raise "Bad accession range"
     end
 

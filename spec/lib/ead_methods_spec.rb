@@ -85,7 +85,7 @@ describe Rockhall::EadMethods do
 
     it "should report errors if the accession range is not correctly formatted" do
       lambda {Rockhall::EadMethods.ead_accession_range("A2009.20.2-A2009.20.6; A2009.20.8-A2009.20.27")}.should raise_error "Bad accession range"
-      lambda {Rockhall::EadMethods.ead_accession_range("A2009.20.2-A2009.20.6: A2009.20.8-A2009.20.27")}.should raise_error "Bad accession range"
+      lambda {Rockhall::EadMethods.ead_accession_range("Object 8 (signed, original): A2010.1.13")}.should_not raise_error
     end
 
   end
