@@ -262,8 +262,8 @@ module Rockhall::EadMethods
   end
 
   def ead_clean_xml(string)
-    string.gsub!("<title render=\"italic\">","<i>")
-    string.gsub!("</title>","</i>")
+    string.gsub!("<title render=\"italic\">","<em>")
+    string.gsub!("</title>","</em>")
     sanitize = Sanitize.clean(string, Sanitize::Config::RESTRICTED)
     sanitize.gsub("\n",'').gsub(/\s+/, ' ').strip
   end

@@ -56,7 +56,7 @@ Then /^I should see the field content "([^"]*)" not contain "([^"]*)"$/ do |arg1
 end
 
 Then /^I should see "([^"]*)" in italics$/ do |arg1|
-  page.should have_xpath("//*/i", :text => arg1)
+  page.should have_xpath("//*/em", :text => arg1)
 end
 
 Then /^I should see the word "([^"]*)" highlighted$/ do |arg1|
