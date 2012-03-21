@@ -178,7 +178,7 @@ describe Rockhall::EadMethods do
         <title render="italic">The Skills to Pay the Bills: The Story of the Beastie Boys</title>.
       '
       clean = ead_clean_xml(sample)
-      clean.should == "<i>Spin</i> magazine and working on three book projects: <i>Tupac Shakur</i>, <i>The Vibe History of Hip Hop</i>, and <i>The Skills to Pay the Bills: The Story of the Beastie Boys</i>."
+      clean.should == "<em>Spin</em> magazine and working on three book projects: <em>Tupac Shakur</em>, <em>The Vibe History of Hip Hop</em>, and <em>The Skills to Pay the Bills: The Story of the Beastie Boys</em>."
     end
   end
 
