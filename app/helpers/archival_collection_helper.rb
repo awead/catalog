@@ -141,8 +141,8 @@ module ArchivalCollectionHelper
       results << sources
     end
 
-    results.gsub!("<title render=\"italic\">","<i>")
-    results.gsub!("</title>","</i>")
+    results.gsub!("<title render=\"italic\">","<em>")
+    results.gsub!("</title>","</em>")
 
     return results.html_safe
   end
