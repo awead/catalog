@@ -27,3 +27,4 @@ Gemfile.lock
 lib/solrmarc.log*
 
 .sass-cache/*
+test/data/ead/*
