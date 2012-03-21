@@ -1,0 +1,5 @@
+<p><%= link_back_to_catalog %></p>
+
+<% unless @document[:access_file_s].nil? %>
+  <%= render :partial => "player/jw_player" %>
+<% end %>
