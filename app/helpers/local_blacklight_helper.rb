@@ -21,12 +21,7 @@ module LocalBlacklightHelper
 
   # overrides app/helpers/blacklight/blacklight_helper_behavior.rb
   def render_document_heading
-    results = String.new
-    results << "<h1>"
-    results << document_icon(@document)
-    results << document_heading
-    results << "</h1>"
-    return results.html_safe
+    render :partial => "catalog/rockhall_heading"
   end
 
   # end of overriding methods
