@@ -84,9 +84,20 @@ module LocalBlacklightHelper
     if status.first
       results << "<h3>Holdings</h3>"
       results << "<table>"
-      results << "<tr><th>Location</th><th>Call Number</th><th>Availability</th></tr>"
+      results << "<tr><th>Location</th><th>Call Number</th><th>Availability</th>"
+      if @document[:format].match("Periodical")
+        results << "<th>Issues</th></tr>"
+      else
+        results << "</tr>"
+      end
       status.each do |s|
-        results << "<tr><td>" + s.to_s + "</td></tr>"
+        results << "<tr><td>" + s.to_s + "</td>"
+        if @document[:format].match("Periodical")
+          link = "http://catalog.case.edu/record=" + @document[:innovative_t].to_s
+          results << "<td>" + link_to("Click for Holdings", link, { :target => "_blank"})  + "</td></tr>"
+        else
+          results << "</tr>"
+        end
       end
       results << "</table>"
     else
@@ -103,5 +114,6 @@ module LocalBlacklightHelper
     results << "<h5>" + link_to("View in opac", link) + "</h5>"
     return nil
   end
+
 
 end
