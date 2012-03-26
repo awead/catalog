@@ -113,5 +113,10 @@ Feature:
     Given I am on the bib record page for "228365502"
     Then I should see an image for "book"
 
+  Scenario: Access to Serials Holdings via Bib Record (BL-181)
+    Given I am on the bib record page for 1478478
+    Then I should see "Click for Holdings"
+    Given I am on the bib record page for 702358017
+    Then I should not see "Click for Holdings"
 
 
