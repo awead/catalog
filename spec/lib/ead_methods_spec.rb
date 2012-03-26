@@ -147,7 +147,35 @@ describe Rockhall::EadMethods do
     describe "ead_material" do
       it "should return the material type from the label attribute" do
         material = ead_material(@part)
-        material.should == "Graphic materials"
+        material.length.should == 1
+        material.should =~ ["Graphic materials"]
+      end
+
+      it "should return an array of materials" do
+        sample ='
+          <c04 id="ref215" level="item">
+            <did>
+                <unittitle>Internal Revenue Service Form Information Return [RESTRICTED]</unittitle>
+                <langmaterial>
+                    <language langcode="eng"/>
+                </langmaterial>
+                <container id="cid871003" type="Box" label="Access Copy">1</container>
+                <container parent="cid871003" type="Folder">22</container>
+                <container parent="cid871003" type="Object">3</container>
+                <container id="cid605004" type="Box" label="Original Copy">5</container>
+                <container parent="cid605004" type="Folder">1</container>
+                <container parent="cid605004" type="Object">3</container>
+                <unitdate>1958</unitdate>
+            </did>
+            <accessrestrict id="ref1189">
+                <head>Access Restrictions</head>
+                <p>This item is confidential and, therefore, is RESTRICTED. A redacted access copy is available.</p>
+            </accessrestrict>
+        </c04>'
+        xml = Nokogiri::XML(sample)
+        material = ead_material(xml)
+        material.length.should == 2
+        material.should =~ ["Access Copy", "Original Copy"]
       end
     end
 

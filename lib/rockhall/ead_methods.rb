@@ -177,7 +177,7 @@ module Rockhall::EadMethods
       doc.merge!({ :series_b => TRUE })
     else
       doc.merge!({ :material_facet => material })
-	  doc.merge!({ :format => Blacklight.config[:ead_component_name] })
+	    doc.merge!({ :format => Blacklight.config[:ead_component_name] })
     end
 
     # index accession numbers and ranges
@@ -213,16 +213,26 @@ module Rockhall::EadMethods
   def ead_location(node)
     r = Array.new
     node.xpath("//did/container").each do |container|
-      r << container.attr("type") + ": " + container.text
+      if container.attr("label").nil?
+        r << container.attr("type") + ": " + container.text
+      else
+        if container.attr("label").match("Copy")
+          r << container.attr("label") + " - " + container.attr("type") + ": " + container.text
+        else
+          r << container.attr("type") + ": " + container.text
+        end
+      end
     end
    return r.join(", ")
   end
 
   def ead_material(node)
-    value = node.search("container[@label]")
-    if value.first.respond_to?(:attr)
-      return value.first.attr("label")
+    r = Array.new
+    values = node.search("container[@label]")
+    values.each do |v|
+      r << v.attr(:label)
     end
+    return r
   end
 
   def ead_prep_component(node,level)

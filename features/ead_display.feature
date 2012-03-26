@@ -128,3 +128,10 @@ Feature: EAD display
     Then I should see the field content "blacklight-ead_date_display" contain "1938-2010, undated"
     And I should not see "Accruals note"
     And I should see "Accruals"
+
+  Scenario: Displaying multiple copies of an archival item (BL-202)
+    Given I am on the ead page for ARC-0006:4:ref216
+    Then I should see "Original Copy - Box: 5, Folder: 1, Object: 4"
+    And I should see "Access Copy - Box: 1, Folder: 22, Object: 4"
+
+
