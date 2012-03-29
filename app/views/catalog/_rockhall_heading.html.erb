@@ -3,18 +3,6 @@
   <%= document_heading %>
 </h1>
 
-<% unless Rails.env.match("production") %>
-  <% sidebar_items << capture do %>
-    <p>
-      Video request from
-      <ul>
-        <li><%= request.remote_ip %></li>
-        <li><%= request.host_with_port %></li>
-      </ul>
-    </p>
-  <% end %>
-<% end %>
+<!-- Video request from <%= request.remote_ip %> -->
 
-<% unless @document[:access_file_s].nil? %>
-  <%= render :partial => "player/jw_player" %>
-<% end %>
+<%= insert_player %>
