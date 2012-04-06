@@ -147,8 +147,8 @@ Blacklight.configure(:shared) do |config|
     },
     :ead_process_display => {
       :xpath      => "/ead/archdesc/processinfo/p",
-      :label      => "/ead/archdesc/processinfo/head",
-      :is_xpath   => TRUE,
+      :label      => "Processing Information",
+      :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
     :c_title_display => {

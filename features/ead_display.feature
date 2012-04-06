@@ -134,4 +134,9 @@ Feature: EAD display
     Then I should see "Original Copy - Box: 5, Folder: 1, Object: 4"
     And I should see "Access Copy - Box: 1, Folder: 22, Object: 4"
 
+  Scenario: Processing information note (BL-196)
+    Given I am on the ead page for ARC-0003
+    Then I should see "Processing Information"
+    And I should not see "Processing Information note"
+
 
