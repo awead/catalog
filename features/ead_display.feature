@@ -139,4 +139,9 @@ Feature: EAD display
     Then I should see "Processing Information"
     And I should not see "Processing Information note"
 
+  Scenario: AT genre facet display (BL-195)
+    Given I am on the ead page for ARC-0005
+    Then I should see "Clippings (Books, newspapers, etc.)"
+    And I should see "Photographs"
+
 

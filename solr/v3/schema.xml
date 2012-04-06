@@ -553,6 +553,7 @@
    <field name="parent_ref_list" type="string" indexed="false" stored="true" multiValued="true"/>
    <field name="parent_unittitle_list" type="string" indexed="false" stored="true" multiValued="true"/>
    <field name="name_facet" type="string" indexed="true" stored="true" multiValued="true" />
+   <field name="genre_facet" type="string" indexed="true" stored="true" multiValued="true" />
 
 
    <!-- Dynamic field definitions.  If a field name is not found, dynamicFields
