@@ -1,0 +1,46 @@
+<div id="video_box">
+
+<!-- player container-->
+<div id="player">&nbsp;</div>
+
+<!-- the playlist -->
+<%  if @document[:access_file_s].class.name.match("Array") %>
+  <div id="playlist" class="clearfix" style="display:none">
+    <div>${title}</div>
+  </div>
+<% end %>
+
+<!-- let rest of the page float normally -->
+<br clear="all" />
+
+</div>
+
+<script type="text/javascript">
+  $f("player", "<%= root_path %>flowplayer/flowplayer-3.2.9.swf", {
+  // the playlist
+  playlist: [
+    <%= flowplayer_playlist %>
+  ],
+
+  // each clip on the playlist uses the rtmp plugin
+  clip: {
+    provider: 'rtmp'
+  },
+
+  // the rtmp plugin
+  plugins: {
+    rtmp: {
+      url:              '<%= root_path %>flowplayer/flowplayer.rtmp-3.2.9.swf',
+      netConnectionUrl: 'rtmp://streaming.rockhall.org/vod'
+    },
+
+    // include playlist buttons in the controlbar
+    controls: {
+      playlist: true
+    }
+  }
+
+}).playlist("#playlist");
+$("#playlist").show();
+
+</script>

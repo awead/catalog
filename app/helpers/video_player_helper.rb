@@ -3,11 +3,10 @@ module VideoPlayerHelper
   def insert_player
     if is_allowable_ip?(request.remote_ip)
       unless @document[:access_file_s].nil?
-        render :partial => "player/jw_player"
+        render :partial => "player/flowplayer"
       end
     end
   end
-
 
   def is_allowable_ip?(ip)
     if ip.match(/^127\.0\.0\.1$/)
@@ -21,6 +20,17 @@ module VideoPlayerHelper
     else
       return false
     end
+  end
+
+  def flowplayer_playlist
+    results = Array.new
+    count = 1
+    @document[:access_file_s].each do |video|
+      path = File.join(@document[:id].gsub(/:/,"_"),"data",video)
+      results << "{title: 'Part #{count.to_s}', url: 'mp4:#{path}'}"
+      count = count + 1
+    end
+    return results.join(",").to_s
   end
 
 end
