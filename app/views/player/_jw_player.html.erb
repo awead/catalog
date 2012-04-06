@@ -7,7 +7,7 @@
 
   var flashvars = {
     file: '<%= File.join(@document[:id].gsub(/:/,"_"),"data",@document[:access_file_s]) %>',
-    streamer:'rtmp://bernie.rockhall.org/vod'
+    streamer:'rtmp://192.168.251.84/vod'
   };
 
   swfobject.embedSWF('<%= root_path %>jwplayer/player.swf','container','480','270','9.0.115','false', flashvars,

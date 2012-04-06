@@ -17,6 +17,8 @@ module VideoPlayerHelper
       return true
     elsif ip.match(/^192\.168\.252/)
       return true
+    elsif ip.match(/^207\.206\.49/)
+      return true
     else
       return false
     end
