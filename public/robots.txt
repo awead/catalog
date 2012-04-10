@@ -1,2 +1,2 @@
 User-Agent: *
-Sitemap: http://catalog.rockhall.com/sitemap.xml
+Sitemap: http://catalog.rockhall.com/catalog-sitemap.xml
