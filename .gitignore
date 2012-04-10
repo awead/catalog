@@ -18,6 +18,9 @@ vendor/plugins/blacklight/*
 public/plugin_assets
 public/plugin_assets/
 public/assets
+public/*.xml
+public/*.xml.gz
+
 
 tmp/**/*
 tmp/performance 

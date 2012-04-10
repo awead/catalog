@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 gem "devise"
 gem "blacklight_highlight"
+gem 'blacklight-sitemap', '~> 1.0.0'
 
 group :assets do
   gem 'coffee-rails', "~> 3.2.1"

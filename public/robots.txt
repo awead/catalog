@@ -1,3 +1,2 @@
-# Banning spiders until I can generate site maps
 User-Agent: *
-Disallow: /
+Sitemap: http://catalog.rockhall.com/sitemap.xml
