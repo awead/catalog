@@ -49,7 +49,7 @@ module ComponentsHelper
       label = opts[:label]
     else
       if document[(field.to_s + "_label").to_sym].nil?
-        label = Blacklight.config[:ead_fields][field.to_sym][:label].to_s
+        label = Blacklight.config[:component_fields][field.to_sym][:label].to_s
       else
         label = document[(field.to_s + "_label")].to_s
       end

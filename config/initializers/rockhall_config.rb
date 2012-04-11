@@ -151,6 +151,30 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
+  }
+
+  config[:ead_headings] = [
+    "ead_abstract_display",
+    "ead_bio_display",
+    "ead_relatedmaterial_display",
+    "ead_sepmaterial_display",
+    "ead_accruals_display",
+  ]
+  config[:ead_geninfo]  = [
+    "title_display",
+    "ead_extent_display",
+    "ead_bulk_date_display",
+    "ead_inc_date_display",
+    "ead_date_display",
+    "ead_lang_display",
+    "ead_lang_coll_display",
+    "ead_citation_display",
+    "ead_provenance_display",
+    "ead_use_display",
+    "ead_access_display",
+    "ead_process_display",
+  ]
+  config[:component_fields] = {
     :c_title_display => {
       :xpath      => "did/unittitle",
       :label      => "Title",
@@ -248,48 +272,6 @@ Blacklight.configure(:shared) do |config|
       :formatted  => TRUE,
     },
   }
-
-  config[:ead_headings] = [
-    "ead_abstract_display",
-    "ead_bio_display",
-    "ead_relatedmaterial_display",
-    "ead_sepmaterial_display",
-    "ead_accruals_display",
-  ]
-  config[:ead_geninfo]  = [
-    "title_display",
-    "ead_extent_display",
-    "ead_bulk_date_display",
-    "ead_inc_date_display",
-    "ead_date_display",
-    "ead_lang_display",
-    "ead_lang_coll_display",
-    "ead_citation_display",
-    "ead_provenance_display",
-    "ead_use_display",
-    "ead_access_display",
-    "ead_process_display",
-  ]
-  config[:component_fields] = [
-    "c_title_display",
-    "unitdate_display",
-    "physdesc_display",
-    "odd_display",
-    "scopecontent_display",
-    "accessrestrict_display",
-    "processinfo_display",
-    "separatedmaterial_display",
-    "originalsloc_display",
-    "phystech_display",
-    "altformavail_display",
-    "userestrict_display",
-    "bioghist_display",
-    "originalsloc_display",
-    "langmaterial_display",
-    "acqinfo_display",
-    "dimensions_display",
-
-  ]
 
   # Optional EAD things
   config[:ead_display_title_preface] = "Guide to the"
