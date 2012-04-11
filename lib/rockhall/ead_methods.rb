@@ -170,7 +170,7 @@ module Rockhall::EadMethods
 
     # Components with containers, representing individual items,
     # get faceted with their material type and a general format type
-	  # Otherwise, they are marked as a series and supressed from search results.
+	# Otherwise, they are marked as a series and supressed from search results.
     material = ead_material(part)
     if material.nil?
       doc.merge!({ :series_b => TRUE })
@@ -189,14 +189,15 @@ module Rockhall::EadMethods
   end
 
   def ead_solr_field(part,xpath,field,opts={})
+    opts[:component].nil? ? field_class = "ead_fields" : field_class = "component_fields"
     unless part.xpath(xpath).text.empty?
       lines = Array.new
       part.xpath(xpath).each do |line|
         unless line.text.empty?
-          if Blacklight.config[:ead_fields][field.to_sym].nil?
+          if Blacklight.config[field_class.to_sym][field.to_sym].nil?
             lines << line.text
           else
-            if Blacklight.config[:ead_fields][field.to_sym][:formatted]
+            if Blacklight.config[field_class.to_sym][field.to_sym][:formatted]
               lines << ead_clean_xml(line.to_xml)
             else
               lines << line.text
