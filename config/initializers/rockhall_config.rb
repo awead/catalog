@@ -48,6 +48,10 @@ Blacklight.configure(:shared) do |config|
   config[:ead_format_name]    = "Archival Collection"
   config[:ead_component_name] = "Archival Item"
 
+
+  # EAD document fields
+  # These are fields in the /ead section of the xml
+  # and exclude anything in a component or //c0n node
   config[:ead_fields] = {
     :title_display => {
       :xpath      => "/ead/archdesc/did/unittitle",
@@ -187,7 +191,7 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
-    :scopecontent_display  => {
+    :contents_display  => {
       :xpath      => "scopecontent/p",
       :label      => "Scope and Contents",
       :is_xpath   => FALSE,
