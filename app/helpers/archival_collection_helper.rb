@@ -5,7 +5,7 @@ module ArchivalCollectionHelper
     results = String.new
 
     results << "<dl class=\"defList\">"
-    results << gen_info_format(:ead_title_display) unless @document[:ead_title_display].nil?
+    results << gen_info_format(:title_display) unless @document[:title_display].nil?
     results << gen_info_format(:ead_extent_display) unless @document[:ead_extent_display].nil?
 
     # Dates get special treatment

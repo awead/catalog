@@ -125,7 +125,7 @@ describe Rockhall::EadMethods do
         end
       end
 
-      solr_doc[:ead_title_display].first.should == "Eddie Cochran Historical Organization Collection"
+      solr_doc[:title_display].first.should == "Eddie Cochran Historical Organization Collection"
 
     end
   end

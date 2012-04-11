@@ -49,7 +49,7 @@ Blacklight.configure(:shared) do |config|
   config[:ead_component_name] = "Archival Item"
 
   config[:ead_fields] = {
-    :ead_title_display => {
+    :title_display => {
       :xpath      => "/ead/archdesc/did/unittitle",
       :label      => "Title",
       :is_xpath   => FALSE,
@@ -257,7 +257,7 @@ Blacklight.configure(:shared) do |config|
     "ead_accruals_display",
   ]
   config[:ead_geninfo]  = [
-    "ead_title_display",
+    "title_display",
     "ead_extent_display",
     "ead_bulk_date_display",
     "ead_inc_date_display",

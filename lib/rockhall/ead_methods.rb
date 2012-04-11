@@ -83,7 +83,6 @@ module Rockhall::EadMethods
 
     solr_doc = {
       :format         => Blacklight.config[:ead_format_name],
-      :title_display  => title,
       :institution_t  => xml.at('//publicationstmt/publisher').text,
       :ead_filename_s => xml.at('//eadheader/eadid').text,
       :id             => Rockhall::EadMethods.ead_id(xml),
