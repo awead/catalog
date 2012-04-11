@@ -6,11 +6,11 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  #rescue_from Exception, :with => :render_error
-  #rescue_from ActiveRecord::RecordNotFound, :with => :render_not_found
-  #rescue_from ActionController::RoutingError, :with => :render_not_found
-  #rescue_from ActionController::UnknownController, :with => :render_not_found
-  #rescue_from AbstractController::ActionNotFound, :with => :render_not_found
+  rescue_from Exception, :with => :render_error
+  rescue_from ActiveRecord::RecordNotFound, :with => :render_not_found
+  rescue_from ActionController::RoutingError, :with => :render_not_found
+  rescue_from ActionController::UnknownController, :with => :render_not_found
+  rescue_from AbstractController::ActionNotFound, :with => :render_not_found
 
   private
 
