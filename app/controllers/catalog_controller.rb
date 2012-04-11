@@ -105,11 +105,6 @@ class CatalogController < ApplicationController
     config.add_show_field 'upc_display',            :label => 'UPC:'
     config.add_show_field 'pubnum_display',         :label => 'Publisher Number:'
     config.add_show_field 'id',                     :label => 'OCLC No.:'
-    config.add_show_field 'arcsource_display',      :label => 'Archive Source:'
-    config.add_show_field 'unitdate_display',       :label => 'Unit Date:'
-    config.add_show_field 'accessrestrict_display', :label => 'Access Restrictions:'
-    config.add_show_field 'processinfo_display',    :label => 'Process Info:'
-    config.add_show_field 'location_display',       :label => 'Location:'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
