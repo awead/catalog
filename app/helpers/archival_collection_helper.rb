@@ -30,7 +30,7 @@ module ArchivalCollectionHelper
     results << gen_info_format(:ead_citation_display) unless @document[:ead_citation_display].nil?
     results << gen_info_format(:ead_provenance_display) unless @document[:ead_provenance_display].nil?
     results << gen_info_format(:ead_use_display) unless @document[:ead_use_display].nil?
-    results << gen_info_format(:ead_access_display) unless @document[:ead_access_display].nil?
+    results << gen_info_format(:access_display) unless @document[:access_display].nil?
     results << gen_info_format(:ead_process_display) unless @document[:ead_process_display].nil?
 
     results << "</dl>"

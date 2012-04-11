@@ -139,7 +139,7 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
-    :ead_access_display => {
+    :access_display => {
       :xpath      => "/ead/archdesc/accessrestrict/p",
       :label      => "/ead/archdesc/accessrestrict/head",
       :is_xpath   => TRUE,
@@ -171,7 +171,7 @@ Blacklight.configure(:shared) do |config|
     "ead_citation_display",
     "ead_provenance_display",
     "ead_use_display",
-    "ead_access_display",
+    "access_display",
     "ead_process_display",
   ]
   config[:component_fields] = {
@@ -205,7 +205,7 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :accessrestrict_display  => {
+    :access_display  => {
       :xpath      => "accessrestrict/p",
       :label      => "Access Restrictions",
       :is_xpath   => FALSE,
