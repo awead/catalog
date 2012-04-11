@@ -175,7 +175,7 @@ Blacklight.configure(:shared) do |config|
     "ead_process_display",
   ]
   config[:component_fields] = {
-    :c_title_display => {
+    :title_display => {
       :xpath      => "did/unittitle",
       :label      => "Title",
       :is_xpath   => FALSE,
