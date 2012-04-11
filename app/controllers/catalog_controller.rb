@@ -68,7 +68,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'location_display',        :label => 'Location:'
 
     # solr fields to be displayed in the show (single result) view
-    #   The ordering of the field names is the order of the display
+    # The ordering of the field names is the order of the display
+    # None of these fields apply to ead documents or components
     config.add_show_field "title_display",          :label => 'Title:'
     config.add_show_field 'unititle_display',       :label => 'Uniform Title:'
     config.add_show_field 'title_addl_display',     :label => 'Additional Titles:'
