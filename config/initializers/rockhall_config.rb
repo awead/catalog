@@ -55,6 +55,12 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
+    :collection_display => {
+      :xpath      => "/ead/archdesc/did/unittitle",
+      :label      => nil,
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
     :ead_extent_display => {
       :xpath      => "/ead/archdesc/did/physdesc/extent",
       :label      => "Extent",
@@ -153,27 +159,9 @@ Blacklight.configure(:shared) do |config|
     },
   }
 
-  config[:ead_headings] = [
-    "ead_abstract_display",
-    "ead_bio_display",
-    "ead_relatedmaterial_display",
-    "ead_sepmaterial_display",
-    "ead_accruals_display",
-  ]
-  config[:ead_geninfo]  = [
-    "title_display",
-    "ead_extent_display",
-    "ead_bulk_date_display",
-    "ead_inc_date_display",
-    "ead_date_display",
-    "ead_lang_display",
-    "ead_lang_coll_display",
-    "ead_citation_display",
-    "ead_provenance_display",
-    "ead_use_display",
-    "access_display",
-    "ead_process_display",
-  ]
+
+  # EAD component fields
+  # Fields found in component //c0n nodes where n is a number from 1 to 6
   config[:component_fields] = {
     :title_display => {
       :xpath      => "did/unittitle",
@@ -272,6 +260,30 @@ Blacklight.configure(:shared) do |config|
       :formatted  => TRUE,
     },
   }
+
+
+  config[:ead_headings] = [
+    "ead_abstract_display",
+    "ead_bio_display",
+    "ead_relatedmaterial_display",
+    "ead_sepmaterial_display",
+    "ead_accruals_display",
+  ]
+
+  config[:ead_geninfo]  = [
+    "title_display",
+    "ead_extent_display",
+    "ead_bulk_date_display",
+    "ead_inc_date_display",
+    "ead_date_display",
+    "ead_lang_display",
+    "ead_lang_coll_display",
+    "ead_citation_display",
+    "ead_provenance_display",
+    "ead_use_display",
+    "access_display",
+    "ead_process_display",
+  ]
 
   # Optional EAD things
   config[:ead_display_title_preface] = "Guide to the"
