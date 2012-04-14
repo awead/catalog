@@ -36,3 +36,8 @@ Feature: Catalog Home Page
     Given I am on the bib record page for 34407310
     When I follow "Atlantic & Atco remasters series"
     Then I should see "I never loved a man the way I love you [sound recording] / Aretha Franklin"
+
+  Scenario: Add the collection name to the collection_facet field for archival items (BL-182)
+    Given I am on the home page
+    When I follow "Jeff Gold Collection"
+    Then I should see the facet term "Archival Collection"

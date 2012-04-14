@@ -65,6 +65,12 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
+    :collection_facet => {
+      :xpath      => "/ead/archdesc/did/unittitle",
+      :label      => nil,
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
     :extent_display => {
       :xpath      => "/ead/archdesc/did/physdesc/extent",
       :label      => "Extent",
