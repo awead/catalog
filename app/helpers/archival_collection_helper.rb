@@ -6,32 +6,32 @@ module ArchivalCollectionHelper
 
     results << "<dl class=\"defList\">"
     results << gen_info_format(:title_display) unless @document[:title_display].nil?
-    results << gen_info_format(:ead_extent_display) unless @document[:ead_extent_display].nil?
+    results << gen_info_format(:extent_display) unless @document[:extent_display].nil?
 
     # Dates get special treatment
-    if @document[:ead_date_display]
-      results << "<dt class=\"blacklight-ead_date_display\">Dates:</dt>"
-      results << "<dd class=\"blacklight-ead_date_display\">" + @document[:ead_date_display].to_s + "</dd>"
+    if @document[:date_display]
+      results << "<dt class=\"blacklight-date_display\">Dates:</dt>"
+      results << "<dd class=\"blacklight-date_display\">" + @document[:date_display].to_s + "</dd>"
     else
-      unless @document[:ead_inc_date_display].nil? and @document[:ead_bulk_date_display].nil?
-        results << "<dt class=\"blacklight-ead_date_display\">Dates:</dt>"
-        results << "<dd class=\"blacklight-ead_date_display\">Inclusive, "
-        results << @document[:ead_inc_date_display].to_s
-        unless @document[:ead_bulk_date_display].nil?
+      unless @document[:inc_date_display].nil? and @document[:bulk_date_display].nil?
+        results << "<dt class=\"blacklight-date_display\">Dates:</dt>"
+        results << "<dd class=\"blacklight-date_display\">Inclusive, "
+        results << @document[:inc_date_display].to_s
+        unless @document[:bulk_date_display].nil?
           results << "; "
-          results << @document[:ead_bulk_date_display].to_s
+          results << @document[:bulk_date_display].to_s
         end
         results << "</dd>"
       end
     end
 
-    results << gen_info_format(:ead_lang_coll_display) unless @document[:ead_lang_coll_display].nil?
-    results << gen_info_format(:ead_lang_display) unless @document[:ead_lang_display].nil?
-    results << gen_info_format(:ead_citation_display) unless @document[:ead_citation_display].nil?
-    results << gen_info_format(:ead_provenance_display) unless @document[:ead_provenance_display].nil?
-    results << gen_info_format(:ead_use_display) unless @document[:ead_use_display].nil?
+    results << gen_info_format(:language_display) unless @document[:language_display].nil?
+    results << gen_info_format(:aid_language_display) unless @document[:aid_language_display].nil?
+    results << gen_info_format(:citation_display) unless @document[:citation_display].nil?
+    results << gen_info_format(:provenance_display) unless @document[:provenance_display].nil?
+    results << gen_info_format(:usage_display) unless @document[:usage_display].nil?
     results << gen_info_format(:access_display) unless @document[:access_display].nil?
-    results << gen_info_format(:ead_process_display) unless @document[:ead_process_display].nil?
+    results << gen_info_format(:process_display) unless @document[:process_display].nil?
 
     results << "</dl>"
 
@@ -102,10 +102,10 @@ module ArchivalCollectionHelper
   end
 
 
-  def ead_bio_display
+  def bio_display
     results = String.new
-    label = get_ead_label("ead_bio_display")
-    results << "<h2 id=\"ead_bio_display\">#{label}</h2>"
+    label = get_ead_label("bio_display")
+    results << "<h2 id=\"bio_display\">#{label}</h2>"
 
     xml   = Rockhall::EadMethods.ead_xml(@document)
     list  = xml.xpath("/ead/archdesc/bioghist/chronlist")
@@ -125,8 +125,8 @@ module ArchivalCollectionHelper
       results << "</dl>"
     end
 
-    unless @document[:ead_bio_display].nil?
-      @document[:ead_bio_display].each do | v|
+    unless @document[:bio_display].nil?
+      @document[:bio_display].each do | v|
         results << "<p>#{v}</p>"
       end
     end

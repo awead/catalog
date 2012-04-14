@@ -65,85 +65,85 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_extent_display => {
+    :extent_display => {
       :xpath      => "/ead/archdesc/did/physdesc/extent",
       :label      => "Extent",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_bulk_date_display => {
+    :bulk_date_display => {
       :xpath      => "/ead/archdesc/did/unitdate[@type='bulk']",
       :label      => "Dates",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_inc_date_display => {
+    :inc_date_display => {
       :xpath      => "/ead/archdesc/did/unitdate[@type='inclusive']",
       :label      => "Dates",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_date_display => {
+    :date_display => {
       :xpath      => "/ead/archdesc/did/unitdate[not(@type)]",
       :label      => "Dates",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_lang_display => {
+    :aid_language_display => {
       :xpath      => "/ead/eadheader/profiledesc/langusage",
       :label      => "Language of Finding Aid",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_lang_coll_display => {
+    :language_display => {
       :xpath      => "/ead/archdesc/did/langmaterial",
       :label      => "Language of Materials",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_abstract_display => {
+    :abstract_display => {
       :xpath      => "/ead/archdesc/did/abstract",
       :label      => "Collection Overview",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_bio_display => {
+    :bio_display => {
       :xpath      => "/ead/archdesc/bioghist/p",
       :label      => "/ead/archdesc/bioghist/head",
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
-    :ead_sepmaterial_display => {
+    :sepmaterial_display => {
       :xpath      => "/ead/archdesc/separatedmaterial/p",
       :label      => "/ead/archdesc/separatedmaterial/head",
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
-    :ead_relatedmaterial_display => {
+    :relitems_display => {
       :xpath      => "/ead/archdesc/relatedmaterial/p",
       :label      => "/ead/archdesc/relatedmaterial/head",
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
-    :ead_accruals_display => {
+    :accruals_display => {
       :xpath      => "/ead/archdesc/accruals/p",
       :label      => "Accruals",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_citation_display => {
+    :citation_display => {
       :xpath      => "/ead/archdesc/prefercite/p",
       :label      => "/ead/archdesc/prefercite/head",
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
-    :ead_provenance_display => {
+    :provenance_display => {
       :xpath      => "/ead/archdesc/custodhist/p",
       :label      => "Custodial History",
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
-    :ead_use_display => {
+    :usage_display => {
       :xpath      => "/ead/archdesc/userestrict/p",
       :label      => "/ead/archdesc/userestrict/head",
       :is_xpath   => TRUE,
@@ -155,7 +155,7 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => TRUE,
       :formatted  => TRUE,
     },
-    :ead_process_display => {
+    :process_display => {
       :xpath      => "/ead/archdesc/processinfo/p",
       :label      => "Processing Information",
       :is_xpath   => FALSE,
@@ -267,26 +267,26 @@ Blacklight.configure(:shared) do |config|
 
 
   config[:ead_headings] = [
-    "ead_abstract_display",
-    "ead_bio_display",
-    "ead_relatedmaterial_display",
-    "ead_sepmaterial_display",
-    "ead_accruals_display",
+    "abstract_display",
+    "bio_display",
+    "relitems_display",
+    "sepmaterial_display",
+    "accruals_display",
   ]
 
   config[:ead_geninfo]  = [
     "title_display",
-    "ead_extent_display",
-    "ead_bulk_date_display",
-    "ead_inc_date_display",
-    "ead_date_display",
-    "ead_lang_display",
-    "ead_lang_coll_display",
-    "ead_citation_display",
-    "ead_provenance_display",
-    "ead_use_display",
+    "extent_display",
+    "bulk_date_display",
+    "inc_date_display",
+    "date_display",
+    "aid_language_display",
+    "language_display",
+    "citation_display",
+    "provenance_display",
+    "usage_display",
     "access_display",
-    "ead_process_display",
+    "process_display",
   ]
 
   # Optional EAD things
