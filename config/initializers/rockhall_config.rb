@@ -59,6 +59,18 @@ Blacklight.configure(:shared) do |config|
       :is_xpath   => FALSE,
       :formatted  => TRUE,
     },
+    :title_t => {
+      :xpath      => "/ead/archdesc/did/unittitle",
+      :label      => nil,
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
+    :title_addl_t => {
+      :xpath      => "/ead/archdesc/did/unittitle",
+      :label      => nil,
+      :is_xpath   => FALSE,
+      :formatted  => TRUE,
+    },
     :collection_display => {
       :xpath      => "/ead/archdesc/did/unittitle",
       :label      => nil,

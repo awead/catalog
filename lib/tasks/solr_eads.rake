@@ -169,8 +169,11 @@ namespace :solr do
 
       solr_doc = Rockhall::EadMethods.get_ead_doc(xml)
       solr_doc.merge!({:subject_topic_facet => subject.flatten.uniq})
+      solr_doc.merge!({:subject_t => subject.flatten.uniq})
       solr_doc.merge!({:name_facet => name.flatten.uniq})
+      solr_doc.merge!({:contributors_t => name.flatten.uniq})
       solr_doc.merge!({:genre_facet => genre.flatten.uniq})
+      solr_doc.merge!({:genre_t => genre.flatten.uniq})
       puts "... document "
       response = Blacklight.solr.add solr_doc
       commit = Blacklight.solr.commit
