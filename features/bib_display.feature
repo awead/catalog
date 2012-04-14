@@ -122,7 +122,7 @@ Feature:
   @wip
   Scenario: Names entered as main entries and subjects are displaying under Contributors in bibs (BL-199)
     Given I am on the bib record page for 773370191
-    Then I should see the field content "contributor_display" contain "Moonalice (Musical group)"
-    And I should see the field content "contributor_display" contain "Moonalice (Musical group)Posters"
+    Then I should see the field content "blacklight-contributors_display" contain "Moonalice (Musical group)"
+    And I should see the field content "blacklight-contributors_display" not contain "Moonalice (Musical group)Posters"
 
 
