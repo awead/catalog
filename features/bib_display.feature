@@ -119,7 +119,6 @@ Feature:
     Given I am on the bib record page for 702358017
     Then I should not see "Click for Holdings"
 
-  @wip
   Scenario: Names entered as main entries and subjects are displaying under Contributors in bibs (BL-199)
     Given I am on the bib record page for 773370191
     Then I should see the field content "blacklight-contributors_display" contain "Moonalice (Musical group)"
