@@ -11,7 +11,7 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       :qt => 'search',
       :rows => 10,
-      ("hl.fl").to_sym => "*"
+      ("hl.fl").to_sym => "title_display,author_display,publisher_display,collection_display,parent_unittitle_list,location_display"
     }
 
     # solr field configuration for search results/index views
