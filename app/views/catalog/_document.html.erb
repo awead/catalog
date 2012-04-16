@@ -19,9 +19,8 @@
       </div>
 
       <% # main container for doc partial view -%>
-      <% if document[:innovative_display] %>
-        <div class="innovative_status" id="<%= document[:innovative_display] %>"><b>Status: </b></div>
-      <% end %>
+      <%= show_status document %>
+
       <%= render_document_partial document, :index %>
 
     </div>

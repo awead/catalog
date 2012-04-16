@@ -95,6 +95,7 @@ module LocalBlacklightHelper
 
   def check_availability(iii_id)
     results = String.new
+    return nil if @document[:format].match("Website")
     status = Rockhall::Innovative.get_holdings(iii_id.first.to_s)
     if status.first
       results << "<h3>Holdings</h3>"
@@ -130,5 +131,14 @@ module LocalBlacklightHelper
     return nil
   end
 
+  def show_status(doc)
+    results = String.new
+    unless doc[:format].match("Website") or doc[:format].match("Periodical")
+      if doc[:innovative_display]
+        results << "<div class=\"innovative_status\" id=\"#{doc[:innovative_display]}\"><b>Status: </b></div>"
+      end
+    end
+    return results.html_safe
+  end
 
 end
