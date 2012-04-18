@@ -23,6 +23,8 @@ select, input, button, textarea {
 .bold { font-weight:bold }
 .italic { font-style:italic }
 
+
+
 a {
   &:link, &:visited, &:active {
     color: #AC1313;
@@ -289,4 +291,9 @@ div {
     margin: 0 0 10px 0;
     padding: 0;
   }
+  .hangingindent {
+    padding-left: 50px;
+    text-indent: -25px;
+  }
 }
+

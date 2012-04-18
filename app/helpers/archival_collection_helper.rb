@@ -202,10 +202,14 @@ module ArchivalCollectionHelper
   end
 
   def format_source_list(text)
+    #results = String.new
+    text.gsub!("<list numeration=\"lowerroman\" type=\"ordered\">","")
+    text.gsub!("</list>","")
     text.gsub!("<head>","<h4>")
     text.gsub!("</head>","</h4>")
-    text.gsub!("<item>","<p>")
+    text.gsub!("<item>","<p class=\"hangingindent\">")
     text.gsub!("</item>","</p>")
+    #results = "<div id=\"hangingindent\">" + text + "</div>"
     return text.html_safe
   end
 
