@@ -190,6 +190,9 @@ module ArchivalCollectionHelper
   def format_chronlist(text)
     text.gsub!("<head>","<h4>")
     text.gsub!("</head>","</h4>")
+    text.gsub!(/<eventgrp>\s+<event>/,"<dd>")
+    text.gsub!(/<\/event>\s+<event>/,"<br/>")
+    text.gsub!(/<\/event>\s+<\/eventgrp>/,"</dd>")
     text.gsub!("<chronitem>","")
     text.gsub!("<chronlist>","<dl class=\"defList\">")
     text.gsub!("</chronlist>","</dl>")
@@ -198,7 +201,7 @@ module ArchivalCollectionHelper
     text.gsub!("<event>","<dd>")
     text.gsub!("</event>","</dd>")
     text.gsub!("</chronitem>","")
-    return text.html_safe
+    return text
   end
 
   def format_source_list(text)
@@ -210,7 +213,7 @@ module ArchivalCollectionHelper
     text.gsub!("<item>","<p class=\"hangingindent\">")
     text.gsub!("</item>","</p>")
     #results = "<div id=\"hangingindent\">" + text + "</div>"
-    return text.html_safe
+    return text
   end
 
 
