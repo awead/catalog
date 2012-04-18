@@ -67,10 +67,10 @@ Feature: EAD display
 
   Scenario: Displaying italics (BL-33)
     Given I am on the ead page for ARC-0058
-    Then I should see "New Musical Express" in italics
-    And I should see "Love" in italics
+    Then I should see "New Musical Express" in "italic"
+    And I should see "Love" in "italic"
     Given I am on the ead page for ARC-0105
-    Then I should see "Blues Train" in italics
+    Then I should see "Blues Train" in "italic"
 
   Scenario: Separated materials notes (BL-43)
     Given I am on the ead page for ARC-0105
@@ -149,5 +149,10 @@ Feature: EAD display
     Then I should see "First meeting of the Organization"
     And I should see "Incorporated as a Minnesota non-profit organization"
     And I should see "Holds first annual Eddie Cochran Weekend in Alberta Lea, Minn"
+
+  Scenario: Displaying text in bold
+    Given I am on the ead page for ARC-0005
+    Then I should see "EDDIE COCHRAN" in "bold"
+    And I should see "EDDIE COCHRAN HISTORICAL ORGANIZATION" in "bold"
 
 

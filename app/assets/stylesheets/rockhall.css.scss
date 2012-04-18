@@ -20,6 +20,9 @@ select, input, button, textarea {
 
 .no-background { background: none; }
 
+.bold { font-weight:bold }
+.italic { font-style:italic }
+
 a {
   &:link, &:visited, &:active {
     color: #AC1313;

@@ -1,5 +1,6 @@
 module ArchivalCollectionHelper
 
+  include Rockhall::EadMethods
 
   def general_info
     results = String.new
@@ -114,10 +115,9 @@ module ArchivalCollectionHelper
       results << c.to_xml if c.name == "p"
       results << format_source_list(c.to_xml) if c.name == "list"
     end
-
-    # TODO: Display italics or bold
-    #results.gsub!("<title render=\"italic\">","<em>")
-    #results.gsub!("</title>","</em>")
+    results.gsub!(/<title/,"<span")
+    results.gsub!(/<\/title/,"</span")
+    results.gsub!(/render=/,"class=")
     return results.html_safe
   end
 
@@ -208,5 +208,6 @@ module ArchivalCollectionHelper
     text.gsub!("</item>","</p>")
     return text.html_safe
   end
+
 
 end

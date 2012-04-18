@@ -272,9 +272,10 @@ module Rockhall::EadMethods
   end
 
   def ead_clean_xml(string)
-    string.gsub!("<title render=\"italic\">","<em>")
-    string.gsub!("</title>","</em>")
-    sanitize = Sanitize.clean(string, Sanitize::Config::RESTRICTED)
+    string.gsub!(/<title/,"<span")
+    string.gsub!(/<\/title/,"</span")
+    string.gsub!(/render=/,"class=")
+    sanitize = Sanitize.clean(string, :elements => ['span'], :attributes => {'span' => ['class']})
     sanitize.gsub("\n",'').gsub(/\s+/, ' ').strip
   end
 

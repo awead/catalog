@@ -200,13 +200,14 @@ describe Rockhall::EadMethods do
   describe "ead_clean_xml" do
     it "should strip out unwanted characters from ead fields and correct for ead->html formatting" do
       sample = '
+        <title render="bold">Some bold text here</title> but not here.
         <title render="italic">Spin</title> magazine and working on three book projects:
         <title render="italic">Tupac Shakur</title>,
         <title render="italic">The Vibe History of Hip Hop</title>, and
         <title render="italic">The Skills to Pay the Bills: The Story of the Beastie Boys</title>.
       '
       clean = ead_clean_xml(sample)
-      clean.should == "<em>Spin</em> magazine and working on three book projects: <em>Tupac Shakur</em>, <em>The Vibe History of Hip Hop</em>, and <em>The Skills to Pay the Bills: The Story of the Beastie Boys</em>."
+      clean.should == "<span class=\"bold\">Some bold text here</span> but not here. <span class=\"italic\">Spin</span> magazine and working on three book projects: <span class=\"italic\">Tupac Shakur</span>, <span class=\"italic\">The Vibe History of Hip Hop</span>, and <span class=\"italic\">The Skills to Pay the Bills: The Story of the Beastie Boys</span>."
     end
   end
 
