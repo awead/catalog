@@ -106,44 +106,18 @@ module ArchivalCollectionHelper
     results = String.new
     label = get_ead_label("bio_display")
     results << "<h2 id=\"bio_display\">#{label}</h2>"
+    xml = Rockhall::EadMethods.ead_xml(@document)
+    bio = xml.xpath("/ead/archdesc/bioghist")
 
-    xml   = Rockhall::EadMethods.ead_xml(@document)
-    list  = xml.xpath("/ead/archdesc/bioghist/chronlist")
-    items = list.xpath('chronitem')
-
-    unless list.empty?
-      # Timeline table
-      results << "<dl class=\"defList\">"
-      items.each do |chronitem|
-        results << "<dt>" + chronitem.xpath('date').first + "</dt>"
-        results << "<dd>"
-        chronitem.xpath('.//event').each do |chronevent|
-          results << chronevent.text + "<br/>"
-        end
-        results << "</dd>"
-      end
-      results << "</dl>"
+    bio.children.each do |c|
+      results << format_chronlist(c.to_xml) if c.name == "chronlist"
+      results << c.to_xml if c.name == "p"
+      results << format_source_list(c.to_xml) if c.name == "list"
     end
 
-    unless @document[:bio_display].nil?
-      @document[:bio_display].each do | v|
-        results << "<p>#{v}</p>"
-      end
-    end
-
-    # Sources
-    sources = String.new
-    xml.xpath("/ead/archdesc/bioghist/list/item").each do |source|
-      sources << "<p>#{source.text}</p>"
-    end
-    unless sources.empty?
-      results << "<h3>Sources</h3>"
-      results << sources
-    end
-
-    results.gsub!("<title render=\"italic\">","<em>")
-    results.gsub!("</title>","</em>")
-
+    # TODO: Display italics or bold
+    #results.gsub!("<title render=\"italic\">","<em>")
+    #results.gsub!("</title>","</em>")
     return results.html_safe
   end
 
@@ -211,6 +185,28 @@ module ArchivalCollectionHelper
       results << "<dt class=\"blacklight-#{field}\">" + label + ":</dt>"
       results << "<dd class=\"blacklight-#{field}\">" + content + "</dd>"
       return results
+  end
+
+  def format_chronlist(text)
+    text.gsub!("<head>","<h4>")
+    text.gsub!("</head>","</h4>")
+    text.gsub!("<chronitem>","")
+    text.gsub!("<chronlist>","<dl class=\"defList\">")
+    text.gsub!("</chronlist>","</dl>")
+    text.gsub!("<date>","<dt>")
+    text.gsub!("</date>","</dt>")
+    text.gsub!("<event>","<dd>")
+    text.gsub!("</event>","</dd>")
+    text.gsub!("</chronitem>","")
+    return text.html_safe
+  end
+
+  def format_source_list(text)
+    text.gsub!("<head>","<h4>")
+    text.gsub!("</head>","</h4>")
+    text.gsub!("<item>","<p>")
+    text.gsub!("</item>","</p>")
+    return text.html_safe
   end
 
 end

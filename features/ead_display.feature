@@ -144,9 +144,8 @@ Feature: EAD display
     Then I should see "Clippings (Books, newspapers, etc.)"
     And I should see "Photographs"
 
-  @wip
   Scenario: Additional chronologies (BL-194)
-    Given I am on the ead page for "ARC-0005"
+    Given I am on the ead page for ARC-0005
     Then I should see "First meeting of the Organization"
     And I should see "Incorporated as a Minnesota non-profit organization"
     And I should see "Holds first annual Eddie Cochran Weekend in Alberta Lea, Minn"
