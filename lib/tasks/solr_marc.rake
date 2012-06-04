@@ -1,5 +1,3 @@
-require "ftools"
-
 namespace :solr do
   namespace :marc do
 
