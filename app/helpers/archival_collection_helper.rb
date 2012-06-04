@@ -12,15 +12,15 @@ module ArchivalCollectionHelper
     # Dates get special treatment
     if @document[:date_display]
       results << "<dt class=\"blacklight-date_display\">Dates:</dt>"
-      results << "<dd class=\"blacklight-date_display\">" + @document[:date_display].to_s + "</dd>"
+      results << "<dd class=\"blacklight-date_display\">" + @document[:date_display].join(" ") + "</dd>"
     else
       unless @document[:inc_date_display].nil? and @document[:bulk_date_display].nil?
         results << "<dt class=\"blacklight-date_display\">Dates:</dt>"
         results << "<dd class=\"blacklight-date_display\">Inclusive, "
-        results << @document[:inc_date_display].to_s
+        results << @document[:inc_date_display].join(" ")
         unless @document[:bulk_date_display].nil?
           results << "; "
-          results << @document[:bulk_date_display].to_s
+          results << @document[:bulk_date_display].join(" ")
         end
         results << "</dd>"
       end
@@ -179,8 +179,12 @@ module ArchivalCollectionHelper
       results = String.new
       label = get_ead_label(field.to_sym)
       content = String.new
-      @document[field.to_sym].each do |v|
-        content << "#{v}<br/>"
+      if @document[field.to_sym].class.to_s.match("String")
+        content << @document[field.to_sym]
+      else
+        @document[field.to_sym].each do |v|
+          content << "#{v}<br/>"
+        end
       end
       results << "<dt class=\"blacklight-#{field}\">" + label + ":</dt>"
       results << "<dd class=\"blacklight-#{field}\">" + content + "</dd>"
