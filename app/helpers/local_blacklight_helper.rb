@@ -135,7 +135,7 @@ module LocalBlacklightHelper
     results = String.new
     unless doc[:format].match("Website") or doc[:format].match("Periodical")
       if doc[:innovative_display]
-        results << "<div class=\"innovative_status\" id=\"#{doc[:innovative_display]}\"><b>Status: </b></div>"
+        results << "<div class=\"innovative_status\" id=\"#{doc[:innovative_display].first}\"><b>Status: </b></div>"
       end
     end
     return results.html_safe

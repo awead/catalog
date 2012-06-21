@@ -23,7 +23,7 @@ end
 group :development, :test do
   gem 'webrat'
   gem 'database_cleaner'
-  gem 'ruby-debug'
+  gem 'ruby-debug19'
 end
 
 group :cucumber do

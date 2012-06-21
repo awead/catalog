@@ -41,7 +41,7 @@ Feature: EAD display
     Then I should see "Limited Print Run"
     And I should see "Non-numbered edition of 200"
     And I should see "Dimensions:"
-    And I should see "ChormaDepth 3D image with required glass for viewing"
+    And I should see "ChromaDepth 3D image with required glass for viewing"
     And I should see "23"
     And I should see "29"
     And I should see "Location:"

@@ -88,7 +88,7 @@ namespace :solr do
       raise "Please specify a directory, like DIR=/home/you/folder." unless d and File.exists?(d)
       files = Dir.entries(d)
       files.each do |f|
-        doc  = File.catname(f, d)
+        doc  = File.join(d, f)
         if File.extname(doc) == ".xml"
           puts "[-----------------------------------------]"
           puts "indexing #{doc}"
