@@ -30,7 +30,7 @@ module Rockhall::Innovative
     url = URI.parse(link(id))
     begin
       req = Net::HTTP::Get.new(url.path)
-      res = Net::HTTP.start(url.host, url.port) {|http|
+      res = Net::HTTP.start(url.host, url.port,opt={:open_timeout=>10}) {|http|
         http.request(req)
       }
       doc = Nokogiri::HTML(res.body)
