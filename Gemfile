@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '~>3.2.1'
 
 gem 'blacklight'
 gem 'sqlite3'
@@ -33,4 +33,8 @@ group :cucumber do
   gem 'cucumber'
   gem 'spork'
   gem 'launchy'
+end
+
+group :production do
+  gem 'passenger', '=3.0.13'
 end
