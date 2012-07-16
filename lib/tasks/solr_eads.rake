@@ -41,32 +41,6 @@ namespace :eads do
     Blacklight.solr.commit
   end
 
-
-  desc "fetch all updated ead xml for each ead"
-  task :fetch_all => :environment do
-    eads = Ead.all
-    eads.each do |ead|
-      ENV['EADID'] = ead.eadid
-      Rake::Task["eads:fetch"].invoke
-      Rake::Task["eads:fetch"].reenable
-    end
-    Blacklight.solr.commit
-  end
-
-  desc "fetch updated ead xml for each ead"
-  task :fetch => :environment do
-    (puts 'no EADID'; exit) if !ENV['EADID']
-    ENV['NOSOLRCOMMIT'] = 'true'
-    ead = Ead.find(ENV['EADID'])
-    puts; puts ead.eadid
-    if ead.save!
-      puts "saved: " + ead.eadid
-    else
-      puts "NOT SAVED: " + ead.eadid
-    end
-  end
-
-
 end
 
 namespace :solr do
@@ -75,7 +49,6 @@ namespace :solr do
     raise "Invalid file. Set the location of the file by using the FILE argument." unless f and File.exists?(f)
     f
   end
-
 
   namespace :index do
     desc "index a directory of ead files"
@@ -103,12 +76,6 @@ namespace :solr do
       end
     end
 
-    desc "index ead sample data from NCSU"
-    task :ead_sample_data => :environment do
-      ENV['FILE'] = "#{RAILS_ROOT}/vendor/plugins/blacklight_ext_ead_simple/data/*"
-      Rake::Task["solr:index:ead_dir"].invoke
-    end
-
     desc "Index an EAD file at FILE=<location-of-file>."
     task :ead=>:environment do
       require 'nokogiri'
@@ -119,8 +86,17 @@ namespace :solr do
       id = Rockhall::EadMethods.ead_id(xml)
       collection = xml.xpath("//archdesc/did/unittitle").first.text.gsub("\n",'').gsub(/\s+/, ' ').strip
 
-      puts "Indexing #{id}"
+      puts "Deleting existing ead..."
+      ENV['ID'] = id
+      begin
+        Rake::Task["eads:delete_ead"].invoke
+      rescue StandardError => bang
+        puts "OOPPS!!!: #{ bang} "
+      end
+      Rake::Task["eads:delete_ead"].reenable
+      puts "done"
 
+      puts "Indexing #{id}"
 
       # Facets
       # Here's a complete list of all our headings used in the EAD:
