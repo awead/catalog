@@ -82,7 +82,7 @@ module Rockhall::EadMethods
     title.sub!(num, '(' + num + ')')
 
     solr_doc = {
-      :format         => Blacklight.config[:ead_format_name],
+      :format         => Rails.configuration.rockhall_config[:ead_format_name],
       :institution_t  => xml.at('//publicationstmt/publisher').text,
       :ead_filename_s => xml.at('//eadheader/eadid').text,
       :id             => Rockhall::EadMethods.ead_id(xml),
@@ -91,14 +91,14 @@ module Rockhall::EadMethods
       :text           => xml.text,
     }
 
-    if Blacklight.config[:ead_display_title_preface].nil?
+    if Rails.configuration.rockhall_config[:ead_display_title_preface].nil?
       solr_doc.merge!({ :heading_display => title })
     else
-      solr_doc.merge!({ :heading_display => Blacklight.config[:ead_display_title_preface] + " " + title })
+      solr_doc.merge!({ :heading_display => Rails.configuration.rockhall_config[:ead_display_title_preface] + " " + title })
     end
 
-    Blacklight.config[:ead_fields].keys.each do | field |
-      xpath = Blacklight.config[:ead_fields][field.to_sym][:xpath]
+    Rails.configuration.rockhall_config[:ead_fields].keys.each do | field |
+      xpath = Rails.configuration.rockhall_config[:ead_fields][field.to_sym][:xpath]
       result = ead_solr_field(xml,xpath,field)
       unless result.nil?
         solr_doc.merge!(result)
@@ -134,15 +134,15 @@ module Rockhall::EadMethods
       :title_display          => title
     }
 
-    # Optional fields take from Blacklight.config
-    Blacklight.config[:component_fields].keys.each do |field|
-      xpath = "//c0#{level}/#{Blacklight.config[:component_fields][field.to_sym][:xpath]}"
+    # Optional fields take from Rails.configuration.rockhall_config
+    Rails.configuration.rockhall_config[:component_fields].keys.each do |field|
+      xpath = "//c0#{level}/#{Rails.configuration.rockhall_config[:component_fields][field.to_sym][:xpath]}"
       result = ead_solr_field(part,xpath,field, { :component => TRUE })
       unless result.nil?
         doc.merge!(result)
       end
-      if Blacklight.config[:component_fields][field.to_sym][:is_xpath]
-        xpath = "//c0#{level}/#{Blacklight.config[:component_fields][field.to_sym][:label]}"
+      if Rails.configuration.rockhall_config[:component_fields][field.to_sym][:is_xpath]
+        xpath = "//c0#{level}/#{Rails.configuration.rockhall_config[:component_fields][field.to_sym][:label]}"
         label = field.to_s + "_label"
         result = ead_solr_field(part,xpath,label, { :component => TRUE })
         unless result.nil?
@@ -158,14 +158,14 @@ module Rockhall::EadMethods
     end
 
     # Formulate special heading display, if configured
-    if Blacklight.config[:ead_component_title_separator].nil?
+    if Rails.configuration.rockhall_config[:ead_component_title_separator].nil?
       doc.merge!({ :heading_display => title })
     else
       elements = Array.new
       elements << collection
       elements << ead_parent_unittitles(node,level) unless ead_parent_unittitles(node,level).length < 1
       elements << title
-      doc.merge!({ :heading_display => elements.join(Blacklight.config[:ead_component_title_separator]) })
+      doc.merge!({ :heading_display => elements.join(Rails.configuration.rockhall_config[:ead_component_title_separator]) })
     end
 
     # Components with containers, representing individual items,
@@ -176,7 +176,7 @@ module Rockhall::EadMethods
       doc.merge!({ :series_b => TRUE })
     else
       doc.merge!({ :material_facet => material })
-	    doc.merge!({ :format => Blacklight.config[:ead_component_name] })
+	    doc.merge!({ :format => Rails.configuration.rockhall_config[:ead_component_name] })
     end
 
     # index accession numbers and ranges
@@ -194,10 +194,10 @@ module Rockhall::EadMethods
       lines = Array.new
       part.xpath(xpath).each do |line|
         unless line.text.empty?
-          if Blacklight.config[field_class.to_sym][field.to_sym].nil?
+          if Rails.configuration.rockhall_config[field_class.to_sym][field.to_sym].nil?
             lines << line.text
           else
-            if Blacklight.config[field_class.to_sym][field.to_sym][:formatted]
+            if Rails.configuration.rockhall_config[field_class.to_sym][field.to_sym][:formatted]
               lines << ead_clean_xml(line.to_xml)
             else
               lines << line.text

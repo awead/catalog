@@ -1,7 +1,7 @@
 namespace :eads do
   desc 'delete all from solr'
   task :delete_solr => :environment do
-    [Blacklight.config[:ead_format_name],"component"].each do |format|
+    [Rails.configuration.rockhall_config[:ead_format_name],"component"].each do |format|
       result = Blacklight.solr.find( :q => "{!raw f=format rows=1000000}#{format}" )
       result["response"]["docs"].each do |doc|
         doc_id = doc["id"]
@@ -81,7 +81,7 @@ namespace :solr do
     desc "index a directory of ead files"
     task :ead_dir=>:environment do
       if ENV['DIR'].nil?
-        d = Blacklight.config[:ead_dir]
+        d = Rails.configuration.rockhall_config[:ead_dir]
       else
         d = ENV['DIR']
       end

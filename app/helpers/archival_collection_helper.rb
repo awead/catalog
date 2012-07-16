@@ -42,7 +42,7 @@ module ArchivalCollectionHelper
 
   def ead_headings
     results = String.new
-    Blacklight.config[:ead_headings].each do | field |
+    Rails.configuration.rockhall_config[:ead_headings].each do | field |
       label = get_ead_label(field.to_sym)
       # Override display from Solr field with a method
       if self.respond_to?(field.to_sym)
@@ -153,7 +153,7 @@ module ArchivalCollectionHelper
 
   def ead_contents
     results = String.new
-    Blacklight.config[:ead_headings].each do | f |
+    Rails.configuration.rockhall_config[:ead_headings].each do | f |
       # Always show the link if we're overriden it as above
       if !@document[f.to_sym].nil? or self.respond_to?(f.to_sym)
         label = get_ead_label(f.to_sym)
@@ -166,11 +166,11 @@ module ArchivalCollectionHelper
   end
 
   def get_ead_label(field)
-    if Blacklight.config[:ead_fields][field.to_sym][:is_xpath]
+    if Rails.configuration.rockhall_config[:ead_fields][field.to_sym][:is_xpath]
       xml   = Rockhall::EadMethods.ead_xml(@document)
-      label = xml.xpath(Blacklight.config[:ead_fields][field.to_sym][:label]).text
+      label = xml.xpath(Rails.configuration.rockhall_config[:ead_fields][field.to_sym][:label]).text
     else
-      label = Blacklight.config[:ead_fields][field.to_sym][:label]
+      label = Rails.configuration.rockhall_config[:ead_fields][field.to_sym][:label]
     end
     return label
   end

@@ -117,8 +117,8 @@ describe Rockhall::EadMethods do
     it "should return all the configured fields from and ead document" do
 
       solr_doc = Hash.new
-      Blacklight.config[:ead_fields].keys.each do | field |
-        xpath = Blacklight.config[:ead_fields][field.to_sym][:xpath]
+      Rails.configuration.rockhall_config[:ead_fields].keys.each do | field |
+        xpath = Rails.configuration.rockhall_config[:ead_fields][field.to_sym][:xpath]
         result = ead_solr_field(@xml,xpath,field)
         unless result.nil?
           solr_doc.merge!(result)
