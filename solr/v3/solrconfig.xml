@@ -135,14 +135,15 @@
     <!-- Sets the amount of RAM that may be used by Lucene indexing
          for buffering added documents and deletions before they are
          flushed to the Directory.  -->
-    <ramBufferSizeMB>32</ramBufferSizeMB>
+    <ramBufferSizeMB>128</ramBufferSizeMB>
     <!-- If both ramBufferSizeMB and maxBufferedDocs is set, then
          Lucene will flush based on whichever limit is hit first.
       -->
     <!-- <maxBufferedDocs>1000</maxBufferedDocs> -->
 
     <maxFieldLength>10000</maxFieldLength>
-    <writeLockTimeout>1000</writeLockTimeout>
+    <writeLockTimeout>60000</writeLockTimeout>
+    <commitLockTimeout>60000</commitLockTimeout>
 
     <!-- Expert: Merge Policy
 
@@ -209,7 +210,7 @@
   <mainIndex>
 
     <useCompoundFile>false</useCompoundFile>
-    <ramBufferSizeMB>32</ramBufferSizeMB>
+    <!-- <ramBufferSizeMB>32</ramBufferSizeMB> -->
     <mergeFactor>10</mergeFactor>
 
     <!-- Unlock On Startup
@@ -971,10 +972,9 @@
       -->
 
     <!--
-      Docs with the series_b field present are suppressed. Those that do not have the field
-      are allowed. Note: the field isn't set to FALSE for any record, it's just absent.
+      Supress EAD componment docs that have children (ie. are not item-level docs)
     -->
-    <lst name="appends"><str name="fq">-series_b:["" TO *]</str></lst>
+    <lst name="appends"><str name="fq">-component_children_b:[TRUE TO *]</str></lst>
 
     <arr name="last-components">
       <str>spellcheck</str>
@@ -1314,23 +1314,19 @@
 
        http://wiki.apache.org/solr/SolrReplication
 
-       In the example below, remove the <lst name="master"> section if
-       this is just a slave and remove  the <lst name="slave"> section
-       if this is just a master.
     -->
-  <!--
-     <requestHandler name="/replication" class="solr.ReplicationHandler" >
-       <lst name="master">
-         <str name="replicateAfter">commit</str>
-         <str name="replicateAfter">startup</str>
-         <str name="confFiles">schema.xml,stopwords.txt</str>
-       </lst>
-       <lst name="slave">
-         <str name="masterUrl">http://localhost:8983/solr/replication</str>
-         <str name="pollInterval">00:00:60</str>
-       </lst>
-     </requestHandler>
-    -->
+  <requestHandler name="/replication" class="solr.ReplicationHandler" >
+    <lst name="master">
+      <str name="enable">${enable.master:false}</str>
+      <str name="replicateAfter">commit</str>
+      <str name="replicateAfter">startup</str>
+    </lst>
+    <lst name="slave">
+      <str name="enable">${enable.slave:false}</str>
+      <str name="masterUrl">${solr.master.url}/${solr.core.name}/replication</str>
+      <str name="pollInterval">00:00:60</str>
+    </lst>
+  </requestHandler>
 
   <!-- Search Components
 
