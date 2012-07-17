@@ -66,3 +66,9 @@ Feature: EAD display
     And I fill in "q" with "Johnny Otis"
     When I press "search"
     Then I should see the field content "blacklight-title_display" contain "3rd Annual Long Beach Blues Festival: Taj Mahal, Little Milton, Ester Phillips, The Johnny Otis Show, Gatemouth Brown"
+
+  Scenario: Series and subseries components should not appear in our search results (BL-224)
+    Given I am on the home page
+    And I fill in "q" with "Series I: Flyers, 1980, 1989-1992"
+    When I press "search"
+    Then I should see the field content "blacklight-title_display" not contain "John Seabury Flyers and Posters > Series I: Flyers"
