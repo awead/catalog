@@ -170,11 +170,8 @@ module Rockhall::EadMethods
 
     # Components with containers, representing individual items,
     # get faceted with their material type and a general format type
-	# Otherwise, they are marked as a series and supressed from search results.
     material = ead_material(part)
-    if material.nil?
-      doc.merge!({ :series_b => TRUE })
-    else
+    unless material.nil?
       doc.merge!({ :material_facet => material })
 	    doc.merge!({ :format => Rails.configuration.rockhall_config[:ead_component_name] })
     end
