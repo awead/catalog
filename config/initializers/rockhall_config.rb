@@ -82,7 +82,7 @@ config[:ead_fields] = {
     :xpath      => "/ead/archdesc/did/unittitle",
     :label      => nil,
     :is_xpath   => FALSE,
-    :formatted  => TRUE,
+    :formatted  => FALSE,
   },
   :extent_display => {
     :xpath      => "/ead/archdesc/did/physdesc/extent",
