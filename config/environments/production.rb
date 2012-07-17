@@ -8,14 +8,29 @@ BlacklightApp::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  # Rails's static asset server
+  # true  = Rails built-in server will serve out your assets
+  # false = Apache or other will do it for you
+  #
+  # This should be set to true if you want to run in production mode using
+  # webrick to test things.  Otherwise, if you're in a full apache/passenger
+  # environment, this should be set to false.
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
-  # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # Falling back to assets pipeline
+  #
+  # Ideally, we want all of our assets compiled so there one big, nice js and css
+  # file for everything.  Occasionally, however, some files don't get compiled for one
+  # reason or another.  In that case, asset pipeline can serve out those files.
+  # Set to "true" if you want to allow the non-compiled files to get out via
+  # asset pipeline, set to "false" if you want only the compiled stuff to be served
+  # out.  Note, not using asset pipeline in production is best (ie. setting to false),
+  # but sometimes certain css files won't compile so we'll set this to true and allow
+  # asset pipeline in production just so things will work.
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
