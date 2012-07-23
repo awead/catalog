@@ -312,5 +312,8 @@ config[:ead_geninfo]  = [
 config[:ead_display_title_preface] = "Guide to the"
 config[:ead_component_title_separator] = " > "
 
+# IP of our OPAC
+config[:opac_ip] = "129.22.104.30"
+
 # Pin our hash to the global Rails configuration
 Rails.configuration.rockhall_config = config

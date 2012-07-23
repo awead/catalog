@@ -2,9 +2,6 @@ require 'net/http'
 
 module Rockhall::Innovative
 
-  OPAC_IP = "129.22.104.30"
-
-
   def self.get_holdings(id)
     doc = query_iii(id)
     results = Array.new
@@ -21,8 +18,12 @@ module Rockhall::Innovative
     return results
   end
 
-  def self.link(id)
-    return "http://" + OPAC_IP + "/record=" + id
+  def self.link(id,opts={})
+    if opts[:url]
+      return url + "/" + id
+    else
+     return "http://" + Rails.configuration.rockhall_config[:opac_ip] + "/record=" + id
+    end
   end
 
 
