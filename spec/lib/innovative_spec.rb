@@ -9,7 +9,6 @@ describe Rockhall::Innovative do
       status = Rockhall::Innovative.get_holdings("b3386820")
       status.should be_a_kind_of(Array)
       status.each do |html|
-        puts html
         html.should be_a_kind_of(String)
         html.should match(/<td>/)
       end

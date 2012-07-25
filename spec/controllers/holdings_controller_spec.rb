@@ -4,14 +4,14 @@ describe HoldingsController do
 
   describe "show" do
 
-    it "the correct routes" do
-      holdings_path.should == "/holdings"
-      holding_path("foo").should == "/holdings/foo"
+    it "should render a brief template by default" do
+      get :show, :id=>"foo", :controller=>"holdings"
+      response.should render_template "holdings/show/_brief"
     end
 
-    it "the correct template" do
-      post :show, :id=>"foo", :controller=>"holdings"
-      response.should render_template "holdings/show"
+    it "should render a full template" do
+      get :show, {:id=>"foo", :type=>"full"}, :controller=>"holdings"
+      response.should render_template "holdings/show/_full"
     end
 
   end

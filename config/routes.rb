@@ -10,7 +10,7 @@ BlacklightApp::Application.routes.draw do
   match "/components/hide", :as => "components_hide"
 
   # Holdings
-  resources :holdings
+  match "holdings/:id" => "holdings#show", :via => :get, :as => :holdings
 
   # fuck you, recscue_from, and your stupid bullshit
   match '*a', :to => 'catalog#index'
