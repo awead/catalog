@@ -73,3 +73,12 @@ Then /^I should see an image for "([^"]*)"$/ do |arg1|
   end
 end
 
+Given /^the opac is down$/ do
+  Rails.configuration.rockhall_config[:opac_ip] = "1.2.3.4"
+end
+
+Then /^I should wait "(.*?)" seconds$/ do |arg1|
+  sleep(arg1.to_i)
+end
+
+
