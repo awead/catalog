@@ -6,7 +6,9 @@ module Rockhall::Innovative
     doc = query_iii(id)
     results = Array.new
 
-    unless doc.nil?
+    if doc.nil?
+      results << "unknown"
+    else
       snip = doc.xpath("//tr[@class='bibItemsEntry']")
       snip.each do |e|
         string = Sanitize.clean(e.to_s, Sanitize::Config::RESTRICTED)
@@ -14,16 +16,15 @@ module Rockhall::Innovative
           results << string.strip.gsub(/\n+/,"</td><td>")
         end
       end
+      if results.empty?
+        results << "unknown"
+      end
     end
     return results
   end
 
-  def self.link(id,opts={})
-    if opts[:url]
-      return url + "/" + id
-    else
-     return "http://" + Rails.configuration.rockhall_config[:opac_ip] + "/record=" + id
-    end
+  def self.link(id)
+    return "http://" + Rails.configuration.rockhall_config[:opac_ip] + "/record=" + id
   end
 
 
@@ -31,7 +32,7 @@ module Rockhall::Innovative
     url = URI.parse(link(id))
     begin
       req = Net::HTTP::Get.new(url.path)
-      res = Net::HTTP.start(url.host, url.port,opt={:open_timeout=>10}) {|http|
+      res = Net::HTTP.start(url.host, url.port,opt={:open_timeout=>3}) {|http|
         http.request(req)
       }
       doc = Nokogiri::HTML(res.body)
