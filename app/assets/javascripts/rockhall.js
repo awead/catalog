@@ -40,7 +40,7 @@ function returnHoldings() {
         $('.innovative_holdings').append("Unknown");
       },
       success: function(data){
-        $('.innovative_holdings').replaceWith(data);
+        $('.innovative_holdings').append(data);
       }
     });
 

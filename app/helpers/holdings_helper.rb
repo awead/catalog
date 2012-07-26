@@ -14,7 +14,10 @@ module HoldingsHelper
     unless doc[:format].match("Website")
       if doc[:innovative_display]
         if opts[:full]
-          results << "<div class=\"innovative_holdings\" id=\"#{doc[:innovative_display].first}\"><b>Checking holdings...</b></div>"
+          results << "<div class=\"innovative_holdings\" id=\"#{doc[:innovative_display].first}\"></div>"
+          if doc[:format].match("Periodical")
+            results << link_to("Click for Holdings", Rockhall::Innovative.link(doc[:innovative_display].first), { :target => "_blank"})
+          end
         else
           if doc[:format].match("Periodical")
             results << "<div><b>"

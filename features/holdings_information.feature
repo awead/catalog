@@ -1,6 +1,5 @@
 @javascript
 @marc
-@wip
 
 Feature:
   In order to see if library items are available
@@ -31,3 +30,9 @@ Feature:
     When I press "search"
     And I wait for "7" seconds
     Then I should see "Unknown"
+
+  Scenario: Item display should not show holdings if III is down (DAM-233)
+    Given the opac is down
+    And I am on the bib record page for 45080162
+    Then I should not see "Holdings"
+    And I should not see "Rock Hall Reference"
