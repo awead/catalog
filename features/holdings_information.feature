@@ -1,6 +1,6 @@
-@wip
 @javascript
 @marc
+@wip
 
 Feature:
   In order to see if library items are available
@@ -22,12 +22,12 @@ Feature:
     Given I am on the home page
     And I fill in "q" with "Kennedy"
     When I press "search"
-    Then I should see "Status:"
+    Then I should see "Copies Available"
 
   Scenario: Search results should display an unknown status if III is down (DAM-233)
     Given I am on the home page
     And the opac is down
-    When I follow "Book"
-    Then I should see "How to analyze the music of Bob Dylan"
-    And I should wait "7" seconds
-    And I should see "Status: Unknown"
+    And I fill in "q" with "How to analyze the music of Bob Dylan"
+    When I press "search"
+    And I wait for "7" seconds
+    Then I should see "Unknown"
