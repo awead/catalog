@@ -20,8 +20,22 @@ namespace :solr do
 
     end
 
-    desc 'delete all marc records'
+    desc "delete a single marc record, given by ID=<id number>"
     task :delete => :environment do
+      id = ENV['ID']
+      raise "Please give the id of the record to delete, like ID=123456789" unless id
+      result = Blacklight.solr.find( {:q => "id:#{id}", :qt => "document", :fl => "id", :rows => "1" } )
+      result["response"]["docs"].each do |doc|
+        doc_id = doc["id"]
+        puts "Deleting #{doc_id}"
+        Blacklight.solr.delete_by_id(doc_id)
+      end
+      puts "Commiting results"
+      Blacklight.solr.commit
+    end
+
+    desc "delete all marc records"
+    task :delete_all => :environment do
       ["Book","Score","Website","Periodical","Video","Audio","unknown","Image","Map","Theses/Dissertations"].each do |format|
         result = Blacklight.solr.find( :q => "{!raw f=format rows=1000000}#{format}" )
         result["response"]["docs"].each do |doc|
