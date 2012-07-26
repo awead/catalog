@@ -8,9 +8,10 @@ module Rockhall::EadMethods
   end
 
   def self.ead_id(xml)
-    raise "Null ID. This is mostly likely a problem with the ead" if xml.at('/ead/eadheader/eadid').text.empty?
+    raise "Null ID. This is most likely a problem with the ead" if xml.at('/ead/eadheader/eadid').text.empty?
     id = xml.at('/ead/eadheader/eadid').text.gsub(/\.xml/, '')
     id.gsub!(/\./, '-')
+    raise "Bad ID. This is most likely a problem with the ead" unless id.match(/^[A-Z]{2,4}-[0-9]{4,4}$/)
     return id
   end
 

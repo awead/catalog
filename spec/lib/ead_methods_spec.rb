@@ -25,6 +25,27 @@ describe Rockhall::EadMethods do
       id = Rockhall::EadMethods.ead_id(@xml)
       id.should == "ARC-0005"
     end
+
+    it "should raise an exeception if the id is null" do
+      sample = "<ead><eadheader><eadid></eadid></eadheader></ead>"
+      xml = Nokogiri::XML(sample)
+      lambda {Rockhall::EadMethods.ead_id(xml)}.should raise_error "Null ID. This is most likely a problem with the ead"
+    end
+
+    it "should raise an exception if the id isn't formatted correctly" do
+      samples = [
+        "<ead><eadheader><eadid>ARC-0001 </eadid></eadheader></ead>",
+        "<ead><eadheader><eadid>ARC:0001 </eadid></eadheader></ead>",
+        "<ead><eadheader><eadid> ARC-0001 </eadid></eadheader></ead>"
+      ]
+
+      samples.each do |sample|
+        xml = Nokogiri::XML(sample)
+        lambda {Rockhall::EadMethods.ead_id(xml)}.should raise_error "Bad ID. This is most likely a problem with the ead"
+      end
+
+    end
+
   end
 
   describe "ead_collection" do
