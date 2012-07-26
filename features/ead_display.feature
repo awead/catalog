@@ -155,4 +155,8 @@ Feature: EAD display
     Then I should see "EDDIE COCHRAN" in "bold"
     And I should see "EDDIE COCHRAN HISTORICAL ORGANIZATION" in "bold"
 
+  Scenario: Title nodes in ead (BL-209)
+    Given I am on the ead page for ARC-0026
+    Then I should see "Normal As The Next Guy" in "italic"
+
 

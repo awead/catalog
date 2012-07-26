@@ -117,6 +117,9 @@ module ArchivalCollectionHelper
     end
     results.gsub!(/<title/,"<span")
     results.gsub!(/<\/title/,"</span")
+    results.gsub!(/&lt;title/,"<span")
+    results.gsub!(/&lt;\/title/,"</span")
+    results.gsub!(/&gt;/,">")
     results.gsub!(/render=/,"class=")
     return results.html_safe
   end
