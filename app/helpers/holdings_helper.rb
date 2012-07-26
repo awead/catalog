@@ -9,20 +9,30 @@ module HoldingsHelper
     return nil
   end
 
-  def show_status(doc)
+  def show_holdings(doc,opts={})
     results = String.new
-    unless doc[:format].match("Website") or doc[:format].match("Periodical")
+    unless doc[:format].match("Website")
       if doc[:innovative_display]
-        results << "<div class=\"innovative_status\" id=\"#{doc[:innovative_display].first}\"><b>Status: </b></div>"
+        if opts[:full]
+          results << "<div class=\"innovative_holdings\" id=\"#{doc[:innovative_display].first}\"><b>Checking holdings...</b></div>"
+        else
+          if doc[:format].match("Periodical")
+            results << "<div><b>"
+            results << link_to("Click for Holdings", Rockhall::Innovative.link(doc[:innovative_display].first), { :target => "_blank"})
+            results << "</b></div>"
+          else
+            results << "<div class=\"innovative_status\" id=\"#{doc[:innovative_display].first}\"><b>checking status... </b></div>"
+          end
+        end
       end
     end
     return results.html_safe
   end
 
-  def check_availability(iii_id)
+
+  def old_check_availability
     results = String.new
     return nil if @document[:format].match("Website")
-    status = Rockhall::Innovative.get_holdings(iii_id.first.to_s)
     if status.first
       results << "<h3>Holdings</h3>"
       results << "<table>"

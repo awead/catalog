@@ -38,6 +38,4 @@
 
   </ul>
 
-  <% if @document[:innovative_display] %>
-    <%= check_availability(@document[:innovative_display]) %>
-  <% end %>
+  <%= show_holdings @document, {:full=>TRUE} %>

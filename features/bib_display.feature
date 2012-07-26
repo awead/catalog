@@ -68,11 +68,6 @@ Feature:
     And I should be able to follow "Terry Stewart Collection"
     And I should be able to follow "Northeast Ohio Popular Music Archives"
 
-  Scenario: Viewing item in CWRU opac (BL-99)
-    Given I am on the bib record page for 45080162
-    Then I should see "Holdings"
-    And I should see "Rock Hall Reference"
-
   Scenario: Series Index should include MARC field 811 (BL-104)
     Given I am on the bib record page for 754843822
     Then I should see the field content "blacklight-series_display" contain "Annual induction ceremony (Rock and Roll Hall of Fame Foundation). ; 2003"
@@ -112,12 +107,6 @@ Feature:
   Scenario: I should see the image of the format type when looking at an item (BL-111_
     Given I am on the bib record page for "228365502"
     Then I should see an image for "book"
-
-  Scenario: Access to Serials Holdings via Bib Record (BL-181)
-    Given I am on the bib record page for 1478478
-    Then I should see "Click for Holdings"
-    Given I am on the bib record page for 702358017
-    Then I should not see "Click for Holdings"
 
   Scenario: Names entered as main entries and subjects are displaying under Contributors in bibs (BL-199)
     Given I am on the bib record page for 773370191

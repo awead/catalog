@@ -17,3 +17,8 @@
 //= require jquery-ui
 //= require blacklight/blacklight
 //= require_tree .
+
+// If you're using a sub URI, you'll need to add that here...
+// ex, http://my.host.com/foo/catalog
+// ROOT_PATH = "/foo/" NOTE THE TRAILING SLASH!
+var ROOT_PATH = "/";

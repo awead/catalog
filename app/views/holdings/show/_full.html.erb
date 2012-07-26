@@ -1,0 +1,7 @@
+<h3>Holdings</h3>
+<table>
+<tr><th>Location</th><th>Call Number</th><th>Availability</th></tr>
+<% @holdings.each do |h| %>
+ <tr><td><%= h.html_safe %></td></tr>
+<% end %>
+</table>
