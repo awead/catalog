@@ -27,7 +27,7 @@ module Rockhall::EadSolrMethods
     end
     solr_params[:sort] = "sort_i asc"
     solr_params[:qt]   = "standard"
-    solr_params[:rows] = 1000
+    solr_params[:rows] = 10000
     solr_response = Blacklight.solr.find(solr_params)
     list = solr_response.docs.collect {|doc| SolrDocument.new(doc, solr_response)}
 
