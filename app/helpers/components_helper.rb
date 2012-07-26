@@ -24,6 +24,7 @@ module ComponentsHelper
       level = document[:component_level].to_i + 1
       results << link_to( image_tag("icons/button_open.png", :alt => "+ Show"),
         components_path( :parent_ref => document[:ref], :ead_id => document[:ead_id], :component_level => level ),
+        :title => "Click to open",
         :id => "#{document[:ref]}-switch",
         :remote => true,
         :onclick => "showWaiting('#{document[:ref]}');")
@@ -36,6 +37,7 @@ module ComponentsHelper
     if params[:component_level].to_i > 1
       results << link_to( image_tag("icons/button_close.png", :alt => "- Hide"),
         components_hide_path(:ead_id => params[:ead_id], :component_level => params[:component_level], :parent_ref => params["parent_ref"]),
+        :title => "Click to close",
         :id => "#{params["parent_ref"]}-switch",
         :remote => true)
       results << "<div id=\"#{params[:parent_ref]}-list\">"

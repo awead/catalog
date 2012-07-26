@@ -1,3 +1,3 @@
 $("#<%= escape_javascript params[:parent_ref] %>-list").remove();
 $("#<%= escape_javascript params[:parent_ref] %>-switch").remove();
-$("#<%= escape_javascript params[:parent_ref] %>").append("<%= escape_javascript link_to image_tag("icons/button_open.png", :alt => "+ Show"), components_path( :parent_ref => params[:parent_ref], :ead_id => params[:ead_id], :component_level => params[:component_level] ), :id => "#{params[:parent_ref]}-switch",  :remote => true, :onclick => "showWaiting('#{params[:parent_ref]}')" %>");
+$("#<%= escape_javascript params[:parent_ref] %>").append("<%= escape_javascript link_to image_tag("icons/button_open.png", :alt => "+ Show"), components_path( :parent_ref => params[:parent_ref], :ead_id => params[:ead_id], :component_level => params[:component_level] ), :title => "Click to open", :id => "#{params[:parent_ref]}-switch",  :remote => true, :onclick => "showWaiting('#{params[:parent_ref]}')" %>");
