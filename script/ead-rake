@@ -1,0 +1,18 @@
+#!/bin/bash
+# EAD rake script
+#
+# Adam Wead
+# Rock and Roll Hall of Fame
+
+# Config
+
+APPDIR="/var/www/rails/blacklight-app"
+
+source ~/.bash_profile
+cd $APPDIR
+for f in $@
+do
+  export FILE=$f
+  rake solr:ead:index
+done
+exit 0;

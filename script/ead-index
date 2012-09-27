@@ -1,0 +1,48 @@
+#!/bin/bash
+# EAD index script
+#
+# Adam Wead
+# Rock and Roll Hall of Fame
+
+# Config
+
+DATADIR="/data/ead"
+LOCKFILE="/tmp/`whoami`-ead-index"
+DATEFILE="/tmp/`whoami`-latest-ead-index"
+APPDIR="/var/www/rails/blacklight-app"
+HUDSON_HOME="http://george.rockhall.org:8120"
+LOGFILE="/var/log/ead-index.log"
+
+# Check for running scripts
+if [ -e $LOCKFILE ]; then
+  echo "`date` - Lockfile exists. Skipping this job until the previous one is finished." >> $LOGFILE
+  exit 0;
+else
+  touch $LOCKFILE
+fi
+
+# Get files
+if [ -e $DATEFILE ]; then
+  FILES=`find $DATADIR -cnewer $DATEFILE -name "*.xml"`
+else
+  FILES=`find $DATADIR -ctime 0 -name "*.xml"`
+fi
+
+# Create a new datefile now
+# This avoids the problem of missing files because they were uploaded
+# during a long index process
+rm -f $DATEFILE
+touch $DATEFILE
+
+# Index our files
+if [ "$FILES" = "" ]; then
+  echo "`date` - No new files available for indexing" >> $LOGFILE
+else
+  export HUDSON_HOME=$HUDSON_HOME
+  /usr/bin/java -jar /usr/local/lib/hudson/hudson-core-2.2.0.jar "index-ead" /usr/local/scripts/ead-rake $FILES 2>&1 > /dev/null
+fi
+
+
+# Remove lockfile
+rm -f $LOCKFILE
+exit 0;
