@@ -24,6 +24,12 @@ Feature: Catalog Home Page
     And I should see the facet term "Periodical"
     And I should see the facet term "Video"
     And I should see the facet term "Audio"
+    And I should see the facet term "CD/DVD-ROM"
+
+  Scenario: Facet for CD/DVD-ROM (BL-250)
+    Given I am on the home page
+    When I follow "CD/DVD-ROM"
+    Then I should see "77 million paintings [electronic resource] / by Brian Eno"
 
   Scenario: Collection name facet (BL-14)
     Given I am on the home page
