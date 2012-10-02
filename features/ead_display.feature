@@ -148,7 +148,7 @@ Feature: EAD display
     And I should see "Incorporated as a Minnesota non-profit organization"
     And I should see "Holds first annual Eddie Cochran Weekend in Alberta Lea, Minn"
 
-  @wip
+  @future-work
   Scenario: Displaying text in bold
     Given I am on the ead page for ARC-0005
     Then I should see "EDDIE COCHRAN" in "bold"
