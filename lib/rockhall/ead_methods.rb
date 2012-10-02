@@ -66,7 +66,8 @@ module Rockhall::EadMethods
   def self.ead_accessions(node)
     results = Array.new
     node.xpath('//head[contains(., "Museum Accession Number")]').each do | n |
-      ead_accession_range(n.next_element.text).each { |a| results << a }
+      # TODO: Indexing of accession number ranges is disabled until future r9 which fixes it
+      #ead_accession_range(n.next_element.text).each { |a| results << a }
     end
 
     if results.length > 1
