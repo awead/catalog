@@ -21,12 +21,11 @@ Feature: EAD display
   Scenario: Date Expression in first component level (BL-9)
     Given I am on the ead page for ARC-0105
     When I follow "Collection Inventory"
-    Then I should see "Series II: Business Files, 1945-1946, 1983-1984, undated"
-    And I should see "Series VII: Publications, 1970-1990"
+    Then I should see "Oversize materials, 1977-1985, undated"
 
   Scenario: Date expression in sub component level (BL-9) and accession numbers
     Given I am on the ead page for ARC-0105:2:ref42
-    Then I should see "Series I: Awards and Certificates"
+    Then I should see "Awards and certificates"
     And I should see "Awards and certificates, 1976-1986"
     And I should not see "Museum Accession Numbers:"
     And I should not see "A1994.4.10-A1994.4.22"
@@ -107,7 +106,7 @@ Feature: EAD display
     And I should not see "Immediate Source of Acquisition note"
     And I should see "Custodial History"
     Given I am on the ead page for ARC-0067
-    Then I should see "The Curtis Mayfield Collection was received by the Rock and Roll Hall of Fame and Museum as a gift from Curtis Mayfield in December 1994."
+    Then I should see "The Curtis Mayfield Collection was received from Mayfield on December 1994."
     And I should see "Custodial History"
 
   Scenario: Publisher note in finding aids (BL-142)
@@ -131,8 +130,7 @@ Feature: EAD display
 
   Scenario: Displaying multiple copies of an archival item (BL-202)
     Given I am on the ead page for ARC-0006:4:ref216
-    Then I should see "Original Copy - Box: 5, Folder: 1, Object: 4"
-    And I should see "Access Copy - Box: 1, Folder: 22, Object: 4"
+    Then I should see "Original Copy - Box: 5, Folder: 1, Object: 4, Access Copy - Box: 1B, Folder: 22, Object: 4"
 
   Scenario: Processing information note (BL-196)
     Given I am on the ead page for ARC-0003
@@ -150,6 +148,7 @@ Feature: EAD display
     And I should see "Incorporated as a Minnesota non-profit organization"
     And I should see "Holds first annual Eddie Cochran Weekend in Alberta Lea, Minn"
 
+  @wip
   Scenario: Displaying text in bold
     Given I am on the ead page for ARC-0005
     Then I should see "EDDIE COCHRAN" in "bold"

@@ -9,7 +9,7 @@ describe Rockhall::EadMethods do
       include Rockhall::EadMethods
     end
     @test = TestClass.new
-    file = File.join(Rails.root, "test/data/ead/ARC-0005.xml")
+    file = File.join(Rails.root, "spec/fixtures/ead/ARC.0005-ead.xml")
     @xml = Rockhall::EadMethods.ead_rake_xml(file)
   end
 
@@ -114,7 +114,8 @@ describe Rockhall::EadMethods do
   describe "ead_accessions" do
 
     it "should return an array of accessions from a component node" do
-      raw = File.read(File.join(Rails.root, "test/data/ead/ARC-0118.xml"))
+      pending "Will be working in r9"
+      raw = File.read(File.join(Rails.root, "spec/fixtures/ead/ARC.0118-ead.xml"))
       raw.gsub!(/xmlns=".*"/, '')
       xml = Nokogiri::XML(raw)
       results = Rockhall::EadMethods.ead_accessions(xml)
@@ -125,6 +126,7 @@ describe Rockhall::EadMethods do
     end
 
     it "should return nil for ead that have no accessions" do
+      pending "Will be working in r9"
       raw = File.read(File.join(Rails.root, "test/data/ead/ARC-0065.xml"))
       raw.gsub!(/xmlns=".*"/, '')
       xml = Nokogiri::XML(raw)

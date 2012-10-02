@@ -31,10 +31,10 @@ Feature:
     When I press "search"
     Then I should see "John Coltrane : his life and music / Lewis Porter"
 
-  Scenario: Make contributor fields searchable (no ticket)
+  Scenario: Make contributor fields searchable (BL-243)
     Given I am on the home page
     And I fill in "q" with "Elvis Presley"
-    And I select "Contributor" from "search_field"
+    And I select "Name" from "search_field"
     When I press "search"
     Then I should see "Shake, rattle & turn that noise down!"
 
