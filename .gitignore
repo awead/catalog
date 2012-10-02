@@ -10,8 +10,6 @@ log/*
 
 rerun.txt
 
-spec/fixtures/ead/*
-
 vendor/plugins/*
 vendor/plugins/blacklight/*
 
@@ -31,3 +29,6 @@ lib/solrmarc.log*
 test/data/ead/*
 
 gems/*
+
+blacklight.sublime-project
+blacklight.sublime-workspace

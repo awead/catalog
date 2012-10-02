@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Complete" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0064</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>American Artifact Collection
+                    <num>ARC.0064</num>
+                </titleproper>
+                <titleproper type="filing">American Artifact Collection</titleproper>
+                <author>Finding aid prepared by James A. Kohler, Project Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>March 16, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2012-10-02T11:42-0400</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>
+                <title render="italic">American Artifact</title> Collection</unittitle>
+            <unitid>ARC.0064</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>4.07 Linear feet</extent>
+                <extent>(1 folder, 1 shared flat file drawer)</extent>
+            </physdesc>
+            <unitdate>2009</unitdate>
+            <abstract id="ref5" label="Collection Overview">The 
+                <title render="italic">American Artifact</title> Collection consists of 12 posters created by some of the artists portrayed in the film 
+                <title render="italic">American Artifact: The Rise of American Rock Poster</title>, and a press kit and promotional materials for the film. The film chronicles the history of the rock concert poster, from its origins in 1960s San Francisco to its re-emergence in the 21st century. 
+                <title render="italic">American Artifact</title> was released in 2009 and directed by Merle Becker. Seen in a broader context, the collection provides insights to fringe and underground artists of the past fifty years, and how art is influenced by music, culture, and society, and how music, culture, and society, in return, influence art. The 
+                <title render="italic">American Artifact</title> Collection is arranged first by format; the posters are arranged alphabetically by artist.</abstract>
+            <langmaterial id="ref8" label="Language of Materials">English</langmaterial>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Director (drt)">Becker, Merle</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" role="Artist (art)">Bell, Leia</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" role="Artist (art)">Emek, 1970-</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Artist (art)">Hampton, Justin</persname>
+            </origination>
+            <origination label="creator">
+                <corpname rules="aacr" role="Printer (prt)">Hatch Show Prints (Firm)</corpname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Artist (art)">Imagine, Paul</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Artist (art)">Loren, Dennis</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" role="Artist (art)">Mouse, Stanley, 1940-</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Artist (art)">Rogers, Jermaine</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Artist (art)">Shaw, Chris</persname>
+            </origination>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Artist (art)">Sperry, Chuck</persname>
+            </origination>
+        </did>
+        <userestrict id="ref1">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Museum, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <accessrestrict id="ref2">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+        </accessrestrict>
+        <processinfo id="ref3">
+            <head>Processing Information</head>
+            <p>Processed by James A. Kohler, Project Archivist. Completed March 16, 2011. Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <prefercite id="ref7">
+            <head>Preferred Citation</head>
+            <p>[Identification of item], 
+                <title render="italic">American Artifact</title> Collection, Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <bioghist id="ref46">
+            <head>Administrative History</head>
+            <p>For the film 
+                <title render="italic">American Artifact</title>, director Merle Becker crossed the country interviewing rock poster artists from different eras to discover that America is currently in the midst of a 21st century "rock poster art movement," where thousands of artists around the country are doing silk screened rock poster art inspired by their local scene, the music of the time, and the spirit of an era.</p>
+            <p>This film, which includes interviews with over 30 artists, takes the viewer through the different decades and incarnations of this art form, and spends time with, arguably, some of the finest artists of this genre, talking about what inspired their truly American works of art.</p>
+            <p>The film features: Mark Arminski, Julie Belcher, Leia Bell, Kevin Bradley, Art Chantry, COOP, Mat Daly, Ron Donovan, EMEK, Gary Grimshaw, Justin Hampton, Derek Hess, Paul Imagine, Frank Kozik, Lindsey Kuhn, Dennis Loren, Mike Martin, Tara McPherson, Stanley Mouse, Victor Moscoso, Jim Pollock, Print Mafia, Jermaine Rogers, Jay Ryan, Scrojo, Chris Shaw, Jim Sherraden &amp; Hatch Show Print, David Singer, Chuck Sperry, Winston Smith, Stainboy, Randy Tuten, Steve Walters, and Jeff Wood.</p>
+            <p>Producer/director Merle Becker is a 17+ year veteran of film and television. Credits include 
+                <title render="italic">CBS Tony Awards</title>, 
+                <title render="italic">Beavis &amp; Butt-Head</title>, Comedy Central's 
+                <title render="italic">Tough Crowd With Colin Quinn</title>, and MTV's 
+                <title render="italic">Total Request Live</title>. She has also worked on several feature films, including 
+                <title render="italic">Rising Low</title> (with Warren Haynes and Phil Lesh).</p>
+        </bioghist>
+        <custodhist id="ref4">
+            <head>Custodial History note</head>
+            <p>The 
+                <title render="italic">American Artifact</title> Collection was received by the Rock and Roll Hall of Fame and Museum, Inc. as a gift from Merle Becker of Freakfilms, Inc. on January 12, 2010.</p>
+        </custodhist>
+        <separatedmaterial id="ref49">
+            <head>Separated Materials</head>
+            <p>Two copies of 
+                <title render="italic">American Artifact: The Rise of American Rock Poster</title>, the deluxe double DVD, have been transferred to the library collection. Please search for the "American Artifact Collection" in the library catalog for a list of donated titles. If you are unable to find what you are looking for, consult the Library and Archives staff to ensure these materials are available.</p>
+        </separatedmaterial>
+        <controlaccess>
+            <persname rules="aacr" source="local" role="Donor (dnr)">Becker, Merle</persname>
+            <persname rules="aacr" role="Artist (art)">Kelley, Alton, 1940-2008</persname>
+            <title source="local">American artifact (Motion picture : 2009)</title>
+            <genreform source="lcsh">Film posters</genreform>
+            <subject source="lcsh">Graphic artists</subject>
+            <genreform source="lcsh">Posters</genreform>
+            <subject source="lcsh">Rock music--Posters</subject>
+        </controlaccess>
+        <dsc>
+            <c01 id="ref10" level="item">
+                <did>
+                    <unittitle>Bell, Leia</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281001" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281001" type="Object">1</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref21" label="Dimensions">
+                        <dimensions>17" x 12"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref22">
+                    <head>Limited Print Run</head>
+                    <p>144/155</p>
+                </odd>
+            </c01>
+            <c01 id="ref12" level="item">
+                <did>
+                    <unittitle>Hatch Show Print</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281002" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281002" type="Object">2</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref23" label="Dimensions">
+                        <dimensions>24" x13.5"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref41">
+                    <head>Limited Print Run</head>
+                    <p>Non-numbered edition of 150</p>
+                </odd>
+            </c01>
+            <c01 id="ref13" level="item">
+                <did>
+                    <unittitle>Imagine, Paul</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281003" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281003" type="Object">3</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref25" label="Dimensions">
+                        <dimensions>11" x 17"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref26">
+                    <head>Limited Print Run</head>
+                    <p>171/215</p>
+                </odd>
+            </c01>
+            <c01 id="ref14" level="item">
+                <did>
+                    <unittitle>Loren, Dennis</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281004" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281004" type="Object">4-6</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref27" label="Dimensions">
+                        <dimensions>19" x 13"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref42">
+                    <head>Limited Print Run</head>
+                    <p>Non-numbered edition of 150</p>
+                </odd>
+            </c01>
+            <c01 id="ref15" level="item">
+                <did>
+                    <unittitle>Mouse, Stanley</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281005" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281005" type="Object">7-8</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref28" label="Dimensions">
+                        <dimensions>19" x 13"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref40">
+                    <head>Limited Print Run</head>
+                    <p>Non-numbered edition of 150</p>
+                </odd>
+                <odd id="ref45">
+                    <head>General note</head>
+                    <p>This item includes a black-and-white photograph of Stanley Mouse and Alton Kelley.</p>
+                </odd>
+            </c01>
+            <c01 id="ref16" level="item">
+                <did>
+                    <unittitle>PNE (Emek, Jermaine Rogers, Justin Hampton)</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281007" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281007" type="Object">9</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref30" label="Dimensions">
+                        <dimensions>24" x 27"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref43">
+                    <head>Limited Print Run</head>
+                    <p>Non-numbered edition of 35</p>
+                </odd>
+            </c01>
+            <c01 id="ref17" level="item">
+                <did>
+                    <unittitle>Scrojo</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281008" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281008" type="Object">10</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref31" label="Dimensions">
+                        <dimensions>21.5" x 11"</dimensions>
+                    </physdesc>
+                </did>
+                <odd id="ref32">
+                    <head>Limited Print Run</head>
+                    <p>122/150</p>
+                </odd>
+            </c01>
+            <c01 id="ref18" level="item">
+                <did>
+                    <unittitle>Shaw, Chris</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281009" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281009" type="Object">11</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref33" label="Dimensions">
+                        <dimensions>29" x 20</dimensions>
+                    </physdesc>
+                </did>
+            </c01>
+            <c01 id="ref20" level="item">
+                <did>
+                    <unittitle>Sperry, Chuck</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid281010" type="Drawer-Folder" label="Graphic materials">FF.1.2-2</container>
+                    <container parent="cid281010" type="Object">12</container>
+                    <unitdate>2009</unitdate>
+                    <physdesc id="ref34" label="Dimensions">
+                        <dimensions>29.5" x 20.25"</dimensions>
+                    </physdesc>
+                </did>
+            </c01>
+            <c01 id="ref35" level="file">
+                <did>
+                    <unittitle>Press kit and promotional cards</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid282001" type="Folder" label="Text">11</container>
+                    <unitdate>2009</unitdate>
+                </did>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

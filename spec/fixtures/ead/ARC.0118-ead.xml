@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Complete" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0118</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Bryan Ehlinger Collection of Posters
+                    <num>ARC.0118</num>
+                </titleproper>
+                <titleproper type="filing">Ehlinger Bryan Collection of Posters</titleproper>
+                <author>Finding aid prepared by James A. Kohler, Project Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>June 29, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2012-10-02T11:42-0400</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>Bryan Ehlinger Collection of Posters</unittitle>
+            <unitid>ARC.0118</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>4.0 Linear feet</extent>
+                <extent>(1 shared flat file drawer)</extent>
+            </physdesc>
+            <unitdate normal="1978/1994" type="inclusive">1978-1989, 1994, undated</unitdate>
+            <abstract id="ref131" label="Collection Overview">The Bryan Ehlinger Collection of Posters consists of promotional posters used by record companies for advertising and in-store displays from 1978 to 1989 and 1994. Performers include David Bowie, Genesis, Jefferson Starship, Moody Blues, The Scorpions, and Trooper. The Collection provides a glimpse into how record companies promoted their artists and the records they released during the late 1970s and 1980s. Seen in a broader context, the Collection provides insight to the images and styles used to promote rock and roll music. The Bryan Ehlinger Collection of Posters is arranged alphabetically by artist and then by album or single title.</abstract>
+            <langmaterial id="ref132" label="Language of Materials note">English</langmaterial>
+        </did>
+        <userestrict id="ref127">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Museum, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <accessrestrict id="ref128">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+        </accessrestrict>
+        <processinfo id="ref129">
+            <head>Processing Information note</head>
+            <p>Processed by James A. Kohler, Project Archivist. Completed June 29, 2011.</p>
+            <p>Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <scopecontent id="ref130">
+            <head>Scope and Contents</head>
+            <p>The Bryan Ehlinger Collection of Posters is arranged alphabetically.</p>
+        </scopecontent>
+        <bioghist id="ref137">
+            <head>Biographical Note</head>
+            <p>Bryan Elhinger is currently the Nursing Home Administrator of Oneida Healthcare Center's Extended Care Facility in Oneida, New York, where he has worked in various capacities since 1985. Ehlinger received a bachelor's degree in Healthcare Management from State University of New York Insititute of Technology at Utica / Rome in 2002.</p>
+            <list type="ordered">
+                <head>Sources</head>
+                <item>"Bryan Ehlinger." 
+                    <title render="italic">Oneida Healthcare Center: Exceptional Care...Always</title>. Last modified 2011. Accessed June 29, 2011. http://www.oneidahealthcare.org/news/index.cfm?action=view&amp;newsitem_id=98.</item>
+            </list>
+        </bioghist>
+        <custodhist id="ref133">
+            <head>Custodial History note</head>
+            <p>The Bryan Ehlinger Collection of Posters was received by the Rock and Roll Hall of Fame and Museum, Inc. from Bryan Ehlinger on July 7, 2005.</p>
+        </custodhist>
+        <prefercite id="ref134">
+            <head>Preferred Citation note</head>
+            <p>[Identification of item], Bryan Ehlinger Collection of Posters, Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <controlaccess>
+            <persname rules="aacr" role="Musician (mus)">Bowie, David</persname>
+            <persname rules="aacr" source="local" role="Donor (dnr)">Ehlinger, Bryan</persname>
+            <corpname rules="aacr" role="Musician (mus)">Genesis (Musical group)</corpname>
+            <corpname rules="aacr" role="Musician (mus)">Scorpions (Musical group)</corpname>
+            <genreform source="lcsh">Posters</genreform>
+            <subject source="lcsh">Rock music--Posters</subject>
+        </controlaccess>
+        <dsc>
+            <c01 id="ref1" level="item">
+                <did>
+                    <unittitle>Asia: 
+                        <title render="italic">Alpha</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid438001" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid438001" type="Object">1</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref2">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.17</p>
+                </odd>
+            </c01>
+            <c01 id="ref3" level="item">
+                <did>
+                    <unittitle>Bad Company: 
+                        <title render="italic">Rough Diamonds</title> and back catalog</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid438002" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid438002" type="Object">2</container>
+                    <unitdate>1982</unitdate>
+                </did>
+            </c01>
+            <c01 id="ref5" level="item">
+                <did>
+                    <unittitle>Big Country: 
+                        <title render="italic">The Crossing</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid438003" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid438003" type="Object">1</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref6">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.34</p>
+                </odd>
+            </c01>
+            <c01 id="ref7" level="item">
+                <did>
+                    <unittitle>Black Crowes: 
+                        <title render="italic">Amorica</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid438004" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid438004" type="Object">2</container>
+                    <unitdate>1994</unitdate>
+                </did>
+                <odd id="ref8">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.35</p>
+                </odd>
+            </c01>
+            <c01 id="ref9" level="item">
+                <did>
+                    <unittitle>Bow Wow Wow: 
+                        <title render="italic">The Last of the Mohicans</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid438005" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid438005" type="Object">3</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref10">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.28</p>
+                </odd>
+            </c01>
+            <c01 id="ref17" level="item">
+                <did>
+                    <unittitle>Bowie, David: 
+                        <title render="italic">Changes One</title> and 
+                        <title render="italic">Changes Two</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid438006" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid438006" type="Object">3</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref18">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.16</p>
+                </odd>
+            </c01>
+            <c01 id="ref29" level="item">
+                <did>
+                    <unittitle>Bowie, David: "China Girl"</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid438007" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid438007" type="Object">4</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref30">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.44</p>
+                </odd>
+            </c01>
+            <c01 id="ref13" level="item">
+                <did>
+                    <unittitle>Bowie, David: "Let’s Dance" [Single]</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441012" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441012" type="Object">5</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref14">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.50</p>
+                </odd>
+            </c01>
+            <c01 id="ref11" level="item">
+                <did>
+                    <unittitle>Bowie David: Musician Magazine - “The David Bowie Interview”</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439001" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439001" type="Object">4</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref12">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.59</p>
+                </odd>
+            </c01>
+            <c01 id="ref15" level="item">
+                <did>
+                    <unittitle>Bowie, David: 
+                        <title render="italic">Original Soundtrack from the film Christina F.</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439002" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439002" type="Object">5</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref16">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.7</p>
+                </odd>
+            </c01>
+            <c01 id="ref19" level="item">
+                <did>
+                    <unittitle>Bowie, David: "Tonight" [Single]</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439003" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439003" type="Object">6-7</container>
+                    <unitdate>1984</unitdate>
+                </did>
+                <odd id="ref20">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.19, A2005.36.53</p>
+                </odd>
+            </c01>
+            <c01 id="ref23" level="item">
+                <did>
+                    <unittitle>Collins, Phil: 
+                        <title render="italic">Face Value</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441013" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441013" type="Object">6</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref24">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.32</p>
+                </odd>
+            </c01>
+            <c01 id="ref25" level="item">
+                <did>
+                    <unittitle>Concerts for the People of Kampuchea: Clash; Costello, Elvis &amp; The Attractions; Dury, Ian &amp; The Blockheads; McCartney, Paul &amp; Wings; Pretenders; Queen; Rockestra; Rockpile; Specials; Who</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441014" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441014" type="Object">7</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref26">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.22</p>
+                </odd>
+            </c01>
+            <c01 id="ref27" level="item">
+                <did>
+                    <unittitle>Crosby, Stills and Nash: 
+                        <title render="italic">Allies</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441015" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441015" type="Object">8</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref28">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.13</p>
+                </odd>
+            </c01>
+            <c01 id="ref31" level="item">
+                <did>
+                    <unittitle>Def Leppard: 
+                        <title render="italic">Pyromania</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441016" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441016" type="Object">9</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref32">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.21</p>
+                </odd>
+            </c01>
+            <c01 id="ref33" level="otherlevel">
+                <did>
+                    <unittitle>Dokken: 
+                        <title render="italic">Breakin’ the Chains</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439004" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439004" type="Object">8</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref34">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.3</p>
+                </odd>
+            </c01>
+            <c01 id="ref35" level="item">
+                <did>
+                    <unittitle>Dolby, Thomas: 
+                        <title render="italic">Aliens Ate My Buick</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439005" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439005" type="Object">9</container>
+                    <unitdate>1988</unitdate>
+                </did>
+                <odd id="ref36">
+                    <head>Museum Accession NUmber</head>
+                    <p>A2005.36.31</p>
+                </odd>
+            </c01>
+            <c01 id="ref37" level="otherlevel">
+                <did>
+                    <unittitle>Doobie Brothers</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439006" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439006" type="Object">10</container>
+                    <unitdate>1980</unitdate>
+                </did>
+                <odd id="ref38">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.10</p>
+                </odd>
+            </c01>
+            <c01 id="ref41" level="otherlevel">
+                <did>
+                    <unittitle>Ford, Lita 
+                        <title render="italic">Out For Blood</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439008" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439008" type="Object">11</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref42">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.6</p>
+                </odd>
+            </c01>
+            <c01 id="ref39" level="item">
+                <did>
+                    <unittitle>Gabriel, Peter: 
+                        <title render="italic">Security</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439007" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439007" type="Object">12</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref40">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.30</p>
+                </odd>
+            </c01>
+            <c01 id="ref123" level="item">
+                <did>
+                    <unittitle>Genesis on Atlantic Records and Tapes</unittitle>
+                    <container id="cid439009" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439009" type="Object">13</container>
+                    <unitdate>circa 1981</unitdate>
+                </did>
+                <odd id="ref126">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.64</p>
+                </odd>
+            </c01>
+            <c01 id="ref49" level="item">
+                <did>
+                    <unittitle>Genesis on Atlantic Records, Cassettes, &amp; Compact Discs</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441017" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441017" type="Object">10</container>
+                    <unitdate>circa 1986</unitdate>
+                </did>
+                <odd id="ref50">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.48</p>
+                </odd>
+            </c01>
+            <c01 id="ref45" level="item">
+                <did>
+                    <unittitle>Genesis: Abacab</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439010" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439010" type="Object">14</container>
+                    <container id="cid441018" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441018" type="Object">11</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref46">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.40, A2005.36.55</p>
+                </odd>
+            </c01>
+            <c01 id="ref53" level="item">
+                <did>
+                    <unittitle>Genesis: 
+                        <title render="italic">Genesis</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439012" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439012" type="Object">15</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref54">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.54</p>
+                </odd>
+            </c01>
+            <c01 id="ref47" level="item">
+                <did>
+                    <unittitle>Genesis: 
+                        <title render="italic">Genesis</title> and back catalog</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439011" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439011" type="Object">16</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref48">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.61</p>
+                </odd>
+            </c01>
+            <c01 id="ref51" level="item">
+                <did>
+                    <unittitle>Genesis: 
+                        <title render="italic">Three Sides Live</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439014" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439014" type="Object">17</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref52">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.65</p>
+                </odd>
+            </c01>
+            <c01 id="ref101" level="item">
+                <did>
+                    <unittitle>Head East: 
+                        <title render="italic">US 1</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441020" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441020" type="Object">12</container>
+                    <unitdate>1980</unitdate>
+                </did>
+                <odd id="ref102">
+                    <head>Museum Accession Numbers</head>
+                    <p>A2005.36.47</p>
+                </odd>
+            </c01>
+            <c01 id="ref57" level="item">
+                <did>
+                    <unittitle>Jefferson Starship: 
+                        <title render="italic">Freedom at Point Zero</title> and back catalog</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439015" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439015" type="Object">18</container>
+                    <unitdate>1979</unitdate>
+                </did>
+                <odd id="ref58">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.37</p>
+                </odd>
+            </c01>
+            <c01 id="ref55" level="item">
+                <did>
+                    <unittitle>Jefferson Starship: 
+                        <title render="italic">Modern Times</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441019" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441019" type="Object">13</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref56">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.51</p>
+                </odd>
+            </c01>
+            <c01 id="ref21" level="item">
+                <did>
+                    <unittitle>Jon Butcher Axis</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439013" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439013" type="Object">19</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref22">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.29</p>
+                </odd>
+            </c01>
+            <c01 id="ref59" level="item">
+                <did>
+                    <unittitle>Journey: 
+                        <title render="italic">Departure</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441021" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441021" type="Object">14</container>
+                    <unitdate>1980</unitdate>
+                </did>
+                <odd id="ref60">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.49</p>
+                </odd>
+            </c01>
+            <c01 id="ref61" level="item">
+                <did>
+                    <unittitle>Kings X: 
+                        <title render="italic">Gretchen Goes to Nebraska</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441022" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441022" type="Object">15</container>
+                    <unitdate>1989</unitdate>
+                </did>
+                <odd id="ref62">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.14</p>
+                </odd>
+            </c01>
+            <c01 id="ref63" level="otherlevel">
+                <did>
+                    <unittitle>Led Zeppelin: 
+                        <title render="italic">Coda</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439016" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439016" type="Object">20</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref64">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.18</p>
+                </odd>
+            </c01>
+            <c01 id="ref65" level="item">
+                <did>
+                    <unittitle>Marillion: 
+                        <title render="italic">Script for a Jester’s Tear</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439017" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439017" type="Object">21</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref66">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.63</p>
+                </odd>
+            </c01>
+            <c01 id="ref71" level="item">
+                <did>
+                    <unittitle>Moody Blues: 
+                        <title render="italic">Long Distance Voyager</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439018" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439018" type="Object">22</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref72">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.24</p>
+                </odd>
+            </c01>
+            <c01 id="ref69" level="item">
+                <did>
+                    <unittitle>Moody Blues: 
+                        <title render="italic">Long Distance Voyager</title> and back catalog</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439019" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439019" type="Object">23</container>
+                </did>
+                <odd id="ref70">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.58</p>
+                </odd>
+            </c01>
+            <c01 id="ref73" level="item">
+                <did>
+                    <unittitle>Moore, Gary on Mirage Records &amp; Cassettes</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439020" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439020" type="Object">24</container>
+                    <unitdate>undated</unitdate>
+                </did>
+                <odd id="ref74">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.12</p>
+                </odd>
+            </c01>
+            <c01 id="ref75" level="item">
+                <did>
+                    <unittitle>Motley Crue: 
+                        <title render="italic">Shout at the Devil</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439021" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439021" type="Object">25</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref76">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.15</p>
+                </odd>
+            </c01>
+            <c01 id="ref121" level="item">
+                <did>
+                    <unittitle>Nazareth: 
+                        <title render="italic">It's Naz</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441023" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441023" type="Object">16-18</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref122">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.8, A2005.36.38, A2005.36.39</p>
+                </odd>
+            </c01>
+            <c01 id="ref89" level="item">
+                <did>
+                    <unittitle>Plant, Robert: 
+                        <title render="italic">The Principles of Moments</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid439022" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid439022" type="Object">26</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref90">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.57</p>
+                </odd>
+            </c01>
+            <c01 id="ref79" level="item">
+                <did>
+                    <unittitle>Police: 
+                        <title render="italic">Ghost in the Machine</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441001" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441001" type="Object">19</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref80">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.36</p>
+                </odd>
+            </c01>
+            <c01 id="ref81" level="item">
+                <did>
+                    <unittitle>Prism: 
+                        <title render="italic">Small Change</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441002" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441002" type="Object">27</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref82">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.11</p>
+                </odd>
+            </c01>
+            <c01 id="ref83" level="item">
+                <did>
+                    <unittitle>Rainbow: 
+                        <title render="italic">Straight Between the Eyes</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441003" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441003" type="Object">28</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref84">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.2</p>
+                </odd>
+            </c01>
+            <c01 id="ref85" level="item">
+                <did>
+                    <unittitle>Ripperton, Minnie: 
+                        <title render="italic">The Best of Minnie Ripperton</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441004" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441004" type="Object">29</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref86">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.25</p>
+                </odd>
+            </c01>
+            <c01 id="ref87" level="item">
+                <did>
+                    <unittitle>Rolling Stones: 
+                        <title render="italic">Undercover</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441005" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441005" type="Object">30</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref88">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.42</p>
+                </odd>
+            </c01>
+            <c01 id="ref91" level="item">
+                <did>
+                    <unittitle>Roxy Music: 
+                        <title render="italic">Avalon</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441006" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441006" type="Object">31</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref92">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.60</p>
+                </odd>
+            </c01>
+            <c01 id="ref93" level="item">
+                <did>
+                    <unittitle>Rush: 
+                        <title render="italic">Exit Stage Left</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441007" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441007" type="Object">32</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref94">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.4</p>
+                </odd>
+            </c01>
+            <c01 id="ref95" level="item">
+                <did>
+                    <unittitle>Rutherford, Mike: 
+                        <title render="italic">Acting Very Strange</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441009" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441009" type="Object">33</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref96">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.62</p>
+                </odd>
+            </c01>
+            <c01 id="ref97" level="item">
+                <did>
+                    <unittitle>Scorpions: 
+                        <title render="italic">Blackout</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441024" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441024" type="Object">20</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref98">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.26</p>
+                </odd>
+            </c01>
+            <c01 id="ref124" level="item">
+                <did>
+                    <unittitle>Scorpions: 
+                        <title render="italic">Blackout</title> and back catalog</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441027" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441027" type="Object">21</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref125">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.46</p>
+                </odd>
+            </c01>
+            <c01 id="ref99" level="item">
+                <did>
+                    <unittitle>Scorpions: 
+                        <title render="italic">Love at First Sting</title> and back catalog</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441025" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441025" type="Object">22</container>
+                    <unitdate>1984</unitdate>
+                </did>
+                <odd id="ref100">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.5</p>
+                </odd>
+            </c01>
+            <c01 id="ref67" level="item">
+                <did>
+                    <unittitle>Spring Fling 1985: McGuinn, Roger; Sebastian, John; Hall, John</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441008" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441008" type="Object">34</container>
+                    <unitdate>1985 April 26</unitdate>
+                </did>
+                <odd id="ref68">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.20</p>
+                </odd>
+            </c01>
+            <c01 id="ref103" level="item">
+                <did>
+                    <unittitle>Springsteen, Bruce and the E Street Band: Live, 1975-1985</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441026" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441026" type="Object">23</container>
+                    <unitdate>1986</unitdate>
+                </did>
+                <odd id="ref104">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.52</p>
+                </odd>
+            </c01>
+            <c01 id="ref105" level="item">
+                <did>
+                    <unittitle>Stray Cats: "Sexy and 17"; "Lucky Charm"; "Cruisin'"; "Lookin' Better Every Beer"</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441028" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441028" type="Object">24</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref106">
+                    <head>Museum Accession Numbers</head>
+                    <p>A2005.36.45</p>
+                </odd>
+            </c01>
+            <c01 id="ref107" level="item">
+                <did>
+                    <unittitle>Thorpe, Billy: 
+                        <title render="italic">Children of the Sun</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441029" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441029" type="Object">25</container>
+                    <unitdate>1979</unitdate>
+                </did>
+                <odd id="ref108">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.9</p>
+                </odd>
+            </c01>
+            <c01 id="ref109" level="item">
+                <did>
+                    <unittitle>Triumph: 
+                        <title render="italic">Allied Forces</title> and back catalog</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441030" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441030" type="Object">26</container>
+                    <unitdate>1981</unitdate>
+                </did>
+                <odd id="ref110">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.41</p>
+                </odd>
+            </c01>
+            <c01 id="ref111" level="item">
+                <did>
+                    <unittitle>Trooper: 
+                        <title render="italic">Money Talks</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441010" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441010" type="Object">35</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref112">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.23</p>
+                </odd>
+            </c01>
+            <c01 id="ref113" level="item">
+                <did>
+                    <unittitle>Trooper: 
+                        <title render="italic">Thick as Thieves</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441031" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441031" type="Object">27</container>
+                    <unitdate>1978</unitdate>
+                </did>
+                <odd id="ref114">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.43</p>
+                </odd>
+            </c01>
+            <c01 id="ref115" level="item">
+                <did>
+                    <unittitle>Uriah Heep: 
+                        <title render="italic">Head First</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441032" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441032" type="Object">28</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref116">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.33</p>
+                </odd>
+            </c01>
+            <c01 id="ref117" level="item">
+                <did>
+                    <unittitle>Who: 
+                        <title render="italic">It’s Hard</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441033" type="Drawer-Folder" label="Graphic materials">FF.1.7-2</container>
+                    <container parent="cid441033" type="Object">29</container>
+                    <unitdate>1982</unitdate>
+                </did>
+                <odd id="ref118">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.27</p>
+                </odd>
+            </c01>
+            <c01 id="ref119" level="item">
+                <did>
+                    <unittitle>ZZ Top: 
+                        <title render="italic">Eliminator</title></unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <container id="cid441011" type="Drawer-Folder" label="Graphic materials">FF.1.7-1</container>
+                    <container parent="cid441011" type="Object">36</container>
+                    <unitdate>1983</unitdate>
+                </did>
+                <odd id="ref120">
+                    <head>Museum Accession Number</head>
+                    <p>A2005.36.56</p>
+                </odd>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>
