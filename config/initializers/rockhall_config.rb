@@ -36,8 +36,18 @@ config[:linked_fields] = {
 }
 
 # Fields that link to external sites
+#
+# Each key of the external_links hash is the field you want to display.
+# The text that's in the link is take from the solr field that is specified
+# in the :text key of the subhash.  The :text field is nil, then it will default
+# to the url itself.
 config[:external_links] = {
-  "resource_link_display" => "title_display"
+  "resource_url_display" => {
+      :text    => "resource_text_display"
+    },
+  "ohlink_url_display" => {
+      :text    => "ohlink_text_display"
+    }
 }
 
 # EAD config

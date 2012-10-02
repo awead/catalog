@@ -51,7 +51,7 @@ Feature:
 
   Scenario: Display resource links and urls (BL-48/42)
     Given I am on the bib record page for 33827620
-    Then I should see the field title "blacklight-resource_link_display" contain "Resource Link:"
+    Then I should see the field title "blacklight-resource_link_display" contain "Online Resource:"
     And I should see the field content "blacklight-resource_link_display" contain "Rock and Roll Hall of Fame and Museum"
     And I should be able to follow "Rock and Roll Hall of Fame and Museum"
 
@@ -112,5 +112,17 @@ Feature:
     Given I am on the bib record page for 773370191
     Then I should see the field content "blacklight-contributors_display" contain "Moonalice (Musical group)"
     And I should see the field content "blacklight-contributors_display" not contain "Moonalice (Musical group)Posters"
+
+  Scenario: OhlinLink urls (BL-257, BL-259)
+    Given I am on the bib record page for 40393214
+    Then I should see the field content "blacklight-ohlink_url_display" contain "Connect to Database Online"
+    And I should see the field title "blacklight-ohlink_url_display" contain "OhioLink Resource:"
+    And I should be able to follow "Connect to Database Online"
+  
+  Scenario: Bib record link display text (BL-258, BL-260)
+    Given I am on the bib record page for 811563836
+    Then I should see the field content "blacklight-resource_url_display" contain "Connect to resource"
+    And I should see the field title "blacklight-resource_url_display" contain "Online Resource"
+    And I should be able to follow "Connect to resource"
 
 

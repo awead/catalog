@@ -68,12 +68,12 @@ module LocalBlacklightHelper
   end
 
   def render_external_link args
-    result = String.new
-    value  = args[:value]
-    text   = args[:document].get(Rails.configuration.rockhall_config[:external_links]["resource_link_display"])
-    value ||= args[:document].get(args[:field], :sep => nil) if args[:document] and args[:field]
-    result << link_to(text, value.first)
-    return result.html_safe
+    #default   = Rails.configuration.rockhall_config[:external_links][args[:field]][:default]
+    text      = args[:document].get(Rails.configuration.rockhall_config[:external_links][args[:field]][:text])
+    #link_text = text.nil? ? default : text
+    url = args[:document].get(args[:field])
+    link_text = text.nil? ? url : text
+    link_to(link_text, url, { :target => "_blank"}).html_safe
   end
 
   def field_value_separator
