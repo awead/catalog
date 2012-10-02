@@ -793,16 +793,20 @@
          title_series_t^100
          text^10
        </str>
-       <str name="author_qf">
+       <str name="name_qf">
          author_unstem_search^200
+         contributors_unstem_search^200
          author_addl_unstem_search^50
          author_t^20
+         contributors_t^20
          author_addl_t
        </str>
-       <str name="author_pf">
+       <str name="name_pf">
          author_unstem_search^2000
+         contributors_unstem_search^2000
          author_addl_unstem_search^500
          author_t^200
+         contributors_t^200
          author_addl_t^10
        </str>
        <str name="title_qf">
@@ -833,7 +837,6 @@
          subject_topic_unstem_search^200
          subject_unstem_search^125
          subject_topic_facet^100
-         name_facet^90
          subject_t^50
          subject_addl_unstem_search^10
          subject_addl_t
@@ -843,7 +846,6 @@
          subject_unstem_search^1250
          subject_t^1000
          subject_topic_facet^500
-         name_facet^400
          subject_addl_unstem_search^100
          subject_addl_t^10
        </str>
@@ -1396,9 +1398,9 @@
       <str name="buildOnOptimize">true</str>
     </lst>
     <lst name="spellchecker">
-      <str name="name">author</str>
-      <str name="field">author_spell</str>
-      <str name="spellcheckIndexDir">./spell_author</str>
+      <str name="name">name</str>
+      <str name="field">name_spell</str>
+      <str name="spellcheckIndexDir">./spell_name</str>
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
     </lst>
@@ -1416,6 +1418,13 @@
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
     </lst>
+    <lst name="spellchecker">
+      <str name="name">genre</str>
+      <str name="field">genre_spell</str>
+      <str name="spellcheckIndexDir">./spell_genre</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>     
 
     <!-- a spellchecker that uses a different distance measure -->
     <!--
