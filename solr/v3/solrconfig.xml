@@ -135,15 +135,14 @@
     <!-- Sets the amount of RAM that may be used by Lucene indexing
          for buffering added documents and deletions before they are
          flushed to the Directory.  -->
-    <ramBufferSizeMB>128</ramBufferSizeMB>
+    <ramBufferSizeMB>32</ramBufferSizeMB>
     <!-- If both ramBufferSizeMB and maxBufferedDocs is set, then
          Lucene will flush based on whichever limit is hit first.
       -->
     <!-- <maxBufferedDocs>1000</maxBufferedDocs> -->
 
     <maxFieldLength>10000</maxFieldLength>
-    <writeLockTimeout>60000</writeLockTimeout>
-    <commitLockTimeout>60000</commitLockTimeout>
+    <writeLockTimeout>1000</writeLockTimeout>
 
     <!-- Expert: Merge Policy
 
@@ -210,7 +209,7 @@
   <mainIndex>
 
     <useCompoundFile>false</useCompoundFile>
-    <!-- <ramBufferSizeMB>32</ramBufferSizeMB> -->
+    <ramBufferSizeMB>32</ramBufferSizeMB>
     <mergeFactor>10</mergeFactor>
 
     <!-- Unlock On Startup
@@ -1424,7 +1423,7 @@
       <str name="spellcheckIndexDir">./spell_genre</str>
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
-    </lst>     
+    </lst>
 
     <!-- a spellchecker that uses a different distance measure -->
     <!--
