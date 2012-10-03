@@ -1,23 +1,23 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~>3.2.1'
+gem 'rails', '~>3.2.8'
 
-gem 'blacklight'
+gem 'blacklight', '~>3.6.1'
 gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
 gem 'jquery-rails'
 gem 'rspec-rails'
-gem 'sass-rails', '  ~> 3.2.3'
+gem 'sass-rails'
 gem 'devise'
 gem 'blacklight_highlight'
 gem 'blacklight-sitemap', '~> 1.0.0'
 
 group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'compass-rails', '~> 1.0.0'
-  gem 'compass-susy-plugin', '~> 0.9.0', :require => 'susy'
+  gem 'coffee-rails'
+  gem 'uglifier'
+  gem 'compass-rails'
+  gem 'compass-susy-plugin', :require => 'susy'
 end
 
 group :development, :test do
