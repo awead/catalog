@@ -129,3 +129,8 @@ Feature:
     Given I am on the home page
     When I follow "Website"
     Then I should see the field content "blacklight-ohlink_url_display" contain "Connect to Database Online"
+
+  Scenario: Name headings in bib record Author fields should be linked (BL-244)
+    Given I am on the bib record page for 668192442
+    Then I should be able to follow "Golio, Gary"  
+    

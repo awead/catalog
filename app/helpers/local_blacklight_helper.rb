@@ -30,36 +30,30 @@ module LocalBlacklightHelper
   # end of overriding methods
   #
 
-  def render_field_link args, result = String.new
-    search = Rails.configuration.rockhall_config[:linked_fields][args[:field].to_sym][:search]
-    facet  = Rails.configuration.rockhall_config[:linked_fields][args[:field].to_sym][:facet]
-    value = args[:value]
-    value ||= args[:document].get(args[:field], :sep => nil) if args[:document] and args[:field]
-    if value.is_a? Array
-      value.each do |v|
-        if facet
-          result << link_to(v, add_facet_params_and_redirect(facet, v), :class=>"facet_select label")
-          result << "<br/>"
-        else
-          result << link_to(v, catalog_index_path( :search_field => search, :q => "\"#{v}\"" ))
-          result << field_value_separator
-        end
-      end
-    else
-      if facet
-        result << link_to(v, add_facet_params_and_redirect(facet, v), :class=>"facet_select label")
-      else
-        result << link_to(value, catalog_index_path( :search_field => search, :q => "\"#{v}\"" ))
-      end
-    end
-    return result.html_safe
-  end
-
   def render_external_link args
-    text      = args[:document].get(Rails.configuration.rockhall_config[:external_links][args[:field]][:text])
+    text      = args[:document].get(blacklight_config.show_fields[args[:field]][:text])
     url       = args[:document].get(args[:field])
     link_text = text.nil? ? url : text
-    link_to(link_text, url, { :target => "_blank"}).html_safe
+    link_to(link_text, url, { :target => "_blank" }).html_safe
+  end
+
+  def render_facet_link args, results = Array.new
+    value = args[:document][args[:field]]
+    if value.is_a? Array
+      value.each do |text|
+        results << link_to(text, add_facet_params_and_redirect(blacklight_config.show_fields[args[:field]][:facet], text), :class=>"facet_select label")
+      end
+    else
+      results << link_to(value, add_facet_params_and_redirect(blacklight_config.show_fields[args[:field]][:facet], value), :class=>"facet_select label")
+    end
+    return results.join(field_value_separator).html_safe
+  end
+
+  def render_search_link args, results = Array.new
+    args[:document][args[:field]].each do |text|
+      results << link_to(text, catalog_index_path( :search_field => "all_fields", :q => "\"#{text}\"" ))
+    end
+    return results.join(field_value_separator).html_safe
   end
 
   def field_value_separator
