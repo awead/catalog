@@ -125,4 +125,7 @@ Feature:
     And I should see the field title "blacklight-resource_url_display" contain "Online Resource"
     And I should be able to follow "Connect to resource"
 
-
+  Scenario: Displaying links in the index view (BL-265)   
+    Given I am on the home page
+    When I follow "Website"
+    Then I should see the field content "blacklight-ohlink_url_display" contain "Connect to Database Online"
