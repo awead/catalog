@@ -52,7 +52,7 @@ Set supressRockHall(Record record, String fieldSpec)
   for (String s : result)
   {
 
-    String pattern = "Rock and Roll Hall of Fame and Museum";
+    String pattern = "Rock and Roll Hall of Fame and Museum. Library and Archives";
     Pattern p      = Pattern.compile(pattern);
     Matcher m      = p.matcher(s);
 

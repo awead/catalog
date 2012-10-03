@@ -133,4 +133,9 @@ Feature:
   Scenario: Name headings in bib record Author fields should be linked (BL-244)
     Given I am on the bib record page for 668192442
     Then I should be able to follow "Golio, Gary"  
+
+  Scenario: RRHoF as contributor (BL-256)
+    Given I am on the bib record page for 729256165
+    Then I should see the field content "blacklight-contributors_display" contain "Rock and Roll Hall of Fame and Museum"
+
     
