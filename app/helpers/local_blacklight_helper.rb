@@ -1,20 +1,11 @@
 module LocalBlacklightHelper
 
+  #
   # These methods override helper methods in the Blacklight gem
+  #
+
   def application_name
     'Rock and Roll Hall of Fame and Museum | Library and Archives | Catalog'
-  end
-
-  def render_document_show_field_value args
-    value = args[:value]
-    value ||= args[:document].get(args[:field], :sep => nil) if args[:document] and args[:field]
-    if Rails.configuration.rockhall_config[:linked_fields].keys.include?(args[:field].to_sym)
-      render_field_link args
-    elsif Rails.configuration.rockhall_config[:external_links].include?(args[:field])
-      render_external_link args
-    else
-      render_field_value value
-    end
   end
 
   # overrides app/helpers/blacklight/blacklight_helper_behavior.rb
@@ -35,14 +26,11 @@ module LocalBlacklightHelper
     end
   end
 
-
-
+  #
   # end of overriding methods
+  #
 
-  # Local methods
-
-  def render_field_link args
-    result = String.new
+  def render_field_link args, result = String.new
     search = Rails.configuration.rockhall_config[:linked_fields][args[:field].to_sym][:search]
     facet  = Rails.configuration.rockhall_config[:linked_fields][args[:field].to_sym][:facet]
     value = args[:value]
@@ -68,10 +56,8 @@ module LocalBlacklightHelper
   end
 
   def render_external_link args
-    #default   = Rails.configuration.rockhall_config[:external_links][args[:field]][:default]
     text      = args[:document].get(Rails.configuration.rockhall_config[:external_links][args[:field]][:text])
-    #link_text = text.nil? ? default : text
-    url = args[:document].get(args[:field])
+    url       = args[:document].get(args[:field])
     link_text = text.nil? ? url : text
     link_to(link_text, url, { :target => "_blank"}).html_safe
   end
@@ -80,8 +66,7 @@ module LocalBlacklightHelper
     '<br/>'
   end
 
-  def document_icon doc
-    result = String.new
+  def document_icon doc, result = String.new
     if doc.get("format").nil?
       result << image_tag("icons/unknown.png")
     else
@@ -90,8 +75,6 @@ module LocalBlacklightHelper
     end
     return result.html_safe
   end
-
-
 
 
 end
