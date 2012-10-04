@@ -42,7 +42,7 @@ Feature:
     Given I am on the home page
     And I fill in "q" with "rhlocal"
     When I press "search"
-    Then I should see "Diamond dogs / Bowie"
+    Then I should see "Lifting latches / John C. Winn"
 
   # TODO: depsite not using removeTralingPunct, it still seems to do it anyway
   Scenario: Displaying uniform title from 240 field (BL-48)
