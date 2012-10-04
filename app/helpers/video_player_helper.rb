@@ -32,7 +32,7 @@ module VideoPlayerHelper
       results << "{title: 'Part #{count.to_s}', url: 'mp4:#{path}'}"
       count = count + 1
     end
-    return results.join(",").to_s
+    return results.join(",").to_s.html_safe
   end
 
 end
