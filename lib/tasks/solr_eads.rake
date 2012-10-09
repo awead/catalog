@@ -27,13 +27,7 @@ namespace :ead do
   task :delete => :environment do
     doc_id = ENV["ID"]
     raise "Please specify an id with ID=ARC-TEST" unless doc_id
-    result = Blacklight.solr.find( :q => "{!raw f=format rows=100}#{doc_id}" )
-    result["response"]["docs"].each do |doc|
-      doc_id = doc["id"]
-      puts "Deleting ead: #{doc_id}"
-      Blacklight.solr.delete_by_id(doc_id)
-    end
-    result = Blacklight.solr.find( :q => "{!raw f=ead_id rows=10000}#{doc_id}" )
+    result = Blacklight.solr.find( {:q => "ead_id:#{doc_id}", :qt => "document", :fl => "id", :rows => "100000" } )
     result["response"]["docs"].each do |doc|
       doc_id = doc["id"]
       puts "Deleting folder: #{doc_id}"
