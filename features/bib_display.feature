@@ -138,4 +138,10 @@ Feature:
     Given I am on the bib record page for 729256165
     Then I should see the field content "blacklight-contributors_display" contain "Rock and Roll Hall of Fame and Museum"
 
+  Scenario: Multiple 956 fields (BL-269)
+    Given I am on the bib record page for 743766582
+    Then I should see "Connect to resource"
+    And I should see "Oral history videos"
+    And I should be able to follow "Oral history videos"
+
     
