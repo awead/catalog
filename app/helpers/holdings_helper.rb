@@ -9,27 +9,49 @@ module HoldingsHelper
     return nil
   end
 
-  def show_holdings(doc,opts={})
-    results = String.new
-    unless doc[:format].match("Website")
-      if doc[:innovative_display]
-        if opts[:full]
-          results << "<div class=\"innovative_holdings\" id=\"#{doc[:innovative_display].first}\"></div>"
-          if doc[:format].match("Periodical")
-            results << link_to("Click for Holdings", Rockhall::Innovative.link(doc[:innovative_display].first), { :target => "_blank"})
-          end
-        else
-          if doc[:format].match("Periodical")
-            results << "<div><b>"
-            results << link_to("Click for Holdings", Rockhall::Innovative.link(doc[:innovative_display].first), { :target => "_blank"})
-            results << "</b></div>"
-          else
-            results << "<div class=\"innovative_status\" id=\"#{doc[:innovative_display].first}\"><b>checking status... </b></div>"
-          end
-        end
+  def show_full_holdings
+    show_holdings(@document, {:full=>TRUE})
+  end
+
+  def show_holdings(doc, opts={})
+    @document ||= doc
+    if doc[:innovative_display]
+      case doc[:format]
+        when "Website" then show_website_holdings(opts)
+        when "Periodical" then show_periodical_holdings(opts)
+        else show_all_holdings(opts)
       end
     end
-    return results.html_safe
+  end
+
+  def show_website_holdings opts
+    return nil
+  end
+
+  def show_periodical_holdings opts
+    if opts[:full]
+      render :partial => "holdings/show/periodical"
+    else
+      render_holdings_link
+    end
+  end
+
+  def show_all_holdings opts
+    if opts[:full]
+      content_tag(:div, nil, :class => "innovative_holdings", :id => @document[:innovative_display].first)
+    else
+      content_tag(:div, "checking status..." , :class => "innovative_status", :id => @document[:innovative_display].first)
+    end
+  end
+
+  def build_periodical_holdings(results = Array.new)
+    @document[:holdings_location_display].nil? ? results.push("") : results.push(@document[:holdings_location_display].first)
+    @document[:lc_callnum_display].nil? ? results.push("") : results.push(@document[:lc_callnum_display].first)
+    @document[:holdings_status_display].nil? ? results.push("") : results.push(@document[:holdings_status_display].first)
+  end
+
+  def render_holdings_link
+    link_to("Click for Holdings", Rockhall::Innovative.link(@document[:innovative_display].first), { :target => "_blank"})
   end
 
 end
