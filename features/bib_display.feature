@@ -144,4 +144,8 @@ Feature:
     And I should see "Oral history videos"
     And I should be able to follow "Oral history videos"
 
+  Scenario: Call number display (BL-296)
+    Given I am on the bib record page for 785870275
+    Then I should see the field content "blacklight-lc_callnum_display" contain "ML421.B5338 B53P4 2013"
+
     

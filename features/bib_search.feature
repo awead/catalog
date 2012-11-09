@@ -43,3 +43,10 @@ Feature:
     Given I am on the bib record page for 35618845
     Given I am on the bib record page for 706740
     Given I am on the bib record page for b3416516
+
+  Scenario: Call number display (BL-296)
+    Given I am on the home page
+    And I fill in "q" with "Black Sabbath"
+    When I press "search"
+    Then I should see "Black Sabbath and philosophy : mastering reality / edited by William Irwin"
+    And I should see the field content "blacklight-lc_callnum_display" contain "ML421.B5338 B53P4 2013"
