@@ -16,11 +16,21 @@
 </div>
 
 <script type="text/javascript">
-  $f("player", "<%= root_path %>flowplayer/flowplayer-3.2.9.swf", {
+  $f("player", "<%= root_path %>flowplayer/flowplayer.commercial-3.2.15.swf", {
   // the playlist
   playlist: [
     <%= flowplayer_playlist %>
   ],
+
+  // commercial version license key
+  key: '#$2dfa073ca619da289cf',
+ 
+  // now we can tweak the logo settings
+  logo: {
+    url: '<%= image_path("logo_flag.png") %>',
+    fullscreenOnly: false,
+    displayTime: 2000
+  },
 
   // each clip on the playlist uses the rtmp plugin
   clip: {
@@ -30,7 +40,7 @@
   // the rtmp plugin
   plugins: {
     rtmp: {
-      url:              '<%= root_path %>flowplayer/flowplayer.rtmp-3.2.9.swf',
+      url:              '<%= root_path %>flowplayer/flowplayer.rtmp-3.2.11.swf',
       netConnectionUrl: 'rtmp://192.168.251.84/vod'
     },
 
