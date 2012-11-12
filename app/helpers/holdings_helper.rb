@@ -30,7 +30,7 @@ module HoldingsHelper
 
   def show_periodical_holdings opts
     if opts[:full]
-      render :partial => "holdings/show/periodical"
+      render :partial => "holdings/show/periodical", :locals => { :holdings => build_holdings_array }
     else
       render_holdings_link
     end
@@ -44,14 +44,43 @@ module HoldingsHelper
     end
   end
 
-  def build_periodical_holdings(results = Array.new)
-    @document[:holdings_location_display].nil? ? results.push("") : results.push(@document[:holdings_location_display].first)
-    @document[:lc_callnum_display].nil? ? results.push("") : results.push(@document[:lc_callnum_display].first)
-    @document[:holdings_status_display].nil? ? results.push("") : results.push(@document[:holdings_status_display].first)
+  def build_holdings_array(holdings = Array.new)
+    @document[:holdings_location_display].each do |code|
+      if code.match(/^rh/)
+        h = Rockhall::Holdings.new
+        index = @document[:holdings_location_display].index(code)
+        h.location    = location[code]
+        h.call_number = @document[:lc_callnum_display].first
+        h.status      = get_status(index)
+        holdings << h
+      end
+    end
+    return holdings
   end
 
   def render_holdings_link
     link_to("Click for Holdings", Rockhall::Innovative.link(@document[:innovative_display].first), { :target => "_blank"})
+  end
+
+  def get_status(index)
+    unless @document[:holdings_status_display].nil?
+      status[@document[:holdings_status_display][index]]
+    end
+  end
+
+  def status
+    {
+      "o" => "LIB USE ONLY",
+      "p" => "In Process",
+      "-" => "Check Shelves"
+    }
+  end
+
+  def location
+    {
+      "rhlrr" => "Rock Hall Library Reading Room",
+      "rhs2"  => "Rock Hall Stacks 2"
+    }
   end
 
 end

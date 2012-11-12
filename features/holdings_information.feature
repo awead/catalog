@@ -36,3 +36,8 @@ Feature:
     And I am on the bib record page for 45080162
     Then I should not see "Holdings"
     And I should not see "Rock Hall Reference"
+
+  Scenario: Default to 945 field information if holdings are unknown from Case OPAC (BL-240)
+    Given I am on the bib record page for 2260489
+    Then I should see "Rock Hall Library Reading Room"
+    And I should see "LIB USE ONLY"
