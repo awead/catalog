@@ -74,8 +74,8 @@ Feature:
 
   Scenario: Standard links in the bib record display (BL-136)
     Given I am on the bib record page for 663101343
-    Then I should not see "Email This"
-    And I should not see "SMS This"
+    Then I should see "Email"
+    And I should see "SMS This"
     And I should see "Check nearby libraries"
 
   Scenario: Displaying Contents Coded as Enhanced 505s (BL-106)
