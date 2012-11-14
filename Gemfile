@@ -13,6 +13,7 @@ gem 'devise'
 gem 'devise-guests'
 gem 'blacklight_highlight'
 gem 'blacklight-sitemap', '~> 1.0.0'
+gem 'ruby-ntlm'
 
 group :assets do
   gem 'coffee-rails'

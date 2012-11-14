@@ -35,3 +35,12 @@ BlacklightApp::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+# Sends to only interal addresses with not authenticating
+ActionMailer::Base.smtp_settings = {
+  :address => "192.168.250.174",
+  :port    => 25,
+  :domain  => 'ROCKHALL',
+}
+
+ActionMailer::Base.default :from => 'library@rockhall.org'

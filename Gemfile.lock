@@ -181,6 +181,7 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.11.0)
+    ruby-ntlm (0.0.1)
     rubyzip (0.9.9)
     sanitize (2.0.3)
       nokogiri (>= 1.4.4, < 1.6)
@@ -242,6 +243,7 @@ DEPENDENCIES
   passenger (= 3.0.18)
   rails (~> 3.2.8)
   rspec-rails
+  ruby-ntlm
   sanitize
   sass-rails
   spork

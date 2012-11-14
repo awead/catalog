@@ -80,3 +80,17 @@ BlacklightApp::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
+
+# Production email settings
+# Authenticates with Exchange 2010 using ntlm
+ActionMailer::Base.smtp_settings = { 
+  :address              => "192.168.250.174",
+  :port                 => 25, 
+  :domain               => 'ROCKHALL',
+  :user_name            => 'username',
+  :password             => 'an-unencrypted-password',
+  :authentication       => :ntlm,
+  :enable_starttls_auto => true
+}
+
+ActionMailer::Base.default :from => 'library@rockhall.org'
