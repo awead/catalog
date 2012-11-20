@@ -36,7 +36,7 @@ Feature:
     And I fill in "q" with "Elvis Presley"
     And I select "Name" from "search_field"
     When I press "search"
-    And I follow "Book"
+    And I follow the facet link "Book"
     Then I should see "Shake, rattle & turn that noise down!"
 
   Scenario: Null ids in marc recrods (BL-169)

@@ -24,7 +24,7 @@ Feature:
 
   Scenario: Related works field links (BL-10)
     Given I am on the bib record page for 74495434
-    When I follow "Inside the Beatles vaults"
+    When I follow the "blacklight-relworks_display" link "Inside the Beatles vaults"
     Then I should see "Lifting latches / John C. Winn"
 
   Scenario: Donor information and collection linkage (BL-39)
@@ -51,9 +51,8 @@ Feature:
 
   Scenario: Display resource links and urls (BL-48/42)
     Given I am on the bib record page for 33827620
-    Then I should see the field title "blacklight-resource_link_display" contain "Online Resource:"
-    And I should see the field content "blacklight-resource_link_display" contain "Rock and Roll Hall of Fame and Museum"
-    And I should be able to follow "Rock and Roll Hall of Fame and Museum"
+    Then I should see the field title "blacklight-resource_url_display" contain "Online Resource:"
+    And I should be able to follow the "blacklight-resource_url_display" link "http://rockhall.com"
 
   Scenario: Deriving call numbers for display (BL-41)
     Given I am on the bib record page for 45008581
@@ -66,7 +65,6 @@ Feature:
     And I should see "Terry Stewart Collection"
     And I should see "Northeast Ohio Popular Music Archives"
     And I should be able to follow "Terry Stewart Collection"
-    And I should be able to follow "Northeast Ohio Popular Music Archives"
 
   Scenario: Series Index should include MARC field 811 (BL-104)
     Given I am on the bib record page for 754843822
@@ -80,7 +78,7 @@ Feature:
 
   Scenario: Displaying Contents Coded as Enhanced 505s (BL-106)
     Given I am on the bib record page for 37138367
-    Then I should see the field content "blacklight-contents_display" contain "I looked away"
+    Then I should see the field content "blacklight-contents_display" match "I looked away"
     Then I should see the field title "blacklight-contents_display" contain "Contents:"
 
   Scenario: Display OCLC bib record numbers (BL-144)

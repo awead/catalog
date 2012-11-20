@@ -51,6 +51,10 @@ Then /^I should see the field content "([^"]*)" contain "([^"]*)"$/ do |arg1, ar
   page.should have_xpath("//*/dd[contains(@class, arg1)]", :text => arg2)
 end
 
+Then /^I should see the field content "(.*?)" match "(.*?)"$/ do |arg1, arg2|
+  find(("dd." + arg1)).text.should match arg2
+end
+
 Then /^I should see the field content "([^"]*)" not contain "([^"]*)"$/ do |arg1, arg2|
   page.should_not have_xpath("//*/dd[contains(@class, arg1)]", :text => arg2)
 end
@@ -81,4 +85,15 @@ When /^I wait for "(.*?)" seconds$/ do |arg1|
 sleep(arg1.to_i)
 end
 
+When /^I follow the "(.*?)" link "(.*?)"$/ do |arg1, arg2|
+  find(("dd." + arg1 + " a")).click
+end
+
+Then /^I should be able to follow the "(.*?)" link "(.*?)"$/ do |arg1, arg2|
+  find(("dd." + arg1 + " a")).click
+end
+
+When /^I follow the facet link "(.*?)"$/ do |arg1|
+  all('a.facet_select').select {|elt| elt.text == arg1 }.first.click
+end
 
