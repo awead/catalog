@@ -33,6 +33,9 @@ module NavigationHelpers
     when /^the signup page$/
       new_user_registration_path
 
+    when /^the search results page for (.+)/
+      catalog_index_path("q"=>$1, "search_field"=>"all_fields")
+
     else
       begin
         page_name =~ /^the (.*) page$/

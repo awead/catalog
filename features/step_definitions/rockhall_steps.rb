@@ -82,7 +82,7 @@ Given /^the opac is down$/ do
 end
 
 When /^I wait for "(.*?)" seconds$/ do |arg1|
-sleep(arg1.to_i)
+  sleep(arg1.to_i)
 end
 
 When /^I follow the "(.*?)" link "(.*?)"$/ do |arg1, arg2|
@@ -96,4 +96,19 @@ end
 When /^I follow the facet link "(.*?)"$/ do |arg1|
   all('a.facet_select').select {|elt| elt.text == arg1 }.first.click
 end
+
+Then /^all bookmarks should be checked$/ do
+  all('form.bookmark_toggle label.toggle_bookmark').each do |box|
+    box.text.should == "In Bookmarks"
+  end
+end
+
+Then /^all bookmarks should be unchecked$/ do
+  all('form.bookmark_toggle label.toggle_bookmark').each do |box|
+    box.text.should == "Bookmark"
+  end
+end
+
+
+
 

@@ -1,0 +1,15 @@
+<div class="documentFunctions">
+  <%= check_box_tag "toggle_all_bookmarks" %>
+  <%= label_tag "Select All", nil, :class => "toggle_bookmark", :id => "toggle_all_bookmarks" %>
+</div
+
+<% # container for all documents in index view -%>
+<div id="documents">
+  <% if Rails.version > "3.2.0" %>
+    <%= render @document_list, :as => :document %>
+  <% else %>
+    <% @document_list.each_with_index do |document, document_counter| %>
+      <%= render :partial => document.to_partial_path, :locals => { :document => document, :document_counter => document_counter } %>
+    <% end %>
+  <% end %>
+</div>
