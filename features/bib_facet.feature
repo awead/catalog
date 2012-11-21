@@ -57,3 +57,10 @@ Feature: Catalog Home Page
     And I press "search"
     And I follow "Jeff Gold Collection"
     Then I should not see "background-color:yellow"
+
+  @wip
+  Scenario: CD/DVD-ROM facet pulling in Enchanged music CDs
+    Given I am on the home page
+    When I follow the facet term "CD/DVD-ROM" 
+    Then I should see "77 million paintings [electronic resource] / by Brian Eno"
+    And I should not see "Viva Elvis [sound recording] : the album"
