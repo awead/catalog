@@ -58,7 +58,6 @@ Feature: Catalog Home Page
     And I follow "Jeff Gold Collection"
     Then I should not see "background-color:yellow"
 
-  @wip
   Scenario: CD/DVD-ROM facet pulling in Enchanged music CDs
     Given I am on the home page
     When I follow the facet term "CD/DVD-ROM" 
