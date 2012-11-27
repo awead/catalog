@@ -1,0 +1,70 @@
+import org.marc4j.marc.Record;
+import org.solrmarc.tools.Utils;
+
+// define the base level indexer so that its methods can be called from the script.
+// note that the SolrIndexer code will set this value before the script methods are called.
+org.solrmarc.index.SolrIndexer indexer = null;
+
+/**
+ * Determine Record Format(s)
+ *
+ * @param  Record          record
+ * @return Set     format of record
+ */
+
+public Set getFormat(Record record)
+{
+    Set result = new LinkedHashSet();
+
+
+    Set fields007 = indexer.getFieldList(record, "007[0-1]");
+    String f_000  = indexer.getFirstFieldVal(record, null, "000[6-7]");
+    f_000 = f_000.toUpperCase();
+
+    for (String f_007 : fields007)
+    {
+   	    f_007 = f_007.toUpperCase();
+   	    if      (f_007.equals("AA")) result.add("Book");
+        else if (f_007.equals("AB")) result.add("Periodical");
+        else if (f_007.equals("AM")) result.add("Book");
+        else if (f_007.equals("AS")) result.add("Periodical");
+        else if (f_007.equals("TA")) result.add("Book");
+        else if (f_007.equals("TM")) result.add("Theses/Dissertations");
+        else if (f_007.equals("CR")) result.add("Website");
+        else if (f_007.equals("AI")) result.add("Website");
+        else if (f_007.equals("CO") && f_000.startsWith("M")) result.add("CD/DVD-ROM");
+        else    result;
+    }
+
+    // If this worked, return the value
+    if (!result.isEmpty()) return result;
+    
+    // check the Leader - this is NOT a repeating field
+    // if we find a matching value there, grab it and return.
+    if      (f_000.equals("AA"))    result.add("Book");
+    else if (f_000.equals("AB"))    result.add("Periodical");
+    else if (f_000.equals("AM"))    result.add("Book");
+    else if (f_000.equals("AS"))    result.add("Periodical");
+    else if (f_000.equals("TA"))    result.add("Book");
+    else if (f_000.equals("TM"))    result.add("Theses/Dissertations");
+    else if (f_000.equals("CR"))    result.add("Website");
+    else if (f_000.equals("AI"))    result.add("Website");
+    else if (f_000.equals("CO"))    result.add("CD/DVD-ROM");
+    else if (f_000.startsWith("C")) result.add("Score");
+    else if (f_000.startsWith("D")) result.add("Score");
+    else if (f_000.startsWith("I")) result.add("Audio");
+    else if (f_000.startsWith("J")) result.add("Audio");
+    else if (f_000.startsWith("K")) result.add("Image");
+    else if (f_000.startsWith("G")) result.add("Video");
+    else if (f_000.startsWith("E")) result.add("Map");
+    else if (f_000.startsWith("H")) result.add("Microform");
+    else if (f_000.startsWith("V")) result.add("Video");
+    else    result;
+    
+    // Nothing worked!
+    if (result.isEmpty()) {
+        result.add("Unknown");
+    }
+    
+    return result;
+}

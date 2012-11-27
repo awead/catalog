@@ -26,6 +26,17 @@ Feature: Catalog Home Page
     And I should see the facet term "Audio"
     And I should see the facet term "CD/DVD-ROM"
 
+  Scenario: Verifying quantities of each format (BL-268)
+    Given I am on the home page
+    And I should see "Book (44)"
+    And I should see "Theses/Dissertations (9)"
+    And I should see "Audio (9)"
+    And I should see "Score (7)"
+    And I should see "Website (4)"
+    And I should see "CD/DVD-ROM (1)"
+    And I should see "Periodical (2)"
+    And I should see "Video (2)"
+
   Scenario: Facet for CD/DVD-ROM (BL-250)
     Given I am on the home page
     When I follow "CD/DVD-ROM"
@@ -58,14 +69,12 @@ Feature: Catalog Home Page
     And I follow "Jeff Gold Collection"
     Then I should not see "background-color:yellow"
 
-  @wip
   Scenario: CD/DVD-ROM facet pulling in Enchanged music CDs (BL-268)
     Given I am on the home page
     When I follow the facet term "CD/DVD-ROM" 
     Then I should see "77 million paintings [electronic resource] / by Brian Eno"
     And I should not see "Viva Elvis [sound recording] : the album"
 
-  @wip
   Scenario: Audio facet for Enchanged music CDs (BL-268)
     Given I am on the home page
     When I follow the facet term "Audio"
