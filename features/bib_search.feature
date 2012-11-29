@@ -50,3 +50,10 @@ Feature:
     When I press "search"
     Then I should see "Black Sabbath and philosophy : mastering reality / edited by William Irwin"
     And I should see the field content "blacklight-lc_callnum_display" contain "ML421.B5338 B53P4 2013"
+
+  Scenario: Resource links (BL-300)
+    Given I am on the home page
+    And I fill in "q" with "covach"
+    When I press "search"
+    Then I should see "Understanding rock : essays in musical analysis / edited by John Covach & Graeme M. Boone"
+    And I should not see "Resource id was not found or is unavailable"
