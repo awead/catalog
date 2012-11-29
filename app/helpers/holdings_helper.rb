@@ -13,13 +13,12 @@ module HoldingsHelper
     show_holdings(@document, {:full=>TRUE})
   end
 
-  def show_holdings(doc, opts={})
-    @document ||= doc
+  def show_holdings(doc = @document, opts={})
     if doc[:innovative_display]
       case doc[:format]
         when "Website" then show_website_holdings(opts)
-        when "Periodical" then show_periodical_holdings(opts)
-        else show_all_holdings(opts)
+        when "Periodical" then show_periodical_holdings(doc, opts)
+        else show_all_holdings(doc, opts)
       end
     end
   end
@@ -28,29 +27,30 @@ module HoldingsHelper
     return nil
   end
 
-  def show_periodical_holdings opts
+  def show_periodical_holdings doc, opts
+    puts @document.inspect
     if opts[:full]
-      render :partial => "holdings/show/periodical", :locals => { :holdings => build_holdings_array }
+      render :partial => "holdings/show/periodical", :locals => { :holdings => build_holdings_array(doc) }
     else
-      render_holdings_link
+      render_holdings_link(doc)
     end
   end
 
-  def show_all_holdings opts
+  def show_all_holdings doc, opts
     if opts[:full]
-      content_tag(:div, nil, :class => "innovative_holdings", :id => @document[:innovative_display].first)
+      content_tag(:div, nil, :class => "innovative_holdings", :id => doc[:innovative_display].first)
     else
-      content_tag(:div, "checking status..." , :class => "innovative_status", :id => @document[:innovative_display].first)
+      content_tag(:div, "checking status..." , :class => "innovative_status", :id => doc[:innovative_display].first)
     end
   end
 
-  def build_holdings_array(holdings = Array.new)
-    @document[:holdings_location_display].each do |code|
+  def build_holdings_array(doc, holdings = Array.new)
+    doc[:holdings_location_display].each do |code|
       if code.match(/^rh/)
         h = Rockhall::Holdings.new
-        index = @document[:holdings_location_display].index(code)
+        index = doc[:holdings_location_display].index(code)
         h.location    = location[code]
-        h.call_number = @document[:lc_callnum_display].first
+        h.call_number = doc[:lc_callnum_display].first
         h.status      = get_status(index)
         holdings << h
       end
@@ -58,8 +58,8 @@ module HoldingsHelper
     return holdings
   end
 
-  def render_holdings_link
-    link_to("Click for Holdings", Rockhall::Innovative.link(@document[:innovative_display].first), { :target => "_blank"})
+  def render_holdings_link(doc = @document)
+    link_to("Click for Holdings", Rockhall::Innovative.link(doc[:innovative_display].first), { :target => "_blank"})
   end
 
   def get_status(index)

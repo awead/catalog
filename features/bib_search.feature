@@ -57,3 +57,12 @@ Feature:
     When I press "search"
     Then I should see "Understanding rock : essays in musical analysis / edited by John Covach & Graeme M. Boone"
     And I should not see "Resource id was not found or is unavailable"
+
+  Scenario: Display holdings link (BL-301)
+    Given I am on the home page
+    And I fill in "q" with "2260489"
+    When I press "search"
+    Then I should see "Down beat"
+    And I follow "Down beat"
+    Then I should see "Down beat"
+    And I should not see "Resource id 2260489 was not found or is unavailable"
