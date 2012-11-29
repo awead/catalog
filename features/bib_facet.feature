@@ -62,13 +62,6 @@ Feature: Catalog Home Page
     Then I should see a facet for "Format"
     And I should see the facet term "Theses/Dissertations"
 
-  Scenario: Linked facets with highlighted search terms
-    Given I am on the home page
-    And I fill in "q" with "Jeff Gold"
-    And I press "search"
-    And I follow "Jeff Gold Collection"
-    Then I should not see "background-color:yellow"
-
   Scenario: CD/DVD-ROM facet pulling in Enchanged music CDs (BL-268)
     Given I am on the home page
     When I follow the facet term "CD/DVD-ROM" 
