@@ -6,7 +6,7 @@
 
 # Config
 
-APPDIR="/var/www/rails/blacklight-app"
+APPDIR="/var/www/rails/catalog"
 
 source ~/.bash_profile
 cd $APPDIR

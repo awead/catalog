@@ -1,4 +1,4 @@
-BlacklightApp::Application.routes.draw do
+Catalog::Application.routes.draw do
   Blacklight.add_routes(self)
 
   root :to => "catalog#index"

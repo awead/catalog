@@ -9,7 +9,7 @@
 DATADIR="/data/ead"
 LOCKFILE="/tmp/`whoami`-ead-index"
 DATEFILE="/tmp/`whoami`-latest-ead-index"
-APPDIR="/var/www/rails/blacklight-app"
+APPDIR="/var/www/rails/catalog"
 HUDSON_HOME="http://george.rockhall.org:8120"
 LOGFILE="/var/log/ead-index.log"
 

@@ -4,7 +4,7 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-BlacklightApp::Application.load_tasks
+Catalog::Application.load_tasks
 require 'blacklight-sitemap'
 Rake::BlacklightSitemapTask.new do |sm|
   # below are configuration options with their default values shown.
