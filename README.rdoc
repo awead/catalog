@@ -1,33 +1,27 @@
-== Setup/Install
+== Catalog
 
-Follow all of the steps list here:
+Rails application for the Rock and Roll Hall of Fame's Library and Archives:
 
-https://github.com/projectblacklight/blacklight/wiki/Blacklight-3.x-Quickstart
+http://catalog.rockhall.com
 
-Except...
+Uses the blacklight plugin to search and display data in MARC format, as well as custom software
+written to seach and display data in EAD format and PBCore xml from our digital asset manager,
+Hydra.
 
-1. You'll be doing a fork or git clone so you don't have to create a new app.
+== Further Reading
 
-2. I recommend using rvm, and then running bundle install
+For information on the Blacklight plugin, see:
 
-3. After you've cloned jetty, copy over the solr/schema.xml and solr/solrconfig.xml files
-to the conf directory of the jetty instance and restart jetty.
+https://github.com/projectblacklight/blacklight
 
-4. Index the inlcuded test data:
+For information about Hydra and our asset manger, see:
 
-rake solr:index:ead_dir DIR=test/data/ead/
-rake solr:marc:index_dir DIR=test/data/marc/
-
-5. Test
-
-rake cucumber
-
-6. Assuming everything passes, you can start the app
+https://github.com/projecthydra/hydra-head
+https://github.com/awead/Hydra-Rock
 
 == Contact
-
-Let me know if you have questions.
 
 Adam Wead
 Systems and Digital Collections Librarian
 Rock and Roll Hall of Fame and Museum
+awead@rockhall.org
