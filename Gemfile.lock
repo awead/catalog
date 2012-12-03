@@ -1,3 +1,12 @@
+PATH
+  remote: /Users/adamw/Projects/Github/solr_ead
+  specs:
+    solr_ead (0.2.0)
+      om (~> 1.8.0)
+      rsolr
+      sanitize
+      solrizer (~> 2.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -204,11 +213,6 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
-    solr_ead (0.2.0)
-      om (~> 1.8.0)
-      rsolr
-      sanitize
-      solrizer (~> 2.0.0)
     solrizer (2.0.0)
       daemons
       mediashelf-loggable (~> 0.4.7)
@@ -271,7 +275,7 @@ DEPENDENCIES
   ruby-ntlm
   sanitize
   sass-rails
-  solr_ead
+  solr_ead!
   spork
   sqlite3
   uglifier

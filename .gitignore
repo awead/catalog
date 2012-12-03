@@ -34,3 +34,5 @@ blacklight.sublime-project
 blacklight.sublime-workspace
 
 spec/fixtures/marc/tmp/*
+
+public/fa/*
