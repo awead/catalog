@@ -26,6 +26,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 end
 
-def fixture(file) #:nodoc
-  File.new(File.join(File.dirname(__FILE__), 'fixtures', file))
+def ead_fixture(file) #:nodoc
+  File.new(File.join(File.dirname(__FILE__), 'fixtures', 'ead', file))
 end

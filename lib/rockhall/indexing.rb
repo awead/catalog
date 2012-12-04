@@ -48,7 +48,8 @@ module Rockhall::Indexing
   # to navigate the collection inventory.
   #
   # Uses the CollectionTree to reassemble each component into its correct hierarchy.
-  def self.toc_to_json(id)
+  def self.toc_to_json(file)
+    id = get_ead_from_file(file)
     inventory = Rockhall::CollectionInventory.new(id)
     if inventory.depth > 1
       toc_dst = File.join(Rails.root, "public", "fa", (id + "_toc.json"))
@@ -56,5 +57,20 @@ module Rockhall::Indexing
     end
   end
 
+  # Queries an xml file and returns the value for eadid
+  def self.get_ead_from_file(file)
+    id = Rockhall::EadDocument.from_xml(Nokogiri::XML(file)).eadid.first
+    raise "Found no eadid in #{File.basename(file)}" if id.nil?
+    if valid_ead?(id)
+      return id
+    else
+      raise "ID is not in the correct format: #{id}"
+    end
+  end
+
+  # Returns true if the given id is formatted correctly
+  def self.valid_ead?(id)
+    id.match(/[A-Z]{2,3}-[0-9]{4,4}/) ? true : false
+  end
 
 end
