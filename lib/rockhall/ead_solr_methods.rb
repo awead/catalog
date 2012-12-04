@@ -10,7 +10,7 @@ module Rockhall::EadSolrMethods
   end
 
   # Retrieves ead component documents given different requirements.  The results are always returned
-  # as a array of strings, each corresponding to the solr document id for an ead component document.
+  # as a array solr documents.
   #
   # Required: String:eadid
   # Where *eadid* is the ead id of the document such as ARC-0005.
@@ -21,9 +21,9 @@ module Rockhall::EadSolrMethods
   #
   # Examples:
   #     get_component_docs_from_solr("ARC-0004", {:level => "1"})
-  # Returns an array of all the first-level component ids for ARC-0004
+  # Returns an array of all the first-level component documents for ARC-0004
   #     get_component_docs_from_solr("ARC-0004", {:parent_id_s => "ref45"})
-  # Returns an array of all the component ids that have ref45 as their parent
+  # Returns an array of all the component documents that have ref45 as their parent
   def get_component_docs_from_solr(eadid, opts={}, results = Array.new, solr_params = Hash.new)
     solr_params[:fl]   = "id"
     if opts[:parent_id_s]
@@ -35,7 +35,7 @@ module Rockhall::EadSolrMethods
     solr_params[:qt]   = "standard"
     solr_params[:rows] = 10000
     Blacklight.solr.find(solr_params).docs.each do |doc|
-      results << doc["id"]
+      results << Blacklight.solr.find( {:q => 'id:"'+doc["id"]+'"', :qt => 'document', :rows => 1 } ).docs.first
     end
     return results
   end
