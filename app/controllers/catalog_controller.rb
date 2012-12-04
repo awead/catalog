@@ -243,7 +243,7 @@ class CatalogController < ApplicationController
   end
 
   def show
-    ead_id = get_field_from_solr("ead_id",params[:id])
+    ead_id = get_field_from_solr("eadid_s",params[:id])
     if ead_id.nil?
       super
     else

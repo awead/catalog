@@ -1,15 +1,11 @@
 <div id="ead_body">
 
-  <h2> General Information </h2>
-  <%= general_info %>
-
-  <%= ead_headings %>
-
-  <%= ead_subject_headings %>
+  <%= render_ead_html %>
 
   <h2 id="inventory">Collection Inventory</h2>
   <div id="c01-section">
-    <%= render :partial => "components/show", :locals => { :documents => @components[:first] } %>
+    <% #@components.inspect %>
+    <% #render :partial => "components/show", :locals => { :documents => @components[:first] } %>
   </div>
 
 </div>

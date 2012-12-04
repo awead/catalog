@@ -8,9 +8,9 @@
   </script>
 <% end -%>
 
-<% sidebar_items << capture do -%>
-  <%= render :partial => '/catalog/_show_partials/_archival_collection/toc' %>
-<% end -%>
+<% sidebar_items << capture do %>
+  <%= render_ead_sidebar %>
+<% end %>
 
 <%= render :partial => 'catalog/_show_partials/_archival_collection/body' %>
 

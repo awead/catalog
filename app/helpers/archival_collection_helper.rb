@@ -2,7 +2,7 @@ module ArchivalCollectionHelper
 
   include Rockhall::EadMethods
 
-  def general_info
+  def deprecated_general_info
     results = String.new
 
     results << "<dl class=\"defList\">"
@@ -40,7 +40,7 @@ module ArchivalCollectionHelper
   end
 
 
-  def ead_headings
+  def deprecated_ead_headings
     results = String.new
     Rails.configuration.rockhall_config[:ead_headings].each do | field |
       label = get_ead_label(field.to_sym)
@@ -60,7 +60,7 @@ module ArchivalCollectionHelper
   end
 
 
-  def ead_subject_headings
+  def deprecated_ead_subject_headings
     results = String.new
     results << "<h2 id=\"subject_headings\">Subject Headings</h2>"
     results << "<dl class=\"defList\">"
@@ -103,7 +103,7 @@ module ArchivalCollectionHelper
   end
 
 
-  def bio_display
+  def deprecated_bio_display
     results = String.new
     label = get_ead_label("bio_display")
     results << "<h2 id=\"bio_display\">#{label}</h2>"
