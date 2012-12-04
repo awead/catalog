@@ -125,20 +125,6 @@ module ArchivalCollectionHelper
   end
 
 
-  def comma_list(args)
-    fields = Array.new
-    args.each do |text|
-      unless text.nil?
-        fields << text
-      end
-    end
-    return fields.join(", ").html_safe
-  end
-
-  def display_field(field)
-    field.join("<br/>").html_safe
-  end
-
   def display_odd_fields(fields,labels)
     results = String.new
     if labels.length == fields.length

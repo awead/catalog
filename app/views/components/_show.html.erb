@@ -1,37 +1,35 @@
 <%= hide_component_button %>
 
-<% documents.each do |document| %>
-
-  <div id="<%= document[:ref] %>" <%= highlight?(document[:ref]) %> class="component_part clearfix c0<%= document[:component_level] %>">
+<div id="<%= render_list_id %>">
+  <% documents.each do |document| %>
+    <% @component = document %>
+    <div id="<%= @component["id"] %>" <%= highlight?(@component["id"]) %> class="component_part clearfix c0<%= @component["component_level_i"] %>">
 
     <!-- unitid_display was removed from the comma_list because it's not in solr anymore -->
-    <h5 id="<%= document[:id] %>">
+    <h5 id="<%= @component["id"] %>">
       <span>
-        <%= comma_list( [document["title_display"], document["unitdate_display"]] ) %>
+        <%= comma_list( [@component["title_display"], @component["unitdate_display"]] ) %>
       </span>
     </h5>
 
-    <!-- removed summary_display field because it's not in solr anymore -->
-
     <dl>
-      <%= render_odd_field(document) %>
-      <%= render_component_field(document, "contents_display") %>
-      <%= render_component_field(document, "separatedmaterial_display") %>
-      <%= render_component_field(document, "access_display") %>
-      <%= render_component_field(document, "originalsloc_display") %>
-      <%= render_component_field(document, "physdesc_display") %>
-      <%= render_component_field(document, "dimensions_display") %>
+      <%# render_component_field(@component, "note") %>
+      <%= render_component_field("scopecontent") %>
+      <%# render_component_field(@component, "separatedmaterial_display") %>
+      <%# render_component_field(@component, "access_display") %>
+      <%# render_component_field(@component, "originalsloc_display") %>
+      <%# render_component_field(@component, "physdesc_display") %>
+      <%# render_component_field(@component, "dimensions_display") %>
 
       <!-- location_display is not in Blacklight config -->
-      <%= render_component_field(document, "location_display", { :label => "Location" }) %>
+      <%# render_component_field(@component, "location_display", { :label => "Location" }) %>
 
-      <%= render_component_field(document, "langmaterial_display") %>
-      <%= render_component_field(document, "acqinfo_display") %>
+      <%# render_component_field(@component, "langmaterial_display") %>
+      <%# render_component_field(@component, "acqinfo_display") %>
 
     </dl>
 
-    <%= continue_components(document) %>
-
-  </div>
-
-<% end %>
+    <%= continue_components %>
+    </div>
+  <% end %>
+</div>

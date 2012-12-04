@@ -9,6 +9,10 @@ module EadHelper
     end
   end
 
+  def render_list_id
+    params[:parent_ref].nil? ? (params[:id]+"-list") : (params[:ead_id]+params[:parent_ref]+"-list")
+  end
+
   def render_ead_sidebar results = String.new
     results << "<div id=\"ead_sidebar\">"
     results << toggle_view_link if has_json?
@@ -62,6 +66,18 @@ module EadHelper
    File.exists?(File.join(Rails.root, "public", "fa", (@document[:eadid_s] + "_toc.json"))) unless @document[:eadid_s].nil?
   end
 
+  def comma_list(args)
+    fields = Array.new
+    args.each do |text|
+      unless text.nil?
+        fields << text
+      end
+    end
+    return fields.join(", ").html_safe
+  end
 
+  def display_field(field)
+    field.join("<br/>").html_safe
+  end
 
 end

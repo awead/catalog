@@ -33,6 +33,8 @@ $(document).ready(function() {
 
 $(document).ready(returnStatus);
 $(document).ready(returnHoldings);
+$(document).ready(nextComponent);
+$(document).ready(closeComponent);
 
 
 function returnStatus() {
@@ -73,6 +75,34 @@ function returnHoldings() {
   });
 
 }
+
+
+function nextComponent() {
+
+  $('.next_component_button').click(function(action) {
+    var button  = $(this);
+    var waiting = $(this).attr("id")+"-waiting";
+    $(this).toggle();
+    $("#"+waiting).toggleClass("hidden");
+    action.preventDefault();
+    $.get(this, function(data) {
+      $(button).replaceWith(data);
+      $("#"+waiting).toggleClass("hidden");
+    });
+  });
+
+}
+
+function closeComponent() {
+
+  $('.close_component_button').click(function(action) {
+
+    alert("hi");
+  });
+
+}
+
+
 
 function setAllBookmarksCheckbox() {
   // Are all the bookmarks selected?

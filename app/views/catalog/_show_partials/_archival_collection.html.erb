@@ -1,17 +1,5 @@
-<% extra_head_content << capture do -%>
-
-  <script>
-    function showWaiting(ref) {
-      $("#" + ref + "-switch").remove();
-      $("#" + ref).append("<div id=\"" + ref + "-switch\">" + "<%= escape_javascript image_tag("icons/waiting.gif", :alt => "Loading...") %>" + "</div>");
-    }
-  </script>
-<% end -%>
-
 <% sidebar_items << capture do %>
   <%= render_ead_sidebar %>
 <% end %>
 
 <%= render :partial => 'catalog/_show_partials/_archival_collection/body' %>
-
-

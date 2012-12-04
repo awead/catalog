@@ -3,10 +3,6 @@
   <%= render_ead_html %>
 
   <h2 id="inventory">Collection Inventory</h2>
-  <div id="c01-section">
-    <% #@components.inspect %>
-    <% #render :partial => "components/show", :locals => { :documents => @components[:first] } %>
-  </div>
+  <%= render :partial => "components/show", :locals => { :documents => @components[:first] } %>
 
 </div>
-

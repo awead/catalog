@@ -11,8 +11,4 @@ class ComponentsController < ApplicationController
     @documents = get_component_docs_from_solr(params[:ead_id], { :level => params[:component_level], :parent_ref => params[:parent_ref] })
   end
 
-  def hide
-  end
-
-
 end
