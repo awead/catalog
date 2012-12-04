@@ -10,7 +10,7 @@ module Rockhall::EadSolrMethods
   end
 
   # Retrieves ead component documents given different requirements.  The results are always returned
-  # as a array solr documents.
+  # as a array of solr documents.
   #
   # Required: String:eadid
   # Where *eadid* is the ead id of the document such as ARC-0005.
