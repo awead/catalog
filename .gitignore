@@ -22,6 +22,7 @@ public/*.xml.gz
 
 tmp/**/*
 tmp/performance 
+tmp/restart.txt
 
 lib/solrmarc.log*
 
