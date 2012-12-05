@@ -15,7 +15,7 @@ module Rockhall::Indexing
     xsl_file = File.join(Rails.root, "xsl", "ead_to_html.xsl")
     xsl = Nokogiri::XSLT(File.read(xsl_file))
     html = Nokogiri(File.read(file))
-    id = get_ead_from_file(file)
+    id = get_eadid_from_file(file)
     dst = File.join(Rails.root, "public", "fa", (id+".html"))
     File.open(dst, "w") { |f| f << cleanup_xml(xsl.apply_to(html).to_s) }
   end
@@ -24,7 +24,7 @@ module Rockhall::Indexing
     xsl_file = File.join(Rails.root, "xsl", "ead_to_html_full.xsl")
     xsl = Nokogiri::XSLT(File.read(xsl_file))
     html = Nokogiri(File.read(file))
-    id = get_ead_from_file(file)
+    id = get_eadid_from_file(file)
     dst = File.join(Rails.root, "public", "fa", (id+"_full.html"))
     File.open(dst, "w") { |f| f << cleanup_xml(xsl.apply_to(html).to_s) }
   end
@@ -51,7 +51,7 @@ module Rockhall::Indexing
   #
   # Uses the CollectionTree to reassemble each component into its correct hierarchy.
   def self.toc_to_json(file)
-    id = get_ead_from_file(file)
+    id = get_eadid_from_file(file)
     inventory = Rockhall::CollectionInventory.new(id)
     if inventory.depth > 1
       toc_dst = File.join(Rails.root, "public", "fa", (id + "_toc.json"))
@@ -60,7 +60,7 @@ module Rockhall::Indexing
   end
 
   # Queries an xml file and returns the value for eadid
-  def self.get_ead_from_file(file)
+  def self.get_eadid_from_file(file)
     file = File.new(file) if file.is_a?(String)
     id = Rockhall::EadDocument.from_xml(Nokogiri::XML(file)).eadid.first
     raise "Found no eadid in #{File.basename(file)}" if id.nil?
