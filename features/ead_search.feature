@@ -19,10 +19,15 @@ Feature: EAD display
     Then I should see "Guide to the Curtis Mayfield Collection (ARC.0067)"
     And I should see "Photographs"
 
-  @future-work
   Scenario: Searching by accession number (BL-49)
     Given I am on the home page
     And I fill in "q" with "A1994.34.15"
+    When I press "search"
+    And I should see "Photographs"
+
+  Scenario: Searching accession number ranges (BL-302)
+    Given I am on the home page
+    And I fill in "q" with "A2004.54.44"
     When I press "search"
     And I should see "Photographs"
 

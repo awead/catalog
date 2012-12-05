@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-10-02T11:41-0400</date>
+                <date>2012-12-04T18:40-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -68,7 +68,8 @@
         </processinfo>
         <separatedmaterial id="ref1903">
             <head>Separated Materials</head>
-            <p>Books, periodicals, and commercial audiovisual materials have been transferred to the library collection. Please search for the "Jeff Gold Collection" in the library catalog for a list of donated items. If you are unable to find what you are looking for, consult the Library and Archives staff to ensure these materials are available.</p>
+            <p>Books, periodicals, commercial audiovisual materials, and vinyl records have been transferred to the library collection. Please search for the "Jeff Gold Collection" in the library catalog for a list of donated items. If you are unable to find what you are looking for, consult the Library and Archives staff to ensure these materials are available.</p>
+            <p>Some items are on exhibit. These items are noted at the file level. Consult the Library and Archives staff in advance of your visit for additional information.</p>
         </separatedmaterial>
         <accessrestrict id="ref1861">
             <head>Access Restrictions</head>
@@ -142,6 +143,10 @@
                     <head>Scope and Contents</head>
                     <p>Series I: Artist Files contains a wide array of documents pertaining to popular musicians and rock groups from the 1950s through 2004. The documents include contracts, photographs, press releases, programs, and sheet music. Many of the files contain only one item, which in most cases is described as a general note. Files that are located in Museum storage are currently stored off-site. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                 </scopecontent>
+                <separatedmaterial id="ref2480">
+                    <head>Separated Materials</head>
+                    <p>Some items are on exhibit. These items are noted at the file level. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                </separatedmaterial>
                 <c02 id="ref2277" level="file">
                     <did>
                         <unittitle>Adams, Ryan</unittitle>
@@ -412,6 +417,10 @@
                                 <head>Museum Accession Number</head>
                                 <p>A2003.27.1-A2003.27.3</p>
                             </odd>
+                            <odd audience="internal" id="ref2420">
+                                <head>Exhibit note</head>
+                                <p>These photographs are part of the traveling exhibit "Ferry Cross the Mersey," and are crated and stored at Berea. The folder listed does not exist.</p>
+                            </odd>
                             <separatedmaterial id="ref2419">
                                 <head>Separated Materials</head>
                                 <p>Items in Museum storage. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
@@ -438,6 +447,10 @@
                         <head>Museum Accession Numbers</head>
                         <p>A2002.82.21-A2002.82.22, A2002.82.29</p>
                     </odd>
+                    <separatedmaterial id="ref2481">
+                        <head>Separated Materials</head>
+                        <p>Walthamstow concert program and Midwest Ticket Co. receipt on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
                 </c02>
                 <c02 id="ref279" level="file">
                     <did>
@@ -627,6 +640,7 @@
                             <container id="cid363014" type="Box" label="Text">AF1</container>
                             <container parent="cid363014" type="Folder">22</container>
                             <unitdate>1965-1967</unitdate>
+                            <physloc audience="internal" id="ref2065" label="Location note">James Brown exhibit (Jungle Gym)</physloc>
                         </did>
                         <separatedmaterial id="ref2066">
                             <head>Separated Materials</head>
@@ -1194,6 +1208,7 @@
                         <container id="cid575001" type="Box" label="Text">AF1</container>
                         <container parent="cid575001" type="Folder">60</container>
                         <unitdate>1983, 1987</unitdate>
+                        <physloc audience="internal" id="ref2246" label="Location note">Grateful Dead exhibit</physloc>
                     </did>
                     <odd id="ref2121">
                         <head>General note</head>
@@ -1271,6 +1286,7 @@
                         <container id="cid453005" type="Box" label="Text">AF1</container>
                         <container parent="cid453005" type="Folder">64</container>
                         <unitdate>1975, 1991, undated</unitdate>
+                        <physloc audience="internal" id="ref2248" label="Location note">Grateful Dead exhibit</physloc>
                     </did>
                     <odd id="ref2125">
                         <head>Museum Accession Numbers</head>
@@ -1415,6 +1431,10 @@
                             <container parent="cid363036" type="Object">3</container>
                             <unitdate>1970</unitdate>
                         </did>
+                        <odd audience="internal" id="ref1318">
+                            <head>Museum Accession Number</head>
+                            <p>A2005.105.17</p>
+                        </odd>
                     </c03>
                     <c03 id="ref2401" level="file">
                         <did>
@@ -1493,6 +1513,7 @@
                         <container id="cid571002" type="Box" label="Text">AF2</container>
                         <container parent="cid571002" type="Folder">10</container>
                         <unitdate>undated</unitdate>
+                        <physloc audience="internal" id="ref2133" label="Location note">British Invasion exhibit.</physloc>
                     </did>
                     <odd id="ref2129">
                         <head>General note</head>
@@ -1642,6 +1663,10 @@
                             <container parent="cid363038" type="Folder">17</container>
                             <unitdate>undated</unitdate>
                         </did>
+                        <odd audience="internal" id="ref720">
+                            <head>Museum Accession Numbers</head>
+                            <p>A2004.54.43-A2004.54.46</p>
+                        </odd>
                     </c03>
                 </c02>
                 <c02 id="ref2294" level="file">
@@ -1726,11 +1751,6 @@
                         <p>Columbia Records press kit, 
                             <title render="italic">Newsweek</title> magazine, and newspaper clipping on Joplin's death.</p>
                     </odd>
-                    <separatedmaterial id="ref2142">
-                        <head>Separated Materials note</head>
-                        <p>
-                            <title render="italic">Newsweek</title> magazine on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
-                    </separatedmaterial>
                 </c02>
                 <c02 id="ref674" level="file">
                     <did>
@@ -1908,6 +1928,10 @@
                             <head>Separated Materials</head>
                             <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
                         </separatedmaterial>
+                        <odd audience="internal" id="ref2068">
+                            <head>Location</head>
+                            <p>Beatles exhibit case.</p>
+                        </odd>
                     </c03>
                 </c02>
                 <c02 id="ref256" level="file">
@@ -1968,6 +1992,10 @@
                     <odd id="ref965">
                         <head>General note</head>
                         <p>Contains one photograph.</p>
+                    </odd>
+                    <odd audience="internal" id="ref2251">
+                        <head>Exhibit History</head>
+                        <p>January-March 2012, Library &amp; Archives, Raw Power: Researching the Evolution of Punk Rock</p>
                     </odd>
                 </c02>
                 <c02 id="ref374" level="file">
@@ -2207,6 +2235,10 @@
                     <odd id="ref974">
                         <head>General note</head>
                         <p>press kit</p>
+                    </odd>
+                    <odd audience="internal" id="ref2252">
+                        <head>Exhibit History</head>
+                        <p>January-March 2012, Library &amp; Archives, Raw Power: Researching the Evolution of Punk Rock</p>
                     </odd>
                 </c02>
                 <c02 id="ref1360" level="file">
@@ -2757,6 +2789,10 @@
                             <head>Separated Materials</head>
                             <p>Two color photo prints in Museum storage. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                         </separatedmaterial>
+                        <odd audience="internal" id="ref2423">
+                            <head>Exhibit note</head>
+                            <p>Two color prints are part of the traveling exhibit "Ferry Cross the Mersey," and are crated and stored at Berea. OS3 Folder 9 does not exist.</p>
+                        </odd>
                     </c03>
                     <c03 id="ref806" level="file">
                         <did>
@@ -2794,6 +2830,7 @@
                                 <container id="cid983004" type="Box" label="Graphic materials">OS1</container>
                                 <container parent="cid983004" type="Folder">4</container>
                                 <unitdate>1965</unitdate>
+                                <physdesc audience="internal" id="ref2288" label="General Physical Description note">First page is loose</physdesc>
                             </did>
                         </c04>
                         <c04 id="ref807" level="item">
@@ -2803,6 +2840,7 @@
                                 <container parent="cid765002" type="Folder">68</container>
                                 <container parent="cid765002" type="Object">13</container>
                                 <unitdate>1972</unitdate>
+                                <physloc audience="internal" id="ref2232" label="Location note">Rolling Stones case</physloc>
                             </did>
                             <odd id="ref808">
                                 <head>Museum Accession Number</head>
@@ -3200,6 +3238,7 @@
                             <container id="cid765001" type="Box" label="Text">AF6</container>
                             <container parent="cid765001" type="Folder">16</container>
                             <unitdate>circa 1976</unitdate>
+                            <physloc audience="internal" id="ref2234" label="Location note">Punk scene case</physloc>
                         </did>
                         <odd id="ref345">
                             <head>Museum Accession Number</head>
@@ -3737,6 +3776,7 @@
                         <container id="cid353043" type="Box" label="Text">AF3</container>
                         <container parent="cid353043" type="Folder">46</container>
                         <unitdate>1965, undated</unitdate>
+                        <physloc audience="internal" id="ref2233" label="Location note">British Invasion scene case</physloc>
                     </did>
                     <odd id="ref348">
                         <head>Museum Accession Number</head>
@@ -4137,6 +4177,7 @@
                             <container id="cid378018" type="Box" label="Graphic materials">SF1</container>
                             <container parent="cid378018" type="Folder">22</container>
                             <unitdate>1977-1989, undated</unitdate>
+                            <physloc audience="internal" id="ref2203" label="Location note">Punk case.</physloc>
                         </did>
                         <separatedmaterial id="ref341">
                             <head>Separated Materials</head>
@@ -4609,6 +4650,10 @@
                         <odd id="ref1264">
                             <head>Location</head>
                             <p>Avalon Ballroom, San Francisco</p>
+                        </odd>
+                        <odd audience="internal" id="ref2253">
+                            <head>Exhibit History</head>
+                            <p>January-March 2012, Library &amp; Archives, Raw Power: Researching the Evolution of Punk Rock</p>
                         </odd>
                     </c03>
                     <c03 id="ref2411" level="item">
@@ -5273,6 +5318,16 @@
                     <odd id="ref2192">
                         <head>General note</head>
                         <p>Includes Chuck Berry and Steve Miller Band at Fillmore West (San Francisco); Jackson Browne at "A Brotherly Benefit at the Magic Mushroom;" Moby Grape, Jeff Beck Group, and Mint Tattoo at Fillmore Carousel (San Francisco); and The Moody Blues, Frumious Bandersnatch, and Chicago Transit Authority at Fillmore West (San Francisco).</p>
+                    </odd>
+                </c02>
+                <c02 id="ref2482" level="file">
+                    <did>
+                        <unittitle>Ostin, Mo</unittitle>
+                        <unitdate>1956 May 7</unitdate>
+                    </did>
+                    <odd id="ref2483">
+                        <head>General note</head>
+                        <p>one royalty check made out to Meade Lux Lewis</p>
                     </odd>
                 </c02>
                 <c02 id="ref156" level="file">
@@ -6701,7 +6756,7 @@
                     <c03 id="ref2310" level="file">
                         <did>
                             <unittitle>Band (1/4-inch reel)</unittitle>
-                            <container id="cid1014007" type="Box" label="Audio">AV8</container>
+                            <container id="cid1014007" type="Box" label="Audio">RG2</container>
                             <container parent="cid1014007" type="Reel">1</container>
                             <unitdate>undated</unitdate>
                         </did>
@@ -6713,7 +6768,7 @@
                     <c03 id="ref2308" level="file">
                         <did>
                             <unittitle>Blue Oyster Cult side project (1/4-inch reel)</unittitle>
-                            <container id="cid1014006" type="Box" label="Audio">AV8</container>
+                            <container id="cid1014006" type="Box" label="Audio">RG2</container>
                             <container parent="cid1014006" type="Reel">2</container>
                             <unitdate>1975</unitdate>
                         </did>
@@ -6725,7 +6780,7 @@
                     <c03 id="ref2306" level="file">
                         <did>
                             <unittitle>Charlatans, and Dino Valente (1/4-inch reel)</unittitle>
-                            <container id="cid1014004" type="Box" label="Audio">AV8</container>
+                            <container id="cid1014004" type="Box" label="Audio">RG2</container>
                             <container parent="cid1014004" type="Reel">3</container>
                             <unitdate>1970</unitdate>
                         </did>
@@ -6733,7 +6788,7 @@
                     <c03 id="ref2301" level="file">
                         <did>
                             <unittitle>Country Joe &amp; the Fish (1/4-inch reel)</unittitle>
-                            <container id="cid1014001" type="Box" label="Audio">AV8</container>
+                            <container id="cid1014001" type="Box" label="Audio">RG2</container>
                             <container parent="cid1014001" type="Reel">4</container>
                             <unitdate>undated</unitdate>
                         </did>
@@ -6741,7 +6796,7 @@
                     <c03 id="ref2302" level="file">
                         <did>
                             <unittitle>Flamin' Groovies (1/4-inch reel)</unittitle>
-                            <container id="cid1014002" type="Box" label="Audio">AV8</container>
+                            <container id="cid1014002" type="Box" label="Audio">RG2</container>
                             <container parent="cid1014002" type="Reel">5</container>
                             <unitdate>undated</unitdate>
                         </did>
@@ -6753,7 +6808,7 @@
                     <c03 id="ref2304" level="file">
                         <did>
                             <unittitle>Lennon Saves (1/4-inch reel)</unittitle>
-                            <container id="cid1014003" type="Box" label="Audio">AV8</container>
+                            <container id="cid1014003" type="Box" label="Audio">RG2</container>
                             <container parent="cid1014003" type="Reel">6</container>
                             <unitdate>1966</unitdate>
                         </did>
@@ -6765,7 +6820,7 @@
                     <c03 id="ref2307" level="file">
                         <did>
                             <unittitle>Sons of Champlin (1/4-inch reels)</unittitle>
-                            <container id="cid1014005" type="Box" label="Audio">AV8</container>
+                            <container id="cid1014005" type="Box" label="Audio">RG2</container>
                             <container parent="cid1014005" type="Reel">7-8</container>
                             <unitdate>1968</unitdate>
                         </did>
@@ -6890,18 +6945,6 @@
                         <did>
                             <unittitle>Beatles</unittitle>
                         </did>
-                        <c04 id="ref314" level="item">
-                            <did>
-                                <unittitle>Official Beatles Fan Club souvenir</unittitle>
-                                <container id="cid300013" type="Drawer-Folder" label="Graphic materials">FF.3.2-2</container>
-                                <container parent="cid300013" type="Object">6</container>
-                                <unitdate>1968</unitdate>
-                            </did>
-                            <odd id="ref315">
-                                <head>Museum Accession Number</head>
-                                <p>A2002.82.25</p>
-                            </odd>
-                        </c04>
                         <c04 id="ref543" level="item">
                             <did>
                                 <unittitle>Capitol Records promo</unittitle>
@@ -6925,6 +6968,18 @@
                             <odd id="ref2376">
                                 <head>Museum Accession Number</head>
                                 <p>A2002.82.246</p>
+                            </odd>
+                        </c04>
+                        <c04 id="ref314" level="item">
+                            <did>
+                                <unittitle>Official Beatles Fan Club souvenir</unittitle>
+                                <container id="cid300013" type="Drawer-Folder" label="Graphic materials">FF.3.2-2</container>
+                                <container parent="cid300013" type="Object">6</container>
+                                <unitdate>1968</unitdate>
+                            </did>
+                            <odd id="ref315">
+                                <head>Museum Accession Number</head>
+                                <p>A2002.82.25</p>
                             </odd>
                         </c04>
                         <c04 id="ref1815" level="item">
@@ -7244,27 +7299,6 @@
                         <did>
                             <unittitle>Dylan, Bob</unittitle>
                         </did>
-                        <c04 id="ref1416" level="item">
-                            <did>
-                                <unittitle>Masonic Temple, San Francisco</unittitle>
-                                <container id="cid365015" type="Box" label="Graphic materials">OS3</container>
-                                <container parent="cid365015" type="Folder">7</container>
-                                <container parent="cid365015" type="Object">11</container>
-                                <unitdate>1964 November 27</unitdate>
-                            </did>
-                            <odd id="ref1417">
-                                <head>Museum Accession Number</head>
-                                <p>A2007.43.1</p>
-                            </odd>
-                        </c04>
-                        <c04 id="ref1448" level="item">
-                            <did>
-                                <unittitle>Le Zenith, Paris, France</unittitle>
-                                <container id="cid372034" type="Drawer-Folder" label="Graphic materials">FF.3.3-1</container>
-                                <container parent="cid372034" type="Object">1</container>
-                                <unitdate>1995 March 24</unitdate>
-                            </did>
-                        </c04>
                         <c04 id="ref2458" level="item">
                             <did>
                                 <unittitle>Hamburg, Germany</unittitle>
@@ -7280,6 +7314,27 @@
                                 <container parent="cid1056021" type="Object">12</container>
                                 <unitdate>1994 July 10</unitdate>
                             </did>
+                        </c04>
+                        <c04 id="ref1448" level="item">
+                            <did>
+                                <unittitle>Le Zenith, Paris, France</unittitle>
+                                <container id="cid372034" type="Drawer-Folder" label="Graphic materials">FF.3.3-1</container>
+                                <container parent="cid372034" type="Object">1</container>
+                                <unitdate>1995 March 24</unitdate>
+                            </did>
+                        </c04>
+                        <c04 id="ref1416" level="item">
+                            <did>
+                                <unittitle>Masonic Temple, San Francisco</unittitle>
+                                <container id="cid365015" type="Box" label="Graphic materials">OS3</container>
+                                <container parent="cid365015" type="Folder">7</container>
+                                <container parent="cid365015" type="Object">11</container>
+                                <unitdate>1964 November 27</unitdate>
+                            </did>
+                            <odd id="ref1417">
+                                <head>Museum Accession Number</head>
+                                <p>A2007.43.1</p>
+                            </odd>
                         </c04>
                     </c03>
                     <c03 id="ref577" level="file">
@@ -7382,21 +7437,6 @@
                         <did>
                             <unittitle>Harrison, George</unittitle>
                         </did>
-                        <c04 id="ref505" level="item">
-                            <did>
-                                <unittitle>
-                                    <title render="italic">Gone Troppo</title> promos (3)</unittitle>
-                                <container id="cid406013" type="Drawer-Folder" label="Graphic materials">FF.3.3-1</container>
-                                <container parent="cid406013" type="Object">2-3</container>
-                                <container id="cid365072" type="Drawer-Folder" label="Graphic materials">FF.3.5-6</container>
-                                <container parent="cid365072" type="Object">10</container>
-                                <unitdate>1982</unitdate>
-                            </did>
-                            <odd id="ref506">
-                                <head>Museum Accession Numbers</head>
-                                <p>A2001.93.14, A2002.82.243-A2002.82.244</p>
-                            </odd>
-                        </c04>
                         <c04 id="ref1486" level="item">
                             <did>
                                 <unittitle>
@@ -7411,6 +7451,21 @@
                             <odd id="ref1487">
                                 <head>Museum Accession Numbers</head>
                                 <p>A2001.93.15, A2002.82.215</p>
+                            </odd>
+                        </c04>
+                        <c04 id="ref505" level="item">
+                            <did>
+                                <unittitle>
+                                    <title render="italic">Gone Troppo</title> promos (3)</unittitle>
+                                <container id="cid406013" type="Drawer-Folder" label="Graphic materials">FF.3.3-1</container>
+                                <container parent="cid406013" type="Object">2-3</container>
+                                <container id="cid365072" type="Drawer-Folder" label="Graphic materials">FF.3.5-6</container>
+                                <container parent="cid365072" type="Object">10</container>
+                                <unitdate>1982</unitdate>
+                            </did>
+                            <odd id="ref506">
+                                <head>Museum Accession Numbers</head>
+                                <p>A2001.93.14, A2002.82.243-A2002.82.244</p>
                             </odd>
                         </c04>
                     </c03>
@@ -7436,7 +7491,7 @@
                         </c04>
                         <c04 id="ref582" level="item">
                             <did>
-                                <unittitle>General portraits</unittitle>
+                                <unittitle>Portraits</unittitle>
                                 <container id="cid365074" type="Drawer-Folder" label="Graphic materials">FF.3.7-3</container>
                                 <container parent="cid365074" type="Object">6-7</container>
                                 <unitdate>1991, undated</unitdate>
@@ -7533,6 +7588,10 @@
                             <container parent="cid1046001" type="Object">1</container>
                             <unitdate>undated</unitdate>
                         </did>
+                        <phystech audience="internal" id="ref2351">
+                            <head>Physical Characteristics and Technical Requirements note</head>
+                            <p>Torn a third of the length</p>
+                        </phystech>
                         <accessrestrict id="ref2349">
                             <head>Access Restrictions</head>
                             <p>The condition of this item is fragile, and thus, access is restricted. Consult the Library &amp; Archives staff in advance of your visit to ensure access to this item is available.</p>
@@ -7844,6 +7903,18 @@
                         <did>
                             <unittitle>Moscoso, Victor (designer)</unittitle>
                         </did>
+                        <c04 id="ref1155" level="item">
+                            <did>
+                                <unittitle>Haight-Ashbury "Clean In"</unittitle>
+                                <container id="cid366010" type="Drawer-Folder" label="Graphic materials">FF.3.2-7</container>
+                                <container parent="cid366010" type="Object">3</container>
+                                <unitdate>1967</unitdate>
+                            </did>
+                            <odd id="ref1156">
+                                <head>Museum Accession Number</head>
+                                <p>A2004.54.203</p>
+                            </odd>
+                        </c04>
                         <c04 id="ref531" level="item">
                             <did>
                                 <unittitle>The Plastic Explosion and the Plague</unittitle>
@@ -7863,18 +7934,6 @@
                                 <head>Separated Materials</head>
                                 <p>Item in Museum storage. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                             </separatedmaterial>
-                        </c04>
-                        <c04 id="ref1155" level="item">
-                            <did>
-                                <unittitle>Haight-Ashbury "Clean In"</unittitle>
-                                <container id="cid366010" type="Drawer-Folder" label="Graphic materials">FF.3.2-7</container>
-                                <container parent="cid366010" type="Object">3</container>
-                                <unitdate>1967</unitdate>
-                            </did>
-                            <odd id="ref1156">
-                                <head>Museum Accession Number</head>
-                                <p>A2004.54.203</p>
-                            </odd>
                         </c04>
                     </c03>
                     <c03 id="ref511" level="file">
@@ -7956,14 +8015,6 @@
                             <container parent="cid366003" type="Object">15</container>
                             <unitdate>1981-1982</unitdate>
                         </did>
-                        <c04 id="ref2444" level="item">
-                            <did>
-                                <unittitle>Outlandos d'Amour</unittitle>
-                                <container id="cid1056010" type="Drawer-Folder" label="Graphic materials">FF.3.5-5</container>
-                                <container parent="cid1056010" type="Object">6</container>
-                                <unitdate>undated</unitdate>
-                            </did>
-                        </c04>
                         <c04 id="ref2445" level="item">
                             <did>
                                 <unittitle>Ghosts in the Machine</unittitle>
@@ -7979,6 +8030,14 @@
                                 <p>A2001.93.16, A2001.93.18</p>
                             </odd>
                         </c04>
+                        <c04 id="ref2444" level="item">
+                            <did>
+                                <unittitle>Outlandos d'Amour</unittitle>
+                                <container id="cid1056010" type="Drawer-Folder" label="Graphic materials">FF.3.5-5</container>
+                                <container parent="cid1056010" type="Object">6</container>
+                                <unitdate>undated</unitdate>
+                            </did>
+                        </c04>
                     </c03>
                     <c03 id="ref1305" level="file">
                         <did>
@@ -7986,7 +8045,7 @@
                         </did>
                         <c04 id="ref1306" level="item">
                             <did>
-                                <unittitle>Promo for show at 40 Watt Club</unittitle>
+                                <unittitle>40 Watt Club show promo</unittitle>
                                 <container id="cid366012" type="Box" label="Graphic materials">OS5</container>
                                 <container parent="cid366012" type="Folder">2</container>
                                 <container parent="cid366012" type="Object">3</container>
@@ -8014,23 +8073,6 @@
                                 <p>1988 reprint</p>
                             </odd>
                         </c04>
-                        <c04 id="ref1311" level="item">
-                            <did>
-                                <unittitle>The Stooges with the Flaming Groovies at The New Old Filmore</unittitle>
-                                <container id="cid366014" type="Box" label="Graphic materials">OS5</container>
-                                <container parent="cid366014" type="Folder">2</container>
-                                <container parent="cid366014" type="Object">4</container>
-                                <unitdate>1970 May 15-16</unitdate>
-                            </did>
-                            <odd id="ref1312">
-                                <head>Museum Accession Number</head>
-                                <p>A2005.105.16</p>
-                            </odd>
-                            <odd id="ref1313">
-                                <head>General note</head>
-                                <p>1990 reprint</p>
-                            </odd>
-                        </c04>
                         <c04 id="ref1438" level="item">
                             <did>
                                 <unittitle>"Lust for Life" promo</unittitle>
@@ -8047,6 +8089,23 @@
                                 <container parent="cid372042" type="Object">10</container>
                                 <unitdate>undated</unitdate>
                             </did>
+                        </c04>
+                        <c04 id="ref1311" level="item">
+                            <did>
+                                <unittitle>The Stooges with the Flaming Groovies at The New Old Filmore</unittitle>
+                                <container id="cid366014" type="Box" label="Graphic materials">OS5</container>
+                                <container parent="cid366014" type="Folder">2</container>
+                                <container parent="cid366014" type="Object">4</container>
+                                <unitdate>1970 May 15-16</unitdate>
+                            </did>
+                            <odd id="ref1312">
+                                <head>Museum Accession Number</head>
+                                <p>A2005.105.16</p>
+                            </odd>
+                            <odd id="ref1313">
+                                <head>General note</head>
+                                <p>1990 reprint</p>
+                            </odd>
                         </c04>
                     </c03>
                     <c03 id="ref251" level="file">
@@ -8085,6 +8144,7 @@
                                 <container id="cid375023" type="Drawer-Folder" label="Graphic materials">FF.3.2-3</container>
                                 <container parent="cid375023" type="Object">3</container>
                                 <unitdate>undated</unitdate>
+                                <physloc audience="internal" id="ref2231" label="Location note">Elvis exhibit</physloc>
                             </did>
                             <odd id="ref331">
                                 <head>Museum Accession Number</head>
@@ -8245,19 +8305,6 @@
                         <did>
                             <unittitle>R.E.M.</unittitle>
                         </did>
-                        <c04 id="ref586" level="item">
-                            <did>
-                                <unittitle>
-                                    <title render="italic">Life's Rich Pagent</title> promo</unittitle>
-                                <container id="cid366008" type="Drawer-Folder" label="Graphic materials">FF.3.5-6</container>
-                                <container parent="cid366008" type="Object">2-3</container>
-                                <unitdate>1986</unitdate>
-                            </did>
-                            <odd id="ref587">
-                                <head>Museum Accession Number</head>
-                                <p>A2001.93.57, A2001.93.63</p>
-                            </odd>
-                        </c04>
                         <c04 id="ref595" level="item">
                             <did>
                                 <unittitle>
@@ -8279,6 +8326,19 @@
                                 <container parent="cid435001" type="Object">3</container>
                                 <unitdate>2003 October 29</unitdate>
                             </did>
+                        </c04>
+                        <c04 id="ref586" level="item">
+                            <did>
+                                <unittitle>
+                                    <title render="italic">Life's Rich Pagent</title> promo</unittitle>
+                                <container id="cid366008" type="Drawer-Folder" label="Graphic materials">FF.3.5-6</container>
+                                <container parent="cid366008" type="Object">2-3</container>
+                                <unitdate>1986</unitdate>
+                            </did>
+                            <odd id="ref587">
+                                <head>Museum Accession Number</head>
+                                <p>A2001.93.57, A2001.93.63</p>
+                            </odd>
                         </c04>
                     </c03>
                     <c03 id="ref1303" level="file">
@@ -8572,7 +8632,7 @@
                         </did>
                         <c04 id="ref1721" level="file">
                             <did>
-                                <unittitle>General promo</unittitle>
+                                <unittitle>Promo</unittitle>
                                 <container id="cid336002" type="Drawer-Folder" label="Graphic materials">FF.3.3-5</container>
                                 <container parent="cid336002" type="Object">3</container>
                                 <unitdate>undated</unitdate>
@@ -8837,6 +8897,14 @@
                         <did>
                             <unittitle>Velvet Underground</unittitle>
                         </did>
+                        <c04 id="ref1765" level="file">
+                            <did>
+                                <unittitle>Andy Warhol presents...Velvet Underground and Nico, the Trip, Los Angeles [reproduction]</unittitle>
+                                <container id="cid336063" type="Drawer-Folder" label="Graphic materials">FF.3.5-2</container>
+                                <container parent="cid336063" type="Object">9</container>
+                                <unitdate>May 3-18</unitdate>
+                            </did>
+                        </c04>
                         <c04 id="ref440" level="file">
                             <did>
                                 <unittitle>
@@ -8849,14 +8917,6 @@
                                 <head>Museum Accession Number</head>
                                 <p>A2001.93.6</p>
                             </odd>
-                        </c04>
-                        <c04 id="ref1765" level="file">
-                            <did>
-                                <unittitle>Andy Warhol presents...Velvet Underground and Nico, the Trip, Los Angeles [reproduction]</unittitle>
-                                <container id="cid336063" type="Drawer-Folder" label="Graphic materials">FF.3.5-2</container>
-                                <container parent="cid336063" type="Object">9</container>
-                                <unitdate>May 3-18</unitdate>
-                            </did>
                         </c04>
                     </c03>
                     <c03 id="ref556" level="file">
@@ -8887,6 +8947,23 @@
                                 <head>Museum Accession Number</head>
                                 <p>A2001.93.44</p>
                             </odd>
+                        </c04>
+                        <c04 id="ref862" level="item">
+                            <did>
+                                <unittitle>
+                                    <title render="italic">The Kids Are Alright</title> soundtrack</unittitle>
+                                <container id="cid366030" type="Drawer-Folder" label="Graphic materials">FF.3.7-4</container>
+                                <container parent="cid366030" type="Object">13</container>
+                                <unitdate>circa 1979</unitdate>
+                            </did>
+                            <odd id="ref863">
+                                <head>Museum Accession Number</head>
+                                <p>A2004.54.118</p>
+                            </odd>
+                            <separatedmaterial id="ref1922">
+                                <head>Separated Materials</head>
+                                <p>Item in Museum storage. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
+                            </separatedmaterial>
                         </c04>
                         <c04 id="ref613" level="item">
                             <did>
@@ -8930,23 +9007,6 @@
                                 <head>Museum Accession Number</head>
                                 <p>A2001.93.59</p>
                             </odd>
-                        </c04>
-                        <c04 id="ref862" level="item">
-                            <did>
-                                <unittitle>
-                                    <title render="italic">The Kids Are Alright</title> soundtrack</unittitle>
-                                <container id="cid366030" type="Drawer-Folder" label="Graphic materials">FF.3.7-4</container>
-                                <container parent="cid366030" type="Object">13</container>
-                                <unitdate>circa 1979</unitdate>
-                            </did>
-                            <odd id="ref863">
-                                <head>Museum Accession Number</head>
-                                <p>A2004.54.118</p>
-                            </odd>
-                            <separatedmaterial id="ref1922">
-                                <head>Separated Materials</head>
-                                <p>Item in Museum storage. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
-                            </separatedmaterial>
                         </c04>
                     </c03>
                     <c03 id="ref1087" level="file">
@@ -9064,19 +9124,16 @@
                         <did>
                             <unittitle>Zappa, Frank</unittitle>
                         </did>
-                        <c04 id="ref318" level="item">
+                        <c04 id="ref1139" level="item">
                             <did>
-                                <unittitle>
-                                    <title render="italic">Zoots Allures</title></unittitle>
-                                <container id="cid300015" type="Drawer-Folder" label="Graphic materials">FF.3.2-2</container>
-                                <container parent="cid300015" type="Object">6</container>
-                                <container id="cid495010" type="Drawer-Folder" label="Graphic materials">FF.3.5-1</container>
-                                <container parent="cid495010" type="Object">8</container>
-                                <unitdate>circa 1976</unitdate>
+                                <unittitle>1975 tour</unittitle>
+                                <container id="cid366031" type="Drawer-Folder" label="Graphic materials">FF.3.2-6</container>
+                                <container parent="cid366031" type="Object">21</container>
+                                <unitdate>1975</unitdate>
                             </did>
-                            <odd id="ref322">
+                            <odd id="ref1140">
                                 <head>Museum Accession Number</head>
-                                <p>A2002.82.89</p>
+                                <p>A2004.54.198</p>
                             </odd>
                         </c04>
                         <c04 id="ref599" level="item">
@@ -9096,16 +9153,19 @@
                                 <p>Item in Museum storage. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                             </separatedmaterial>
                         </c04>
-                        <c04 id="ref1139" level="item">
+                        <c04 id="ref318" level="item">
                             <did>
-                                <unittitle>1975 tour</unittitle>
-                                <container id="cid366031" type="Drawer-Folder" label="Graphic materials">FF.3.2-6</container>
-                                <container parent="cid366031" type="Object">21</container>
-                                <unitdate>1975</unitdate>
+                                <unittitle>
+                                    <title render="italic">Zoots Allures</title></unittitle>
+                                <container id="cid300015" type="Drawer-Folder" label="Graphic materials">FF.3.2-2</container>
+                                <container parent="cid300015" type="Object">6</container>
+                                <container id="cid495010" type="Drawer-Folder" label="Graphic materials">FF.3.5-1</container>
+                                <container parent="cid495010" type="Object">8</container>
+                                <unitdate>circa 1976</unitdate>
                             </did>
-                            <odd id="ref1140">
+                            <odd id="ref322">
                                 <head>Museum Accession Number</head>
-                                <p>A2004.54.198</p>
+                                <p>A2002.82.89</p>
                             </odd>
                         </c04>
                     </c03>
@@ -9171,20 +9231,20 @@
                                 <unitdate>1967 September 8-9</unitdate>
                             </did>
                         </c04>
-                        <c04 id="ref1696" level="item">
-                            <did>
-                                <unittitle>With the Charlatans and Blue Cheer, Avalon Ballroom</unittitle>
-                                <container id="cid336053" type="Drawer-Folder" label="Graphic materials">FF.3.5-3</container>
-                                <container parent="cid336053" type="Object">24</container>
-                                <unitdate>1967 March 31-April 1</unitdate>
-                            </did>
-                        </c04>
                         <c04 id="ref1695" level="item">
                             <did>
                                 <unittitle>With Bo Diddley, Avalon Ballroom</unittitle>
                                 <container id="cid336024" type="Drawer-Folder" label="Graphic materials">FF.3.5-3</container>
                                 <container parent="cid336024" type="Object">25</container>
                                 <unitdate>August 5-6</unitdate>
+                            </did>
+                        </c04>
+                        <c04 id="ref1696" level="item">
+                            <did>
+                                <unittitle>With the Charlatans and Blue Cheer, Avalon Ballroom</unittitle>
+                                <container id="cid336053" type="Drawer-Folder" label="Graphic materials">FF.3.5-3</container>
+                                <container parent="cid336053" type="Object">24</container>
+                                <unitdate>1967 March 31-April 1</unitdate>
                             </did>
                         </c04>
                         <c04 id="ref1694" level="item">
@@ -9650,6 +9710,19 @@
                         <did>
                             <unittitle>Grateful Dead</unittitle>
                         </did>
+                        <c04 id="ref2465" level="item">
+                            <did>
+                                <unittitle>With Flock, and Humble Pie</unittitle>
+                                <container id="cid1062006" type="Box" label="Graphic materials">OS5</container>
+                                <container parent="cid1062006" type="Folder">3</container>
+                                <container parent="cid1062006" type="Object">5</container>
+                                <unitdate>1969 December 4-7</unitdate>
+                            </did>
+                            <odd id="ref2466">
+                                <head>Location</head>
+                                <p>Fillmore, San Francisco</p>
+                            </odd>
+                        </c04>
                         <c04 id="ref1166" level="item">
                             <did>
                                 <unittitle>With James Cotton Blues Band, and Lothar and the Hand People</unittitle>
@@ -9660,6 +9733,18 @@
                             <odd id="ref1167">
                                 <head>Museum Accession Number</head>
                                 <p>A2004.54.209</p>
+                            </odd>
+                        </c04>
+                        <c04 id="ref1753" level="item">
+                            <did>
+                                <unittitle>With Lightning Hopkins</unittitle>
+                                <container id="cid336050" type="Drawer-Folder" label="Graphic materials">FF.3.5-3</container>
+                                <container parent="cid336050" type="Object">27</container>
+                                <unitdate>1966 October 21-22</unitdate>
+                            </did>
+                            <odd id="ref2021">
+                                <head>Location</head>
+                                <p>Fillmore, San Francisco</p>
                             </odd>
                         </c04>
                         <c04 id="ref1074" level="item">
@@ -9676,31 +9761,6 @@
                             <odd id="ref1076">
                                 <head>Location</head>
                                 <p>Avalon Ballroom, San Francisco</p>
-                            </odd>
-                        </c04>
-                        <c04 id="ref1753" level="item">
-                            <did>
-                                <unittitle>With Lightning Hopkins</unittitle>
-                                <container id="cid336050" type="Drawer-Folder" label="Graphic materials">FF.3.5-3</container>
-                                <container parent="cid336050" type="Object">27</container>
-                                <unitdate>1966 October 21-22</unitdate>
-                            </did>
-                            <odd id="ref2021">
-                                <head>Location</head>
-                                <p>Fillmore, San Francisco</p>
-                            </odd>
-                        </c04>
-                        <c04 id="ref2465" level="item">
-                            <did>
-                                <unittitle>With Flock, and Humble Pie</unittitle>
-                                <container id="cid1062006" type="Box" label="Graphic materials">OS5</container>
-                                <container parent="cid1062006" type="Folder">3</container>
-                                <container parent="cid1062006" type="Object">5</container>
-                                <unitdate>1969 December 4-7</unitdate>
-                            </did>
-                            <odd id="ref2466">
-                                <head>Location</head>
-                                <p>Fillmore, San Francisco</p>
                             </odd>
                         </c04>
                     </c03>
@@ -9760,6 +9820,19 @@
                         <did>
                             <unittitle>Jane's Addiction</unittitle>
                         </did>
+                        <c04 id="ref2385" level="item">
+                            <did>
+                                <unittitle>with Caterwaul, the Sextants; with Gerkin Raucous of House Wheels</unittitle>
+                                <container id="cid1050005" type="Box" label="Graphic materials">OS3</container>
+                                <container parent="cid1050005" type="Folder">4</container>
+                                <container parent="cid1050005" type="Object">3</container>
+                                <unitdate>1989 May 7, 8</unitdate>
+                            </did>
+                            <odd id="ref2390">
+                                <head>Location</head>
+                                <p>Fillmore, San Francisco</p>
+                            </odd>
+                        </c04>
                         <c04 id="ref1349" level="item">
                             <did>
                                 <unittitle>with the Pixies, Primus</unittitle>
@@ -9777,19 +9850,6 @@
                                 <p>Seattle Center Arena</p>
                             </odd>
                         </c04>
-                        <c04 id="ref2385" level="item">
-                            <did>
-                                <unittitle>with Caterwaul, the Sextants; with Gerkin Raucous of House Wheels</unittitle>
-                                <container id="cid1050005" type="Box" label="Graphic materials">OS3</container>
-                                <container parent="cid1050005" type="Folder">4</container>
-                                <container parent="cid1050005" type="Object">3</container>
-                                <unitdate>1989 May 7, 8</unitdate>
-                            </did>
-                            <odd id="ref2390">
-                                <head>Location</head>
-                                <p>Fillmore, San Francisco</p>
-                            </odd>
-                        </c04>
                     </c03>
                     <c03 id="ref2023" level="file">
                         <did>
@@ -9805,26 +9865,6 @@
                             <odd id="ref1457">
                                 <head>Location</head>
                                 <p>Longshoreman's Hall, San Francisco</p>
-                            </odd>
-                        </c04>
-                        <c04 id="ref1063" level="item">
-                            <did>
-                                <unittitle>With P.H. Phactor Jug Band, and Andrew Staples, etc.</unittitle>
-                                <container id="cid366039" type="Drawer-Folder" label="Graphic materials">FF.3.2-5</container>
-                                <container parent="cid366039" type="Object">11</container>
-                                <unitdate>1966 September 2-3</unitdate>
-                            </did>
-                            <odd id="ref1064">
-                                <head>Museum Accession Number</head>
-                                <p>A2004.54.167</p>
-                            </odd>
-                            <odd id="ref1065">
-                                <head>Other artists</head>
-                                <p>Grateful Dead, Quicksilver Messange Service, Country Joe and the Fish: 9/4/66; Martha and the Vandellas, Johnny Talbot, De Thangs: 9/5/66.</p>
-                            </odd>
-                            <odd id="ref1066">
-                                <head>Location</head>
-                                <p>Fillmore, San Francisco</p>
                             </odd>
                         </c04>
                         <c04 id="ref2098" level="item">
@@ -9845,6 +9885,26 @@
                             <odd id="ref2101">
                                 <head>General note</head>
                                 <p>Also advertises Butterfield Blues Band show at the Fillmore, Sept. 25 and Oct. 1, 1966</p>
+                            </odd>
+                        </c04>
+                        <c04 id="ref1063" level="item">
+                            <did>
+                                <unittitle>With P.H. Phactor Jug Band, and Andrew Staples, etc.</unittitle>
+                                <container id="cid366039" type="Drawer-Folder" label="Graphic materials">FF.3.2-5</container>
+                                <container parent="cid366039" type="Object">11</container>
+                                <unitdate>1966 September 2-3</unitdate>
+                            </did>
+                            <odd id="ref1064">
+                                <head>Museum Accession Number</head>
+                                <p>A2004.54.167</p>
+                            </odd>
+                            <odd id="ref1065">
+                                <head>Other artists</head>
+                                <p>Grateful Dead, Quicksilver Messange Service, Country Joe and the Fish: 9/4/66; Martha and the Vandellas, Johnny Talbot, De Thangs: 9/5/66.</p>
+                            </odd>
+                            <odd id="ref1066">
+                                <head>Location</head>
+                                <p>Fillmore, San Francisco</p>
                             </odd>
                         </c04>
                     </c03>
@@ -9916,6 +9976,7 @@
                             <container id="cid765004" type="Drawer-Folder" label="Graphic materials">FF.3.5-5</container>
                             <container parent="cid765004" type="Object">2</container>
                             <unitdate>undated</unitdate>
+                            <physloc audience="internal" id="ref2238" label="Location note">Hip Hop exhibit</physloc>
                         </did>
                         <odd id="ref1355">
                             <head>Museum Accession Number</head>
@@ -10110,6 +10171,7 @@
                                 <container parent="cid765003" type="Folder">6</container>
                                 <container parent="cid765003" type="Object">3a-b</container>
                                 <unitdate>undated</unitdate>
+                                <physloc audience="internal" id="ref2236" label="Location note">Seattle scene case</physloc>
                             </did>
                             <odd id="ref1342">
                                 <head>Museum Accession Number</head>
@@ -10148,6 +10210,7 @@
                             <container id="cid765005" type="Drawer-Folder" label="Graphic materials">FF.3.5-5</container>
                             <container parent="cid765005" type="Object">3</container>
                             <unitdate>undated</unitdate>
+                            <physloc audience="internal" id="ref2240" label="Location note">Seattle scene case</physloc>
                         </did>
                         <odd id="ref1384">
                             <head>Museum Accession Number</head>
@@ -10299,17 +10362,6 @@
                         <did>
                             <unittitle>Red Hot Chili Peppers</unittitle>
                         </did>
-                        <c04 id="ref1706" level="item">
-                            <did>
-                                <unittitle>with Thelonious Monster</unittitle>
-                                <container id="cid1050007" type="Box" label="Graphic materials">OS3</container>
-                                <container parent="cid1050007" type="Folder">4</container>
-                                <container parent="cid1050007" type="Object">6</container>
-                                <container id="cid336087" type="Drawer-Folder" label="Graphic materials">FF.3.5-1</container>
-                                <container parent="cid336087" type="Object">7</container>
-                                <unitdate>1989 April 7</unitdate>
-                            </did>
-                        </c04>
                         <c04 id="ref1702" level="item">
                             <did>
                                 <unittitle>Rockpalast featuring George Clinton and other artists</unittitle>
@@ -10325,6 +10377,17 @@
                                 <container parent="cid336006" type="Object">8</container>
                                 <unitdate>undated</unitdate>
                                 <langmaterial id="ref2392" label="Language of Materials">German</langmaterial>
+                            </did>
+                        </c04>
+                        <c04 id="ref1706" level="item">
+                            <did>
+                                <unittitle>with Thelonious Monster</unittitle>
+                                <container id="cid1050007" type="Box" label="Graphic materials">OS3</container>
+                                <container parent="cid1050007" type="Folder">4</container>
+                                <container parent="cid1050007" type="Object">6</container>
+                                <container id="cid336087" type="Drawer-Folder" label="Graphic materials">FF.3.5-1</container>
+                                <container parent="cid336087" type="Object">7</container>
+                                <unitdate>1989 April 7</unitdate>
                             </did>
                         </c04>
                     </c03>
@@ -10356,22 +10419,6 @@
                         <did>
                             <unittitle>Santana</unittitle>
                         </did>
-                        <c04 id="ref1144" level="item">
-                            <did>
-                                <unittitle>With Sea Train, and Yusef Lateef</unittitle>
-                                <container id="cid366056" type="Drawer-Folder" label="Graphic materials">FF.3.2-6</container>
-                                <container parent="cid366056" type="Object">22</container>
-                                <unitdate>1969 September 4-7</unitdate>
-                            </did>
-                            <odd id="ref1145">
-                                <head>Museum Accession Number</head>
-                                <p>A2004.54.200</p>
-                            </odd>
-                            <odd id="ref1146">
-                                <head>Location</head>
-                                <p>Fillmore, San Francisco</p>
-                            </odd>
-                        </c04>
                         <c04 id="ref1147" level="item">
                             <did>
                                 <unittitle>With Collectors, Melanie</unittitle>
@@ -10384,6 +10431,22 @@
                                 <p>A2004.54.201</p>
                             </odd>
                             <odd id="ref1149">
+                                <head>Location</head>
+                                <p>Fillmore, San Francisco</p>
+                            </odd>
+                        </c04>
+                        <c04 id="ref1144" level="item">
+                            <did>
+                                <unittitle>With Sea Train, and Yusef Lateef</unittitle>
+                                <container id="cid366056" type="Drawer-Folder" label="Graphic materials">FF.3.2-6</container>
+                                <container parent="cid366056" type="Object">22</container>
+                                <unitdate>1969 September 4-7</unitdate>
+                            </did>
+                            <odd id="ref1145">
+                                <head>Museum Accession Number</head>
+                                <p>A2004.54.200</p>
+                            </odd>
+                            <odd id="ref1146">
                                 <head>Location</head>
                                 <p>Fillmore, San Francisco</p>
                             </odd>
@@ -10937,8 +11000,8 @@
                     <c03 id="ref2255" level="file">
                         <did>
                             <unittitle>The Damned (DAT tape)</unittitle>
-                            <container id="cid972002" type="Box" label="Audio">AV8</container>
-                            <container parent="cid972002" type="Cassette">1</container>
+                            <container id="cid972002" type="Box" label="Audio">AV1</container>
+                            <container parent="cid972002" type="Cassette">28</container>
                             <unitdate>1995 July 31</unitdate>
                         </did>
                     </c03>
@@ -10977,8 +11040,8 @@
                     <c03 id="ref2258" level="file">
                         <did>
                             <unittitle>Faithfull, Marianne (audiocassette)</unittitle>
-                            <container id="cid972004" type="Box" label="Audio">AV8</container>
-                            <container parent="cid972004" type="Cassette">2</container>
+                            <container id="cid972004" type="Box" label="Audio">AV1</container>
+                            <container parent="cid972004" type="Cassette">25</container>
                             <unitdate>undated</unitdate>
                         </did>
                         <odd id="ref2259">
@@ -11112,8 +11175,8 @@
                     <c03 id="ref2256" level="file">
                         <did>
                             <unittitle>Parks, Van Dyke (audiocassette)</unittitle>
-                            <container id="cid972003" type="Box" label="Audio">AV8</container>
-                            <container parent="cid972003" type="Cassette">3</container>
+                            <container id="cid972003" type="Box" label="Audio">AV1</container>
+                            <container parent="cid972003" type="Cassette">26</container>
                             <unitdate>1982</unitdate>
                         </did>
                         <odd id="ref2257">
@@ -11142,8 +11205,8 @@
                     <c03 id="ref2262" level="file">
                         <did>
                             <unittitle>Ramones (CD-R)</unittitle>
-                            <container id="cid972006" type="Box" label="Audio">AV8</container>
-                            <container parent="cid972006" type="Disk">1</container>
+                            <container id="cid972006" type="Box" label="Audio">AV2</container>
+                            <container parent="cid972006" type="Disk">3</container>
                             <unitdate>2003 January 31</unitdate>
                         </did>
                         <odd id="ref2263">
@@ -11274,8 +11337,8 @@
                     <c03 id="ref2260" level="file">
                         <did>
                             <unittitle>Young, Neil (audiocassette)</unittitle>
-                            <container id="cid972005" type="Box" label="Audio">AV8</container>
-                            <container parent="cid972005" type="Cassette">4</container>
+                            <container id="cid972005" type="Box" label="Audio">AV1</container>
+                            <container parent="cid972005" type="Cassette">27</container>
                             <unitdate>1965</unitdate>
                         </did>
                         <odd id="ref2261">
@@ -11348,8 +11411,8 @@
                     <c03 id="ref2264" level="file">
                         <did>
                             <unittitle>Grateful Dead (VHS videocassettes)</unittitle>
-                            <container id="cid972007" type="Box" label="Moving Images">AV8</container>
-                            <container parent="cid972007" type="Cassette">5-7</container>
+                            <container id="cid972007" type="Box" label="Moving Images">AV2</container>
+                            <container parent="cid972007" type="Cassette">1-3</container>
                             <unitdate>1989</unitdate>
                         </did>
                         <odd id="ref2265">

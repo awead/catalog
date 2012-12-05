@@ -1,5 +1,6 @@
 module Rockhall::EadMethods
 
+  include Rockhall::EadBehaviors
 
   def self.ead_rake_xml(file)
     raw = File.read(file)
@@ -26,48 +27,10 @@ module Rockhall::EadMethods
     Nokogiri::XML(xml_doc)
   end
 
-  # Note: only handles ranges in the last set of digits
-  def self.ead_accession_range(range)
-
-    # Catch incorrectly formatted ranges
-    if range.match(";")
-      raise "Bad accession range"
-    end
-
-    results = Array.new
-    first, last = range.split(/-/)
-    numbers = range.split(/,/)
-
-    if numbers.length > 1
-      numbers.each do |n|
-
-      first, last = n.split(/-/)
-        if last
-          fparts = first.strip.split(/\./)
-          lparts = last.strip.split(/\./)
-          (fparts[2]..lparts[2]).each { |n| results << fparts[0] + "." + fparts[1] + "." + n }
-        else
-          results << n.strip
-        end
-
-      end
-    elsif last
-      fparts = first.strip.split(/\./)
-      lparts = last.strip.split(/\./)
-      (fparts[2]..lparts[2]).each { |n| results << fparts[0] + "." + fparts[1] + "." + n }
-    else
-      results << range.strip
-    end
-
-    return results
-
-  end
-
   def self.ead_accessions(node)
     results = Array.new
     node.xpath('//head[contains(., "Museum Accession Number")]').each do | n |
-      # TODO: Indexing of accession number ranges is disabled until future r9 which fixes it
-      #ead_accession_range(n.next_element.text).each { |a| results << a }
+      ead_accession_range(n.next_element.text).each { |a| results << a }
     end
 
     if results.length > 1
