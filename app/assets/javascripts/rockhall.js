@@ -1,7 +1,16 @@
 // rockhall.js
 //
-// Place to keep our local javascript code 
+// A place to keep our local javascript code 
 
+// Call our named functions first
+$(document).ready(returnStatus);
+$(document).ready(returnHoldings);
+$(document).ready(nextComponent);
+$(document).ready(closeComponent);
+
+//
+// Anonymous fuctions
+//
 
 $(document).ready(function() {
 
@@ -31,15 +40,12 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(returnStatus);
-$(document).ready(returnHoldings);
-$(document).ready(nextComponent);
-$(document).ready(closeComponent);
-
+//
+// Named functions
+//
 
 function returnStatus() {
   $('.innovative_status').each(function() {
-
     var id  = $(this).attr("id");
     var url = ROOT_PATH + "holdings/" + id;
 
@@ -58,7 +64,6 @@ function returnStatus() {
 
 function returnHoldings() {
   $('.innovative_holdings').each(function() {
-
     var id  = $(this).attr("id");
     var url = ROOT_PATH + "holdings/" + id + "?type=full";
 
@@ -73,13 +78,11 @@ function returnHoldings() {
     });
 
   });
-
 }
 
-
 function nextComponent() {
-
   $('.next_component_button').live("click", function(action) {
+
     var waiting = $(this).attr("id")+"-waiting";
     var parent  = $(this).parent("div").attr("id");
     $(this).toggleClass("hidden");
@@ -89,23 +92,21 @@ function nextComponent() {
       $("#"+waiting).toggleClass("hidden");
     });
     action.preventDefault();
-  });
-  
+
+  });  
 }
 
 function closeComponent() {
-
   $('.close_component_button').live("click", function(action) {
+    
     var parent  = $(this).parent("div").attr("id");
     var open    = $(this).attr("id").replace("close","open");
     $("#"+parent+"-list").slideUp("normal", function() { $(this).remove(); } );
     $("#"+open).toggleClass("hidden");
     $(this).remove();
+
   });
-
 }
-
-
 
 function setAllBookmarksCheckbox() {
   // Are all the bookmarks selected?
