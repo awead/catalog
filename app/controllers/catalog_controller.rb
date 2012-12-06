@@ -244,26 +244,4 @@ class CatalogController < ApplicationController
     config.spell_max = 5
   end
 
-  def old_show
-    ead_id = get_field_from_solr("eadid_s",params[:id])
-    if ead_id.nil?
-      super
-    else
-
-      @components = Hash.new
-      @components[:first] = get_component_docs_from_solr(ead_id)
-      parent_ref_list = get_field_from_solr("parent_ids_display",params[:id])
-      unless parent_ref_list.nil?
-        parent_ref_list.each do |ref|
-          @components[ref.to_sym] = get_component_docs_from_solr(ead_id,{ :parent_id_s => ref.to_s})
-        end
-      end
-
-      params[:solr_id] = params[:id]
-      params[:id] = ead_id
-      super
-
-    end
-  end
-
 end
