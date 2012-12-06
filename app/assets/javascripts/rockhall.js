@@ -79,25 +79,28 @@ function returnHoldings() {
 
 function nextComponent() {
 
-  $('.next_component_button').click(function(action) {
-    var button  = $(this);
+  $('.next_component_button').live("click", function(action) {
     var waiting = $(this).attr("id")+"-waiting";
-    $(this).toggle();
+    var parent  = $(this).parent("div").attr("id");
+    $(this).toggleClass("hidden");
     $("#"+waiting).toggleClass("hidden");
-    action.preventDefault();
     $.get(this, function(data) {
-      $(button).replaceWith(data);
+      $("#"+parent).slideDown("normal", function() { $(this).append(data); } );
       $("#"+waiting).toggleClass("hidden");
     });
+    action.preventDefault();
   });
-
+  
 }
 
 function closeComponent() {
 
-  $('.close_component_button').click(function(action) {
-
-    alert("hi");
+  $('.close_component_button').live("click", function(action) {
+    var parent  = $(this).parent("div").attr("id");
+    var open    = $(this).attr("id").replace("close","open");
+    $("#"+parent+"-list").slideUp("normal", function() { $(this).remove(); } );
+    $("#"+open).toggleClass("hidden");
+    $(this).remove();
   });
 
 }

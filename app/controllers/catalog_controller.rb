@@ -249,8 +249,8 @@ class CatalogController < ApplicationController
     else
 
       @components = Hash.new
-      @components[:first] = get_component_docs_from_solr(ead_id,{ :level => "1"})
-      parent_ref_list = get_field_from_solr("parent_ref_list",params[:id])
+      @components[:first] = get_component_docs_from_solr(ead_id)
+      parent_ref_list = get_field_from_solr("parent_ids_display",params[:id])
       unless parent_ref_list.nil?
         parent_ref_list.each do |ref|
           @components[ref.to_sym] = get_component_docs_from_solr(ead_id,{ :parent_id_s => ref.to_s})

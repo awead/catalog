@@ -1,0 +1,31 @@
+<%= hide_component_button %>
+
+<div id="<%= render_list_id %>">
+  <% documents.each do |document| %>
+    <div id="<%= document["id"] %>" <%= highlight?(document["id"]) %> class="component_part clearfix c0<%= document["component_level_i"] %>">
+
+    <h5>
+      <span>
+        <%= comma_list( [document["title_display"], document["unitdate_display"]] ) %>
+      </span>
+    </h5>
+
+    <dl>
+      <%# render_component_field(@component, "note") %>
+      <%= render_component_field(document, "scopecontent") %>
+      <%# render_component_field(@component, "separatedmaterial_display") %>
+      <%# render_component_field(@component, "access_display") %>
+      <%# render_component_field(@component, "originalsloc_display") %>
+      <%# render_component_field(@component, "physdesc_display") %>
+      <%# render_component_field(@component, "dimensions_display") %>
+      <%# render_component_field(@component, "location_display", { :label => "Location" }) %>
+      <%# render_component_field(@component, "langmaterial_display") %>
+      <%# render_component_field(@component, "acqinfo_display") %>
+
+    </dl>
+
+    <%= continue_components(document) %>
+    
+    </div>
+  <% end %>
+</div>

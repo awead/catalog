@@ -2,4 +2,11 @@
   <%= render_ead_sidebar %>
 <% end %>
 
-<%= render :partial => 'catalog/_show_partials/_archival_collection/body' %>
+<div id="ead_body">
+
+  <%= render_ead_html %>
+
+  <h2 id="inventory">Collection Inventory</h2>
+  <%= render_inventory %>
+
+</div>

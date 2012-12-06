@@ -9,27 +9,25 @@ module Rockhall::EadSolrMethods
     result["response"]["docs"].empty? ? nil : result["response"]["docs"].first[field.to_sym]
   end
 
-  # Retrieves ead component documents given different requirements.  The results are always returned
-  # as a array of solr documents.
+  # Retrieves ead component documents. The results are always returned as a array of solr documents.
   #
   # Required: String:eadid
   # Where *eadid* is the ead id of the document such as ARC-0005.
   #
   # Options:
-  #  - String:level
   #  - String:parent_id_s
   #
   # Examples:
-  #     get_component_docs_from_solr("ARC-0004", {:level => "1"})
-  # Returns an array of all the first-level component documents for ARC-0004
-  #     get_component_docs_from_solr("ARC-0004", {:parent_id_s => "ref45"})
+  #     get_component_docs_from_solr("ARC-0004")
+  # By default, returns an array of all the first-level component documents for ARC-0004
+  #     get_component_docs_from_solr("ARC-0004", {:parent_ref => "ref45"})
   # Returns an array of all the component documents that have ref45 as their parent
   def get_component_docs_from_solr(eadid, opts={}, results = Array.new, solr_params = Hash.new)
     solr_params[:fl]   = "id"
-    if opts[:parent_id_s]
-      solr_params[:q]    = 'parent_id_s:"'+opts[:parent_id_s]+'" AND _query_:"eadid_s:'+eadid+'"'
+    if opts[:parent_ref]
+      solr_params[:q]    = 'parent_id_s:"'+opts[:parent_ref]+'" AND _query_:"eadid_s:'+eadid+'"'
     else
-      solr_params[:q]    = 'component_level_i:'+opts[:level]+' AND _query_:"eadid_s:'+eadid+'"'
+      solr_params[:q]    = 'component_level_i:1 AND _query_:"eadid_s:'+eadid+'"'
     end
     solr_params[:sort] = "sort_i asc"
     solr_params[:qt]   = "standard"

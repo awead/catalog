@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require "spec_helper"
 
 describe Rockhall::EadSolrMethods do
 
@@ -25,16 +25,14 @@ describe Rockhall::EadSolrMethods do
 
   describe ".get_component_docs_from_solr" do
     it "should return an array component documents given an ead id and a level" do
-      get_component_docs_from_solr("ARC-0065", { :level => "1"}).first["id"].should == "ARC-0065ref42"
-      get_component_docs_from_solr("ARC-0065", { :level => "1"})[1]["id"].should == "ARC-0065ref43"
-      seconds = get_component_docs_from_solr("ARC-0005", { :level => "2"}).collect {|doc| doc["id"]}
-      seconds.should include("ARC-0005ref62", "ARC-0005ref63", "ARC-0005ref64")
+      get_component_docs_from_solr("ARC-0065").first["id"].should == "ARC-0065ref42"
+      get_component_docs_from_solr("ARC-0065")[1]["id"].should == "ARC-0065ref43"
     end
 
     it "should return an array component documents given a parent id" do
-      docs = get_component_docs_from_solr("ARC-0005", { :parent_id_s => "ref19"})
+      docs = get_component_docs_from_solr("ARC-0005", { :parent_ref => "ref19"})
       docs.length.should == 7
-      ids = get_component_docs_from_solr("ARC-0005", { :parent_id_s => "ref19"}).collect {|doc| doc["id"]}
+      ids = get_component_docs_from_solr("ARC-0005", { :parent_ref => "ref19"}).collect {|doc| doc["id"]}
       ids.first.should  == "ARC-0005ref138"
       ids.last.should   == "ARC-0005ref144"
     end
