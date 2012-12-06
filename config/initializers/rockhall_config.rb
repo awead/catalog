@@ -276,5 +276,8 @@ config[:ead_component_title_separator] = " > "
 # IP of our OPAC
 config[:opac_ip] = "129.22.104.30"
 
+# Path to ead xml
+config[:ead_path] = "spec/fixtures/ead"
+
 # Pin our hash to the global Rails configuration
 Rails.configuration.rockhall_config = config
