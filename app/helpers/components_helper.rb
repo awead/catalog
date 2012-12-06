@@ -7,7 +7,7 @@ module ComponentsHelper
   end
 
   def render_inventory
-    render :partial => "components/list", :locals => { :documents => @components[:first] }
+    render :partial => "components/list", :locals => { :documents => @children }
   end
 
   def continue_components(document)

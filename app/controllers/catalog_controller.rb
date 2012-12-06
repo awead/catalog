@@ -5,7 +5,9 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
   include BlacklightHighlight::ControllerExtension
-  include Rockhall::EadSolrMethods
+  include Rockhall::ControllerBehaviors
+
+  before_filter :query_ead_components, :only => :show
 
   configure_blacklight do |config|
     config.default_solr_params = {
@@ -242,7 +244,7 @@ class CatalogController < ApplicationController
     config.spell_max = 5
   end
 
-  def show
+  def old_show
     ead_id = get_field_from_solr("eadid_s",params[:id])
     if ead_id.nil?
       super

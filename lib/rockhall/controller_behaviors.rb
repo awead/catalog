@@ -3,9 +3,12 @@ module Rockhall::ControllerBehaviors
   # Determine if item has child components
   #
   # This only aplies to ead and not to marc or other metdata formats. For now, the 
-  # determining factor is the presence of "ref" in the id.  The alternative method,
+  # determining factor is the kind of id, whethere it begings with ARC, RG or has ref
+  # in it, indicating that it's an archival item..  The alternative method,
   # which is commented-out at the moment, is to query solr for the ref_s field.
-  def query_child_components solr_params = Hash.new
+  def query_ead_components solr_params = Hash.new
+
+    @children = Array.new
 
     # Alternative solr query method
     #solr_params[:fl]   = "eadid_s, ref_s"
@@ -18,11 +21,31 @@ module Rockhall::ControllerBehaviors
     #end
 
     # Just check the id
-    id, ref_num = params[:id].split(/ref/)
-    unless ref_num.nil?
-      @children = additional_ead_components(id,("ref"+ref_num))
+    if params[:id].match(/^ARC/) or params[:id].match(/^RG/) 
+      @children = first_level_ead_components(params[:id])
     end
+    return @children
   end
+
+  # Queries the current solr document for any first-level components, returning either an array of the 
+  # documents or nil.
+  def first_level_ead_components id, solr_params = Hash.new
+    solr_params[:fl]   = "id"
+    solr_params[:q]    = 'component_level_i:1 AND _query_:"eadid_s:'+id+'"'
+    solr_params[:sort] = "sort_i asc"
+    solr_params[:qt]   = "standard"
+    solr_params[:rows] = 10000
+    solr_response = Blacklight.solr.find(solr_params)
+    list = solr_response.docs.collect {|doc| SolrDocument.new(doc, solr_response)}
+
+    docs = Array.new
+    list.each do |doc|
+      r, d = get_solr_response_for_doc_id(doc.id)
+      docs << d
+    end
+    return docs
+  end
+
 
   # Query solr for additional ead components that are attached to a given ead document
   def additional_ead_components(id,ref, solr_params = Hash.new)
