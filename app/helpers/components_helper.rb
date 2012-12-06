@@ -11,11 +11,11 @@ module ComponentsHelper
   end
 
   def continue_components(document)
-    if @components.nil?
+    if @parents.nil?
       next_component_button(document)
     else
-      if @components.has_key?(document["ref_s"].to_sym)
-        render :partial => "components/list", :locals => { :documents => @components[document["ref_s"].to_sym] }
+      if @parents.has_key?(document["ref_s"])
+        render :partial => "components/list", :locals => { :documents => @parents[document["ref_s"]] }
       else
         next_component_button(document)
       end

@@ -9,6 +9,7 @@ module Rockhall::ControllerBehaviors
   def query_ead_components solr_params = Hash.new
 
     @children = Array.new
+    @parents  = Hash.new
 
     # Alternative solr query method
     #solr_params[:fl]   = "eadid_s, ref_s"
@@ -24,7 +25,15 @@ module Rockhall::ControllerBehaviors
     if params[:id].match(/^ARC/) or params[:id].match(/^RG/) 
       @children = first_level_ead_components(params[:id])
     end
-    return @children
+    if params[:ref]
+      refs = get_field_from_solr((params[:id] + params[:ref]), "parent_ids_display")
+      unless refs.nil?
+        refs.each do |ref|
+          @parents[ref] = additional_ead_components(params[:id], ref)
+        end
+      end
+    end
+    return @children, @parents
   end
 
   # Queries the current solr document for any first-level components, returning either an array of the 
@@ -44,6 +53,15 @@ module Rockhall::ControllerBehaviors
       docs << d
     end
     return docs
+  end
+
+  # Returns the content from a solr field of a given document.
+  #
+  # Required inputs: String:field, String:id
+  # Where *field* is the name of the solr field and *id* is the solr document id.
+  def get_field_from_solr(id, field)
+    result = Blacklight.solr.find( {:q => 'id:"'+id+'"', :qt => 'document', :fl => field, :rows => 1 } )
+    result["response"]["docs"].empty? ? nil : result["response"]["docs"].first[field.to_sym]
   end
 
 
