@@ -1,7 +1,5 @@
 module ArchivalCollectionHelper
 
-  include Rockhall::EadMethods
-
   def deprecated_general_info
     results = String.new
 
