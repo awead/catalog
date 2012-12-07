@@ -42,7 +42,7 @@ describe Rockhall::SolrHelperExtension do
 
     it "should return an array documents from RG-0008" do
       children = @test.first_level_ead_components("RG-0008")
-      children.length.should == "1527"
+      children.length.should == 1529
     end
 
     it "should return an array starting with a given row" do
