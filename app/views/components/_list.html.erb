@@ -2,26 +2,23 @@
 
 <div id="<%= render_list_id %>">
   <% documents.each do |document| %>
-    <div id="<%= document["id"] %>" <%= highlight?(document["id"]) %> class="component_part clearfix c0<%= document["component_level_i"] %>">
+    <div id="<%= document["id"] %>" class="component_part c0<%= document["component_level_i"] %>">
 
     <h5>
       <span>
-        <%= comma_list( [document["title_display"], document["unitdate_display"]] ) %>
+        <%= comma_list( [document["title_t"], document["unitdate_t"]] ) %>
       </span>
     </h5>
 
     <dl>
-      <%# render_component_field(@component, "note") %>
-      <%= render_component_field(document, "scopecontent") %>
-      <%# render_component_field(@component, "separatedmaterial_display") %>
-      <%# render_component_field(@component, "access_display") %>
-      <%# render_component_field(@component, "originalsloc_display") %>
-      <%# render_component_field(@component, "physdesc_display") %>
-      <%# render_component_field(@component, "dimensions_display") %>
-      <%# render_component_field(@component, "location_display", { :label => "Location" }) %>
-      <%# render_component_field(@component, "langmaterial_display") %>
-      <%# render_component_field(@component, "acqinfo_display") %>
-
+      <% document_show_fields.each do |solr_fname, field| -%>
+        <% if should_display_show_field? document, field %>
+          <% if should_display_component_field? field.field %>
+            <dt class="blacklight-<%= solr_fname.parameterize %>"><%= render_document_show_field_label :field => solr_fname %></dt>
+            <dd class="blacklight-<%= solr_fname.parameterize %>"><%= render_document_show_field_value :document => document, :field => solr_fname %></dd>
+          <% end %>
+        <% end -%>
+      <% end -%>
     </dl>
 
     <%= continue_components(document) %>

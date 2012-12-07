@@ -162,6 +162,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'upc_display',          :label => 'UPC:'
     config.add_show_field 'pubnum_display',       :label => 'Publisher Number:'
     config.add_show_field 'id',                   :label => 'OCLC No.:'
+    config.add_show_field 'scopecontent_t',       :label => 'Scope and Contents:'
+    config.add_show_field 'separatedmaterial_t',  :label => 'Separated Materials:'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

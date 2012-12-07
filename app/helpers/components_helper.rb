@@ -1,7 +1,7 @@
 module ComponentsHelper
 
 
-  def continue_components(document)
+  def continue_components document
     if @parents.nil?
       next_component_button(document)
     else
@@ -13,7 +13,7 @@ module ComponentsHelper
     end
   end
 
-  def next_component_button(document, results = String.new)
+  def next_component_button document, results = String.new
     if document["component_children_b"]
       results << link_to( image_tag("icons/button_open.png", :alt => "+ Show"),
         components_path( :parent_ref => document["ref_s"], :ead_id => document["eadid_s"] ),
@@ -31,26 +31,32 @@ module ComponentsHelper
     end
   end
 
-  def render_component_field(document, field, opts={}, results = String.new)
-    #label      = opts[:label].nil? ? document[(field.to_s + "_heading_display")].first : opts[:label]
-    label = "Fake"
-    field_name = field + "_t" 
-    unless document[field_name].nil?
-      results << "<dt>" + label + ":</dt>"
-      results << "<dd class=\"#{field.to_s}\">" + display_field(document[field_name]) + "</dd>"
+  def should_display_component_field? field
+    result = case field
+      when "title_display" then false
+      when "format" then false
+      when "collection_display" then false
+      when "id" then false
+      else true  
     end
-    return results.html_safe
   end
 
-  def highlight?(ref)
-    results = String.new
-    if params[:solr_id]
-      parts = params[:solr_id].split(":")
-      if ref.to_s == parts.last.to_s
-        results << 'style="background-color:yellow"'
+  def render_list_id
+    params[:parent_ref].nil? ? (params[:id]+"-list") : (params[:ead_id]+params[:parent_ref]+"-list")
+  end
+
+  def display_field field
+    field.join("<br/>").html_safe
+  end
+
+  def comma_list args
+    fields = Array.new
+    args.each do |text|
+      unless text.nil?
+        fields << text
       end
     end
-    return results.html_safe
+    return fields.join(", ").html_safe
   end
 
 
