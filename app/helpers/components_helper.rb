@@ -1,15 +1,6 @@
 module ComponentsHelper
 
 
-  def deprecated_parent_ead_id
-    parts = params[:id].split(":")
-    return parts[0]
-  end
-
-  def render_inventory
-    render :partial => "components/list", :locals => { :documents => @children }
-  end
-
   def continue_components(document)
     if @parents.nil?
       next_component_button(document)
@@ -47,17 +38,6 @@ module ComponentsHelper
     unless document[field_name].nil?
       results << "<dt>" + label + ":</dt>"
       results << "<dd class=\"#{field.to_s}\">" + display_field(document[field_name]) + "</dd>"
-    end
-    return results.html_safe
-  end
-
-  def deprecated_render_odd_field(document)
-    results = String.new
-    unless document["odd_display"].nil?
-      document["odd_display"].each_index do |i|
-        results << "<dt>" + document["odd_display_label"][i] + ":</dt>"
-        results << "<dd class=\"odd_display\">" + document["odd_display"][i] + "</dd>"
-      end
     end
     return results.html_safe
   end

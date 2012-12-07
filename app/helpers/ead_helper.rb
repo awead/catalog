@@ -9,6 +9,14 @@ module EadHelper
     end
   end
 
+  def render_collection_inventory_heading
+    content_tag("div", "Collection Inventory", :id => "inventory") if has_json?
+  end
+
+  def render_collection_inventory
+    render :partial => "components/list", :locals => { :documents => @children } if has_json?
+  end
+
   def render_list_id
     params[:parent_ref].nil? ? (params[:id]+"-list") : (params[:ead_id]+params[:parent_ref]+"-list")
   end
@@ -79,5 +87,6 @@ module EadHelper
   def display_field(field)
     field.join("<br/>").html_safe
   end
+
 
 end
