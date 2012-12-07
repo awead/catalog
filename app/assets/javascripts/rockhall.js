@@ -40,6 +40,21 @@ $(document).ready(function() {
 
 });
 
+// Highlihght and scroll to any archival items
+$(document).ready(function() {
+
+  var parameters = window.location.href.split("/");
+  var ref = parameters[parameters.length-1];
+  var ead = parameters[parameters.length-2];
+
+  if (ref.match(/ref/)) {
+    $("#"+ead+ref).css("background-color", "yellow");
+    $("html, body").animate({ scrollTop: $("#"+ead+ref).offset().top }, 1000);
+  }
+  
+
+});
+
 //
 // Named functions
 //
