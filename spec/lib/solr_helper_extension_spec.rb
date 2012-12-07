@@ -32,11 +32,17 @@ describe Rockhall::SolrHelperExtension do
   end
 
   describe ".first_level_ead_components" do
-    it "should return an array of first-level solr documents from a given id" do
+
+    it "should return an array documents from ARC-0037" do
       children = @test.first_level_ead_components("ARC-0037")
       children.length.should         == 7
       children.first["ref_s"].should == "ref1"
       children.last["ref_s"].should  == "ref1884" 
+    end
+
+    it "should return an array documents from RG-0008" do
+      children = @test.first_level_ead_components("RG-0008")
+      children.length.should == "1527"
     end
 
     it "should return an array starting with a given row" do
