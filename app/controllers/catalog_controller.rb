@@ -6,6 +6,7 @@ class CatalogController < ApplicationController
   include Blacklight::Catalog
   include BlacklightHighlight::ControllerExtension
   include Rockhall::ControllerBehaviors
+  include Rockhall::SolrHelperExtension
 
   before_filter :query_ead_components, :only => :show
 
