@@ -2,7 +2,7 @@ module EadHelper
 
 
   def render_ead_html
-    if params["view"] == "full" or !has_json?
+    if params[:ref] == "full" or !has_json?
       render :file => "#{Rails.root}/public/fa/#{@document[:eadid_s]}_full.html"
     else
       render :file => "#{Rails.root}/public/fa/#{@document[:eadid_s]}.html"
@@ -34,13 +34,13 @@ module EadHelper
   end
 
   def toggle_view_link link = String.new
-    if params["view"] == "full"
+    if params[:ref] == "full"
       link << link_to("Default view", catalog_path(params[:id]))
     else
-      if @document[:ref_s]
-        link << link_to("Full view", catalog_path(@document["eadid_s"], :view=>"full", :anchor => @document[:ref_s]))
+      if params[:ref]
+        link << link_to("Full view", catalog_path([params[:id], "full"], :anchor => params[:ref]))
       else
-        link << link_to("Full view", catalog_path(params[:id], :view=>"full"))
+        link << link_to("Full view", catalog_path([params[:id], "full"]))
       end
     end
     return ("<div id=\"view_toggle\">" + link + "</div>").html_safe

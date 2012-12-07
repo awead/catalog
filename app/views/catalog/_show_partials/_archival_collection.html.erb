@@ -5,7 +5,9 @@
 <div id="ead_body">
 
   <%= render_ead_html %>
-  <%= render_collection_inventory_heading %>
-  <%= render_collection_inventory %>
+  <% unless params[:ref] == "full" %>
+    <%= render_collection_inventory_heading %>
+    <%= render_collection_inventory %>
+  <% end %>
 
 </div>
