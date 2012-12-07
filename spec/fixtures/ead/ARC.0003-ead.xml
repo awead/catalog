@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-10-02T11:43-0400</date>
+                <date>2012-12-07T13:00-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -155,7 +155,7 @@
             <subject source="lcsh">Sound recording executives and producers</subject>
         </controlaccess>
         <dsc>
-            <c01 id="ref1" level="series">
+            <c id="ref1" level="series">
                 <did>
                     <unittitle>Series I: Business Files</unittitle>
                     <unitdate>1934-2000, undated</unitdate>
@@ -164,7 +164,7 @@
                     <head>Scope and Contents</head>
                     <p>Series I: Business Files includes unpublished papers related to Gabler’s career with the Commodore Music Shop, Commodore Records, and Decca Records, as well as his career as a songwriter/lyricist. The series is organized by subseries and then alphabetically by file title.</p>
                 </scopecontent>
-                <c02 id="ref58" level="subseries">
+                <c id="ref58" level="subseries">
                     <did>
                         <unittitle>Subseries 1: Commodore Records</unittitle>
                         <unitdate>1934-1956, 1978, 1987, undated</unitdate>
@@ -173,188 +173,188 @@
                         <head>Scope and Contents</head>
                         <p>Organized alphabetically by file title.</p>
                     </scopecontent>
-                    <c03 id="ref63" level="file">
+                    <c id="ref63" level="file">
                         <did>
                             <unittitle>Clippings, Commodore Record Shop and Milt Gabler</unittitle>
                             <container id="cid27001" type="Box" label="Text">1</container>
                             <container parent="cid27001" type="Folder">1</container>
                             <unitdate>1940-1978</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref64" level="file">
+                    </c>
+                    <c id="ref64" level="file">
                         <did>
                             <unittitle>Commodore master list</unittitle>
                             <container id="cid27002" type="Box" label="Text">1</container>
                             <container parent="cid27002" type="Folder">2</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref65" level="file">
+                    </c>
+                    <c id="ref65" level="file">
                         <did>
                             <unittitle>Contracts and and master list for the Special Music Company</unittitle>
                             <container id="cid27003" type="Box" label="Text">1</container>
                             <container parent="cid27003" type="Folder">3</container>
                             <unitdate>1987</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref66" level="file">
+                    </c>
+                    <c id="ref66" level="file">
                         <did>
                             <unittitle>Correspondence</unittitle>
                             <container id="cid27004" type="Box" label="Text">1</container>
                             <container parent="cid27004" type="Folder">4</container>
                             <unitdate>1934-1952 and undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref67" level="file">
+                    </c>
+                    <c id="ref67" level="file">
                         <did>
                             <unittitle>General Record Company copyright licenses, R120-R205</unittitle>
                             <container id="cid27005" type="Box" label="Text">1</container>
                             <container parent="cid27005" type="Folder">5</container>
                             <unitdate>1939-1941</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref68" level="file">
+                    </c>
+                    <c id="ref68" level="file">
                         <did>
                             <unittitle>General Record Company copyright licenses, R1280-R1700</unittitle>
                             <container id="cid27006" type="Box" label="Text">1</container>
                             <container parent="cid27006" type="Folder">6</container>
                             <unitdate>1939-1940</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref69" level="file">
+                    </c>
+                    <c id="ref69" level="file">
                         <did>
                             <unittitle>General Record Company copyright licenses, R1800-R4000 and correspondence</unittitle>
                             <container id="cid27007" type="Box" label="Text">1</container>
                             <container parent="cid27007" type="Folder">7</container>
                             <unitdate>1939-1949</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref70" level="file">
+                    </c>
+                    <c id="ref70" level="file">
                         <did>
                             <unittitle>General Record Company correspondence, Ringling Brothers &amp; Barnum &amp; Bailey Circus recordings</unittitle>
                             <container id="cid27008" type="Box" label="Text">1</container>
                             <container parent="cid27008" type="Folder">8</container>
                             <unitdate>1940-1942</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref71" level="file">
+                    </c>
+                    <c id="ref71" level="file">
                         <did>
                             <unittitle>Ledger</unittitle>
                         </did>
-                        <c04 id="ref286" level="file">
+                        <c id="ref286" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid458407" type="Box" label="Text">1</container>
                                 <container parent="cid458407" type="Folder">9</container>
                                 <unitdate>1956</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref72" level="file">
+                        </c>
+                        <c id="ref72" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid27012" type="Box" label="Text">1</container>
                                 <container parent="cid27012" type="Folder">10-12</container>
                                 <unitdate>circa 1950s</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref73" level="file">
+                        </c>
+                        <c id="ref73" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid27013" type="Box" label="Text">1</container>
                                 <container parent="cid27013" type="Folder">13</container>
                                 <unitdate>undated</unitdate>
                             </did>
-                        </c04>
-                    </c03>
-                    <c03 id="ref74" level="file">
+                        </c>
+                    </c>
+                    <c id="ref74" level="file">
                         <did>
                             <unittitle>Promotional materials, Commodore Music Shop, Jimmy Ryan’s, United Hot Clubs of America, The Friday Club, Stuyvesant Casino</unittitle>
                             <container id="cid27014" type="Box" label="Text">1</container>
                             <container parent="cid27014" type="Folder">14</container>
                             <unitdate>1944 and undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref75" level="file">
+                    </c>
+                    <c id="ref75" level="file">
                         <did>
                             <unittitle>Session sheets</unittitle>
                             <container id="cid27015" type="Box" label="Text">1</container>
                             <container parent="cid27015" type="Folder">15</container>
                         </did>
-                        <c04 id="ref287" level="file">
+                        <c id="ref287" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid458408" type="Box" label="Text">1</container>
                                 <container parent="cid458408" type="Folder">15</container>
                                 <unitdate>1941-1943</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref76" level="file">
+                        </c>
+                        <c id="ref76" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid27016" type="Box" label="Text">1</container>
                                 <container parent="cid27016" type="Folder">16</container>
                                 <unitdate>1944 February-1944 March</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref77" level="file">
+                        </c>
+                        <c id="ref77" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid27017" type="Box" label="Text">1</container>
                                 <container parent="cid27017" type="Folder">17</container>
                                 <unitdate>1944 April-1944 July </unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref78" level="file">
+                        </c>
+                        <c id="ref78" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid27018" type="Box" label="Text">1</container>
                                 <container parent="cid27018" type="Folder">18</container>
                                 <unitdate>1944 September-1945 October</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref79" level="file">
+                        </c>
+                        <c id="ref79" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid27019" type="Box" label="Text">1</container>
                                 <container parent="cid27019" type="Folder">19</container>
                                 <unitdate>1946-1957</unitdate>
                             </did>
-                        </c04>
-                    </c03>
-                    <c03 id="ref80" level="file">
+                        </c>
+                    </c>
+                    <c id="ref80" level="file">
                         <did>
                             <unittitle>Song card file, A-D</unittitle>
                             <container id="cid27020" type="Box" label="Text">1</container>
                             <container parent="cid27020" type="Folder">20</container>
                             <unitdate>1938-1947</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref81" level="file">
+                    </c>
+                    <c id="ref81" level="file">
                         <did>
                             <unittitle>Song card file, H-Ma</unittitle>
                             <container id="cid27025" type="Box" label="Text">2</container>
                             <container parent="cid27025" type="Folder">1</container>
                             <unitdate>1938-1949 and undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref82" level="file">
+                    </c>
+                    <c id="ref82" level="file">
                         <did>
                             <unittitle>Song card file, Me-Si</unittitle>
                             <container id="cid27026" type="Box" label="Text">2</container>
                             <container parent="cid27026" type="Folder">2</container>
                             <unitdate>1938-1947 and undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref83" level="file">
+                    </c>
+                    <c id="ref83" level="file">
                         <did>
                             <unittitle>Song card file, Sl-Z</unittitle>
                             <container id="cid27027" type="Box" label="Text">2</container>
                             <container parent="cid27027" type="Folder">3</container>
                             <unitdate>1938-1947 and undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref60" level="subseries">
+                    </c>
+                </c>
+                <c id="ref60" level="subseries">
                     <did>
                         <unittitle>Subseries 2: Decca Records</unittitle>
                         <unitdate>1936-1982, undated</unitdate>
@@ -363,371 +363,371 @@
                         <head>Scope and Contents</head>
                         <p>Arranged alphabetically by artist name or folder title.</p>
                     </scopecontent>
-                    <c03 id="ref16" level="file">
+                    <c id="ref16" level="file">
                         <did>
                             <unittitle>Artist Files</unittitle>
                         </did>
-                        <c04 id="ref17" level="file">
+                        <c id="ref17" level="file">
                             <did>
-                                <unittitle>Allan, Lewis</unittitle>
+                                <unittitle>Allan, Lewis [AKA, Meeropol, Abel]</unittitle>
                                 <container id="cid22002" type="Box" label="Text">2</container>
                                 <container parent="cid22002" type="Folder">4</container>
                                 <unitdate>1950-1959</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref18" level="file">
+                        </c>
+                        <c id="ref18" level="file">
                             <did>
                                 <unittitle>Andrews Sisters</unittitle>
                                 <container id="cid22003" type="Box" label="Text">2</container>
                                 <container parent="cid22003" type="Folder">5</container>
                                 <unitdate>1949-1952, 1973-1974</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref19" level="file">
+                        </c>
+                        <c id="ref19" level="file">
                             <did>
                                 <unittitle>Arden, Toni</unittitle>
                                 <container id="cid22004" type="Box" label="Text">2</container>
                                 <container parent="cid22004" type="Folder">6</container>
                                 <unitdate>1957-1959</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref20" level="file">
+                        </c>
+                        <c id="ref20" level="file">
                             <did>
                                 <unittitle>Armstrong, Louis</unittitle>
                                 <container id="cid22005" type="Box" label="Text">2</container>
                                 <container parent="cid22005" type="Folder">7</container>
                                 <unitdate>1951-1970, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref21" level="file">
+                        </c>
+                        <c id="ref21" level="file">
                             <did>
                                 <unittitle>Barnet, Charlie</unittitle>
                                 <container id="cid22006" type="Box" label="Text">2</container>
                                 <container parent="cid22006" type="Folder">8</container>
                                 <unitdate>1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref22" level="file">
+                        </c>
+                        <c id="ref22" level="file">
                             <did>
                                 <unittitle>Beiderbecke, Bix</unittitle>
                                 <container id="cid22008" type="Box" label="Text">2</container>
                                 <container parent="cid22008" type="Folder">9</container>
                                 <unitdate>undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref23" level="file">
+                        </c>
+                        <c id="ref23" level="file">
                             <did>
                                 <unittitle>Brazen Brass</unittitle>
                                 <container id="cid22007" type="Box" label="Text">2</container>
                                 <container parent="cid22007" type="Folder">10</container>
                                 <unitdate>1960-1973, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref24" level="file">
+                        </c>
+                        <c id="ref24" level="file">
                             <did>
                                 <unittitle>Brown, Les</unittitle>
                                 <container id="cid22009" type="Box" label="Text">2</container>
                                 <container parent="cid22009" type="Folder">11</container>
                                 <unitdate>1958-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref25" level="file">
+                        </c>
+                        <c id="ref25" level="file">
                             <did>
                                 <unittitle>Carmichael, Hoagy</unittitle>
                                 <container id="cid22010" type="Box" label="Text">2</container>
                                 <container parent="cid22010" type="Folder">12</container>
                                 <unitdate>1957, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref26" level="file">
+                        </c>
+                        <c id="ref26" level="file">
                             <did>
                                 <unittitle>Condon, Eddie</unittitle>
                                 <container id="cid22011" type="Box" label="Text">2</container>
                                 <container parent="cid22011" type="Folder">13</container>
                                 <unitdate>1944-1982</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref27" level="file">
+                        </c>
+                        <c id="ref27" level="file">
                             <did>
                                 <unittitle>Cooley, Spade</unittitle>
                                 <container id="cid22012" type="Box" label="Text">2</container>
                                 <container parent="cid22012" type="Folder">14</container>
                                 <unitdate>1953, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref28" level="file">
+                        </c>
+                        <c id="ref28" level="file">
                             <did>
                                 <unittitle>Country / Western and Sacred / Gospel</unittitle>
                                 <container id="cid22013" type="Box" label="Text">2</container>
                                 <container parent="cid22013" type="Folder">15</container>
                                 <unitdate>undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref29" level="file">
+                        </c>
+                        <c id="ref29" level="file">
                             <did>
                                 <unittitle>Crosby, Bing</unittitle>
                                 <container id="cid22014" type="Box" label="Text">2</container>
                                 <container parent="cid22014" type="Folder">16</container>
                                 <unitdate>1956-1961, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref30" level="file">
+                        </c>
+                        <c id="ref30" level="file">
                             <did>
                                 <unittitle>Crosby, Bob</unittitle>
                                 <container id="cid22015" type="Box" label="Text">2</container>
                                 <container parent="cid22015" type="Folder">17</container>
                                 <unitdate>1950-1975</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref31" level="file">
+                        </c>
+                        <c id="ref31" level="file">
                             <did>
                                 <unittitle>Cugat, Xavier</unittitle>
                                 <container id="cid22016" type="Box" label="Text">2</container>
                                 <container parent="cid22016" type="Folder">18</container>
                                 <unitdate>1965-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref32" level="file">
+                        </c>
+                        <c id="ref32" level="file">
                             <did>
                                 <unittitle>Curtain Calls</unittitle>
                                 <container id="cid22017" type="Box" label="Text">2</container>
                                 <container parent="cid22017" type="Folder">19</container>
                                 <unitdate>1952-1962, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref33" level="file">
+                        </c>
+                        <c id="ref33" level="file">
                             <did>
                                 <unittitle>Davis, Sammy</unittitle>
                                 <container id="cid22018" type="Box" label="Text">2</container>
                                 <container parent="cid22018" type="Folder">20</container>
                                 <unitdate>1956-1961, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref34" level="file">
+                        </c>
+                        <c id="ref34" level="file">
                             <did>
                                 <unittitle>Dee, Lenny</unittitle>
                                 <container id="cid22019" type="Box" label="Text">2</container>
                                 <container parent="cid22019" type="Folder">21</container>
                                 <unitdate>1955-1968, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref35" level="file">
+                        </c>
+                        <c id="ref35" level="file">
                             <did>
                                 <unittitle>Do Re Mi</unittitle>
                                 <container id="cid22020" type="Box" label="Text">2</container>
                                 <container parent="cid22020" type="Folder">22</container>
                                 <unitdate>1959-1973, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref36" level="file">
+                        </c>
+                        <c id="ref36" level="file">
                             <did>
                                 <unittitle>Dorsey, Jimmy</unittitle>
                                 <container id="cid22021" type="Box" label="Text">2</container>
                                 <container parent="cid22021" type="Folder">23</container>
                                 <unitdate>1950-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref37" level="file">
+                        </c>
+                        <c id="ref37" level="file">
                             <did>
                                 <unittitle>Dorsey, Tommy</unittitle>
                                 <container id="cid22022" type="Box" label="Text">2</container>
                                 <container parent="cid22022" type="Folder">24</container>
                                 <unitdate>1950-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref38" level="file">
+                        </c>
+                        <c id="ref38" level="file">
                             <did>
                                 <unittitle>Eldridge, Roy</unittitle>
                                 <container id="cid22023" type="Box" label="Text">2</container>
                                 <container parent="cid22023" type="Folder">25</container>
                                 <unitdate>undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref39" level="file">
+                        </c>
+                        <c id="ref39" level="file">
                             <did>
                                 <unittitle>Feather, Leonard</unittitle>
                                 <container id="cid22024" type="Box" label="Text">2</container>
                                 <container parent="cid22024" type="Folder">26</container>
                                 <unitdate>1969</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref40" level="file">
+                        </c>
+                        <c id="ref40" level="file">
                             <did>
                                 <unittitle>Fifty Years of Movie Music</unittitle>
                                 <container id="cid22025" type="Box" label="Text">2</container>
                                 <container parent="cid22025" type="Folder">27</container>
                                 <unitdate>1960, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref41" level="file">
+                        </c>
+                        <c id="ref41" level="file">
                             <did>
                                 <unittitle>Fields, Irving</unittitle>
                                 <container id="cid22026" type="Box" label="Text">2</container>
                                 <container parent="cid22026" type="Folder">28</container>
                                 <unitdate>1959, 1961</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref42" level="file">
+                        </c>
+                        <c id="ref42" level="file">
                             <did>
                                 <unittitle>Five Feet of Swing</unittitle>
                                 <container id="cid22027" type="Box" label="Text">2</container>
                                 <container parent="cid22027" type="Folder">29</container>
                                 <unitdate>1951-1952, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref43" level="file">
+                        </c>
+                        <c id="ref43" level="file">
                             <did>
                                 <unittitle>Floren, Myron</unittitle>
                                 <container id="cid22028" type="Box" label="Text">2</container>
                                 <container parent="cid22028" type="Folder">30</container>
                                 <unitdate>1959-1960, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref44" level="file">
+                        </c>
+                        <c id="ref44" level="file">
                             <did>
                                 <unittitle>Fountain, Pete</unittitle>
                                 <container id="cid22029" type="Box" label="Text">2</container>
                                 <container parent="cid22029" type="Folder">31</container>
                                 <unitdate>1973, 1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref45" level="file">
+                        </c>
+                        <c id="ref45" level="file">
                             <did>
                                 <unittitle>Garber, Jan</unittitle>
                                 <container id="cid22030" type="Box" label="Text">2</container>
                                 <container parent="cid22030" type="Folder">32</container>
                                 <unitdate>1958-1970</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref46" level="file">
+                        </c>
+                        <c id="ref46" level="file">
                             <did>
                                 <unittitle>Girl Trios</unittitle>
                                 <container id="cid22031" type="Box" label="Text">2</container>
                                 <container parent="cid22031" type="Folder">33</container>
                                 <unitdate>undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref47" level="file">
+                        </c>
+                        <c id="ref47" level="file">
                             <did>
                                 <unittitle>Goodman, Benny</unittitle>
                                 <container id="cid22032" type="Box" label="Text">2</container>
                                 <container parent="cid22032" type="Folder">34</container>
                                 <unitdate>1965-1966, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref48" level="file">
+                        </c>
+                        <c id="ref48" level="file">
                             <did>
                                 <unittitle>Grant, Earl</unittitle>
                                 <container id="cid22033" type="Box" label="Text">2</container>
                                 <container parent="cid22033" type="Folder">35</container>
                                 <unitdate>1959-1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref49" level="file">
+                        </c>
+                        <c id="ref49" level="file">
                             <did>
                                 <unittitle>Gray, Glen</unittitle>
                                 <container id="cid22034" type="Box" label="Text">2</container>
                                 <container parent="cid22034" type="Folder">36</container>
                                 <unitdate>1952-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref50" level="file">
+                        </c>
+                        <c id="ref50" level="file">
                             <did>
                                 <unittitle>Haley, Bill</unittitle>
                                 <container id="cid22035" type="Box" label="Text">2</container>
                                 <container parent="cid22035" type="Folder">37</container>
                                 <unitdate>1954-1982, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref51" level="file">
+                        </c>
+                        <c id="ref51" level="file">
                             <did>
                                 <unittitle>Hampton, Lionel</unittitle>
                                 <container id="cid22036" type="Box" label="Text">2</container>
                                 <container parent="cid22036" type="Folder">38</container>
                                 <unitdate>1963-1965, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref52" level="file">
+                        </c>
+                        <c id="ref52" level="file">
                             <did>
                                 <unittitle>Haymes, Dick</unittitle>
                                 <container id="cid22037" type="Box" label="Text">2</container>
                                 <container parent="cid22037" type="Folder">39</container>
                                 <unitdate>1950-1958, 1973, 1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref53" level="file">
+                        </c>
+                        <c id="ref53" level="file">
                             <did>
                                 <unittitle>Herman, Woody</unittitle>
                                 <container id="cid22038" type="Box" label="Text">2</container>
                                 <container parent="cid22038" type="Folder">40</container>
                                 <unitdate>1948-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref54" level="file">
+                        </c>
+                        <c id="ref54" level="file">
                             <did>
                                 <unittitle>Hibbler, Al</unittitle>
                                 <container id="cid22039" type="Box" label="Text">2</container>
                                 <container parent="cid22039" type="Folder">41</container>
                                 <unitdate>1956-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref55" level="file">
+                        </c>
+                        <c id="ref55" level="file">
                             <did>
                                 <unittitle>Holiday, Billie</unittitle>
                                 <container id="cid22040" type="Box" label="Text">2</container>
                                 <container parent="cid22040" type="Folder">42</container>
                                 <unitdate>1959-1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref56" level="file">
+                        </c>
+                        <c id="ref56" level="file">
                             <did>
                                 <unittitle>Holly, Buddy</unittitle>
                                 <container id="cid22041" type="Box" label="Text">2</container>
                                 <container parent="cid22041" type="Folder">43</container>
                                 <unitdate>1965, 1970, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref57" level="file">
+                        </c>
+                        <c id="ref57" level="file">
                             <did>
                                 <unittitle>Houdini, Wilmoth</unittitle>
                                 <container id="cid22042" type="Box" label="Text">2</container>
                                 <container parent="cid22042" type="Folder">44</container>
                                 <unitdate>1973, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref84" level="file">
+                        </c>
+                        <c id="ref84" level="file">
                             <did>
                                 <unittitle>Ives, Burl</unittitle>
                                 <container id="cid27021" type="Box" label="Text">2</container>
                                 <container parent="cid27021" type="Folder">45</container>
                                 <unitdate>1953-1966, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref85" level="file">
+                        </c>
+                        <c id="ref85" level="file">
                             <did>
                                 <unittitle>Jesus Christ Superstar</unittitle>
                                 <container id="cid27022" type="Box" label="Text">2</container>
                                 <container parent="cid27022" type="Folder">46</container>
                                 <unitdate>1970</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref86" level="file">
+                        </c>
+                        <c id="ref86" level="file">
                             <did>
                                 <unittitle>Johnson, Buddy</unittitle>
                                 <container id="cid27023" type="Box" label="Text">2</container>
                                 <container parent="cid27023" type="Folder">47</container>
                                 <unitdate>1941-1973, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref87" level="file">
+                        </c>
+                        <c id="ref87" level="file">
                             <did>
                                 <unittitle>Jordan, Louis</unittitle>
                                 <container id="cid27024" type="Box" label="Text">2</container>
                                 <container parent="cid27024" type="Folder">48</container>
                                 <unitdate>1942-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref88" level="file">
+                        </c>
+                        <c id="ref88" level="file">
                             <did>
                                 <unittitle>Kaempfert, Bert</unittitle>
                             </did>
@@ -735,380 +735,380 @@
                                 <head>General note</head>
                                 <p>File includes 6-inch 45 RPM acetate, Harry Middlebrooks “It Makes No Difference” and 6-inch 45 RPM, Bert Kaempfert and His Orchestra “The Little Drummer Boy”/”Jingo Jango"</p>
                             </odd>
-                            <c05 id="ref288" level="file">
+                            <c id="ref288" level="file">
                                 <did>
                                     <unittitle></unittitle>
                                     <container id="cid458411" type="Box" label="Text">3</container>
                                     <container parent="cid458411" type="Folder">1</container>
                                     <unitdate>1966-1974, undated </unitdate>
                                 </did>
-                            </c05>
-                            <c05 id="ref89" level="file">
+                            </c>
+                            <c id="ref89" level="file">
                                 <did>
                                     <unittitle>Hamburg lyrics</unittitle>
                                     <container id="cid27029" type="Box" label="Text">3</container>
                                     <container parent="cid27029" type="Folder">2</container>
                                     <unitdate>1969-1970</unitdate>
                                 </did>
-                            </c05>
-                            <c05 id="ref90" level="file">
+                            </c>
+                            <c id="ref90" level="file">
                                 <did>
                                     <unittitle>Music from the film, "A Man Could Get Killed"</unittitle>
                                     <container id="cid27030" type="Box" label="Text">3</container>
                                     <container parent="cid27030" type="Folder">3</container>
                                     <unitdate>1966</unitdate>
                                 </did>
-                            </c05>
-                        </c04>
-                        <c04 id="ref91" level="file">
+                            </c>
+                        </c>
+                        <c id="ref91" level="file">
                             <did>
                                 <unittitle>Kaye, Sammy</unittitle>
                                 <container id="cid27031" type="Box" label="Text">3</container>
                                 <container parent="cid27031" type="Folder">4</container>
                                 <unitdate>1960-1970</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref92" level="file">
+                        </c>
+                        <c id="ref92" level="file">
                             <did>
                                 <unittitle>King, Wayne</unittitle>
                                 <container id="cid27032" type="Box" label="Text">3</container>
                                 <container parent="cid27032" type="Folder">5</container>
                                 <unitdate>1955-1970, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref93" level="file">
+                        </c>
+                        <c id="ref93" level="file">
                             <did>
                                 <unittitle>Kirk, Andy</unittitle>
                                 <container id="cid27033" type="Box" label="Text">3</container>
                                 <container parent="cid27033" type="Folder">6</container>
                                 <unitdate>1936-1954, 1975-1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref94" level="file">
+                        </c>
+                        <c id="ref94" level="file">
                             <did>
                                 <unittitle>Latin music (Machito, Miguelito Valdes, Noro Morales, Esy Morales, Quarteto Caney)</unittitle>
                                 <container id="cid27034" type="Box" label="Text">3</container>
                                 <container parent="cid27034" type="Folder">7</container>
                                 <unitdate>1964, undated </unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref95" level="file">
+                        </c>
+                        <c id="ref95" level="file">
                             <did>
                                 <unittitle>Lawson-Haggart</unittitle>
                                 <container id="cid27035" type="Box" label="Text">3</container>
                                 <container parent="cid27035" type="Folder">8</container>
                                 <unitdate>1958-1963, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref96" level="file">
+                        </c>
+                        <c id="ref96" level="file">
                             <did>
                                 <unittitle>Lee, Peggy</unittitle>
                                 <container id="cid27036" type="Box" label="Text">3</container>
                                 <container parent="cid27036" type="Folder">9</container>
                                 <unitdate>1955-1963, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref97" level="file">
+                        </c>
+                        <c id="ref97" level="file">
                             <did>
                                 <unittitle>Lewis, Ted</unittitle>
                                 <container id="cid27037" type="Box" label="Text">3</container>
                                 <container parent="cid27037" type="Folder">10</container>
                                 <unitdate>1956, 1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref98" level="file">
+                        </c>
+                        <c id="ref98" level="file">
                             <did>
                                 <unittitle>Lombardo, Guy</unittitle>
                                 <container id="cid27038" type="Box" label="Text">3</container>
                                 <container parent="cid27038" type="Folder">11</container>
                                 <unitdate>1954-1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref99" level="file">
+                        </c>
+                        <c id="ref99" level="file">
                             <did>
                                 <unittitle>Maize, Joe</unittitle>
                                 <container id="cid27039" type="Box" label="Text">3</container>
                                 <container parent="cid27039" type="Folder">12</container>
                                 <unitdate>undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref100" level="file">
+                        </c>
+                        <c id="ref100" level="file">
                             <did>
                                 <unittitle>Marches</unittitle>
                                 <container id="cid27040" type="Box" label="Text">3</container>
                                 <container parent="cid27040" type="Folder">13</container>
                                 <unitdate>1951-1967, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref101" level="file">
+                        </c>
+                        <c id="ref101" level="file">
                             <did>
                                 <unittitle>Martin, Freddy</unittitle>
                                 <container id="cid27041" type="Box" label="Text">3</container>
                                 <container parent="cid27041" type="Folder">14</container>
                                 <unitdate>1967, 1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref102" level="file">
+                        </c>
+                        <c id="ref102" level="file">
                             <did>
                                 <unittitle>McCall, Mary Ann</unittitle>
                                 <container id="cid27042" type="Box" label="Text">3</container>
                                 <container parent="cid27042" type="Folder">15</container>
                                 <unitdate>1959</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref103" level="file">
+                        </c>
+                        <c id="ref103" level="file">
                             <did>
                                 <unittitle>McGuire Sisters</unittitle>
                                 <container id="cid27043" type="Box" label="Text">3</container>
                                 <container parent="cid27043" type="Folder">16</container>
                                 <unitdate>1957-1966, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref104" level="file">
+                        </c>
+                        <c id="ref104" level="file">
                             <did>
                                 <unittitle>Mendez, Rafael</unittitle>
                                 <container id="cid27044" type="Box" label="Text">3</container>
                                 <container parent="cid27044" type="Folder">17</container>
                                 <unitdate>1956-1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref105" level="file">
+                        </c>
+                        <c id="ref105" level="file">
                             <did>
                                 <unittitle>Millinder, Lucky</unittitle>
                                 <container id="cid27045" type="Box" label="Text">3</container>
                                 <container parent="cid27045" type="Folder">18</container>
                                 <unitdate>1942-1947, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref106" level="file">
+                        </c>
+                        <c id="ref106" level="file">
                             <did>
                                 <unittitle>The Modernaires</unittitle>
                                 <container id="cid27046" type="Box" label="Text">3</container>
                                 <container parent="cid27046" type="Folder">19</container>
                                 <unitdate>1957-1958, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref107" level="file">
+                        </c>
+                        <c id="ref107" level="file">
                             <did>
                                 <unittitle>Mooney, Art</unittitle>
                                 <container id="cid27047" type="Box" label="Text">3</container>
                                 <container parent="cid27047" type="Folder">20</container>
                                 <unitdate>1961</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref108" level="file">
+                        </c>
+                        <c id="ref108" level="file">
                             <did>
                                 <unittitle>Morgan, Russ</unittitle>
                                 <container id="cid27048" type="Box" label="Text">3</container>
                                 <container parent="cid27048" type="Folder">21</container>
                                 <unitdate>1950-1974, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref109" level="file">
+                        </c>
+                        <c id="ref109" level="file">
                             <did>
                                 <unittitle>Polkas</unittitle>
                                 <container id="cid27049" type="Box" label="Text">3</container>
                                 <container parent="cid27049" type="Folder">22</container>
                                 <unitdate>1959-1968, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref110" level="file">
+                        </c>
+                        <c id="ref110" level="file">
                             <did>
                                 <unittitle>Ray Charles Singers</unittitle>
                                 <container id="cid27050" type="Box" label="Text">3</container>
                                 <container parent="cid27050" type="Folder">23</container>
                                 <unitdate>1958-1966</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref111" level="file">
+                        </c>
+                        <c id="ref111" level="file">
                             <did>
                                 <unittitle>Record personnel sheets, Decca Records</unittitle>
                                 <container id="cid27051" type="Box" label="Text">3</container>
                                 <container parent="cid27051" type="Folder">24</container>
                                 <unitdate>1944-1958</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref112" level="file">
+                        </c>
+                        <c id="ref112" level="file">
                             <did>
                                 <unittitle>Russell, George</unittitle>
                                 <container id="cid27052" type="Box" label="Text">3</container>
                                 <container parent="cid27052" type="Folder">25</container>
                                 <unitdate>1960-1961, 1971, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref113" level="file">
+                        </c>
+                        <c id="ref113" level="file">
                             <did>
                                 <unittitle>Scott, Little Jimmy</unittitle>
                                 <container id="cid27053" type="Box" label="Text">3</container>
                                 <container parent="cid27053" type="Folder">26</container>
                                 <unitdate>1969, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref114" level="file">
+                        </c>
+                        <c id="ref114" level="file">
                             <did>
                                 <unittitle>Shaw, Artie</unittitle>
                                 <container id="cid27054" type="Box" label="Text">3</container>
                                 <container parent="cid27054" type="Folder">27</container>
                                 <unitdate>1950-1956, 1975, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref115" level="file">
+                        </c>
+                        <c id="ref115" level="file">
                             <did>
                                 <unittitle>Smith, Ethel</unittitle>
                                 <container id="cid27055" type="Box" label="Text">3</container>
                                 <container parent="cid27055" type="Folder">28</container>
                                 <unitdate>1955-1969, 1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref116" level="file">
+                        </c>
+                        <c id="ref116" level="file">
                             <did>
                                 <unittitle>Southern, Jeri</unittitle>
                                 <container id="cid27056" type="Box" label="Text">3</container>
                                 <container parent="cid27056" type="Folder">29</container>
                                 <unitdate>1954-1966</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref117" level="file">
+                        </c>
+                        <c id="ref117" level="file">
                             <did>
                                 <unittitle>Spanier, Muggsy</unittitle>
                                 <container id="cid27057" type="Box" label="Text">3</container>
                                 <container parent="cid27057" type="Folder">30</container>
                                 <unitdate>1944-1954, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref118" level="file">
+                        </c>
+                        <c id="ref118" level="file">
                             <did>
                                 <unittitle>Square dance</unittitle>
                                 <container id="cid27058" type="Box" label="Text">3</container>
                                 <container parent="cid27058" type="Folder">31</container>
                                 <unitdate>1959, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref119" level="file">
+                        </c>
+                        <c id="ref119" level="file">
                             <did>
                                 <unittitle>Tharpe, Sister Rosetta</unittitle>
                                 <container id="cid27059" type="Box" label="Text">3</container>
                                 <container parent="cid27059" type="Folder">32</container>
                                 <unitdate>1951, 1958, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref120" level="file">
+                        </c>
+                        <c id="ref120" level="file">
                             <did>
                                 <unittitle>Valentino Tangos</unittitle>
                                 <container id="cid27060" type="Box" label="Text">3</container>
                                 <container parent="cid27060" type="Folder">33</container>
                                 <unitdate>1953-1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref121" level="file">
+                        </c>
+                        <c id="ref121" level="file">
                             <did>
                                 <unittitle>Viennese waltzes</unittitle>
                                 <container id="cid27061" type="Box" label="Text">3</container>
                                 <container parent="cid27061" type="Folder">34</container>
                                 <unitdate>1950-1959</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref122" level="file">
+                        </c>
+                        <c id="ref122" level="file">
                             <did>
                                 <unittitle>Waring, Fred</unittitle>
                                 <container id="cid27062" type="Box" label="Text">3</container>
                                 <container parent="cid27062" type="Folder">35</container>
                                 <unitdate>1964-1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref123" level="file">
+                        </c>
+                        <c id="ref123" level="file">
                             <did>
                                 <unittitle>Webb, Chick</unittitle>
                                 <container id="cid27063" type="Box" label="Text">3</container>
                                 <container parent="cid27063" type="Folder">36</container>
                                 <unitdate>1967-1976, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref124" level="file">
+                        </c>
+                        <c id="ref124" level="file">
                             <did>
                                 <unittitle>Welk, Lawrence</unittitle>
                                 <container id="cid27064" type="Box" label="Text">3</container>
                                 <container parent="cid27064" type="Folder">37</container>
                                 <unitdate>1955-1969, undated</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref125" level="file">
+                        </c>
+                        <c id="ref125" level="file">
                             <did>
                                 <unittitle>Williams, Roger</unittitle>
                                 <container id="cid27065" type="Box" label="Text">3</container>
                                 <container parent="cid27065" type="Folder">38</container>
                                 <unitdate>1966-1971, undated	</unitdate>
                             </did>
-                        </c04>
-                    </c03>
-                    <c03 id="ref126" level="file">
+                        </c>
+                    </c>
+                    <c id="ref126" level="file">
                         <did>
                             <unittitle>Brunswick albums</unittitle>
                         </did>
-                        <c04 id="ref289" level="file">
+                        <c id="ref289" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid458409" type="Box" label="Text">3</container>
                                 <container parent="cid458409" type="Folder">39</container>
                                 <unitdate>1946</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref127" level="file">
+                        </c>
+                        <c id="ref127" level="file">
                             <did>
                                 <unittitle>Master index</unittitle>
                                 <container id="cid27067" type="Box" label="Text">3</container>
                                 <container parent="cid27067" type="Folder">40</container>
                                 <unitdate>1946</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref128" level="file">
+                        </c>
+                        <c id="ref128" level="file">
                             <did>
                                 <unittitle>Master record list</unittitle>
                                 <container id="cid27068" type="Box" label="Text">3</container>
                                 <container parent="cid27068" type="Folder">41</container>
                                 <unitdate>1947</unitdate>
                             </did>
-                        </c04>
-                    </c03>
-                    <c03 id="ref129" level="file">
+                        </c>
+                    </c>
+                    <c id="ref129" level="file">
                         <did>
                             <unittitle>Decca Numerical Catalog</unittitle>
                         </did>
-                        <c04 id="ref290" level="file">
+                        <c id="ref290" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid458410" type="Box" label="Text">3</container>
                                 <container parent="cid458410" type="Folder">42</container>
                                 <unitdate>circa 1940s</unitdate>
                             </did>
-                        </c04>
-                        <c04 id="ref130" level="file">
+                        </c>
+                        <c id="ref130" level="file">
                             <did>
                                 <unittitle></unittitle>
                                 <container id="cid27070" type="Box" label="Text">3</container>
                                 <container parent="cid27070" type="Folder">43</container>
                                 <unitdate>circa 1950</unitdate>
                             </did>
-                        </c04>
-                    </c03>
-                    <c03 id="ref131" level="file">
+                        </c>
+                    </c>
+                    <c id="ref131" level="file">
                         <did>
                             <unittitle>Jazz data and albums</unittitle>
                             <container id="cid27071" type="Box" label="Text">3</container>
                             <container parent="cid27071" type="Folder">44</container>
                             <unitdate>1945</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref132" level="file">
+                    </c>
+                    <c id="ref132" level="file">
                         <did>
                             <unittitle>Memoranda regarding disc jockeys</unittitle>
                             <container id="cid27072" type="Box" label="Text">3</container>
                             <container parent="cid27072" type="Folder">45</container>
                             <unitdate>1960</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref61" level="subseries">
+                    </c>
+                </c>
+                <c id="ref61" level="subseries">
                     <did>
                         <unittitle>Subseries 3: Lyrics and Sheet Music</unittitle>
                         <unitdate>1940-1970, undated</unitdate>
@@ -1117,15 +1117,15 @@
                         <head>Scope and Contents</head>
                         <p>Arranged alphabetically by title, with miscellaneous lyrics and fragments at the end.</p>
                     </scopecontent>
-                    <c03 id="ref133" level="file">
+                    <c id="ref133" level="file">
                         <did>
                             <unittitle>A-D</unittitle>
                             <container id="cid27073" type="Box" label="Text">4</container>
                             <container parent="cid27073" type="Folder">1</container>
                             <unitdate>1945-1968, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref134" level="file">
+                    </c>
+                    <c id="ref134" level="file">
                         <did>
                             <unittitle>E-L</unittitle>
                             <container id="cid27074" type="Box" label="Text">4</container>
@@ -1136,16 +1136,16 @@
                             <head>General note</head>
                             <p>Includes 6-inch 45 RPM acetate recording of “Lovely”</p>
                         </odd>
-                    </c03>
-                    <c03 id="ref135" level="file">
+                    </c>
+                    <c id="ref135" level="file">
                         <did>
                             <unittitle>M-R</unittitle>
                             <container id="cid27075" type="Box" label="Text">4</container>
                             <container parent="cid27075" type="Folder">3</container>
                             <unitdate>1947-1967, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref136" level="file">
+                    </c>
+                    <c id="ref136" level="file">
                         <did>
                             <unittitle>S-T</unittitle>
                             <container id="cid27076" type="Box" label="Text">4</container>
@@ -1156,8 +1156,8 @@
                             <head>General note</head>
                             <p>Includes 10-inch 45 RPM EP of “Since I Fell in Love with You” and 10-inch 45 RPM acetate recording of “Steppin’ Pretty”</p>
                         </odd>
-                    </c03>
-                    <c03 id="ref137" level="file">
+                    </c>
+                    <c id="ref137" level="file">
                         <did>
                             <unittitle>U-Z</unittitle>
                             <container id="cid27077" type="Box" label="Text">4</container>
@@ -1168,18 +1168,18 @@
                             <head>General note</head>
                             <p>Includes 6-inch 45 RPM recording of “Unbelievable”</p>
                         </odd>
-                    </c03>
-                    <c03 id="ref138" level="file">
+                    </c>
+                    <c id="ref138" level="file">
                         <did>
                             <unittitle>Miscellaneous handwritten lyrics and song fragments</unittitle>
                             <container id="cid27078" type="Box" label="Text">4</container>
                             <container parent="cid27078" type="Folder">6</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-            </c01>
-            <c01 id="ref62" level="series">
+                    </c>
+                </c>
+            </c>
+            <c id="ref62" level="series">
                 <did>
                     <unittitle>Series II: Personal Files</unittitle>
                     <unitdate>1938-2000</unitdate>
@@ -1188,64 +1188,64 @@
                     <head>Scope and Contents</head>
                     <p>Series II: Personal Files contains miscellaneous papers not directly attributable to Gabler’s work at Commodore and Decca Records, including awards, clippings, a Duke Ellington concert program, correspondence, the contents of an index card file, memoranda and notes, and radio transcripts. The folders are organized by type and then chronologically.</p>
                 </scopecontent>
-                <c02 id="ref139" level="subseries">
+                <c id="ref139" level="subseries">
                     <did>
                         <unittitle>Awards</unittitle>
                     </did>
-                    <c03 id="ref140" level="file">
+                    <c id="ref140" level="file">
                         <did>
                             <unittitle>National Academy of Recording Arts and Sciences (NARAS)</unittitle>
                             <container id="cid27079" type="Box" label="Text">4</container>
                             <container parent="cid27079" type="Folder">7</container>
                             <unitdate>1974-1984, 1995</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref241" level="item">
+                    </c>
+                    <c id="ref241" level="item">
                         <did>
                             <unittitle>National Academy of Recording Arts &amp; Sciences (NARAS) President’s Merit Award</unittitle>
                             <container id="cid29019" type="Box" label="Text">OS1</container>
                             <container parent="cid29019" type="Object">1</container>
                             <unitdate>1995</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref243" level="item">
+                    </c>
+                    <c id="ref243" level="item">
                         <did>
                             <unittitle>NARAS Hall of Fame Award for Lionel Hampton’s “Flying Home”</unittitle>
                             <container id="cid29020" type="Box" label="Text">OS1</container>
                             <container parent="cid29020" type="Object">2</container>
                             <unitdate>1996</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref141" level="file">
+                    </c>
+                    <c id="ref141" level="file">
                         <did>
                             <unittitle>Songwriters’ Hall of Fame</unittitle>
                             <container id="cid27080" type="Box" label="Text">4</container>
                             <container parent="cid27080" type="Folder">8</container>
                             <unitdate>2000</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref142" level="subseries">
+                    </c>
+                </c>
+                <c id="ref142" level="subseries">
                     <did>
                         <unittitle>Clippings</unittitle>
                     </did>
-                    <c03 id="ref143" level="file">
+                    <c id="ref143" level="file">
                         <did>
                             <unittitle>Articles by Ralph Gleason and Gleason obituary</unittitle>
                             <container id="cid27081" type="Box" label="Text">4</container>
                             <container parent="cid27081" type="Folder">9</container>
                             <unitdate>1958, 1971-1975</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref144" level="file">
+                    </c>
+                    <c id="ref144" level="file">
                         <did>
                             <unittitle>Guthrie, Woody</unittitle>
                             <container id="cid27082" type="Box" label="Text">4</container>
                             <container parent="cid27082" type="Folder">10</container>
                             <unitdate>1967</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref145" level="file">
+                    </c>
+                    <c id="ref145" level="file">
                         <did>
                             <unittitle>“A Lady Named Billie And I” 
                                 <title>Downbeat</title></unittitle>
@@ -1253,61 +1253,61 @@
                             <container parent="cid27083" type="Folder">11</container>
                             <unitdate>1973 March 29, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref146" level="file">
+                    </c>
+                    <c id="ref146" level="file">
                         <did>
                             <unittitle>Wellstood, Dick</unittitle>
                             <container id="cid27084" type="Box" label="Text">4</container>
                             <container parent="cid27084" type="Folder">12</container>
                             <unitdate>1976, undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref147" level="file">
+                    </c>
+                </c>
+                <c id="ref147" level="file">
                     <did>
                         <unittitle>Duke Ellington and His Famous Orchestra, Fifth Annual New Year’s Concert (concert program)</unittitle>
                         <container id="cid27085" type="Box" label="Text">4</container>
                         <container parent="cid27085" type="Folder">13</container>
                         <unitdate>1939</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref148" level="subseries">
+                </c>
+                <c id="ref148" level="subseries">
                     <did>
                         <unittitle>Correspondence</unittitle>
                     </did>
-                    <c03 id="ref149" level="file">
+                    <c id="ref149" level="file">
                         <did>
                             <unittitle>Goldfarb, Herman</unittitle>
                             <container id="cid27086" type="Box" label="Text">4</container>
                             <container parent="cid27086" type="Folder">14</container>
                             <unitdate>1965, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref150" level="file">
+                    </c>
+                    <c id="ref150" level="file">
                         <did>
                             <unittitle>Jolson-Krasna, Erle</unittitle>
                             <container id="cid27087" type="Box" label="Text">4</container>
                             <container parent="cid27087" type="Folder">15</container>
                             <unitdate>1962-1969</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref151" level="file">
+                    </c>
+                    <c id="ref151" level="file">
                         <did>
                             <unittitle>Lomax Records</unittitle>
                             <container id="cid27088" type="Box" label="Text">4</container>
                             <container parent="cid27088" type="Folder">16</container>
                             <unitdate>1939</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref152" level="file">
+                    </c>
+                    <c id="ref152" level="file">
                         <did>
                             <unittitle>Miscellaneous</unittitle>
                             <container id="cid27089" type="Box" label="Text">4</container>
                             <container parent="cid27089" type="Folder">17</container>
                             <unitdate>1933-1945, 1966, 1987, 1994</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref254" level="file">
+                    </c>
+                    <c id="ref254" level="file">
                         <did>
                             <unittitle>Weinstein, Bob</unittitle>
                             <container id="cid32001" type="Box" label="Text">4</container>
@@ -1319,74 +1319,76 @@
                             <p>Letter was originally found in 
                                 <title render="italic">John Hammond: On Record: An Autobiography</title>.</p>
                         </odd>
-                    </c03>
-                </c02>
-                <c02 id="ref153" level="file">
+                    </c>
+                </c>
+                <c id="ref153" level="file">
                     <did>
-                        <unittitle>Index card file</unittitle>
+                        <unittitle>Index cards</unittitle>
+                        <container id="cid1117001" type="Box" label="Text">4</container>
+                        <container parent="cid1117001" type="Folder">19</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref154" level="subseries">
+                </c>
+                <c id="ref154" level="subseries">
                     <did>
                         <unittitle>Interview transcripts</unittitle>
                     </did>
-                    <c03 id="ref155" level="file">
+                    <c id="ref155" level="file">
                         <did>
                             <unittitle>Milt Gabler, interviewed by Ralph Gleason</unittitle>
                             <container id="cid27091" type="Box" label="Text">4</container>
-                            <container parent="cid27091" type="Folder">19</container>
+                            <container parent="cid27091" type="Folder">20</container>
                             <unitdate>1974</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref156" level="file">
+                    </c>
+                    <c id="ref156" level="file">
                         <did>
                             <unittitle>Milt Gabler, Oral History Research Office, Columbia University</unittitle>
                             <container id="cid27092" type="Box" label="Text">4</container>
-                            <container parent="cid27092" type="Folder">20</container>
+                            <container parent="cid27092" type="Folder">21</container>
                             <unitdate>1959</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref157" level="file">
+                    </c>
+                </c>
+                <c id="ref157" level="file">
                     <did>
                         <unittitle>Memoranda and notes, miscellaneous</unittitle>
                         <container id="cid27093" type="Box" label="Text">4</container>
-                        <container parent="cid27093" type="Folder">21</container>
+                        <container parent="cid27093" type="Folder">22</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref158" level="file">
+                </c>
+                <c id="ref158" level="file">
                     <did>
                         <unittitle>Radio transcripts</unittitle>
                     </did>
-                    <c03 id="ref159" level="file">
+                    <c id="ref159" level="file">
                         <did>
                             <unittitle>The Benny Goodman Show</unittitle>
                             <container id="cid27094" type="Box" label="Text">4</container>
-                            <container parent="cid27094" type="Folder">22</container>
+                            <container parent="cid27094" type="Folder">23</container>
                             <unitdate>1941 April 21</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref160" level="file">
+                    </c>
+                    <c id="ref160" level="file">
                         <did>
                             <unittitle>Dr. Jazz, with accompanying fan mail</unittitle>
                             <container id="cid27095" type="Box" label="Text">4</container>
-                            <container parent="cid27095" type="Folder">23</container>
+                            <container parent="cid27095" type="Folder">24</container>
                             <unitdate>1938</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref161" level="file">
+                    </c>
+                    <c id="ref161" level="file">
                         <did>
                             <unittitle>Jam Session</unittitle>
                             <container id="cid27096" type="Box" label="Text">4</container>
-                            <container parent="cid27096" type="Folder">24-25</container>
+                            <container parent="cid27096" type="Folder">25-26</container>
                             <unitdate>circa 1940s</unitdate>
                         </did>
-                    </c03>
-                </c02>
-            </c01>
-            <c01 id="ref2" level="series">
+                    </c>
+                </c>
+            </c>
+            <c id="ref2" level="series">
                 <did>
                     <unittitle>Series III: Printed Materials</unittitle>
                     <unitdate>1949-1995</unitdate>
@@ -1399,11 +1401,11 @@
                     <head>Separated Materials</head>
                     <p>Many publications have been transferred to the library collection. Please search for the "Milt Gabler Collection" in the library catalog for a list of donated titles.</p>
                 </separatedmaterial>
-                <c02 id="ref248" level="file">
+                <c id="ref248" level="file">
                     <did>
                         <unittitle>Bound Periodicals</unittitle>
                     </did>
-                    <c03 id="ref245" level="item">
+                    <c id="ref245" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">DownBeat</title> yearbook</unittitle>
@@ -1411,8 +1413,8 @@
                             <container parent="cid29023" type="Object">1</container>
                             <unitdate>1942</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref246" level="item">
+                    </c>
+                    <c id="ref246" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">DownBeat</title> yearbook</unittitle>
@@ -1420,8 +1422,8 @@
                             <container parent="cid29024" type="Object">2</container>
                             <unitdate>1943</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref247" level="item">
+                    </c>
+                    <c id="ref247" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">DownBeat</title> yearbook</unittitle>
@@ -1429,13 +1431,13 @@
                             <container parent="cid29025" type="Object">3</container>
                             <unitdate>1944</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref249" level="file">
+                    </c>
+                </c>
+                <c id="ref249" level="file">
                     <did>
                         <unittitle>Newspapers</unittitle>
                     </did>
-                    <c03 id="ref250" level="item">
+                    <c id="ref250" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Daily News</title> (New York)</unittitle>
@@ -1443,8 +1445,8 @@
                             <container parent="cid895001" type="Object">3</container>
                             <unitdate>1977 July 15</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref251" level="item">
+                    </c>
+                    <c id="ref251" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Daily News</title> (New York)</unittitle>
@@ -1452,8 +1454,8 @@
                             <container parent="cid895002" type="Object">4</container>
                             <unitdate>1977 August 12</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref252" level="item">
+                    </c>
+                    <c id="ref252" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">New York Post</title></unittitle>
@@ -1461,8 +1463,8 @@
                             <container parent="cid895003" type="Object">5</container>
                             <unitdate>1977 July 15</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref253" level="item">
+                    </c>
+                    <c id="ref253" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">New York Post</title></unittitle>
@@ -1470,13 +1472,13 @@
                             <container parent="cid895004" type="Object">6</container>
                             <unitdate>1977 August 12</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref207" level="subseries">
+                    </c>
+                </c>
+                <c id="ref207" level="subseries">
                     <did>
                         <unittitle>Programs</unittitle>
                     </did>
-                    <c03 id="ref208" level="item">
+                    <c id="ref208" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">The Grammy Winners Book</title>, 36th Annual Grammy Awards</unittitle>
@@ -1484,29 +1486,29 @@
                             <container parent="cid118001" type="Object">1</container>
                             <unitdate>1994</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref209" level="item">
+                    </c>
+                    <c id="ref209" level="item">
                         <did>
                             <unittitle>National Academy of Recording Arts &amp; Sciences (NARAS) ceremony honoring James B. Conkling</unittitle>
                             <container id="cid118002" type="Box" label="Text">5</container>
                             <container parent="cid118002" type="Object">2</container>
                             <unitdate>1995</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref210" level="item">
+                    </c>
+                    <c id="ref210" level="item">
                         <did>
                             <unittitle>World Championship of Jazz</unittitle>
                             <container id="cid118003" type="Box" label="Text">5</container>
                             <container parent="cid118003" type="Object">3</container>
                             <unitdate>1975</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref211" level="subseries">
+                    </c>
+                </c>
+                <c id="ref211" level="subseries">
                     <did>
                         <unittitle>Sheet music</unittitle>
                     </did>
-                    <c03 id="ref212" level="item">
+                    <c id="ref212" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Dixieland New Orleans Folio No. 1</title>, Melrose Music Corp.</unittitle>
@@ -1514,8 +1516,8 @@
                             <container parent="cid118004" type="Object">4</container>
                             <unitdate>1950</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref213" level="item">
+                    </c>
+                    <c id="ref213" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Dixieland New Orleans Folio No. 2</title>, Melrose Music Corp.</unittitle>
@@ -1523,8 +1525,8 @@
                             <container parent="cid118005" type="Object">5</container>
                             <unitdate>1950</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref214" level="item">
+                    </c>
+                    <c id="ref214" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Dixieland New Orleans Folio No. 3</title>, Melrose Music Corp.</unittitle>
@@ -1532,8 +1534,8 @@
                             <container parent="cid118006" type="Object">6</container>
                             <unitdate>1950</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref215" level="item">
+                    </c>
+                    <c id="ref215" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Jelly Roll Morton’s Folio</title>, Melrose Music Corp.</unittitle>
@@ -1541,18 +1543,18 @@
                             <container parent="cid118007" type="Object">7</container>
                             <unitdate>1949</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref216" level="item">
+                    </c>
+                    <c id="ref216" level="item">
                         <did>
                             <unittitle>Miscellaneous</unittitle>
                             <container id="cid118008" type="Box" label="Text">5</container>
                             <container parent="cid118008" type="Folder">1</container>
                             <unitdate>1949-1962</unitdate>
                         </did>
-                    </c03>
-                </c02>
-            </c01>
-            <c01 id="ref3" level="series">
+                    </c>
+                </c>
+            </c>
+            <c id="ref3" level="series">
                 <did>
                     <unittitle>Series IV: 1/4-inch Audiotapes [RESTRICTED]</unittitle>
                     <unitdate>1937-1986, undated</unitdate>
@@ -1569,63 +1571,63 @@
                     <head>Access Restrictions</head>
                     <p>The 1/4-inch audiotapes in this series are on defunct media and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                 </accessrestrict>
-                <c02 id="ref219" level="item">
+                <c id="ref219" level="item">
                     <did>
                         <unittitle>Bill Culter Tribute to Commodore Music Shop and Milt Gabler</unittitle>
                         <container id="cid263010" type="Box" label="Audio">5</container>
                         <container parent="cid263010" type="Reel">1</container>
                         <unitdate>1960 November 27</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref220" level="item">
+                </c>
+                <c id="ref220" level="item">
                     <did>
                         <unittitle>George Barber Show, Greenwich CT -- "program tapes of our show"</unittitle>
                         <container id="cid263011" type="Box" label="Audio">5</container>
                         <container parent="cid263011" type="Reel">2-3</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref221" level="item">
+                </c>
+                <c id="ref221" level="item">
                     <did>
                         <unittitle>WBT Charlotte, NC. Radio show "Milt Gabler - Starmaker"</unittitle>
                         <container id="cid263012" type="Box" label="Audio">5</container>
                         <container parent="cid263012" type="Reel">4-5</container>
                         <unitdate>1965 August</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref222" level="item">
+                </c>
+                <c id="ref222" level="item">
                     <did>
                         <unittitle>WVOX Milt Gabler - Bert Kaempfert</unittitle>
                         <container id="cid263013" type="Box" label="Audio">5</container>
                         <container parent="cid263013" type="Reel">6-7</container>
                         <unitdate>1981 September 18</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref223" level="item">
+                </c>
+                <c id="ref223" level="item">
                     <did>
                         <unittitle>WVOX Milt Gabler – Harry Warren</unittitle>
                         <container id="cid263014" type="Box" label="Audio">5</container>
                         <container parent="cid263014" type="Reel">8-9</container>
                         <unitdate>1981 September 25</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref224" level="item">
+                </c>
+                <c id="ref224" level="item">
                     <did>
                         <unittitle>WVOX Milt Gabler – Victor Young</unittitle>
                         <container id="cid263015" type="Box" label="Audio">5</container>
                         <container parent="cid263015" type="Reel">10</container>
                         <unitdate>1981 October 9</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref225" level="item">
+                </c>
+                <c id="ref225" level="item">
                     <did>
                         <unittitle>WVOX Milt Gabler- Jack Pleis</unittitle>
                         <container id="cid263016" type="Box" label="Audio">5</container>
                         <container parent="cid263016" type="Reel">11</container>
                         <unitdate>1981 October 16</unitdate>
                     </did>
-                </c02>
-            </c01>
+                </c>
+            </c>
         </dsc>
     </archdesc>
 </ead>

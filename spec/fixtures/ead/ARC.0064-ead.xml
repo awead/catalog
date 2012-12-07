@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-10-02T11:42-0400</date>
+                <date>2012-12-07T13:00-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -64,7 +64,7 @@
                 <persname rules="aacr" source="local" role="Artist (art)">Hampton, Justin</persname>
             </origination>
             <origination label="creator">
-                <corpname rules="aacr" role="Printer (prt)">Hatch Show Prints (Firm)</corpname>
+                <corpname rules="aacr">Hatch Show Print (Firm)</corpname>
             </origination>
             <origination label="creator">
                 <persname rules="aacr" source="local" role="Artist (art)">Imagine, Paul</persname>
@@ -116,7 +116,7 @@
                 <title render="italic">Rising Low</title> (with Warren Haynes and Phil Lesh).</p>
         </bioghist>
         <custodhist id="ref4">
-            <head>Custodial History note</head>
+            <head>Custodial History</head>
             <p>The 
                 <title render="italic">American Artifact</title> Collection was received by the Rock and Roll Hall of Fame and Museum, Inc. as a gift from Merle Becker of Freakfilms, Inc. on January 12, 2010.</p>
         </custodhist>
@@ -135,7 +135,7 @@
             <subject source="lcsh">Rock music--Posters</subject>
         </controlaccess>
         <dsc>
-            <c01 id="ref10" level="item">
+            <c id="ref10" level="item">
                 <did>
                     <unittitle>Bell, Leia</unittitle>
                     <langmaterial>
@@ -152,8 +152,8 @@
                     <head>Limited Print Run</head>
                     <p>144/155</p>
                 </odd>
-            </c01>
-            <c01 id="ref12" level="item">
+            </c>
+            <c id="ref12" level="item">
                 <did>
                     <unittitle>Hatch Show Print</unittitle>
                     <langmaterial>
@@ -170,8 +170,8 @@
                     <head>Limited Print Run</head>
                     <p>Non-numbered edition of 150</p>
                 </odd>
-            </c01>
-            <c01 id="ref13" level="item">
+            </c>
+            <c id="ref13" level="item">
                 <did>
                     <unittitle>Imagine, Paul</unittitle>
                     <langmaterial>
@@ -188,8 +188,8 @@
                     <head>Limited Print Run</head>
                     <p>171/215</p>
                 </odd>
-            </c01>
-            <c01 id="ref14" level="item">
+            </c>
+            <c id="ref14" level="item">
                 <did>
                     <unittitle>Loren, Dennis</unittitle>
                     <langmaterial>
@@ -206,8 +206,8 @@
                     <head>Limited Print Run</head>
                     <p>Non-numbered edition of 150</p>
                 </odd>
-            </c01>
-            <c01 id="ref15" level="item">
+            </c>
+            <c id="ref15" level="item">
                 <did>
                     <unittitle>Mouse, Stanley</unittitle>
                     <langmaterial>
@@ -228,8 +228,8 @@
                     <head>General note</head>
                     <p>This item includes a black-and-white photograph of Stanley Mouse and Alton Kelley.</p>
                 </odd>
-            </c01>
-            <c01 id="ref16" level="item">
+            </c>
+            <c id="ref16" level="item">
                 <did>
                     <unittitle>PNE (Emek, Jermaine Rogers, Justin Hampton)</unittitle>
                     <langmaterial>
@@ -246,8 +246,8 @@
                     <head>Limited Print Run</head>
                     <p>Non-numbered edition of 35</p>
                 </odd>
-            </c01>
-            <c01 id="ref17" level="item">
+            </c>
+            <c id="ref17" level="item">
                 <did>
                     <unittitle>Scrojo</unittitle>
                     <langmaterial>
@@ -264,8 +264,8 @@
                     <head>Limited Print Run</head>
                     <p>122/150</p>
                 </odd>
-            </c01>
-            <c01 id="ref18" level="item">
+            </c>
+            <c id="ref18" level="item">
                 <did>
                     <unittitle>Shaw, Chris</unittitle>
                     <langmaterial>
@@ -278,8 +278,8 @@
                         <dimensions>29" x 20</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref20" level="item">
+            </c>
+            <c id="ref20" level="item">
                 <did>
                     <unittitle>Sperry, Chuck</unittitle>
                     <langmaterial>
@@ -292,8 +292,8 @@
                         <dimensions>29.5" x 20.25"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref35" level="file">
+            </c>
+            <c id="ref35" level="file">
                 <did>
                     <unittitle>Press kit and promotional cards</unittitle>
                     <langmaterial>
@@ -302,7 +302,7 @@
                     <container id="cid282001" type="Folder" label="Text">11</container>
                     <unitdate>2009</unitdate>
                 </did>
-            </c01>
+            </c>
         </dsc>
     </archdesc>
 </ead>

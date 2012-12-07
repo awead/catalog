@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-10-02T11:42-0400</date>
+                <date>2012-12-07T13:00-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -60,7 +60,7 @@
             <p>Processed by James A. Kohler, Project Archivist. Completed March 3, 2011. Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
         </processinfo>
         <custodhist id="ref70">
-            <head>Custodial History note</head>
+            <head>Custodial History</head>
             <p>The Martha Radosevich Posters were received by the Rock and Roll Hall of Fame and Museum as a gift from Radosevich on September 25, 2009.</p>
         </custodhist>
         <prefercite id="ref73">
@@ -123,7 +123,7 @@
             <subject source="lcsh">Rock music--Posters</subject>
         </controlaccess>
         <dsc>
-            <c01 id="ref2" level="item">
+            <c id="ref2" level="item">
                 <did>
                     <unittitle>Sex Pistols in 
                         <title render="italic">D.O.A.</title></unittitle>
@@ -137,8 +137,8 @@
                         <dimensions>22" x 13.75"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref35" level="item">
+            </c>
+            <c id="ref35" level="item">
                 <did>
                     <unittitle>Toots and the Maytals</unittitle>
                     <langmaterial>
@@ -151,8 +151,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref4" level="item">
+            </c>
+            <c id="ref4" level="item">
                 <did>
                     <unittitle>Blades</unittitle>
                     <langmaterial>
@@ -165,8 +165,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref6" level="item">
+            </c>
+            <c id="ref6" level="item">
                 <did>
                     <unittitle>Romeo Void, The Brat</unittitle>
                     <langmaterial>
@@ -179,8 +179,8 @@
                         <dimensions>17" x 11"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref8" level="item">
+            </c>
+            <c id="ref8" level="item">
                 <did>
                     <unittitle>Babylon Warriors, Martha Reeves, Hunt Sales and Big 9, Uprising</unittitle>
                     <langmaterial>
@@ -193,8 +193,12 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref10" level="item">
+                <phystech audience="internal" id="ref40">
+                    <head>Condition</head>
+                    <p>Placed in mylar.</p>
+                </phystech>
+            </c>
+            <c id="ref10" level="item">
                 <did>
                     <unittitle>Naughty Sweeties, Unit III with Venus</unittitle>
                     <langmaterial>
@@ -207,8 +211,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref12" level="item">
+            </c>
+            <c id="ref12" level="item">
                 <did>
                     <unittitle>King, B.B.</unittitle>
                     <langmaterial>
@@ -221,8 +225,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref14" level="item">
+            </c>
+            <c id="ref14" level="item">
                 <did>
                     <unittitle>Charles, Ray, with Ray Charles Orchestra and the Raeletts</unittitle>
                     <langmaterial>
@@ -235,8 +239,8 @@
                         <dimensions>21.75" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref16" level="item">
+            </c>
+            <c id="ref16" level="item">
                 <did>
                     <unittitle>Brown, James, Junior Walker, WIlson Pickett</unittitle>
                     <langmaterial>
@@ -249,8 +253,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref18" level="item">
+            </c>
+            <c id="ref18" level="item">
                 <did>
                     <unittitle>Johansen, David</unittitle>
                     <langmaterial>
@@ -263,8 +267,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref20" level="item">
+            </c>
+            <c id="ref20" level="item">
                 <did>
                     <unittitle>Benson, George</unittitle>
                     <langmaterial>
@@ -277,8 +281,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref22" level="item">
+            </c>
+            <c id="ref22" level="item">
                 <did>
                     <unittitle>James, Rick, Ray Parker Jr.</unittitle>
                     <langmaterial>
@@ -291,8 +295,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref24" level="item">
+            </c>
+            <c id="ref24" level="item">
                 <did>
                     <unittitle>3rd Annual Long Beach Blues Festival: Taj Mahal, Little Milton, Ester Phillips, The Johnny Otis Show, Gatemouth Brown</unittitle>
                     <langmaterial>
@@ -305,8 +309,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref26" level="item">
+            </c>
+            <c id="ref26" level="item">
                 <did>
                     <unittitle>Jerry Garcia Band, Sparks, The Cramps, Warren Zevon</unittitle>
                     <langmaterial>
@@ -319,8 +323,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref28" level="item">
+            </c>
+            <c id="ref28" level="item">
                 <did>
                     <unittitle>Burnett, T-Bone</unittitle>
                     <langmaterial>
@@ -333,8 +337,8 @@
                         <dimensions>22" x 13.75"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref30" level="item">
+            </c>
+            <c id="ref30" level="item">
                 <did>
                     <unittitle>Neville Brothers, Wild Tchoupitoulas, Peter Tosh</unittitle>
                     <langmaterial>
@@ -347,8 +351,8 @@
                         <dimensions>28" x 16"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref38" level="item">
+            </c>
+            <c id="ref38" level="item">
                 <did>
                     <unittitle>Gaye, Marvin</unittitle>
                     <langmaterial>
@@ -361,8 +365,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref41" level="item">
+            </c>
+            <c id="ref41" level="item">
                 <did>
                     <unittitle>The Blasters, Wailin' Walker and the House Rockers</unittitle>
                     <langmaterial>
@@ -375,8 +379,12 @@
                         <dimensions>16.75" x 11"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref44" level="item">
+                <phystech audience="internal" id="ref43">
+                    <head>Condition</head>
+                    <p>Placed in mylar.</p>
+                </phystech>
+            </c>
+            <c id="ref44" level="item">
                 <did>
                     <unittitle>Klemmer, John, James Brown, B.B. King</unittitle>
                     <langmaterial>
@@ -389,8 +397,12 @@
                         <dimensions>28" x 14.5"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref47" level="item">
+                <phystech audience="internal" id="ref46">
+                    <head>Condition</head>
+                    <p>Placed in mylar.</p>
+                </phystech>
+            </c>
+            <c id="ref47" level="item">
                 <did>
                     <unittitle>Vaughan, Stevie Ray</unittitle>
                     <langmaterial>
@@ -403,8 +415,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref49" level="item">
+            </c>
+            <c id="ref49" level="item">
                 <did>
                     <unittitle>Tosh, Peter</unittitle>
                     <langmaterial>
@@ -417,8 +429,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref51" level="item">
+            </c>
+            <c id="ref51" level="item">
                 <did>
                     <unittitle>Green, Al</unittitle>
                     <langmaterial>
@@ -431,8 +443,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref53" level="item">
+            </c>
+            <c id="ref53" level="item">
                 <did>
                     <unittitle>The Police, Berlin, The Fixx, Thompson Twins</unittitle>
                     <langmaterial>
@@ -445,8 +457,12 @@
                         <dimensions>21.75" x 13.75"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref56" level="item">
+                <phystech audience="internal" id="ref55">
+                    <head>Condition</head>
+                    <p>Placed in mylar.</p>
+                </phystech>
+            </c>
+            <c id="ref56" level="item">
                 <did>
                     <unittitle>4th Annual Long Beach Blues Festival: Bobby Blue Bland, Albert King, Willie Dixon, Johnny Copeland, Koko Taylor, Clifton Chenier, Jimmy McCracklin, Sonny Rhodes, Freddie Roulette</unittitle>
                     <langmaterial>
@@ -459,8 +475,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref58" level="item">
+            </c>
+            <c id="ref58" level="item">
                 <did>
                     <unittitle>Difford and Tilbrook</unittitle>
                     <langmaterial>
@@ -473,8 +489,8 @@
                         <dimensions>26" x 15"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref60" level="item">
+            </c>
+            <c id="ref60" level="item">
                 <did>
                     <unittitle>Psychedelic Furs, The Call</unittitle>
                     <container id="cid271026" type="Drawer-Folder" label="Graphic materials">FF.1.2-6</container>
@@ -484,8 +500,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref61" level="item">
+            </c>
+            <c id="ref61" level="item">
                 <did>
                     <unittitle>R.E.M., The Swimming Pool Q's</unittitle>
                     <langmaterial>
@@ -498,8 +514,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref63" level="item">
+            </c>
+            <c id="ref63" level="item">
                 <did>
                     <unittitle>Echo and the Bunnymen, The Fleshtones</unittitle>
                     <container id="cid271028" type="Drawer-Folder" label="Graphic materials">FF.1.2-6</container>
@@ -509,8 +525,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref65" level="item">
+            </c>
+            <c id="ref65" level="item">
                 <did>
                     <unittitle>5th Annual Long Beach Blues Festival: B.B. King, John Lee Hooker, Etta James, Denise LaSalle, Big Joe Turner, James Cotton, Pee Wee Crayton, Son Seals, Buddy Guy and Junior Wells, Jimmy Witherspoon, Brownie McGhee</unittitle>
                     <langmaterial>
@@ -523,8 +539,8 @@
                         <dimensions>22" x 14"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref32" level="item">
+            </c>
+            <c id="ref32" level="item">
                 <did>
                     <unittitle>Cliff, Jimmy</unittitle>
                     <langmaterial>
@@ -537,8 +553,8 @@
                         <dimensions>22" x 15.25"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
-            <c01 id="ref34" level="item">
+            </c>
+            <c id="ref34" level="item">
                 <did>
                     <unittitle>
                         <title render="italic">Rock on Films</title></unittitle>
@@ -552,7 +568,7 @@
                         <dimensions>21.75" x15"</dimensions>
                     </physdesc>
                 </did>
-            </c01>
+            </c>
         </dsc>
     </archdesc>
 </ead>

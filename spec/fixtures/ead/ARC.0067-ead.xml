@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-10-02T11:42-0400</date>
+                <date>2012-12-07T13:00-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -100,7 +100,7 @@
             <subject source="lcsh">Rhythm and blues musicians </subject>
         </controlaccess>
         <dsc>
-            <c01 id="ref5" level="file">
+            <c id="ref5" level="file">
                 <did>
                     <unittitle>
                         <title render="italic">Poetic License: In Poem and Song</title> manuscript</unittitle>
@@ -114,8 +114,8 @@
                     <head>Museum Accession Number</head>
                     <p>A1994.34.10</p>
                 </odd>
-            </c01>
-            <c01 id="ref4" level="file">
+            </c>
+            <c id="ref4" level="file">
                 <did>
                     <unittitle>Curtis Mayfield concert poster, Barcelona, Spain</unittitle>
                     <langmaterial>
@@ -130,8 +130,8 @@
                     <head>Museum Accession Numbers</head>
                     <p>A1994.34.4</p>
                 </odd>
-            </c01>
-            <c01 id="ref1" level="file">
+            </c>
+            <c id="ref1" level="file">
                 <did>
                     <unittitle>Negatives</unittitle>
                     <langmaterial>
@@ -140,8 +140,8 @@
                     <container id="cid324001" type="Folder" label="Graphic materials">17</container>
                     <unitdate>1958, 1972, 1983</unitdate>
                 </did>
-            </c01>
-            <c01 id="ref3" level="file">
+            </c>
+            <c id="ref3" level="file">
                 <did>
                     <unittitle>Photographs</unittitle>
                     <container id="cid324003" type="Folder" label="Graphic materials">18</container>
@@ -153,8 +153,8 @@
                     <head>Museum Accession Numbers</head>
                     <p>A1994.34.7-A1994.34.9, A1994.34.12-A1994.34.18</p>
                 </odd>
-            </c01>
-            <c01 id="ref2" level="file">
+            </c>
+            <c id="ref2" level="file">
                 <did>
                     <unittitle>Concert programs for Curtis Mayfield and the Superfly Band, South African tour, and Impressions Silver Anniversary Tour</unittitle>
                     <container id="cid1072003" type="Folder" label="Text">19</container>
@@ -164,7 +164,7 @@
                     <head>Museum Accession Numbers</head>
                     <p>A1994.34.19, A1994.34.20</p>
                 </odd>
-            </c01>
+            </c>
         </dsc>
     </archdesc>
 </ead>
