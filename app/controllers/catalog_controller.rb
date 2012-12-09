@@ -52,10 +52,16 @@ class CatalogController < ApplicationController
     config.add_facet_field 'language_facet',      :label => 'Language',           :limit => true
     config.add_facet_field 'genre_facet',         :label => 'Genre',              :limit => 20
 
+    config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
+     :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
+     :years_10 => { :label => 'within 10 Years', :fq => "pub_date:[#{Time.now.year - 10 } TO *]" },
+     :years_25 => { :label => 'within 25 Years', :fq => "pub_date:[#{Time.now.year - 25 } TO *]" }
+    }
+
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
     # handler defaults, or have no facets.
-    config.default_solr_params[:'facet.field'] = config.facet_fields.keys
+    config.add_facet_fields_to_solr_request!
 
     
     # ------------------------------------------------------------------------------------------
@@ -65,11 +71,11 @@ class CatalogController < ApplicationController
     # ------------------------------------------------------------------------------------------
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_display',         :label => 'Title:'
+    config.add_index_field 'title_display',               :label => 'Title:'
     config.add_index_field 'author_display',        :label => 'Author:', :helper_method => :render_facet_link
     config.add_index_field 'format',                :label => 'Format:'
 
-    # Links to external resources. N.B. Text for link is definein the add_show_field method
+    # Links to external resources. N.B. Text for link is defined in the add_show_field method
     config.add_index_field 'ohlink_url_display',    :label => 'OhioLink Resource:', :helper_method => :render_external_link
     config.add_index_field 'resource_url_display',  :label => 'Online Resource:',   :helper_method => :render_external_link
 
@@ -93,7 +99,7 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the show (single result) view
     # The ordering of the field names is the order of the display
     # None of these fields apply to ead documents or components
-    config.add_show_field "title_display",        :label => 'Title:'
+    config.add_show_field "title_display",         :label => 'Title:'
     config.add_show_field 'unititle_display',     :label => 'Uniform Title:'
     config.add_show_field 'title_addl_display',   :label => 'Additional Titles:'
 
@@ -106,10 +112,11 @@ class CatalogController < ApplicationController
     config.add_show_field 'series_display',       :label         => 'Series:',
                                                   :helper_method => :render_facet_link,
                                                   :facet         => 'series_facet'
-    
 
     config.add_show_field 'format',               :label => 'Format:'
     config.add_show_field 'format_dtl_display',   :label => 'Format Details:'
+    config.add_show_field 'unitdate_display',     :label => 'Dates:'
+    config.add_show_field 'location_display',     :label => 'Location:'
 
     # Links to external resources
     config.add_show_field 'ohlink_url_display',   :label         => 'OhioLink Resource:',
@@ -162,8 +169,29 @@ class CatalogController < ApplicationController
     config.add_show_field 'upc_display',          :label => 'UPC:'
     config.add_show_field 'pubnum_display',       :label => 'Publisher Number:'
     config.add_show_field 'id',                   :label => 'OCLC No.:'
-    config.add_show_field 'scopecontent_t',       :label => 'Scope and Contents:'
-    config.add_show_field 'separatedmaterial_t',  :label => 'Separated Materials:'
+ 
+    # Fields specific to ead components
+    config.add_show_field 'accessrestrict_display',     :label => 'Access Restrictions:'
+    config.add_show_field 'accruals_display',           :label => 'Accruals:'
+    config.add_show_field 'acqinfo_display',            :label => 'Acquistions:'
+    config.add_show_field 'altformavail_display',       :label => 'Alt. Form:'
+    config.add_show_field 'appraisal_display',          :label => 'Appraisal:'
+    config.add_show_field 'arrangement_display',        :label => 'Arrangement:'
+    config.add_show_field 'custodhist_display',         :label => 'Custodial History:'
+    config.add_show_field 'fileplan_display',           :label => 'File Plan:'
+    config.add_show_field 'originalsloc_display',       :label => 'Originals:'
+    config.add_show_field 'phystech_display',           :label => 'Physical Tech:'
+    config.add_show_field 'processinfo_display',        :label => 'Processing:'
+    config.add_show_field 'relatedmaterial_display',    :label => 'Related Material:'
+    config.add_show_field 'separatedmaterial_display',  :label => 'Separated Material:'
+    config.add_show_field 'scopecontent_display',       :label => 'Scope and Content:'
+    config.add_show_field 'userestrict_display',        :label => 'Usage Restrictions:'
+    config.add_show_field 'physdesc_display',           :label => 'Physical Description:'
+    config.add_show_field 'dimensions_display',         :label => 'Dimensions:'
+    config.add_show_field 'langmaterial_display',       :label => 'Language:'
+    config.add_show_field 'note_display',               :label => 'Notes:'
+    config.add_show_field 'accession_display',          :label => 'Accession Numbers:'
+    config.add_show_field 'print_run_display',          :label => 'Limited Print Run:'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
