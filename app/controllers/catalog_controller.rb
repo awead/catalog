@@ -164,7 +164,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'language_display',     :label => 'Language:'
     config.add_show_field 'publisher_display',    :label => 'Publisher:'
     config.add_show_field 'lc_callnum_display',   :label => 'Call Number:'
-    config.add_show_field 'isbn_t',               :label => 'ISBN:'
+    config.add_show_field 'isbn_display',         :label => 'ISBN:'
     config.add_show_field 'issn_display',         :label => 'ISSN:'
     config.add_show_field 'upc_display',          :label => 'UPC:'
     config.add_show_field 'pubnum_display',       :label => 'Publisher Number:'
