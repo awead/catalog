@@ -14,7 +14,7 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       :qt => 'search',
       :rows => 10,
-      ("hl.fl").to_sym => "title_display,author_display,publisher_display,collection_display,parent_unittitle_list,location_display"
+      ("hl.fl").to_sym => "title_display,author_display,publisher_display,collection_facet,parent_unittitle_list,location_display"
     }
 
     # solr field configuration for search results/index views
@@ -85,7 +85,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'unitdate_display',      :label => 'Dates:'
     
     # N.B. Facet field is defined in add_show_field below
-    config.add_index_field 'collection_display',    :label => 'Archival Collection:', :helper_method => :render_facet_link
+    config.add_index_field 'collection_facet',    :label => 'Archival Collection:', :helper_method => :render_facet_link
 
     config.add_index_field 'parent_unittitle_list', :label => 'Series:'
     config.add_index_field 'location_display',      :label => 'Location:'
@@ -135,17 +135,17 @@ class CatalogController < ApplicationController
     config.add_show_field 'notes_display',        :label => 'Notes:'
     config.add_show_field 'donor_display',        :label => 'Donor:'
 
-    config.add_show_field 'collection_display',   :label         => 'Archival Collection:', 
+    config.add_show_field 'collection_facet',     :label         => 'Archival Collection:', 
                                                   :helper_method => :render_facet_link,
                                                   :facet         => 'collection_facet'
     
     config.add_show_field 'access_display',       :label => 'Access:'
 
-    config.add_show_field 'subject_display',      :label         => 'Subjects:',
+    config.add_show_field 'subject_topic_facet',  :label         => 'Subjects:',
                                                   :helper_method => :render_facet_link,
                                                   :facet         => 'subject_topic_facet'
 
-    config.add_show_field 'genre_display',        :label         => 'Genre/Form:',
+    config.add_show_field 'genre_facet',          :label         => 'Genre/Form:',
                                                   :helper_method => :render_facet_link,
                                                   :facet         => 'genre_facet'
 

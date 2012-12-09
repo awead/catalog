@@ -35,7 +35,7 @@ module ComponentsHelper
     result = case field
       when "title_display" then false
       when "format" then false
-      when "collection_display" then false
+      when "collection_facet" then false
       when "id" then false
       else true  
     end
