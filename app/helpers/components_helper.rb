@@ -36,6 +36,7 @@ module ComponentsHelper
       when "title_display" then false
       when "format" then false
       when "collection_facet" then false
+      when "unitdate_display" then false
       when "id" then false
       else true  
     end
