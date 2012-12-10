@@ -79,7 +79,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'ohlink_url_display',    :label => 'OhioLink Resource:', :helper_method => :render_external_link
     config.add_index_field 'resource_url_display',  :label => 'Online Resource:',   :helper_method => :render_external_link
 
-    config.add_index_field 'language_language',     :label => 'Language:'
+    config.add_index_field 'language_display',     :label => 'Language:'
     config.add_index_field 'publisher_display',     :label => 'Publisher:'
     config.add_index_field 'lc_callnum_display',    :label => 'Call Number:'
     config.add_index_field 'unitdate_display',      :label => 'Dates:'
