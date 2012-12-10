@@ -43,7 +43,7 @@ module ComponentsHelper
   end
 
   def render_list_id
-    params[:parent_ref].nil? ? (params[:id]+"-list") : (params[:ead_id]+params[:parent_ref]+"-list")
+    params[:parent_ref].nil? ? (params[:id]+"-list") : (params[:parent_ref]+"-list")
   end
 
   def display_field field

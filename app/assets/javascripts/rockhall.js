@@ -45,11 +45,10 @@ $(document).ready(function() {
 
   var parameters = window.location.href.split("/");
   var ref = parameters[parameters.length-1];
-  var ead = parameters[parameters.length-2];
 
   if (ref.match(/ref/)) {
-    $("#"+ead+ref).css("background-color", "yellow");
-    $("html, body").animate({ scrollTop: $("#"+ead+ref).offset().top }, 1000);
+    $("#"+ref).css("background-color", "yellow");
+    $("html, body").animate({ scrollTop: $("#"+ref).offset().top }, 1000);
   }
   
 
