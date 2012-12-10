@@ -8,20 +8,20 @@ module Rockhall::SolrHelperExtension
   # This only aplies to ead and not to marc or other metdata formats. For now, the 
   # determining factor is the kind of id, whethere it begings with ARC, RG or has ref
   # in it, indicating that it's an archival item..  The alternative method,
-  # which is commented-out at the moment, is to query solr for the ref_s field.
+  # which is commented-out at the moment, is to query solr for the ref_id field.
   def query_ead_components solr_params = Hash.new
 
     @children = Array.new
     @parents  = Hash.new
 
     # Alternative solr query method
-    #solr_params[:fl]   = "eadid_s, ref_s"
+    #solr_params[:fl]   = "ead_id, ref_id"
     #solr_params[:q]    = "id:#{params[:id]}"
     #solr_params[:qt]   = "document"
     #solr_params[:rows] = 1
     #solr_response = Blacklight.solr.find(solr_params)
     #unless solr_response.docs.empty?
-      #@children = additional_ead_components(solr_response.docs.first[:eadid_s],solr_response.docs.first[:ref_s])
+      #@children = additional_ead_components(solr_response.docs.first[:ead_id],solr_response.docs.first[:ref_id])
     #end
 
     # Just check the id
@@ -48,7 +48,7 @@ module Rockhall::SolrHelperExtension
   #  - rows:  Number of rows to return; defaults to "all" or 10,000
   def first_level_ead_components id, opts={}, solr_params = Hash.new
     solr_params[:fl]    = "id"
-    solr_params[:q]     = 'component_level_i:1 AND _query_:"eadid_s:'+id+'"'
+    solr_params[:q]     = 'component_level_i:1 AND _query_:"ead_id:'+id+'"'
     solr_params[:sort]  = "sort_i asc"
     solr_params[:qt]    = "standard"
     solr_params[:rows]  = opts[:rows]  ? opts[:rows]  : 10000
@@ -77,12 +77,12 @@ module Rockhall::SolrHelperExtension
   # Query solr for additional ead components that are attached to a given ead document
   #
   # Required:
-  #  - id:  The id of the finding aid, eadid_s, ex. ARC-0037
-  #  - ref: The ref id of the parent component, ref_s, ex. ref1
+  #  - id:  The id of the finding aid, ead_id, ex. ARC-0037
+  #  - ref: The ref id of the parent component, ref_id, ex. ref1
   # Options: sams as .first_level_ead_components
   def additional_ead_components id, ref, opts={},solr_params = Hash.new
     solr_params[:fl]   = "id"
-    solr_params[:q]    = "parent_id_s:#{ref} AND eadid_s:#{id}"
+    solr_params[:q]    = "parent_id:#{ref} AND ead_id:#{id}"
     solr_params[:sort] = "sort_i asc"
     solr_params[:qt]   = "standard"
     solr_params[:rows]  = opts[:rows]  ? opts[:rows]  : 10000

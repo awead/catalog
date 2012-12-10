@@ -63,11 +63,11 @@ class CollectionInventory
 
   def solr_query(opts={}, query = Hash.new)
     if opts[:parent]
-      query[:q] = 'eadid_s:"' + @id + '" AND component_children_b:TRUE AND parent_id_s:"' + opts[:parent] + '"'
+      query[:q] = 'ead_id:"' + @id + '" AND component_children_b:TRUE AND parent_id:"' + opts[:parent] + '"'
     else
-      query[:q] = 'eadid_s:"' + @id + '" AND component_level_i:1'
+      query[:q] = 'ead_id:"' + @id + '" AND component_level_i:1'
     end
-    query[:fl]   = 'id, component_level_i, parent_id_s, title_display, ref_s, eadid_s'
+    query[:fl]   = 'id, component_level_i, parent_id, title_display, ref_id, ead_id'
     query[:qt]   = 'document'
     query[:rows] = 10000
     Blacklight.solr.find(query)["response"]["docs"].collect { |doc| doc }
@@ -76,8 +76,8 @@ class CollectionInventory
   def json_node series, node = Hash.new, metadata = Hash.new, attr = Hash.new
     node["data"] = series["title_display"]
     metadata["id"] = series["id"]
-    metadata["ref"] = series["ref_s"]
-    metadata["eadid"] = series["eadid_s"]
+    metadata["ref"] = series["ref_id"]
+    metadata["eadid"] = series["ead_id"]
     attr["id"] = series["id"]
     node["metadata"] = metadata
     node["attr"] = attr

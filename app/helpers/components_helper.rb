@@ -5,8 +5,8 @@ module ComponentsHelper
     if @parents.nil?
       next_component_button(document)
     else
-      if @parents.has_key?(document["ref_s"])
-        render :partial => "components/list", :locals => { :documents => @parents[document["ref_s"]] }
+      if @parents.has_key?(document["ref_id"])
+        render :partial => "components/list", :locals => { :documents => @parents[document["ref_id"]] }
       else
         next_component_button(document)
       end
@@ -16,11 +16,11 @@ module ComponentsHelper
   def next_component_button document, results = String.new
     if document["component_children_b"]
       results << link_to( image_tag("icons/button_open.png", :alt => "+ Show"),
-        components_path( :parent_ref => document["ref_s"], :ead_id => document["eadid_s"] ),
+        components_path( :parent_ref => document["ref_id"], :ead_id => document["ead_id"] ),
         :title  => "Click to open",
-        :id     => "#{document["ref_s"]}-open",
+        :id     => "#{document["ref_id"]}-open",
         :class  => "next_component_button")
-      results << image_tag("icons/waiting.gif", :alt => "Loading...", :id => "#{document["ref_s"]}-open-waiting", :class => "hidden")
+      results << image_tag("icons/waiting.gif", :alt => "Loading...", :id => "#{document["ref_id"]}-open-waiting", :class => "hidden")
     end
     return results.html_safe
   end

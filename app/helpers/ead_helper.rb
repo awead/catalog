@@ -3,9 +3,9 @@ module EadHelper
 
   def render_ead_html
     if params[:ref] == "full" or !has_json?
-      render :file => "#{Rails.root}/public/fa/#{@document[:eadid_s]}_full.html"
+      render :file => "#{Rails.root}/public/fa/#{@document["ead_id"]}_full.html"
     else
-      render :file => "#{Rails.root}/public/fa/#{@document[:eadid_s]}.html"
+      render :file => "#{Rails.root}/public/fa/#{@document["ead_id"]}.html"
     end
   end
 
@@ -20,11 +20,11 @@ module EadHelper
   def render_ead_sidebar results = String.new
     results << "<div id=\"ead_sidebar\">"
     results << toggle_view_link if has_json?
-    results << link_to("XML view", ead_xml_path(@document[:eadid_s]), { :target => "_blank" })
+    results << link_to("XML view", ead_xml_path(@document["ead_id"]), { :target => "_blank" })
     results << content_tag(:ul, ead_anchor_links, :id =>"ead_nav")
     if has_json?
       results << "<h5>Collection Inventory</h5>"
-      results << "<div id=\"" + @document[:eadid_s] + "_toc\" class=\"ead_toc\"></div>"
+      results << "<div id=\"" + @document["ead_id"] + "_toc\" class=\"ead_toc\"></div>"
     end
     return results.html_safe
   end
@@ -67,7 +67,7 @@ module EadHelper
   end
 
   def has_json?
-   File.exists?(File.join(Rails.root, "public", "fa", (@document[:eadid_s] + "_toc.json"))) unless @document[:eadid_s].nil?
+   File.exists?(File.join(Rails.root, "public", "fa", (@document["ead_id"] + "_toc.json"))) unless @document["ead_id"].nil?
   end
 
 

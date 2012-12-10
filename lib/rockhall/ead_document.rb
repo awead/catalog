@@ -6,12 +6,8 @@ class Rockhall::EadDocument < SolrEad::Document
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
-    solr_doc.merge!({"xml_display"     => self.to_xml})
-    solr_doc.merge!({"format"          => "Archival Collection"})
-    #solr_doc.merge!({"heading_display" => ("Guide to the " + self.title.first.gsub!(self.title_num.first,"").strip)})
-    solr_doc.merge!({"unitdate_z"      => ead_date_display})
-
-    # *_heading is dynamic un-indexed, single string... it's a bit misleading and should be changed
+    solr_doc.merge!({"format"           => "Archival Collection"})
+    solr_doc.merge!({"unitdate_display" => ead_date_display})
 
     # Facets
     solr_doc.merge!({"subject_topic_facet" => self.subject})
