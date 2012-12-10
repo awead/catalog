@@ -62,7 +62,7 @@ describe Rockhall::SolrHelperExtension do
 
   describe ".get_field_from_solr" do
     it "should return the contents from a solr field" do
-      @test.get_field_from_solr("ARC-0037ref1809", "parent_ids_display").should == ["ref1", "ref6", "ref208"]
+      @test.get_field_from_solr("ARC-0037ref1809", "parent_id_s").should == ["ref1", "ref6", "ref208"]
     end
   end
 

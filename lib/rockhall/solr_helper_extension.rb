@@ -29,7 +29,7 @@ module Rockhall::SolrHelperExtension
       @children = first_level_ead_components(params[:id])
     end
     if params[:ref]
-      refs = get_field_from_solr((params[:id] + params[:ref]), "parent_ids_display")
+      refs = get_field_from_solr((params[:id] + params[:ref]), "parent_id_s")
       unless refs.nil?
         refs.each do |ref|
           @parents[ref] = additional_ead_components(params[:id], ref)
