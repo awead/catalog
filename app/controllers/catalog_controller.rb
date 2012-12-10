@@ -171,6 +171,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'id',                   :label => 'OCLC No.:'
  
     # Fields specific to ead components
+    config.add_show_field 'scopecontent_display',       :label => 'Scope and Content:'
+    config.add_show_field 'separatedmaterial_display',  :label => 'Separated Material:'
     config.add_show_field 'accessrestrict_display',     :label => 'Access Restrictions:'
     config.add_show_field 'accruals_display',           :label => 'Accruals:'
     config.add_show_field 'acqinfo_display',            :label => 'Acquistions:'
@@ -183,8 +185,6 @@ class CatalogController < ApplicationController
     config.add_show_field 'phystech_display',           :label => 'Physical Tech:'
     config.add_show_field 'processinfo_display',        :label => 'Processing:'
     config.add_show_field 'relatedmaterial_display',    :label => 'Related Material:'
-    config.add_show_field 'separatedmaterial_display',  :label => 'Separated Material:'
-    config.add_show_field 'scopecontent_display',       :label => 'Scope and Content:'
     config.add_show_field 'userestrict_display',        :label => 'Usage Restrictions:'
     config.add_show_field 'physdesc_display',           :label => 'Physical Description:'
     config.add_show_field 'dimensions_display',         :label => 'Dimensions:'
