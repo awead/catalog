@@ -30,23 +30,19 @@
         </dl>
 
         <!-- Other sections of archdesc are displayed in paragraph format -->
-        
-        <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
-        
-        <h2 id="userestrict">Restrictions</h2>
-        <xsl:apply-templates select="//ead:archdesc/ead:userestrict/ead:p"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict/ead:p"/>
-
         <h2 id="abstract">Collection Overview</h2>
         <p><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></p>
-        
         <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
         <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
         <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
         <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
-
-        <h2 id="abstract">Collection Overview</h2>
-        <p><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></p>
+        <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
+        <h2 id="userestrict">Restrictions</h2>
+        <xsl:apply-templates select="//ead:archdesc/ead:userestrict/ead:p"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict/ead:p"/>
+        
+        <h2 id="subjects">Subjects</h2>
+        <p>Click on the links below to see more items in the catalog on these topics.</p>
         <dl class="defList">
           <dt>Name:</dt>
           <dd><ul>
