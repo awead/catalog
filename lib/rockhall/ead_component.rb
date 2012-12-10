@@ -9,12 +9,8 @@ class Rockhall::EadComponent < SolrEad::Component
 
     # Alter our heading display if the title is blank
     solr_doc["heading_display"] = (solr_doc["heading_display"] + self.unitdate.first) if self.title.first.blank?
-    solr_doc.merge!({"xml_display"         => self.to_xml})
-    solr_doc.merge!({"format"              => "Archival Item"})
-    solr_doc.merge!({"material_facet"      => self.material  })
     solr_doc.merge!({"location_display"    => self.location_display })
     solr_doc.merge!({"accession_t"         => ead_accession_range(self.accession.first)})
-    solr_doc.merge!({"collection_facet"    => solr_doc["document_unittitle_display"] })
     solr_doc.merge!({"title_t"             => [self.title, solr_doc["parent_unittitles_display"]].flatten })
   end
 
