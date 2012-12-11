@@ -51,11 +51,6 @@ Feature: EAD display
     Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
     And I should see "Ultras with Dick Dale, 1992 August 1"
 
-  @future-work
-  Scenario: EAD that has no collection headings (BL-60)
-    Given I am on the ead page for RG-0001
-    Then I should not see "Controlled Access Headings"
-
   Scenario: Show accession numbers (BL-118) Note: this is revoked from BL-49
     Given I am on the ead page for ARC-0058
     Then I should see "A2005.31.15"
