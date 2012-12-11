@@ -12,6 +12,8 @@ class Rockhall::EadComponent < SolrEad::Component
     solr_doc.merge!({"location_display"        => self.location_display })
     solr_doc.merge!({"accession_unstem_search" => ead_accession_range(self.accession.first)})
     solr_doc.merge!({"text"                    => [self.title, solr_doc["parent_unittitles_display"]].flatten })
+    solr_doc.merge!({"language_facet"          => get_language_from_code(self.langcode.first) })
+
   end
 
   def location_display(locations = Array.new)
