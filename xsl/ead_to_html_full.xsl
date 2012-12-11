@@ -43,10 +43,12 @@
         
         <h2 id="subjects">Subjects</h2>
         <p>Click on the links below to see more items in the catalog on these topics.</p>
-        <dl class="defList">
+        <dl class="defList block">
           <dt>Name:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:persname"/></dd>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:corpname"/></dd>
+          <dd>
+            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:persname"/>
+            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:corpname"/>
+          </dd>
           <dt>Genre:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:genreform"/></dd>
           <dt>Topic:</dt>
