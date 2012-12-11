@@ -18,11 +18,16 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
 
     when /^the ead page for (.+)/
-      catalog_path($1)
+      id, refnum = $1.split("ref")
+      if refnum
+        catalog_path([id,"ref"+refnum])
+      else
+        catalog_path($1)
+      end
 
     when /^the component page for (.+)/
-      params = $1.split(/:/)
-      components_path(:ead_id=>params[0], :component_level=>params[1], :parent_ref=>params[2])
+      id, refnum = $1.split("ref")
+      components_path(:ead_id=>id, :parent_ref=>"ref"+refnum)
 
     when /^the bib record page for (.+)/
       catalog_path($1)
