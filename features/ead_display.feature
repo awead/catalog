@@ -66,10 +66,10 @@ Feature: EAD display
 
   Scenario: Displaying italics (BL-33)
     Given I am on the ead page for ARC-0058
-    Then I should see "New Musical Express" in "italic"
-    And I should see "Love" in "italic"
+    Then I should see "New Musical Express" in "italics"
+    And I should see "Love" in "italics"
     Given I am on the ead page for ARC-0105
-    Then I should see "Blues Train" in "italic"
+    Then I should see "Blues Train" in "italics"
 
   Scenario: Separated materials notes (BL-43)
     Given I am on the ead page for ARC-0105
