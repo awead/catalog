@@ -8,6 +8,7 @@ class Rockhall::EadDocument < SolrEad::Document
     super(solr_doc)
     solr_doc.merge!({"format"           => "Archival Collection"})
     solr_doc.merge!({"unitdate_display" => ead_date_display})
+    solr_doc.merge!({"text" => self.ng_xml.text})
 
     # Facets
     solr_doc.merge!({"subject_topic_facet" => self.subject})
