@@ -45,18 +45,12 @@
         <p>Click on the links below to see more items in the catalog on these topics.</p>
         <dl class="defList">
           <dt>Name:</dt>
-          <dd><ul>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:persname"/>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:corpname"/>
-          </ul></dd>
-           <dt>Genre:</dt>
-          <dd><ul>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:genreform"/>
-          </ul></dd>
+          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:persname"/></dd>
+          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:corpname"/></dd>
+          <dt>Genre:</dt>
+          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:genreform"/></dd>
           <dt>Topic:</dt>
-          <dd><ul>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:subject"/>
-          </ul></dd>
+          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:subject"/></dd>
         </dl>
 
         <h2 id="inventory">Collection Inventory</h2>
@@ -211,19 +205,19 @@
     <!-- Subject headings -->
     <xsl:template match="ead:controlaccess/ead:persname">
       <xsl:variable name="value" select="self::ead:persname"/>
-      <li><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></li>
+      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
     <xsl:template match="ead:controlaccess/ead:corpname">
       <xsl:variable name="value" select="self::ead:corpname"/>
-      <li><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></li>
+      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
     <xsl:template match="ead:controlaccess/ead:genreform">
       <xsl:variable name="value" select="self::ead:genreform"/>
-      <li><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[genre_facet][]={$value}"><xsl:apply-templates/></a></li>
+      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[genre_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
     <xsl:template match="ead:controlaccess/ead:subject">
       <xsl:variable name="value" select="self::ead:subject"/>
-      <li><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[subject_topic_facet][]={$value}"><xsl:apply-templates/></a></li>
+      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[subject_topic_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
 
     <!-- empty template to skip unitdate since it's dealt with in unittitle

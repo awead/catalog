@@ -235,6 +235,9 @@ dl.defList {
     width: 450px;
     margin: 0;
     padding: 1px 5px 1px;
+    span {
+      display: block;
+    }
   }
 }
 
