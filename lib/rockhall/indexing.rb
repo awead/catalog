@@ -53,10 +53,10 @@ module Rockhall::Indexing
   def self.toc_to_json(file)
     id = get_eadid_from_file(file)
     inventory = Rockhall::CollectionInventory.new(id)
-    if inventory.depth > 1
+    #if inventory.depth > 1
       toc_dst = File.join(Rails.root, "public", "fa", (id + "_toc.json"))
       File.open(toc_dst, "w") { |f| f << inventory.tree.to_json }
-    end
+    #end
   end
 
   # Queries an xml file and returns the value for eadid
