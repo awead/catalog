@@ -14,7 +14,7 @@ gem 'devise-guests'
 gem 'blacklight_highlight'
 gem 'blacklight-sitemap', '~> 1.0.0'
 gem 'ruby-ntlm'
-gem 'solr_ead', :path => '/Users/adamw/Projects/Github/solr_ead'
+gem 'solr_ead'
 
 group :assets do
   gem 'coffee-rails'
