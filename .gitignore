@@ -19,10 +19,9 @@ public/assets
 public/*.xml
 public/*.xml.gz
 
-
+tmp/*
 tmp/**/*
 tmp/performance 
-tmp/restart.txt
 
 lib/solrmarc.log*
 
@@ -35,3 +34,5 @@ blacklight.sublime-project
 blacklight.sublime-workspace
 
 spec/fixtures/marc/tmp/*
+
+public/fa/*
