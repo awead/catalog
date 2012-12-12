@@ -108,7 +108,7 @@ Feature: EAD display
     Given I am on the ead page for ARC-0006
     Then I should not see "Publisher"
 
-  @wip
+  @future-work
   Scenario: Order and titles of EAD fields as they appear in Blacklight (BL-147)
     Given I am on the ead page for ARC-0003
     Then I should see "Dates:"
@@ -155,4 +155,7 @@ Feature: EAD display
     Given I am on the ead page for ARC-0026
     Then I should see "Normal As The Next Guy" in "italic"
 
-
+  Scenario: Sidebar items (BL-295)
+    Given I am on the ead page for ARC-0037
+    Then I should see "Full View" in the sidebar
+    And I should see "Archivist View" in the sidebar

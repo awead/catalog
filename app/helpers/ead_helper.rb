@@ -20,19 +20,19 @@ module EadHelper
   def render_ead_sidebar results = String.new
     results << "<div id=\"ead_sidebar\">"
     results << toggle_view_link if has_json?
-    results << link_to("XML view", ead_xml_path(@document["ead_id"]), { :target => "_blank" })
+    results << link_to("Archivist View", ead_xml_path(@document["ead_id"]), { :target => "_blank" })
     results << content_tag("div", ead_toc, {:id => "ead_toc"})
     return results.html_safe
   end
 
   def toggle_view_link link = String.new
     if params[:ref] == "full"
-      link << link_to("Default view", catalog_path(params[:id]))
+      link << link_to("Default View", catalog_path(params[:id]))
     else
       if params[:ref]
-        link << link_to("Full view", catalog_path([params[:id], "full"], :anchor => params[:ref]))
+        link << link_to("Full View", catalog_path([params[:id], "full"], :anchor => params[:ref]))
       else
-        link << link_to("Full view", catalog_path([params[:id], "full"]))
+        link << link_to("Full View", catalog_path([params[:id], "full"]))
       end
     end
     return ("<div id=\"view_toggle\">" + link + "</div>").html_safe

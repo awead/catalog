@@ -118,6 +118,6 @@ Then /^all bookmarks should be unchecked$/ do
   end
 end
 
-
-
-
+Then /^I should see "(.*?)" in the sidebar$/ do |arg1|
+  page.should have_xpath("//*/div[@id='ead_sidebar']", :text => arg1)
+end
