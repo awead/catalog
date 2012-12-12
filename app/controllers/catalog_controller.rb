@@ -118,7 +118,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'format',               :label => 'Format:'
     config.add_show_field 'format_dtl_display',   :label => 'Format Details:'
     config.add_show_field 'unitdate_display',     :label => 'Dates:'
-    config.add_show_field 'location_display',     :label => 'Location:'
+    
 
     # Links to external resources
     config.add_show_field 'ohlink_url_display',   :label         => 'OhioLink Resource:',
@@ -189,11 +189,12 @@ class CatalogController < ApplicationController
     config.add_show_field 'relatedmaterial_display',    :label => 'Related Material:'
     config.add_show_field 'userestrict_display',        :label => 'Usage Restrictions:'
     config.add_show_field 'physdesc_display',           :label => 'Physical Description:'
-    config.add_show_field 'dimensions_display',         :label => 'Dimensions:'
     config.add_show_field 'langmaterial_display',       :label => 'Language:'
     config.add_show_field 'note_display',               :label => 'Notes:'
     config.add_show_field 'accession_display',          :label => 'Accession Numbers:'
     config.add_show_field 'print_run_display',          :label => 'Limited Print Run:'
+    config.add_show_field 'dimensions_display',         :label => 'Dimensions:'
+    config.add_show_field 'location_display',           :label => 'Location:'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
