@@ -75,7 +75,7 @@ class CatalogController < ApplicationController
     # ------------------------------------------------------------------------------------------
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_display',               :label => 'Title:'
+    config.add_index_field 'title_display',         :label => 'Title:'
     config.add_index_field 'author_display',        :label => 'Author:', :helper_method => :render_facet_link
     config.add_index_field 'format',                :label => 'Format:'
 
@@ -83,13 +83,13 @@ class CatalogController < ApplicationController
     config.add_index_field 'ohlink_url_display',    :label => 'OhioLink Resource:', :helper_method => :render_external_link
     config.add_index_field 'resource_url_display',  :label => 'Online Resource:',   :helper_method => :render_external_link
 
-    config.add_index_field 'language_display',     :label => 'Language:'
+    config.add_index_field 'language_display',      :label => 'Language:'
     config.add_index_field 'publisher_display',     :label => 'Publisher:'
     config.add_index_field 'lc_callnum_display',    :label => 'Call Number:'
     config.add_index_field 'unitdate_display',      :label => 'Dates:'
     
     # N.B. Facet field is defined in add_show_field below
-    config.add_index_field 'collection_facet',    :label => 'Archival Collection:', :helper_method => :render_facet_link
+    config.add_index_field 'collection_facet',      :label => 'Archival Collection:', :helper_method => :render_facet_link
 
     config.add_index_field 'parent_unittitle_list', :label => 'Series:'
     config.add_index_field 'location_display',      :label => 'Location:'
