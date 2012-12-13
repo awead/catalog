@@ -47,12 +47,13 @@ class CatalogController < ApplicationController
     config.add_facet_field 'format',              :label => 'Format',             :limit => 20
     config.add_facet_field 'collection_facet',    :label => 'Collection Name',    :limit => 20
     config.add_facet_field 'material_facet',      :label => 'Archival Material',  :limit => 20
-    config.add_facet_field 'pub_date',            :label => 'Publication Year',   :limit => 20
-    config.add_facet_field 'subject_topic_facet', :label => 'Topic',              :limit => 20
     config.add_facet_field 'name_facet',          :label => 'Name',               :limit => 20
+    config.add_facet_field 'subject_topic_facet', :label => 'Subject',            :limit => 20
+    config.add_facet_field 'genre_facet',         :label => 'Genre',              :limit => 20    
     config.add_facet_field 'series_facet',        :label => 'Event/Series',       :limit => 20
+    config.add_facet_field 'pub_date',            :label => 'Publication Year',   :limit => 20
     config.add_facet_field 'language_facet',      :label => 'Language',           :limit => true
-    config.add_facet_field 'genre_facet',         :label => 'Genre',              :limit => 20
+    
 
     # TODO: Maybe add this in later
     #config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
