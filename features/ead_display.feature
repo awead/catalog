@@ -159,3 +159,4 @@ Feature: EAD display
     Given I am on the ead page for ARC-0037
     Then I should see "Full View" in the sidebar
     And I should see "Archivist View" in the sidebar
+    And I should see "General Information" in the sidebar
