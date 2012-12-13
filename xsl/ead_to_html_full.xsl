@@ -38,7 +38,9 @@
         <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
         <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
         <h2 id="userestrict">Restrictions</h2>
+        <h4>Use</h4>
         <xsl:apply-templates select="//ead:archdesc/ead:userestrict/ead:p"/>
+        <h4>Access</h4>
         <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict/ead:p"/>
         
         <h2 id="subjects">Subjects</h2>
