@@ -223,7 +223,7 @@
     </xsl:template>
     <xsl:template match="ead:controlaccess/ead:subject">
       <xsl:variable name="value" select="self::ead:subject"/>
-      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[subject_topic_facet][]={$value}"><xsl:apply-templates/></a></span>
+      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[subject_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
 
     <!-- empty template to skip unitdate since it's dealt with in unittitle

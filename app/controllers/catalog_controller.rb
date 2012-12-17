@@ -44,15 +44,15 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.
-    config.add_facet_field 'format',              :label => 'Format',             :limit => 20
-    config.add_facet_field 'collection_facet',    :label => 'Collection Name',    :limit => 20
-    config.add_facet_field 'material_facet',      :label => 'Archival Material',  :limit => 20
-    config.add_facet_field 'name_facet',          :label => 'Name',               :limit => 20
-    config.add_facet_field 'subject_topic_facet', :label => 'Subject',            :limit => 20
-    config.add_facet_field 'genre_facet',         :label => 'Genre',              :limit => 20    
-    config.add_facet_field 'series_facet',        :label => 'Event/Series',       :limit => 20
-    config.add_facet_field 'pub_date',            :label => 'Publication Year',   :limit => 20
-    config.add_facet_field 'language_facet',      :label => 'Language',           :limit => true
+    config.add_facet_field 'format',           :label => 'Format',             :limit => 20
+    config.add_facet_field 'collection_facet', :label => 'Collection Name',    :limit => 20
+    config.add_facet_field 'material_facet',   :label => 'Archival Material',  :limit => 20
+    config.add_facet_field 'name_facet',       :label => 'Name',               :limit => 20
+    config.add_facet_field 'subject_facet',    :label => 'Subject',            :limit => 20
+    config.add_facet_field 'genre_facet',      :label => 'Genre',              :limit => 20    
+    config.add_facet_field 'series_facet',     :label => 'Event/Series',       :limit => 20
+    config.add_facet_field 'pub_date',         :label => 'Publication Year',   :limit => 20
+    config.add_facet_field 'language_facet',   :label => 'Language',           :limit => true
     
 
     # TODO: Maybe add this in later
@@ -144,9 +144,9 @@ class CatalogController < ApplicationController
     
     config.add_show_field 'access_display',             :label => 'Access:'
 
-    config.add_show_field 'subject_topic_facet',        :label         => 'Subjects:',
+    config.add_show_field 'subject_facet',              :label         => 'Subjects:',
                                                         :helper_method => :render_facet_link,
-                                                        :facet         => 'subject_topic_facet'
+                                                        :facet         => 'subject_facet'
 
     config.add_show_field 'genre_facet',                :label         => 'Genre/Form:',
                                                         :helper_method => :render_facet_link,
