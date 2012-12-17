@@ -135,7 +135,6 @@ class CatalogController < ApplicationController
     config.add_show_field 'participants_display',       :label => 'Participants:'
     config.add_show_field 'recinfo_display',            :label => 'Recording Info:'
     config.add_show_field 'contents_display',           :label => 'Contents:'
-    config.add_show_field 'notes_display',              :label => 'Notes:'
     config.add_show_field 'donor_display',              :label => 'Donor:'
 
     config.add_show_field 'collection_facet',           :label         => 'Archival Collection:', 
