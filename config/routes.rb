@@ -7,7 +7,8 @@ Catalog::Application.routes.draw do
 
   # For EAD
   resources :components, :only => [:index]
-  match "/components/hide", :as => "components_hide"
+  match 'catalog/:id/ead_xml', :to => "catalog#ead_xml", :as => "ead_xml"
+  match 'catalog/:id/:ref', :to => "catalog#show"
 
   # Holdings
   match "holdings/:id" => "holdings#show", :via => :get, :as => :holdings

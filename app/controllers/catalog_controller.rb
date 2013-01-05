@@ -5,13 +5,18 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
   include BlacklightHighlight::ControllerExtension
-  include Rockhall::EadSolrMethods
+  include Rockhall::ControllerBehaviors
+  include Rockhall::SolrHelperExtension
+
+  rescue_from Exception, :with => :render_error unless Rails.env.match("development")
+
+  before_filter :query_ead_components, :only => :show
 
   configure_blacklight do |config|
     config.default_solr_params = {
       :qt => 'search',
       :rows => 10,
-      ("hl.fl").to_sym => "title_display,author_display,publisher_display,collection_display,parent_unittitle_list,location_display"
+      ("hl.fl").to_sym => "title_display,author_display,publisher_display,collection_facet,parent_unittitle_list,location_display"
     }
 
     # solr field configuration for search results/index views
@@ -39,21 +44,29 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.
-    config.add_facet_field 'format',              :label => 'Format',             :limit => 20
-    config.add_facet_field 'collection_facet',    :label => 'Collection Name',    :limit => 20
-    config.add_facet_field 'material_facet',      :label => 'Archival Material',  :limit => 20
-    config.add_facet_field 'pub_date',            :label => 'Publication Year',   :limit => 20
-    config.add_facet_field 'subject_topic_facet', :label => 'Topic',              :limit => 20
-    config.add_facet_field 'name_facet',          :label => 'Name',               :limit => 20
-    config.add_facet_field 'series_facet',        :label => 'Event/Series',       :limit => 20
-    config.add_facet_field 'language_facet',      :label => 'Language',           :limit => true
-    config.add_facet_field 'genre_facet',         :label => 'Genre',              :limit => 20
+    config.add_facet_field 'format',           :label => 'Format',             :limit => 20
+    config.add_facet_field 'collection_facet', :label => 'Collection Name',    :limit => 20
+    config.add_facet_field 'material_facet',   :label => 'Archival Material',  :limit => 20
+    config.add_facet_field 'name_facet',       :label => 'Name',               :limit => 20
+    config.add_facet_field 'subject_facet',    :label => 'Subject',            :limit => 20
+    config.add_facet_field 'genre_facet',      :label => 'Genre',              :limit => 20    
+    config.add_facet_field 'series_facet',     :label => 'Event/Series',       :limit => 20
+    config.add_facet_field 'pub_date',         :label => 'Publication Year',   :limit => 20
+    config.add_facet_field 'language_facet',   :label => 'Language',           :limit => true
+    
+
+    # TODO: Maybe add this in later
+    #config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
+    # :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
+    # :years_10 => { :label => 'within 10 Years', :fq => "pub_date:[#{Time.now.year - 10 } TO *]" },
+    # :years_25 => { :label => 'within 25 Years', :fq => "pub_date:[#{Time.now.year - 25 } TO *]" }
+    #}
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
     # handler defaults, or have no facets.
-    config.default_solr_params[:'facet.field'] = config.facet_fields.keys
-
+    config.add_facet_fields_to_solr_request!
+    
     
     # ------------------------------------------------------------------------------------------
     #
@@ -66,17 +79,17 @@ class CatalogController < ApplicationController
     config.add_index_field 'author_display',        :label => 'Author:', :helper_method => :render_facet_link
     config.add_index_field 'format',                :label => 'Format:'
 
-    # Links to external resources. N.B. Text for link is definein the add_show_field method
+    # Links to external resources. N.B. Text for link is defined in the add_show_field method
     config.add_index_field 'ohlink_url_display',    :label => 'OhioLink Resource:', :helper_method => :render_external_link
     config.add_index_field 'resource_url_display',  :label => 'Online Resource:',   :helper_method => :render_external_link
 
-    config.add_index_field 'language_language',     :label => 'Language:'
+    config.add_index_field 'language_display',      :label => 'Language:'
     config.add_index_field 'publisher_display',     :label => 'Publisher:'
     config.add_index_field 'lc_callnum_display',    :label => 'Call Number:'
     config.add_index_field 'unitdate_display',      :label => 'Dates:'
     
     # N.B. Facet field is defined in add_show_field below
-    config.add_index_field 'collection_display',    :label => 'Archival Collection:', :helper_method => :render_facet_link
+    config.add_index_field 'collection_facet',      :label => 'Archival Collection:', :helper_method => :render_facet_link
 
     config.add_index_field 'parent_unittitle_list', :label => 'Series:'
     config.add_index_field 'location_display',      :label => 'Location:'
@@ -90,75 +103,98 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the show (single result) view
     # The ordering of the field names is the order of the display
     # None of these fields apply to ead documents or components
-    config.add_show_field "title_display",        :label => 'Title:'
-    config.add_show_field 'unititle_display',     :label => 'Uniform Title:'
-    config.add_show_field 'title_addl_display',   :label => 'Additional Titles:'
+    config.add_show_field "title_display",              :label => 'Title:'
+    config.add_show_field 'unititle_display',           :label => 'Uniform Title:'
+    config.add_show_field 'title_addl_display',         :label => 'Additional Titles:'
 
-    config.add_show_field 'author_display',       :label         => 'Author:',
-                                                  :helper_method => :render_facet_link,
-                                                  :facet         => 'name_facet'
+    config.add_show_field 'author_display',             :label         => 'Author:',
+                                                        :helper_method => :render_facet_link,
+                                                        :facet         => 'name_facet'
 
-    config.add_show_field 'edition_display',      :label => 'Edition:'
+    config.add_show_field 'edition_display',            :label => 'Edition:'
 
-    config.add_show_field 'series_display',       :label         => 'Series:',
-                                                  :helper_method => :render_facet_link,
-                                                  :facet         => 'series_facet'
-    
+    config.add_show_field 'series_display',             :label         => 'Series:',
+                                                        :helper_method => :render_facet_link,
+                                                        :facet         => 'series_facet'
 
-    config.add_show_field 'format',               :label => 'Format:'
-    config.add_show_field 'format_dtl_display',   :label => 'Format Details:'
+    config.add_show_field 'format',                     :label => 'Format:'
+    config.add_show_field 'format_dtl_display',         :label => 'Format Details:'
+    config.add_show_field 'unitdate_display',           :label => 'Dates:'
 
     # Links to external resources
-    config.add_show_field 'ohlink_url_display',   :label         => 'OhioLink Resource:',
-                                                  :helper_method => :render_external_link, 
-                                                  :text          => 'ohlink_text_display'
+    config.add_show_field 'ohlink_url_display',         :label         => 'OhioLink Resource:',
+                                                        :helper_method => :render_external_link, 
+                                                        :text          => 'ohlink_text_display'
     
-    config.add_show_field 'resource_url_display', :label         => 'Online Resource:',     
-                                                  :helper_method => :render_external_link, 
-                                                  :text          => 'resource_text_display'
+    config.add_show_field 'resource_url_display',       :label         => 'Online Resource:',     
+                                                        :helper_method => :render_external_link, 
+                                                        :text          => 'resource_text_display'
     
-    config.add_show_field 'physical_dtl_display', :label => 'Physical Details:'
-    config.add_show_field 'summary_display',      :label => 'Summary:'
-    config.add_show_field 'participants_display', :label => 'Participants:'
-    config.add_show_field 'recinfo_display',      :label => 'Recording Info:'
-    config.add_show_field 'contents_display',     :label => 'Contents:'
-    config.add_show_field 'notes_display',        :label => 'Notes:'
-    config.add_show_field 'donor_display',        :label => 'Donor:'
+    config.add_show_field 'physical_dtl_display',       :label => 'Physical Details:'
+    config.add_show_field 'summary_display',            :label => 'Summary:'
+    config.add_show_field 'participants_display',       :label => 'Participants:'
+    config.add_show_field 'recinfo_display',            :label => 'Recording Info:'
+    config.add_show_field 'contents_display',           :label => 'Contents:'
+    config.add_show_field 'donor_display',              :label => 'Donor:'
 
-    config.add_show_field 'collection_display',   :label         => 'Archival Collection:', 
-                                                  :helper_method => :render_facet_link,
-                                                  :facet         => 'collection_facet'
+    config.add_show_field 'collection_facet',           :label         => 'Archival Collection:', 
+                                                        :helper_method => :render_facet_link,
+                                                        :facet         => 'collection_facet'
     
-    config.add_show_field 'access_display',       :label => 'Access:'
+    config.add_show_field 'access_display',             :label => 'Access:'
 
-    config.add_show_field 'subject_display',      :label         => 'Subjects:',
-                                                  :helper_method => :render_facet_link,
-                                                  :facet         => 'subject_topic_facet'
+    config.add_show_field 'subject_facet',              :label         => 'Subjects:',
+                                                        :helper_method => :render_facet_link,
+                                                        :facet         => 'subject_facet'
 
-    config.add_show_field 'genre_display',        :label         => 'Genre/Form:',
-                                                  :helper_method => :render_facet_link,
-                                                  :facet         => 'genre_facet'
+    config.add_show_field 'genre_facet',                :label         => 'Genre/Form:',
+                                                        :helper_method => :render_facet_link,
+                                                        :facet         => 'genre_facet'
 
-    config.add_show_field 'contributors_display', :label         => 'Contributors:',
-                                                  :helper_method => :render_facet_link,
-                                                  :facet         => 'name_facet'
+    config.add_show_field 'contributors_display',       :label         => 'Contributors:',
+                                                        :helper_method => :render_facet_link,
+                                                        :facet         => 'name_facet'
 
-    config.add_show_field 'relworks_display',     :label         => 'Related Works:',
-                                                  :helper_method => :render_search_link
+    config.add_show_field 'relworks_display',           :label         => 'Related Works:',
+                                                        :helper_method => :render_search_link
 
-    config.add_show_field 'relitems_display',     :label => 'Related Items:'
-    config.add_show_field 'item_link_display',    :label => 'Item Links:'
-    config.add_show_field 'pub_date_display',     :label => 'Dates of Publication:'
-    config.add_show_field 'freq_display',         :label => 'Current Frequency:'
-    config.add_show_field 'freq_former_display',  :label => 'Former Frequency:'
-    config.add_show_field 'language_display',     :label => 'Language:'
-    config.add_show_field 'publisher_display',    :label => 'Publisher:'
-    config.add_show_field 'lc_callnum_display',   :label => 'Call Number:'
-    config.add_show_field 'isbn_t',               :label => 'ISBN:'
-    config.add_show_field 'issn_display',         :label => 'ISSN:'
-    config.add_show_field 'upc_display',          :label => 'UPC:'
-    config.add_show_field 'pubnum_display',       :label => 'Publisher Number:'
-    config.add_show_field 'id',                   :label => 'OCLC No.:'
+    config.add_show_field 'relitems_display',           :label => 'Related Items:'
+    config.add_show_field 'item_link_display',          :label => 'Item Links:'
+    config.add_show_field 'pub_date_display',           :label => 'Dates of Publication:'
+    config.add_show_field 'freq_display',               :label => 'Current Frequency:'
+    config.add_show_field 'freq_former_display',        :label => 'Former Frequency:'
+    config.add_show_field 'language_display',           :label => 'Language:'
+    config.add_show_field 'publisher_display',          :label => 'Publisher:'
+    config.add_show_field 'lc_callnum_display',         :label => 'Call Number:'
+    config.add_show_field 'isbn_display',               :label => 'ISBN:'
+    config.add_show_field 'issn_display',               :label => 'ISSN:'
+    config.add_show_field 'upc_display',                :label => 'UPC:'
+    config.add_show_field 'pubnum_display',             :label => 'Publisher Number:'
+    config.add_show_field 'id',                         :label => 'OCLC No.:'
+ 
+    # Fields specific to ead components
+    config.add_show_field 'scopecontent_display',       :label => 'Scope and Content:'
+    config.add_show_field 'separatedmaterial_display',  :label => 'Separated Material:'
+    config.add_show_field 'accessrestrict_display',     :label => 'Access Restrictions:'
+    config.add_show_field 'accruals_display',           :label => 'Accruals:'
+    config.add_show_field 'acqinfo_display',            :label => 'Acquistions:'
+    config.add_show_field 'altformavail_display',       :label => 'Alt. Form:'
+    config.add_show_field 'appraisal_display',          :label => 'Appraisal:'
+    config.add_show_field 'arrangement_display',        :label => 'Arrangement:'
+    config.add_show_field 'custodhist_display',         :label => 'Custodial History:'
+    config.add_show_field 'fileplan_display',           :label => 'File Plan:'
+    config.add_show_field 'originalsloc_display',       :label => 'Originals:'
+    config.add_show_field 'phystech_display',           :label => 'Physical Tech:'
+    config.add_show_field 'processinfo_display',        :label => 'Processing:'
+    config.add_show_field 'relatedmaterial_display',    :label => 'Related Material:'
+    config.add_show_field 'userestrict_display',        :label => 'Usage Restrictions:'
+    config.add_show_field 'physdesc_display',           :label => 'Physical Description:'
+    config.add_show_field 'langmaterial_display',       :label => 'Language:'
+    config.add_show_field 'note_display',               :label => 'Notes:'
+    config.add_show_field 'accession_display',          :label => 'Accession Numbers:'
+    config.add_show_field 'print_run_display',          :label => 'Limited Print Run:'
+    config.add_show_field 'dimensions_display',         :label => 'Dimensions:'
+    config.add_show_field 'location_display',           :label => 'Location:'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -240,28 +276,6 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
-  end
-
-  def show
-    ead_id = get_field_from_solr("ead_id",params[:id])
-    if ead_id.nil?
-      super
-    else
-
-      @components = Hash.new
-      @components[:first] = get_component_docs_from_solr(ead_id,{ :level => "1"})
-      parent_ref_list = get_field_from_solr("parent_ref_list",params[:id])
-      unless parent_ref_list.nil?
-        parent_ref_list.each do |ref|
-          @components[ref.to_sym] = get_component_docs_from_solr(ead_id,{ :parent_ref => ref.to_s})
-        end
-      end
-
-      params[:solr_id] = params[:id]
-      params[:id] = ead_id
-      super
-
-    end
   end
 
 end

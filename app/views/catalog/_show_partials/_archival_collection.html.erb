@@ -1,17 +1,13 @@
-<% extra_head_content << capture do -%>
+<% sidebar_items << capture do %>
+  <%= render_ead_sidebar %>
+<% end %>
 
-  <script>
-    function showWaiting(ref) {
-      $("#" + ref + "-switch").remove();
-      $("#" + ref).append("<div id=\"" + ref + "-switch\">" + "<%= escape_javascript image_tag("icons/waiting.gif", :alt => "Loading...") %>" + "</div>");
-    }
-  </script>
-<% end -%>
+<div id="ead_body">
 
-<% sidebar_items << capture do -%>
-  <%= render :partial => '/catalog/_show_partials/_archival_collection/toc' %>
-<% end -%>
+  <%= render_ead_html %>
+  <% unless params[:ref] == "full" %>
+    <%= render_collection_inventory_heading %>
+    <%= render_collection_inventory %>
+  <% end %>
 
-<%= render :partial => 'catalog/_show_partials/_archival_collection/body' %>
-
-
+</div>

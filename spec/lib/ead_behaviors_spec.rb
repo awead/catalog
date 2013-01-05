@@ -31,7 +31,6 @@ describe Rockhall::EadBehaviors do
       results = @test.compute_range("A1994.29.9-A1994.30.2")
       results.should be_empty
     end
-
   end
 
   describe ".ead_accession_range" do
@@ -86,7 +85,14 @@ describe Rockhall::EadBehaviors do
       results.include?("A2009.20.12").should be_true
       results.include?("A2009.20.22").should be_true
     end
+  end
 
+  describe ".get_language_from_code" do
+    it "should return the language term from a given code" do
+      @test.get_language_from_code("fre").should == "French"
+      @test.get_language_from_code("eng").should == "English"
+      @test.get_language_from_code("spa").should == "Spanish"
+    end
   end
 
 end

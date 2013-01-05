@@ -73,4 +73,20 @@ module Rockhall::EadBehaviors
     return parts.join(" ")
   end
 
+  # Returns the language terms as string from a given three-letter code
+  def get_language_from_code(code)
+    case code
+    when /^fre$/
+      "French"
+    when /^eng$/
+      "English"
+    when /^spa$/
+      "Spanish"
+    when /^mul$/
+      "Multilingual"
+    else
+      nil
+    end
+  end
+
 end

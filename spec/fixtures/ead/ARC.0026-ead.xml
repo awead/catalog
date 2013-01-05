@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-10-02T11:41-0400</date>
+                <date>2012-12-07T13:00-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -62,7 +62,7 @@
                 </chronitem>
                 <chronitem>
                     <date>1964 February</date>
-                    <event>Fieger picks up the guitar and begins playing with John Coury.</event>
+                    <event>Fieger picks up the guitar and begins playing with the Royal Jammers.</event>
                 </chronitem>
                 <chronitem>
                     <date>1966</date>
@@ -233,7 +233,7 @@
             <subject source="lcsh">Songs--Texts</subject>
         </controlaccess>
         <dsc>
-            <c01 id="ref1" level="series">
+            <c id="ref1" level="series">
                 <did>
                     <unittitle>Series I: Articles, Clippings, and Photocopies</unittitle>
                     <unitdate>1978-2010, undated</unitdate>
@@ -242,15 +242,15 @@
                     <head>Scope and Contents</head>
                     <p>Series I: Articles, Clippings, and Photocopies pertains primarily to Fieger's work in The Knack and contains magazine and newspaper articles from all over the United States. The series is arranged chronologically by decade, except for those materials that had been previously compiled into smaller date spans by Beth Falkenstein or The Knack's management company.</p>
                 </scopecontent>
-                <c02 id="ref19" level="file">
+                <c id="ref19" level="file">
                     <did>
                         <unittitle>Charts</unittitle>
                         <container id="cid129001" type="Box" label="Text">1</container>
                         <container parent="cid129001" type="Folder">1</container>
                         <unitdate>1979</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref126" level="item">
+                </c>
+                <c id="ref126" level="item">
                     <did>
                         <unittitle>
                             <title render="italic">Get the Knack</title> magazine ad</unittitle>
@@ -258,24 +258,24 @@
                         <container parent="cid129106" type="Object">3</container>
                         <unitdate>1979</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref20" level="file">
+                </c>
+                <c id="ref20" level="file">
                     <did>
                         <unittitle>Clippings and articles</unittitle>
                         <container id="cid129002" type="Box" label="Text">1</container>
                         <container parent="cid129002" type="Folder">2-3</container>
                         <unitdate>1978-1979</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref21" level="file">
+                </c>
+                <c id="ref21" level="file">
                     <did>
                         <unittitle>Clippings and articles</unittitle>
                         <container id="cid129003" type="Box" label="Text">1</container>
                         <container parent="cid129003" type="Folder">4-5</container>
                         <unitdate>1980s</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref169" level="item">
+                </c>
+                <c id="ref169" level="item">
                     <did>
                         <unittitle>Knack, 
                             <title render="italic">...but the little girls understand</title> ad from 
@@ -287,8 +287,8 @@
                         <container parent="cid532002" type="Object">13</container>
                         <unitdate>1980 March 15</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref161" level="item">
+                </c>
+                <c id="ref161" level="item">
                     <did>
                         <unittitle>Knack, 
                             <title render="italic">Round Trip</title> ad from 
@@ -297,32 +297,32 @@
                         <container parent="cid531007" type="Object">5</container>
                         <unitdate>1981 October 17</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref22" level="file">
+                </c>
+                <c id="ref22" level="file">
                     <did>
                         <unittitle>Clippings</unittitle>
                         <container id="cid129004" type="Box" label="Text">1</container>
                         <container parent="cid129004" type="Folder">6</container>
                         <unitdate>1981</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref23" level="file">
+                </c>
+                <c id="ref23" level="file">
                     <did>
                         <unittitle>Clipping and articles</unittitle>
                         <container id="cid129005" type="Box" label="Text">1</container>
                         <container parent="cid129005" type="Folder">7-8</container>
                         <unitdate>1990s</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref24" level="file">
+                </c>
+                <c id="ref24" level="file">
                     <did>
                         <unittitle>Photocopied clippings</unittitle>
                         <container id="cid129006" type="Box" label="Text">1</container>
                         <container parent="cid129006" type="Folder">9</container>
                         <unitdate>1990-1991</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref168" level="item">
+                </c>
+                <c id="ref168" level="item">
                     <did>
                         <unittitle>Knack, 
                             <title render="italic">Serious Fun</title> / "Rocket O' Love" newspaper ad</unittitle>
@@ -330,8 +330,8 @@
                         <container parent="cid532001" type="Object">14</container>
                         <unitdate>1991</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref136" level="item">
+                </c>
+                <c id="ref136" level="item">
                     <did>
                         <unittitle>
                             <title render="italic">Creem</title> magazine front and back cover</unittitle>
@@ -339,8 +339,8 @@
                         <container parent="cid129115" type="Object">1</container>
                         <unitdate>1994 May</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref25" level="file">
+                </c>
+                <c id="ref25" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Reality Bites</title> and Knack clippings</unittitle>
@@ -348,49 +348,49 @@
                         <container parent="cid129007" type="Folder">10</container>
                         <unitdate>1994</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref26" level="file">
+                </c>
+                <c id="ref26" level="file">
                     <did>
                         <unittitle>Clippings and articles</unittitle>
                         <container id="cid129008" type="Box" label="Text">1</container>
                         <container parent="cid129008" type="Folder">11</container>
                         <unitdate>1998</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref27" level="file">
+                </c>
+                <c id="ref27" level="file">
                     <did>
                         <unittitle>Clippings and articles</unittitle>
                         <container id="cid129009" type="Box" label="Text">1</container>
                         <container parent="cid129009" type="Folder">12</container>
                         <unitdate>2000s</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref28" level="file">
+                </c>
+                <c id="ref28" level="file">
                     <did>
                         <unittitle>Memorials to Fieger and Bruce Gary</unittitle>
                         <container id="cid129010" type="Box" label="Text">1</container>
                         <container parent="cid129010" type="Folder">13</container>
                         <unitdate>2006, 2010</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref29" level="file">
+                </c>
+                <c id="ref29" level="file">
                     <did>
                         <unittitle>Clippings and articles</unittitle>
                         <container id="cid129011" type="Box" label="Text">1</container>
                         <container parent="cid129011" type="Folder">14</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref137" level="item">
+                </c>
+                <c id="ref137" level="item">
                     <did>
                         <unittitle>Photocopy of photograph of Knack (Averre, Fieger, Ward, Niles) by Steve Granitz</unittitle>
                         <container id="cid129116" type="Box" label="Graphic materials">4</container>
                         <container parent="cid129116" type="Object">2</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-            </c01>
-            <c01 id="ref4" level="series">
+                </c>
+            </c>
+            <c id="ref4" level="series">
                 <did>
                     <unittitle>Series II: Business Files</unittitle>
                     <unitdate>1977-2007, undated</unitdate>
@@ -399,12 +399,12 @@
                     <head>Scope and Contents</head>
                     <p>Series II: Business Files contains documents related to The Knack's album releases, promotions, and tours, as well as Doug Fieger's contracts and correspondence. The Series is broken down into six subseries: Albums, contracts, correspondence, miscellaneous, promotional materials, and tours and performances. The subseries are organized chronologically, with undated material at the end of each.</p>
                 </scopecontent>
-                <c02 id="ref13" level="subseries">
+                <c id="ref13" level="subseries">
                     <did>
                         <unittitle>Subseries 1: Albums</unittitle>
                         <unitdate>1979-2002, undated</unitdate>
                     </did>
-                    <c03 id="ref33" level="file">
+                    <c id="ref33" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Get the Knack</title>, EMI Svenska AB recording form</unittitle>
@@ -412,8 +412,8 @@
                             <container parent="cid129012" type="Folder">15</container>
                             <unitdate>1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref34" level="file">
+                    </c>
+                    <c id="ref34" level="file">
                         <did>
                             <unittitle>Record label copy: 
                                 <title render="italic">Round Trip</title>, 
@@ -423,24 +423,24 @@
                             <container parent="cid129013" type="Folder">16</container>
                             <unitdate>1980, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref35" level="file">
+                    </c>
+                    <c id="ref35" level="file">
                         <did>
                             <unittitle>Knack compilation cassette</unittitle>
                             <container id="cid129014" type="Box" label="Text">1</container>
                             <container parent="cid129014" type="Folder">17</container>
                             <unitdate>1986 May</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref36" level="file">
+                    </c>
+                    <c id="ref36" level="file">
                         <did>
                             <unittitle>Fax re: commercial to use "My Sharona"</unittitle>
                             <container id="cid129015" type="Box" label="Text">1</container>
                             <container parent="cid129015" type="Folder">18</container>
                             <unitdate>1988 September 14</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref37" level="file">
+                    </c>
+                    <c id="ref37" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Serious Fun</title>, Charisma Records documents</unittitle>
@@ -448,8 +448,8 @@
                             <container parent="cid129016" type="Folder">19</container>
                             <unitdate>1990-1991</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref38" level="file">
+                    </c>
+                    <c id="ref38" level="file">
                         <did>
                             <unittitle>Capitol 
                                 <title render="italic">Retrospective</title> liner notes</unittitle>
@@ -457,8 +457,8 @@
                             <container parent="cid129017" type="Folder">20</container>
                             <unitdate>1992, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref39" level="file">
+                    </c>
+                    <c id="ref39" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Get the Knack</title> - Liner and mastering notes</unittitle>
@@ -466,8 +466,8 @@
                             <container parent="cid129018" type="Folder">21</container>
                             <unitdate>2001-2002</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref40" level="file">
+                    </c>
+                    <c id="ref40" level="file">
                         <did>
                             <unittitle>The Knack, 
                                 <title render="italic">Rock 'n' Roll Funhouse</title></unittitle>
@@ -475,16 +475,16 @@
                             <container parent="cid129019" type="Folder">22</container>
                             <unitdate>2001</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref41" level="file">
+                    </c>
+                    <c id="ref41" level="file">
                         <did>
                             <unittitle>Capitol Records reissue handwritten notes</unittitle>
                             <container id="cid129020" type="Box" label="Text">1</container>
                             <container parent="cid129020" type="Folder">23</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref42" level="file">
+                    </c>
+                    <c id="ref42" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Get the Knack</title> reissue material</unittitle>
@@ -492,8 +492,8 @@
                             <container parent="cid129021" type="Folder">24</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref43" level="file">
+                    </c>
+                    <c id="ref43" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Get the Knack</title> DVD notes</unittitle>
@@ -501,86 +501,86 @@
                             <container parent="cid129022" type="Folder">25</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref44" level="file">
+                    </c>
+                    <c id="ref44" level="file">
                         <did>
                             <unittitle>Handwritten liner notes by Michael Chapman, producer</unittitle>
                             <container id="cid129023" type="Box" label="Text">1</container>
                             <container parent="cid129023" type="Folder">26</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref14" level="subseries">
+                    </c>
+                </c>
+                <c id="ref14" level="subseries">
                     <did>
                         <unittitle>Subseries 2: Contracts</unittitle>
                         <unitdate>1977-2001, undated</unitdate>
                     </did>
-                    <c03 id="ref45" level="file">
+                    <c id="ref45" level="file">
                         <did>
                             <unittitle>Demo recordings: Accounting and rejection letter from Elektra Asylum</unittitle>
                             <container id="cid129024" type="Box" label="Text">2</container>
                             <container parent="cid129024" type="Folder">1</container>
                             <unitdate>1977</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref46" level="file">
+                    </c>
+                    <c id="ref46" level="file">
                         <did>
                             <unittitle>Letters of agreement and dissolution for The Knack and Scott Anderson</unittitle>
                             <container id="cid129025" type="Box" label="Text">2</container>
                             <container parent="cid129025" type="Folder">2</container>
                             <unitdate>1978-1981</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref47" level="file">
+                    </c>
+                    <c id="ref47" level="file">
                         <did>
                             <unittitle>Notes, correspondence, and drafts re: Contract with Capitol Records</unittitle>
                             <container id="cid129026" type="Box" label="Text">2</container>
                             <container parent="cid129026" type="Folder">3</container>
                             <unitdate>1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref48" level="file">
+                    </c>
+                    <c id="ref48" level="file">
                         <did>
                             <unittitle>Agreement with Ferris Ashley Productions (as solo artist)</unittitle>
                             <container id="cid129027" type="Box" label="Text">2</container>
                             <container parent="cid129027" type="Folder">4</container>
                             <unitdate>1984</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref49" level="file">
+                    </c>
+                    <c id="ref49" level="file">
                         <did>
                             <unittitle>Agreement with de Passe-Jones Management</unittitle>
                             <container id="cid129028" type="Box" label="Text">2</container>
                             <container parent="cid129028" type="Folder">5</container>
                             <unitdate>1984-1989 and undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref50" level="file">
+                    </c>
+                    <c id="ref50" level="file">
                         <did>
                             <unittitle>Agreements with Danny Sugarman Management and Miguel Cancel</unittitle>
                             <container id="cid129029" type="Box" label="Text">2</container>
                             <container parent="cid129029" type="Folder">6</container>
                             <unitdate>1984, 1987</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref51" level="file">
+                    </c>
+                    <c id="ref51" level="file">
                         <did>
                             <unittitle>Agreement for representation with Bruce Gary and Pat Torpey</unittitle>
                             <container id="cid129030" type="Box" label="Text">2</container>
                             <container parent="cid129030" type="Folder">7</container>
                             <unitdate>1987</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref52" level="file">
+                    </c>
+                    <c id="ref52" level="file">
                         <did>
                             <unittitle>Canada employment authorization</unittitle>
                             <container id="cid129031" type="Box" label="Text">2</container>
                             <container parent="cid129031" type="Folder">8</container>
                             <unitdate>2001</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref53" level="file">
+                    </c>
+                    <c id="ref53" level="file">
                         <did>
                             <unittitle>Contract and script for 
                                 <title render="italic">Get the Knack</title> album cover to appear on TV show, "Ed"</unittitle>
@@ -588,119 +588,119 @@
                             <container parent="cid129032" type="Folder">9</container>
                             <unitdate>2001</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref54" level="file">
+                    </c>
+                    <c id="ref54" level="file">
                         <did>
                             <unittitle>Contract notes</unittitle>
                             <container id="cid129033" type="Box" label="Text">2</container>
                             <container parent="cid129033" type="Folder">10</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref15" level="subseries">
+                    </c>
+                </c>
+                <c id="ref15" level="subseries">
                     <did>
                         <unittitle>Subseries 3: Correspondence</unittitle>
                         <unitdate>1979-2001, undated</unitdate>
                     </did>
-                    <c03 id="ref55" level="file">
+                    <c id="ref55" level="file">
                         <did>
                             <unittitle>To Fieger from Paul Marks, ASCAP</unittitle>
                             <container id="cid129034" type="Box" label="Text">2</container>
                             <container parent="cid129034" type="Folder">11</container>
                             <unitdate>1979 September 17</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref56" level="file">
+                    </c>
+                    <c id="ref56" level="file">
                         <did>
                             <unittitle>Fan letters</unittitle>
                             <container id="cid129035" type="Box" label="Text">2</container>
                             <container parent="cid129035" type="Folder">12</container>
                             <unitdate>1980-1998, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref57" level="file">
+                    </c>
+                    <c id="ref57" level="file">
                         <did>
                             <unittitle>To Fieger from Bobby Roberts</unittitle>
                             <container id="cid129036" type="Box" label="Text">2</container>
                             <container parent="cid129036" type="Folder">13</container>
                             <unitdate>1981 May 29</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref58" level="file">
+                    </c>
+                    <c id="ref58" level="file">
                         <did>
                             <unittitle>Sharona</unittitle>
                             <container id="cid129037" type="Box" label="Text">2</container>
                             <container parent="cid129037" type="Folder">14</container>
                             <unitdate>1982, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref59" level="file">
+                    </c>
+                    <c id="ref59" level="file">
                         <did>
                             <unittitle>To Fieger from Ken Sharp, Denny Somach Productions</unittitle>
                             <container id="cid129038" type="Box" label="Text">2</container>
                             <container parent="cid129038" type="Folder">15</container>
                             <unitdate>1986 January 6</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref60" level="file">
+                    </c>
+                    <c id="ref60" level="file">
                         <did>
                             <unittitle>To Fieger from Tony Clyburn (FOX 102)</unittitle>
                             <container id="cid129039" type="Box" label="Text">2</container>
                             <container parent="cid129039" type="Folder">16</container>
                             <unitdate>1991 February 21</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref61" level="file">
+                    </c>
+                    <c id="ref61" level="file">
                         <did>
                             <unittitle>Celebrity correspondence</unittitle>
                             <container id="cid129040" type="Box" label="Text">2</container>
                             <container parent="cid129040" type="Folder">17</container>
                             <unitdate>1991, 1993-1994, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref62" level="file">
+                    </c>
+                    <c id="ref62" level="file">
                         <did>
                             <unittitle>Invitation to the 37th Annual Grammy Awards</unittitle>
                             <container id="cid129041" type="Box" label="Text">2</container>
                             <container parent="cid129041" type="Folder">18</container>
                             <unitdate>1995</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref63" level="file">
+                    </c>
+                    <c id="ref63" level="file">
                         <did>
                             <unittitle>To Fieger from Berton Averre</unittitle>
                             <container id="cid129042" type="Box" label="Text">2</container>
                             <container parent="cid129042" type="Folder">19</container>
                             <unitdate>1996 November 7</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref64" level="file">
+                    </c>
+                    <c id="ref64" level="file">
                         <did>
                             <unittitle>Letter from Dr. Herbert Rubin, re: Berton Averre's hand injury</unittitle>
                             <container id="cid129043" type="Box" label="Text">2</container>
                             <container parent="cid129043" type="Folder">20</container>
                             <unitdate>2001 November 27</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref65" level="file">
+                    </c>
+                    <c id="ref65" level="file">
                         <did>
                             <unittitle>Letter from Mother</unittitle>
                             <container id="cid129044" type="Box" label="Text">2</container>
                             <container parent="cid129044" type="Folder">21</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref66" level="file">
+                    </c>
+                    <c id="ref66" level="file">
                         <did>
                             <unittitle>To Fieger from Bruce Gary</unittitle>
                             <container id="cid129045" type="Box" label="Text">2</container>
                             <container parent="cid129045" type="Folder">22</container>
                             <unitdate>Christmas</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref16" level="subseries">
+                    </c>
+                </c>
+                <c id="ref16" level="subseries">
                     <did>
                         <unittitle>Subseries 4: Miscellaneous</unittitle>
                         <unitdate>1979-2002, undated</unitdate>
@@ -711,7 +711,7 @@
                             <title render="italic">Reality Bites</title>, scripts from the television show 
                             <title render="italic">Roseanne</title>, a newsletter from Capitol Records, and more.</p>
                     </scopecontent>
-                    <c03 id="ref67" level="file">
+                    <c id="ref67" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Capitol International Newsletter</title></unittitle>
@@ -719,48 +719,48 @@
                             <container parent="cid129046" type="Folder">23</container>
                             <unitdate>1979-1980</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref68" level="file">
+                    </c>
+                    <c id="ref68" level="file">
                         <did>
                             <unittitle>Video file</unittitle>
                             <container id="cid129047" type="Box" label="Text">2</container>
                             <container parent="cid129047" type="Folder">24</container>
                             <unitdate>1981, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref69" level="file">
+                    </c>
+                    <c id="ref69" level="file">
                         <did>
                             <unittitle>Odds and ends</unittitle>
                             <container id="cid129048" type="Box" label="Text">2</container>
                             <container parent="cid129048" type="Folder">25</container>
                             <unitdate>1990-1998, 2004, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref70" level="file">
+                    </c>
+                    <c id="ref70" level="file">
                         <did>
                             <unittitle>"Hi! We're the Knack..."</unittitle>
                             <container id="cid129049" type="Box" label="Text">2</container>
                             <container parent="cid129049" type="Folder">26</container>
                             <unitdate>1991</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref71" level="file">
+                    </c>
+                    <c id="ref71" level="file">
                         <did>
                             <unittitle>"Roseanne" scripts for "Nick"</unittitle>
                             <container id="cid129050" type="Box" label="Text">2</container>
                             <container parent="cid129050" type="Folder">27-28</container>
                             <unitdate>1992-1993</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref72" level="file">
+                    </c>
+                    <c id="ref72" level="file">
                         <did>
                             <unittitle>Small Wonder (Fieger's post-Knack group)</unittitle>
                             <container id="cid129051" type="Box" label="Text">2</container>
                             <container parent="cid129051" type="Folder">29</container>
                             <unitdate>1993</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref73" level="file">
+                    </c>
+                    <c id="ref73" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Reality Bites</title> and The Knack</unittitle>
@@ -768,118 +768,118 @@
                             <container parent="cid129052" type="Folder">30-31</container>
                             <unitdate>1994</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref74" level="file">
+                    </c>
+                    <c id="ref74" level="file">
                         <did>
                             <unittitle>National Academy of Songwriters</unittitle>
                             <container id="cid129053" type="Box" label="Text">2</container>
                             <container parent="cid129053" type="Folder">32</container>
                             <unitdate>1994-1995</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref75" level="file">
+                    </c>
+                    <c id="ref75" level="file">
                         <did>
                             <unittitle>Miscellaneous receipts</unittitle>
                             <container id="cid129054" type="Box" label="Text">2</container>
                             <container parent="cid129054" type="Folder">33</container>
                             <unitdate>1998-1999</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref76" level="file">
+                    </c>
+                    <c id="ref76" level="file">
                         <did>
                             <unittitle>Requests for and drafts of interviews</unittitle>
                             <container id="cid129055" type="Box" label="Text">2</container>
                             <container parent="cid129055" type="Folder">34</container>
                             <unitdate>2000-2004</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref77" level="file">
+                    </c>
+                    <c id="ref77" level="file">
                         <did>
                             <unittitle>Sit-N-Spin: Doug Fieger Top 12 Songs</unittitle>
                             <container id="cid129056" type="Box" label="Text">2</container>
                             <container parent="cid129056" type="Folder">35</container>
                             <unitdate>2002 June 11</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref78" level="file">
+                    </c>
+                    <c id="ref78" level="file">
                         <did>
                             <unittitle>[List of possible band names before The Knack]</unittitle>
                             <container id="cid129057" type="Box" label="Text">2</container>
                             <container parent="cid129057" type="Folder">36</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref17" level="subseries">
+                    </c>
+                </c>
+                <c id="ref17" level="subseries">
                     <did>
                         <unittitle>Subseries 5: Promotional Materials</unittitle>
                         <unitdate>1979-2001, undated</unitdate>
                     </did>
-                    <c03 id="ref79" level="file">
+                    <c id="ref79" level="file">
                         <did>
                             <unittitle>The Knack press kit</unittitle>
                             <container id="cid129058" type="Box" label="Text">2</container>
                             <container parent="cid129058" type="Folder">37</container>
                             <unitdate>1979 Summer</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref80" level="file">
+                    </c>
+                    <c id="ref80" level="file">
                         <did>
                             <unittitle>Miscellaneous promotional and personal material</unittitle>
                             <container id="cid129059" type="Box" label="Text">2</container>
                             <container parent="cid129059" type="Folder">38</container>
                             <unitdate>1979-1981, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref81" level="file">
+                    </c>
+                    <c id="ref81" level="file">
                         <did>
                             <unittitle>Promotional materials</unittitle>
                             <container id="cid129060" type="Box" label="Text">2</container>
                             <container parent="cid129060" type="Folder">39</container>
                             <unitdate>1979, 1998</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref82" level="file">
+                    </c>
+                    <c id="ref82" level="file">
                         <did>
                             <unittitle>The Knack promotional material</unittitle>
                             <container id="cid129061" type="Box" label="Text">2</container>
                             <container parent="cid129061" type="Folder">40</container>
                             <unitdate>circa 1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref83" level="file">
+                    </c>
+                    <c id="ref83" level="file">
                         <did>
                             <unittitle>The Knack press kit (Italian/German)</unittitle>
                             <container id="cid129062" type="Box" label="Text">2</container>
                             <container parent="cid129062" type="Folder">41</container>
                             <unitdate>circa 1980</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref84" level="file">
+                    </c>
+                    <c id="ref84" level="file">
                         <did>
                             <unittitle>Promotional material</unittitle>
                             <container id="cid129063" type="Box" label="Text">2</container>
                             <container parent="cid129063" type="Folder">42</container>
                             <unitdate>circa 1980</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref85" level="file">
+                    </c>
+                    <c id="ref85" level="file">
                         <did>
                             <unittitle>Press kit</unittitle>
                             <container id="cid129064" type="Box" label="Text">2</container>
                             <container parent="cid129064" type="Folder">43</container>
                             <unitdate>1994</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref86" level="file">
+                    </c>
+                    <c id="ref86" level="file">
                         <did>
                             <unittitle>Cover of promotional CD for Zoom</unittitle>
                             <container id="cid129065" type="Box" label="Text">2</container>
                             <container parent="cid129065" type="Folder">44</container>
                             <unitdate>1998</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref87" level="file">
+                    </c>
+                    <c id="ref87" level="file">
                         <did>
                             <unittitle>Promotional materials: 
                                 <title render="italic">Rock 'n' Roll Funhouse</title>, 
@@ -888,8 +888,8 @@
                             <container parent="cid129066" type="Folder">45</container>
                             <unitdate>2000-2001</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref88" level="file">
+                    </c>
+                    <c id="ref88" level="file">
                         <did>
                             <unittitle>Artwork 
                                 <title render="italic">The Knack</title></unittitle>
@@ -897,142 +897,142 @@
                             <container parent="cid129067" type="Folder">46</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref89" level="file">
+                    </c>
+                    <c id="ref89" level="file">
                         <did>
                             <unittitle>Promotional material</unittitle>
                             <container id="cid129068" type="Box" label="Text">2</container>
                             <container parent="cid129068" type="Folder">47</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref90" level="file">
+                    </c>
+                    <c id="ref90" level="file">
                         <did>
                             <unittitle>The Knack stationery</unittitle>
                             <container id="cid129069" type="Box" label="Text">2</container>
                             <container parent="cid129069" type="Folder">48</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref18" level="subseries">
+                    </c>
+                </c>
+                <c id="ref18" level="subseries">
                     <did>
                         <unittitle>Subseries 6: Tours and Performances</unittitle>
                         <unitdate>1978-2007, undated</unitdate>
                     </did>
-                    <c03 id="ref91" level="file">
+                    <c id="ref91" level="file">
                         <did>
                             <unittitle>Starwood guest list</unittitle>
                             <container id="cid129070" type="Box" label="Text">2</container>
                             <container parent="cid129070" type="Folder">49</container>
                             <unitdate>1978</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref92" level="file">
+                    </c>
+                    <c id="ref92" level="file">
                         <did>
                             <unittitle>Show listings</unittitle>
                             <container id="cid129104" type="Box" label="Text">2</container>
                             <container parent="cid129104" type="Folder">50</container>
                             <unitdate>1978-2003, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref93" level="file">
+                    </c>
+                    <c id="ref93" level="file">
                         <did>
                             <unittitle>The Knack Australian tour</unittitle>
                             <container id="cid129084" type="Box" label="Text">2</container>
                             <container parent="cid129084" type="Folder">51</container>
                             <unitdate>August 1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref94" level="file">
+                    </c>
+                    <c id="ref94" level="file">
                         <did>
                             <unittitle>The Knack European tour</unittitle>
                             <container id="cid129085" type="Box" label="Text">2</container>
                             <container parent="cid129085" type="Folder">52</container>
                             <unitdate>1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref95" level="file">
+                    </c>
+                    <c id="ref95" level="file">
                         <did>
                             <unittitle>The Knack 1st world tour, America</unittitle>
                             <container id="cid129086" type="Box" label="Text">2</container>
                             <container parent="cid129086" type="Folder">53</container>
                             <unitdate>1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref96" level="file">
+                    </c>
+                    <c id="ref96" level="file">
                         <did>
                             <unittitle>The Knack Phase II world tour</unittitle>
                             <container id="cid129087" type="Box" label="Text">2</container>
                             <container parent="cid129087" type="Folder">54</container>
                             <unitdate>1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref97" level="file">
+                    </c>
+                    <c id="ref97" level="file">
                         <did>
                             <unittitle>Application to enter Japan on tour</unittitle>
                             <container id="cid129088" type="Box" label="Text">2</container>
                             <container parent="cid129088" type="Folder">55</container>
                             <unitdate>1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref98" level="file">
+                    </c>
+                    <c id="ref98" level="file">
                         <did>
                             <unittitle>Tour itineraries and rehearsal schedules</unittitle>
                             <container id="cid129089" type="Box" label="Text">2</container>
                             <container parent="cid129089" type="Folder">56</container>
                             <unitdate>1979, 1981, 1990, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref99" level="file">
+                    </c>
+                    <c id="ref99" level="file">
                         <did>
                             <unittitle>Tour itineraries</unittitle>
                             <container id="cid129090" type="Box" label="Text">2</container>
                             <container parent="cid129090" type="Folder">57</container>
                             <unitdate>1979, 1989, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref100" level="file">
+                    </c>
+                    <c id="ref100" level="file">
                         <did>
                             <unittitle>The Knack "Around the World in '80" tour</unittitle>
                             <container id="cid129091" type="Box" label="Text">2</container>
                             <container parent="cid129091" type="Folder">58</container>
                             <unitdate>1980</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref101" level="file">
+                    </c>
+                    <c id="ref101" level="file">
                         <did>
                             <unittitle>The Knack promotional tour, Italy</unittitle>
                             <container id="cid129092" type="Box" label="Text">2</container>
                             <container parent="cid129092" type="Folder">59</container>
                             <unitdate>1980</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref102" level="file">
+                    </c>
+                    <c id="ref102" level="file">
                         <did>
                             <unittitle>Promotional tour itinerary</unittitle>
                             <container id="cid129093" type="Box" label="Text">2</container>
                             <container parent="cid129093" type="Folder">60</container>
                             <unitdate>1980</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref103" level="file">
+                    </c>
+                    <c id="ref103" level="file">
                         <did>
                             <unittitle>Savoy program</unittitle>
                             <container id="cid129094" type="Box" label="Text">2</container>
                             <container parent="cid129094" type="Folder">61</container>
                             <unitdate>1981 Fall</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref104" level="file">
+                    </c>
+                    <c id="ref104" level="file">
                         <did>
                             <unittitle>Tour documents (contracts, itineraries)</unittitle>
                             <container id="cid129095" type="Box" label="Text">2</container>
                             <container parent="cid129095" type="Folder">62</container>
                             <unitdate>1987</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref105" level="file">
+                    </c>
+                    <c id="ref105" level="file">
                         <did>
                             <unittitle>The Knack on 
                                 <title render="italic">The Tonight Show with Jay Leno</title></unittitle>
@@ -1040,58 +1040,58 @@
                             <container parent="cid129096" type="Folder">63</container>
                             <unitdate>1994</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref106" level="file">
+                    </c>
+                    <c id="ref106" level="file">
                         <did>
                             <unittitle>Viper Room</unittitle>
                             <container id="cid129097" type="Box" label="Text">2</container>
                             <container parent="cid129097" type="Folder">64</container>
                             <unitdate>1997</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref157" level="file">
+                    </c>
+                    <c id="ref157" level="file">
                         <did>
                             <unittitle>Tour information</unittitle>
                             <container id="cid202001" type="Box" label="Text">2</container>
                             <container parent="cid202001" type="Folder">65</container>
                             <unitdate>1987, undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref107" level="file">
+                    </c>
+                    <c id="ref107" level="file">
                         <did>
                             <unittitle>Tour information</unittitle>
                             <container id="cid129098" type="Box" label="Text">2</container>
                             <container parent="cid129098" type="Folder">66</container>
                             <unitdate>2001-2004</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref108" level="file">
+                    </c>
+                    <c id="ref108" level="file">
                         <did>
                             <unittitle>Contract to appear in Minnesota</unittitle>
                             <container id="cid129099" type="Box" label="Text">2</container>
                             <container parent="cid129099" type="Folder">67</container>
                             <unitdate>2004 April 10</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref109" level="file">
+                    </c>
+                    <c id="ref109" level="file">
                         <did>
                             <unittitle>"Countdown Spectacular 2" tour, Australia</unittitle>
                             <container id="cid129100" type="Box" label="Text">2</container>
                             <container parent="cid129100" type="Folder">68</container>
                             <unitdate>2007 August-September</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref110" level="file">
+                    </c>
+                    <c id="ref110" level="file">
                         <did>
                             <unittitle>Set list</unittitle>
                             <container id="cid129101" type="Box" label="Text">2</container>
                             <container parent="cid129101" type="Folder">69</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-            </c01>
-            <c01 id="ref5" level="series">
+                    </c>
+                </c>
+            </c>
+            <c id="ref5" level="series">
                 <did>
                     <unittitle>Series III: Fan Clubs</unittitle>
                     <unitdate>1981, 1994, undated</unitdate>
@@ -1100,7 +1100,7 @@
                     <head>Scope and Contents</head>
                     <p>Series III: Fan Clubs contains newsletters and promotional advertisements for the Knack International Fan Club and the Knack Fan Club. The Series is chronological with undated material located at the end.</p>
                 </scopecontent>
-                <c02 id="ref111" level="file">
+                <c id="ref111" level="file">
                     <did>
                         <unittitle>The Knack fan clubs newsletter (
                             <title render="italic">Knack Knews</title>)</unittitle>
@@ -1108,17 +1108,17 @@
                         <container parent="cid129071" type="Folder">70</container>
                         <unitdate>1981, 1994</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref112" level="file">
+                </c>
+                <c id="ref112" level="file">
                     <did>
                         <unittitle>Knack International Fan Club</unittitle>
                         <container id="cid129072" type="Box" label="Text">2</container>
                         <container parent="cid129072" type="Folder">71</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-            </c01>
-            <c01 id="ref6" level="series">
+                </c>
+            </c>
+            <c id="ref6" level="series">
                 <did>
                     <unittitle>Series IV: Lyrics</unittitle>
                     <unitdate>1979-2003, undated</unitdate>
@@ -1130,15 +1130,15 @@
                         <title render="italic">Retrospective</title>. The track was later released again on the 1997 Capital Records' Springsteen tribute double CD 
                         <title render="italic">Two Steps Forward, One Step Back</title>. The Knack's "Don't Look Back" is the only released version of this Springsteen chestnut. In recording the song, the band increased the tempo and modified some of the lyrics. This series is organized chronologically undated material arranged alphabetically at the end.</p>
                 </scopecontent>
-                <c02 id="ref113" level="file">
+                <c id="ref113" level="file">
                     <did>
                         <unittitle>Handwritten and published sheet music and lyrics</unittitle>
                         <container id="cid129073" type="Box" label="Text">3</container>
                         <container parent="cid129073" type="Folder">1</container>
                         <unitdate>1979-1980, undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref114" level="file">
+                </c>
+                <c id="ref114" level="file">
                     <did>
                         <unittitle>Typed lyrics for 
                             <title render="italic">Round Trip</title> album</unittitle>
@@ -1146,24 +1146,24 @@
                         <container parent="cid129074" type="Folder">2</container>
                         <unitdate>1981</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref115" level="file">
+                </c>
+                <c id="ref115" level="file">
                     <did>
                         <unittitle>Nirvana's "Smells Like Teen Spirit" [handwritten by Fieger]</unittitle>
                         <container id="cid129075" type="Box" label="Text">3</container>
                         <container parent="cid129075" type="Folder">3</container>
                         <unitdate>1994</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref116" level="file">
+                </c>
+                <c id="ref116" level="file">
                     <did>
                         <unittitle>"My Daytona" lyrics</unittitle>
                         <container id="cid129076" type="Box" label="Text">3</container>
                         <container parent="cid129076" type="Folder">4</container>
                         <unitdate>2003 February-2003 March</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref117" level="file">
+                </c>
+                <c id="ref117" level="file">
                     <did>
                         <unittitle>"Don't Look Back" [written by Bruce Springsteen]</unittitle>
                         <container id="cid129077" type="Box" label="Text">3</container>
@@ -1174,16 +1174,16 @@
                         <head>General note</head>
                         <p>These appear to a photocopy of the lyrics, handwritten by Bruce Springsteen in a spiral bound notebook.</p>
                     </odd>
-                </c02>
-                <c02 id="ref118" level="file">
+                </c>
+                <c id="ref118" level="file">
                     <did>
                         <unittitle>Fieger's handwritten lyrics</unittitle>
                         <container id="cid129078" type="Box" label="Text">3</container>
                         <container parent="cid129078" type="Folder">6</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref119" level="file">
+                </c>
+                <c id="ref119" level="file">
                     <did>
                         <unittitle>Handwritten lyrics for 3rd album, 
                             <title render="italic">Round Trip</title></unittitle>
@@ -1191,25 +1191,25 @@
                         <container parent="cid129079" type="Folder">7</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref120" level="file">
+                </c>
+                <c id="ref120" level="file">
                     <did>
                         <unittitle>Handwritten lyrics for "Frustrated"</unittitle>
                         <container id="cid129080" type="Box" label="Text">3</container>
                         <container parent="cid129080" type="Folder">8</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref121" level="file">
+                </c>
+                <c id="ref121" level="file">
                     <did>
                         <unittitle>Lyrics</unittitle>
                         <container id="cid129081" type="Box" label="Text">3</container>
                         <container parent="cid129081" type="Folder">9</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-            </c01>
-            <c01 id="ref7" level="series">
+                </c>
+            </c>
+            <c id="ref7" level="series">
                 <did>
                     <unittitle>Series V: Personal Files</unittitle>
                     <unitdate>1979-2004</unitdate>
@@ -1218,24 +1218,24 @@
                     <head>Scope and Contents</head>
                     <p>Series V: Personal Files contains articles, clippings, and other publications related to some of Fieger's personal interests, family, and friends, including his brother Geoff's political career, Was Not Was, Aerosmith, the Rubber City Rebels, Frank Zappa, the Troubadour, and Charlie Bishop. The Series is arranged chronologically.</p>
                 </scopecontent>
-                <c02 id="ref122" level="file">
+                <c id="ref122" level="file">
                     <did>
                         <unittitle>Personal interest file</unittitle>
                         <container id="cid129082" type="Box" label="Text">3</container>
                         <container parent="cid129082" type="Folder">10</container>
                         <unitdate>1979-2004</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref123" level="file">
+                </c>
+                <c id="ref123" level="file">
                     <did>
                         <unittitle>Aerosmith's Get a Grip Tour, Glen Helen Blockbuster Pavilion</unittitle>
                         <container id="cid129083" type="Box" label="Text">3</container>
                         <container parent="cid129083" type="Folder">11</container>
                         <unitdate>1994 October 15</unitdate>
                     </did>
-                </c02>
-            </c01>
-            <c01 id="ref8" level="series">
+                </c>
+            </c>
+            <c id="ref8" level="series">
                 <did>
                     <unittitle>Series VI: Posters</unittitle>
                     <unitdate>1979-2004</unitdate>
@@ -1244,15 +1244,15 @@
                     <head>Scope and Contents</head>
                     <p>Series VI: Posters includes promotional posters and a LP flat related to The Knack. The Series is arranged chronologically. Materials are stored out of sequence due to size and condition concerns.</p>
                 </scopecontent>
-                <c02 id="ref125" level="item">
+                <c id="ref125" level="item">
                     <did>
                         <unittitle>Knack in concert, Utah State University</unittitle>
                         <container id="cid129103" type="Drawer-Folder" label="Graphic materials">FF.1.14-1</container>
                         <container parent="cid129103" type="Object">6</container>
                         <unitdate>1979 October 31</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref172" level="item">
+                </c>
+                <c id="ref172" level="item">
                     <did>
                         <unittitle>
                             <title render="italic">Get the Knack</title></unittitle>
@@ -1260,32 +1260,32 @@
                         <container parent="cid532004" type="Object">3</container>
                         <unitdate>1979</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref124" level="item">
+                </c>
+                <c id="ref124" level="item">
                     <did>
                         <unittitle>"Get the Knack Get the Songbook"</unittitle>
                         <container id="cid129102" type="Drawer-Folder" label="Graphic materials">FF.1.14-1</container>
                         <container parent="cid129102" type="Object">7</container>
                         <unitdate>circa 1979</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref166" level="item">
+                </c>
+                <c id="ref166" level="item">
                     <did>
                         <unittitle>"The Knack Get It"</unittitle>
                         <container id="cid531002" type="Box" label="Graphic materials">4</container>
                         <container parent="cid531002" type="Object">13-14</container>
                         <unitdate>circa 1979</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref171" level="item">
+                </c>
+                <c id="ref171" level="item">
                     <did>
                         <unittitle>Knack, Capitol Records</unittitle>
                         <container id="cid532005" type="Drawer-Folder" label="Graphic materials">FF.1.14-1</container>
                         <container parent="cid532005" type="Object">4</container>
                         <unitdate>1980</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref128" level="item">
+                </c>
+                <c id="ref128" level="item">
                     <did>
                         <unittitle>Knack, 
                             <title render="italic">...but the little girls understand</title> and "La Nena Dice Tacos" b/w "Baby Talks Dirty"</unittitle>
@@ -1297,8 +1297,8 @@
                         <unitdate>1980</unitdate>
                         <langmaterial id="ref167" label="Language of Materials">Material is in Spanish.</langmaterial>
                     </did>
-                </c02>
-                <c02 id="ref129" level="item">
+                </c>
+                <c id="ref129" level="item">
                     <did>
                         <unittitle>Knack, 
                             <title render="italic">Serious Fun</title></unittitle>
@@ -1306,8 +1306,8 @@
                         <container parent="cid129108" type="Object">1</container>
                         <unitdate>1991</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref135" level="item">
+                </c>
+                <c id="ref135" level="item">
                     <did>
                         <unittitle>Knack, 
                             <title render="italic">Serious Fun</title> flat</unittitle>
@@ -1315,16 +1315,16 @@
                         <container parent="cid129114" type="Object">10</container>
                         <unitdate>1991</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref127" level="item">
+                </c>
+                <c id="ref127" level="item">
                     <did>
                         <unittitle>Knack with special guests the Muffs, at Belly Up</unittitle>
                         <container id="cid129105" type="Box" label="Graphic materials">4</container>
                         <container parent="cid129105" type="Object">15-17</container>
                         <unitdate>1994 May 2</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref170" level="item">
+                </c>
+                <c id="ref170" level="item">
                     <did>
                         <unittitle>
                             <title render="italic">Reality Bites</title></unittitle>
@@ -1332,40 +1332,40 @@
                         <container parent="cid532006" type="Object">11</container>
                         <unitdate>1994</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref130" level="item">
+                </c>
+                <c id="ref130" level="item">
                     <did>
                         <unittitle>Temecula Valley Balloon and Wine Festival: Knack; Motels; Spin Doctors; Fixx; Buck-O-Nine; Drew Davis Band</unittitle>
                         <container id="cid129109" type="Box" label="Graphic materials">4</container>
                         <container parent="cid129109" type="Object">6</container>
                         <unitdate>2004 June 4-6</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref131" level="item">
+                </c>
+                <c id="ref131" level="item">
                     <did>
                         <unittitle>Knack at Golden Bear</unittitle>
                         <container id="cid129110" type="Box" label="Graphic materials">4</container>
                         <container parent="cid129110" type="Object">7</container>
                         <unitdate>January 18</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref164" level="item">
+                </c>
+                <c id="ref164" level="item">
                     <did>
                         <unittitle>Kingfish; Flora Purim; Knack; Zippers at Pacific Strand Theatre</unittitle>
                         <container id="cid531003" type="Box" label="Graphic materials">4</container>
                         <container parent="cid531003" type="Object">11</container>
                         <unitdate>February 17-March 10</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref162" level="item">
+                </c>
+                <c id="ref162" level="item">
                     <did>
                         <unittitle>Knack at Golden Bear</unittitle>
                         <container id="cid531004" type="Box" label="Graphic materials">4</container>
                         <container parent="cid531004" type="Object">8</container>
                         <unitdate>February 23</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref165" level="item">
+                </c>
+                <c id="ref165" level="item">
                     <did>
                         <unittitle>Knack, Entertainment 79 at the Catamaran Hotel &amp; Restaurant</unittitle>
                         <container id="cid531005" type="Box" label="Graphic materials">4</container>
@@ -1374,48 +1374,48 @@
                         <container parent="cid532003" type="Object">12</container>
                         <unitdate>March 20</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref132" level="item">
+                </c>
+                <c id="ref132" level="item">
                     <did>
                         <unittitle>Knack, live in concert at the Roxy</unittitle>
                         <container id="cid129111" type="Drawer-Folder" label="Graphic materials">FF.1.14-1</container>
                         <container parent="cid129111" type="Object">8</container>
                         <unitdate>April 28</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref133" level="item">
+                </c>
+                <c id="ref133" level="item">
                     <did>
                         <unittitle>Knack at Royce Hall, UCLA</unittitle>
                         <container id="cid129112" type="Drawer-Folder" label="Graphic materials">FF.1.14-1</container>
                         <container parent="cid129112" type="Object">9</container>
                         <unitdate>July 12</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref160" level="item">
+                </c>
+                <c id="ref160" level="item">
                     <did>
                         <unittitle>"Mainstreet's August Groups": Ariel; Steel, Rick and the Hot Biscuit Band; Sheerlux; Phil Manning Band; Charisma; Knack</unittitle>
                         <container id="cid531001" type="Box" label="Graphic materials">4</container>
                         <container parent="cid531001" type="Object">4</container>
                         <unitdate>August 2-September 1</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref163" level="item">
+                </c>
+                <c id="ref163" level="item">
                     <did>
                         <unittitle>Knack at the Troubadour</unittitle>
                         <container id="cid531006" type="Box" label="Graphic materials">4</container>
                         <container parent="cid531006" type="Object">9-10</container>
                         <unitdate>September 22-24</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref134" level="item">
+                </c>
+                <c id="ref134" level="item">
                     <did>
                         <unittitle>Knack, Capitol Records/Toshbia EMI concert image</unittitle>
                         <container id="cid129113" type="Drawer-Folder" label="Graphic materials">FF.1.14-1</container>
                         <container parent="cid129113" type="Object">2</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-            </c01>
+                </c>
+            </c>
         </dsc>
     </archdesc>
 </ead>

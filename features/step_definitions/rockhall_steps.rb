@@ -60,7 +60,12 @@ Then /^I should see the field content "([^"]*)" not contain "([^"]*)"$/ do |arg1
 end
 
 Then /^I should see "([^"]*)" in "([^"]*)"$/ do |arg1, arg2|
-  page.should have_xpath("//*/span[contains(@class, arg2)]", :text => arg1)
+  case arg2
+  when /^italics/
+    page.should have_xpath("//*/em", :text => arg1)
+  else
+    page.should have_xpath("//*/span[contains(@class, arg2)]", :text => arg1)
+  end
 end
 
 Then /^I should see the word "([^"]*)" highlighted$/ do |arg1|
@@ -113,6 +118,6 @@ Then /^all bookmarks should be unchecked$/ do
   end
 end
 
-
-
-
+Then /^I should see "(.*?)" in the sidebar$/ do |arg1|
+  page.should have_xpath("//*/div[@id='ead_sidebar']", :text => arg1)
+end

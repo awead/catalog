@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-10-02T11:42-0400</date>
+                <date>2012-12-07T13:00-0500</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -118,7 +118,7 @@
             <subject source="lcsh">Rock music--Posters</subject>
         </controlaccess>
         <dsc>
-            <c01 id="ref42" level="file">
+            <c id="ref42" level="file">
                 <did>
                     <unittitle>Series I: Flyers</unittitle>
                     <langmaterial>
@@ -130,7 +130,7 @@
                     <head>Scope and Contents</head>
                     <p>Contains 19 concert flyers created by graphic artist John Seabury. All but one of the flyers are for concerts held at Slim's in San Francisco, California. Performers include Camper Van Beethoven, Dick Dale, John Doe, Four Non-Blondes, Screamin' Jay Hawkins, Psycotic Pineapple, and The Ultras. The flyers are arranged chronologically.</p>
                 </scopecontent>
-                <c02 id="ref9" level="item">
+                <c id="ref9" level="item">
                     <did>
                         <unittitle>Psycotic Pineapple</unittitle>
                         <langmaterial>
@@ -143,8 +143,8 @@
                             <dimensions>7.75" x 14"</dimensions>
                         </physdesc>
                     </did>
-                </c02>
-                <c02 id="ref44" level="item">
+                </c>
+                <c id="ref44" level="item">
                     <did>
                         <unittitle>Winter Surf Stomp!: Square Roots, Trebels, Let's Go Bowling</unittitle>
                         <langmaterial>
@@ -154,8 +154,8 @@
                         <container parent="cid333002" type="Object">2</container>
                         <unitdate>1989 January 13</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref45" level="item">
+                </c>
+                <c id="ref45" level="item">
                     <did>
                         <unittitle>Pearl Harbor, Rhythm Riot, Ed Haynes</unittitle>
                         <langmaterial>
@@ -165,8 +165,8 @@
                         <container parent="cid333003" type="Object">3</container>
                         <unitdate>1989 February 7</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref46" level="item">
+                </c>
+                <c id="ref46" level="item">
                     <did>
                         <unittitle>Hellhounds, Kingsound, Ramblers</unittitle>
                         <langmaterial>
@@ -176,8 +176,8 @@
                         <container parent="cid333004" type="Object">4</container>
                         <unitdate>1989</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref47" level="item">
+                </c>
+                <c id="ref47" level="item">
                     <did>
                         <unittitle>Hawkins, Screamin' Jay, Universal Congress Of, Po Go Bo</unittitle>
                         <langmaterial>
@@ -187,8 +187,8 @@
                         <container parent="cid333005" type="Object">5</container>
                         <unitdate>1989 March 31</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref48" level="item">
+                </c>
+                <c id="ref48" level="item">
                     <did>
                         <unittitle>de Forest, Carmaig, Sneetches, Genuine Diamelles</unittitle>
                         <langmaterial>
@@ -198,8 +198,8 @@
                         <container parent="cid333006" type="Object">6</container>
                         <unitdate>1989 April 11</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref49" level="item">
+                </c>
+                <c id="ref49" level="item">
                     <did>
                         <unittitle>Blazing Redheads, Timmie Helsa and the Converse All-Stars</unittitle>
                         <langmaterial>
@@ -209,8 +209,8 @@
                         <container parent="cid333007" type="Object">7</container>
                         <unitdate>1989 July 20</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref50" level="item">
+                </c>
+                <c id="ref50" level="item">
                     <did>
                         <unittitle>Camper van Beethoven, Souled American, Movie Stars, Black Sun Ensemble, Sextants</unittitle>
                         <langmaterial>
@@ -220,8 +220,8 @@
                         <container parent="cid333008" type="Object">8</container>
                         <unitdate>1989 July 21-1989 July 22</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref51" level="item">
+                </c>
+                <c id="ref51" level="item">
                     <did>
                         <unittitle>Hangmen, Maximillian's Motorcycle Club, Sextants</unittitle>
                         <langmaterial>
@@ -231,8 +231,8 @@
                         <container parent="cid333009" type="Object">9</container>
                         <unitdate>1989 August 22</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref52" level="item">
+                </c>
+                <c id="ref52" level="item">
                     <did>
                         <unittitle>Birdkillers, Flophouse, Cement Trampoline</unittitle>
                         <langmaterial>
@@ -242,8 +242,8 @@
                         <container parent="cid334001" type="Object">10</container>
                         <unitdate>1989 August 29</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref53" level="item">
+                </c>
+                <c id="ref53" level="item">
                     <did>
                         <unittitle>Lunch, Lydia, Wanda Coleman, Don Bajema, Eugene Robinson</unittitle>
                         <langmaterial>
@@ -253,8 +253,8 @@
                         <container parent="cid334002" type="Object">11</container>
                         <unitdate>1990 March 11</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref54" level="item">
+                </c>
+                <c id="ref54" level="item">
                     <did>
                         <unittitle>World Entertainment War, Eskimo</unittitle>
                         <langmaterial>
@@ -264,8 +264,8 @@
                         <container parent="cid334003" type="Object">12</container>
                         <unitdate>1990 July 29</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref55" level="item">
+                </c>
+                <c id="ref55" level="item">
                     <did>
                         <unittitle>Doe, John, Kimm Rogers</unittitle>
                         <langmaterial>
@@ -275,8 +275,8 @@
                         <container parent="cid334004" type="Object">13</container>
                         <unitdate>1990 August 6</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref57" level="item">
+                </c>
+                <c id="ref57" level="item">
                     <did>
                         <unittitle>Ultras, Crazy 8's, World Entertainment</unittitle>
                         <langmaterial>
@@ -286,8 +286,8 @@
                         <container parent="cid334005" type="Object">14</container>
                         <unitdate>1990 August 24</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref58" level="item">
+                </c>
+                <c id="ref58" level="item">
                     <did>
                         <unittitle>Movie Stars, Harm Farm, Josef Brinckman and the Conspiracy of Equals</unittitle>
                         <langmaterial>
@@ -297,8 +297,8 @@
                         <container parent="cid334006" type="Object">15</container>
                         <unitdate>1990 November 6</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref59" level="item">
+                </c>
+                <c id="ref59" level="item">
                     <did>
                         <unittitle>Four Non-Blondes, Capture the Flag, Snakewalk, Havalinas, Fisherman</unittitle>
                         <langmaterial>
@@ -308,8 +308,8 @@
                         <container parent="cid334007" type="Object">16</container>
                         <unitdate>1990 November 8, 1990 November 11</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref60" level="item">
+                </c>
+                <c id="ref60" level="item">
                     <did>
                         <unittitle>Doe, John, Steve Young, Nancie DeRoss, Marti Jones and Don Dixon</unittitle>
                         <langmaterial>
@@ -319,8 +319,8 @@
                         <container parent="cid334008" type="Object">17</container>
                         <unitdate>1991 February 19, 1991 February 26</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref61" level="item">
+                </c>
+                <c id="ref61" level="item">
                     <did>
                         <unittitle>Beat Farmers, Skankin' Pickle, Little Women, Bourdon Deluxe</unittitle>
                         <langmaterial>
@@ -330,8 +330,8 @@
                         <container parent="cid334009" type="Object">18</container>
                         <unitdate>1991 March 21, 1991 March 24</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref62" level="item">
+                </c>
+                <c id="ref62" level="item">
                     <did>
                         <unittitle>Ultras with Dick Dale</unittitle>
                         <langmaterial>
@@ -341,9 +341,9 @@
                         <container parent="cid334010" type="Object">19</container>
                         <unitdate>1992 August 1</unitdate>
                     </did>
-                </c02>
-            </c01>
-            <c01 id="ref43" level="file">
+                </c>
+            </c>
+            <c id="ref43" level="file">
                 <did>
                     <unittitle>Series II: Posters</unittitle>
                     <langmaterial>
@@ -355,7 +355,7 @@
                     <head>Scope and Contents</head>
                     <p>Series II: Posters contains 25 concert posters and one film poster created by graphic artist John Seabury. Performers include Adam Ant, George Clinton, The Damned, Mars Volta, Megadeath, Moonalice, Willie Nelson, Pavement, Queens of the Stone Age, Radiohead, The Rolling Stones, Todd Rundgren, The Tubes, and Rob Zombie. The posters are arranged chronologically.</p>
                 </scopecontent>
-                <c02 id="ref10" level="item">
+                <c id="ref10" level="item">
                     <did>
                         <unittitle>Psychotic Pineapple</unittitle>
                         <langmaterial>
@@ -372,8 +372,8 @@
                         <head>Limited Print Run</head>
                         <p>Non-numbered edition of 200</p>
                     </odd>
-                </c02>
-                <c02 id="ref14" level="item">
+                </c>
+                <c id="ref14" level="item">
                     <did>
                         <unittitle>Crime, Psychotic Pineapple</unittitle>
                         <langmaterial>
@@ -386,8 +386,8 @@
                             <dimensions>17" x 11"</dimensions>
                         </physdesc>
                     </did>
-                </c02>
-                <c02 id="ref66" level="item">
+                </c>
+                <c id="ref66" level="item">
                     <did>
                         <unittitle>Richman, Jonathan, Noe Valley Ministry</unittitle>
                         <langmaterial>
@@ -404,8 +404,8 @@
                         <head>General note</head>
                         <p>Artist Proof</p>
                     </odd>
-                </c02>
-                <c02 id="ref16" level="item">
+                </c>
+                <c id="ref16" level="item">
                     <did>
                         <unittitle>Pavement at the Cleveland Agora</unittitle>
                         <langmaterial>
@@ -422,8 +422,8 @@
                         <head>Limited Print Run</head>
                         <p>224/350</p>
                     </odd>
-                </c02>
-                <c02 id="ref63" level="item">
+                </c>
+                <c id="ref63" level="item">
                     <did>
                         <unittitle>Ant, Adam, Dwellers at the Odeon Concert Club</unittitle>
                         <langmaterial>
@@ -440,8 +440,8 @@
                         <head>Limited Print Run</head>
                         <p>319/450</p>
                     </odd>
-                </c02>
-                <c02 id="ref20" level="item">
+                </c>
+                <c id="ref20" level="item">
                     <did>
                         <unittitle>Radiohead</unittitle>
                         <langmaterial>
@@ -458,8 +458,8 @@
                         <head>Limited Print Run</head>
                         <p>220/300</p>
                     </odd>
-                </c02>
-                <c02 id="ref76" level="item">
+                </c>
+                <c id="ref76" level="item">
                     <did>
                         <unittitle>Rundgren, Todd, Lucy Lee</unittitle>
                         <langmaterial>
@@ -476,8 +476,8 @@
                         <head>Limited Print Run</head>
                         <p>189/225</p>
                     </odd>
-                </c02>
-                <c02 id="ref70" level="item">
+                </c>
+                <c id="ref70" level="item">
                     <did>
                         <unittitle>Temporary Insanity: A Poster and Comix Show</unittitle>
                         <langmaterial>
@@ -494,8 +494,8 @@
                         <head>Limited Print Run</head>
                         <p>199/200 - signed by artists Gary Grimshaw and John Seabury</p>
                     </odd>
-                </c02>
-                <c02 id="ref23" level="item">
+                </c>
+                <c id="ref23" level="item">
                     <did>
                         <unittitle>Psycotic Pineapple, Sudden Fun</unittitle>
                         <langmaterial>
@@ -512,8 +512,8 @@
                         <head>Limited Print Run</head>
                         <p>183/250</p>
                     </odd>
-                </c02>
-                <c02 id="ref73" level="item">
+                </c>
+                <c id="ref73" level="item">
                     <did>
                         <unittitle>Lunachicks, Altar Boys, Auntie Christ</unittitle>
                         <langmaterial>
@@ -530,8 +530,8 @@
                         <head>Limited Print Run</head>
                         <p>167/250</p>
                     </odd>
-                </c02>
-                <c02 id="ref26" level="item">
+                </c>
+                <c id="ref26" level="item">
                     <did>
                         <unittitle>Pynotics</unittitle>
                         <langmaterial>
@@ -544,8 +544,8 @@
                             <dimensions>12" x 9"</dimensions>
                         </physdesc>
                     </did>
-                </c02>
-                <c02 id="ref79" level="item">
+                </c>
+                <c id="ref79" level="item">
                     <did>
                         <unittitle>Mr. Bungle, Melvins, No Means No, Kids of Widney High, Fantômas</unittitle>
                         <langmaterial>
@@ -562,8 +562,8 @@
                         <head>Limited Print Run</head>
                         <p>235/1000</p>
                     </odd>
-                </c02>
-                <c02 id="ref82" level="item">
+                </c>
+                <c id="ref82" level="item">
                     <did>
                         <unittitle>Built to Spill, Creeper Lagoon</unittitle>
                         <langmaterial>
@@ -580,8 +580,8 @@
                         <head>Limited Print Run</head>
                         <p>271/300</p>
                     </odd>
-                </c02>
-                <c02 id="ref85" level="item">
+                </c>
+                <c id="ref85" level="item">
                     <did>
                         <unittitle>Clinton, George and Parliament Funkadelic, Club Townshend</unittitle>
                         <langmaterial>
@@ -598,8 +598,8 @@
                         <head>General note</head>
                         <p>130/300</p>
                     </odd>
-                </c02>
-                <c02 id="ref88" level="item">
+                </c>
+                <c id="ref88" level="item">
                     <did>
                         <unittitle>Tubes, X-Rated Porno Machine</unittitle>
                         <langmaterial>
@@ -617,8 +617,8 @@
                         <head>Limited Print Run</head>
                         <p>100/200</p>
                     </odd>
-                </c02>
-                <c02 id="ref93" level="item">
+                </c>
+                <c id="ref93" level="item">
                     <did>
                         <unittitle>Nelson, Willie and family</unittitle>
                         <langmaterial>
@@ -631,8 +631,8 @@
                             <dimensions>19" x 12"</dimensions>
                         </physdesc>
                     </did>
-                </c02>
-                <c02 id="ref95" level="item">
+                </c>
+                <c id="ref95" level="item">
                     <did>
                         <unittitle>Megadeath</unittitle>
                         <langmaterial>
@@ -649,8 +649,8 @@
                         <head>Limited Print Run</head>
                         <p>282/300</p>
                     </odd>
-                </c02>
-                <c02 id="ref28" level="item">
+                </c>
+                <c id="ref28" level="item">
                     <did>
                         <unittitle>Queens of the Stone Age</unittitle>
                         <langmaterial>
@@ -667,8 +667,8 @@
                         <head>Limited Print Run</head>
                         <p>26/39</p>
                     </odd>
-                </c02>
-                <c02 id="ref31" level="item">
+                </c>
+                <c id="ref31" level="item">
                     <did>
                         <unittitle>
                             <title render="italic">Sympathy For the Devil</title></unittitle>
@@ -686,8 +686,8 @@
                         <head>Limited Print Run</head>
                         <p>Non-numbered edition of 175</p>
                     </odd>
-                </c02>
-                <c02 id="ref34" level="item">
+                </c>
+                <c id="ref34" level="item">
                     <did>
                         <unittitle>Fucked Up</unittitle>
                         <langmaterial>
@@ -704,8 +704,8 @@
                         <head>Limited Print Run</head>
                         <p>51/110</p>
                     </odd>
-                </c02>
-                <c02 id="ref98" level="item">
+                </c>
+                <c id="ref98" level="item">
                     <did>
                         <unittitle>Mars Volta</unittitle>
                         <langmaterial>
@@ -722,8 +722,8 @@
                         <head>Limited Print Run</head>
                         <p>190/200</p>
                     </odd>
-                </c02>
-                <c02 id="ref37" level="item">
+                </c>
+                <c id="ref37" level="item">
                     <did>
                         <unittitle>Deep</unittitle>
                         <langmaterial>
@@ -740,8 +740,8 @@
                         <head>Limited Print Run</head>
                         <p>88/100</p>
                     </odd>
-                </c02>
-                <c02 id="ref101" level="item">
+                </c>
+                <c id="ref101" level="item">
                     <did>
                         <unittitle>Moonalice</unittitle>
                         <langmaterial>
@@ -754,8 +754,8 @@
                             <dimensions>12.75" x 17.25"</dimensions>
                         </physdesc>
                     </did>
-                </c02>
-                <c02 id="ref103" level="item">
+                </c>
+                <c id="ref103" level="item">
                     <did>
                         <unittitle>Damned</unittitle>
                         <langmaterial>
@@ -772,8 +772,8 @@
                         <head>Limited Print Run</head>
                         <p>89/125</p>
                     </odd>
-                </c02>
-                <c02 id="ref106" level="item">
+                </c>
+                <c id="ref106" level="item">
                     <did>
                         <unittitle>Zombie, Rob, Catalyst</unittitle>
                         <langmaterial>
@@ -790,8 +790,8 @@
                         <head>Limited Print Run</head>
                         <p>169/300</p>
                     </odd>
-                </c02>
-                <c02 id="ref109" level="item">
+                </c>
+                <c id="ref109" level="item">
                     <did>
                         <unittitle>Moonalice</unittitle>
                         <langmaterial>
@@ -804,8 +804,8 @@
                             <dimensions>12.75" x 17.25"</dimensions>
                         </physdesc>
                     </did>
-                </c02>
-            </c01>
+                </c>
+            </c>
         </dsc>
     </archdesc>
 </ead>

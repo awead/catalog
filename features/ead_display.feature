@@ -24,11 +24,11 @@ Feature: EAD display
     Then I should see "Oversize materials, 1977-1985, undated"
 
   Scenario: Date expression in sub component level (BL-9) and accession numbers
-    Given I am on the ead page for ARC-0105:2:ref42
+    Given I am on the ead page for ARC-0105ref42
     Then I should see "Awards and certificates"
     And I should see "Awards and certificates, 1976-1986"
-    And I should not see "Museum Accession Numbers:"
-    And I should not see "A1994.4.10-A1994.4.22"
+    And I should see "Accession Numbers:"
+    And I should see "A1994.4.10-A1994.4.22"
 
   Scenario: Names (BL-7, BL-147)
     Given I am on the ead page for ARC-0058
@@ -36,7 +36,7 @@ Feature: EAD display
     Then I should see "Alternative rock music"
 
   Scenario: Dimensions note (see BL-124)
-    Given I am on the ead page for ARC-0065:2:ref10
+    Given I am on the ead page for ARC-0065ref10
     Then I should see "Limited Print Run"
     And I should see "Non-numbered edition of 200"
     And I should see "Dimensions:"
@@ -47,29 +47,24 @@ Feature: EAD display
     And I should see "Drawer-Folder: FF.1.4-7, Object: 1"
 
   Scenario: I need to see all sub-components (BL-58)
-    Given I am on the ead page for ARC-0065:2:ref62
+    Given I am on the ead page for ARC-0065ref62
     Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
     And I should see "Ultras with Dick Dale, 1992 August 1"
-
-  @future-work
-  Scenario: EAD that has no collection headings (BL-60)
-    Given I am on the ead page for RG-0001
-    Then I should not see "Controlled Access Headings"
 
   Scenario: Show accession numbers (BL-118) Note: this is revoked from BL-49
     Given I am on the ead page for ARC-0058
     Then I should see "A2005.31.15"
 
   Scenario: HTTP calls for components should still work (BL-55)
-    Given I am on the component page for ARC-0065:2:ref42
-    Then I should see "Psycotic Pineapple, 1980 August 4-1980 September 15"
+    Given I am on the component page for ARC-0037ref454
+    Then I should see "Amnesty International tour, 1986"
 
   Scenario: Displaying italics (BL-33)
     Given I am on the ead page for ARC-0058
-    Then I should see "New Musical Express" in "italic"
-    And I should see "Love" in "italic"
+    Then I should see "New Musical Express" in "italics"
+    And I should see "Esquire" in "italics"
     Given I am on the ead page for ARC-0105
-    Then I should see "Blues Train" in "italic"
+    Then I should see "Blues Train" in "italics"
 
   Scenario: Separated materials notes (BL-43)
     Given I am on the ead page for ARC-0105
@@ -86,15 +81,15 @@ Feature: EAD display
     And I should see "Collection is open for research"
 
   Scenario: Existence and Location of Originals (BL-117)
-    Given I am on the ead page for ARC-0006:3:ref641
+    Given I am on the ead page for ARC-0006ref641
     Then I should see "original plaque"
 
   Scenario: Physical description (BL-119)
-    Given I am on the ead page for ARC-0006:3:ref725
+    Given I am on the ead page for ARC-0006ref725
     Then I should see "Trimmed"
 
   Scenario: Language of Materials, Museum Acc. #, Separated Materials (BL-118)
-    Given I am on the ead page for ARC-0006:3:ref690
+    Given I am on the ead page for ARC-0006ref690
     Then I should see "Material is in French."
     And I should see "A2010.1.18"
     And I should see "Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information."
@@ -113,12 +108,13 @@ Feature: EAD display
     Given I am on the ead page for ARC-0006
     Then I should not see "Publisher"
 
+  @future-work
   Scenario: Order and titles of EAD fields as they appear in Blacklight (BL-147)
     Given I am on the ead page for ARC-0003
     Then I should see "Dates:"
-    And I should see "Inclusive, 1928-2006, undated; Bulk, 1938-1969"
+    And I should see "Bulk, 1938-1969; Inclusive, 1928-2006, undated"
     And I should see "Custodial History"
-    And I should not see "Custodial History note"
+    And I should not see "Custodial History note" # See IT-83 about this
     And I should see "Subject Headings"
     And I should not see "Controlled Access Headings"
 
@@ -129,8 +125,9 @@ Feature: EAD display
     And I should see "Accruals"
 
   Scenario: Displaying multiple copies of an archival item (BL-202)
-    Given I am on the ead page for ARC-0006:4:ref216
-    Then I should see "Original Copy - Box: 5, Folder: 1, Object: 4, Access Copy - Box: 1B, Folder: 22, Object: 4"
+    Given I am on the ead page for ARC-0006ref216
+    Then I should see the field content "blacklight-location_display" contain "Box: 5, Folder: 1, Object: 4 (Original Copy)"
+    Then I should see the field content "blacklight-location_display" contain "Box: 1B, Folder: 22, Object: 4 (Access Copy)"
 
   Scenario: Processing information note (BL-196)
     Given I am on the ead page for ARC-0003
@@ -158,4 +155,8 @@ Feature: EAD display
     Given I am on the ead page for ARC-0026
     Then I should see "Normal As The Next Guy" in "italic"
 
-
+  Scenario: Sidebar items (BL-295)
+    Given I am on the ead page for ARC-0037
+    Then I should see "Full View" in the sidebar
+    And I should see "Archivist View" in the sidebar
+    And I should see "General Information" in the sidebar

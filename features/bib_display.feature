@@ -88,8 +88,8 @@ Feature:
 
   Scenario: Display Thesis Notes (BL-157, BL-158)
     Given I am on the bib record page for 35618845
-    Then I should see the field content "blacklight-notes_display" contain "Thesis (Ph.D.)--Tulane University, 1995"
-    And I should see the field content "blacklight-notes_display" contain "Photocopy. Ann Arbor, Mich. : UMI Dissertation Services, 2012. iv, 695 p. ; 23 cm"
+    Then I should see the field content "blacklight-note_display" contain "Thesis (Ph.D.)--Tulane University, 1995"
+    And I should see the field content "blacklight-note_display" contain "Photocopy. Ann Arbor, Mich. : UMI Dissertation Services, 2012. iv, 695 p. ; 23 cm"
 
   Scenario: Proper display of subjec headings (BL-TBA)
     Given I am on the bib record page for 10483424
@@ -99,8 +99,8 @@ Feature:
 
   Scenario: Displaying Eras in Genre Headings (BL-176)
     Given I am on the bib record page for 668192442
-    Then I should see the field content "blacklight-genre_display" contain "Biography--Juvenile literature"
-    And I should see the field content "blacklight-genre_display" not contain "Biography Juvenile literature"
+    Then I should see the field content "blacklight-genre_facet" contain "Biography--Juvenile literature"
+    And I should see the field content "blacklight-genre_facet" not contain "Biography Juvenile literature"
 
   Scenario: I should see the image of the format type when looking at an item (BL-111_
     Given I am on the bib record page for "228365502"

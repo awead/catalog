@@ -10,7 +10,7 @@ Feature: Catalog Home Page
     Then I should see a facet for "Format"
     And I should see a facet for "Archival Material"
     And I should see a facet for "Collection Name"
-    And I should see a facet for "Topic"
+    And I should see a facet for "Subject"
     And I should see a facet for "Name"
     And I should see a facet for "Event/Series"
     And I should see a facet for "Genre"
