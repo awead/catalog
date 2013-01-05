@@ -15,9 +15,9 @@ namespace :ead do
           indexer.update(file)
           Rockhall::Indexing.ead_to_html(file)
           Rockhall::Indexing.toc_to_json(File.new(file))
-          print "done."
+          print "done.\n"
         rescue
-          print "failed!"
+          print "failed!\n"
         end
       end
     else
