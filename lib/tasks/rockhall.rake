@@ -10,13 +10,15 @@ namespace :ead do
     indexer = SolrEad::Indexer.new(:document=>Rockhall::EadDocument, :component=>Rockhall::EadComponent)
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
-        print "Indexing #{File.basename(file)}."
-        indexer.update(file)
-        print "."
-        Rockhall::Indexing.ead_to_html(file)
-        print "."
-        Rockhall::Indexing.toc_to_json(File.new(file))
-        print "done.\n"
+        print "Indexing #{File.basename(file)}: "
+        begin
+          indexer.update(file)
+          Rockhall::Indexing.ead_to_html(file)
+          Rockhall::Indexing.toc_to_json(File.new(file))
+          print "done."
+        rescue
+          print "failed!"
+        end
       end
     else
       indexer.update(ENV['EAD'])
