@@ -5,7 +5,7 @@ config = Hash.new
 config[:opac_ip] = "129.22.104.30"
 
 # Path to ead xml
-config[:ead_path] = "spec/fixtures/ead"
+config[:ead_path] = "public/fa"
 
 # Pin our hash to the global Rails configuration
 Rails.configuration.rockhall_config = config

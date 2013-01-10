@@ -15,6 +15,7 @@ namespace :ead do
           indexer.update(file)
           Rockhall::Indexing.ead_to_html(file)
           Rockhall::Indexing.toc_to_json(File.new(file))
+          FileUtils.cp(file, Rails.configuration.rockhall_config[:ead_path])
           print "done.\n"
         rescue
           print "failed!\n"
@@ -24,12 +25,7 @@ namespace :ead do
       indexer.update(ENV['EAD'])
       Rockhall::Indexing.ead_to_html(ENV['EAD'])
       Rockhall::Indexing.toc_to_json(File.new(ENV['EAD']))
-    end
-    if Rails.env.match?("production")
-      print "Syncing files to remove server: "
-      Rake::Task["rockhall:ead:index"].reenable
-      Rake::Task["rockhall:ead:index"].invoke
-      print "done.\n"
+      FileUtils.cp(ENV['EAD'], Rails.configuration.rockhall_config[:ead_path])
     end
   end
 
