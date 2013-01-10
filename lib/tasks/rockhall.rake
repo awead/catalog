@@ -59,15 +59,6 @@ namespace :ead do
     end
   end
 
-  desc "Uses a rsync command to copy ead files to a remote server"
-  task :remote => :environment do
-    raise "Please specify your ead, ex. EAD=<path/to/ead.xml" unless ENV['EAD']
-    unless Rails.configuration.rockhall_config[:ead_remote_path].empty?
-      File.directory?(ENV['EAD']) ? Dir.glob(File.join(ENV['EAD'],"*.xml")).collect { |file| Rockhall::Indexing.file_sync(file) } : Rockhall::Indexing.file_sync(ENV['EAD'])
-      Dir.glob("public/fa/*.*").collect { |file| Rockhall::Indexing.file_sync(file) }
-    end
-  end
-
 
 end
 end
