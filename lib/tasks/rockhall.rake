@@ -5,7 +5,7 @@ namespace :rockhall do
 namespace :ead do
 
   desc "Index ead into solr and create both html and json"
-  task :index do
+  task :index => :environment do
     raise "Please specify your ead, ex. EAD=<path/to/ead" unless ENV['EAD']
     indexer = SolrEad::Indexer.new(:document=>Rockhall::EadDocument, :component=>Rockhall::EadComponent)
     if File.directory?(ENV['EAD'])
@@ -25,11 +25,16 @@ namespace :ead do
       Rockhall::Indexing.ead_to_html(ENV['EAD'])
       Rockhall::Indexing.toc_to_json(File.new(ENV['EAD']))
     end
-
+    if Rails.env.match?("production")
+      print "Syncing files to remove server: "
+      Rake::Task["rockhall:ead:index"].reenable
+      Rake::Task["rockhall:ead:index"].invoke
+      print "done.\n"
+    end
   end
 
   desc "Convert ead to html only"
-  task :to_html do
+  task :to_html => :environment do
     raise "Please specify a path to your ead, ex. EAD=<path/to/ead.xml" unless ENV['EAD']
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
@@ -42,7 +47,7 @@ namespace :ead do
   end
 
   desc "Convert ead to json only"
-  task :to_json do
+  task :to_json => :environment do
     raise "Please specify your ead, ex. EAD=<path/to/ead.xml" unless ENV['EAD']
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
@@ -51,6 +56,15 @@ namespace :ead do
       end
     else
       Rockhall::Indexing.toc_to_json(File.new(ENV['EAD']))
+    end
+  end
+
+  desc "Uses a rsync command to copy ead files to a remote server"
+  task :remote => :environment do
+    raise "Please specify your ead, ex. EAD=<path/to/ead.xml" unless ENV['EAD']
+    unless Rails.configuration.rockhall_config[:ead_remote_path].empty?
+      File.directory?(ENV['EAD']) ? Dir.glob(File.join(ENV['EAD'],"*.xml")).collect { |file| Rockhall::Indexing.file_sync(file) } : Rockhall::Indexing.file_sync(ENV['EAD'])
+      Dir.glob("public/fa/*.*").collect { |file| Rockhall::Indexing.file_sync(file) }
     end
   end
 

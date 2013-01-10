@@ -76,4 +76,16 @@ module Rockhall::Indexing
     id.match(/[A-Z]{2,3}-[0-9]{4,4}/) ? true : false
   end
 
+  # Copies files over to a remote server via rsync
+  # When files are indexed on a staging server, the html and json files are copied to a local directory, usually:
+  #   public/fa
+  # If you're using a different production server, those files need to be sent over it, in the same location.
+  # Uses rsync system command with options specified in rockhall_config.rb
+  def self.file_sync(src)
+    command = ["rsync", "-ru", src]
+    command << Rails.configuration.rockhall_config[:ead_remote_user]+"@"+Rails.configuration.rockhall_config[:ead_remote_host]+":"+Rails.configuration.rockhall_config[:ead_remote_path]
+    system command.join(" ")
+  end
+
+
 end
