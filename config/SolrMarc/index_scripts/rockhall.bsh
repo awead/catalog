@@ -96,20 +96,34 @@ Set getInnovativeId(Record record, String fieldSpec)
 
 }
 
-/**
- * Determines the id of a marc record in this order:
- * 001
- * 907a
- * 035a
- */
+/*
+ Determines the id of a marc record from the following fields, in order.  First successful
+ match is returned.
+
+   1. First 001 that does not begin with "sky"
+   2. First 907a
+   3. First 035a
+   4. No id found, so null is returned
+*/
 public String getRockhallId(Record record) {
 
-  String val  = indexer.getFirstFieldVal(record, "001");
-  String alt1 = indexer.getFirstFieldVal(record, "907a");
-  String alt2 = indexer.getFirstFieldVal(record, "035a");
+  Set fields001  = indexer.getFieldList(record, "001");
+  String alt1    = indexer.getFirstFieldVal(record, "907a");
+  String alt2    = indexer.getFirstFieldVal(record, "035a");
+  String f001    = null;
 
-  if (val != null) {
-    return val;
+  // Find first 001 that doesn't begin with "sky"
+  if (fields001 != null) {
+    for ( String s : fields001 ) {
+      if ( !s.startsWith("sky")) {
+        f001 = s;
+        break;
+      }
+    }
+  }
+
+  if ( f001 != null) {
+    return f001;
   }
   else {
 
