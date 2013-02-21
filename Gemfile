@@ -15,6 +15,7 @@ gem 'blacklight_highlight'
 gem 'blacklight-sitemap', '~> 1.0.0'
 gem 'ruby-ntlm'
 gem 'solr_ead'
+gem 'therubyracer'
 
 group :assets do
   gem 'coffee-rails'
