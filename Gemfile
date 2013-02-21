@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~>3.2.8'
+gem 'rails', '~>3.2.12'
 
 gem 'blacklight', '< 4.0.0'
 gem 'sqlite3'
