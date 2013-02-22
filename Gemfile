@@ -7,7 +7,6 @@ gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
 gem 'jquery-rails'
-gem 'rspec-rails'
 gem 'sass-rails'
 gem 'devise'
 gem 'devise-guests'
@@ -25,6 +24,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'rspec-rails', '~> 2.12.2'
   gem 'webrat'
   gem 'database_cleaner'
   gem 'debugger'
