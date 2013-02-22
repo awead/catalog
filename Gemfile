@@ -6,7 +6,6 @@ gem 'blacklight', '< 4.0.0'
 gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
-gem 'jquery-rails'
 gem 'sass-rails'
 gem 'devise'
 gem 'devise-guests'
@@ -15,6 +14,10 @@ gem 'blacklight-sitemap', '~> 1.0.0'
 gem 'ruby-ntlm'
 gem 'solr_ead'
 gem 'therubyracer'
+
+# jQuery 1.9 breaks checkbox_submit.js functions
+# using jquery-rails versions prior to 2.2 keeps us to jQuery 1.8
+gem 'jquery-rails', '< 2.2.0'
 
 group :assets do
   gem 'coffee-rails'
