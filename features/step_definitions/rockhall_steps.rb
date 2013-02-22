@@ -121,3 +121,11 @@ end
 Then /^I should see "(.*?)" in the sidebar$/ do |arg1|
   page.should have_xpath("//*/div[@id='ead_sidebar']", :text => arg1)
 end
+
+When /^I click the close button "(.*?)"$/ do |arg1|
+  find(("img#" + arg1)).click
+end
+
+Then /^I should see "(.*?)" in a highlighted component$/ do |arg1|
+  page.should have_xpath("//*/div[contains(@style, 'background-color: rgb(255, 255, 0)')]", :text => arg1)
+end
