@@ -1,0 +1,9 @@
+/*
+ * application-print.css
+ *
+ * Manifest file for application-print.css which is for all stylyings expressly used for
+ * printing.
+ *
+ *= require_self
+ *= require_tree ./print
+ */
