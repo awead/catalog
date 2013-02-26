@@ -1,0 +1,17 @@
+<div id="userLinks" >
+  <% if has_user_authentication_provider? %>
+  <% if current_user %>
+    <%= link_to t('blacklight.header_links.logout'), destroy_user_session_path %> [<%= link_to current_user, edit_user_registration_path %>]
+  <% else %>
+    <%= link_to t('blacklight.header_links.login'), new_user_session_path %>
+  <% end %>
+    | 
+  <% end %>
+  <% if current_or_guest_user %>
+    <%= link_to t('blacklight.header_links.bookmarks'), bookmarks_path %>
+  <% end %>
+  <% if current_user %>
+    | <%= link_to t('blacklight.header_links.saved_searches'), saved_searches_path %>
+  <% end %>
+    | <%= link_to t('blacklight.header_links.search_history'), search_history_path %>
+</div>

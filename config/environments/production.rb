@@ -35,6 +35,9 @@ Catalog::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Compile two different css files, the normal application.css and another only for printing
+  config.assets.precompile += %w( application.css application-print.css )
+
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
