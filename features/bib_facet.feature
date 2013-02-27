@@ -28,7 +28,7 @@ Feature: Catalog Home Page
 
   Scenario: Verifying quantities of each format (BL-268)
     Given I am on the home page
-    And I should see "Book (46)"
+    And I should see "Book (49)"
     And I should see "Theses/Dissertations (9)"
     And I should see "Audio (9)"
     And I should see "Score (7)"

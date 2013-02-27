@@ -25,6 +25,9 @@ module NavigationHelpers
         catalog_path($1)
       end
 
+    when /^the citation page for (.+)/
+      citation_catalog_path(:id=>$1)
+
     when /^the component page for (.+)/
       id, refnum = $1.split("ref")
       components_path(:ead_id=>id, :parent_ref=>"ref"+refnum)
