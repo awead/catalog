@@ -31,6 +31,7 @@ group :development, :test do
   gem 'webrat'
   gem 'database_cleaner'
   gem 'debugger'
+  gem 'pry'
 end
 
 group :cucumber do
