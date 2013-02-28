@@ -146,23 +146,15 @@ public String getRockhallId(Record record) {
 }
 
 
+/*
+  Builds our subject terms
+
+  Each subfield is indexed as a separate term, except for names which are concatenated
+  together into one string.
+*/
 Set getRockhallSubjects(Record record) {
 
-  Set      result            = new LinkedHashSet();
-
-  // Gather up all subfields in non-name fields
-  /*
-  List nonNameFields = record.getVariableFields(nonNameFieldTags);
-  for ( DataField field : nonNameFields ) {
-    List subfields = field.getSubfields();
-    for (Subfield subfield : subfields) {
-      if (subfield != null) {
-        String content = subfield.getData();
-        result.add(content.replaceAll("\\W$","")); 
-      }
-    }
-  }
-  */
+  Set result = new LinkedHashSet();
 
   // If anyone can show me how to just simply get a set of subfields from a particular field
   // or set of fields, please show me.  Otherwise, I have to resort to this ridiculous method
