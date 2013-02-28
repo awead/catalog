@@ -5,6 +5,7 @@ import org.solrmarc.tools.CallNumUtils;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import org.marc4j.marc.Record;
+import org.solrmarc.index;
 
 // define the base level indexer so that its methods can be called from the script.
 // note that the SolrIndexer code will set this value before the script methods are called.
@@ -147,27 +148,53 @@ public String getRockhallId(Record record) {
 
 Set getRockhallSubjects(Record record) {
 
-  String dashedFields   = "610[a-z]:650[a-z]:651[a-z]:630[a-z]";
-  String combinedFields = "600[a-d]:611[a-d]";
-  String sep            = "--";
+  Set      result            = new LinkedHashSet();
 
-  Set dashedSet   = indexer.getAllSubfields(record, dashedFields, sep);
-  Set combinedSet = indexer.getFieldList(record, combinedFields);
+  // Gather up all subfields in non-name fields
+  /*
+  List nonNameFields = record.getVariableFields(nonNameFieldTags);
+  for ( DataField field : nonNameFields ) {
+    List subfields = field.getSubfields();
+    for (Subfield subfield : subfields) {
+      if (subfield != null) {
+        String content = subfield.getData();
+        result.add(content.replaceAll("\\W$","")); 
+      }
+    }
+  }
+  */
 
-  Set result       = new LinkedHashSet();
+  // If anyone can show me how to just simply get a set of subfields from a particular field
+  // or set of fields, please show me.  Otherwise, I have to resort to this ridiculous method
+  // that uses the getAllSubfields with a separator, then splits each resulting string with
+  // that same separator.
 
-  if (combinedSet != null) {
-    for ( String comb : combinedSet ) {
+  // First get subjects that do not have names in them
+  Set nonNameFields = indexer.getAllSubfields(record, "610[a-z]:650[a-z]:651[a-z]:630[a-z]", "--");
+  for ( String concatSubs : nonNameFields ) {
+    String[] subs = concatSubs.split("--");
+    for (String s : subs) {
+      result.add(s);
+    }
+  }
+
+  // For subjects with names and dates, get the non-name and date parts
+  Set nameFieldsNoNames = indexer.getAllSubfields(record, "600[e-z]:611[e-z]", "--");
+  for ( String concatSubs : nameFieldsNoNames ) {
+    String[] subs = concatSubs.split("--");
+    for (String s : subs) {
+      result.add(s);
+    }
+  }
+
+  // Gather up the names just the names from 600 and 611 fields
+  Set nameFields = indexer.getFieldList(record, "600[a-d]:611[a-d]");
+  if (nameFields != null) {
+    for ( String comb : nameFields ) {
       result.add(comb);
     }
   }
-
-  if (dashedSet != null) {
-    for ( String dashed : dashedSet ) {
-      result.add(dashed);
-    }
-  }
-
+  
   return result;
 
 }
