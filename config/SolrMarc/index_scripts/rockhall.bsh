@@ -172,3 +172,54 @@ Set getRockhallSubjects(Record record) {
 
 }
 
+
+/*
+  Finds our call numbers from 945 fields.
+
+  $a and $b is concatenated together and added to the result set
+  but only if $l corresponds to one of our location codes.  Otherwise,
+  the field is ignored.
+*/
+Set getRockhallCallNumber(Record record) {
+
+  Set result = new LinkedHashSet();
+  String l;
+  String a;
+  String b;
+  String call;
+
+  List fields945 = record.getVariableFields("945");
+
+  for ( DataField field : fields945) {
+    Subfield subfield_l = field.getSubfield('l');
+    Subfield subfield_a = field.getSubfield('a');
+    Subfield subfield_b = field.getSubfield('b');
+
+    if ( subfield_l != null && subfield_a != null ) {
+      l = subfield_l.getData();
+      a = subfield_a.getData();
+
+      if (subfield_b != null) {
+        b = subfield_b.getData();
+        call = a + " " + b;
+      }
+      else {
+        call = a;
+      }
+
+      String pattern = "rx|rhlrr|rharr|rhs2|rhs2o|rhs3";
+      Pattern p      = Pattern.compile(pattern);
+      Matcher m      = p.matcher(l);
+
+      if (m.find()) {
+        result.add(call);
+      }
+
+    }   
+
+  }
+
+  return result;
+
+}
+

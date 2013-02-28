@@ -59,6 +59,17 @@ module MarcHelper
     return results.join(field_value_separator).html_safe
   end
 
+  def render_call_number args, results = Array.new
+    locations = ["rx", "rhlrr", "rharr", "rhs2", "rhs2o", "rhs3"]
+    if args[:document]["marc_display"]
+      #record = MARC::XMLReader.new(StringIO.new(args[:document]["marc_display"])).first
+      MARC::XMLReader.new(StringIO.new(args[:document]["marc_display"])).first.find_all {|f| f.tag == '945'}.each do |field|
+        results << field['a'] if locations.include?(field['l'].strip)
+      end
+    end
+    return results.join(field_value_separator).html_safe
+  end
+
   def field_value_separator
     '<br/>'
   end

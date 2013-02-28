@@ -146,4 +146,12 @@ Feature:
     Given I am on the bib record page for 785870275
     Then I should see the field content "blacklight-lc_callnum_display" contain "ML421.B5338 B53P4 2013"
 
+  Scenario: Display Rockhall call numbers only (BL-307)
+    Given I am on the home page
+    And I fill in "q" with "quincy jones"
+    When I press "search"
+    Then I should see "Q : the autobiography of Quincy Jones / Quincy Jones"
+    And I should see the field content "blacklight-lc_callnum_display" contain "ML429.J66 A3 2001"
+    And I should see the field content "blacklight-lc_callnum_display" not contain "ML419.J7A3 2001"
+
     
