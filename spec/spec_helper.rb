@@ -29,3 +29,7 @@ end
 def ead_fixture(file) #:nodoc
   File.new(File.join(File.dirname(__FILE__), 'fixtures', 'ead', file))
 end
+
+def marc_fixture(file) #:nodoc
+  MARC::Reader.new(File.join(File.dirname(__FILE__), 'fixtures', 'marc', file)).first
+end

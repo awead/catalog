@@ -144,8 +144,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'access_display',             :label => 'Access:'
 
     config.add_show_field 'subject_facet',              :label         => 'Subjects:',
-                                                        :helper_method => :render_facet_link,
-                                                        :facet         => 'subject_facet'
+                                                        :helper_method => :render_subjects
 
     config.add_show_field 'genre_facet',                :label         => 'Genre/Form:',
                                                         :helper_method => :render_facet_link,

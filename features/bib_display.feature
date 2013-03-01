@@ -154,4 +154,9 @@ Feature:
     And I should see the field content "blacklight-lc_callnum_display" contain "ML429.J66 A3 2001"
     And I should see the field content "blacklight-lc_callnum_display" not contain "ML419.J7A3 2001"
 
+  Scenario: Display names in subject headings (BL-249)
+    Given I am on the bib record page for 601137822
+    Then I should see the field content "blacklight-subject_facet" contain "Lennon, John, 1940-1980--Assassination"
+    And I should see the field content "blacklight-subject_facet" contain "Lennon, John, 1940-1980--Death and burial"
+
     
