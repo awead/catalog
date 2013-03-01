@@ -12,12 +12,13 @@ class Rockhall::EadDocument < SolrEad::Document
     solr_doc.merge!({"language_facet"   => get_language_from_code(self.langcode.first) })
 
     # Facets
-    solr_doc.merge!({"name_facet"          => self.corpname})
-    solr_doc.merge!({"name_facet"          => self.persname})
     solr_doc.merge!({"genre_facet"         => self.genreform})
 
-    # Copy name_facet to contributors_display to match what we do with MARC
-    solr_doc["contributors_display"] = solr_doc["name_facet"]
+    # Gather persname and corpame together as  contributors_display to match what we do with MARC
+    # copyt this to name_facet
+    contributors_display = (self.corpname + self.persname)
+    solr_doc["contributors_display"] = contributors_display.flatten.sort
+    solr_doc["name_facet"] = solr_doc["contributors_display"]
 
     # Split out subjects into individual terms; save original subject headings from EAD for display
     solr_doc["subject_display"] = self.subject

@@ -165,3 +165,8 @@ Feature: EAD display
     Given I am on the ead page for ARC-0258
     Then I should see "Diltz, Henry"
     And I should not see "Subjects:"
+
+  Scenario: corpname and persname are getting clobbered (BL-335)
+    Given I am on the ead page for ARC-0058
+    Then I should see "Morrison, Jim, 1943-1971"
+    And I should see "Denali (Musical group)"
