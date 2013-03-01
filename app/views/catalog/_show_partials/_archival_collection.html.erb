@@ -14,7 +14,7 @@
         <dt>Name:</dt>
         <dd><%= render_facet_link({:document => @document, :field => "contributors_display"}) %></dd>
       <% end %>
-      <% if @document["subjects_display"] %>
+      <% if @document["subject_display"] %>
         <dt>Subjects:</dt>
         <dd><%= render_ead_subjects %></dd>
       <% end %>
