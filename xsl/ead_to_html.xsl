@@ -43,6 +43,7 @@
         <h4>Access</h4>
         <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict/ead:p"/>
                
+        <!--       
         <h2 id="subjects">Subjects</h2>
         <p>Click on the links below to see more items in the catalog on these topics.</p>
         <dl class="defList block">
@@ -56,6 +57,7 @@
           <dt>Topic:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:subject"/></dd>
         </dl>
+        -->
 
       </div>
 

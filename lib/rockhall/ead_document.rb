@@ -16,6 +16,18 @@ class Rockhall::EadDocument < SolrEad::Document
     solr_doc.merge!({"name_facet"          => self.persname})
     solr_doc.merge!({"genre_facet"         => self.genreform})
 
+    # Copy name_facet to contributors_display to match what we do with MARC
+    solr_doc["contributors_display"] = solr_doc["name_facet"]
+
+    # Split out subjects into individual terms; save original subject headings from EAD for display
+    solr_doc["subject_display"] = self.subject
+    new_subject_facet = Array.new
+    self.subject.each do |term|
+      splits = term.split(/--/)
+      new_subject_facet << splits
+    end
+    solr_doc["subject_facet"] = new_subject_facet.flatten.compact.uniq
+
     return solr_doc
   end
 
