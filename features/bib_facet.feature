@@ -52,6 +52,7 @@ Feature: Catalog Home Page
     Given I am on the home page
     Then I should not see "Jeff Gold Collection (Rock and Roll Hall of Fame and Museum. Library and Archives)"
 
+  @wip
   Scenario: Subject headings for library materials are under the Topic facet
     Given I am on the home page
     When I follow "Rock music--History and criticism"
