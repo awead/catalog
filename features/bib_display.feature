@@ -55,11 +55,6 @@ Feature:
     Then I should see the field title "blacklight-resource_url_display" contain "Online Resource:"
     And I should be able to follow the "blacklight-resource_url_display" link "http://rockhall.com"
 
-  Scenario: Deriving call numbers for display (BL-41)
-    Given I am on the bib record page for 45008581
-    Then I should see "ML420.L466 S54 2000"
-    And I should not see "ML420.L38 A5 2000"
-
   Scenario: Multiple collection headings in 541$3 (BL-59)
     Given I am on the bib record page for 663101343
     Then I should see "Archival Collection"
@@ -143,21 +138,7 @@ Feature:
     And I should see "Oral history videos"
     And I should be able to follow "Oral history videos"
 
-  Scenario: Call number display (BL-296)
-    Given I am on the bib record page for 785870275
-    Then I should see the field content "blacklight-lc_callnum_display" contain "ML421.B5338 B53P4 2013"
-
-  Scenario: Display Rockhall call numbers only (BL-307)
-    Given I am on the home page
-    And I fill in "q" with "quincy jones"
-    When I press "search"
-    Then I should see "Q : the autobiography of Quincy Jones / Quincy Jones"
-    And I should see the field content "blacklight-lc_callnum_display" contain "ML429.J66 A3 2001"
-    And I should see the field content "blacklight-lc_callnum_display" not contain "ML419.J7A3 2001"
-
   Scenario: Display names in subject headings (BL-249)
     Given I am on the bib record page for 601137822
     Then I should see the field content "blacklight-subject_facet" contain "Lennon, John, 1940-1980--Assassination"
     And I should see the field content "blacklight-subject_facet" contain "Lennon, John, 1940-1980--Death and burial"
-
-    
