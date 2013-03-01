@@ -160,3 +160,8 @@ Feature: EAD display
     Then I should see "Full View" in the sidebar
     And I should see "Archivist View" in the sidebar
     And I should see "General Information" in the sidebar
+
+  Scenario: Name Headings listed as "Creator" (BL-294)
+    Given I am on the ead page for ARC-0258
+    Then I should see "Diltz, Henry"
+    And I should not see "Subjects:"

@@ -10,12 +10,18 @@
     <h2 id="subjects">Subjects</h2>
     <p>Click on the links below to see more items in the catalog on these topics.</p>
     <dl class="defList block">
-      <dt>Name:</dt>
-      <dd><%= render_facet_link({:document => @document, :field => "contributors_display"}) %></dd>
-      <dt>Subjects:</dt>
-      <dd><%= render_ead_subjects %></dd>
-      <dt>Genre:</dt>
-      <dd><%= render_facet_link({:document => @document, :field => "genre_facet"}) %></dd>
+      <% if @document["contributors_display"] %>
+        <dt>Name:</dt>
+        <dd><%= render_facet_link({:document => @document, :field => "contributors_display"}) %></dd>
+      <% end %>
+      <% if @document["subjects_display"] %>
+        <dt>Subjects:</dt>
+        <dd><%= render_ead_subjects %></dd>
+      <% end %>
+      <% if @document["genre_facet"] %>
+        <dt>Genre:</dt>
+        <dd><%= render_facet_link({:document => @document , :field => "genre_facet"}) %></dd>
+      <% end %>
     </dl>
     <%= render_collection_inventory %>
   <% end %>

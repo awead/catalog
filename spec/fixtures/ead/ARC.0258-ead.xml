@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Complete" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0258</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Henry Diltz Photographs (Rona Elliot Papers)
+                    <num>ARC.0258</num>
+                </titleproper>
+                <titleproper type="filing">Diltz Henry Photographs (Rona Elliot Papers)</titleproper>
+                <author>Finding aid prepared by Jennie Thomas, Head Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>December 8, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2013-01-05T12:47-0500</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>Henry Diltz Photographs (Rona Elliot Papers)</unittitle>
+            <unitid>ARC.0258</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>1.0 Linear feet</extent>
+                <extent>(1 flat box)</extent>
+            </physdesc>
+            <unitdate normal="1960/1988" type="inclusive">1960-1988</unitdate>
+            <abstract id="ref1" label="Collection Overview">The Henry Diltz Photographs (Rona Elliot Papers) consist of 25 11" x 14" color and black-and-white photographs from 1969 to 1988; all shot, printed, and signed by Henry Diltz. The color photographs include images of Paul and Linda McCartney (1971), the Doors in the window of the Morrison Hotel (1969), Jimi Hendrix at Woodstock (1969), Crosby Stills &amp; Nash (1969), Jackson Browne (1974), Janis Joplin at Woodstock (1969), Stephen Stills in the snow (1970), Buffalo Springfield (1966), Blondie (1977), Bruce Springsteen in concert (1981, 1988), and Elvis Costello (1979). The black-and-white photographs include images of Frank Zappa (1971), Crosby, Stills, Nash &amp; Young (1970), Tom Waits (1980), the Eagles (1978), Bruce Springsteen at the Hollywood Bowl (1981), Jerry Garcia and David Crosby (1971), Neil Young (1970, 1975), James Taylor (1969), Keith Richards (1979), The Who at Monterey Pop (1967), and the Mamas and Papas (1967).</abstract>
+            <origination label="creator">
+                <persname rules="aacr" role="Photographer (pht)">Diltz, Henry</persname>
+            </origination>
+        </did>
+        <bioghist id="ref3">
+            <head>Biographical Note</head>
+            <p>Henry Diltz is a world-renowned photographer and founding member of the Modern Folk Quartet (MFQ). Diltz, who is as much at home as a musician on tour, is a visual historian of the last four decades of popular music. The rapport he’s developed with his musician friends enables him to capture candid shots that convey a rare feeling of trust and intimacy with his subjects</p>
+            <p>For Diltz, the pictures began with a $20 second-hand Japanese camera purchased on tour with the MFQ. When the group disbanded, Diltz embarked on his photographic career with an album cover for The Lovin’ Spoonful. Despite his lack of formal training, he easily submerged himself in the world of rock photography.</p>
+            <p>For over 40 years, his work has graced hundreds of album covers and has been featured in books, magazines, and newspapers. His unique artistic style has produced powerful photographic essays of Woodstock , The Monterey Pop Festival, The Doors, Crosby, Stills, Nash &amp; Young, Jimi Hendrix, and scores of other legendary artists. Diltz continues his distinguished career, generating new and vibrant photographs that inspire the rock and roll fan in each of us.</p>
+            <p>Henry Diltz is a partner in, and is exclusively published and represented by, the Morrison Hotel Gallery.</p>
+            <list numeration="lowerroman" type="ordered">
+                <head>Sources</head>
+                <item>"Henry Diltz." 
+                    <title render="italic">Morrison Hotel Gallery</title>. Accessed December 8, 2011. https://www.morrisonhotelgallery.com/photographer/default.aspx?photographerID=9.</item>
+            </list>
+        </bioghist>
+        <custodhist id="ref4">
+            <head>Custodial History</head>
+            <p>The Henry Diltz Photographs (Rona Elliot Papers) were purchased by Elliot from Diltz, and then received by the Rock and Roll Hall of Fame and Museum, Inc. as a gift from Elliot on September 20, 2011.</p>
+        </custodhist>
+        <prefercite id="ref5">
+            <head>Preferred Citation</head>
+            <p>[Identification of Item], Henry Diltz Photographs (Rona Elliot Papers), Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <processinfo id="ref6">
+            <head>Processing Information</head>
+            <p>Processed by Jennie Thomas, Head Archivist. Completed December 8, 2011. Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <userestrict id="ref7">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Museum, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <accessrestrict id="ref8">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibilities and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+        </accessrestrict>
+        <controlaccess>
+            <corpname rules="aacr">Blondie (Musical group)</corpname>
+            <persname rules="aacr">Browne, Jackson</persname>
+            <corpname rules="aacr">Buffalo Springfield (Musical group)</corpname>
+            <persname rules="aacr">Costello, Elvis</persname>
+            <persname rules="aacr">Crosby, David, 1941-</persname>
+            <corpname rules="aacr" source="naf">Crosby, Stills &amp; Nash</corpname>
+            <corpname rules="aacr" source="naf">Crosby, Stills, Nash &amp; Young </corpname>
+            <corpname rules="aacr" source="local">Doors (Musical group)</corpname>
+            <corpname rules="aacr">Eagles (Musical group)</corpname>
+            <persname rules="dacs" source="local" role="Donor (dnr)">Elliot, Rona</persname>
+            <persname rules="aacr">Garcia, Jerry, 1942-1995</persname>
+            <persname rules="aacr">Joplin, Janis</persname>
+            <corpname rules="aacr">Mamas and the Papas (Musical group)</corpname>
+            <persname rules="aacr">McCartney, Linda</persname>
+            <persname rules="aacr">McCartney, Paul</persname>
+            <persname rules="aacr">Richards, Keith, 1943-</persname>
+            <corpname rules="local" source="local">Rona Elliot Papers</corpname>
+            <persname rules="aacr">Springsteen, Bruce</persname>
+            <persname rules="aacr">Stills, Stephen</persname>
+            <persname rules="aacr">Taylor, James, 1948-</persname>
+            <persname rules="aacr">Waits, Tom, 1949-</persname>
+            <corpname rules="aacr">Who (Musical group)</corpname>
+            <persname rules="aacr">Zappa, Frank</persname>
+            <genreform source="lcsh">Photographs</genreform>
+        </controlaccess>
+        <dsc>
+            <c id="ref9" level="file">
+                <did>
+                    <unittitle>11" x 14" photographs - shot, printed, and signed by Henry Diltz</unittitle>
+                    <container id="cid770005" type="Box" label="Graphic materials">1</container>
+                    <container parent="cid770005" type="Folder">1</container>
+                    <container parent="cid770005" type="Object">1-25</container>
+                    <unitdate>1960-1988</unitdate>
+                </did>
+                <odd id="ref10">
+                    <head>General note</head>
+                    <p>Please note, the images themselves are only 8" x 12".</p>
+                </odd>
+            </c>
+        </dsc>
+    </archdesc>
+</ead>
