@@ -52,11 +52,10 @@ Feature: Catalog Home Page
     Given I am on the home page
     Then I should not see "Jeff Gold Collection (Rock and Roll Hall of Fame and Museum. Library and Archives)"
 
-  @wip
   Scenario: Subject headings for library materials are under the Topic facet
     Given I am on the home page
-    When I follow "Rock music--History and criticism"
-    Then I should see "Classic rock / edited by Chris Woodstra, John Bush, Stephen Thomas"
+    When I follow the subject "Inductee"
+    Then I should see "All you needed was love : the Beatles after the Beatles / John Blake"
 
   Scenario: Add facet for theses and dissertations (BL-153,BL-154)
     Given I am on the home page

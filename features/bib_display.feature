@@ -11,11 +11,11 @@ Feature:
     And I should see the field content "blacklight-title_display" contain "ASCAP supplementary index of performed compositions"
     And I should not see "Music United States Bibliography, Music United States Indexes, Songs United States Bibliography"
 
-  @wip
-  Scenario: Subject field links (BL-10)
-    Given I am on the bib record page for 5774581
-    When I follow "Music--United States--Bibliography"
-    Then I should see "ASCAP supplementary index of performed compositions"
+  Scenario: Subject field links (BL-10, BL-249)
+    Given I am on the bib record page for 60373433
+    When I follow "History and criticism"
+    Then I should see "African American music : an introduction"
+    And I should see "The country blues"
 
   Scenario: Contributors field links (BL-10, BL-76)
     Given I am on the bib record page for 5774581

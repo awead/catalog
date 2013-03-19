@@ -129,3 +129,9 @@ end
 Then /^I should see "(.*?)" in a highlighted component$/ do |arg1|
   page.should have_xpath("//*/div[contains(@style, 'background-color: rgb(255, 255, 0)')]", :text => arg1)
 end
+
+When(/^I follow the subject "(.*?)"$/) do |arg1|
+  within(".blacklight-subject_facet") do
+    click_link(arg1)
+  end
+end
