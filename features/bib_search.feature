@@ -39,6 +39,13 @@ Feature:
     And I follow the facet link "Book"
     Then I should see "Shake, rattle & turn that noise down!"
 
+  Scenario: Call number searches (BL-327)
+    Given I am on the home page
+    And I fill in "q" with "ML3534 .A48 1970"
+    And I select "Call No." from "search_field"
+    When I press "search"
+    Then I should see "Altamont : death of innocence in the Woodstock nation"
+
   Scenario: Null ids in marc recrods (BL-169)
     Given I am on the bib record page for 35618845
     Given I am on the bib record page for 706740
