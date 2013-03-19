@@ -33,6 +33,7 @@
         <h2 id="abstract">Collection Overview</h2>
         <p><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></p>
         <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
         <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
         <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
         <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
@@ -76,6 +77,7 @@
       <xsl:choose>
         <xsl:when test="parent::ead:chronlist"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="parent::ead:list"><h4><xsl:apply-templates/></h4></xsl:when>
+        <xsl:when test="parent::ead:bibliography"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="ancestor::ead:c"><h5><xsl:apply-templates/></h5></xsl:when>
         <xsl:otherwise><h2 id="{$id}"><xsl:apply-templates/></h2></xsl:otherwise>
       </xsl:choose>
@@ -207,6 +209,11 @@
     </xsl:template>
 
     <xsl:template match="ead:list/ead:item">
+      <p class="hangingindent"><xsl:apply-templates/></p>
+    </xsl:template>
+
+    <!-- for source lists that are separate -->
+    <xsl:template match="ead:bibref">
       <p class="hangingindent"><xsl:apply-templates/></p>
     </xsl:template>
 

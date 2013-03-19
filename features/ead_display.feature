@@ -170,3 +170,9 @@ Feature: EAD display
     Given I am on the ead page for ARC-0058
     Then I should see "Morrison, Jim, 1943-1971"
     And I should see "Denali (Musical group)"
+
+  Scenario: Displaying bibliographies from finding aids (BL-325)
+    Given I am on the ead page for ARC-0161
+    Then I should see "Sources"
+    And I should see "All Music Guide. Accessed February 4, 2013. http://www.allmusic.com/."
+    And I should see "Doo-Wop: Biography, Groups and Discography. Accessed February 4, 2013. http://doo-wop.blogg.org/."    
