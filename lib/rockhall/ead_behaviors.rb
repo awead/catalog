@@ -73,13 +73,13 @@ module Rockhall::EadBehaviors
     return parts.join(" ")
   end
 
-  # Returns the language terms as string from a given three-letter code found in lanuage_map.properties
-  def get_language_from_code(code)
-    file = File.new(File.path(Rails.root + "config/SolrMarc/translation_maps"))
+  # Returns the language terms as string from a given three-letter code found in language_map.properties
+  def get_language_from_code code, properties = Hash.new
+    file = File.new(File.path(Rails.root + "config/SolrMarc/translation_maps/language_map.properties"))
     IO.foreach(file) do |line|
       properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)\/\/(.*)/ || line =~ /([^=]*)=(.*)/
     end
-    return properties[code] unless properties[code].nil?
+    return properties[code].strip unless properties[code].nil?
   end
 
 end
