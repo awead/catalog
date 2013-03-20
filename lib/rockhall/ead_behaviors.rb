@@ -73,20 +73,13 @@ module Rockhall::EadBehaviors
     return parts.join(" ")
   end
 
-  # Returns the language terms as string from a given three-letter code
+  # Returns the language terms as string from a given three-letter code found in lanuage_map.properties
   def get_language_from_code(code)
-    case code
-    when /^fre$/
-      "French"
-    when /^eng$/
-      "English"
-    when /^spa$/
-      "Spanish"
-    when /^mul$/
-      "Multilingual"
-    else
-      nil
+    file = File.new(File.path(Rails.root + "config/SolrMarc/translation_maps"))
+    IO.foreach(file) do |line|
+      properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)\/\/(.*)/ || line =~ /([^=]*)=(.*)/
     end
+    return properties[code] unless properties[code].nil?
   end
 
 end
