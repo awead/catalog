@@ -74,3 +74,12 @@ Feature: Catalog Home Page
     Then I should see "Viva Elvis [sound recording] : the album"
     And I should not see "The Pink Floyd encyclopedia / written & compiled by Vernon Fitch"
 
+  @wip
+  Scenario: Highlighted terms in facet names (BL-311)
+    Given I am on the home page
+    And I fill in "q" with "Derek and the Dominos"
+    When I press "search"
+    Then I should see "Layla and other assorted love songs [sound recording]"
+    And I follow "Derek and the Dominos (Musical group)"
+    Then I should see "Layla and other assorted love songs [sound recording]"
+

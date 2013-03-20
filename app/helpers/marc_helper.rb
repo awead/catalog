@@ -51,7 +51,7 @@ module MarcHelper
   end
 
   def remove_highlighting text
-    text.gsub(/<\/span>/,"").gsub(/<span.+>/,"")
+    sanitize text, :tags => "a"
   end
 
   def render_search_link args, results = Array.new
