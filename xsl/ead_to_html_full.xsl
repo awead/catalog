@@ -80,7 +80,6 @@
       <xsl:choose>
         <xsl:when test="parent::ead:chronlist"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="parent::ead:list"><h4><xsl:apply-templates/></h4></xsl:when>
-        <xsl:when test="parent::ead:bibliography"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="ancestor::ead:c"><h5><xsl:apply-templates/></h5></xsl:when>
         <xsl:otherwise><h2 id="{$id}"><xsl:apply-templates/></h2></xsl:otherwise>
       </xsl:choose>

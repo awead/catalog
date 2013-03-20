@@ -45,7 +45,7 @@ module EadHelper
   end
 
   def ead_anchor_links results = String.new
-    links = ["bioghist", "accruals", "separatedmaterial", "relatedmaterial", "custodhist"]
+    links = ["bioghist", "bibliography", "accruals", "separatedmaterial", "relatedmaterial", "custodhist"]
     results << content_tag(:li, link_to("General Information", catalog_path(params[:id], :anchor => ""), :class => "ead_anchor"))
     results << content_tag(:li, link_to("Collection Overview", catalog_path(params[:id], :anchor => "abstract"), :class => "ead_anchor"))
     links.each do |anchor|
