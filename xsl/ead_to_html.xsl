@@ -36,6 +36,7 @@
         <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
         <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
         <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
         <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
         <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
         <h2 id="userestrict">Restrictions</h2>

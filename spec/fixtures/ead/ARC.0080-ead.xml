@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Complete" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0080</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>T.E. Newsletter (Terry Stewart Collection)
+                    <num>ARC.0080</num>
+                </titleproper>
+                <author>Finding aid prepared by Jennie Thomas, Head Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>April 7, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2013-03-18T09:23-0400</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+        <revisiondesc>
+            <change>
+                <date>March 14, 2013</date>
+                <item></item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>T.E. Newsletter (Terry Stewart Collection)</unittitle>
+            <unitid>ARC.0080</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>0.42 Linear feet</extent>
+                <extent>(1 Hollinger box)</extent>
+            </physdesc>
+            <unitdate normal="1953/1960" type="inclusive">1953-1960</unitdate>
+            <langmaterial id="ref6" label="Language of Materials note">English</langmaterial>
+            <abstract id="ref2" label="Collection Overview">The T.E. Newsletter, created by DJ Tommy Edwards, was the first of its kind published in the music industry, describing the weekly events at WERE-AM, Cleveland, Ohio. The newsletter included what artists had visited the station and which records looked promising. The newsletter was distributed to over two hundred agency men, music publishers, columnists, and disc jockeys from coast to coast. The T.E. Newsletter offers a slice of the "Cleveland scene" during the 1950s and illustrates the city’s influence at the time on the marketing and dissemination of rock and roll. The T.E. Newsletter is a part of the Terry Stewart Collection. It is arranged by date of publication.</abstract>
+            <origination label="creator">
+                <persname rules="aacr">Edwards, Tom, 1921-1981 </persname>
+            </origination>
+        </did>
+        <custodhist id="ref8">
+            <head>Custodial History</head>
+            <p>The T.E. Newsletter was received by the Rock and Roll Hall of Fame and Museum, Inc. as a gift from Terry Stewart in August 2010.</p>
+        </custodhist>
+        <originalsloc id="ref18">
+            <head>Existence and Location of Originals</head>
+            <p>Original copies of the T.E. Newsletter are owned by public radio host David C. Barnett.</p>
+        </originalsloc>
+        <prefercite id="ref7">
+            <head>Preferred Citation note</head>
+            <p>[Identification of Item], T.E. Newsletter (Terry Stewart Collection), Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <userestrict id="ref4">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Museum, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <accessrestrict id="ref3">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibility and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+        </accessrestrict>
+        <bioghist id="ref1">
+            <head>Biographical Note</head>
+            <p>Born Thomas Edward Mull on March 21, 1921, Tommy Edwards began his radio career in 1945. In April 1951, he accepted a job as staff announcer at WERE-AM, Cleveland's most listened to radio station. Within three months, he became the host of his own daily pop music show; eventually becoming one of Cleveland's best known radio personalities. In 1955, Edwards was the first Cleveland disc jockey to play Elvis Presley on air with "Blue Moon of Kentucky." It was also during 1955 that Edwards brought Presley to Cleveland to perform four different times, on February 26, March 28, August 20, and October 19. The world famous image of Presley with Bill Haley was in fact taken by Edwards at Brooklyn High School in Ohio the day after Presley's October concert at the Circle Theater. In addition, Edwards was credited with discovering country star Dottie West. Edwards was also a recording artist in his own right. On the Coral label, he sold over 100,000 copies of his song "What is a Teenage Girl?" and recorded such tunes as "What is Rock N' Roll" and "The Story of Elvis Presley." Edwards died in 1981.</p>
+            <p>In 2006, a wealth of candid photographs that Edwards had taken of artists while at WERE-AM were discovered. Edwards' photography captured some of the 1950s' biggest pop and country music stars, including Elvis Presley, Chuck Berry, Roy Orbison, and hundreds of others. These images and some of the text from the T.E. Newsletter were published in a book, 1950s Radio in Color: The Lost Photographs of Deejay Tommy Edwards, and exhibited in the spring of 2012 by the Rock and Roll Hall of Fame and Museum under the same title.</p>
+        </bioghist>
+        <processinfo id="ref26">
+            <head>Processing Information</head>
+            <p>Processed by Jennie Thomas, Head Archivist. Completed April 7, 2011. Revised March 14, 2013. Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <relatedmaterial id="ref22">
+            <head>Related Materials</head>
+            <p>These materials constitute a part of the Terry Stewart Collection. Related materials providing content on other local deejays, performers, and events may be found in the Collection on Tommy Edwards (Rock and Roll Hall of Fame and Museum Collection), and other collections that constitute a part of the Northeast Ohio Popular Music Archives.</p>
+            <p>Kennedy, Christopher. 1950s Radio in Color: The Lost Photographs of Cleveland Deejay Tommy Edwards. Kent, Ohio : The Kent State University Press, 2011.</p>
+        </relatedmaterial>
+        <controlaccess>
+            <persname source="naf">Kennedy, Christopher, 1967 Aug. 9- </persname>
+            <corpname rules="aacr" source="local">Northeast Ohio Popular Music Archives</corpname>
+            <persname rules="aacr" source="local" role="Donor (dnr)">Stewart, Terry</persname>
+            <corpname rules="aacr" source="local">Terry Stewart Collection</corpname>
+            <corpname source="naf">WERE (Radio station : Cleveland, Ohio)</corpname>
+            <geogname source="lcsh">Cleveland (Ohio)</geogname>
+            <subject source="lcsh">Music trade--Periodicals</subject>
+            <genreform source="lcsh">Newsletters</genreform>
+            <subject source="lcsh">Popular music radio stations</subject>
+            <subject source="lcsh">Popular music radio stations--Ohio--Cleveland--Periodicals</subject>
+            <subject source="lcsh">Rock music--Periodicals</subject>
+            <subject source="lcsh">Rock music--To 1961</subject>
+        </controlaccess>
+        <dsc>
+            <c id="ref10" level="file">
+                <did>
+                    <unittitle>Volume I, Numbers 1-52</unittitle>
+                    <container id="cid313001" type="Box" label="Text">1</container>
+                    <container parent="cid313001" type="Folder">1</container>
+                    <unitdate>1953-1954</unitdate>
+                </did>
+            </c>
+            <c id="ref11" level="file">
+                <did>
+                    <unittitle>Volume II, Numbers 1-52</unittitle>
+                    <container id="cid313002" type="Box" label="Text">1</container>
+                    <container parent="cid313002" type="Folder">2</container>
+                    <unitdate>1954-1955</unitdate>
+                </did>
+            </c>
+            <c id="ref12" level="file">
+                <did>
+                    <unittitle>Volume III, Numbers 1-52</unittitle>
+                    <container id="cid313003" type="Box" label="Text">1</container>
+                    <container parent="cid313003" type="Folder">3</container>
+                    <unitdate>1955-1956</unitdate>
+                </did>
+            </c>
+            <c id="ref13" level="file">
+                <did>
+                    <unittitle>Volume IV, Numbers 1-52</unittitle>
+                    <container id="cid313004" type="Box" label="Text">1</container>
+                    <container parent="cid313004" type="Folder">4</container>
+                    <unitdate>1956-1957</unitdate>
+                </did>
+            </c>
+            <c id="ref14" level="file">
+                <did>
+                    <unittitle>Volume V, Numbers 1-52</unittitle>
+                    <container id="cid313005" type="Box" label="Text">1</container>
+                    <container parent="cid313005" type="Folder">5</container>
+                    <unitdate>1957-1958</unitdate>
+                </did>
+                <odd id="ref23">
+                    <head>General note</head>
+                    <p>Volume V is missing issue number 35. Issue numbers 40 and 41 are also missing, but it is unclear if these issues were ever printed. Edwards' standard practice when skipping issues was to send out a sheet of letterhead with the issue number and the text, "no issue this week." There are no such sheets of letterhead in this collection for issues 40 and 41, but Edwards does state prior to these issues that he was going on vacation.</p>
+                </odd>
+            </c>
+            <c id="ref15" level="file">
+                <did>
+                    <unittitle>Volume VII, Numbers 1-43, and open letter</unittitle>
+                    <container id="cid313006" type="Box" label="Text">1</container>
+                    <container parent="cid313006" type="Folder">6</container>
+                    <unitdate>1958-1959</unitdate>
+                </did>
+                <odd id="ref24">
+                    <head>General note</head>
+                    <p>According to the dates of the volumes, it appears that there was no Volume VI produced for the T.E. Newsletter. Issue numbers 33 and 34 are missing from Volume VII, but it is unclear if these issues were ever printed. Edwards' standard practice when skipping issues was to send out a sheet of letterhead with the issue number and the text, "no issue this week." There are no such sheets of letterhead in this collection for Volume VII, issues 33 and 34, but Edwards does state that he would be at a disc jockey convention for issue 34. There is no such note explaining the absence of issue 33.</p>
+                </odd>
+            </c>
+            <c id="ref16" level="file">
+                <did>
+                    <unittitle>Volume VIII, Numbers 1-9, and open letter</unittitle>
+                    <container id="cid313007" type="Box" label="Text">1</container>
+                    <container parent="cid313007" type="Folder">7</container>
+                    <unitdate>1959-1960</unitdate>
+                </did>
+            </c>
+        </dsc>
+    </archdesc>
+</ead>
