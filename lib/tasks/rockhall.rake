@@ -57,4 +57,16 @@ namespace :ead do
 
 
 end
+
+namespace :marc do
+
+  require "MARC"
+  
+  desc "Write out marc records from current solr index"
+  task :write_out => :environment do
+    job = MarcFile.new
+    job.write_out
+  end
+
+end
 end

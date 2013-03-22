@@ -35,9 +35,9 @@ class MarcFile
 
   # TODO: Write to multiple files with :split number of records per file
   def write_out path = String.new
-    writer = MARC::Writer.new(self.path)
+    writer = ::MARC::Writer.new(self.path)
     get_records.each do |doc|
-      record = MARC::XMLReader.new(StringIO.new(doc["marc_display"])).first
+      record = ::MARC::XMLReader.new(StringIO.new(doc["marc_display"])).first
       writer.write(record)
     end
     writer.close
