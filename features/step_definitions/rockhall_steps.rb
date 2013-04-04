@@ -135,3 +135,9 @@ When(/^I follow the subject "(.*?)"$/) do |arg1|
     click_link(arg1)
   end
 end
+
+When(/^I follow the format facet "(.*?)"$/) do |arg1|
+  within(".blacklight-format") do
+    click_link(arg1)
+  end
+end

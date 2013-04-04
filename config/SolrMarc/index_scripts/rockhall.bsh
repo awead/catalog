@@ -240,7 +240,16 @@ Set getRockhallCallNumber(Record record) {
           call = a;
         }
 
+        // uncomment if you want call numbers for individual volumes
+        //if (subfield_u != null) {
+        //  u = subfield_u.getData();
+        //  call = call + " " + u;
+        //}
+
         result.add(call);
+
+        // clear our strings so they're not included in the next record
+        a = null; b = null; l = null; call = null;
       }
 
     }   
