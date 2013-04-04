@@ -36,9 +36,13 @@ Feature:
     Then I should see "Black Sabbath and philosophy : mastering reality / edited by William Irwin"
     And I should see the field content "blacklight-lc_callnum_display" contain "ML421.B5338 B53P4 2013"
 
-  @wip
   Scenario: Displaying call numbers from multiple 945 fields (BL-342)
     Given I am on the home page
     When I follow the format facet "Book"
     Then I should see "ML418.K466 A3 1992"
     And I should not see "ML418.K466 ML418.K466 A3 1992"
+
+  @wip
+  Scenario: Call numbers for juvenile titles (BL-341)
+    Given I am on the bib record page for 489441388
+    Then I should see the field content "blacklight-lc_callnum_display" contain "ML3534 .G85 2011"
