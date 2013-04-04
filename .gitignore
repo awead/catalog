@@ -6,8 +6,6 @@ nohup.out
 *~
 *.swp
 
-log/*
-
 rerun.txt
 
 vendor/plugins/*
@@ -19,12 +17,9 @@ public/assets
 public/*.xml
 public/*.xml.gz
 
-tmp/*
-tmp/**/*
+tmp/out.mrc
 tmp/performance
 tmp/restart.txt 
-
-lib/solrmarc.log*
 
 .sass-cache/*
 test/data/ead/*
@@ -36,4 +31,10 @@ blacklight.sublime-workspace
 
 spec/fixtures/marc/tmp/*
 
-public/fa/*
+public/fa/*.html
+public/fa/*.xml
+public/fa/*.json
+
+.bundle
+bin
+.rvmrc
