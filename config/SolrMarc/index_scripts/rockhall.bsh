@@ -217,7 +217,7 @@ Set getRockhallCallNumber(Record record) {
     if ( subfield_l != null && subfields_a != null ) {
       l = subfield_l.getData();
 
-      String pattern = "rx|rhlrr|rharr|rhs2|rhs2o|rhs3|rhj";
+      String pattern = "rx|rhlrr|rharr|rhs2|rhs2o|rhs3|rhj|rhr";
       Pattern p      = Pattern.compile(pattern);
       Matcher m      = p.matcher(l);
       

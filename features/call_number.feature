@@ -42,7 +42,10 @@ Feature:
     Then I should see "ML418.K466 A3 1992"
     And I should not see "ML418.K466 ML418.K466 A3 1992"
 
-  @wip
   Scenario: Call numbers for juvenile titles (BL-341)
     Given I am on the bib record page for 489441388
     Then I should see the field content "blacklight-lc_callnum_display" contain "ML3534 .G85 2011"
+
+  Scenario: Call numbers for reference titles (BL-347)
+    Given I am on the bib record page for 34241584
+    Then I should see the field content "blacklight-lc_callnum_display" contain "ML156.4.P6 M42 1995"
