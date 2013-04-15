@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/awead/blacklight-sitemap.git
-  revision: dfd6a8a931263b437dd55397bd73fd751b21bb27
+PATH
+  remote: gems/blacklight-sitemap
   specs:
     blacklight-sitemap (2.0.0)
       nokogiri
