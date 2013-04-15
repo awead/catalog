@@ -1,0 +1,17 @@
+#!/bin/bash
+# Discovery rake script
+#
+# Adam Wead
+# Rock and Roll Hall of Fame
+
+# Config
+
+APPDIR="/var/www/rails/catalog"
+ENV="production"
+
+source ~/.bash_profile
+cd $APPDIR
+source ./.rvmrc
+export RAILS_ENV=${ENV}
+rake blacklight:sitemap
+exit 0;
