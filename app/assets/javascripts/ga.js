@@ -2,6 +2,7 @@
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-28366377-1']);
+_gaq.push(['_setDomainName', 'rockhall.com']);
 _gaq.push(['_trackPageview']);
 
 (function() {
