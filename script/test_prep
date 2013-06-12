@@ -1,4 +1,4 @@
 #!/bin/bash
-RAILS_ENV=test rake solr:marc:delete_all
-RAILS_ENV=test rake solr:marc:index MARC_FILE=spec/fixtures/marc/rrhof.mrc
-RAILS_ENV=test rake rockhall:ead:index EAD=spec/fixtures/ead
+RAILS_ENV=test bin/rake solr:marc:delete_all
+RAILS_ENV=test bin/rake solr:marc:index MARC_FILE=spec/fixtures/marc/rrhof.mrc
+RAILS_ENV=test bin/rake rockhall:ead:index EAD=spec/fixtures/ead
