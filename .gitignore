@@ -24,6 +24,7 @@ tmp/performance
 tmp/restart.txt 
 tmp/cache
 tmp/pids
+tmp/restart.txt
 
 .sass-cache/*
 test/data/ead/*
