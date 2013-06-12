@@ -41,7 +41,3 @@ group :cucumber do
   gem 'spork'
   gem 'launchy'
 end
-
-group :production do
-  gem 'passenger', '=3.0.18'
-end
