@@ -35,7 +35,7 @@ Feature: Catalog Home Page
     And I should see "Website (4)"
     And I should see "CD/DVD-ROM (1)"
     And I should see "Periodical (2)"
-    And I should see "Video (2)"
+    And I should see "Video (4)"
 
   Scenario: Facet for CD/DVD-ROM (BL-250)
     Given I am on the home page
