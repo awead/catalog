@@ -69,4 +69,39 @@ namespace :marc do
   end
 
 end
+
+namespace :pbcore do
+
+  desc "Index pbcore solr discovery documents from Hydra"
+  task :index => :environment do
+    raise "Please specify the path to the pbcore solr document with PBCORE=path/to/doc.json" unless ENV['PBCORE']
+    solr = RSolr.connect :url => Blacklight.solr_config[:url]
+    if File.directory?(ENV['PBCORE'])
+      Dir.glob(File.join(ENV['PBCORE'],"*")).each do |file|
+        print "Indexing #{File.basename(file)}: "
+        begin
+          solr.add JSON.parse(File.read(file))
+          print "done.\n"
+        rescue
+          print "failed!\n"
+        end
+      end
+    else
+      solr.add JSON.parse(File.read(ENV['PBCORE']))
+    end
+    solr.commit
+    solr.optimize
+  end
+
+end
+
+namespace :solr do
+
+  desc "Deletes everytyhing from the solr index"
+  task :clean => :environment do
+    Blacklight.solr.delete_by_query("*:*")
+    Blacklight.solr.commit
+  end
+
+end
 end
