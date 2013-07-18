@@ -12,8 +12,8 @@ describe VideoPlayerHelper do
 
   describe "#is_allowable_ip" do
 
-    it "should true for localhost" do
-      @test.is_allowable_ip?("127.0.0.1").should be_true
+    it "should return false for localhost so we can test for disallowed ips locally" do
+      @test.is_allowable_ip?("127.0.0.1").should be_false
     end
 
     it "should return true for all our subnets" do

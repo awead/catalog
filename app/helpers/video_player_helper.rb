@@ -9,9 +9,7 @@ module VideoPlayerHelper
   end
 
   def is_allowable_ip? ip = request.remote_ip
-    if ip.match(/^127\.0\.0\.1$/)
-      return true
-    elsif ip.match(/^192\.168\.250/)
+    if ip.match(/^192\.168\.250/)
       return true
     elsif ip.match(/^192\.168\.251/)
       return true
