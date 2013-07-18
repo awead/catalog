@@ -13,6 +13,15 @@
   margin: 0 auto;
   margin-top: 12px; }
 
+#restricted {
+  background: black url(image_path('video-splash.png')) center center no-repeat;
+  color: white;
+  width: 550px;
+  height: 350px;
+  -moz-outline-radius: 4px;
+  margin: 0 auto;
+  margin-top: 12px; }
+
 /* playlist */
 
 #playlist {

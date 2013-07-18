@@ -3,6 +3,4 @@
   <%= document_heading %>
 </h1>
 
-<!-- Video request from <%= request.remote_ip %> -->
-
-<%= insert_player %>
+<%= insert_player if @document[:access_file_s] %>

@@ -1,14 +1,14 @@
 module VideoPlayerHelper
 
   def insert_player
-    if is_allowable_ip?(request.remote_ip)
-      unless @document[:access_file_s].nil?
-        render :partial => "player/flowplayer"
-      end
+    if is_public? || is_allowable_ip?
+      render :partial => "player/flowplayer"
+    else
+      render :partial => "player/restricted_access"
     end
   end
 
-  def is_allowable_ip?(ip)
+  def is_allowable_ip? ip = request.remote_ip
     if ip.match(/^127\.0\.0\.1$/)
       return true
     elsif ip.match(/^192\.168\.250/)
@@ -22,6 +22,10 @@ module VideoPlayerHelper
     else
       return false
     end
+  end
+
+  def is_public?
+    @document["hydra_read_access_s"].include?("public")
   end
 
   def flowplayer_playlist
