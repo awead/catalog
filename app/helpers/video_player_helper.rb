@@ -1,3 +1,5 @@
+require 'ipaddr'
+
 module VideoPlayerHelper
 
   def insert_player
@@ -8,18 +10,11 @@ module VideoPlayerHelper
     end
   end
 
-  def is_allowable_ip? ip = request.remote_ip
-    if ip.match(/^192\.168\.250/)
-      return true
-    elsif ip.match(/^192\.168\.251/)
-      return true
-    elsif ip.match(/^192\.168\.252/)
-      return true
-    elsif ip.match(/^207\.206\.49/)
-      return true
-    else
-      return false
+  def is_allowable_ip? ip = request.remote_ip, result = false
+    Rails.configuration.rockhall_config[:local_networks].each do |network|
+      result = true if IPAddr.new(network) === ip
     end
+    return result
   end
 
   def is_public?
