@@ -16,8 +16,7 @@ class Rockhall::EadDocument < SolrEad::Document
 
     # Gather persname and corpame together as  contributors_display to match what we do with MARC
     # copyt this to name_facet
-    contributors_display = (self.corpname + self.persname)
-    solr_doc["contributors_display"] = contributors_display.flatten.sort
+    solr_doc["contributors_display"] = (self.corpname + self.persname).flatten.compact.uniq.sort
     solr_doc["name_facet"] = solr_doc["contributors_display"]
 
     # Split out subjects into individual terms; save original subject headings from EAD for display
@@ -27,7 +26,7 @@ class Rockhall::EadDocument < SolrEad::Document
       splits = term.split(/--/)
       new_subject_facet << splits
     end
-    solr_doc["subject_facet"] = new_subject_facet.flatten.compact.uniq
+    solr_doc["subject_facet"] = new_subject_facet.flatten.compact.uniq.sort
 
     return solr_doc
   end
