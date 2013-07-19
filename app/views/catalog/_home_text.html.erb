@@ -1,25 +1,11 @@
-<h1>Welcome to the Library and Archives Catalog!</h1>
-<ul>
-  <li><%= link_to("New acquisitions", "http://library.rockhall.com/content.php?pid=290460&sid=2386867", { :target => "_blank"}) %></li>
-  <li><%= link_to("Search tips", "http://library.rockhall.com/finding_resources", { :target => "_blank"}) %></li>
-  <li><%= link_to("How to use the catalog", "http://library.rockhall.com/content.php?pid=293666&sid=2422823", { :target => "_blank"}) %></li>
-  <li>Questions? Bugs? Feedback? <%= link_to("Contact us.", "http://library.rockhall.com/content.php?pid=290460&sid=2386877", { :target => "_blank"}) %></li>
-</ul>
+<%= content_tag :h1, "Welcome to the Library and Archives Catalog!" %>
+<%= content_tag :ul do %>
+  <%= content_tag :li, link_to("How to use the catalog", "http://library.rockhall.com/content.php?pid=293666&sid=2422823", { :target => "_blank"}) %>
+  <%= content_tag :li, link_to("Doing research?", "http://library.rockhall.com/content.php?pid=290460&sid=2495625", { :target => "_blank"}) %>
+  <%= content_tag :li, link_to("New stuff!",  "http://library.rockhall.com/new", { :target => "_blank"}) %>
+  <%= content_tag :li, link_to("Questions? Contact us!", "http://library.rockhall.com/content.php?pid=290460&sid=2386877", { :target => "_blank"}) %>
+<% end %>
+
 <%= image_tag("mural.jpg", {:id=>"mural"}) %>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<%= ("<br/>" * 15).html_safe %>
