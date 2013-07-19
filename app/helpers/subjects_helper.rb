@@ -8,6 +8,11 @@ module SubjectsHelper
       format_subjects(args[:document]["marc_display"]).each do |line|
         results << subject_array_to_links(line)
       end
+    elsif @document["subject_display"]
+      # We use the same method for ead for any document that has subjects listed as Term1--term2--term3
+      format_ead_subjects(@document["subject_display"]).each do |line|
+        results << subject_array_to_links(line)
+      end
     end
     return results.join(field_value_separator).html_safe
   end
