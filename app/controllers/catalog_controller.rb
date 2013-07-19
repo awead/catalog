@@ -51,7 +51,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'subject_facet',    :label => 'Subject',            :limit => 20
     config.add_facet_field 'genre_facet',      :label => 'Genre',              :limit => 20    
     config.add_facet_field 'series_facet',     :label => 'Event/Series',       :limit => 20
-    config.add_facet_field 'pub_date',         :label => 'Publication Year',   :limit => 20
+    config.add_facet_field 'pub_date',         :label => 'Publication Date',   :limit => 20
     config.add_facet_field 'language_facet',   :label => 'Language',           :limit => true
     
 
