@@ -18,7 +18,7 @@ module VideoPlayerHelper
   end
 
   def is_public?
-    @document["hydra_read_access_s"].include?("public")
+    @document["hydra_read_access_s"].include?("public") unless @document["hydra_read_access_s"].nil?
   end
 
   def flowplayer_playlist
