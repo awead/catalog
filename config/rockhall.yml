@@ -1,0 +1,24 @@
+# Local configuration file
+defaults: &defaults
+  opac_ip: 129.22.104.30
+  ead_path: public/fa
+  rtmp_url: rtmp://192.168.251.84/vod
+  local_networks:
+    - 207.206.49.0/24
+
+development:
+  <<: *defaults
+
+test: &test
+  <<: *defaults
+  local_networks:
+    - 192.168.250.0/24
+    - 192.168.251.0/24
+    - 192.168.252.0/24
+    - 207.206.49.0/24
+
+production:
+  <<: *defaults
+
+cucumber:
+  <<: *test
