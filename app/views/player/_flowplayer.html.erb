@@ -44,7 +44,7 @@
   plugins: {
     rtmp: {
       url:              '<%= root_path %>flowplayer/flowplayer.rtmp-3.2.11.swf',
-      netConnectionUrl: '<%= Rails.configuration.rockhall_config[:rtmp_url] %>'
+      netConnectionUrl: '<%= [Rails.configuration.rockhall_config[:rtmp_url], params[:id]].join("/")  %>'
     },
 
     // include playlist buttons in the controlbar
