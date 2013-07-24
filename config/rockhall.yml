@@ -2,7 +2,7 @@
 defaults: &defaults
   opac_ip: 129.22.104.30
   ead_path: public/fa
-  rtmp_url: rtmp://192.168.251.84/vod
+  rtmp_url: rtmp://192.168.251.84/public
   local_networks:
     - 207.206.49.0/24
 

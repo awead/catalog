@@ -32,4 +32,10 @@ module VideoPlayerHelper
     return results.join(",").to_s.html_safe
   end
 
+  def rtmp_url
+    url = URI(Rails.configuration.rockhall_config[:rtmp_url])
+    url.query = @document[:id]
+    return url.to_s
+  end
+
 end
