@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~>3.2.12'
+gem 'rails', '~>3.2.15'
 
 gem 'blacklight', '< 4.0.0'
 gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
 gem 'sass-rails'
-gem 'devise'
+gem 'devise', '< 3.0.0'
 gem 'devise-guests'
 gem 'blacklight_highlight'
 gem 'blacklight-sitemap', :path=> 'gems/blacklight-sitemap'
@@ -37,7 +37,6 @@ end
 group :cucumber do
   gem 'capybara'
   gem 'cucumber-rails'
-  gem 'cucumber'
-  gem 'spork'
+  gem 'selenium-webdriver'
   gem 'launchy'
 end
