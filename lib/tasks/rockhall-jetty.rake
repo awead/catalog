@@ -18,6 +18,12 @@ namespace :jetty do
   desc "Configure solr-jetty instance"
   task :config do
     `cp solr/schema.xml jetty/solr/blacklight-dev-core/conf/schema.xml`
+    `cp solr/schema.xml jetty/solr/blacklight-test-core/conf/schema.xml`
+  end
+
+  desc "Reset the solr schema to what's currently in jetty"
+  task :reset do
+    `cp jetty/solr/blacklight-dev-core/conf/schema.xml solr/schema.xml`
   end
 
 end

@@ -61,29 +61,55 @@ class CollectionInventory
     end
   end
 
-  def solr_query(opts={}, query = Hash.new)
-    if opts[:parent]
-      query[:q] = 'ead_id:"' + @id + '" AND component_children_b:TRUE AND parent_id:"' + opts[:parent] + '"'
-    else
-      query[:q] = 'ead_id:"' + @id + '" AND component_level_i:1'
-    end
-    query[:fl]   = 'id, component_level_i, parent_id, title_display, ref_id, ead_id'
-    query[:qt]   = 'document'
-    query[:rows] = 10000
-    Blacklight.solr.find(query)["response"]["docs"].collect { |doc| doc }
+  def solr_query opts={}
+    results = Blacklight.solr.get "select", :params => build_query(opts)
+    results["response"]["docs"].collect { |doc| doc }
   end
 
   def json_node series, node = Hash.new, metadata = Hash.new, attr = Hash.new
-    node["data"] = series["title_display"]
+    node["data"] = series[Solrizer.solr_name("title", :displayable)]
     metadata["id"] = series["id"]
-    metadata["ref"] = series["ref_id"]
-    metadata["eadid"] = series["ead_id"]
+    metadata["ref"] = series[Solrizer.solr_name("ref", :stored_sortable)]
+    metadata["eadid"] = series[Solrizer.solr_name("ead", :stored_sortable)]
     attr["id"] = series["id"]
     node["metadata"] = metadata
     node["attr"] = attr
     return node
   end
 
+  private
+
+  def build_query opts={}, query = Hash.new
+    query[:q]    = opts[:parent].nil? ? solr_q_without_parent : solr_q_with_parent(opts[:parent])
+    query[:fl]   = solr_fl
+    query[:qt]   = 'document'
+    query[:rows] = 10000
+    return query
+  end
+
+  def solr_q_with_parent parent, params = Array.new
+    params << (Solrizer.solr_name("ead", :stored_sortable)+':'+@id+'')
+    params << (Solrizer.solr_name("component_children", :type => :boolean)+':TRUE')
+    params << (Solrizer.solr_name("parent", :stored_sortable)+':"'+parent+'"')
+    return params.join(" AND ")
+  end
+
+  def solr_q_without_parent params = Array.new
+    params << (Solrizer.solr_name("ead", :stored_sortable)+':'+@id+'')
+    params << (Solrizer.solr_name("component_level", :type => :integer)+':1')
+    return params.join(" AND ")
+  end
+
+  def solr_fl
+    [ 
+      "id",
+      Solrizer.solr_name("component_level", :type => :integer),
+      Solrizer.solr_name("parent", :stored_sortable),
+      Solrizer.solr_name("title", :displayable),
+      Solrizer.solr_name("ref", :stored_sortable),
+      Solrizer.solr_name("ead", :stored_sortable)
+    ].join(", ")
+  end
 
 end
 end
