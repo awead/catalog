@@ -2,6 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'webmock/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -24,12 +25,19 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+  # Webmock should only be enabled for certain tests
+  WebMock.disable!
 end
 
-def ead_fixture(file) #:nodoc
+def ead_fixture file #:nodoc
   File.new(File.join(File.dirname(__FILE__), 'fixtures', 'ead', file))
 end
 
-def marc_fixture(file) #:nodoc
+def marc_fixture file #:nodoc
   MARC::Reader.new(File.join(File.dirname(__FILE__), 'fixtures', 'marc', file)).first
+end
+
+def webmock_fixture file
+  File.new(File.join(File.dirname(__FILE__), 'fixtures', 'webmock', file))
 end

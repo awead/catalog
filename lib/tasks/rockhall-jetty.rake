@@ -1,13 +1,8 @@
-desc "Travis continuous integration task"
-task :ci do
-  Rake::Task["jetty:stop"].invoke
-  Rake::Task["jetty:clean"].invoke
-  Rake::Task["jetty:start"].invoke
-  Rake::Task["spec"].invoke
-end
-
 namespace :rockhall do
 namespace :jetty do
+
+  desc "Prepare jetty"
+  task :prep => ["jetty:stop", "rockhall:jetty:clean", "rockhall:jetty:config", "jetty:start"]
 
   desc "Unpack a clean version of solr-jetty"
   task :clean do

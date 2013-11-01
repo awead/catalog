@@ -12,9 +12,9 @@ gem 'bootstrap-sass'
 gem 'uglifier'
 gem 'devise'
 gem 'devise-guests'
-gem 'blacklight-sitemap', :path=> 'gems/blacklight-sitemap'
+gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
 gem 'ruby-ntlm'
-gem 'solr_ead', :path => '/Users/adamw/Projects/Github/solr_ead'
+gem 'solr_ead'
 gem 'therubyracer'
 
 # jQuery 1.9 was breaking checkbox_submit.js functions in BL 3.x
@@ -36,6 +36,7 @@ group :development, :test do
   gem 'jettywrapper'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'webmock', :require => false
 end
 
 group :test do

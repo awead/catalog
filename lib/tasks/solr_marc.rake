@@ -13,8 +13,6 @@ namespace :solr do
           puts "Indexing #{doc}"
           ENV['MARC_FILE'] = doc
           `rake solr:marc:index`
-          #Rake::Task["solr:marc:index"].invoke
-          #Rake::Task["solr:marc:index"].reenable
         end
       end
 

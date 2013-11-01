@@ -6,7 +6,7 @@ namespace :ead do
 
   desc "Index ead into solr and create both html and json"
   task :index => :environment do
-    raise "Please specify your ead, ex. EAD=<path/to/ead" unless ENV['EAD']
+    ENV['EAD'] = "spec/fixtures/ead" unless ENV['EAD']
     indexer = SolrEad::Indexer.new(:document=>Rockhall::EadDocument, :component=>Rockhall::EadComponent)
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
@@ -68,13 +68,19 @@ namespace :marc do
     job.write_out
   end
 
+  desc "Index our marc record fixtures"
+  task :index => :environment do
+    ENV['MARC_FILE'] = "spec/fixtures/marc/rrhof.mrc"
+    Rake::Task["solr:marc:index"].invoke
+  end
+
 end
 
 namespace :pbcore do
 
   desc "Index pbcore solr discovery documents from Hydra"
   task :index => :environment do
-    raise "Please specify the path to the pbcore solr document with PBCORE=path/to/doc.json" unless ENV['PBCORE']
+    ENV['PBCORE'] = "spec/fixtures/pbcore" unless ENV['PBCORE']
     solr = RSolr.connect :url => Blacklight.solr_config[:url]
     if File.directory?(ENV['PBCORE'])
       Dir.glob(File.join(ENV['PBCORE'],"*")).each do |file|
@@ -102,6 +108,16 @@ namespace :solr do
     Blacklight.solr.delete_by_query("*:*")
     Blacklight.solr.commit
   end
+
+end
+
+namespace :dev do
+
+  desc "Prepare environment for testing"
+  task :prep => ["rockhall:marc:index", "rockhall:ead:index", "rockhall:pbcore:index"]
+
+  desc "Run continuous integration tests"
+  task :ci => ["rockhall:jetty:prep", "rockhall:dev:prep", "spec"]
 
 end
 end
