@@ -1,0 +1,88 @@
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="navbar-top">
+    <div class="container-fluid">
+      <%= image_tag "logo.png", :size => "75x49", :class => "brand" %>
+      <div class="navbar-title hidden-phone">Rock and Roll Hall of Fame Library + Archives</div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="main">
+
+  <!-- carousel row -->
+  <div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag("http://httpcats.herokuapp.com/408", :size => "300x300") %>
+        <div class="carousel-caption">
+          <h4>First Thumbnail label</h4>
+          <p>Lorem ipso</p>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag("http://httpcats.herokuapp.com/410", :size => "300x300") %>
+        <div class="carousel-caption">
+          <h4>Second Thumbnail label</h4>
+          <p>Lorem ipso</p>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag("http://httpcats.herokuapp.com/411", :size => "300x300") %>
+        <div class="carousel-caption">
+          <h4>Third Thumbnail label</h4>
+          <p>Lorem ipso</p>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+  </div>
+
+
+  <div class="row-fluid">
+
+    <div class="well span6">
+      <h1>Find</h1>
+      <p>Search the catalog for books, music, magazines, and archival collections</p>
+        <div class="row-fluid pull-left">
+          <%= render_search_bar %>
+        </div>
+    </div>
+
+    <div class="well span6">
+      <h1>Browse</h1>
+      <%= link_to "Archival Colletions" %><br/>
+      <%= link_to "Research Guides" %><br/>
+      <%= link_to "Databases" %><br/>
+      <%= link_to "List of Inductees" %><br/>
+      <%= link_to "New Aquisitions" %><br/>
+    </div>
+
+  </div>
+
+  <div class="row-fluid">
+    <div class="well span6">
+      <h1>About</h1>
+      <%= link_to "Mission" %><br/>
+      <%= link_to "Staff" %><br/>
+      <%= link_to "Partnerships" %><br/>
+      <%= link_to "Rock and Roll Hall of Fame" %><br/>
+      <%= link_to "Rock and Roll Hall of Fame Foundation" %><br/>
+      <%= link_to "Volunteers and Interns" %><br/>
+      <%= link_to "Rock Hall Job Listings" %><br/>
+    </div>
+    <div class="well span6">
+      <h1>Access</h1>
+      <%= link_to "Visit" %><br/>
+      <%= link_to "Contact" %><br/>
+      <%= link_to "Using the Archival Colletions" %><br/>
+      <%= link_to "Events" %><br/>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,13 @@
+<%= form_tag search_action_url, :method => :get, :class => "navbar-form pull-left" do %>
+  <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page]).html_safe %> 
+
+  <% unless search_fields.empty? %>
+    <%= content_tag :label, t("blacklight.search.form.search_field.label"), :for => "search_field", :class => "hidden" %>
+    <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => t("blacklight.search.form.search_field.title"), :class => "span2") %>
+    <%= content_tag :span, t("blacklight.search.form.search_field.post_label"), :class => "hidden" %>
+  <% end %>
+
+  <%= content_tag :label, t("blacklight.search.form.q"), :for => "q", :class => "hidden" %>
+  <%= text_field_tag :q, params[:q], :placeholder => t("blacklight.search.form.q"), :class => "search-query q", :id => "q", :autofocus => should_autofocus_on_search_box? %>
+  <%= button_tag search_button_text, :class => "btn btn-primary search-btn", :id => "search" %>
+<% end %>

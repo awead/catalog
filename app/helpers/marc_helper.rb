@@ -46,12 +46,8 @@ module MarcHelper
   # text of the link and facet is the solr field to facet on.
   def facet_link term, facet
     link_to(term, 
-            add_facet_params_and_redirect(facet, remove_highlighting(term)), 
+            add_facet_params_and_redirect(facet, term), 
             :class=>"facet_select label")
-  end
-
-  def remove_highlighting text
-    sanitize text, :tags => "a"
   end
 
   def render_search_link args, results = Array.new

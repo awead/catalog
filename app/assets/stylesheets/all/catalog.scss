@@ -1,0 +1,58 @@
+$navbarInverseBackground: #1f0101;
+$navbarInverseBackgroundHighlight: #590000;
+$navbarHeight: 40px;
+$linkColor: #ac1313;
+$linkColorHover: #7d0e0e;
+//$navbarText: #ffffff;
+//$navbarLinkColor: #ffffff;
+//$navbarLinkColorHover: #cccccc;
+$navbarInverseLinkBackgroundHover: #590000;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+@import "blacklight/facets";
+
+#main {
+  padding: 10px 50px 10px 50px;
+}
+
+.navbar-inverse { 
+  .navbar-top {
+    background-color: #cccccc;
+    background-image: asset-url("navbar_swatch.png");
+    border-bottom-color: $navbarInverseBackground;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+}
+
+.navbar-title {
+  color: white;
+  font-size: 40px;
+  line-height: 40px;
+  padding: 12px 0px 12px 0px;
+}
+
+.carousel-inner {
+  background: #bbb;
+}
+
+.inline {
+  display: inline;
+}
+
+.well-inverse {
+
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+}
+
+.hidden {
+  display: none;
+}

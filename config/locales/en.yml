@@ -1,5 +1,6 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# Catalog locale file
 
 en:
-  hello: "Hello world"
+  start_over: "Start Over"
+  account: "Account"
+  user_registration: "Account settings"

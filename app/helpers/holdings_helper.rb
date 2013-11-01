@@ -40,7 +40,7 @@ module HoldingsHelper
     if opts[:full]
       content_tag(:div, nil, :class => "innovative_holdings", :id => doc[:innovative_display].first)
     else
-      content_tag(:div, "checking status..." , :class => "innovative_status", :id => doc[:innovative_display].first)
+      content_tag(:span, "checking status..." , :class => "innovative_status badge", :id => doc[:innovative_display].first)
     end
   end
 

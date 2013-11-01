@@ -1,0 +1,11 @@
+<%= content_tag :div, :id => "sortAndPerPage" do %>
+  <%= content_tag :div, :class => "span5 text-left" do %>
+    <%= render :partial => "sort_widget" %>
+  <% end %>
+  <%= content_tag :div, :class => "span2 text-center" do %>
+    <%= render_pagination_info @response %>
+  <% end %>
+  <%= content_tag :div, :class => "span5 text-right" do %>
+    <%= render :partial => "per_page_widget" %>
+  <% end %>
+<% end %>

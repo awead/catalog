@@ -1,9 +1,17 @@
 /*      
  * application.css 
  *
- * Manifest file that compiles all included scss and css files under ./all into one big css file.
+ * Manifest file that compiles all included scss and css files under ./all into one big css file,
+ * as well as additional css files from the vendor directory.
+ *
  * This manifest is for all css except any stylings used specifically for printing.  That will
  * be under ./print instead and is not included here.
+ *
+ * Vendor Stylesheets
+ *= require flowplayer/flowplayer-style
+ *= require video-js/video-js
+ *= require video-js/skins/tube
+ *= require video-js/skins/vim
  *
  *= require_self
  *= require_tree ./all
