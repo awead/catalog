@@ -1,42 +1,47 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~>3.2.15'
+gem 'rails', '~>4.0.0'
 
-gem 'blacklight', '< 4.0.0'
+gem 'blacklight'
+gem 'unicode'
 gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
 gem 'sass-rails'
-gem 'devise', '< 3.0.0'
+gem 'bootstrap-sass'
+gem 'uglifier'
+gem 'devise'
 gem 'devise-guests'
-gem 'blacklight_highlight'
-gem 'blacklight-sitemap', :path=> 'gems/blacklight-sitemap'
+gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
 gem 'ruby-ntlm'
 gem 'solr_ead'
 gem 'therubyracer'
 
-# jQuery 1.9 breaks checkbox_submit.js functions
-# using jquery-rails versions prior to 2.2 keeps us to jQuery 1.8
-gem 'jquery-rails', '< 2.2.0'
+# jQuery 1.9 was breaking checkbox_submit.js functions in BL 3.x
+# don't know if that's still the case...
+gem 'jquery-rails'
 
-group :assets do
-  gem 'coffee-rails'
-  gem 'uglifier'
-  gem 'compass-rails'
-  gem 'compass-susy-plugin', :require => 'susy'
-end
+#group :assets do
+#  gem 'coffee-rails'  
+#  gem 'compass-rails'
+#  gem 'compass-susy-plugin', :require => 'susy'
+#end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.12.2'
+  gem 'rspec-rails'
   gem 'webrat'
   gem 'database_cleaner'
   gem 'debugger'
   gem 'pry'
+  gem 'jettywrapper'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'webmock', :require => false
 end
 
-group :cucumber do
+group :test do
   gem 'capybara'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'selenium-webdriver'
   gem 'launchy'
 end

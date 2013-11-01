@@ -19,7 +19,7 @@ module Rockhall::SolrHelperExtension
     #solr_params[:q]    = "id:#{params[:id]}"
     #solr_params[:qt]   = "document"
     #solr_params[:rows] = 1
-    #solr_response = Blacklight.solr.find(solr_params)
+    #solr_response = Blacklight.solr.get "select", :params => solr_params
     #unless solr_response.docs.empty?
       #@children = additional_ead_components(solr_response.docs.first[:ead_id],solr_response.docs.first[:ref_id])
     #end
@@ -29,7 +29,7 @@ module Rockhall::SolrHelperExtension
       @children = first_level_ead_components(params[:id])
     end
     if params[:ref]
-      refs = get_field_from_solr((params[:id] + params[:ref]), "parent_id_s")
+      refs = get_field_from_solr((params[:id] + params[:ref]), Solrizer.solr_name("parent", :displayable))
       unless refs.nil?
         refs.each do |ref|
           @parents[ref] = additional_ead_components(params[:id], ref)
@@ -46,22 +46,9 @@ module Rockhall::SolrHelperExtension
   # Options:
   #  - start: If you want the results to start on a specific row; defaults to 0
   #  - rows:  Number of rows to return; defaults to "all" or 10,000
-  def first_level_ead_components id, opts={}, solr_params = Hash.new
-    solr_params[:fl]    = "id"
-    solr_params[:q]     = 'component_level_i:1 AND _query_:"ead_id:'+id+'"'
-    solr_params[:sort]  = "sort_i asc"
-    solr_params[:qt]    = "standard"
-    solr_params[:rows]  = opts[:rows]  ? opts[:rows]  : 10000
-    solr_params[:start] = opts[:start] ? opts[:start] : 0
-    solr_response = Blacklight.solr.find(solr_params)
-    list = solr_response.docs.collect {|doc| SolrDocument.new(doc, solr_response)}
-
-    docs = Array.new
-    list.each do |doc|
-      r, d = get_solr_response_for_doc_id(doc.id)
-      docs << d
-    end
-    return docs
+  def first_level_ead_components id, opts={}, docs = Array.new
+    solr_response = Blacklight.solr.get "select", :params => first_level_solr_query(id,opts)
+    return docs_from_solr_response solr_response
   end
 
   # Returns the content from a solr field of a given document.
@@ -69,8 +56,8 @@ module Rockhall::SolrHelperExtension
   # Required inputs: String:field, String:id
   # Where *field* is the name of the solr field and *id* is the solr document id.
   def get_field_from_solr id, field
-    result = Blacklight.solr.find( {:q => 'id:"'+id+'"', :qt => 'document', :fl => field, :rows => 1 } )
-    result["response"]["docs"].empty? ? nil : result["response"]["docs"].first[field.to_sym]
+    result = Blacklight.solr.get "select", :params => {:q => 'id:"'+id+'"', :qt => 'document', :fl => field, :rows => 1 }
+    result["response"]["docs"].empty? ? nil : result["response"]["docs"].first[field]
   end
 
 
@@ -80,23 +67,39 @@ module Rockhall::SolrHelperExtension
   #  - id:  The id of the finding aid, ead_id, ex. ARC-0037
   #  - ref: The ref id of the parent component, ref_id, ex. ref1
   # Options: sams as .first_level_ead_components
-  def additional_ead_components id, ref, opts={},solr_params = Hash.new
-    solr_params[:fl]   = "id"
-    solr_params[:q]    = "parent_id:#{ref} AND ead_id:#{id}"
-    solr_params[:sort] = "sort_i asc"
-    solr_params[:qt]   = "standard"
+  def additional_ead_components id, ref, opts={}
+    solr_response = Blacklight.solr.get "select", :params => additional_solr_query(id,ref,opts)
+    return docs_from_solr_response solr_response
+  end
+
+  private
+
+  def first_level_solr_query id, opts={}, solr_params = Hash.new
+    solr_params[:fl]    = "id"
+    solr_params[:q]     = Solrizer.solr_name("component_level", :type => :integer)+':1 AND _query_:"'+Solrizer.solr_name("ead", :stored_sortable)+':'+id+'"'
+    solr_params[:sort]  = Solrizer.solr_name("sort", :sortable, :type => :integer)+" asc"
+    solr_params[:qt]    = "standard"
     solr_params[:rows]  = opts[:rows]  ? opts[:rows]  : 10000
     solr_params[:start] = opts[:start] ? opts[:start] : 0
-    solr_response = Blacklight.solr.find(solr_params)
-    list = solr_response.docs.collect {|doc| SolrDocument.new(doc, solr_response)}
+    return solr_params
+  end
 
-    docs = Array.new
-    list.each do |doc|
-      r, d = get_solr_response_for_doc_id(doc.id)
+  def additional_solr_query id, ref, opts={}, solr_params = Hash.new
+    solr_params[:fl]    = "id"
+    solr_params[:q]     = Solrizer.solr_name("parent", :stored_sortable)+":#{ref} AND "+Solrizer.solr_name("ead", :stored_sortable)+":#{id}"
+    solr_params[:sort]  = Solrizer.solr_name("sort", :sortable, :type => :integer)+" asc"
+    solr_params[:qt]    = "standard"
+    solr_params[:rows]  = opts[:rows]  ? opts[:rows]  : 10000
+    solr_params[:start] = opts[:start] ? opts[:start] : 0
+    return solr_params
+  end
+
+  def docs_from_solr_response solr_response, docs = Array.new
+    solr_response["response"]["docs"].collect {|r| r["id"]}.each do |id|
+      r, d = get_solr_response_for_doc_id(id)
       docs << d
     end
     return docs
   end
-
 
 end

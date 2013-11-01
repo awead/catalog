@@ -4,14 +4,29 @@ describe Rockhall::Innovative do
 
   describe "#get_holdings" do
 
-    it "should return a partial html table with holdings information" do
-      Rails.configuration.rockhall_config[:opac_ip] = "129.22.104.30"
-      status = Rockhall::Innovative.get_holdings("b3386820")
-      status.should be_a_kind_of(Array)
-      status.each do |html|
-        html.should be_a_kind_of(String)
-        html.should match(/<td>/)
+    describe "with WebMock" do
+
+      before :all do
+        WebMock.enable!
+        stub_request(:get, "http://129.22.104.30/record=b3386820").
+         with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+         to_return(:body => webmock_fixture("b3386820.txt"), :status => 200)
       end
+      
+      after :all do
+        WebMock.disable!
+      end
+
+      it "should return a partial html table with holdings information" do
+        Rails.configuration.rockhall_config[:opac_ip] = "129.22.104.30"
+        status = Rockhall::Innovative.get_holdings("b3386820")
+        status.should be_a_kind_of(Array)
+        status.each do |html|
+          html.should be_a_kind_of(String)
+          html.should match(/<td>/)
+        end
+      end
+
     end
 
     it "should return 'unknown' for non-existent items" do
@@ -30,10 +45,25 @@ describe Rockhall::Innovative do
 
   describe "#query_iii" do
 
-    it "should return the html document from III's opac" do
-      Rails.configuration.rockhall_config[:opac_ip] = "129.22.104.30"
-      html = Rockhall::Innovative.query_iii("b3311377")
-      html.should be_a_kind_of(Nokogiri::HTML::Document)
+    describe "with WebMock" do
+
+      before :all do
+        WebMock.enable!
+        stub_request(:get, "http://129.22.104.30/record=b3311377").
+         with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+         to_return(:body => webmock_fixture("b3311377.txt"), :status => 200)
+      end
+      
+      after :all do
+        WebMock.disable!
+      end
+
+      it "should return the html document from III's opac" do
+        Rails.configuration.rockhall_config[:opac_ip] = "129.22.104.30"
+        html = Rockhall::Innovative.query_iii("b3311377")
+        html.should be_a_kind_of(Nokogiri::HTML::Document)
+      end
+
     end
 
     it "should return return null if the host is down" do
