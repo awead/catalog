@@ -45,9 +45,7 @@ module MarcHelper
   # Renders a link for a given term and facet.  The content of term is used for the 
   # text of the link and facet is the solr field to facet on.
   def facet_link term, facet
-    link_to(term, 
-            add_facet_params_and_redirect(facet, term), 
-            :class=>"facet_select label")
+    link_to term, add_facet_params_and_redirect(facet, term)
   end
 
   def render_search_link args, results = Array.new
@@ -68,10 +66,6 @@ module MarcHelper
       end
     end
     return results.join(field_value_separator).html_safe
-  end
-
-  def field_value_separator
-    '<br/>'
   end
 
   def document_icon doc, result = String.new

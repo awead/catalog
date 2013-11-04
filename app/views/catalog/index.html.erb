@@ -1,13 +1,13 @@
+<% @page_title = t("blacklight.search.title", :application_name => application_name) %>
+<% extra_head_content << render_opensearch_response_metadata.html_safe %>
+
 <%= content_tag :div, :id => "sidebar", :class => "span3" do %>
  <%= render "search_sidebar" %>
 <% end %>
 
-<%= content_tag :div, :id => "content",  :class => "span9" do %>
-
+<%= content_tag :div, :class => "span9" do %>
   <%= content_tag :h2, t("blacklight.search.search_results_header"), :class => "hidden top-content-title" %>
-  <% @page_title = t("blacklight.search.title", :application_name => application_name) %>
-  <% extra_head_content << render_opensearch_response_metadata.html_safe %>
-  
+
   <%= content_tag :div, :class => "row-fluid" do %>
     <%= render "did_you_mean" %>
     <%= render "constraints" %>
@@ -20,11 +20,8 @@
   <% end %>
 
   <%= content_tag :h2, t("blacklight.search.search_results"), :class => "hidden" %>
-
   <%= render_index_response %>
-
   <%= content_tag :div, :class => "row-fluid" do %>
     <%= render "results_pagination" %>
   <% end %>
-
 <% end %>

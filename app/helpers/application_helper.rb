@@ -40,4 +40,14 @@ module ApplicationHelper
     return results.html_safe
   end
 
+  # COinS, for Zotero among others. 
+  # This document_partial_name(@document) business is not quite right, but has been there for a while. 
+  def render_z3988_title
+    content_tag :span, nil, :class => "Z3988", :title => @document.export_as_openurl_ctx_kev(document_partial_name(@document))
+  end
+
+  def document_dom_id
+    "doc_" + @document.id.to_s.parameterize
+  end
+
 end

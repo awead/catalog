@@ -9,5 +9,5 @@
 
   <%= content_tag :label, t("blacklight.search.form.q"), :for => "q", :class => "hidden" %>
   <%= text_field_tag :q, params[:q], :placeholder => t("blacklight.search.form.q"), :class => "search-query q", :id => "q", :autofocus => should_autofocus_on_search_box? %>
-  <%= button_tag search_button_text, :class => "btn btn-primary search-btn", :id => "search" %>
+  <%= button_tag t("blacklight.search.form.submit").html_safe, :class => "btn btn-primary search-btn", :id => "search" %>
 <% end %>

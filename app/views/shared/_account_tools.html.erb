@@ -1,5 +1,5 @@
 <%= content_tag :li, :class => "dropdown" do %>
-  <%= link_to account_dropdown_text, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown"} %>
+  <%= link_to t("account").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown"} %>
   <%= content_tag :ul, :class => "dropdown-menu" do %>
     <%= content_tag :li, link_to(t("blacklight.header_links.search_history"), search_history_path) %>
     <%= content_tag :li, link_to(t("blacklight.header_links.bookmarks"), bookmarks_path) if render_bookmarks_control? %>

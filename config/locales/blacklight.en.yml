@@ -11,8 +11,8 @@ en:
     pagination:
       first: '&laquo; First'
       last: 'Last &raquo;'
-      previous: '&laquo; Previous'
-      next: 'Next &raquo;'
+      previous: '<i class="icon-arrow-left"></i> Previous'
+      next: 'Next <i class="icon-arrow-right"></i>'
       truncate: '…'
 
     pagination_compact:
@@ -20,7 +20,7 @@ en:
       next: 'Next &raquo;'
 
   blacklight:
-    application_name: 'Blacklight'
+    application_name: 'Rock and Roll Hall of Fame and Museum | Library and Archives | Catalog'
 
     header_links:
       login: 'Login'
@@ -104,7 +104,7 @@ en:
       cite: 'Cite'
       endnote: 'Export to EndNote'
       refworks: 'Export to Refworks'
-      email: 'Email'
+      email: '<i class="icon-envelope"></i> Email'
       sms: 'SMS This'
       librarian_view: 'Librarian View'
       clear: 'Clear'
@@ -157,7 +157,7 @@ en:
           blank: 'You must select a carrier'
           invalid: "You must enter a valid carrier"
 
-    back_to_search: 'Back to Search'
+    back_to_search: '<i class="icon-share-alt"></i> Back to Search'
     back_to_bookmarks: 'Back to Bookmarks'
 
     search:
@@ -181,7 +181,7 @@ en:
           title: 'Targeted search options'
           post_label: 'for'
         q: 'Search...'
-        submit: 'Search'
+        submit: 'Search <i class="icon-search icon-white"></i>'
       pagination:
         title: 'Results navigation'
       pagination_info:
