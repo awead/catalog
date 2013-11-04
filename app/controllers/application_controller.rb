@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   # Please be sure to impelement current_user and user_session. Blacklight depends on
   # these methods in order to perform user specific actions.
 
+  layout "catalog"
+
   protect_from_forgery
 
   unless Rails.env.match("development")

@@ -11,4 +11,10 @@ module Rockhall::ControllerBehaviors
     end
   end
 
+  def redirect_to_front_page
+    unless !params[:q].blank? or !params[:f].blank? or !params[:search_field].blank?
+      redirect_to root_path
+    end
+  end
+
 end

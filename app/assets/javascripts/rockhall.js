@@ -92,7 +92,13 @@ function returnStatus() {
         $('#'+id).append("Unknown");
       },
       success: function(data){
-        $('#'+id).replaceWith(data);
+        if (data === 'Copies Available') {
+          $('#'+id).toggleClass('badge-success');
+        }
+        else {
+          $('#'+id).toggleClass('badge-warning');
+        }
+        $('#'+id).text(data);
       }
     });
 
