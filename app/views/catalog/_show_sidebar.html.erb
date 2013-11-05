@@ -3,10 +3,8 @@
   <%= show_holdings @document, {:full => TRUE} %>
 </div>
 
-<div class="row-fluid span12 well">
-  <%= content_tag :h5, "Google Books API goes here..." %>
-  <img src="http://bks2.books.google.com/books?id=gxYsVYxeaWIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"/>
-</div>
+<!-- google books -->
+<%= content_tag :div, nil, :class => "media row-fluid", :id => "show_gb" %>
 
 <% unless @document.more_like_this.empty? %>
   <ul class="nav nav-list">

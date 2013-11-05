@@ -61,6 +61,13 @@ GEM
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
+    coffee-rails (4.0.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.3)
     columnize (0.3.6)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
@@ -100,7 +107,12 @@ GEM
     ffi (1.9.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    googlebooks (0.0.8)
+      httparty
     hike (1.2.3)
+    httparty (0.12.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.5)
     jettywrapper (1.5.0)
       activesupport (>= 3.0.0)
@@ -130,6 +142,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     multi_test (0.0.2)
+    multi_xml (0.5.5)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     om (3.0.4)
@@ -254,11 +267,13 @@ DEPENDENCIES
   blacklight-sitemap!
   bootstrap-sass
   capybara
+  coffee-rails
   cucumber-rails
   database_cleaner
   debugger
   devise
   devise-guests
+  googlebooks
   jettywrapper
   jquery-rails
   json

@@ -1,0 +1,57 @@
+// Query Googlebooks for stuff
+
+$(document).ready(function() {
+
+  var queries = [];
+
+  if ( $('dd.blacklight-isbn_ssm').get(0) ) {
+    $.each($('dd.blacklight-isbn_ssm').html().split("<br>"), function(index,value) {
+      queries.push(gbUrl('isbn',value));
+    });
+  }
+  if ( $('dd.blacklight-oclc_ssm').get(0) && $('#show_gb').children()[0] === undefined ) {
+    $.each($('dd.blacklight-oclc_ssm').html().split("<br>"), function(index,value) {
+      queries.push(gbUrl('oclc',value));
+    });
+  }
+
+  getGbData(queries);
+
+});
+
+function gbUrl(field, search) {
+  return 'https://www.googleapis.com/books/v1/volumes?q='+field+':'+search+'&key=AIzaSyDX1SMk2MPTPA8mJbcfFCzhjUoi7d-UjRw'
+}
+
+
+function getGbData(queries) {
+  $.each(queries, function(index,url) {
+    $.getJSON(url).done(function(data) {
+      processGbData(data)
+    });
+  });
+}
+
+
+function processGbData(data) {
+  if ( data.totalItems > 0 && $('#show_gb').children().length == 0 ) {
+    $('div#show_gb').prepend(showGb(data));
+  }
+}
+
+function showGb(data) {
+  var html;
+  var src;
+
+  if ( data.items[0].volumeInfo.imageLinks === undefined ) {
+    src = '<%= asset_path("icons/book.png") %>'
+  }
+  else {
+    src = data.items[0].volumeInfo.imageLinks.thumbnail;
+  }
+
+  html = '<a class="pull-left" target="_blank" href="'+data.items[0].volumeInfo.previewLink+'">'+
+         '<img class="media-object" src="'+src+'"/></a>'+
+         '<div class="media-body">View this item on Google Books</div>';
+  return html;
+}
