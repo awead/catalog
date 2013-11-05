@@ -13,11 +13,11 @@ class Rockhall::EadComponent < SolrEad::Component
       Solrizer.insert_field(solr_doc, "heading", heading, :displayable ) 
     end
     
-    Solrizer.insert_field(solr_doc, "location", self.location_display, :displayable)
+    Solrizer.insert_field(solr_doc, "location", location_display, :displayable)
     Solrizer.insert_field(solr_doc, "accession", ead_accession_range(self.accession.first), :searchable)
     Solrizer.insert_field(solr_doc, "language", get_language_from_code(self.langcode.first), :facetable)
 
-    solr_doc.merge!({"text" => [self.title, solr_doc["parent_unittitles_display"]].flatten })
+    solr_doc.merge!({"text" => [self.title, solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)]].flatten })
   end
 
   def location_display(locations = Array.new)
@@ -35,5 +35,7 @@ class Rockhall::EadComponent < SolrEad::Component
     end
     return locations
   end
+
+  
 
 end

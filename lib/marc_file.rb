@@ -30,10 +30,7 @@ class MarcFile
   # TODO: Write to multiple files with :split number of records per file
   def write_out path = String.new
     writer = ::MARC::Writer.new(self.path)
-    get_records.each do |doc|
-      record = ::MARC::XMLReader.new(StringIO.new(doc["marc_display"])).first
-      writer.write(record)
-    end
+    get_records.collect { |doc| writer.write marc_record_from_response_doc(doc) }
     writer.close
   end
 
@@ -44,10 +41,16 @@ class MarcFile
   def solr_marc_records_query query = Hash.new
     query[:qt]    = 'document'
     query[:q]     = 'id:*'
-    query[:fl]    = 'marc_display'
+    query[:fl]    = Solrizer.solr_name("marc", :displayable)
     query[:rows]  = self.rows
     query[:start] = self.start
     return query
   end
+
+  def marc_record_from_response_doc doc
+    xml = StringIO.new doc[Solrizer.solr_name("marc", :displayable)].first
+    return ::MARC::XMLReader.new(xml).first
+  end
+
 
 end

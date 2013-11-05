@@ -82,4 +82,18 @@ module Rockhall::EadBehaviors
     return properties[code].strip unless properties[code].nil?
   end
 
+  # Split-up subject terms like we do for our marc records
+  def get_ead_subject_facets terms = Array.new
+    self.subject.each do |term|
+      splits = term.split(/--/)
+      terms << splits
+    end
+    return terms.flatten.compact.uniq.sort
+  end
+
+  # Combine corporate and personal names into one group
+  def get_ead_names
+    (self.corpname + self.persname).flatten.compact.uniq.sort
+  end
+
 end
