@@ -47,7 +47,7 @@ module ComponentsHelper
   end
 
   def display_field field
-    field.join("<br/>").html_safe
+    field.join(field_value_separator).html_safe
   end
 
   def comma_list args

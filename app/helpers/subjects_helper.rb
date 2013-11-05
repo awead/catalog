@@ -49,9 +49,7 @@ module SubjectsHelper
       # {"f"=>{"subject_facet"=>["Inductee", "Rock musicians"]}}
       new_params[:f] = Hash.new
       new_params[:f]["subject_facet"] = terms
-      link_to(text, 
-            new_params, 
-            :class=>"facet_select label")
+      link_to text, new_params
     end    
   end
 

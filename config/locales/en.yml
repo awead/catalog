@@ -1,6 +1,10 @@
 # Catalog locale file
 
 en:
-  start_over: "Start Over"
-  account: "Account"
-  user_registration: "Account settings"
+  start_over: 'Start Over'
+  account: 'Account <b class="caret"></b>'
+  user_registration: 'Account settings'
+  print: '<i class="icon-print"></i> Print'
+  export: '<i class="icon-share"></i> Export <b class="caret"></b>'
+  view: '<i class="icon-eye-open"></i> View <b class="caret"></b>'
+  check_nearby: 'Check nearby libraries'

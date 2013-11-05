@@ -2,22 +2,76 @@ module NavbarHelper
 
   def render_login_or_logout
     if current_user
-      content_tag :li, link_to(t('blacklight.header_links.logout'), destroy_user_session_path)
+      content_tag :li, link_to(t("blacklight.header_links.logout"), destroy_user_session_path)
     else
-      content_tag :li, link_to(t('blacklight.header_links.login'), new_user_session_path)
+      content_tag :li, link_to(t("blacklight.header_links.login"), new_user_session_path)
     end
   end
 
   def edit_user_registration_text
-    current_user.to_s.blank? ? t('user_registration') : current_user.to_s
+    current_user.to_s.blank? ? t("user_registration") : current_user.to_s
   end
 
-  def account_dropdown_text
-    [t('account'), content_tag(:b, nil, :class => "caret")].join(" ").html_safe
+  def render_refworks_link
+    if @document.export_formats.keys.include?(:refworks_marc_txt)
+      content_tag :li, link_to(t("blacklight.tools.refworks"), refworks_export_url(:id => @document))
+    end
   end
 
-  def search_button_text
-    [t('blacklight.search.form.submit'), content_tag(:i, nil, :class => "icon-search icon-white")].join(" ").html_safe
+  def render_endnote_link
+    if @document.export_formats.keys.include?(:endnote)
+      content_tag :li, link_to(t("blacklight.tools.endnote"), catalog_path(@document, :format => "endnote"))
+    end
+  end
+
+  def render_citation_link 
+    if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt))
+      content_tag :li, link_to(t("blacklight.tools.cite"), citation_catalog_path(:id => @document), {:id => "citeLink", :name => "citation", :class => "lightboxLink"})
+    end
+  end
+
+  def render_sms_link
+    if @document.respond_to?(:to_sms_text)
+      content_tag :li, link_to(t("blacklight.tools.sms"), sms_catalog_path(:id => @document), {:id => "smsLink", :name => "sms", :class => "lightboxLink"})
+    end
+  end
+
+  def render_marc_view_link
+    if @document.respond_to?(:to_marc)
+      content_tag :li, link_to(t("blacklight.tools.librarian_view"), librarian_view_catalog_path(@document), {:id => "librarianLink", :name => "librarian_view", :class => "lightboxLink"})
+    end
+  end
+
+  def render_nearby_link
+    if @document.respond_to?(:to_marc)
+      content_tag :li, link_to(t("check_nearby"), "http://www.worldcat.org/oclc/#{@document[:id]}")
+    end
+  end
+
+  def render_ead_view_link
+    # todo
+  end
+
+  def render_fa_view_link
+    # todo
+  end
+
+  def render_previous_document_link
+    if @previous_document
+      content_tag :li, link_to_previous_document(@previous_document)
+    end
+  end
+
+  def render_next_document_link
+    if @next_document
+      content_tag :li, link_to_next_document(@next_document)
+    end
+  end
+
+  def render_item_entry_info
+    if @previous_document || @next_document
+      content_tag :li, item_page_entry_info, :class => "navbar-text"
+    end
   end
 
 end
