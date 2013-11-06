@@ -924,6 +924,16 @@
        <copyField source="foo" dest="bar"/>
   -->
 
+  <!-- Copy any indexed text or strings to our default search field -->
+  <copyField source="*_teim"  dest="text" />
+  <copyField source="*_tesim" dest="text" />
+  <copyField source="*_tim"   dest="text" />
+  <copyField source="*_ssim"  dest="text" />
+  <copyField source="*_tei"   dest="text" />
+  <copyField source="*_si"    dest="text" />
+  <copyField source="*_sim"   dest="text" />
+  <copyField source="*_ssi"   dest="text" />
+
   <!-- spellcheck fields -->
   <!-- default spell check;  should match fields for default request handler -->
   <!-- it won't work with a copy of a copy field -->
