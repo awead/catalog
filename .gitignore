@@ -8,11 +8,6 @@ nohup.out
 
 rerun.txt
 
-vendor/plugins/*
-vendor/plugins/blacklight/*
-
-lib/solrmarc.log*
-
 public/plugin_assets
 public/plugin_assets/
 public/assets

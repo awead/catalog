@@ -1,3 +1,4 @@
+require "fileutils"
 require "solr_ead"
 require "rockhall"
 
@@ -68,10 +69,19 @@ namespace :marc do
     job.write_out
   end
 
-  desc "Index our marc record fixtures"
+  desc "Index marc record fixtures, or provide a file via MARC_FILE"
   task :index => :environment do
-    ENV['MARC_FILE'] = "spec/fixtures/marc/rrhof.mrc"
+    ENV['CONFIG_PATH'] = locate_path("vendor", "SolrMarc", "config-#{::Rails.env}.properties")
+    ENV['SOLRMARC_JAR_PATH'] = locate_path("vendor", "SolrMarc", "SolrMarc.jar")
+    ENV['MARC_FILE'] ||= "spec/fixtures/marc/rrhof.mrc"
     Rake::Task["solr:marc:index"].invoke
+  end
+
+  desc "Return the info on our marc index environment"
+  task :info => :environment do
+    ENV['CONFIG_PATH'] = locate_path("vendor", "SolrMarc", "config-#{::Rails.env}.properties")
+    ENV['SOLRMARC_JAR_PATH'] = locate_path("vendor", "SolrMarc", "SolrMarc.jar")
+    Rake::Task["solr:marc:index:info"].invoke
   end
 
 end

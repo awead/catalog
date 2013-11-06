@@ -75,7 +75,7 @@ module Rockhall::EadBehaviors
 
   # Returns the language terms as string from a given three-letter code found in language_map.properties
   def get_language_from_code code, properties = Hash.new
-    file = File.new(File.path(Rails.root + "config/SolrMarc/translation_maps/language_map.properties"))
+    file = File.new(File.path(Rails.root + "vendor/SolrMarc/translation_maps/language_map.properties"))
     IO.foreach(file) do |line|
       properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)\/\/(.*)/ || line =~ /([^=]*)=(.*)/
     end
