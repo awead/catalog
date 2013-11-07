@@ -22,12 +22,12 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.show_link = solr_name("heading", :displayable)
-    config.index.record_display_type = solr_name("format", :symbol)
+    config.index.record_display_type = solr_name("format", :displayable)
 
     # solr field configuration for document/show views
     config.show.html_title = solr_name("heading", :displayable)
     config.show.heading = solr_name("heading", :displayable)
-    config.show.display_type = solr_name("format", :symbol)
+    config.show.display_type = solr_name("format", :displayable)
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -45,7 +45,7 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.
-    config.add_facet_field solr_name("format",     :symbol), :label => "Format",             :limit => 20
+    config.add_facet_field solr_name("format",     :facetable), :label => "Format",             :limit => 20
     config.add_facet_field solr_name("collection", :facetable), :label => "Collection Name",    :limit => 20
     config.add_facet_field solr_name("material",   :facetable), :label => "Archival Material",  :limit => 20
     config.add_facet_field solr_name("name",       :facetable), :label => "Name",               :limit => 20
@@ -78,14 +78,14 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_index_field solr_name("title",             :displayable), :label => "Title:"
     config.add_index_field solr_name("author",            :displayable), :label => "Author:", :helper_method => :render_facet_link
-    config.add_index_field solr_name("format",            :symbol), :label => "Format:"
+    config.add_index_field solr_name("format",            :displayable), :label => "Format:"
     config.add_index_field solr_name("ohlink_url",        :displayable), :label => "OhioLink Resource:", :helper_method => :render_external_link
     config.add_index_field solr_name("resource_url",      :displayable), :label => "Online Resource:",   :helper_method => :render_external_link
     config.add_index_field solr_name("language",          :displayable), :label => "Language:"
     config.add_index_field solr_name("publisher",         :displayable), :label => "Publisher:"
     config.add_index_field solr_name("lc_callnum",        :displayable), :label => "Call Number:"
     config.add_index_field solr_name("unitdate",          :displayable), :label => "Dates:"
-    config.add_index_field solr_name("collection",        :facetable),   :label => "Archival Collection:", :helper_method => :render_facet_link
+    config.add_index_field solr_name("collection",        :displayable), :label => "Archival Collection:", :helper_method => :render_facet_link
     config.add_index_field solr_name("parent_unittitles", :displayable), :label => "Series:"
     config.add_index_field solr_name("location",          :displayable), :label => "Location:"
 
@@ -111,7 +111,7 @@ class CatalogController < ApplicationController
                                                                    :helper_method => :render_facet_link,
                                                                    :facet         => solr_name("series", :facetable)
 
-    config.add_show_field solr_name("format",       :symbol),   :label         => "Format:"
+    config.add_show_field solr_name("format",       :displayable), :label         => "Format:"
     config.add_show_field solr_name("format_dtl",   :displayable), :label         => "Format Details:"
     config.add_show_field solr_name("unitdate",     :displayable), :label         => "Dates:"
 
@@ -130,16 +130,16 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("contents",     :displayable), :label         => "Contents:"
     config.add_show_field solr_name("donor",        :displayable), :label         => "Donor:"
 
-    config.add_show_field solr_name("collection",   :facetable),   :label         => "Archival Collection:", 
+    config.add_show_field solr_name("collection",   :displayable), :label         => "Archival Collection:", 
                                                                    :helper_method => :render_facet_link,
                                                                    :facet         => solr_name("collection", :facetable)
     
     config.add_show_field solr_name("access",       :displayable), :label         => "Access:"
 
-    config.add_show_field solr_name("subject",      :facetable),   :label         => "Subjects:",
+    config.add_show_field solr_name("subject",      :displayable), :label         => "Subjects:",
                                                                    :helper_method => :render_subjects
 
-    config.add_show_field solr_name("genre",        :facetable),   :label         => "Genre/Form:",
+    config.add_show_field solr_name("genre",        :displayable), :label         => "Genre/Form:",
                                                                    :helper_method => :render_facet_link,
                                                                    :facet         => solr_name("genre", :facetable)
 
@@ -162,7 +162,7 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("issn",         :displayable), :label => "ISSN:"
     config.add_show_field solr_name("upc",          :displayable), :label => "UPC:"
     config.add_show_field solr_name("pubnum",       :displayable), :label => "Publisher Number:"
-    config.add_show_field "id",                                    :label => "OCLC No.:"
+    config.add_show_field solr_name("oclc",         :displayable), :label => "OCLC No:"
  
     # Fields specific to ead components
     config.add_show_field solr_name("scopecontent",      :displayable), :label => "Scope and Content:"

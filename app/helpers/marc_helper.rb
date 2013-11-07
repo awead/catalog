@@ -60,8 +60,8 @@ module MarcHelper
   # it redendered by Rails instead.
   def render_call_number args, results = Array.new
     locations = ["rx", "rhlrr", "rharr", "rhs2", "rhs2o", "rhs3"]
-    if args[:document]["marc_display"]
-      MARC::XMLReader.new(StringIO.new(args[:document]["marc_display"])).first.find_all {|f| f.tag == '945'}.each do |field|
+    if args[:document]["marc_ss"]
+      MARC::XMLReader.new(StringIO.new(args[:document]["marc_ss"])).first.find_all {|f| f.tag == '945'}.each do |field|
         results << field['a'] if locations.include?(field['l'].strip)
       end
     end
@@ -69,10 +69,10 @@ module MarcHelper
   end
 
   def document_icon doc, result = String.new
-    if doc.get("format").nil?
+    if doc.get(Solrizer.solr_name("format", :displayable)).nil?
       result << image_tag("icons/unknown.png")
     else
-      filename = doc.get("format").downcase.gsub(/\s/,"_")
+      filename = doc.get(Solrizer.solr_name("format", :displayable)).downcase.gsub(/\s/,"_")
       result << image_tag("icons/#{filename}.png")
     end
     return result.html_safe

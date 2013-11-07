@@ -36,20 +36,19 @@ class MarcFile
 
   private
 
-  # TODO: get marc_display['' TO *] working so it's just returning the records with the marc_display
+  # TODO: get marc_ss['' TO *] working so it's just returning the records with the marc_ss
   # field and not everything... 
   def solr_marc_records_query query = Hash.new
     query[:qt]    = 'document'
     query[:q]     = 'id:*'
-    query[:fl]    = Solrizer.solr_name("marc", :displayable)
+    query[:fl]    = 'marc_ss'
     query[:rows]  = self.rows
     query[:start] = self.start
     return query
   end
 
   def marc_record_from_response_doc doc
-    xml = StringIO.new doc[Solrizer.solr_name("marc", :displayable)].first
-    return ::MARC::XMLReader.new(xml).first
+    ::MARC::XMLReader.new(StringIO.new doc['marc_ss']).first
   end
 
 

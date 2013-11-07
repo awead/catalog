@@ -30,6 +30,8 @@ public/fa/*.html
 public/fa/*.xml
 public/fa/*.json
 
+vendor/SolrMarc/solrmarc.log*
+
 .bundle
 .rvmrc
 .ruby-gemset

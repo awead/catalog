@@ -15,10 +15,8 @@ describe MarcFile do
 
     it "should return an array of marc xml documents" do
       result = @file.get_records
-      result.first[Solrizer.solr_name("marc", :displayable)].should_not be_nil
-      result.first[Solrizer.solr_name("marc", :displayable)].should be_kind_of Array
-      result.first[Solrizer.solr_name("marc", :displayable)].count.should == 1
-      result.first[Solrizer.solr_name("marc", :displayable)].first.should be_kind_of String
+      result.first["marc_ss"].should_not be_nil
+      result.first["marc_ss"].should be_kind_of String
       result.length.should == 83
     end
 
