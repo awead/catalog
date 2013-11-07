@@ -1,68 +1,84 @@
 module EadHelper
 
-
   def render_ead_html
-    if params[:ref] == "full" or !has_json?
-      render :file => "#{Rails.root}/public/fa/#{@document["ead_id"]}_full.html"
-    else
-      render :file => "#{Rails.root}/public/fa/#{@document["ead_id"]}.html"
-    end
+    ead_id = @document[Solrizer.solr_name("ead", :stored_sortable)]
+    render :file => "#{Rails.root}/public/fa/#{ead_id}.html"
   end
 
-  def render_collection_inventory_heading
-    content_tag("h2", "Collection Inventory", :id => "inventory") if has_json?
+  def render_inventory_table
+    render "components/list"
   end
 
-  def render_collection_inventory
-    render :partial => "components/list", :locals => { :documents => @children } if has_json?
+  def render_subjects_tab_pane
+    render "catalog/_show_partials/archival_collection_subjects"
   end
 
-  def render_ead_sidebar results = String.new
-    results << "<div id=\"ead_sidebar\">"
-    results << toggle_view_link if has_json?
-    results << link_to("Archivist View", ead_xml_path(@document["ead_id"]), { :target => "_blank" })
-    results << content_tag("div", ead_toc, {:id => "ead_toc"})
-    return results.html_safe
-  end
-
-  def toggle_view_link link = String.new
-    if params[:ref] == "full"
-      link << link_to("Default View", catalog_path(params[:id]))
-    else
-      if params[:ref]
-        link << link_to("Full View", catalog_path([params[:id], "full"], :anchor => params[:ref]))
-      else
-        link << link_to("Full View", catalog_path([params[:id], "full"]))
-      end
-    end
-    return ("<div id=\"view_toggle\">" + link + "</div>").html_safe
-  end
-
-  def ead_toc results = String.new
-    results << content_tag("h3", "Table of Contents")
-    results << content_tag(:ol, ead_anchor_links)
-    return results.html_safe
-  end
-
-  def ead_anchor_links results = String.new
-    links = ["bioghist", "bibliography", "accruals", "separatedmaterial", "relatedmaterial", "custodhist"]
-    results << content_tag(:li, link_to("General Information", catalog_path(params[:id], :anchor => ""), :class => "ead_anchor"))
-    results << content_tag(:li, link_to("Collection Overview", catalog_path(params[:id], :anchor => "abstract"), :class => "ead_anchor"))
-    links.each do |anchor|
-      field = anchor+"_heading_display"
-      unless @document[field].nil?
-        results << content_tag(:li, link_to(@document[field].first, catalog_path(params[:id], :anchor => anchor), :class => "ead_anchor"))
-      end
-    end
-    results << content_tag(:li, link_to("Restrictions", catalog_path(params[:id], :anchor => "userestrict"), :class => "ead_anchor"))
-    results << content_tag(:li, link_to("Subject Headings", catalog_path(params[:id], :anchor => "subjects"), :class => "ead_anchor"))
-    results << content_tag(:li, link_to("Collection Inventory", catalog_path(params[:id], :anchor => "inventory"), :class => "ead_anchor"))
-    return  results.html_safe
+  def is_a_finding_aid?
+    ["Archival Collection", "Archival Item"].include? @document[Solrizer.solr_name("format", :displayable)].first
   end
 
   def has_json?
     File.exists?(File.join(Rails.root, "public", "fa", (@document["ead_id"] + "_toc.json"))) unless @document["ead_id"].nil?
   end
 
+  def component_has_children?
+    @component.get Solrizer.solr_name("component_children", :type => :boolean)
+  end
+
+  def render_show_view_for_finding_aid
+    if params[:ref]
+      render "catalog/_show_partials/component"
+    else
+      render "catalog/_show_partials/finding_aid"
+    end
+  end
+
+  def render_parent_title_breadcrumb_link index
+    link_to @component[Solrizer.solr_name("parent_unittitles", :displayable)][index].html_safe, 
+      catalog_path([@document.id, @component[Solrizer.solr_name("parent", :displayable)][index]])
+  end
+
+  def render_component_rows
+    render "components/row"
+  end
+
+  def component_row_for_index index
+    params[:start] ? (index.to_i + params[:start].to_i).to_s : index
+  end
+
+  def render_component_title component
+    title = component.get Solrizer.solr_name("title", :displayable)
+    unitdate = component.get Solrizer.solr_name("unitdate", :displayable)
+    ref = component.get Solrizer.solr_name("ref", :stored_sortable)
+    if unitdate.nil?
+      link_to(title.html_safe, catalog_path([params[:id], ref]))
+    else
+      link_to([title, unitdate].join(", ").html_safe, catalog_path([params[:id], ref]))
+    end
+  end
+
+  def render_component_location component
+    render_document_show_field_value(component, :field => Solrizer.solr_name("location", :displayable))
+  end
+
+  def ead_field_blacklisted? field
+    [Solrizer.solr_name("title", :displayable), Solrizer.solr_name("format", :displayable)].include? field
+  end
+
+  def render_show_more_components_button
+    if @numfound > @components.length
+      content_tag :div, :class => "row-fluid" do
+        content_tag :button, "more", :id => "show_more_components", :class => "btn span12"
+      end
+    end
+  end
+
+  def render_nav_link step, opts = {}
+    if params[:ref]
+      content_tag :li, link_to(step.capitalize, catalog_path(params[:id], :anchor => step))
+    else
+      content_tag :li, link_to(step.capitalize, "#"+step, :data => { :toggle => "tab"}), :class => opts[:class]
+    end
+  end
 
 end

@@ -49,11 +49,11 @@ module NavbarHelper
   end
 
   def render_ead_view_link
-    # todo
+    content_tag :li, link_to(t("archivist_view"), catalog_path(params[:id], :format => :xml), {:target => "_blank" })
   end
 
   def render_fa_view_link
-    # todo
+    content_tag :li, link_to(t("finding_aid"), catalog_path(params[:id], :format => :xhtml), {:target => "_blank" })
   end
 
   def render_previous_document_link

@@ -6,14 +6,11 @@ Catalog::Application.routes.draw do
   devise_for :users
 
   # For EAD
-  resources :components, :only => [:index]
-  match 'catalog/:id/ead_xml', :to => "catalog#ead_xml", :as => "ead_xml", :via => :get
-  match 'catalog/:id/:ref', :to => "catalog#show", :via => :get
+  match "components/:id(/:ref)", :to => "components#index", :via => :get
+  match "catalog/:id/:ref", :to => "catalog#show", :via => :get
 
   # Holdings
-  match "holdings/:id" => "holdings#show", :via => :get, :as => :holdings, :via => :get
+  match "holdings/:id" => "holdings#show", :as => :holdings, :via => :get
 
-  # fuck you, recscue_from, and your stupid bullshit
-  match '*a', :to => 'catalog#index', :via => [:get, :post]
-
+  match "*a", :to => "catalog#index", :via => [:get, :post] if Rails.env.match?("production")
 end

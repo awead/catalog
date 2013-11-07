@@ -7,9 +7,11 @@ class CatalogController < ApplicationController
   include Rockhall::ControllerBehaviors
   include Rockhall::SolrHelperExtension
 
+  SolrDocument.use_extension ::Rockhall::Exports
+
   rescue_from Exception, :with => :render_error unless Rails.env.match("development")
 
-  before_filter :query_ead_components, :only => :show
+  before_filter :get_ead_components, :only => :show
   before_filter :redirect_to_front_page, :only => :index
 
   configure_blacklight do |config|

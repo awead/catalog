@@ -16,6 +16,10 @@ $navbarInverseLinkBackgroundHover: #590000;
   padding: 10px 50px 10px 50px;
 }
 
+#footer {
+  margin-top: 20px;
+}
+
 .navbar-inverse { 
   .navbar-top {
     background-color: #cccccc;
@@ -55,4 +59,45 @@ $navbarInverseLinkBackgroundHover: #590000;
 
 .hidden {
   display: none;
+}
+
+// Finding Aids
+
+#fa {
+
+  p {
+    line-height: 25px;
+  }
+
+  #bioghist {
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    dd {
+      padding: 1px 0 1px 0;
+      border-bottom: 1px solid $grayLight;
+    }
+  
+  }
+
+  #summary {
+    dd p {
+    padding: 0;
+    margin: 0;
+    line-height: $baseLineHeight;
+    }
+  }
+
+  .bibliography {
+    padding-left: 15px;
+  }
+
+}
+
+#inventory_table {
+  margin-bottom: 0px;
 }

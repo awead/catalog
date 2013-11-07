@@ -1,0 +1,18 @@
+<%= content_tag :div, :class => "span6" do %>
+  <%= content_tag :h4 do %>
+    <%= document_icon(document) %>
+    <%= document_heading %>
+  <% end %>
+  <%= content_tag :dl, :class => "dl-horizontal" do %>
+    <% document_show_fields(document).each do |solr_fname, field| %>
+      <% if should_render_show_field? document, field %>
+        <%= content_tag :dt, render_document_show_field_label(document, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
+        <%= content_tag :dd, render_document_show_field_value(document, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= content_tag :div, :id => "sidebar", :class => "container-fluid span6" do %>
+  <%= render_document_sidebar_partial %>
+<% end %>

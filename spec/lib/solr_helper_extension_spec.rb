@@ -10,50 +10,38 @@ describe Rockhall::SolrHelperExtension do
     @test = TestCatalogController.new
   end
 
-  describe ".query_ead_components" do
+  describe ".get_ead_components" do
     it "should return an array of first-level component solr documents from params" do
       @test.stub(:params).and_return({:id => "ARC-0037"}.with_indifferent_access)
-      children, parents = @test.query_ead_components
-      children.length.should          == 7
-      children.first[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref1"
-      parents.should be_empty
-    end
-
-    it "should return an array of first-level components and a hash of parent components" do
-      @test.stub(:params).and_return({:id => "ARC-0037", :ref => "ref1809"}.with_indifferent_access)
-      children, parents = @test.query_ead_components
-      children.length.should == 7
-      children.first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref1"
-      parents.keys.should  == ["ref1", "ref6", "ref208"]
-      parents["ref1"].first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref2277"
-      parents["ref1"].last[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref1033"
-
+      numfound, components = @test.get_ead_components
+      components.length.should == numfound
+      components.first[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref1"
     end
   end
 
   describe ".first_level_ead_components" do
 
     it "should return an array documents from ARC-0037" do
-      children = @test.first_level_ead_components("ARC-0037")
+      numfound, children = @test.first_level_ead_components("ARC-0037")
       children.length.should         == 7
       children.first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref1"
       children.last[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref1884" 
     end
 
-    it "should return an array documents from RG-0008" do
-      children = @test.first_level_ead_components("RG-0008")
-      children.length.should == 1529
+    it "should return the maximum array of components" do
+      numfound, children = @test.first_level_ead_components("RG-0008")
+      children.length.should == Rails.configuration.rockhall_config[:max_components]
     end
 
     it "should return an array starting with a given row" do
-      children = @test.first_level_ead_components("ARC-0037", {:start => 2})
+      numfound, children = @test.first_level_ead_components("ARC-0037", {:start => 2})
       children.length.should         == 5
       children.first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref176"
       children.last[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref1884"      
     end
 
     it "should return an array of a selective range of rows" do
-      children = @test.first_level_ead_components("ARC-0037", {:start => 2, :rows => 3})
+      numfound, children = @test.first_level_ead_components("ARC-0037", {:start => 2, :rows => 3})
       children.length.should         == 3
       children.first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref176"
       children.last[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref250"
@@ -66,24 +54,20 @@ describe Rockhall::SolrHelperExtension do
     end
   end
 
-  describe ".additional_ead_components" do
+  describe ".ead_components_from_parent" do
     it "should return an array of solr documents given an ead and parent document" do
-      documents = @test.additional_ead_components("ARC-0037", "ref1")
-      documents.length.should         == 222
+      numfound, documents = @test.ead_components_from_parent("ARC-0037", "ref1")
       documents.first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref2277"
-      documents.last[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref1033"
     end
 
     it "should return array starting with a given array" do
-      documents = @test.additional_ead_components("ARC-0037", "ref1", {:start => 50})
-      documents.length.should         == 172
+      numfound, documents = @test.ead_components_from_parent("ARC-0037", "ref1", {:start => 50})
       documents.first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref29"
-      documents.last[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref1033"
     end
 
     it "should return an array of a selective range of rows" do
-      documents = @test.additional_ead_components("ARC-0037", "ref1", {:start => 50, :rows => 25})
-      documents.length.should         == 25
+      numfound, documents = @test.ead_components_from_parent("ARC-0037", "ref1", {:start => 50, :rows => 25})
+      documents.length.should == 25
       documents.first[Solrizer.solr_name("ref", :stored_sortable)].should == "ref29"
       documents.last[Solrizer.solr_name("ref", :stored_sortable)].should  == "ref47"
     end

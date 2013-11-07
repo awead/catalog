@@ -1,0 +1,18 @@
+<%= content_tag :h3 do %>
+  <%= document_icon(@document) %>
+  <%= ("Guide to the " + @document.get(Solrizer.solr_name("title", :displayable))).html_safe %>
+  <%= content_tag :small, @document.get(Solrizer.solr_name("ead", :stored_sortable)) %>
+<% end %>
+    
+<%= content_tag :div, :id => "fa", :class => "tab-content" do %>
+
+  <%= render_ead_html %>
+
+  <%= render_subjects_tab_pane %>
+
+  <%= content_tag :div, :class => "tab-pane", :id => "inventory" do %>
+    <%= content_tag :h4, "Collection Inventory" %>
+    <%= render_inventory_table %>
+  <% end %>
+
+<% end %>

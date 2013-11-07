@@ -22,8 +22,8 @@
             <%= content_tag :ul, :class => "dropdown-menu" do %>
               <%= render_marc_view_link %>
               <%= render_nearby_link %>
-              <%= render_ead_view_link %>
-              <%= render_fa_view_link %>
+              <%= render_ead_view_link if is_a_finding_aid? %>
+              <%= render_fa_view_link if is_a_finding_aid? %>
             <% end %>
           <% end %>
         <% end %>

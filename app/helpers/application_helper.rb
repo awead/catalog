@@ -43,11 +43,17 @@ module ApplicationHelper
   # COinS, for Zotero among others. 
   # This document_partial_name(@document) business is not quite right, but has been there for a while. 
   def render_z3988_title
-    content_tag :span, nil, :class => "Z3988", :title => @document.export_as_openurl_ctx_kev(document_partial_name(@document))
+    if @document.respond_to?(:export_as_openurl_ctx_kev)
+      content_tag :span, nil, :class => "Z3988", :title => @document.export_as_openurl_ctx_kev(document_partial_name(@document))
+    end
   end
 
   def document_dom_id
     "doc_" + @document.id.to_s.parameterize
+  end
+
+  def field_diplay_class solr_fname
+    "blacklight-"+solr_fname.parameterize
   end
 
 end

@@ -17,11 +17,17 @@ class Rockhall::EadComponent < SolrEad::Component
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
     solr_doc.merge!({"text" => self.ng_xml.text})
-    Solrizer.insert_field(solr_doc, "format", "Archival Item", :symbol)
+    Solrizer.insert_field(solr_doc, "format", "Archival Item", :facetable)
+    Solrizer.insert_field(solr_doc, "format", "Archival Item", :displayable)
     Solrizer.insert_field(solr_doc, "heading", heading_display(solr_doc), :displayable)
     Solrizer.insert_field(solr_doc, "location", location_display, :displayable)
     Solrizer.insert_field(solr_doc, "accession", ead_accession_range(self.accession.first), :searchable)
     Solrizer.insert_field(solr_doc, "language", get_language_from_code(self.langcode.first), :facetable)
+    Solrizer.insert_field(solr_doc, "language", get_language_from_code(self.langcode.first), :displayable)
+
+    # Replace certain fields with their html-formatted equivilents
+    Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
+
   end
 
   protected
@@ -44,7 +50,7 @@ class Rockhall::EadComponent < SolrEad::Component
 
   def heading_display solr_doc
     if self.title.first.blank?
-      self.unitdate.first.to_s unless self.unitdate.empty?
+      self.term_to_html("unitdate") unless self.unitdate.empty?
     else
       title_for_heading(solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)]) unless solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)].nil?
     end
@@ -52,9 +58,9 @@ class Rockhall::EadComponent < SolrEad::Component
 
   def title_for_heading parent_titles = Array.new
     if parent_titles.length > 0
-      [parent_titles, self.title.first].join(" >> ")
+      [parent_titles, self.term_to_html("title")].join(" >> ")
     else
-      self.title.first
+      self.term_to_html("title")
     end
   end
 

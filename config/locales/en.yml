@@ -8,3 +8,5 @@ en:
   export: '<i class="icon-share"></i> Export <b class="caret"></b>'
   view: '<i class="icon-eye-open"></i> View <b class="caret"></b>'
   check_nearby: 'Check nearby libraries'
+  archivist_view: 'Archivist View'
+  finding_aid: 'Findind Aid'

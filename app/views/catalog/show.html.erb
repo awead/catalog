@@ -3,20 +3,10 @@
 
 <%= render "shared/record_controls" %>
 
-<%= content_tag :div, :class => "row-fluid" do %>
+<%= content_tag :div, :id => document_dom_id, :class => "row-fluid" do %>
 
-  <%= content_tag :div, :id => document_dom_id, :class => "span6" do %>
-    <%= content_tag :h4 do %>
-      <%= document_icon(@document) %>
-      <%= document_heading %>
-    <% end %>
-    <%= render_document_partial @document, :show %>
-  <% end %>
-  
-  <%= content_tag :div, :id => "sidebar", :class => "container-fluid span6" do %>
-    <%= render_document_sidebar_partial %>
-  <% end %>
+  <%= render_document_partial @document, :show %>
 
-  <%= render_z3988_title if @document.respond_to?(:export_as_openurl_ctx_kev) %>
+  <%= render_z3988_title if @document["marc_ss"] %>
 
 <% end %>

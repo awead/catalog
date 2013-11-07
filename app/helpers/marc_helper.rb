@@ -1,9 +1,5 @@
 module MarcHelper
 
-  def document_heading
-    @document[blacklight_config.show.heading] || @document.id
-  end
-
   def render_external_link args, results = Array.new
     begin
       value = args[:document][args[:field]]

@@ -1,0 +1,11 @@
+<% @components.each_with_index do |component, index| %>
+  <%= 
+    content_tag :tr, 
+    :id => component.id, 
+    :data => { :row => component_row_for_index(index), :ref => component.get(Solrizer.solr_name("ref", :stored_sortable)) } do 
+  %>
+    <%= content_tag :td, render_component_title(component) %>
+    <%= content_tag :td, render_component_location(component) %>
+  <% end %>
+<% end %>
+

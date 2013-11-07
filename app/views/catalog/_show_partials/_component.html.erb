@@ -1,0 +1,35 @@
+<%= content_tag :ul, :class => "breadcrumb" do %>
+  <!-- Link to collection -->
+  <%= content_tag :li do %>
+    <%= link_to @document.get(Solrizer.solr_name("title", :displayable)), catalog_path(@document.id, :anchor => "inventory") %>
+    <%= content_tag :span, "/", :class => "divider" %>
+  <% end %>
+  
+  <!-- additional links to parent components -->
+  <% unless @component.get(Solrizer.solr_name("parent_unittitles", :displayable)).nil? %>
+    <% @component[Solrizer.solr_name("parent_unittitles", :displayable)].each_index do |index| %>
+      <%= content_tag :li do %>
+        <%= render_parent_title_breadcrumb_link index %>
+        <%= content_tag :span, "/", :class => "divider" %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <!-- the current component title -->
+  <%= content_tag :li, render_document_show_field_value(@component, :field => Solrizer.solr_name("title", :displayable)), :class => "active" %>
+<% end %>
+
+<%= content_tag :h4 do %>
+  <%= render_document_show_field_value(@component, :field => Solrizer.solr_name("title", :displayable)) %>
+<% end %>
+
+<%= content_tag :dl, :class => "dl-horizontal" do %>
+  <% document_show_fields(@component).each do |solr_fname, field| %>
+    <% if should_render_show_field?(@component, field) && !ead_field_blacklisted?(solr_fname) %>
+      <%= content_tag :dt, render_document_show_field_label(@component, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
+      <%= content_tag :dd, render_document_show_field_value(@component, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= render_inventory_table if component_has_children? %>
