@@ -14,6 +14,7 @@ class Rockhall::EadDocument < SolrEad::Document
     Solrizer.insert_field(solr_doc, "unitdate",     ead_date_display,       :displayable)
     Solrizer.insert_field(solr_doc, "contributors", get_ead_names,          :displayable)
     Solrizer.insert_field(solr_doc, "name",         get_ead_names,          :facetable)
+    Solrizer.insert_field(solr_doc, "title",        self.title_filing,      :sortable)
    
     Solrizer.set_field(solr_doc, "language",        get_language_from_code(self.langcode.first),  :facetable )
     Solrizer.set_field(solr_doc, "language",        get_language_from_code(self.langcode.first),  :displayable )

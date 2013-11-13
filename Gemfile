@@ -3,45 +3,36 @@ source 'http://rubygems.org'
 gem 'rails', '~>4.0.0'
 
 gem 'blacklight'
-gem 'unicode'
-gem 'sqlite3'
-gem 'sanitize'
-gem 'json'
-gem 'sass-rails'
+gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
 gem 'bootstrap-sass'
-gem 'uglifier'
 gem 'devise'
 gem 'devise-guests'
-gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
-gem 'ruby-ntlm'
-gem 'solr_ead', :path => '/Users/adamw/Projects/Github/solr_ead'
-gem 'therubyracer'
-
-# jQuery 1.9 was breaking checkbox_submit.js functions in BL 3.x
-# don't know if that's still the case...
 gem 'jquery-rails'
-
-#group :assets do
-#  gem 'coffee-rails'  
-#  gem 'compass-rails'
-#  gem 'compass-susy-plugin', :require => 'susy'
-#end
+gem 'json'
+gem 'ruby-ntlm'
+gem 'sanitize'
+gem 'sass-rails'
+gem 'solr_ead'
+gem 'sqlite3'
+gem 'therubyracer'
+gem 'uglifier'
+gem 'unicode'
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'webrat'
-  gem 'database_cleaner'
-  gem 'debugger'
-  gem 'pry'
-  gem 'jettywrapper'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'database_cleaner'
+  gem 'debugger'
+  gem 'jettywrapper'
+  gem 'pry'
+  gem 'rspec-rails'
   gem 'webmock', :require => false
+  gem 'webrat'
 end
 
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', :require => false
-  gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'selenium-webdriver'
 end
