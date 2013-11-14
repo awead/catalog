@@ -22,8 +22,6 @@ class Rockhall::EadComponent < SolrEad::Component
     Solrizer.insert_field(solr_doc, "heading",    heading_display(solr_doc),                    :displayable)
     Solrizer.insert_field(solr_doc, "location",   location_display,                             :displayable)
     Solrizer.insert_field(solr_doc, "accession",  ead_accession_range(self.accession.first),    :searchable)
-    Solrizer.insert_field(solr_doc, "language",   get_language_from_code(self.langcode.first),  :facetable)
-    Solrizer.insert_field(solr_doc, "language",   get_language_from_code(self.langcode.first),  :displayable)
     Solrizer.insert_field(solr_doc, "title",      self.title,                                   :sortable) unless self.title.first.blank?
 
     # Add fields using the current solr_doc
@@ -31,7 +29,8 @@ class Rockhall::EadComponent < SolrEad::Component
 
     # Replace certain fields with their html-formatted equivilents
     Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
-
+    Solrizer.set_field(solr_doc, "language",   get_language_from_code(self.langcode.first),  :facetable)
+    Solrizer.set_field(solr_doc, "language",   get_language_from_code(self.langcode.first),  :displayable)
   end
 
   protected
