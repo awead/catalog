@@ -64,14 +64,12 @@ module MarcHelper
     return results.join(field_value_separator).html_safe
   end
 
-  def document_icon doc, result = String.new
-    if doc.get(Solrizer.solr_name("format", :displayable)).nil?
-      result << image_tag("icons/unknown.png")
+  def document_format_to_filename document = @document
+    if document.get(Solrizer.solr_name("format", :displayable)).nil?
+      "icons/unknown.png"
     else
-      filename = doc.get(Solrizer.solr_name("format", :displayable)).downcase.gsub(/\s/,"_")
-      result << image_tag("icons/#{filename}.png")
+      "icons/"+ document.get(Solrizer.solr_name("format", :displayable)).downcase.gsub(/\s/,"_") + ".png"
     end
-    return result.html_safe
   end
 
 end

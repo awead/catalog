@@ -1,5 +1,5 @@
 <%= content_tag :h3 do %>
-  <%= document_icon(@document) %>
+  <%= image_tag document_format_to_filename %>
   <%= ("Guide to the " + @document.get(Solrizer.solr_name("title", :displayable))).html_safe %>
   <%= content_tag :small, @document.get(Solrizer.solr_name("ead", :stored_sortable)) %>
 <% end %>

@@ -11,7 +11,7 @@ class CatalogController < ApplicationController
 
   rescue_from Exception, :with => :render_error unless Rails.env.match("development")
 
-  before_filter :get_ead_components, :only => :show
+  before_filter :get_ead_components, :redirect_item_to_collection, :only => :show
   before_filter :redirect_to_front_page, :only => :index
 
   configure_blacklight do |config|

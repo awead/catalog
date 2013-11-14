@@ -26,6 +26,9 @@ class Rockhall::EadComponent < SolrEad::Component
     Solrizer.insert_field(solr_doc, "language",   get_language_from_code(self.langcode.first),  :displayable)
     Solrizer.insert_field(solr_doc, "title",      self.title,                                   :sortable) unless self.title.first.blank?
 
+    # Add fields using the current solr_doc
+    Solrizer.insert_field(solr_doc, "collection", solr_doc[Solrizer.solr_name("collection", :facetable)], :displayable)
+
     # Replace certain fields with their html-formatted equivilents
     Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
 

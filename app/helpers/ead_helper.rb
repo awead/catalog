@@ -46,15 +46,14 @@ module EadHelper
     params[:start] ? (index.to_i + params[:start].to_i).to_s : index
   end
 
-  def render_component_title component
+  def render_component_title component = @component
     title = component.get Solrizer.solr_name("title", :displayable)
     unitdate = component.get Solrizer.solr_name("unitdate", :displayable)
-    ref = component.get Solrizer.solr_name("ref", :stored_sortable)
-    if unitdate.nil?
-      link_to(title.html_safe, catalog_path([params[:id], ref]))
-    else
-      link_to([title, unitdate].join(", ").html_safe, catalog_path([params[:id], ref]))
-    end
+    [title, unitdate].compact.join(", ").html_safe
+  end
+
+  def render_link_to_component component = @component
+    link_to(render_component_title(component), archival_item_path_in_finding_aid(component))
   end
 
   def render_component_location component
@@ -62,7 +61,7 @@ module EadHelper
   end
 
   def ead_field_blacklisted? field
-    [Solrizer.solr_name("title", :displayable), Solrizer.solr_name("format", :displayable)].include? field
+    [Solrizer.solr_name("title", :displayable), Solrizer.solr_name("format", :displayable), Solrizer.solr_name("collection", :displayable)].include? field
   end
 
   def render_show_more_components_button
@@ -79,6 +78,16 @@ module EadHelper
     else
       content_tag :li, link_to(step.capitalize, "#"+step, :data => { :toggle => "tab"}), :class => opts[:class]
     end
+  end
+
+  def archival_item_path_in_finding_aid document = @document
+    ref = document.get Solrizer.solr_name("ref", :stored_sortable)
+    ead = document.get Solrizer.solr_name("ead", :stored_sortable)
+    catalog_path([ead, ref])
+  end
+
+  def breadcrumb_divider
+    "/"
   end
 
 end

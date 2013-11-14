@@ -7,8 +7,15 @@ module Rockhall::ControllerBehaviors
     end
   end
 
+  def redirect_item_to_collection
+    if params[:id].match("ref")
+      ead, id = params[:id].split(/ref/)
+      redirect_to catalog_path([ead, "ref"+id])
+    end
+  end
+
+  # Adds the solr_name method to the catalog controller
   module ClassMethods
-    # gets the solr name using Solrizer
     def solr_name(name, *opts)
       Solrizer.solr_name(name, *opts)
     end
