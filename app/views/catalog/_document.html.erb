@@ -1,5 +1,6 @@
 <%= content_tag :div, :class => "row-fluid" do %>
-  <%= content_tag :div, :class => "media span10" do %>
+  <%= content_tag :div, :class => "media span10 index-result", :id => document.id, 
+        :data => { :isbn => document.get(Solrizer.solr_name("isbn", :displayable)), :oclc => document.get(Solrizer.solr_name("oclc", :displayable)) } do %>
     <%= render_document_partial document, :thumbnail, :document_counter => document_counter %>
     <%= content_tag :div, :class => "media-body" do %>
       <%= render :partial => 'document_header', :locals => { :document => document, :document_counter => document_counter } %>

@@ -292,7 +292,7 @@
 
       <!-- NOT using marc_ssm because it is large and will slow things down for search results -->
       <str name="fl">
-       id,
+        id,
         score,
         accession_ssm
         accessrestrict_ssm,
@@ -317,6 +317,7 @@
         material_type_ssm,
         name_ssm,
         note_ssm,
+        oclc_ssm,
         ohlink_text_ssm,
         ohlink_url_ssm,
         originalsloc_ssm,
@@ -467,6 +468,7 @@
         material_type_ssm,
         name_ssm,
         note_ssm,
+        oclc_ssm,
         ohlink_text_ssm,
         ohlink_url_ssm,
         originalsloc_ssm,
