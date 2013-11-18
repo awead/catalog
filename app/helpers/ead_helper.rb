@@ -74,9 +74,9 @@ module EadHelper
 
   def render_nav_link step, opts = {}
     if params[:ref]
-      content_tag :li, link_to(step.capitalize, catalog_path(params[:id], :anchor => step))
+      content_tag :li, link_to((opts[:text] ? opts[:text] : step.capitalize), catalog_path(params[:id], :anchor => step))
     else
-      content_tag :li, link_to(step.capitalize, "#"+step, :data => { :toggle => "tab"}), :class => opts[:class]
+      content_tag :li, link_to((opts[:text] ? opts[:text] : step.capitalize), "#"+step, :data => { :toggle => "tab"}), :class => opts[:class]
     end
   end
 
