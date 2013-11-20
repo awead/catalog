@@ -22,26 +22,40 @@ module MarcHelper
     return results.join(field_value_separator).html_safe
   end
 
+  # Refactor me, please!
   def render_facet_link args, results = Array.new
-    begin
-      value = args[:document][args[:field]]
-      if value.is_a? Array
-        value.each do |text|
-          results << facet_link(text, blacklight_config.show_fields[args[:field]][:facet])
-        end
-      else
-        results << facet_link(value, blacklight_config.show_fields[args[:field]][:facet])
+    return nil unless args
+    field = args[:field]
+    field_config = args[:field_config]
+    document = args[:document]
+
+    if field_config and field_config.highlight and document.has_highlight_field?(field_config.field)
+      value = document.highlight_field(field_config.field).map { |x| x.html_safe } if document.has_highlight_field? field_config.field
+    else
+      begin
+        value = document.get(field, :sep => nil) if field
+      rescue
+        vaule = nil
       end
-    rescue
-      return nil
     end
+      
+    if value.is_a? Array
+      value.each do |text|
+        results << facet_link(text, blacklight_config.show_fields[field][:facet])
+      end
+    elsif value.nil?
+      return nil
+    else
+      results << facet_link(value, blacklight_config.show_fields[field][:facet])
+    end
+
     return results.join(field_value_separator).html_safe
   end
 
   # Renders a link for a given term and facet.  The content of term is used for the 
   # text of the link and facet is the solr field to facet on.
   def facet_link term, facet
-    link_to term, add_facet_params_and_redirect(facet, term)
+    link_to term, add_facet_params_and_redirect(facet, Sanitize.clean(term))
   end
 
   def render_search_link args, results = Array.new

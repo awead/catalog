@@ -164,6 +164,15 @@
       </analyzer>
     </fieldType>
 
+    <!-- A tokenized text field for highlighting -->
+    <fieldType name="text_hl" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <charFilter class="solr.HTMLStripCharFilterFactory"/>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
     <!-- A general text field that has reasonable, generic
          cross-language defaults: it tokenizes with StandardTokenizer,
    removes stop words from case-insensitive "stopwords.txt"
@@ -871,7 +880,7 @@
     <dynamicField name="*_dtim"  type="date"    stored="false" indexed="true"  multiValued="true"  />
     <dynamicField name="*_iim"   type="int"     stored="false" indexed="true"  multiValued="true"  />
     <!-- displayable -->
-    <dynamicField name="*_ssm"   type="string"  stored="true"  indexed="false" multiValued="true"  />
+    <dynamicField name="*_ssm"   type="text_hl" stored="true"  indexed="false" multiValued="true"  />
     <!-- stored_searchable -->
     <dynamicField name="*_tesim" type="text_en" stored="true"  indexed="true"  multiValued="true"  />
     <dynamicField name="*_dtsim" type="date"    stored="true"  indexed="true"  multiValued="true"  />

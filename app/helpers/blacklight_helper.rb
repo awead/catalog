@@ -32,4 +32,27 @@ module BlacklightHelper
     document[blacklight_config.show.heading].first.html_safe || document.id
   end
 
+  # Override to:
+  #  * pass field_config on to our helper methods
+  #  * add additional logic to determine field highlighting
+  def get_field_values document, field, field_config, options = {}
+    case
+      when (field_config and field_config.helper_method)
+        send(field_config.helper_method, options.merge(:document => document, :field => field, :field_config => field_config))
+      when (field_config and field_config.link_to_search)
+        link_field = if field_config.link_to_search === true
+          field_config.field
+        else
+          field_config.link_to_search
+        end
+        Array(document.get(field, :sep => nil)).map do |v|
+          link_to render_field_value(v, field_config), search_action_url(add_facet_params(link_field, v, {}))
+        end if field
+      when (field_config and field_config.highlight and document.has_highlight_field?(field_config.field))
+        document.highlight_field(field_config.field).map { |x| x.html_safe } if document.has_highlight_field? field_config.field
+      else
+        document.get(field, :sep => nil) if field
+    end
+  end
+
 end
