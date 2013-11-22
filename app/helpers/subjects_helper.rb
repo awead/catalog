@@ -31,7 +31,7 @@ module SubjectsHelper
   def subject_array_to_links array, results = Array.new
     links = format_subject_links(array)
     links.each do |text, terms|
-      results << subject_facet_link(text, terms)
+      results << subject_facet_link(tag_value_with_property(text,"keywords"), terms)
     end
     return results.join("--")
   end

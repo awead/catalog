@@ -3,7 +3,9 @@
 
 <%= render "shared/record_controls" %>
 
-<%= content_tag :div, :id => document_dom_id, :class => "container-fluid" do %>
+<%= content_tag :div, :id => document_dom_id, :class => "container-fluid", :itemscope => true, :itemtype => schema_itemtype do %>
+  
+  <%= render_property_url %>
 
   <%= render_document_partial @document, :show %>
 

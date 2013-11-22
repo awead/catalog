@@ -49,7 +49,7 @@ module MarcHelper
       results << facet_link(value, blacklight_config.show_fields[field][:facet])
     end
 
-    return results.join(field_value_separator).html_safe
+    return results
   end
 
   # Renders a link for a given term and facet.  The content of term is used for the 

@@ -125,17 +125,22 @@ class CatalogController < ApplicationController
     # The ordering of the field names is the order of the display
     # None of these fields apply to ead documents or components
     config.add_show_field solr_name("title",        :displayable),  :label => "Title:", 
-                                                                    :highlight => true
+                                                                    :highlight => true,
+                                                                    :itemprop => "name"
 
-    config.add_show_field solr_name("unititle",     :displayable),  :label => "Uniform Title:"
-    config.add_show_field solr_name("title_addl",   :displayable),  :label => "Additional Titles:"
+    config.add_show_field solr_name("unititle",     :displayable),  :label => "Uniform Title:",
+                                                                    :itemprop => "alternateName"
+                                                                    
+    config.add_show_field solr_name("title_addl",   :displayable),  :label => "Additional Titles:",
+                                                                    :itemprop => "alternativeHeadline"
 
     config.add_show_field solr_name("author",       :displayable),  :label          => "Author:",
                                                                     :helper_method  => :render_facet_link,
                                                                     :facet          => solr_name("name", :facetable),
-                                                                    :highlight      => true
+                                                                    :highlight      => true,
+                                                                    :itemprop       => "author"
 
-    config.add_show_field solr_name("edition",      :displayable),  :label => "Edition:"
+    config.add_show_field solr_name("edition",      :displayable),  :label => "Edition:", :itemprop => "bookEdition"
 
     config.add_show_field solr_name("series",       :displayable),  :label          => "Series:",
                                                                     :helper_method  => :render_facet_link,
@@ -154,7 +159,9 @@ class CatalogController < ApplicationController
                                                                    :text            => solr_name("resource_text", :displayable)
     
     config.add_show_field solr_name("physical_dtl", :displayable),  :label => "Physical Details:"
-    config.add_show_field solr_name("summary",      :displayable),  :label => "Summary:"
+    config.add_show_field solr_name("summary",      :displayable),  :label => "Summary:",
+                                                                    :itemprop => "description"
+
     config.add_show_field solr_name("participants", :displayable),  :label => "Participants:"
     config.add_show_field solr_name("recinfo",      :displayable),  :label => "Recording Info:"
     config.add_show_field solr_name("contents",     :displayable),  :label => "Contents:"
@@ -172,11 +179,13 @@ class CatalogController < ApplicationController
 
     config.add_show_field solr_name("genre",        :displayable),  :label         => "Genre/Form:",
                                                                     :helper_method => :render_facet_link,
-                                                                    :facet         => solr_name("genre", :facetable)
+                                                                    :facet         => solr_name("genre", :facetable),
+                                                                    :itemprop      => "genre"
 
     config.add_show_field solr_name("contributors", :displayable),  :label         => "Contributors:",
                                                                     :helper_method => :render_facet_link,
-                                                                    :facet         => solr_name("name", :facetable)
+                                                                    :facet         => solr_name("name", :facetable),
+                                                                    :itemprop      => "contributor"
 
     config.add_show_field solr_name("relworks",     :displayable),  :label         => "Related Works:",
                                                                     :helper_method => :render_search_link
@@ -192,14 +201,14 @@ class CatalogController < ApplicationController
                                                                     :highlight  => true
 
     config.add_show_field solr_name("lc_callnum",   :displayable),  :label => "Call Number:"
-    config.add_show_field solr_name("isbn",         :displayable),  :label => "ISBN:"
+    config.add_show_field solr_name("isbn",         :displayable),  :label => "ISBN:", :itemprop => "isbn"
     config.add_show_field solr_name("issn",         :displayable),  :label => "ISSN:"
     config.add_show_field solr_name("upc",          :displayable),  :label => "UPC:"
     config.add_show_field solr_name("pubnum",       :displayable),  :label => "Publisher Number:"
     config.add_show_field solr_name("oclc",         :displayable),  :label => "OCLC No:"
  
     # Fields specific to ead components
-    config.add_show_field solr_name("scopecontent",      :displayable), :label => "Scope and Content:"
+    config.add_show_field solr_name("scopecontent",      :displayable), :label => "Scope and Content:", :itemprop => "description"
     config.add_show_field solr_name("separatedmaterial", :displayable), :label => "Separated Material:"
     config.add_show_field solr_name("accessrestrict",    :displayable), :label => "Access Restrictions:"
     config.add_show_field solr_name("accruals",          :displayable), :label => "Accruals:"

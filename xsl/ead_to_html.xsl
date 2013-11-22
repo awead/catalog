@@ -16,7 +16,7 @@
         <legend>General Information</legend>
         <dl id="geninfo" class="dl-horizontal">
           <dt>Title:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unittitle"/></dd>
+          <dd><span itemprop="name"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unittitle"/></span></dd>
           <dt>Dates:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unitdate"/></dd>
           <dt>Extent:</dt>
@@ -31,7 +31,7 @@
 
         <!-- Other sections of archdesc are displayed in paragraph format -->
         <legend>Collection Overview</legend>
-        <p><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></p>
+        <p><span itemprop="description"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></span></p>
       </div>
 
       <!-- Description tab -->

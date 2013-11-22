@@ -1,7 +1,7 @@
 <%= content_tag :ul, :class => "breadcrumb" do %>
   <!-- Link to collection -->
   <%= content_tag :li do %>
-    <%= link_to @document.get(Solrizer.solr_name("title", :displayable)).html_safe, catalog_path(@document.id, :anchor => "inventory") %>
+    <%= tag_value_is_part_of render_collection_breadcrumb_link %>
     <%= content_tag :span, breadcrumb_divider, :class => "divider" %>
   <% end %>
   
@@ -9,7 +9,7 @@
   <% unless @component.get(Solrizer.solr_name("parent_unittitles", :displayable)).nil? %>
     <% @component[Solrizer.solr_name("parent_unittitles", :displayable)].each_index do |index| %>
       <%= content_tag :li do %>
-        <%= render_parent_title_breadcrumb_link index %>
+        <%= tag_value_is_part_of render_parent_title_breadcrumb_link(index) %>
         <%= content_tag :span, breadcrumb_divider, :class => "divider" %>
       <% end %>
     <% end %>

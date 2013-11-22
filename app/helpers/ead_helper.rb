@@ -33,9 +33,20 @@ module EadHelper
     end
   end
 
+  def render_collection_breadcrumb_link
+    content_tag :span, :itemprop => "name" do
+      link_to @document.get(Solrizer.solr_name("title", :displayable)).html_safe, 
+        catalog_path(@document.id),
+        :itemprop => "url"
+    end
+  end
+
   def render_parent_title_breadcrumb_link index
-    link_to @component[Solrizer.solr_name("parent_unittitles", :displayable)][index].html_safe, 
-      catalog_path([@document.id, @component[Solrizer.solr_name("parent", :displayable)][index]])
+    content_tag :span, :itemprop => "name" do
+      link_to @component[Solrizer.solr_name("parent_unittitles", :displayable)][index].html_safe, 
+        catalog_path([@document.id, @component[Solrizer.solr_name("parent", :displayable)][index]]),
+        :itemprop => "url"
+    end
   end
 
   def render_component_rows

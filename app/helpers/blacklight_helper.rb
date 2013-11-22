@@ -6,7 +6,11 @@ module BlacklightHelper
   # safe_join isn't safe enough
   def render_field_value value=nil, field_config=nil
     safe_values = Array(value).collect { |x| x.respond_to?(:force_encoding) ? x.force_encoding("UTF-8") : x }
-    safe_values.join((field_config.separator if field_config) || field_value_separator).html_safe
+    if field_config && field_config.itemprop
+      render_schema_property safe_values, field_config.itemprop
+    else
+      safe_values.join((field_config.separator if field_config) || field_value_separator).html_safe
+    end
   end
 
   def field_value_separator
