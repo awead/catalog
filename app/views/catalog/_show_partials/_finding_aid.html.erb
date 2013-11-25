@@ -10,9 +10,11 @@
 
   <%= render_subjects_tab_pane %>
 
-  <%= content_tag :div, :class => "tab-pane", :id => "inventory" do %>
-    <%= content_tag :h4, "Collection Inventory" %>
-    <%= render_inventory_table %>
+  <% if collection_has_inventory? %>
+    <%= content_tag :div, :class => "tab-pane", :id => "inventory" do %>
+      <%= content_tag :h4, "Collection Inventory" %>
+      <%= render_inventory_table %>
+    <% end %>
   <% end %>
 
 <% end %>

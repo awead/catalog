@@ -101,4 +101,8 @@ module EadHelper
     "/"
   end
 
+  def collection_has_inventory?
+    @document.get Solrizer.solr_name("inventory", :type => :boolean)
+  end
+
 end

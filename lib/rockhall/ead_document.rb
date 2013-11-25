@@ -4,9 +4,20 @@ class Rockhall::EadDocument < SolrEad::Document
 
   use_terminology SolrEad::Document
 
+  extend_terminology do |t|
+    t.dsc
+  end
+
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
     solr_doc.merge!({"text" => self.ng_xml.text})
+
+    # Is there an inventory to this collection?
+    if self.dsc.first.empty?
+      solr_doc[Solrizer.solr_name("inventory", :type => :boolean)] = "false"
+    else
+      solr_doc[Solrizer.solr_name("inventory", :type => :boolean)] = "true"
+    end
 
     Solrizer.insert_field(solr_doc, "heading",      heading_display,        :displayable) unless self.title_num.empty?
     Solrizer.insert_field(solr_doc, "format",       "Archival Collection",  :facetable)
@@ -15,7 +26,7 @@ class Rockhall::EadDocument < SolrEad::Document
     Solrizer.insert_field(solr_doc, "contributors", get_ead_names,          :displayable)
     Solrizer.insert_field(solr_doc, "name",         get_ead_names,          :facetable)
     Solrizer.insert_field(solr_doc, "title",        self.title_filing,      :sortable)
-   
+
     Solrizer.set_field(solr_doc, "language",        get_language_from_code(self.langcode.first),  :facetable )
     Solrizer.set_field(solr_doc, "language",        get_language_from_code(self.langcode.first),  :displayable )
     Solrizer.set_field(solr_doc, "genre",           self.genreform,                               :facetable)
