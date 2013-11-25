@@ -93,6 +93,9 @@ describe Rockhall::EadBehaviors do
       @test.get_language_from_code("eng").should == "English"
       @test.get_language_from_code("spa").should == "Spanish"
     end
+    it "should return 'None' if it does not match any code" do
+      @test.get_language_from_code("xxx").should == "None"
+    end
   end
 
 end

@@ -79,7 +79,7 @@ module Rockhall::EadBehaviors
     IO.foreach(file) do |line|
       properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)\/\/(.*)/ || line =~ /([^=]*)=(.*)/
     end
-    return properties[code].strip unless properties[code].nil?
+    properties[code].nil? ? "None" : properties[code].strip
   end
 
   # Split-up subject terms like we do for our marc records
