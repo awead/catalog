@@ -2,13 +2,12 @@
 
 $(document).ready(function() {
 
-  // Get cover images if when in the show view
-
   var queries = [];
 
-  if ( $('dd.blacklight-isbn_ssm').get(0) ) {
-    $.each($('dd.blacklight-isbn_ssm').html().split("<br>"), function(index,value) {
-      queries.push(gbUrl('isbn',value));
+  // Get cover images in the show view
+  if ( $('dd.blacklight-isbn_ssm span').get(0) ) {
+    $.each($('dd.blacklight-isbn_ssm span'), function(index,value) {
+      queries.push(gbUrl('isbn',value.textContent));
     });
   }
   if ( $('dd.blacklight-oclc_ssm').get(0) && $('#show_gb').children()[0] === undefined ) {
@@ -21,8 +20,7 @@ $(document).ready(function() {
     getGbData(queries);
 
 
-  // Get cover images from index view
-
+  // Get cover images in the index view
   if ($('.index-result').get(0)) {
     $.each($('.index-result'), function() {
       var queries = [];
