@@ -2,7 +2,7 @@ module Rockhall::ControllerBehaviors
   extend ActiveSupport::Concern
 
   def redirect_to_front_page
-    unless !params[:q].blank? or !params[:f].blank? or !params[:search_field].blank?
+    unless !params[:q].blank? or !params[:f].blank? or !params[:search_field].blank? or self.kind_of?(BookmarksController)
       redirect_to root_path
     end
   end

@@ -208,7 +208,7 @@ en:
         more: 'more »'
       filters:
         title: 'Search Terms'
-        label: '%{label}:'
+        label: '%{label}: '
         remove:
           value: 'Remove constraint %{value}'
           label_value: 'Remove constraint %{label}: %{value}'

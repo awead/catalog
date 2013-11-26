@@ -10,3 +10,5 @@ en:
   check_nearby: 'Check nearby libraries'
   archivist_view: 'Archivist View'
   finding_aid: 'Findind Aid'
+  bookmarks: 'Bookmarks <b class="caret"></b>'
+  edit: 'Edit'

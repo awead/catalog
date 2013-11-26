@@ -12,6 +12,8 @@ Catalog::Application.configure do
 
   # ActionMailer configuration
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => "localhost" }  
+  config.action_mailer.delivery_method = :smtp
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -32,13 +34,13 @@ end
 ActionMailer::Base.smtp_settings = {
   :address => "192.168.250.174",
   :port    => 25,
-  :domain  => 'ROCKHALL',
+  :domain  => "ROCKHALL",
 }
 
-ActionMailer::Base.default :from => 'library@rockhall.org'
+ActionMailer::Base.default :from => "library@rockhall.org"
 
 # Use Pry instead of IRB
 silence_warnings do
-  require 'pry'
+  require "pry"
   IRB = Pry
 end

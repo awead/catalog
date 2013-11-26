@@ -1,6 +1,10 @@
 <%= content_tag :div, :class => "nav-collapse collapse" do %>
   <%= content_tag :ul, :class => "nav" do %>
     <%= content_tag :li, link_to(t("start_over"), catalog_index_path) %>
+    <%= render_clear_search_history_link %>
+    <%= render_clear_saved_searches_link %>
+    <%= render_cancel_account_link %>
+    <%= render "bookmarks/tools" if current_page?(bookmarks_path) %>
     <%= render "shared/account_tools" if has_user_authentication_provider? %>
   <% end %>
 <% end %>

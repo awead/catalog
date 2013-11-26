@@ -1,0 +1,5 @@
+<% @page_title = t("blacklight.bookmarks.title", :application_name => application_name) %>
+<%= content_tag :div, :id => "bookmarks", :class => "span12" do %>
+  <%= content_tag :h1, t('blacklight.bookmarks.title') %>
+  <%= render_bookmarks_index_view %>
+<% end %>

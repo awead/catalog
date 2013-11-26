@@ -1,6 +1,10 @@
-<%= content_tag :div, :class => "documentFunctions" do %>
-  <%= check_box_tag "toggle_all_bookmarks" %>
-  <%= label_tag "Select All", nil, :class => "toggle_bookmark", :id => "toggle_all_bookmarks" %>
+<%= content_tag :div, :class => "row-fluid" do %>
+  <%= content_tag :div, :class => "span2 offset10" do %>
+    <%= content_tag :label, :class => "checkbox" do %>
+      <%= check_box_tag "toggle_all_bookmarks" %>
+      <%= content_tag :span, "Select All" %>
+    <% end %>
+  <% end %>
 <% end %>
 
 <%= content_tag :div, :id => "documents" do %>

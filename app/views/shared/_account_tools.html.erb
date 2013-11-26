@@ -4,8 +4,9 @@
     <%= content_tag :li, link_to(t("blacklight.header_links.search_history"), search_history_path) %>
     <%= content_tag :li, link_to(t("blacklight.header_links.bookmarks"), bookmarks_path) if render_bookmarks_control? %>
     <%= content_tag :li, link_to(t("blacklight.header_links.saved_searches"), saved_searches_path) if has_user_authentication_provider? and current_user %>
-    <%= content_tag :li, link_to(edit_user_registration_text, edit_user_registration_path) if current_user %>
+    <%= content_tag :li, link_to(t("edit"), edit_user_registration_path) if current_user %>
     <%= content_tag :li, nil, :class => "divider" %>
     <%= render_login_or_logout %>
+    <%= render_devise_links unless defined?(devise_mapping).nil? %>
   <% end %>
 <% end %>

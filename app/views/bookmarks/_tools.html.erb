@@ -1,0 +1,27 @@
+<%= content_tag :li, :class => "dropdown", :id => "bookmark_tools" do %>
+  <%= link_to t("bookmarks").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown"} %>
+  <%= content_tag :ul, :class => "dropdown-menu" do %>
+    <%= content_tag :li, :class => "cite" do %>
+      <%= link_to t('blacklight.tools.cite'), citation_catalog_path(:sort=>params[:sort], 
+            :per_page=>params[:per_page], :id => @bookmarks.collect{|doc| doc.document_id}), 
+            {:id => 'citeLink', :name => 'citation', :class => 'lightboxLink'} %>
+    <% end %>
+    <%= content_tag :li, :class => "refworks" do %>
+      <%= render :partial => 'catalog/refworks_form', :locals => {:documents=>@document_list} %>
+    <% end %>
+    <%= content_tag :li, :class => "endnote" do %>
+      <%= link_to t('blacklight.tools.endnote'), endnote_catalog_path(:sort=>params[:sort], 
+            :per_page=>params[:per_page], :id => @bookmarks.collect {|doc| doc.document_id}, :format => 'endnote') %>
+    <% end %>
+    <%= content_tag :li, :class => "email" do %>
+      <%= link_to t('blacklight.tools.email').html_safe, email_catalog_path(:sort=>params[:sort], 
+            :per_page=>params[:per_page], :id => @bookmarks.collect {|doc| doc.document_id}), 
+            :class=>"lightboxLink", :id => "emailLink" %>
+    <% end %>
+    <%= content_tag :li, nil, :class => "divider" %>
+    <%= content_tag :li do %>
+      <%= link_to t('blacklight.bookmarks.clear.action_title'), clear_bookmarks_path, 
+            :method => :delete, :data => { :confirm => t('blacklight.bookmarks.clear.action_confirm') }  %>
+    <% end %>
+  <% end %>
+<% end %>

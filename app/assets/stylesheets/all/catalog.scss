@@ -3,14 +3,29 @@ $navbarInverseBackgroundHighlight: #590000;
 $navbarHeight: 40px;
 $linkColor: #ac1313;
 $linkColorHover: #7d0e0e;
-//$navbarText: #ffffff;
-//$navbarLinkColor: #ffffff;
-//$navbarLinkColorHover: #cccccc;
 $navbarInverseLinkBackgroundHover: #590000;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
 @import "blacklight/facets";
+
+form {
+  margin: 0px 0px 0px 0px;
+}
+
+.pagination {
+  margin: 10px 0px 0px 0px;
+}
+
+.alert {
+  margin: 10px 0px;
+}
+
+.alert-info {
+  background-color: $grayLighter;
+  border-color: $grayLight;
+  color: $grayDark;
+}
 
 #main {
   padding: 10px 50px 10px 50px;
@@ -18,6 +33,16 @@ $navbarInverseLinkBackgroundHover: #590000;
 
 #footer {
   margin-top: 20px;
+}
+
+#main-flashes {
+  margin: 0px;
+  padding: 0px;
+}
+
+.flash_messages {
+  margin: 0px;
+  padding: 0px;
 }
 
 .navbar-inverse { 
@@ -63,6 +88,30 @@ $navbarInverseLinkBackgroundHover: #590000;
 
 .itemprop {
   display: block;
+}
+
+// Override links within a form to make them appear the same as links within the dropdown navbar
+.refworks {
+  form {
+    a {
+      clear: both;
+      color: $textColor;
+      cursor: auto;
+      display: block;
+      font-family: $sansFontFamily;
+      padding-bottom: 3px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 3px;
+      text-align: left;
+      text-decoration: none solid $textColor;
+      white-space: nowrap;
+    }
+    a:hover { 
+      background-color: $linkColor;
+      color: $navbarInverseLinkColorHover;
+    }
+  }
 }
 
 // Finding Aids
