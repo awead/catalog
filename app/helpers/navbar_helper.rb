@@ -74,4 +74,10 @@ module NavbarHelper
     end
   end
 
+  def render_more_options_link
+    content_tag :li do
+      link_to t("more_options"), params.merge(:controller=>"advanced", :action=>"index") , :class=>"advanced_search"
+    end
+  end
+
 end

@@ -4,6 +4,7 @@ gem 'rails', '~>4.0.0'
 
 gem 'blacklight'
 gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
+gem 'blacklight_advanced_search'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-guests'

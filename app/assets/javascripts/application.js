@@ -6,6 +6,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require blacklight/blacklight
+//= require 'blacklight_advanced_search'
 //
 // Vendor scripts
 //= require flowplayer/flowplayer-3.2.11.min

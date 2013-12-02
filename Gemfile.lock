@@ -49,6 +49,10 @@ GEM
       rails (>= 3.2.6, < 5)
       rsolr (~> 1.0.6)
       sass-rails
+    blacklight_advanced_search (2.1.1)
+      blacklight (~> 4.0)
+      parslet
+    blankslate (2.1.2.4)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.1.4)
@@ -153,6 +157,8 @@ GEM
       nokogiri (>= 1.4.2)
       solrizer (~> 3.1.0)
     orm_adapter (0.5.0)
+    parslet (1.5.0)
+      blankslate (~> 2.0)
     polyglot (0.3.3)
     pry (0.9.12.3)
       coderay (~> 1.0)
@@ -265,6 +271,7 @@ DEPENDENCIES
   binding_of_caller
   blacklight
   blacklight-sitemap!
+  blacklight_advanced_search
   bootstrap-sass
   capybara
   coffee-rails

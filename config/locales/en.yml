@@ -12,3 +12,7 @@ en:
   finding_aid: 'Findind Aid'
   bookmarks: 'Bookmarks <b class="caret"></b>'
   edit: 'Edit'
+  more_options: 'More Options'
+  advanced:
+    page_title: 'Advanced Search'
+    header: 'Advanced Search Options'
