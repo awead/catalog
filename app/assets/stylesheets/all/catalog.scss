@@ -4,6 +4,7 @@ $navbarHeight: 40px;
 $linkColor: #ac1313;
 $linkColorHover: #7d0e0e;
 $navbarInverseLinkBackgroundHover: #590000;
+$marc_item_separator: 1px solid #CCC !default;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -11,6 +12,10 @@ $navbarInverseLinkBackgroundHover: #590000;
 
 form {
   margin: 0px 0px 0px 0px;
+}
+
+.modal.fade.in {
+  top: 50%;
 }
 
 .pagination {
@@ -25,6 +30,9 @@ form {
   background-color: $grayLighter;
   border-color: $grayLight;
   color: $grayDark;
+}
+.modal {
+  margin-top: 0px;
 }
 
 #main {
@@ -153,4 +161,34 @@ form {
 
 #inventory_table {
   margin-bottom: 0px;
+}
+
+// Librarian View
+
+#marc_view
+{
+  padding:5px;
+  text-align:left;
+
+  .field
+  {
+    border-bottom: $marc_item_separator;
+    clear:both;
+  }
+
+  .ind1, .ind2
+  {
+    display:inline;
+    padding:0 5px;
+  }
+
+  .subfields
+  {
+    padding-left:5em;
+  }
+
+  .tag_ind
+  {
+    float:left;
+  }
 }
