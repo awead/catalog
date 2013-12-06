@@ -12,11 +12,22 @@ module Rockhall::SolrHelperExtension
     super
   end
 
-  def get_ead_components
+  def get_ead_component
+    if params[:id].match(/^ARC/) or params[:id].match(/^RG/) and params[:ref]
+      if is_hydra_ref?(params[:ref])
+        not_used, @component = get_solr_response_for_doc_id(params[:ref]) 
+        add_additional_fields_to_hydra_component
+      else
+        not_used, @component = get_solr_response_for_doc_id(params[:id]+params[:ref])
+      end
+    end
+    return @component
+  end
+
+  def get_children_for_component
     if params[:id].match(/^ARC/) or params[:id].match(/^RG/)
       if params[:ref]
-        not_used, @component = get_solr_response_for_doc_id(params[:id]+params[:ref])
-        @numfound, @components = ead_components_from_parent(params[:id], params[:ref])
+        @numfound, @components = ead_components_from_parent(params[:id], params[:ref]) unless is_hydra_ref?(params[:ref])
       else
         @numfound, @components = first_level_ead_components(params[:id])
       end
@@ -56,12 +67,20 @@ module Rockhall::SolrHelperExtension
     return [number_found_from_solr_response(solr_response), docs_from_solr_response(solr_response)]
   end
 
+  # Components imported from Hydra need to have aditional fields added to the their solr documents.
+  def add_additional_fields_to_hydra_component
+    if is_hydra_ref?(params[:ref])
+      result = Blacklight.solr.get "select", :params => additional_fields_query
+      @component.merge!(result["response"]["docs"].first) { |key, oldval, newval| (newval + oldval).uniq }
+    end
+  end
+
   private
 
   def first_level_solr_query id, opts={}, solr_params = Hash.new
     solr_params[:fl]    = "id"
     solr_params[:q]     = Solrizer.solr_name("component_level", :type => :integer)+':1 AND _query_:"'+Solrizer.solr_name("ead", :stored_sortable)+':'+id+'"'
-    solr_params[:sort]  = Solrizer.solr_name("sort", :sortable, :type => :integer)+" asc"
+    solr_params[:sort]  = component_sort_fields.join(", ")
     solr_params[:qt]    = "standard"
     solr_params[:rows]  = opts[:rows]  ? opts[:rows]  : Rails.configuration.rockhall_config[:max_components]
     solr_params[:start] = opts[:start] ? opts[:start] : 0
@@ -71,10 +90,24 @@ module Rockhall::SolrHelperExtension
   def additional_solr_query id, ref, opts={}, solr_params = Hash.new
     solr_params[:fl]    = "id"
     solr_params[:q]     = Solrizer.solr_name("parent", :stored_sortable)+":#{ref} AND "+Solrizer.solr_name("ead", :stored_sortable)+":#{id}"
-    solr_params[:sort]  = Solrizer.solr_name("sort", :sortable, :type => :integer)+" asc"
+    solr_params[:sort]  = component_sort_fields.join(", ")
     solr_params[:qt]    = "standard"
     solr_params[:rows]  = opts[:rows]  ? opts[:rows]  : Rails.configuration.rockhall_config[:max_components]
     solr_params[:start] = opts[:start] ? opts[:start] : 0
+    return solr_params
+  end
+
+  def component_sort_fields
+    [
+      Solrizer.solr_name("sort", :sortable, :type => :integer) + " asc", 
+      Solrizer.solr_name("title", :sortable) + " asc"
+    ]
+  end
+
+  def additional_fields_query solr_params = Hash.new
+    solr_params[:fl]    = [Solrizer.solr_name("parent_unittitles", :displayable), Solrizer.solr_name("parent", :displayable)]
+    solr_params[:q]     = 'id:"' + hydra_component_parent_id + '"'
+    solr_params[:qt]    = "document"
     return solr_params
   end
 
@@ -88,6 +121,14 @@ module Rockhall::SolrHelperExtension
 
   def number_found_from_solr_response solr_response
     solr_response["response"]["numFound"]
+  end
+
+  def is_hydra_ref? ref
+    ref.match(/^rrhof/) 
+  end
+
+  def hydra_component_parent_id
+    [@component.get(Solrizer.solr_name("ead", :stored_sortable)), @component.get(Solrizer.solr_name("parent", :stored_sortable))].join
   end
 
 end
