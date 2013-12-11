@@ -1,5 +1,5 @@
 #!/bin/bash
-bin/rake rockhall:solr:clean
-bin/rake solr:marc:index MARC_FILE=spec/fixtures/marc/rrhof.mrc
-bin/rake rockhall:ead:index EAD=spec/fixtures/ead
-bin/rake rockhall:pbcore:index PBCORE=spec/fixtures/pbcore
+bundle exec rake rockhall:solr:clean
+bundle exec rake solr:marc:index MARC_FILE=spec/fixtures/marc/rrhof.mrc
+bundle exec rake rockhall:ead:index EAD=spec/fixtures/ead
+bundle exec rake rockhall:pbcore:index PBCORE=spec/fixtures/pbcore
