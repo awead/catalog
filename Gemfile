@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '~>3.2.15'
 
-gem 'blacklight', '< 4.0.0'
+gem 'blacklight', '~> 3.8.2'
 gem 'sqlite3'
 gem 'sanitize'
 gem 'json'
@@ -12,7 +12,7 @@ gem 'devise-guests'
 gem 'blacklight_highlight'
 gem 'blacklight-sitemap', :path=> 'gems/blacklight-sitemap'
 gem 'ruby-ntlm'
-gem 'solr_ead'
+gem 'solr_ead', '=0.4.5'
 gem 'therubyracer'
 
 # jQuery 1.9 breaks checkbox_submit.js functions
