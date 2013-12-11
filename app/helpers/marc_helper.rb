@@ -1,7 +1,11 @@
 module MarcHelper
 
   def document_heading
-    @document[blacklight_config.show.heading] || @document.id
+    if @document[blacklight_config.show.heading] 
+      @document[blacklight_config.show.heading].kind_of?(Array) ? @document[blacklight_config.show.heading].first : @document[blacklight_config.show.heading]
+    else
+      @document.id
+    end
   end
 
   def render_external_link args, results = Array.new
