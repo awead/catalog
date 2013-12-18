@@ -23,6 +23,8 @@
   <%= render_document_show_field_value(@component, :field => Solrizer.solr_name("title", :displayable)) %>
 <% end %>
 
+<%= render_access_file %>
+
 <%= content_tag :dl, :class => "dl-horizontal" do %>
   <% document_show_fields(@component).each do |solr_fname, field| %>
     <% if should_render_show_field?(@component, field) && !ead_field_blacklisted?(solr_fname) %>

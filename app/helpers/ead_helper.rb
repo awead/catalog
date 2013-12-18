@@ -10,7 +10,13 @@ module EadHelper
   end
 
   def render_subjects_tab_pane
-    render "catalog/_show_partials/archival_collection_subjects"
+    render "catalog/_show_partials/_finding_aid_partials/archival_collection_subjects"
+  end
+
+  def render_access_file
+    if @component[Solrizer.solr_name("access_file", :displayable)]
+      render "catalog/_show_partials/_finding_aid_partials/digital_item_detail" 
+    end
   end
 
   def is_a_finding_aid?
@@ -22,12 +28,12 @@ module EadHelper
   end
 
   def component_has_children?
-    @component.get Solrizer.solr_name("component_children", :type => :boolean)
+    @components.length > 0 unless @components.nil?
   end
 
   def render_show_view_for_finding_aid
     if params[:ref]
-      render "catalog/_show_partials/component"
+      render "catalog/_show_partials/_finding_aid_partials/archival_item"
     else
       render "catalog/_show_partials/finding_aid"
     end
