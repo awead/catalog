@@ -17,4 +17,18 @@
     <% end %>
   <% end %>
 
+  <%= content_tag :div, :class => "tab-pane", :id => "collection_search" do %>
+    <%= content_tag :legend, "Search Collection" %>
+    <%= content_tag :p, "Search for individual items within this collection." %>
+
+    <%= form_tag search_action_url, :method => :get, :class => "form-search" do %>
+      <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page]).html_safe %> 
+      <%= hidden_field_tag "[f][#{Solrizer.solr_name("collection", :facetable)}][]", 
+            @document.get(Solrizer.solr_name("collection", :displayable)) %>
+      <%= content_tag :label, t("blacklight.search.form.q"), :for => "q", :class => "hidden" %>
+      <%= text_field_tag :q, params[:q], :class => "search-query", :id => "q", :autofocus => true %>
+      <%= button_tag "Search Collection", :class => "btn" %>
+    <% end %>
+  
+  <% end %>
 <% end %>

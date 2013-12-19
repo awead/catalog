@@ -26,6 +26,7 @@ class Rockhall::EadDocument < SolrEad::Document
     Solrizer.insert_field(solr_doc, "contributors", get_ead_names,          :displayable)
     Solrizer.insert_field(solr_doc, "name",         get_ead_names,          :facetable)
     Solrizer.insert_field(solr_doc, "title",        self.title_filing,      :sortable)
+    Solrizer.insert_field(solr_doc, "collection",   self.title,             :displayable)
 
     Solrizer.set_field(solr_doc, "language",        get_language_from_code(self.langcode.first),  :facetable )
     Solrizer.set_field(solr_doc, "language",        get_language_from_code(self.langcode.first),  :displayable )
@@ -36,6 +37,8 @@ class Rockhall::EadDocument < SolrEad::Document
 
     # Replace certain fields with their html-formatted equivilents
     Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
+
+
     
     return solr_doc
   end
