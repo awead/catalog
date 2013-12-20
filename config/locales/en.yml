@@ -16,3 +16,5 @@ en:
   advanced:
     page_title: 'Advanced Search'
     header: 'Advanced Search Options'
+  zero_results:
+    see_collection: 'View all items in this collection'
