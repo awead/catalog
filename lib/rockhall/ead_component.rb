@@ -24,8 +24,9 @@ class Rockhall::EadComponent < SolrEad::Component
     Solrizer.insert_field(solr_doc, "accession",  ead_accession_range(self.accession.first),    :searchable)
     Solrizer.insert_field(solr_doc, "title",      self.title,                                   :sortable) unless self.title.first.blank?
 
-    # Add fields using the current solr_doc
-    Solrizer.insert_field(solr_doc, "collection", solr_doc[Solrizer.solr_name("collection", :facetable)], :displayable)
+    # Collection field
+    Solrizer.insert_field(solr_doc, "collection", collection_name(solr_doc), :displayable)
+    Solrizer.set_field(solr_doc, "collection", collection_name(solr_doc), :facetable)
 
     # Replace certain fields with their html-formatted equivilents
     Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
@@ -65,6 +66,10 @@ class Rockhall::EadComponent < SolrEad::Component
     else
       self.term_to_html("title")
     end
+  end
+
+  def collection_name solr_doc
+    solr_doc[Solrizer.solr_name("collection", :facetable)].strip
   end
 
 end

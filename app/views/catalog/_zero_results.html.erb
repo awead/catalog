@@ -1,0 +1,10 @@
+<%= content_tag :h2, t("blacklight.search.zero_results.title") %>
+<%= content_tag :div, :id => "documents" do %>
+  <%= content_tag :h3, t("blacklight.search.zero_results.modify_search") %>
+  <%= content_tag :ul do %>
+    <%= content_tag :li, t("blacklight.search.zero_results.use_fewer_keywords") %>
+    <%= suggest_searching_everything %>
+    <%= see_everything_in_collection if params[:f] %>
+    <%= content_tag :li, link_to_function("Go back where you came from", "history.back()") %>
+  <% end %>
+<% end %>

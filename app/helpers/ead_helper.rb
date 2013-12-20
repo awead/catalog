@@ -111,4 +111,9 @@ module EadHelper
     @document.get Solrizer.solr_name("inventory", :type => :boolean)
   end
 
+  def collection_facet_link text, terms = params["f"][Solrizer.solr_name("collection", :facetable)]
+    terms_array = terms.is_a?(Array) ? terms : [terms]
+    link_to text, { "f" => { Solrizer.solr_name("collection", :facetable) => terms_array } }
+  end
+
 end

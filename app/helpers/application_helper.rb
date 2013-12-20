@@ -16,7 +16,7 @@ module ApplicationHelper
 
   def render_sort_dropdown_text
     content_tag :span, :class => "primary" do
-      [t('blacklight.search.sort.label', :field =>current_sort_field.label), content_tag(:b, nil, :class => "caret")].join(" ").html_safe
+      [t("blacklight.search.sort.label", :field =>current_sort_field.label), content_tag(:b, nil, :class => "caret")].join(" ").html_safe
     end
   end
 
@@ -54,6 +54,21 @@ module ApplicationHelper
 
   def field_diplay_class solr_fname
     "blacklight-"+solr_fname.parameterize
+  end
+
+  def suggest_searching_everything
+    if params[:q] and params[:search_field] and params[:search_field] != blacklight_config.default_search_field
+      content_tag :li do
+        t("blacklight.search.zero_results.search_fields", :search_fields => search_field_label(params))
+        link_to t("blacklight.search.zero_results.search_everything"), url_for(params_for_search(:search_field=>blacklight_config.default_search_field.key))
+      end
+    end
+  end
+
+  def see_everything_in_collection
+    if params["f"][Solrizer.solr_name("collection", :facetable)]
+      content_tag :li, collection_facet_link(t("zero_results.see_collection"))
+    end
   end
 
 end
