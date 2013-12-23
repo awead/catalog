@@ -1,6 +1,6 @@
-class Rockhall::EadComponent < SolrEad::Component
+class Rockhall::Ead::Component < SolrEad::Component
 
-  include Rockhall::EadBehaviors
+  include Rockhall::Ead::Behaviors
 
   use_terminology SolrEad::Component
 

@@ -1,7 +1,7 @@
 require "nokogiri"
 
 # These are class methods used when indexing ead xml into solr.
-module Rockhall::Indexing
+module Rockhall::Ead::Indexing
 
   # Converts an ead xml file into two html files.  One is for the the default display in
   # Blacklight, which is just the archdesc section of the ead.  The second html file is
@@ -52,7 +52,7 @@ module Rockhall::Indexing
   # Uses the CollectionTree to reassemble each component into its correct hierarchy.
   def self.toc_to_json(file)
     id = get_eadid_from_file(file)
-    inventory = Rockhall::CollectionInventory.new(id)
+    inventory = Rockhall::Ead::Inventory.new(id)
     #if inventory.depth > 1
       toc_dst = File.join(Rails.root, "public", "fa", (id + "_toc.json"))
       File.open(toc_dst, "w") { |f| f << inventory.tree.to_json }
@@ -62,7 +62,7 @@ module Rockhall::Indexing
   # Queries an xml file and returns the value for eadid
   def self.get_eadid_from_file(file)
     file = File.new(file) if file.is_a?(String)
-    id = Rockhall::EadDocument.from_xml(Nokogiri::XML(file)).eadid.first
+    id = Rockhall::Ead::Document.from_xml(Nokogiri::XML(file)).eadid.first
     raise "Found no eadid in #{File.basename(file)}" if id.nil?
     if valid_ead?(id)
       return id

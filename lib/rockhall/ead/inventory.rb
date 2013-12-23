@@ -1,8 +1,7 @@
-# Rockhall::CollectionTree returns a nested array that represents series and subseries
-# components.  The array conforms to the JSTree format.
+# Returns a nested array that represents series and subseries components.  The array conforms to the JSTree format.
 
-module Rockhall
-class CollectionInventory
+module Rockhall::Ead
+class Inventory
 
   attr_accessor :id, :tree, :depth
 

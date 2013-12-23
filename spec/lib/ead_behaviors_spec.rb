@@ -1,10 +1,10 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
-describe Rockhall::EadBehaviors do
+describe Rockhall::Ead::Behaviors do
 
   before(:all) do
     class TestClass
-      include Rockhall::EadBehaviors
+      include Rockhall::Ead::Behaviors
     end
     @test = TestClass.new
   end

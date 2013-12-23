@@ -1,5 +1,0 @@
-#!/bin/bash
-RAILS_ENV=test bundle exec rake rockhall:solr:clean
-RAILS_ENV=test bundle exec rake rockhall:marc:index MARC_FILE=spec/fixtures/marc/rrhof.mrc
-RAILS_ENV=test bundle exec rake rockhall:ead:index EAD=spec/fixtures/ead
-RAILS_ENV=test bundle exec rake rockhall:pbcore:index PBCORE=spec/fixtures/pbcore

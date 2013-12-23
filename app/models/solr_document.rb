@@ -2,7 +2,7 @@
 class SolrDocument 
 
   include Blacklight::Solr::Document
-  include Rockhall::SolrDocumentExtension
+  include Rockhall::Solr::DocumentExtension
 
 
   # self.unique_key = 'id'

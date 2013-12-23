@@ -8,14 +8,14 @@ namespace :ead do
   desc "Index ead into solr and create both html and json"
   task :index => :environment do
     ENV['EAD'] = "spec/fixtures/ead" unless ENV['EAD']
-    indexer = SolrEad::Indexer.new(:document=>Rockhall::EadDocument, :component=>Rockhall::EadComponent)
+    indexer = SolrEad::Indexer.new(:document=>Rockhall::Ead::Document, :component=>Rockhall::Ead::Component)
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
         print "Indexing #{File.basename(file)}: "
         begin
           indexer.update(file)
-          Rockhall::Indexing.ead_to_html(file)
-          Rockhall::Indexing.toc_to_json(File.new(file))
+          Rockhall::Ead::Indexing.ead_to_html(file)
+          Rockhall::Ead::Indexing.toc_to_json(File.new(file))
           FileUtils.cp(file, Rails.configuration.rockhall_config[:ead_path])
           print "done.\n"
         rescue
@@ -24,8 +24,8 @@ namespace :ead do
       end
     else
       indexer.update(ENV['EAD'])
-      Rockhall::Indexing.ead_to_html(ENV['EAD'])
-      Rockhall::Indexing.toc_to_json(File.new(ENV['EAD']))
+      Rockhall::Ead::Indexing.ead_to_html(ENV['EAD'])
+      Rockhall::Ead::Indexing.toc_to_json(File.new(ENV['EAD']))
       FileUtils.cp(ENV['EAD'], Rails.configuration.rockhall_config[:ead_path])
     end
   end
@@ -36,10 +36,10 @@ namespace :ead do
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
         puts "Converting #{File.basename(file)} to html"
-        Rockhall::Indexing.ead_to_html(file) if File.extname(file).match("xml$")
+        Rockhall::Ead::Indexing.ead_to_html(file) if File.extname(file).match("xml$")
       end
     else
-      Rockhall::Indexing.ead_to_html(ENV['EAD'])
+      Rockhall::Ead::Indexing.ead_to_html(ENV['EAD'])
     end
   end
 
@@ -49,10 +49,10 @@ namespace :ead do
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
         puts "Converting #{File.basename(file)} to json"
-        Rockhall::Indexing.toc_to_json(File.new(file))
+        Rockhall::Ead::Indexing.toc_to_json(File.new(file))
       end
     else
-      Rockhall::Indexing.toc_to_json(File.new(ENV['EAD']))
+      Rockhall::Ead::Indexing.toc_to_json(File.new(ENV['EAD']))
     end
   end
 
@@ -82,6 +82,34 @@ namespace :marc do
     ENV['CONFIG_PATH'] = locate_path("vendor", "SolrMarc", "config-#{::Rails.env}.properties")
     ENV['SOLRMARC_JAR_PATH'] = locate_path("vendor", "SolrMarc", "SolrMarc.jar")
     Rake::Task["solr:marc:index:info"].invoke
+  end
+
+  desc "delete a single marc record, given by ID=<id number>"
+  task :delete => :environment do
+    id = ENV['ID']
+    raise "Please give the id of the record to delete, like ID=123456789" unless id
+    result = Blacklight.solr.find( {:q => "id:#{id}", :qt => "document", :fl => "id", :rows => "1" } )
+    result["response"]["docs"].each do |doc|
+      doc_id = doc["id"]
+      puts "Deleting #{doc_id}"
+      Blacklight.solr.delete_by_id(doc_id)
+    end
+    puts "Commiting results"
+    Blacklight.solr.commit
+  end
+
+  desc "delete all marc records"
+  task :delete_all => :environment do
+    ["Book","Score","Website","Periodical","Video","Audio","unknown","Image","Map","Theses/Dissertations","CD/DVD-ROM"].each do |format|
+      result = Blacklight.solr.find( :q => "{!raw f=format rows=1000000}#{format}" )
+      result["response"]["docs"].each do |doc|
+        doc_id = doc["id"]
+        puts "Deleting #{format}: #{doc_id}"
+        Blacklight.solr.delete_by_id(doc_id)
+      end
+    end
+    puts "Commiting results"
+    Blacklight.solr.commit
   end
 
 end

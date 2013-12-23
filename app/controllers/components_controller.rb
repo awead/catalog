@@ -1,7 +1,6 @@
 class ComponentsController < ApplicationController
 
-  include Blacklight::Catalog
-  include Rockhall::SolrHelperExtension
+  include Rockhall::Catalog
   
   def index
     @numfound, @components = get_componets_for_index_view

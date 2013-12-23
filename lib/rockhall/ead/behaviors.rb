@@ -1,10 +1,10 @@
 # Ead Behaviors
 #
-# A collection of instance methods used by our custom EadComponent and EadDocument
+# A collection of instance methods used by our custom Component and Document
 # modules.  They're helpful for doing fancy things with the data when it gets
 # indexed into solr.
 
-module Rockhall::EadBehaviors
+module Rockhall::Ead::Behaviors
 
   # Returns an array of individual accession numbers for indexing the solr.
   #

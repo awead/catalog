@@ -3,15 +3,13 @@ require 'blacklight/catalog'
 
 class CatalogController < ApplicationController
 
-  include Blacklight::Catalog
-  include Rockhall::ControllerBehaviors
-  include Rockhall::SolrHelperExtension
+  include Rockhall::Catalog
 
   SolrDocument.use_extension ::Rockhall::Exports
 
   rescue_from Exception, :with => :render_error unless Rails.env.match("development")
 
-  before_filter :get_ead_component, :get_children_for_component, :show_item_within_collection, :only => :show
+  before_filter :get_component, :get_component_children, :show_item_within_collection, :only => :show
   before_filter :redirect_to_front_page, :only => :index
 
   configure_blacklight do |config|

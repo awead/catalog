@@ -1,4 +1,4 @@
-module Rockhall::SolrDocumentExtension
+module Rockhall::Solr::DocumentExtension
 
   include Blacklight::Solr::Document::MarcExport
 

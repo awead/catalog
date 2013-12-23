@@ -1,10 +1,9 @@
 require "spec_helper"
 
-
-describe Rockhall::CollectionInventory do
+describe Rockhall::Ead::Inventory do
 
   before :each do
-    @inventory = Rockhall::CollectionInventory.new("ARC-0005")
+    @inventory = Rockhall::Ead::Inventory.new("ARC-0005")
   end
 
   describe "::initialize" do
@@ -12,6 +11,5 @@ describe Rockhall::CollectionInventory do
       @inventory.id.should == "ARC-0005"
     end
   end
-
 
 end
