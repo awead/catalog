@@ -34,11 +34,11 @@ module SchemaHelper
   end
 
   def tag_value_with_property v, p, opts={}
-    content_tag :span, v, :itemprop => p, :class => opts[:class]
+    content_tag :span, v.html_safe, :itemprop => p, :class => opts[:class]
   end
 
   def tag_value_is_part_of v, opts={}
-    content_tag :span, v, :itemprop => "isPartOf", :itemscope => true, :itemtype => "http://schema.org/CollectionPage"
+    content_tag :span, v.html_safe, :itemprop => "isPartOf", :itemscope => true, :itemtype => "http://schema.org/CollectionPage"
   end
 
 end
