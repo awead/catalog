@@ -79,7 +79,7 @@ module Rockhall::Ead::Behaviors
     IO.foreach(file) do |line|
       properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)\/\/(.*)/ || line =~ /([^=]*)=(.*)/
     end
-    properties[code].nil? ? "None" : properties[code].strip
+    properties[code].nil? ? nil : properties[code].strip
   end
 
   # Split-up subject terms like we do for our marc records
@@ -94,6 +94,16 @@ module Rockhall::Ead::Behaviors
   # Combine corporate and personal names into one group
   def get_ead_names
     (self.corpname + self.persname).flatten.compact.uniq.sort
+  end
+
+  # Returns a hash of lanuage fields for an EAD document or component
+  def ead_language_fields fields = Hash.new
+    language = get_language_from_code(self.langcode.first)
+    unless langcode.nil?
+      Solrizer.set_field(fields, "language", language, :facetable)
+      Solrizer.set_field(fields, "language", language, :displayable)
+    end
+    return fields
   end
 
 end

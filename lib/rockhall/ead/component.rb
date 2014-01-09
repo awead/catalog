@@ -17,12 +17,12 @@ class Rockhall::Ead::Component < SolrEad::Component
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
     solr_doc.merge!({"text" => self.ng_xml.text})
-    Solrizer.insert_field(solr_doc, "format",     "Archival Item",                              :facetable)
-    Solrizer.insert_field(solr_doc, "format",     "Archival Item",                              :displayable)
-    Solrizer.insert_field(solr_doc, "heading",    heading_display(solr_doc),                    :displayable)
-    Solrizer.insert_field(solr_doc, "location",   location_display,                             :displayable)
-    Solrizer.insert_field(solr_doc, "accession",  ead_accession_range(self.accession.first),    :searchable)
-    Solrizer.insert_field(solr_doc, "title",      self.title,                                   :sortable) unless self.title.first.blank?
+    Solrizer.insert_field(solr_doc, "format",     "Archival Item",                            :facetable)
+    Solrizer.insert_field(solr_doc, "format",     "Archival Item",                            :displayable)
+    Solrizer.insert_field(solr_doc, "heading",    heading_display(solr_doc),                  :displayable)
+    Solrizer.insert_field(solr_doc, "location",   location_display,                           :displayable)
+    Solrizer.insert_field(solr_doc, "accession",  ead_accession_range(self.accession.first),  :searchable)
+    Solrizer.insert_field(solr_doc, "title",      self.title,                                 :sortable) unless self.title.first.blank?
 
     # Collection field
     Solrizer.insert_field(solr_doc, "collection", collection_name(solr_doc), :displayable)
@@ -30,8 +30,10 @@ class Rockhall::Ead::Component < SolrEad::Component
 
     # Replace certain fields with their html-formatted equivilents
     Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
-    Solrizer.set_field(solr_doc, "language",   get_language_from_code(self.langcode.first),  :facetable)
-    Solrizer.set_field(solr_doc, "language",   get_language_from_code(self.langcode.first),  :displayable)
+
+    # Set lanuage codes
+    solr_doc.merge!(ead_language_fields)
+
   end
 
   protected
