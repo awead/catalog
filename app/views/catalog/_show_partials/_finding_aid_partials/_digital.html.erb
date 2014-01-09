@@ -1,7 +1,7 @@
 <%= content_tag :div, :class => "row-fluid" do %>
 
   <%= content_tag :div, :class => "span6" do %>
-    <%= render "catalog/_show_partials/_finding_aid_partials/physical" %>
+    <%= render :partial => "catalog/_show_partials/_finding_aid_partials/physical", :locals => {:component => @component} %>
   <% end %>
 
   <%= content_tag :div, :class => "span6" do %>

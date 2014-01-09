@@ -26,13 +26,12 @@ class Rockhall::Ead::Document < SolrEad::Document
     Solrizer.insert_field(solr_doc, "contributors", get_ead_names,          :displayable)
     Solrizer.insert_field(solr_doc, "name",         get_ead_names,          :facetable)
     Solrizer.insert_field(solr_doc, "title",        self.title_filing,      :sortable)
-    Solrizer.insert_field(solr_doc, "collection",   self.collection.first.strip, :displayable)
-
+    
     Solrizer.set_field(solr_doc, "genre",           self.genreform,              :facetable)
     Solrizer.set_field(solr_doc, "genre",           self.genreform,              :displayable)
     Solrizer.set_field(solr_doc, "subject",         get_ead_subject_facets,      :facetable)
-    Solrizer.set_field(solr_doc, "subject",         self.subject,                :displayable)
     Solrizer.set_field(solr_doc, "collection",      self.collection.first.strip, :facetable)
+    Solrizer.set_field(solr_doc, "collection",      self.collection.first.strip, :displayable)
 
     # Replace certain fields with their html-formatted equivilents
     Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)

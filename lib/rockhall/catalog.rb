@@ -18,21 +18,24 @@ module Rockhall::Catalog
   end
 
   def get_component
-    if params[:id].match(/^ARC/) or params[:id].match(/^RG/) and params[:ref]
-      if is_hydra_ref?(params[:ref])
-        not_used, @component = get_solr_response_for_doc_id(params[:ref]) 
-        add_additional_fields_to_hydra_component
-      else
-        not_used, @component = get_solr_response_for_doc_id(params[:id]+params[:ref])
-      end
+    if is_collection? and is_component?
+      solr_response, document = get_solr_response_for_component_id
+      @component = Rockhall::Solr::Component.new(document, solr_response)
     end
-    return @component
+  end
+
+  def get_solr_response_for_component_id
+    if from_hydra?
+      get_solr_response_for_doc_id(params[:ref])
+    else
+      get_solr_response_for_doc_id(params[:id]+params[:ref])
+    end
   end
 
   def get_component_children
-    if params[:id].match(/^ARC/) or params[:id].match(/^RG/)
-      if params[:ref]
-        @numfound, @components = ead_components_from_parent(params[:id], params[:ref]) unless is_hydra_ref?(params[:ref])
+    if is_collection?
+      if is_component?
+        @numfound, @components = ead_components_from_parent(params[:id], params[:ref]) unless from_hydra?
       else
         @numfound, @components = first_level_ead_components(params[:id])
       end
@@ -51,8 +54,16 @@ module Rockhall::Catalog
     end
   end
 
-  def is_hydra_ref? ref
-    ref.match(/^rrhof/) 
+  def from_hydra?
+    params["ref"].match(/^rrhof/) 
+  end
+
+  def is_collection?
+    params[:id].match(/^ARC/) or params[:id].match(/^RG/) ? true : false
+  end
+
+  def is_component?
+    params[:ref] ? true : false
   end
 
 end

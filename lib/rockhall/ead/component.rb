@@ -22,10 +22,9 @@ class Rockhall::Ead::Component < SolrEad::Component
     Solrizer.insert_field(solr_doc, "heading",    heading_display(solr_doc),                  :displayable)
     Solrizer.insert_field(solr_doc, "location",   location_display,                           :displayable)
     Solrizer.insert_field(solr_doc, "accession",  ead_accession_range(self.accession.first),  :searchable)
-    Solrizer.insert_field(solr_doc, "title",      self.title,                                 :sortable) unless self.title.first.blank?
 
     # Collection field
-    Solrizer.insert_field(solr_doc, "collection", collection_name(solr_doc), :displayable)
+    Solrizer.set_field(solr_doc, "collection", collection_name(solr_doc), :displayable)
     Solrizer.set_field(solr_doc, "collection", collection_name(solr_doc), :facetable)
 
     # Replace certain fields with their html-formatted equivilents
@@ -48,7 +47,6 @@ class Rockhall::Ead::Component < SolrEad::Component
         sub_containers << sub.attribute("type").text + ": " + sub.text
       end
       line << (", " + sub_containers.join(", ") ) unless sub_containers.empty?
-      line << " (" + self.find_by_xpath("//container[@id = '#{id}']/@label").text + ")"
       locations << line
     end
     return locations

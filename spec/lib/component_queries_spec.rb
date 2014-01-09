@@ -69,14 +69,4 @@ describe Rockhall::Solr::ComponentQueries do
     end
   end
 
-  describe ".add_additional_fields_to_hydra_component" do
-    it "should merge fields into the component solr document" do
-      @test.stub(:params).and_return({:id => "RG-0010", :ref => "rrhof:2207"}.with_indifferent_access)
-      @test.get_component
-      @test.add_additional_fields_to_hydra_component
-      @test.instance_values["component"][(Solrizer.solr_name("parent_unittitles", :displayable))].should == ["Subgroup 1: Annual Induction Ceremonies", "Series II: Digital Video"]
-      @test.instance_values["component"][(Solrizer.solr_name("parent", :displayable))].should == ["ref1", "ref42"]
-    end
-  end
-
 end

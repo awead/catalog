@@ -5,6 +5,15 @@ GIT
     blacklight-sitemap (2.0.0)
       nokogiri
 
+PATH
+  remote: /Users/adamw/Projects/Github/awead/solr_ead
+  specs:
+    solr_ead (0.7.0)
+      om (~> 3.0.0)
+      rsolr
+      sanitize
+      solrizer (~> 3.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -214,11 +223,6 @@ GEM
       rubyzip (~> 1.0.0)
       websocket (~> 1.0.4)
     slop (3.4.7)
-    solr_ead (0.7.0)
-      om (~> 3.0.0)
-      rsolr
-      sanitize
-      solrizer (~> 3.1.0)
     solrizer (3.1.1)
       activesupport
       daemons
@@ -298,7 +302,7 @@ DEPENDENCIES
   sanitize
   sass-rails
   selenium-webdriver
-  solr_ead
+  solr_ead!
   sqlite3
   therubyracer
   uglifier

@@ -113,6 +113,10 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name("location",          :displayable),  :label => "Location:",
                                                                           :highlight => true
 
+    config.add_index_field solr_name("material",          :displayable),  :label => "Archival Material:",
+                                                                          :helper_method => :render_facet_link,
+                                                                          :highlight => true                                                                      
+
     # ------------------------------------------------------------------------------------------
     #
     # Show view fields (individual record)
@@ -226,8 +230,14 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("accession",         :displayable), :label => "Accession Numbers:"
     config.add_show_field solr_name("print_run",         :displayable), :label => "Limited Print Run:"
     config.add_show_field solr_name("dimensions",        :displayable), :label => "Dimensions:"
-    config.add_show_field solr_name("location",          :displayable), :label => "Location:",
+
+    config.add_show_field solr_name("location",          :displayable), :label     => "Location:",
                                                                         :highlight => true
+
+    config.add_show_field solr_name("material",          :displayable), :label          => "Archival Material:",
+                                                                        :helper_method  => :render_facet_link,
+                                                                        :facet          => solr_name("material", :facetable),
+                                                                        :highlight      => true
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

@@ -34,12 +34,6 @@ module Rockhall::Solr::ComponentQueries
     return [number_found_from_solr_response(solr_response), docs_from_solr_response(solr_response)]
   end
 
-  # Components imported from Hydra need to have aditional fields added to the their solr documents.
-  def add_additional_fields_to_hydra_component
-    result = Blacklight.solr.get "select", :params => additional_fields_query
-    @component.merge!(result["response"]["docs"].first) { |key, oldval, newval| (newval + oldval).uniq }
-  end
-
   private
 
   def first_level_solr_query id, opts={}
@@ -52,13 +46,6 @@ module Rockhall::Solr::ComponentQueries
     Rockhall::Solr::Query.new(q,opts).instance_values
   end
 
-  def additional_fields_query
-    query = Rockhall::Solr::Query.new 'id:"' + hydra_component_parent_id + '"'
-    query.fl = [Solrizer.solr_name("parent_unittitles", :displayable), Solrizer.solr_name("parent", :displayable)]
-    query.qt = "document"
-    return query.instance_values
-  end
-
   def docs_from_solr_response solr_response, docs = Array.new
     solr_response["response"]["docs"].collect {|r| r["id"]}.each do |id|
       r, d = get_solr_response_for_doc_id(id)
@@ -69,10 +56,6 @@ module Rockhall::Solr::ComponentQueries
 
   def number_found_from_solr_response solr_response
     solr_response["response"]["numFound"]
-  end
-
-  def hydra_component_parent_id
-    [@component.get(Solrizer.solr_name("ead", :stored_sortable)), @component.get(Solrizer.solr_name("parent", :stored_sortable))].join
   end
 
 end

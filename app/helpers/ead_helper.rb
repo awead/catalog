@@ -17,7 +17,19 @@ module EadHelper
     if @component[Solrizer.solr_name("access_file", :displayable)]
       render "catalog/_show_partials/_finding_aid_partials/digital" 
     else
-      render "catalog/_show_partials/_finding_aid_partials/physical" 
+      render :partial => "catalog/_show_partials/_finding_aid_partials/physical", :locals => {:component => @component}  
+    end
+  end
+
+  def render_parent_component_detail
+    unless @component.parents.nil?
+      render :partial => "catalog/_show_partials/_finding_aid_partials/physical", :locals => {:component => @component.parents.last } 
+    end
+  end
+
+  def render_parent_component_title
+    unless @component.parents.nil?
+      content_tag :h4, render_component_title(@component.parents.last)
     end
   end
 
@@ -76,11 +88,18 @@ module EadHelper
   end
 
   def render_component_location component
-    render_document_show_field_value(component, :field => Solrizer.solr_name("location", :displayable))
+    unless component[Solrizer.solr_name("location", :displayable)].nil?
+      render :partial => "components/location", :locals => { :component => component }
+    end
   end
 
   def ead_field_blacklisted? field
-    [Solrizer.solr_name("title", :displayable), Solrizer.solr_name("format", :displayable), Solrizer.solr_name("collection", :displayable)].include? field
+    [
+      Solrizer.solr_name("title", :displayable), 
+      Solrizer.solr_name("format", :displayable), 
+      Solrizer.solr_name("collection", :displayable),
+      Solrizer.solr_name("unitdate", :displayable)
+    ].include? field
   end
 
   def render_show_more_components_button
@@ -116,6 +135,13 @@ module EadHelper
   def collection_facet_link text, terms = params["f"][Solrizer.solr_name("collection", :facetable)]
     terms_array = terms.is_a?(Array) ? terms : [terms]
     link_to text, { "f" => { Solrizer.solr_name("collection", :facetable) => terms_array } }
+  end
+
+  def material_facet_link component
+    value = component.get Solrizer.solr_name("material", :displayable)
+    unless value.nil?
+      link_to value, { "f" => { Solrizer.solr_name("material", :facetable) => value } }
+    end
   end
 
 end

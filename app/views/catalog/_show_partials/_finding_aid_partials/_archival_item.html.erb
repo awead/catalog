@@ -16,11 +16,15 @@
   <% end %>
 
   <!-- the current component title -->
-  <%= content_tag :li, render_component_title, :class => "active" %>
+  <%= content_tag :li, @component.get(Solrizer.solr_name("title", :displayable)), :class => "active" %>
 <% end %>
 
+<%= render_parent_component_title %>
+
+<%= render_parent_component_detail %>
+
 <%= content_tag :h4 do %>
-  <%= render_document_show_field_value(@component, :field => Solrizer.solr_name("title", :displayable)) %>
+  <%= render_component_title %>
 <% end %>
 
 <%= render_archival_item_detail %>
