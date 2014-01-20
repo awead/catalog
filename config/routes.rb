@@ -1,7 +1,7 @@
 Catalog::Application.routes.draw do
   Blacklight.add_routes(self)
 
-  root :to => "front_page#index"
+  root :to => "catalog#index"
 
   devise_for :users
 

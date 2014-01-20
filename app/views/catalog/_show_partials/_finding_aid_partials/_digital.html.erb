@@ -1,0 +1,15 @@
+<%= content_tag :div, :class => "row-fluid" do %>
+
+  <%= content_tag :div, :class => "span6" do %>
+    <%= render "catalog/_show_partials/_finding_aid_partials/physical" %>
+  <% end %>
+
+  <%= content_tag :div, :class => "span6" do %>
+    <%= content_tag :div, :class => "row-fluid" do %>
+      <%= content_tag :div, :class => "well well-inverse text-center" do %>
+        <%= image_tag "video-splash.png" %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+<% end %>

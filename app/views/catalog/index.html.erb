@@ -6,22 +6,32 @@
 <% end %>
 
 <%= content_tag :div, :class => "span9" do %>
-  <%= content_tag :h2, t("blacklight.search.search_results_header"), :class => "hidden top-content-title" %>
 
-  <%= content_tag :div, :class => "row-fluid" do %>
-    <%= render "did_you_mean" %>
-    <%= render "constraints" %>
-  <% end %>
-  <%= content_tag :div, :class => "row-fluid" do %> 
-    <%= render "sort_and_per_page" %>
-  <% end %>
-  <%= content_tag :div, :class => "row-fluid" do %>
-    <%= render "results_pagination" %>
+  <% unless has_search_parameters? %>
+    
+    <%= render "home" %>
+  
+  <% else %>
+
+    <%= content_tag :h2, t("blacklight.search.search_results_header"), :class => "hidden top-content-title" %>
+
+    <%= content_tag :div, :class => "row-fluid" do %>
+      <%= render "did_you_mean" %>
+      <%= render "constraints" %>
+    <% end %>
+    <%= content_tag :div, :class => "row-fluid" do %> 
+      <%= render "sort_and_per_page" %>
+    <% end %>
+    <%= content_tag :div, :class => "row-fluid" do %>
+      <%= render "results_pagination" %>
+    <% end %>
+
+    <%= content_tag :h2, t("blacklight.search.search_results"), :class => "hidden" %>
+    <%= render_index_response %>
+    <%= content_tag :div, :class => "row-fluid" do %>
+      <%= render "results_pagination" %>
+    <% end %>
+
   <% end %>
 
-  <%= content_tag :h2, t("blacklight.search.search_results"), :class => "hidden" %>
-  <%= render_index_response %>
-  <%= content_tag :div, :class => "row-fluid" do %>
-    <%= render "results_pagination" %>
-  <% end %>
 <% end %>

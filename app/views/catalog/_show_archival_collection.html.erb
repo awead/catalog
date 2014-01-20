@@ -1,6 +1,6 @@
 <%= content_tag :div, :class => "row-fluid" do %>
 
-  <%= content_tag :div, :class => "span3" do %>
+  <%= content_tag :div, :class => "span2" do %>
     <%= content_tag :ul, :class => "nav nav-tabs nav-stacked" do %>
       <%= render_nav_link "summary", {:class => "active"} %>
       <%= render_nav_link "description" %>
@@ -11,7 +11,7 @@
     <% end %>
   <% end %>
     
-  <%= content_tag :div, :class => "span9" do %>
+  <%= content_tag :div, :class => "span10" do %>
     
     <%= render_show_view_for_finding_aid %>
     
