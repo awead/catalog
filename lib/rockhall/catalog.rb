@@ -12,12 +12,6 @@ module Rockhall::Catalog
     end
   end
 
-  def redirect_to_front_page
-    unless valid_parameters? or valid_controller?
-      redirect_to root_path
-    end
-  end
-
   def show_item_within_collection
     ead, id = get_collection_from_item
     redirect_to catalog_path([ead, id]) unless ead.nil?
@@ -46,14 +40,6 @@ module Rockhall::Catalog
   end
 
   private
-
-  def valid_parameters?
-    !params[:q].blank? or !params[:f].blank? or !params[:search_field].blank?
-  end
-
-  def valid_controller?
-    self.kind_of?(BookmarksController) or self.kind_of?(AdvancedController)
-  end
 
   def get_collection_from_item
     if params[:id].match("ref")

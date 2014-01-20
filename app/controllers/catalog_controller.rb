@@ -10,7 +10,6 @@ class CatalogController < ApplicationController
   rescue_from Exception, :with => :render_error unless Rails.env.match("development")
 
   before_filter :get_component, :get_component_children, :show_item_within_collection, :only => :show
-  before_filter :redirect_to_front_page, :only => :index
 
   configure_blacklight do |config|
     config.default_solr_params = {
