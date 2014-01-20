@@ -13,9 +13,11 @@ module EadHelper
     render "catalog/_show_partials/_finding_aid_partials/archival_collection_subjects"
   end
 
-  def render_access_file
+  def render_archival_item_detail
     if @component[Solrizer.solr_name("access_file", :displayable)]
-      render "catalog/_show_partials/_finding_aid_partials/digital_item_detail" 
+      render "catalog/_show_partials/_finding_aid_partials/digital" 
+    else
+      render "catalog/_show_partials/_finding_aid_partials/physical" 
     end
   end
 
