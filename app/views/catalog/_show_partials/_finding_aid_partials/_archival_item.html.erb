@@ -28,8 +28,8 @@
 <%= content_tag :dl, :class => "dl-horizontal" do %>
   <% document_show_fields(@component).each do |solr_fname, field| %>
     <% if should_render_show_field?(@component, field) && !ead_field_blacklisted?(solr_fname) %>
-      <%= content_tag :dt, render_document_show_field_label(@component, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
-      <%= content_tag :dd, render_document_show_field_value(@component, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
+      <%= content_tag :dt, render_document_show_field_label(:document => @component, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
+      <%= content_tag :dd, render_document_show_field_value(:document => @component, :field => solr_fname), :class => field_diplay_class(solr_fname) %>
     <% end %>
   <% end %>
 <% end %>

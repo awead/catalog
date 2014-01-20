@@ -8,9 +8,9 @@ module SubjectsHelper
       format_subjects(args[:document]["marc_ss"]).each do |line|
         results << subject_array_to_links(line)
       end
-    elsif @document[Solrizer.solr_name("subject", :displayable)]
+    elsif args[:document][Solrizer.solr_name("subject", :displayable)]
       # We use the same method for ead for any document that has subjects listed as Term1--term2--term3
-      format_ead_subjects(@document[Solrizer.solr_name("subject", :displayable)]).each do |line|
+      format_ead_subjects(args[:document][Solrizer.solr_name("subject", :displayable)]).each do |line|
         results << subject_array_to_links(line)
       end
     end
