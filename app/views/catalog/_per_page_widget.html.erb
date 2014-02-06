@@ -1,6 +1,0 @@
-<% if show_sort_and_per_page? and !blacklight_config.per_page.blank? %>
-  <%= content_tag :div, :class => "dropdown inline" do %>
-    <%= link_to render_per_page_dropdown_text, "#", :class => "dropdown-toggle", :role => "button", :data => { :toggle => "dropdown" } %>
-    <%= content_tag :ul, render_per_page_options, :class => "dropdown-menu text-left" %>
-  <% end %>
-<% end %>

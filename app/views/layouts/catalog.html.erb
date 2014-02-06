@@ -19,29 +19,35 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <%= raw(render_head_content) %> 
+    <%= content_for(:head) %> 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
   </head>
-  <body itemscope itemtype="http://schema.org/WebPage">
-    <%= render :partial => 'shared/header_navbar' %>
-    
-    <div id="ajax-modal" class="modal hide fade" tabindex="-1"></div>
-    
-    <div id="main-container" class="container-fluid">
-      <div id="search-found" class="row-fluid hidden-phone"><%= topbar_items.join('').html_safe %></div>
-      <div id="main-flashes" class="row-fluid">
-        <%= render :partial=>'/flash_msg' %> 
-      </div>
-      <div id="content" class="row-fluid">         
-        <%= yield %>
+  <body>
+  
+    <%= render_header %>
+
+    <div id="ajax-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal menu" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content"></div>
       </div>
     </div>
 
-    <%= render :partial => 'shared/footer' %>
+    <div class="container" id="main">
+      <div class="row">
+        <%= yield %>
+      </div>
+      <!-- footer row -->
+      <div class="row">
+        <div class="well text-center" id="footer">
+          Rock and Roll Hall of Fame and Museum | Library and Archives | 2809 Woodland Ave. | Cleveland, OH 44115 | 216.515.1960 | library@rockhall.org
+        <div>
+      </div>
+    </div>
+
   </body>
 </html>
