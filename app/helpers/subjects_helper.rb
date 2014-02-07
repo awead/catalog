@@ -27,6 +27,8 @@ module SubjectsHelper
     return results.join(field_value_separator).html_safe
   end
 
+  private
+
   # Creates the multipl links within a single heading
   def subject_array_to_links array, results = Array.new
     links = format_subject_links(array)
@@ -143,6 +145,5 @@ module SubjectsHelper
     end
     return results
   end  
-
 
 end
