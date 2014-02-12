@@ -30,5 +30,4 @@ describe VideoPlayerHelper do
 
   end
 
-
 end

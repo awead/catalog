@@ -26,6 +26,8 @@ group :development, :test do
   gem 'coffee-rails'
   gem 'database_cleaner'
   gem 'debugger'
+  #gem 'guard'
+  gem 'guard-rspec', :require => false
   gem 'jettywrapper'
   gem 'pry'
   gem 'rspec-rails'

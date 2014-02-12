@@ -37,10 +37,6 @@ module EadHelper
     ["Archival Collection", "Archival Item"].include? @document[Solrizer.solr_name("format", :displayable)].first
   end
 
-  def has_json?
-    File.exists?(File.join(Rails.root, "public", "fa", (@document["ead_id"] + "_toc.json"))) unless @document["ead_id"].nil?
-  end
-
   def component_has_children?
     @components.length > 0 unless @components.nil?
   end
@@ -124,6 +120,7 @@ module EadHelper
     catalog_path([ead, ref])
   end
 
+  # Remove in Bootstrap 3
   def breadcrumb_divider
     "/"
   end

@@ -33,12 +33,14 @@ module BlacklightHelper
   # Override to call first because our heading field is mutlivalued
   def document_heading document=nil
     document ||= @document
-    document[blacklight_config.show.heading].first.html_safe || document.id
+    document[blacklight_config.show.heading].nil? ? document.id : document[blacklight_config.show.heading].first.html_safe
   end
 
   # Override to:
   #  * pass field_config on to our helper methods
   #  * add additional logic to determine field highlighting
+  #
+  # TODO: Currently not tested; needs refactoring.
   def get_field_values document, field, field_config, options = {}
     case
       when (field_config and field_config.helper_method)

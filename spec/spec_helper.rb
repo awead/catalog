@@ -41,3 +41,22 @@ end
 def webmock_fixture file
   File.new(File.join(File.dirname(__FILE__), 'fixtures', 'webmock', file))
 end
+
+def field_title_selector field
+  "dt.blacklight-" + Solrizer.solr_name(field, :displayable)
+end
+
+def field_content_selector field
+  "dd.blacklight-" + Solrizer.solr_name(field, :displayable)
+end
+
+def facet_selector field
+  "div.blacklight-" + Solrizer.solr_name(field, :facetable)
+end
+
+  def execute_search terms, search_field=nil
+    visit root_path
+    fill_in "q", :with => terms
+    select(search_field, :from => "search_field") unless search_field.nil?
+    find_button("search").click
+  end
