@@ -53,3 +53,10 @@ end
 def facet_selector field
   "div.blacklight-" + Solrizer.solr_name(field, :facetable)
 end
+
+  def execute_search terms, search_field=nil
+    visit root_path
+    fill_in "q", :with => terms
+    select(search_field, :from => "search_field") unless search_field.nil?
+    find_button("search").click
+  end

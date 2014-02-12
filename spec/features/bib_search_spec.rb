@@ -2,13 +2,6 @@ require 'spec_helper'
 
 describe "Bib. searching" do
 
-  def execute_search terms, search_field=nil
-    visit root_path
-    fill_in "q", :with => terms
-    select(search_field, :from => "search_field") unless search_field.nil?
-    find_button("search").click
-  end
-
   it "should search rhlocal (BL-40)" do
     execute_search "rhlocal"
     page.should have_content("Lifting latches / John C. Winn")
