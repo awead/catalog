@@ -93,4 +93,11 @@ describe "Bib. facets" do
     page.should_not have_content("The Pink Floyd encyclopedia / written & compiled by Vernon Fitch")
   end
 
+  it "should link series headings (BL-100)" do
+    pending "Link to facet is adding and extra ampersand"
+    visit catalog_path("34407310")
+    click_link "Atlantic & Atco remasters series"
+    page.should have_content("I never loved a man the way I love you [sound recording] / Aretha Franklin")
+  end
+
 end
