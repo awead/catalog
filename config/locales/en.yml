@@ -4,9 +4,9 @@ en:
   start_over: 'Start Over'
   account: 'Account <b class="caret"></b>'
   user_registration: 'Account settings'
-  print: '<i class="icon-print"></i> Print'
-  export: '<i class="icon-share"></i> Export <b class="caret"></b>'
-  view: '<i class="icon-eye-open"></i> View <b class="caret"></b>'
+  print: '<span class="glyphicon glyphicon-print"></span> Print'
+  export: '<span class="glyphicon glyphicon-export"></span> Export <b class="caret"></b>'
+  view: '<span class="glyphicon glyphicon-eye-open"></span> View <b class="caret"></b>'
   check_nearby: 'Check nearby libraries'
   archivist_view: 'Archivist View'
   finding_aid: 'Findind Aid'
@@ -18,3 +18,4 @@ en:
     header: 'Advanced Search Options'
   zero_results:
     see_collection: 'View all items in this collection'
+  email: '<span class="glyphicon glyphicon-envelope"></span> Email'

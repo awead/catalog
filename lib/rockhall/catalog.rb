@@ -2,6 +2,7 @@ module Rockhall::Catalog
   extend ActiveSupport::Concern
 
   include Blacklight::Catalog
+  include Blacklight::Marc::Catalog
   include Rockhall::SolrHelper
   include Rockhall::Solr::ComponentQueries
 

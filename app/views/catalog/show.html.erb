@@ -1,9 +1,8 @@
 <% @page_title = t('blacklight.search.show.title', :document_title => document_show_html_title, :application_name => application_name) %>
-<% extra_head_content << render_link_rel_alternates %>
 
 <%= render "shared/record_controls" %>
 
-<%= content_tag :div, :id => document_dom_id, :class => "container-fluid", :itemscope => true, :itemtype => schema_itemtype do %>
+<%= content_tag :div, :id => document_dom_id, :class => "container-fluid", :itemscope => true, :itemtype => @document.itemtype do %>
   
   <%= render_property_url %>
 
