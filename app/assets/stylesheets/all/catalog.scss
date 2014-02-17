@@ -125,6 +125,29 @@ a.glyphicon {
   margin-bottom: 0px;
 }
 
+// General information section of the finding aid display needs more room
+@media (min-width: 768px) {
+  #geninfo.dl-horizontal dt {
+    float: left;
+    width: 200px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #geninfo.dl-horizontal dd {
+    margin-left: 220px;
+  }
+  #geninfo.dl-horizontal dd:before, .dl-horizontal dd:after {
+    content: " ";
+    display: table; }
+  #geninfo.dl-horizontal dd:after {
+    clear: both;
+  } 
+}
+
+
 // Mobile screen
 
 @media (max-width: $screen-sm) {

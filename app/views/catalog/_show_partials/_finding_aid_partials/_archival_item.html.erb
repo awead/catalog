@@ -2,7 +2,6 @@
   <!-- Link to collection -->
   <%= content_tag :li do %>
     <%= tag_value_is_part_of render_collection_breadcrumb_link %>
-    <%= content_tag :span, breadcrumb_divider, :class => "divider" %>
   <% end %>
   
   <!-- additional links to parent components -->
@@ -10,7 +9,6 @@
     <% @component[Solrizer.solr_name("parent_unittitles", :displayable)].each_index do |index| %>
       <%= content_tag :li do %>
         <%= tag_value_is_part_of render_parent_title_breadcrumb_link(index) %>
-        <%= content_tag :span, breadcrumb_divider, :class => "divider" %>
       <% end %>
     <% end %>
   <% end %>
@@ -19,14 +17,15 @@
   <%= content_tag :li, @component.get(Solrizer.solr_name("title", :displayable)), :class => "active" %>
 <% end %>
 
-<%= render_parent_component_title %>
 
+<%= render_parent_component_title %>
 <%= render_parent_component_detail %>
 
-<%= content_tag :h4 do %>
-  <%= render_component_title %>
+<%= content_tag :div, :class => "col-sm-offset-1 col-sm-11" do %>
+  <%= content_tag :h4 do %>
+    <%= render_component_title %>
+  <% end %>
+  <%= render_archival_item_detail %>
 <% end %>
-
-<%= render_archival_item_detail %>
 
 <%= render_inventory_table if component_has_children? %>

@@ -22,7 +22,7 @@
     <%= content_tag :p, "Search for individual items within this collection." %>
 
     <%= form_tag search_action_url, :method => :get, :class => "form-search" do %>
-      <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page]).html_safe %> 
+      <%= render_hash_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page]).html_safe %> 
       <%= hidden_field_tag "[f][#{Solrizer.solr_name("collection", :facetable)}][]", 
             @document.get(Solrizer.solr_name("collection", :displayable)) %>
       <%= content_tag :label, t("blacklight.search.form.q"), :for => "q", :class => "hidden" %>
