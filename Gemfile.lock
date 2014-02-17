@@ -5,11 +5,13 @@ GIT
     blacklight-sitemap (2.0.0)
       nokogiri
 
-PATH
-  remote: /Users/adamw/Projects/Temp/blacklight_advanced_search
+GIT
+  remote: git://github.com/projectblacklight/blacklight_advanced_search.git
+  revision: 06b6c003ef65c324bc293ea0a7668236ef92bfea
+  branch: blacklight5
   specs:
     blacklight_advanced_search (2.1.1)
-      blacklight (~> 5.0)
+      blacklight (>= 5.0.0.pre4, < 6.0)
       parslet
 
 GEM
