@@ -22,34 +22,11 @@ module MarcHelper
     return results.join(field_value_separator).html_safe
   end
 
-  # Refactor me, please!
   def render_facet_link args, results = Array.new
-    return nil unless args
-    field = args[:field]
-    field_config = args[:field_config]
-    document = args[:document]
-
-    if field_config and field_config.highlight and document.has_highlight_field?(field_config.field)
-      value = document.highlight_field(field_config.field).map { |x| x.html_safe } if document.has_highlight_field? field_config.field
-    else
-      begin
-        value = document.get(field, :sep => nil) if field
-      rescue
-        vaule = nil
-      end
+    get_values_for_field(args).each do |text|
+      results << facet_link(text, blacklight_config.show_fields[args[:field]][:facet])
     end
-      
-    if value.is_a? Array
-      value.each do |text|
-        results << facet_link(text, blacklight_config.show_fields[field][:facet])
-      end
-    elsif value.nil?
-      return nil
-    else
-      results << facet_link(value, blacklight_config.show_fields[field][:facet])
-    end
-
-    return results
+    return results.join(field_value_separator).html_safe
   end
 
   # Renders a link for a given term and facet.  The content of term is used for the 
@@ -83,6 +60,16 @@ module MarcHelper
       "icons/unknown.png"
     else
       "icons/"+ document.get(Solrizer.solr_name("format", :displayable)).downcase.gsub(/\s/,"_") + ".png"
+    end
+  end
+
+  private 
+
+  def get_values_for_field args
+    if args[:field_config] and args[:field_config].highlight and args[:document].has_highlight_field?(args[:field_config].field)
+      args[:document].highlight_field(args[:field_config].field).map { |x| x.html_safe } if args[:document].has_highlight_field? args[:field_config].field
+    else
+      args[:document].get(args[:field], :sep => nil) if args[:field]
     end
   end
 
