@@ -29,22 +29,9 @@
   </head>
   <body>
   
-    <%= render_header %>
-
-    <div id="ajax-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal menu" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content"></div>
-      </div>
-    </div>
+    <%= render "shared/navbar" %>
 
     <div class="container" id="main">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="main-flashes">
-            <%= render :partial=>'/flash_msg' %>
-          </div>
-        </div>
-      </div>
       <div class="row">
         <%= yield %>
       </div>

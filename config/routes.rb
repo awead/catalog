@@ -13,5 +13,5 @@ Catalog::Application.routes.draw do
   # Holdings
   match "holdings/:id" => "holdings#show", :as => :holdings, :via => :get
 
-  match "*a", :to => "catalog#index", :via => [:get, :post] if Rails.env.match?("production")
+  get "*a", :to => "catalog#index" if Rails.env.match?("production")
 end

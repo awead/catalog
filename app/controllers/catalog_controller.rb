@@ -5,8 +5,6 @@ class CatalogController < ApplicationController
 
   SolrDocument.use_extension ::Rockhall::Exports
 
-  rescue_from Exception, :with => :render_error unless Rails.env.match("development")
-
   before_filter :get_component, :get_component_children, :show_item_within_collection, :only => :show
 
   configure_blacklight do |config|
