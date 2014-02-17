@@ -25,13 +25,12 @@ class CatalogController < ApplicationController
     }
 
     # solr field configuration for search results/index views
-    config.index.show_link = solr_name("heading", :displayable)
-    config.index.record_display_type = solr_name("format", :displayable)
+    config.index.title_field = solr_name("heading", :displayable)
+    config.index.display_type_field = solr_name("format", :displayable)
 
     # solr field configuration for document/show views
-    config.show.html_title = solr_name("heading", :displayable)
-    config.show.heading = solr_name("heading", :displayable)
-    config.show.display_type = solr_name("format", :displayable)
+    config.show.title_field = solr_name("heading", :displayable)
+    config.show.display_type_field = solr_name("format", :displayable)
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
