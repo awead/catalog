@@ -1,36 +1,28 @@
 <% @page_title = t("blacklight.search.title", :application_name => application_name) %>
-<% extra_head_content << render_opensearch_response_metadata.html_safe %>
 
-<%= content_tag :div, :id => "sidebar", :class => "span3" do %>
+<%= content_tag :div, :id => "sidebar", :class => "col-sm-4" do %>
  <%= render "search_sidebar" %>
 <% end %>
 
-<%= content_tag :div, :class => "span9" do %>
+<%= content_tag :div, :id => "content", :class => "col-sm-8"  do %>
 
   <% unless has_search_parameters? %>
-    
+
     <%= render "home" %>
   
   <% else %>
 
-    <%= content_tag :h2, t("blacklight.search.search_results_header"), :class => "hidden top-content-title" %>
-
-    <%= content_tag :div, :class => "row-fluid" do %>
-      <%= render "did_you_mean" %>
-      <%= render "constraints" %>
-    <% end %>
-    <%= content_tag :div, :class => "row-fluid" do %> 
-      <%= render "sort_and_per_page" %>
-    <% end %>
-    <%= content_tag :div, :class => "row-fluid" do %>
-      <%= render "results_pagination" %>
+    <% content_for(:head) do -%>
+      <%= render_opensearch_response_metadata %>
+      <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => "rss")), :title => t("blacklight.search.rss_feed") ) %>
+      <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => "atom")), :title => t("blacklight.search.atom_feed") ) %>
     <% end %>
 
-    <%= content_tag :h2, t("blacklight.search.search_results"), :class => "hidden" %>
+    <%= content_tag :h2, t("blacklight.search.search_results_header"), :class => "sr-only top-content-title" %>
+    <%= render "search_header" %>
+    <%= content_tag :h2, t("blacklight.search.search_results"), :class => "sr-only" %>
     <%= render_index_response %>
-    <%= content_tag :div, :class => "row-fluid" do %>
-      <%= render "results_pagination" %>
-    <% end %>
+    <%= render "results_pagination" %>
 
   <% end %>
 

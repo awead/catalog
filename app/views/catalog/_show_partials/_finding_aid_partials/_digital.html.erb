@@ -1,15 +1,13 @@
-<%= content_tag :div, :class => "row-fluid" do %>
+<%= content_tag :div, :class => "row" do %>
 
-  <%= content_tag :div, :class => "span6" do %>
-    <%= render :partial => "catalog/_show_partials/_finding_aid_partials/physical", :locals => {:component => @component} %>
+  <%= content_tag :div, :class => "col-md-5 col-md-push-7 col-lg-6 col-lg-push-6" do %>
+    <%= content_tag :div, :class => "well well-inverse text-center" do %>
+      <%= image_tag "video-splash.png", :class => "img-responsive" %>
+    <% end %>
   <% end %>
 
-  <%= content_tag :div, :class => "span6" do %>
-    <%= content_tag :div, :class => "row-fluid" do %>
-      <%= content_tag :div, :class => "well well-inverse text-center" do %>
-        <%= image_tag "video-splash.png" %>
-      <% end %>
-    <% end %>
+  <%= content_tag :div, :class => "col-md-7 col-md-pull-5 col-lg-6 col-lg-pull-6" do %>
+    <%= render :partial => "catalog/_show_partials/_finding_aid_partials/physical", :locals => {:component => @component} %>
   <% end %>
 
 <% end %>

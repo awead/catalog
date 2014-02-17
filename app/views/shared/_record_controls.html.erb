@@ -1,41 +1,37 @@
-<%= content_tag :div, :class => "row-fluid" do %>
-  <%= content_tag :div, :class => "navbar" do %>
-    <%= content_tag :div, :class => "navbar-inner" do %>
-      <%= content_tag :div, :class => "container-fluid pull-left" do %>
-        <%= content_tag :ul, :class => "nav" do %>
-          <%= content_tag :li, link_to(t("print").html_safe, "#", :onclick => "window.print(); return false;") %>
-          <%= content_tag :li, 
-                link_to(t("blacklight.tools.email").html_safe, email_catalog_path(:id => @document),
-                  {:id => "emailLink", :name => "email", :class => "lightboxLink"}) 
-          %>
-          <%= content_tag :li, :class => "dropdown" do %>
-            <%= link_to t("export").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown" } %>
-            <%= content_tag :ul, :class => "dropdown-menu" do %>
-              <%= render_refworks_link %>
-              <%= render_endnote_link %>
-              <%= render_citation_link %>
-              <%= render_sms_link %>
-            <% end %>
+<%= content_tag :nav, :class => "navbar navbar-default" do %>
+  <%= content_tag :div, :class => "container-fluid" do %>
+    <%= content_tag :div, :class => "collapse navbar-collapse", :id => "record_controls" do %>
+      <%= content_tag :ul, :class => "nav navbar-nav pull-left" do %>
+        <%= content_tag :li, link_to(t("print").html_safe, "#", :onclick => "window.print(); return false;") %>
+        <%= content_tag :li, 
+              link_to(t("email").html_safe, email_catalog_path(:id => @document),
+                {:id => "emailLink", :name => "email", :class => "lightboxLink"}) 
+        %>
+        <%= content_tag :li, :class => "dropdown" do %>
+          <%= link_to t("export").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown" } %>
+          <%= content_tag :ul, :class => "dropdown-menu" do %>
+            <%= render_refworks_link %>
+            <%= render_endnote_link %>
+            <%= render_citation_link %>
+            <%= render_sms_link %>
           <% end %>
-          <%= content_tag :li, :class => "dropdown" do %>
-            <%= link_to t("view").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown" } %>
-            <%= content_tag :ul, :class => "dropdown-menu" do %>
-              <%= render_marc_view_link %>
-              <%= render_nearby_link %>
-              <%= render_ead_view_link if is_a_finding_aid? %>
-              <%= render_fa_view_link if is_a_finding_aid? %>
-            <% end %>
+        <% end %>
+        <%= content_tag :li, :class => "dropdown" do %>
+          <%= link_to t("view").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown" } %>
+          <%= content_tag :ul, :class => "dropdown-menu" do %>
+            <%= render_marc_view_link %>
+            <%= render_nearby_link %>
+            <%= render_ead_view_link if is_a_finding_aid? %>
+            <%= render_fa_view_link if is_a_finding_aid? %>
           <% end %>
         <% end %>
       <% end %>
-      <%= content_tag :div, :class => "container-fluid pull-right" do %>
-        <%= content_tag :ul, :class => "nav" do %>
-          <%= content_tag :li, link_back_to_catalog %>
-          <%= render_previous_document_link %>
-          <%= render_item_entry_info %>
-          <%= render_next_document_link %>
-        <% end %>
-      <% end %>
+      <%= content_tag :ul, :class => "nav navbar-nav pull-right hidden-xs" do %>
+        <%= content_tag :li, link_back_to_catalog %>
+        <%= render_previous_document_link %>
+        <%= render_item_entry_info %>
+        <%= render_next_document_link %>
+      <% end %>      
     <% end %>
   <% end %>
 <% end %>

@@ -1,14 +1,16 @@
-<%= content_tag :div, :class => "media row-fluid" do %>
-  <%= link_to image_tag(document_format_to_filename, :class => "media-object", :size => "48x48"), "#", :class => "pull-left" %>
-  <%= content_tag :div, :class => "media-body" do %>
-    <%= content_tag :h4 do %>
-      <%= document_heading %>
+<%= content_tag :div, :class => "col-lg-12" do %>
+  <%= content_tag :div, :class => "media" do %>
+    <%= link_to image_tag(document_format_to_filename, :class => "media-object", :size => "48x48"), "#", :class => "pull-left" %>
+    <%= content_tag :div, :class => "media-body" do %>
+      <%= content_tag :h4 do %>
+        <%= document_heading %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
 
-<%= content_tag :div, :class => "row-fluid" do %>
-  <%= content_tag :div, :class => "span6" do %>
+<%= content_tag :div, :class => "col-lg-12" do %>
+  <%= content_tag :div, :class => "col-sm-6" do %>
     <%= content_tag :dl, :class => "dl-horizontal" do %>
       <% document_show_fields(document).each do |solr_fname, field| %>
         <% if should_render_show_field? document, field %>
@@ -19,7 +21,7 @@
     <% end %>
   <% end %>
 
-  <%= content_tag :div, :id => "sidebar", :class => "container-fluid span6" do %>
+  <%= content_tag :div, :id => "sidebar", :class => "col-sm-6" do %>
     <%= render_document_sidebar_partial %>
   <% end %>
 <% end %>

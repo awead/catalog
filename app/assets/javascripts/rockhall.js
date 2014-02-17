@@ -70,10 +70,10 @@ function returnStatus() {
       },
       success: function(data){
         if (data === 'Copies Available') {
-          $('#'+id).toggleClass('badge-success');
+          $('#'+id).toggleClass('label-success');
         }
         else {
-          $('#'+id).toggleClass('badge-warning');
+          $('#'+id).toggleClass('label-warning');
         }
         $('#'+id).text(data);
       }

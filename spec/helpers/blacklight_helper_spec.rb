@@ -9,7 +9,7 @@ describe BlacklightHelper do
     @config ||= Blacklight::Configuration.new.configure do |config|
       config.index.title_field = "title_display"
       config.index.display_type_field = "format"
-      config.show.heading = Solrizer.solr_name("heading", :displayable)
+      config.show.title_field = Solrizer.solr_name("heading", :displayable)
     end
   end
 

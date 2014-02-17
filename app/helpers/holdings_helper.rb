@@ -22,7 +22,7 @@ module HoldingsHelper
     if opts[:full]
       content_tag :div, nil, :class => "innovative_holdings", :id => id
     else
-      content_tag :span, "checking status..." , :class => "innovative_status badge", :id => id+"_status"
+      content_tag :span, "checking status..." , :class => "innovative_status label label-default", :id => id+"_status"
     end
   end
 

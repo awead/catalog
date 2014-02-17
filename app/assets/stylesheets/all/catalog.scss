@@ -1,89 +1,101 @@
-$navbarInverseBackground: #1f0101;
-$navbarInverseBackgroundHighlight: #590000;
-$navbarHeight: 40px;
-$linkColor: #ac1313;
-$linkColorHover: #7d0e0e;
-$navbarInverseLinkBackgroundHover: #590000;
-$marc_item_separator: 1px solid #CCC !default;
+// Catalog stylesheet
+
+// -----------------------------------------------------
+// Variables and settings
+// -----------------------------------------------------
+
+// Defing our reds and other colors
+$catalog-darker-red:  #1f0101;
+$catalog-dark-red:    #7d0e0e;
+$catalog-red:         #590000;
+$catalog-light-red:   #ac1313;
+
+// Asign bootstrap's colors to ours
+$brand-primary:                 $catalog-red;
+$link-color:                    $catalog-light-red;
+$navbar-inverse-bg:             $catalog-darker-red;
+$navbar-inverse-link-hover-bg:  $catalog-red;
+$dropdown-link-hover-bg:        $catalog-light-red;
+$dropdown-link-hover-color:     #ffffff;
+
+// Other settings
+$navbar-height: 40px;
+
+// -----------------------------------------------------
+// Heere begineth the sass
+// -----------------------------------------------------
 
 @import "bootstrap";
-@import "bootstrap-responsive";
-@import "blacklight/facets";
+@import "blacklight/blacklight";
 
-form {
-  margin: 0px 0px 0px 0px;
+// Bootstrap overrides
+
+h1, h2, h3 {
+  margin-top: 10px;
 }
 
-.modal.fade.in {
-  top: 50%;
+.navbar-inverse { 
+  @include gradient-vertical($catalog-red, $catalog-darker-red);
+  border-bottom-color: $catalog-darker-red;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 
-.pagination {
-  margin: 10px 0px 0px 0px;
+.navbar-default { 
+  @include gradient-vertical(lighten($gray-lighter, 15%), $gray-lighter);
+  border-bottom-color: $gray-light;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
-.alert {
-  margin: 10px 0px;
+a.glyphicon {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.alert-info {
-  background-color: $grayLighter;
-  border-color: $grayLight;
-  color: $grayDark;
+// Bootstrap v2 styled stacked nav tabs
+
+.nav-tabs.nav-stacked {
+  border-bottom: 0;
 }
-.modal {
+.nav-tabs.nav-stacked > li > a {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.nav-tabs.nav-stacked > li:first-child > a {
+  @include border-top-radius(4px);
+}
+.nav-tabs.nav-stacked > li:last-child > a {
+  @include border-bottom-radius(4px);
+}
+.nav-tabs.nav-stacked > li > a:hover {
+  border-color: #ddd;
+  z-index: 2;
+}
+
+.nav-stacked > li + li {
   margin-top: 0px;
+}
+
+// Get sassy here....
+
+.inline {
+  display: inline;
 }
 
 .block {
   display: block;
 }
 
-#main {
-  padding: 10px 50px 10px 50px;
-}
-
-#footer {
-  margin-top: 20px;
-}
-
-#main-flashes {
-  margin: 0px;
-  padding: 0px;
-}
-
-.flash_messages {
-  margin: 0px;
-  padding: 0px;
-}
-
-.navbar-inverse { 
-  .navbar-top {
-    background-color: #cccccc;
-    background-image: asset-url("navbar_swatch.png");
-    border-bottom-color: $navbarInverseBackground;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-  }
-}
-
-.navbar-title {
-  color: white;
-  font-size: 40px;
-  line-height: 40px;
-  padding: 12px 0px 12px 0px;
-}
-
-.carousel-inner {
-  background: #bbb;
-}
-
-.inline {
-  display: inline;
+.white {
+  color: #ffffff;
 }
 
 .well-inverse {
-
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #000;
@@ -91,108 +103,62 @@ form {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-
 }
 
-.hidden {
-  display: none;
+.child-component {
+  padding-left: 20px;
 }
 
-.itemprop {
-  display: block;
+#header {
+  background-image: asset-url("header_tile_bg.png");
+  background-repeat: repeat-x;
+  height: 85px;
+  width: 100%;
 }
 
-// Override links within a form to make them appear the same as links within the dropdown navbar
-.refworks {
-  form {
-    a {
-      clear: both;
-      color: $textColor;
-      cursor: auto;
-      display: block;
-      font-family: $sansFontFamily;
-      padding-bottom: 3px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 3px;
-      text-align: left;
-      text-decoration: none solid $textColor;
-      white-space: nowrap;
-    }
-    a:hover { 
-      background-color: $linkColor;
-      color: $navbarInverseLinkColorHover;
-    }
-  }
+#main {
+  margin-top: 20px;
 }
 
-// Finding Aids
-
-#fa {
-
-  p {
-    line-height: 25px;
-  }
-
-  #bioghist {
-  
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-  
-    dd {
-      padding: 1px 0 1px 0;
-      border-bottom: 1px solid $grayLight;
-    }
-  
-  }
-
-  #summary {
-    dd p {
-    padding: 0;
-    margin: 0;
-    line-height: $baseLineHeight;
-    }
-  }
-
-  .bibliography {
-    padding-left: 15px;
-  }
-
-}
-
-#inventory_table {
+#footer {
+  margin-top: 20px;
   margin-bottom: 0px;
 }
 
-// Librarian View
-
-#marc_view
-{
-  padding:5px;
-  text-align:left;
-
-  .field
-  {
-    border-bottom: $marc_item_separator;
-    clear:both;
+// General information section of the finding aid display needs more room
+@media (min-width: 768px) {
+  #geninfo.dl-horizontal dt {
+    float: left;
+    width: 200px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-
-  .ind1, .ind2
-  {
-    display:inline;
-    padding:0 5px;
+  #geninfo.dl-horizontal dd {
+    margin-left: 220px;
   }
+  #geninfo.dl-horizontal dd:before, .dl-horizontal dd:after {
+    content: " ";
+    display: table; }
+  #geninfo.dl-horizontal dd:after {
+    clear: both;
+  } 
+}
 
-  .subfields
-  {
-    padding-left:5em;
+
+// Mobile screen
+
+@media (max-width: $screen-sm) {
+  .navbar-default {
+    margin-bottom: 20px;
+    min-height: 5px;
   }
-
-  .tag_ind
-  {
-    float:left;
+  .navbar-inverse {
+    margin-bottom: 0px;
+  }
+  #main{
+    margin-top: 0px;
   }
 }

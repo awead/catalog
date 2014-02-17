@@ -1,22 +1,5 @@
 module SchemaHelper
 
-  def schema_itemtype
-    case @document.get Solrizer.solr_name("format", :displayable)
-    when "Book"
-      "http://schema.org/Book"
-    when "Video"
-      "http://schema.org/Movie"
-    when "Audio"
-      "http://schema.org/MusicRecording"
-    when "Theses/Dissertations"
-      "http://schema.org/Book"
-    when "Archival Collection"
-      collection_or_item_page
-    else
-      "http://schema.org/WebPage"
-    end
-  end
-
   def collection_or_item_page
     if @component.nil?
       "http://schema.org/CollectionPage" 

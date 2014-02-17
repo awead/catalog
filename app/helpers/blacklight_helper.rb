@@ -33,7 +33,7 @@ module BlacklightHelper
   # Override to call first because our heading field is mutlivalued
   def document_heading document=nil
     document ||= @document
-    document[blacklight_config.show.heading].nil? ? document.id : document[blacklight_config.show.heading].first.html_safe
+    document[blacklight_config.show.title_field].nil? ? document.id : document[blacklight_config.show.title_field].first.html_safe
   end
 
   # Override to:

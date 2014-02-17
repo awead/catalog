@@ -39,16 +39,18 @@ describe "Bib. facets" do
 
   end
 
-  it "should display quantities for each format (BL-268,BL-153,BL-154)" do
+  it "should display facets for format (BL-268,BL-153,BL-154)" do
     visit root_path
-    page.should have_content("Book 49")
-    page.should have_content("Theses/Dissertations 9")
-    page.should have_content("Audio 9")
-    page.should have_content("Score 7")
-    page.should have_content("Website 4")
-    page.should have_content("CD/DVD-ROM 1")
-    page.should have_content("Periodical 2")
-    page.should have_content("Video 64")    
+    within(:css, facet_selector("format")) do
+      page.should have_content("Book")
+      page.should have_content("Theses/Dissertations")
+      page.should have_content("Audio")
+      page.should have_content("Score")
+      page.should have_content("Website")
+      page.should have_content("CD/DVD-ROM")
+      page.should have_content("Periodical")
+      page.should have_content("Video")    
+    end
   end
 
   it "displays facets for CD/DVD-ROM (BL-250)" do

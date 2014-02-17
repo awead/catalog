@@ -25,7 +25,7 @@ describe HoldingsHelper  do
   describe "#show_holdings" do
     it "renders a div that is later populated with html from an ajax call" do
       assign :document, marc_document
-      expect(helper.show_holdings).to eq '<span class="innovative_status badge" id="foo_status">checking status...</span>'
+      expect(helper.show_holdings).to eq '<span class="innovative_status label label-default" id="foo_status">checking status...</span>'
     end
     it "returns nil for websites" do
       assign :document, Solrizer.insert_field(marc_document, "format", "Website", :displayable)

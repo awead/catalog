@@ -6,7 +6,7 @@ describe EadHelper do
 
   def blacklight_config
     @config ||= Blacklight::Configuration.new.configure do |config|
-      config.show.heading = Solrizer.solr_name("heading", :displayable)
+      config.show.title_field = Solrizer.solr_name("heading", :displayable)
     end
   end
 

@@ -1,5 +1,6 @@
 Catalog::Application.routes.draw do
-  Blacklight.add_routes(self)
+  Blacklight::Marc.add_routes(self)
+  blacklight_for :catalog
 
   root :to => "catalog#index"
 
@@ -12,5 +13,5 @@ Catalog::Application.routes.draw do
   # Holdings
   match "holdings/:id" => "holdings#show", :as => :holdings, :via => :get
 
-  match "*a", :to => "catalog#index", :via => [:get, :post] if Rails.env.match?("production")
+  get "*a", :to => "catalog#index" if Rails.env.match?("production")
 end

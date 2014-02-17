@@ -1,0 +1,8 @@
+<% if has_facet_values?  %>
+  <%= content_tag :div, :id=> "facets", :class => "facets sidenav" do %>
+    <%= content_tag :h4, t('blacklight.search.facets.title') %>
+  <% end %>
+
+  <%= content_tag :div, render_facet_partials, :class => "panel-group" %>
+
+<% end %>
