@@ -8,7 +8,6 @@
  * be under ./print instead and is not included here.
  *
  * Vendor Stylesheets
- *= require flowplayer/flowplayer-style
  *= require video-js/video-js
  *= require video-js/skins/tube
  *= require video-js/skins/vim

@@ -162,3 +162,67 @@ a.glyphicon {
     margin-top: 0px;
   }
 }
+
+// Video player
+
+#video_box {
+  background: #000;
+  padding: 10px 0px 10px 0px; }
+
+/* player container */
+
+#player {
+  background: black;
+  cursor: pointer;
+  -moz-outline-radius: 4px;
+  margin: 0 auto;
+  margin-top: 12px;
+
+  @media (min-width: $screen-lg) {
+    width: #{16 * 22}px;
+    height: #{10 * 22}px;
+  }
+
+  @media (max-width: $screen-lg) {
+    width: #{16 * 11}px;
+    height: #{10 * 11}px;
+  }
+
+}
+
+/* playlist */
+
+#playlist {
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 550px;
+  div {
+    float: left;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+    width: 180px;
+    height: 16px;
+    padding: 5px 0px;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0; }
+    &:hover {
+      background-color: #666; }
+    &.playing, &.paused {
+      background-color: #fff;
+      color: #000; }
+    &:active {
+      cursor: default;
+      background-color: #ededed;
+      color: #444; } } }
+
+/* playlist item */
+
+/* mouseover state */
+
+/* clicked state */
+
+/* active item */

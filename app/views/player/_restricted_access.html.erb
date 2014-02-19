@@ -1,3 +1,6 @@
-<div id="video_box">
-	<div id="restricted">Video available in the library only.</div>
-</div>
+<%= content_tag :div, :id => "video_box" do %>
+  <%= content_tag :span, "Video available in the library only", :class => "label label-danger" %>
+	<%= content_tag :div, :id => "player" do %>
+    <%= image_tag "video-splash.png", :class => "img-responsive" %>
+  <% end %>
+<% end %>
