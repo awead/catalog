@@ -1,6 +1,6 @@
 class ComponentsController < ApplicationController
 
-  include Rockhall::Catalog
+  include Rockhall::Solr::ComponentQueries
   
   def index
     @numfound, @components = get_componets_for_index_view

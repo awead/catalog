@@ -1,6 +1,8 @@
 module Rockhall::Solr::ComponentQueries
   extend ActiveSupport::Concern
 
+  include Blacklight::SolrHelper
+
   # Queries the current solr document for any first-level components, returning either an array of the 
   # documents or nil.
   # 

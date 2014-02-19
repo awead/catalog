@@ -17,9 +17,14 @@ describe ComponentsController do
     response.should be_success
   end
 
-  it "hould return additional components from a given parent with a start and row count" do
+  it "should return additional components from a given parent with a start and row count" do
     get :index, :id => "ARC-0037", :ref => "ref10", :start => 50, :rows => 25
     response.should be_success
+  end
+
+  it "should not change the current search session" do
+    get :index, :id => "ARC-0037", :ref => "ref10", :start => 50, :rows => 25
+    lambda {controller.send(:current_search_session)}.should raise_error(NoMethodError)
   end
 
 end
