@@ -9,8 +9,8 @@
 // require 'blacklight_advanced_search'
 //
 // Vendor scripts
-//= require flowplayer/flowplayer-3.2.11.min
-//= require flowplayer/flowplayer.playlist-3.2.10.min
+//= require flowplayer/flowplayer-3.2.13.min
+//= require flowplayer/flowplayer.playlist-3.2.11.min
 //= require video-js/video
 //= require ga
 //
