@@ -1,21 +1,21 @@
-<div id="video_box">
+<%= content_tag :div, :id => "video_box" do %>
 
-<!-- player container-->
-<div id="player">&nbsp;</div>
+  <!-- player container-->
+  <%= content_tag :div, :id => "player" do %>
+    <%= image_tag "video-splash.png", :class => "img-responsive" %>
+  <% end %>
 
-<!-- the playlist -->
-<%  if @document[:access_file_s].count > 1 %>
-  <div id="playlist" class="clearfix" style="display:none">
-    <div>${title}</div>
-  </div>
+  <!-- the playlist -->
+  <%  if @component[Solrizer.solr_name("access_file", :displayable)].count > 1 %>
+    <%= content_tag :div, :id => "playlist", :class => "clearfix hidden" do %>
+      <%= content_tag :div, "${title}" %>
+    <% end %>
+  <% end %>
+
 <% end %>
 
-<!-- let rest of the page float normally -->
-<br clear="all" />
+<%= javascript_tag do %>
 
-</div>
-
-<script type="text/javascript">
   $f("player", "<%= root_path %>flowplayer/flowplayer.commercial-3.2.15.swf", {
   // the playlist
   playlist: [
@@ -43,7 +43,7 @@
   // the rtmp plugin
   plugins: {
     rtmp: {
-      url:              '<%= root_path %>flowplayer/flowplayer.rtmp-3.2.11.swf',
+      url:              '<%= root_path %>flowplayer/flowplayer.rtmp-3.2.13.swf',
       netConnectionUrl: '<%= rtmp_url  %>'
     },
 
@@ -58,7 +58,7 @@
     }
   }
 
-}).playlist("#playlist");
-$("#playlist").show();
+  }).playlist("#playlist");
+  $("#playlist").show();
 
-</script>
+<% end %>

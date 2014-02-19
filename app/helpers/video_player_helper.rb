@@ -3,7 +3,7 @@ require 'ipaddr'
 module VideoPlayerHelper
 
   def insert_player
-    if is_public? || is_allowable_ip?
+    if is_public? || is_allowable_ip? || Rails.env.match("development")
       render :partial => "player/flowplayer"
     else
       render :partial => "player/restricted_access"
@@ -18,14 +18,14 @@ module VideoPlayerHelper
   end
 
   def is_public?
-    @document["hydra_read_access_s"].include?("public") unless @document["hydra_read_access_s"].nil?
+    @component[Solrizer.solr_name("hydra_read_access", :displayable)].include?("public") unless @component[Solrizer.solr_name("hydra_read_access", :displayable)].nil?
   end
 
   def flowplayer_playlist
     results = Array.new
     count = 1
-    @document[:access_file_s].each do |video|
-      path = File.join(@document[:id].gsub(/:/,"_"),"data",video)
+    @component[Solrizer.solr_name("access_file", :displayable)].each do |video|
+      path = File.join(@component[:id].gsub(/:/,"_"),"data",video)
       results << "{title: 'Part #{count.to_s}', url: 'mp4:#{path}'}"
       count = count + 1
     end
@@ -34,7 +34,7 @@ module VideoPlayerHelper
 
   def rtmp_url
     url = URI(Rails.configuration.rockhall_config[:rtmp_url])
-    url.query = @document[:id]
+    url.query = @component[:id]
     return url.to_s
   end
 
