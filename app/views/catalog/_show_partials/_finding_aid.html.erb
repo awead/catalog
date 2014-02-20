@@ -1,7 +1,6 @@
 <%= content_tag :h3 do %>
   <%= image_tag document_format_to_filename %>
-  <%= ("Guide to the " + @document.get(Solrizer.solr_name("title", :displayable))).html_safe %>
-  <%= content_tag :small, @document.get(Solrizer.solr_name("ead", :stored_sortable)) %>
+  <%= @document.get(Solrizer.solr_name("heading", :displayable)).html_safe %>
 <% end %>
     
 <%= content_tag :div, :id => "fa", :class => "tab-content" do %>

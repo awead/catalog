@@ -15,8 +15,6 @@
       <div class="tab-pane active" id="summary">
         <legend>Summary</legend>
         <dl id="geninfo" class="dl-horizontal">
-          <dt>Title:</dt>
-          <dd><span itemprop="name"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unittitle"/></span></dd>
           <dt>Dates:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unitdate"/></dd>
           <dt>Size:</dt>

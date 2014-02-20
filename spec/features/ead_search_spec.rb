@@ -29,7 +29,7 @@ describe "EAD searching" do
   it "should search for component archival materials (BL-55, BL-67)" do
     execute_search "Negatives"
     page.should have_content("Negatives")
-    page.should have_content("Curtis Mayfield Collection (ARC.0067)")
+    page.should have_content("Curtis Mayfield Collection")
     page.should_not have_content("Book: Poetic License: In Poem and Song")
   end
 
@@ -41,7 +41,7 @@ describe "EAD searching" do
   it "should display archival component titles (BL-68)" do
     execute_search "Negatives"
     page.should_not have_content("Finding Aid")
-    page.should have_content("Guide to the Curtis Mayfield Collection")
+    page.should have_content("Curtis Mayfield Collection")
     page.should have_content("Negatives and transparencies")
   end
 
@@ -58,7 +58,7 @@ describe "EAD searching" do
   it "should use the title from the search reults in the finding aid (BL-148)" do
     execute_search "Johnny Otis"
     within(:css, "div#ARC-0060ref24") do
-      within(:css, field_content_selector("title")) do
+      within(:css, index_heading_selector) do
         page.should have_content("3rd Annual Long Beach Blues Festival: Taj Mahal, Little Milton, Ester Phillips, The Johnny Otis Show, Gatemouth Brown")
       end
     end
@@ -67,6 +67,14 @@ describe "EAD searching" do
   it "should not display series and subseries components in our search results (BL-224)" do
     execute_search "Series I: Flyers, 1980, 1989-1992"
     page.should_not have_css("div#ARC-0065ref42")
+  end
+
+  it "should not display titles for archival items in search results" do
+    visit root_path
+    click_link "Archival Item"
+    within(:css, "div#RG-0008ref6") do
+      page.should_not have_xpath('//dd', :text => '311', :visible => true)
+    end
   end
 
 end

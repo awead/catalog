@@ -202,7 +202,6 @@ describe "EAD display" do
     visit catalog_path("ARC-0003")
     page.should have_content("Summary")
     within(:css, "dl#geninfo") do
-      page.should have_content("Title:")
       page.should have_content("Dates:")
       page.should have_content("Size:")
       page.should have_content("Collection Number:")

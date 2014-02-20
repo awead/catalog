@@ -33,9 +33,6 @@ class Rockhall::Ead::Document < SolrEad::Document
     Solrizer.set_field(solr_doc, "collection",      self.collection.first.strip, :facetable)
     Solrizer.set_field(solr_doc, "collection",      self.collection.first.strip, :displayable)
 
-    # Replace certain fields with their html-formatted equivilents
-    Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
-
     # Set lanuage codes
     solr_doc.merge!(ead_language_fields)
 
@@ -45,7 +42,7 @@ class Rockhall::Ead::Document < SolrEad::Document
   protected
 
   def heading_display
-    "Guide to the " + self.term_to_html("title") + " (" + self.title_num.first + ")"
+    self.term_to_html("title")
   end
 
 end

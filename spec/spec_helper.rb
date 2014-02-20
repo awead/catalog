@@ -60,3 +60,8 @@ def execute_search terms, search_field=nil
   select(search_field, :from => "search_field") unless search_field.nil?
   find_button("search").click
 end
+
+def index_heading_selector
+  "h4.media-heading"
+end
+

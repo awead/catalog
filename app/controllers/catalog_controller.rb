@@ -11,14 +11,14 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       :qt => "search",
       :rows => 10,
-      ("hl.fl").to_sym => "title_ssm, author_ssm, publisher_ssm, collection_ssm,parent_unittitles_ssm,location_ssm",
+      ("hl.fl").to_sym => "heading_ssm, author_ssm, publisher_ssm, collection_ssm, location_ssm",
       ("hl.simple.pre").to_sym => '<span class="label label-info">',
       ("hl.simple.post").to_sym => "</span>",
       :hl => true
     }
 
     config.default_document_solr_params = {
-      ("hl.fl").to_sym => "title_ssm, author_ssm, publisher_ssm, collection_ssm,parent_unittitles_ssm,location_ssm",
+      ("hl.fl").to_sym => "title_ssm, heading_ssm, author_ssm, publisher_ssm, collection_ssm, location_ssm",
       ("hl.simple.pre").to_sym => '<span class="label label-info">',
       ("hl.simple.post").to_sym => "</span>",
       :hl => true
@@ -29,7 +29,7 @@ class CatalogController < ApplicationController
     config.index.display_type_field = solr_name("format", :displayable)
 
     # solr field configuration for document/show views
-    config.show.title_field = solr_name("heading", :displayable)
+    config.show.title_field = solr_name("title", :displayable)
     config.show.display_type_field = solr_name("format", :displayable)
 
     # solr fields that will be treated as facets by the blacklight application
@@ -79,9 +79,6 @@ class CatalogController < ApplicationController
     # ------------------------------------------------------------------------------------------
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field solr_name("title",             :displayable),  :label => "Title", 
-                                                                          :highlight => true
-
     config.add_index_field solr_name("author",            :displayable),  :label => "Author", 
                                                                           :helper_method => :render_facet_link,
                                                                           :highlight => true
@@ -100,9 +97,6 @@ class CatalogController < ApplicationController
 
     config.add_index_field solr_name("collection",        :displayable),  :label => "Archival Collection", 
                                                                           :helper_method => :render_facet_link,
-                                                                          :highlight => true
-                                                                         
-    config.add_index_field solr_name("parent_unittitles", :displayable),  :label => "Series",
                                                                           :highlight => true
 
     config.add_index_field solr_name("location",          :displayable),  :label => "Location",

@@ -9,7 +9,7 @@ describe "Bib. searching" do
 
   it "should hightlight terms in facet names (BL-311)" do
     execute_search "Derek and the Dominos"
-    within(:css, field_content_selector("title")) do
+    within(:css, index_heading_selector) do
       page.should have_css("span.label-info")
     end
     within(:css, field_content_selector("author")) do
@@ -62,7 +62,7 @@ describe "Bib. searching" do
   it "should highlight search terms (BL-179)" do
     execute_search "Elvis"
     within(:css, "div#669770588") do
-      within(:css, field_content_selector("title")) do
+      within(:css, index_heading_selector) do
         within(:css, "span.label-info") { page.should have_content("Elvis") }
       end
     end
