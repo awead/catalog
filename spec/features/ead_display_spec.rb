@@ -255,4 +255,9 @@ describe "EAD display" do
     page.should have_content("Search Collection")
   end
 
+  it "should display a label for digital content" do
+    visit catalog_path("RG-0010/ref42")
+    page.should have_content("Online")
+  end
+
 end

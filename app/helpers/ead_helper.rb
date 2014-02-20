@@ -141,4 +141,10 @@ module EadHelper
     end
   end
 
+  def render_digital_label component
+    if component[Solrizer.solr_name("access_file", :displayable)]
+      content_tag :span, "Online", :class => "label label-default"
+    end
+  end
+
 end
