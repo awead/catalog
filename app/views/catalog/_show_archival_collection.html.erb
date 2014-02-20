@@ -2,9 +2,10 @@
   <%= content_tag :ul, :class => "nav nav-tabs nav-stacked" do %>
     <%= render_nav_link "summary", {:class => "active"} %>
     <%= render_nav_link "description" %>
-    <%= render_nav_link "restrictions" %>
+    <%= render_nav_link "history", {:text => "Collection History"} %>
+    <%= render_nav_link "restrictions", {:text => "Access and Use"} %>
+    <%= render_nav_link "inventory", {:text => "Contents"} if collection_has_inventory? %>
     <%= render_nav_link "subjects", {:text => "Find More"} %>
-    <%= render_nav_link "inventory" if collection_has_inventory? %>
     <%= render_nav_link "collection_search", {:text => "Search Collection"} %>
   <% end %>
 <% end %>

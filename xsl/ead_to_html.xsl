@@ -13,47 +13,47 @@
 
       <!-- Summary tab -->
       <div class="tab-pane active" id="summary">
-        <legend>General Information</legend>
+        <legend>Summary</legend>
         <dl id="geninfo" class="dl-horizontal">
           <dt>Title:</dt>
           <dd><span itemprop="name"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unittitle"/></span></dd>
           <dt>Dates:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unitdate"/></dd>
-          <dt>Extent:</dt>
+          <dt>Size:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:physdesc/ead:extent"/></dd>
-          <dt>Language:</dt>
+          <dt>Collection Number:</dt>
+          <dd><xsl:apply-templates select="//ead:eadid"/></dd>
+          <dt>Language(s):</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:langmaterial"/></dd>
           <dt>Processing Information:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:processinfo/ead:p"/></dd>
-          <dt>Preferred Citation:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:prefercite/ead:p"/></dd>
-        </dl>
-
-        <!-- Other sections of archdesc are displayed in paragraph format -->
-        <legend>Collection Overview</legend>
-        <p><span itemprop="description"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></span></p>
+        </dl>        
       </div>
 
       <!-- Description tab -->
       <div class="tab-pane" id="description">
+        <legend>Collection Overview</legend>
+        <p><span itemprop="description"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></span></p>
         <div id="bioghist">
           <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
         </div>
-        <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
         <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
       </div>
 
-      <!-- Restrictions tab -->
+      <!-- Collection History tab -->
+      <div class="tab-pane" id="history">
+        <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
+      </div>
+
+      <!-- Access and Use tab -->
       <div class="tab-pane" id="restrictions">
-        <legend>Restrictions</legend>
-        <h5>Use</h5>
-        <xsl:apply-templates select="//ead:archdesc/ead:userestrict/ead:p"/>
-        <h5>Access</h5>
-        <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict/ead:p"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:userestrict"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:prefercite"/>
       </div>
                
     </xsl:template>

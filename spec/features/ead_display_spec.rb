@@ -18,7 +18,7 @@ describe "EAD display" do
 
   it "should have date expressions in the first component level (BL-9)" do
     visit catalog_path("ARC-0105")
-    click_link "Inventory"
+    click_link "Contents"
     page.should have_content("Oversize materials, 1977-1985, undated")
   end
 
@@ -85,9 +85,9 @@ describe "EAD display" do
     page.should have_content("Some print and audiovisual materials have been transferred to the library collection")
   end
 
-  it "should show access restrictions within Restrictions" do
+  it "should show access restrictions within Access and Use" do
     visit catalog_path("ARC-0003")
-    click_link "Restrictions"
+    click_link "Access and Use"
     page.should have_content("Collection is open for research")
   end
 
@@ -169,9 +169,11 @@ describe "EAD display" do
     within(:css, ".nav-stacked") do
       page.should have_content("Summary")
       page.should have_content("Description")
-      page.should have_content("Restrictions")
+      page.should have_content("Collection History")
+      page.should have_content("Access and Use")
       page.should have_content("Find More")
-      page.should have_content("Inventory")
+      page.should have_content("Contents")
+      page.should have_content("Search Collection")
     end
   end
 
@@ -194,6 +196,63 @@ describe "EAD display" do
     page.should have_content("Bibliography")
     page.should have_content("All Music Guide. Accessed February 4, 2013. http://www.allmusic.com/.")
     page.should have_content("Doo-Wop: Biography, Groups and Discography. Accessed February 4, 2013. http://doo-wop.blogg.org/.")
+  end
+
+  it "should display summary information" do
+    visit catalog_path("ARC-0003")
+    page.should have_content("Summary")
+    within(:css, "dl#geninfo") do
+      page.should have_content("Title:")
+      page.should have_content("Dates:")
+      page.should have_content("Size:")
+      page.should have_content("Collection Number:")
+      page.should have_content("Language(s):")
+      page.should have_content("Processing Information:")
+    end
+    page.should_not have_content("Colletion Overview")
+  end
+
+  it "should display field in Description tab" do
+    visit catalog_path("ARC-0064")
+    click_link "Description"
+    page.should have_content("Administrative History")
+    visit catalog_path("ARC-0161")
+    click_link "Description"
+    page.should have_content("Collection Overview")
+    page.should have_content("Biographical Note")
+    page.should have_content("Related Materials")
+    page.should have_content("Bibliography")
+  end
+
+  it "should display fields in the Collection History tab" do
+    visit catalog_path("ARC-0006")
+    click_link "Collection History"
+    page.should have_content("Custodial History")
+    page.should have_content("Accruals")
+    page.should have_content("Separated Materials")
+  end
+
+  it "should display fields in the Access and Use tab" do
+    visit catalog_path("ARC-0080")
+    click_link "Access and Use"
+    page.should have_content("Access Restrictions")
+    page.should have_content("Use Restrictions")
+    page.should have_content("Existence and Location of Originals")
+    page.should have_content("Preferred Citation")
+  end
+
+  it "should display headings" do
+    visit catalog_path("ARC-0003")
+    click_link "Find More"
+    page.should have_content("Name:")
+    page.should have_content("Subjects:")
+    page.should have_content("Genre:")
+  end
+
+  it "should have a tab for searchign within the collection" do
+    visit catalog_path("ARC-0003")
+    click_link "Search Collection"
+    page.should have_content("Search Collection")
   end
 
 end
