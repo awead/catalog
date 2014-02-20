@@ -1,8 +1,8 @@
 <% component[Solrizer.solr_name("location", :displayable)].each_with_index do |location, index| %>
-  <%= content_tag :span, :class => "block" do %>
+  <%= content_tag :div, :class => "block" do %>
     <%= component[Solrizer.solr_name("location", :displayable)][index] %>
-    <%= link_to component[Solrizer.solr_name("material", :displayable)][index], 
-          catalog_index_path({ "f" => { Solrizer.solr_name("material", :facetable) => component[Solrizer.solr_name("material", :displayable)] } }),
-          :class => "pull-right" %>
+    <%= content_tag :span, :class => "label label-default" do %>
+      <%= component[Solrizer.solr_name("material", :displayable)][index] %>
+    <% end %>
   <% end %>
 <% end %>

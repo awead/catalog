@@ -109,7 +109,6 @@ class CatalogController < ApplicationController
                                                                           :highlight => true
 
     config.add_index_field solr_name("material",          :displayable),  :label => "Archival Material",
-                                                                          :helper_method => :render_facet_link,
                                                                           :highlight => true                                                                      
 
     # ------------------------------------------------------------------------------------------
@@ -230,8 +229,6 @@ class CatalogController < ApplicationController
                                                                         :highlight => true
 
     config.add_show_field solr_name("material",          :displayable), :label          => "Archival Material",
-                                                                        :helper_method  => :render_facet_link,
-                                                                        :facet          => solr_name("material", :facetable),
                                                                         :highlight      => true
 
     # "fielded" search configuration. Used by pulldown among other places.
