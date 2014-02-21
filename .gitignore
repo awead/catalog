@@ -2,6 +2,7 @@
 nohup.out
 
 *.sqlite3
+*.sqlite3-journal
 *.log
 *~
 *.swp
