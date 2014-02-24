@@ -79,9 +79,9 @@ class CatalogController < ApplicationController
     # ------------------------------------------------------------------------------------------
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field solr_name("author",            :displayable),  :label => "Author", 
-                                                                          :helper_method => :render_facet_link,
-                                                                          :highlight => true
+    config.add_index_field solr_name("author",            :displayable),  :label => "Author",
+                                                                          :link_to_search => true
+                                                                          #:highlight => true
     
     config.add_index_field solr_name("format",            :displayable),  :label => "Format"
     config.add_index_field solr_name("ohlink_url",        :displayable),  :label => "OhioLink Resource", 
@@ -96,14 +96,15 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name("unitdate",          :displayable),  :label => "Dates"
 
     config.add_index_field solr_name("collection",        :displayable),  :label => "Archival Collection", 
-                                                                          :helper_method => :render_facet_link,
-                                                                          :highlight => true
+                                                                          :link_to_search => true
+                                                                          #:highlight => true
 
-    config.add_index_field solr_name("location",          :displayable),  :label => "Location",
-                                                                          :highlight => true
+    config.add_index_field solr_name("location",          :displayable),  :label => "Location"
+                                                                          
 
-    config.add_index_field solr_name("material",          :displayable),  :label => "Archival Material",
-                                                                          :highlight => true                                                                      
+    config.add_index_field solr_name("material",          :displayable),  :label => "Archival Material"
+    config.add_index_field solr_name("isbn",         :displayable),  :label => "ISBN"
+                                                                                                                                                
 
     # ------------------------------------------------------------------------------------------
     #

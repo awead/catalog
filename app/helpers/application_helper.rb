@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def field_value_separator
+    '<br />'
+  end
+
   def render_index_response
     if @response.empty?
       render "zero_results"

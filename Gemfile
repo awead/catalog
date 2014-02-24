@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~>4.0.0'
 
 # Blacklight gems
-gem 'blacklight'
+gem 'blacklight', :github => 'projectblacklight/blacklight'
 gem 'blacklight-marc'
 gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
 gem 'blacklight_advanced_search', :github => 'projectblacklight/blacklight_advanced_search', :branch => 'blacklight5'

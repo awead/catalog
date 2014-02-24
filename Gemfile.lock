@@ -6,6 +6,19 @@ GIT
       nokogiri
 
 GIT
+  remote: git://github.com/projectblacklight/blacklight.git
+  revision: a1cbcf39a054bf1b2893de851ec43d54c527f0ac
+  specs:
+    blacklight (5.1.0)
+      bootstrap-sass (~> 3.0)
+      deprecation
+      kaminari (~> 0.13)
+      nokogiri (~> 1.6)
+      rails (>= 3.2.6, < 5)
+      rsolr (~> 1.0.6)
+      sass-rails
+
+GIT
   remote: git://github.com/projectblacklight/blacklight_advanced_search.git
   revision: 96b3f9a2925b497c72ba9966b1e53d1ebf989eac
   branch: blacklight5
@@ -52,14 +65,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    blacklight (5.1.0)
-      bootstrap-sass (~> 3.0)
-      deprecation
-      kaminari (~> 0.13)
-      nokogiri (~> 1.6)
-      rails (>= 3.2.6, < 5)
-      rsolr (~> 1.0.6)
-      sass-rails
     blacklight-marc (5.0.0)
       blacklight (~> 5.0)
       marc (>= 0.4.3, < 1.1)
@@ -132,7 +137,7 @@ GEM
       multi_json (~> 1.3)
     googlebooks (0.0.8)
       httparty
-    guard (2.5.0)
+    guard (2.5.1)
       formatador (>= 0.2.4)
       listen (~> 2.6)
       lumberjack (~> 1.0)
@@ -320,7 +325,7 @@ DEPENDENCIES
   bcrypt
   better_errors
   binding_of_caller
-  blacklight
+  blacklight!
   blacklight-marc
   blacklight-sitemap!
   blacklight_advanced_search!
