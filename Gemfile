@@ -2,10 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '~>4.0.0'
 
-gem 'blacklight', '~>5.0.0'
-gem 'blacklight-marc', '~> 5.0'
+# Blacklight gems
+gem 'blacklight'
+gem 'blacklight-marc'
 gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
 gem 'blacklight_advanced_search', :github => 'projectblacklight/blacklight_advanced_search', :branch => 'blacklight5'
+
+# Additional gems
+gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-guests'
