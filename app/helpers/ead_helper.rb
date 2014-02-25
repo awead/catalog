@@ -165,4 +165,8 @@ module EadHelper
     end
   end
 
+  def component_offset_class
+    "col-sm-offset-1 col-sm-11" unless @component.parents.nil?
+  end
+
 end
