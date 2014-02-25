@@ -1,15 +1,25 @@
-<%= content_tag :div, :class => "col-sm-4 col-md-3 col-lg-2" do %>
-  <%= content_tag :ul, :class => "nav nav-tabs nav-stacked" do %>
-    <%= render_nav_link "summary", {:class => "active"} %>
-    <%= render_nav_link "description" %>
-    <%= render_nav_link "history", {:text => "Collection History"} %>
-    <%= render_nav_link "restrictions", {:text => "Access and Use"} %>
-    <%= render_nav_link "inventory", {:text => "Contents"} if collection_has_inventory? %>
-    <%= render_nav_link "subjects", {:text => "Find More"} %>
-    <%= render_nav_link "collection_search", {:text => "Search Collection"} %>
+<% if has_html_finding_aid? && request_full_finding_aid? %>
+
+  <%= content_tag :div, :class => "col-xs-12" do %>  
+    <%= render_full_finding_aid %>
   <% end %>
-<% end %>
+
+<% else %>
+
+  <%= content_tag :div, :class => "col-sm-4 col-md-3 col-lg-2" do %>
+    <%= content_tag :ul, :class => "nav nav-tabs nav-stacked" do %>
+      <%= render_nav_link "summary", {:class => "active"} %>
+      <%= render_nav_link "description" %>
+      <%= render_nav_link "history", {:text => "Collection History"} %>
+      <%= render_nav_link "restrictions", {:text => "Access and Use"} %>
+      <%= render_nav_link "inventory", {:text => "Contents"} if collection_has_inventory? %>
+      <%= render_nav_link "subjects", {:text => "Find More"} %>
+      <%= render_nav_link "collection_search", {:text => "Search Collection"} %>
+    <% end %>
+  <% end %>
     
-<%= content_tag :div, :class => "col-sm-8 col-md-9 col-lg-10" do %>  
-  <%= render_show_view_for_finding_aid %>
+  <%= content_tag :div, :class => "col-sm-8 col-md-9 col-lg-10" do %>  
+    <%= render_show_view_for_finding_aid %>
+  <% end %>
+
 <% end %>

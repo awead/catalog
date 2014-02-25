@@ -10,60 +10,39 @@
 
     <!-- Creates the html partial of the finding aid -->
     <xsl:template match="/">
-      <div id="ead_body">
 
-        <!-- General information section displays fields from archdesc in horizontal format using <dl> -->
-        <h2 id="geninfo">General Information</h2>
-        <dl class="defList">
-          <dt>Title:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unittitle"/></dd>
-          <dt>Dates:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unitdate"/></dd>
-          <dt>Extent:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:physdesc/ead:extent"/></dd>
-          <dt>Language:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:langmaterial"/></dd>
-          <dt>Processing Information:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:processinfo/ead:p"/></dd>
-          <dt>Preferred Citation:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:prefercite/ead:p"/></dd>
-        </dl>
 
-        <!-- Other sections of archdesc are displayed in paragraph format -->
-        <h2 id="abstract">Collection Overview</h2>
-        <p><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></p>
-        <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
-        <h2 id="userestrict">Restrictions</h2>
-        <h4>Use</h4>
-        <xsl:apply-templates select="//ead:archdesc/ead:userestrict/ead:p"/>
-        <h4>Access</h4>
-        <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict/ead:p"/>
-        
-        <h2 id="subjects">Subjects</h2>
-        <p>Click on the links below to see more items in the catalog on these topics.</p>
-        <dl class="defList block">
-          <dt>Name:</dt>
-          <dd>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:persname"/>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:corpname"/>
-          </dd>
-          <dt>Genre:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:genreform"/></dd>
-          <dt>Topic:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:subject"/></dd>
-        </dl>
+      <legend>Summary</legend>
+      <dl id="geninfo" class="dl-horizontal">
+        <dt>Dates:</dt>
+        <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unitdate"/></dd>
+        <dt>Size:</dt>
+        <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:physdesc/ead:extent"/></dd>
+        <dt>Collection Number:</dt>
+        <dd><xsl:apply-templates select="//ead:eadid"/></dd>
+        <dt>Language(s):</dt>
+        <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:langmaterial"/></dd>
+        <dt>Processing Information:</dt>
+        <dd><xsl:apply-templates select="//ead:archdesc/ead:processinfo/ead:p"/></dd>
+      </dl>        
+      
+      <legend>Collection Overview</legend>
+      <p><span itemprop="description"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></span></p>
+      
+      <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:userestrict"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:prefercite"/>
 
-        <h2 id="inventory">Collection Inventory</h2>
-        <div id="dsc">
-          <xsl:apply-templates select="//ead:archdesc/ead:dsc"/>
-        </div>
-
+      <legend>Contents</legend>
+      <div id="dsc">
+        <xsl:apply-templates select="//ead:archdesc/ead:dsc"/>
       </div>
 
     </xsl:template>
@@ -82,7 +61,7 @@
         <xsl:when test="parent::ead:chronlist"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="parent::ead:list"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="ancestor::ead:c"><h5><xsl:apply-templates/></h5></xsl:when>
-        <xsl:otherwise><h2 id="{$id}"><xsl:apply-templates/></h2></xsl:otherwise>
+        <xsl:otherwise><legend id="{$id}"><xsl:apply-templates/></legend></xsl:otherwise>
       </xsl:choose>
     </xsl:template>
 
@@ -106,11 +85,11 @@
     <xsl:template match="ead:c">
       <xsl:variable name="id" select="@id"/>
       <xsl:variable name="depth" select="count(ancestor::ead:c) + 1"/>
-      <div id="{$id}" class="component_part clearfix c0{$depth}">
+      <div id="{$id}" class="component c0{$depth}">
 
         <!-- Each field in the component gets formatted here -->
-        <h3><xsl:apply-templates select="ead:did/ead:unittitle"/><xsl:if test="ead:did/ead:unittitle != '' and ead:did/ead:unitdate">, </xsl:if><xsl:apply-templates select="ead:did/ead:unitdate"/></h3>
-        <dl class="defList">
+        <h4><xsl:apply-templates select="ead:did/ead:unittitle"/><xsl:if test="ead:did/ead:unittitle != '' and ead:did/ead:unitdate">, </xsl:if><xsl:apply-templates select="ead:did/ead:unitdate"/></h4>
+        <dl class="dl-horizontal">
 
           <!-- container field -->
           <xsl:apply-templates select="ead:did/ead:container"/>
@@ -185,7 +164,7 @@
 
     <!-- bioghist bits... -->
     <xsl:template match="ead:chronlist">
-      <dl class="defList"><xsl:apply-templates/></dl>
+      <dl class="dl-horizontal"><xsl:apply-templates/></dl>
     </xsl:template>
 
     <xsl:template match="ead:chronitem/ead:date">

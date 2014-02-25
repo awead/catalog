@@ -259,4 +259,20 @@ describe "EAD display" do
     page.should have_content("Online")
   end
 
+  it "should display the full finding aid" do
+    visit catalog_path("ARC-0037", {:full => true})
+    page.should have_content("Color pinup")
+  end
+
+  it "should toggle the display between full and default finding aid views" do
+    visit catalog_path("ARC-0037")
+    within(:css, "#record_controls") do
+      page.should have_content("Full")
+    end
+    visit catalog_path("ARC-0037", {:full => true})
+    within(:css, "#record_controls") do
+      page.should have_content("Default")
+    end
+  end
+
 end

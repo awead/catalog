@@ -33,6 +33,10 @@ module EadHelper
     end
   end
 
+  def render_finding_aid_header
+    render "catalog/_show_partials/_finding_aid_partials/header"
+  end
+
   def is_a_finding_aid?
     ["Archival Collection", "Archival Item"].include? @document[Solrizer.solr_name("format", :displayable)].first
   end
@@ -42,11 +46,27 @@ module EadHelper
   end
 
   def render_show_view_for_finding_aid
-    if params[:ref]
+    if params[:ref]  
       render "catalog/_show_partials/_finding_aid_partials/archival_item"
     else
       render "catalog/_show_partials/finding_aid"
     end
+  end
+
+  def render_full_finding_aid
+    render "catalog/_show_partials/full_finding_aid"
+  end
+
+  def has_html_finding_aid?
+    File.exists?(html_finding_aid)
+  end
+
+  def request_full_finding_aid?
+    params.has_key? "full"
+  end
+
+  def html_finding_aid
+    File.join(Rails.root, Rails.configuration.rockhall_config[:ead_path], (params[:id] + "_full.html"))
   end
 
   def render_collection_breadcrumb_link

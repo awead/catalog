@@ -32,7 +32,7 @@ namespace :ead do
 
   desc "Convert ead to html only"
   task :to_html => :environment do
-    raise "Please specify a path to your ead, ex. EAD=<path/to/ead.xml" unless ENV['EAD']
+    ENV['EAD'] = "spec/fixtures/ead" unless ENV['EAD']
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
         puts "Converting #{File.basename(file)} to html"
@@ -45,7 +45,7 @@ namespace :ead do
 
   desc "Convert ead to json only"
   task :to_json => :environment do
-    raise "Please specify your ead, ex. EAD=<path/to/ead.xml" unless ENV['EAD']
+    ENV['EAD'] = "spec/fixtures/ead" unless ENV['EAD']
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
         puts "Converting #{File.basename(file)} to json"

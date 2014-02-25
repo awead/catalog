@@ -1,0 +1,4 @@
+<%= content_tag :h3 do %>
+  <%= image_tag document_format_to_filename %>
+  <%= @document.get(Solrizer.solr_name("heading", :displayable)).html_safe %>
+<% end %>
