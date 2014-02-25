@@ -9,6 +9,12 @@ $catalog-darker-red:  #1f0101;
 $catalog-dark-red:    #7d0e0e;
 $catalog-red:         #590000;
 $catalog-light-red:   #ac1313;
+$component-c1:        lighten(#000, 65%);
+$component-c2:        lighten(#000, 80%);
+$component-c3:        lighten(#000, 90%);
+$component-c4:        lighten(#000, 95%);
+$component-c5:        lighten(#000, 97%);
+$component-c6:        lighten(#000, 100%);
 
 // Asign bootstrap's colors to ours
 $brand-primary:                 $catalog-red;
@@ -226,3 +232,44 @@ a.glyphicon {
 /* clicked state */
 
 /* active item */
+
+// Full finding aid display
+
+div.component {
+  padding: 10px;
+  &.c01 {
+    background-color: $component-c1;
+    border-color: darken($component-c1, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c1, 100%);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c1, 10%);
+  }
+  &.c02 {
+    background-color: $component-c2;
+    border-color: darken($component-c2, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c2, 100%);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c2, 10%);
+  }
+  &.c03 {
+    background-color: $component-c3;
+    border-color: darken($component-c3, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c3, 100%);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c3, 10%);
+  }
+  &.c04 {
+    background-color: $component-c4;
+    border-color: darken($component-c4, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c4, 100%);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c4, 10%);
+  }
+  &.c05 {
+    border: 1px solid $component-c5;
+    border-color: darken($component-c5, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c5, 100%);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c5, 10%);
+  }
+}

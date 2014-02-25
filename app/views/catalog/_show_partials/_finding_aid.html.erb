@@ -1,8 +1,5 @@
-<%= content_tag :h3 do %>
-  <%= image_tag document_format_to_filename %>
-  <%= @document.get(Solrizer.solr_name("heading", :displayable)).html_safe %>
-<% end %>
-    
+<%= render_finding_aid_header %>
+
 <%= content_tag :div, :id => "fa", :class => "tab-content" do %>
 
   <%= render_ead_html %>
@@ -30,4 +27,5 @@
     <% end %>
   
   <% end %>
+
 <% end %>

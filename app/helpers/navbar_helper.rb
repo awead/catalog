@@ -53,7 +53,11 @@ module NavbarHelper
   end
 
   def render_fa_view_link
-    content_tag :li, link_to(t("finding_aid"), catalog_path(params[:id], :format => :xhtml), {:target => "_blank" })
+    if request_full_finding_aid?
+      content_tag :li, link_to(t("finding_aid"), catalog_path(params[:id]))
+    else
+      content_tag :li, link_to(t("full_finding_aid"), catalog_path(params[:id], {:full => true}))
+    end
   end
 
   def render_previous_document_link
