@@ -19,3 +19,4 @@ en:
   zero_results:
     see_collection: 'View all items in this collection'
   email: '<span class="glyphicon glyphicon-envelope"></span> Email'
+  show_more: 'Show more'

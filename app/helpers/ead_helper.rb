@@ -100,9 +100,7 @@ module EadHelper
 
   def render_show_more_components_button
     if @numfound > @components.length
-      content_tag :div, :class => "row-fluid" do
-        content_tag :button, "more", :id => "show_more_components", :class => "btn span12"
-      end
+      content_tag :button, t("show_more"), :id => "show_more_components", :class => "btn btn-default col-xs-12"
     end
   end
 

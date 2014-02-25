@@ -136,7 +136,7 @@ function addMoreComponents(event) {
   var jqxhr = $.get(url)
       .done(function(data) {
         if (data != '') {
-          $('#inventory_table').append(data);
+          $('table#inventory_table tbody').append(data);
           if ( $('#inventory_table tr').last().data('row') + 1 === $('#inventory_table').data('numfound') )
             $('#show_more_components').toggleClass('hidden');
         }
