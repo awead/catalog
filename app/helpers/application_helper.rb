@@ -11,11 +11,15 @@ module ApplicationHelper
   end
 
   def render_header
-    if params[:action].match("index") && !params[:q] && !params[:f]
+    if front_page?
       render "shared/header"
     else
       render "shared/navbar"
     end
+  end
+
+  def front_page?
+    params[:controller].match("catalog") && params[:action].match("index") && !has_search_parameters?
   end
 
   # COinS, for Zotero among others. 
