@@ -1,5 +1,5 @@
 <% component[Solrizer.solr_name("location", :displayable)].each_with_index do |location, index| %>
-  <%= content_tag :div, :class => "block" do %>
+  <%= content_tag :div, :class => "block location" do %>
     <%= component[Solrizer.solr_name("location", :displayable)][index] %>
     <%= content_tag :span, :class => "label label-default" do %>
       <%= component[Solrizer.solr_name("material", :displayable)][index] %>

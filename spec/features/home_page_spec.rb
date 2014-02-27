@@ -10,10 +10,6 @@ describe "Home page" do
     page.should have_content("Limit your search")
   end
 
-  it "should have a banner" do
-    page.should have_xpath("//img[@alt='Rock and Roll Hall of Fame' and @src = '/assets/header_bg.png']")
-  end
-
   it "should have a search window" do
     page.should have_content("Search")
   end

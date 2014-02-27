@@ -26,6 +26,9 @@ $dropdown-link-hover-color:     #ffffff;
 
 // Other settings
 $navbar-height: 40px;
+$font-size-base: 13px;
+$headings-line-height: 1;
+$line-height-base: 1.36;
 
 // -----------------------------------------------------
 // Heere begineth the sass
@@ -37,11 +40,11 @@ $navbar-height: 40px;
 // Bootstrap overrides
 
 h1, h2, h3 {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .navbar-inverse { 
-  @include gradient-vertical($catalog-red, $catalog-darker-red);
+  @include gradient-vertical($catalog-darker-red, $catalog-red);
   border-bottom-color: $catalog-darker-red;
   border-bottom-style: solid;
   border-bottom-width: 2px;
@@ -115,12 +118,42 @@ a.glyphicon {
   padding-left: 20px;
 }
 
+.location {
+  margin-bottom: 2px;
+}
+
 #header {
+
   background-image: asset-url("header_tile_bg.png");
   background-repeat: repeat-x;
-  height: 85px;
-  width: 100%;
+  
+  .banner {
+    background-repeat:no-repeat;
+    background-position: center center;
+    @media (min-width: $screen-lg) {
+      background-image: asset-url("header-lg.jpg");
+      height: 102px;
+      width: 100%;
+    }
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      background-image: asset-url("header-md.jpg");
+      height: 76px;
+      width: 100%;
+    }
+    @media (min-width: $screen-sm) and (max-width: $screen-md) {
+      background-image: asset-url("header-sm.jpg");
+      height: 64px;
+      width: 100%;
+    }
+    @media (max-width: $screen-sm) {
+      background-image: asset-url("header-xs.jpg");
+      height: 46px;
+      width: 100%;
+    }
+  }
+
 }
+
 
 #main {
   margin-top: 20px;
