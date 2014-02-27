@@ -6,7 +6,9 @@
     <span class="block"><%= link_to "How to use the catalog" %></span>
     <span class="block"><%= link_to "Search tips" %></span>
     <span class="block"><%= link_to "Login" %></span>
-    <span class="block"><%= link_to "Advanced Search" %></span>
+    <% if Rails.env.match "development" %>
+      <span class="block"><%= link_to "Advanced Search", advanced_search_path %></span>
+    <% end %>
   <% end %>
 <% end %>
 <%= content_tag :div, :class => "row" do %>

@@ -84,8 +84,4 @@ module NavbarHelper
     end
   end
 
-  def front_page?
-    params[:controller].match("catalog") && params[:action].match("index") && !has_search_parameters?
-  end
-
 end
