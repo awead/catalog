@@ -373,6 +373,32 @@
         />
       </analyzer>
     </fieldType>
+
+    <!-- 
+      Sorting field:
+        - preserves the string
+        - downcases everything
+        - removes leading and trailing whitespace
+        - removes any characters except letters and numbers
+    -->
+    <fieldType name="alphaNumSort" class="solr.TextField" sortMissingLast="true" omitNorms="true">
+      <analyzer>
+        <!-- KeywordTokenizer does no actual tokenizing, so the entire
+             input string is preserved as a single token
+          -->
+        <tokenizer class="solr.KeywordTokenizerFactory"/>
+        <!-- The LowerCase TokenFilter does what you expect, which can be
+             when you want your sorting to be case insensitive
+          -->
+        <filter class="solr.LowerCaseFilterFactory" />
+        <!-- The TrimFilter removes any leading or trailing whitespace -->
+        <filter class="solr.TrimFilterFactory" />
+        <!-- Remove any non-alphanumeric characters -->
+        <filter class="solr.PatternReplaceFilterFactory"
+                pattern="([^a-z0-9])" replacement="" replace="all"
+        />
+      </analyzer>
+    </fieldType>
     
     <fieldtype name="phonetic" stored="false" indexed="true" class="solr.TextField" >
       <analyzer>
@@ -891,7 +917,7 @@
     <dynamicField name="*_ssim"  type="string"  stored="true"  indexed="true"  multiValued="true"  />
     <!-- sortable -->
     <dynamicField name="*_tei"   type="text_en"       stored="false" indexed="true"  multiValued="false" />
-    <dynamicField name="*_si"    type="alphaOnlySort" stored="false" indexed="true"  multiValued="false" />
+    <dynamicField name="*_si"    type="alphaNumSort"  stored="false" indexed="true"  multiValued="false" />
     <dynamicField name="*_dti"   type="date"          stored="false" indexed="true"  multiValued="false" />
     <dynamicField name="*_ii"    type="int"           stored="false" indexed="true"  multiValued="false" />
     <!-- facetable -->

@@ -18,11 +18,11 @@ describe "Solr results" do
     query.sort = (Solrizer.solr_name("title", :sortable) + " ASC")
     solr_response = Blacklight.solr.get "select", :params => query.instance_values
     docs = solr_response["response"]["docs"]
-    docs[0]["id"].should == "RG-0008ref6"
-    docs[1]["id"].should == "RG-0008ref8"
-    docs[2]["id"].should == "RG-0008ref9"
-    docs[3]["id"].should == "RG-0008ref10"
-    docs[4]["id"].should == "ARC-0161ref280"
+    docs[0]["id"].should == "RG-0008ref7"
+    docs[1]["id"].should == "ARC-0006ref343"
+    docs[2]["id"].should == "ARC-0258ref9"
+    docs[3]["id"].should == "RG-0008ref4"
+    docs[4]["id"].should == "ARC-0006ref344"
   end
 
 end
