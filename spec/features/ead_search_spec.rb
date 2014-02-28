@@ -72,8 +72,8 @@ describe "EAD searching" do
   it "should not display titles for archival items in search results" do
     visit root_path
     click_link "Archival Item"
-    within(:css, "div#RG-0008ref6") do
-      page.should_not have_xpath('//dd', :text => '311', :visible => true)
+    within(:css, "div#RG-0008ref7") do
+      page.should_not have_xpath('//dd', :text => '10,000 Maniacs', :visible => true)
     end
   end
 

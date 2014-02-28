@@ -76,6 +76,7 @@ describe "Bib. facets" do
   it "displays subject headings for library materials are under the topic facet" do
     visit root_path
     click_link "Inductee"
+    click_link "Book"
     page.should have_content("All you needed was love : the Beatles after the Beatles / John Blake")
   end
 
