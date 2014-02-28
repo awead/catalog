@@ -1,3 +1,8 @@
+<%= content_tag :div, :class => "visible-print" do %>
+  <%= render_finding_aid_header %>
+  <%= content_tag :legend, "Contents" %>
+<% end %>
+
 <%= content_tag :ul, :class => "breadcrumb" do %>
   <!-- Link to collection -->
   <%= content_tag :li do %>

@@ -6,7 +6,7 @@
 
 <% else %>
 
-  <%= content_tag :div, :class => "col-sm-4 col-md-3 col-lg-2" do %>
+  <%= content_tag :div, :id => "ead_sidebar", :class => "col-sm-4 col-md-3 col-lg-2" do %>
     <%= content_tag :ul, :class => "nav nav-tabs nav-stacked" do %>
       <%= render_nav_link "summary", {:class => "active"} %>
       <%= render_nav_link "description" %>
