@@ -21,12 +21,7 @@ describe BlacklightHelper do
 
   describe "#render_field_value" do
     it "should join and html-safe values" do
-      expect(helper.render_field_value(["a", "b"])).to eq "a<br />b"
-    end
-
-    it "should include itemprop vaules" do
-      html = '<span class="itemprop" itemprop="foo">c</span><span class="itemprop" itemprop="foo">d</span>'
-      expect(helper.render_field_value(["c", "d"], double(:itemprop => "foo"))).to eq html
+      expect(helper.render_field_value(["a", "b"])).to eq "a<br/>b"
     end
   end
 
