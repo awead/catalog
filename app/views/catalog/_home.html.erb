@@ -1,23 +1,15 @@
-<%= content_tag :div, :class => "row" do %>
-  <%= content_tag :div, :class => "col-xs-12" do %>
-    <%= content_tag :h1, "Search" %>
-    <%= content_tag :p, "Search the catalog for books, music, magazines, and archival collections" %>
-    <%= render_search_bar %>
-    <span class="block"><%= link_to "How to use the catalog" %></span>
-    <span class="block"><%= link_to "Search tips" %></span>
-    <span class="block"><%= link_to "Login" %></span>
-    <% if Rails.env.match "development" %>
-      <span class="block"><%= link_to "Advanced Search", advanced_search_path %></span>
-    <% end %>
-  <% end %>
+<%= content_tag :h1, "Discover" %>
+<%= content_tag :div, :class => "col-xs-6" do %>
+  <%= content_tag :h3, "Resources" %>
+  <span class="block"><%= link_to "Archival Collections" %></span>
+  <span class="block"><%= link_to "Research Guides" %></span>
+  <span class="block"><%= link_to "Databases" %></span>
+  <span class="block"><%= link_to "Inductees" %></span>
 <% end %>
-<%= content_tag :div, :class => "row" do %>
-  <%= content_tag :div, :class => "col-xs-12" do %>
-    <%= content_tag :h1, "Browse" %>
-    <span class="block"><%= link_to "Archival Colletions" %></span>
-    <span class="block"><%= link_to "Research Guides" %></span>
-    <span class="block"><%= link_to "Databases" %></span>
-    <span class="block"><%= link_to "List of Inductees" %></span>
-    <span class="block"><%= link_to "New Aquisitions" %></span>
-  <% end %>
+<%= content_tag :div, :class => "col-xs-6" do %>
+  <%= content_tag :h3, "User Guides" %>
+  <span class="block"><%= link_to "Using the Catalog" %></span>
+  <span class="block"><%= link_to "Using Archives" %></span>
+  <span class="block"><%= link_to "Access" %></span>
+  <span class="block"><%= link_to "Contact Us" %></span>
 <% end %>

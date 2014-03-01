@@ -174,7 +174,7 @@ en:
       documents:
         counter: '%{counter}. '
       facets:
-        title: 'Limit your search'
+        title: 'Browse'
         sort:
           count: 'Numerical Sort'
           index: 'A-Z Sort'

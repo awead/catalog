@@ -3,6 +3,7 @@
 en:
   start_over: 'Start Over'
   account: 'Account <b class="caret"></b>'
+  account_login: 'Account Login'
   user_registration: 'Account settings'
   print: '<span class="glyphicon glyphicon-print"></span> Print'
   export: '<span class="glyphicon glyphicon-export"></span> Export <b class="caret"></b>'
@@ -13,7 +14,7 @@ en:
   finding_aid: 'Default'
   bookmarks: 'Bookmarks <b class="caret"></b>'
   edit: 'Edit'
-  more_options: 'More Options'
+  more_options: 'Advanced Search'
   advanced:
     page_title: 'Advanced Search'
     header: 'Advanced Search Options'

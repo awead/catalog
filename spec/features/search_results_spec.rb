@@ -10,7 +10,7 @@ describe "Search results page" do
     page.should have_css("nav.navbar-inverse")
     within(:css, "ul.navbar-right") do
       page.should have_content("Start Over")
-      page.should have_content("More Options")
+      page.should have_content("Advanced Search")
       page.should have_content("Account")
     end
   end

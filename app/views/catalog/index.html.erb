@@ -1,10 +1,10 @@
 <% @page_title = t("blacklight.search.title", :application_name => application_name) %>
 
-<%= content_tag :div, :id => "sidebar", :class => "col-sm-4" do %>
- <%= render "search_sidebar" %>
+<%= content_tag :div, :id => "sidebar", :class => "col-sm-3" do %>
+ <%= render_facets if has_facet_values? %>
 <% end %>
 
-<%= content_tag :div, :id => "content", :class => "col-sm-8"  do %>
+<%= content_tag :div, :id => "content", :class => "col-sm-9"  do %>
 
   <% unless has_search_parameters? %>
 

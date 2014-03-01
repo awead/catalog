@@ -18,8 +18,16 @@ module ApplicationHelper
     end
   end
 
+  def render_front_page_search_form
+    render "shared/front_page_search" if front_page?
+  end
+
   def front_page?
     params[:controller].match("catalog") && params[:action].match("index") && !has_search_parameters?
+  end
+
+  def render_facets
+    render "catalog/facets"
   end
 
   # COinS, for Zotero among others. 
