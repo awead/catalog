@@ -1,8 +1,16 @@
-<% if has_facet_values?  %>
-  <%= content_tag :div, :id=> "facets", :class => "facets sidenav" do %>
-    <%= content_tag :h4, t('blacklight.search.facets.title') %>
+<%= content_tag :div, :id => "facets", :class => "facets sidenav" do %>
+  
+  <%- # toggle the facets in the mobile layout %>
+  <%= content_tag :button, :type => "button", :class => "facets-toggle", :data => { :toggle => "collapse", :target => "#facet-panel-collapse" } do %>
+    <%= content_tag :span, "Toggle facets", :class => "sr-only" %>
+    <%= content_tag :span, nil, :class => "icon-bar" %>
+    <%= content_tag :span, nil, :class => "icon-bar" %>
+    <%= content_tag :span, nil, :class => "icon-bar" %>
   <% end %>
+  <%= content_tag :h1, t('blacklight.search.facets.title') %>
 
-  <%= content_tag :div, render_facet_partials, :class => "panel-group" %>
+  <%= content_tag :div, :id => "facet-panel-collapse", :class => "collapse panel-group" do %>
+    <%= render_facet_partials %>
+  <% end %>
 
 <% end %>

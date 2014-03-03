@@ -6,16 +6,18 @@ describe "Home page" do
     visit root_path
   end
 
-  it "should display facets" do
-    page.should have_content("Limit your search")
+  it "should have a search banner" do
+    within(:css, "#search_banner") do
+      page.should have_content("Search...")
+      page.should have_content("Advanced Search")
+      page.should have_content("Account Login")
+    end
   end
 
-  it "should have a search window" do
-    page.should have_content("Search")
-  end
-
-  it "should have a browse window" do
-    page.should have_content("Browse")
+  it "should have a column for browsing facets" do
+    within(:css, "#sidebar") do
+      page.should have_content("Browse")
+    end
   end
 
   it "should have a modal display window" do
@@ -25,6 +27,14 @@ describe "Home page" do
 
   it "should not display the navbar" do
     page.should_not have_css("nav.navbar-inverse")
+  end
+
+  it "should have links for discovering content" do
+    within(:css, "#content") do
+      page.should have_content("Discover")
+      page.should have_content("Resources")
+      page.should have_content("User Guides")
+    end
   end
 
 end
