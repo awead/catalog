@@ -1,4 +1,7 @@
 <%= content_tag :h1, "Discover" %>
+<%= content_tag :div, :class => "col-xs-12" do %>
+  <%= render "shared/slideshow" %>
+<% end %>
 <%= content_tag :div, :class => "col-xs-6" do %>
   <%= content_tag :h3, "Resources" %>
   <span class="block"><%= link_to "Archival Collections" %></span>
