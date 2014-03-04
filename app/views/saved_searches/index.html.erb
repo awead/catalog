@@ -1,4 +1,8 @@
-<%= content_tag :div, :id => "saved_searches", :class => "span12" do %>
-  <%= content_tag :h1, t('blacklight.saved_searches.title') %>
-  <%= render_saved_searches_table %> 
+<%= content_tag :div, :id => "content", :class => "col-md-9" do %>
+  <%= content_tag :div, :class => "panel panel-default" do %>
+    <%= content_tag :div, :class => "panel-heading" do %>
+      <%= content_tag :h1, t("blacklight.saved_searches.title") %>
+    <% end %>
+    <%= render_saved_searches_table %>
+  <% end %>
 <% end %>

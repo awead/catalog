@@ -1,29 +1,32 @@
-<%= content_tag :h2, t("devise.sessions.heading") %>
+<%= content_tag :div, :class => "col-sm-12" do %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form-horizontal" }) do |f| %>
-  <%= content_tag :div, :class => "control-group" do %>
-    <%= f.label :email, :class => "control-label" %>
-    <%= content_tag :div, :class => "controls" do %>
-      <%= f.email_field :email, :autofocus => true %>
+  <%= content_tag :h2, t("devise.sessions.heading") %>
+
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form-horizontal" }) do |f| %>
+    <%= content_tag :div, :class => "form-group" do %>
+      <%= f.label :email, :class => "col-sm-2 control-label" %>
+      <%= content_tag :div, :class => "col-sm-5" do %>
+        <%= f.email_field :email, :class => "form-control", :autofocus => true %>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <%= content_tag :div, :class => "control-group" do %>
-    <%= f.label :password, :class => "control-label" %>
-    <%= content_tag :div, :class => "controls" do %>
-      <%= f.password_field :password, :autocomplete => "off" %>
-    <% end %>
-  <% end %>
+    <%= content_tag :div, :class => "form-group" do %>
+      <%= f.label :password, :class => "col-sm-2 control-label" %>
+      <%= content_tag :div, :class => "col-sm-5" do %>
+        
+        <%= f.password_field :password, :class => "form-control", :autocomplete => "off" %>
 
-    <%= content_tag :div, :class => "control-group" do %>
-      <%= content_tag :div, :class => "controls" do %>
         <% if devise_mapping.rememberable? %>
           <%= content_tag :label, :class => "checkbox" do %>
             <%= f.check_box :remember_me %> <%= t("devise.sessions.remember") %>
           <% end %>
         <% end %>
-        <%= f.submit t("devise.sessions.submit"), :class => "btn" %>
+
       <% end %>
     <% end %>
+
+    <%= f.submit t("devise.sessions.submit"), :class => "btn btn-primary" %>
+
+  <% end %>
 
 <% end %>

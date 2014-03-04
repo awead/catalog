@@ -79,8 +79,9 @@ module NavbarHelper
   end
 
   def render_more_options_link
+    path = params["controller"].match("catalog") ? params.merge(:controller=>"advanced", :action=>"index") : advanced_search_path
     content_tag :li do
-      link_to t("more_options"), params.merge(:controller=>"advanced", :action=>"index") , :class=>"advanced_search"
+      link_to t("more_options"), path, :class=>"advanced_search"
     end
   end
 
