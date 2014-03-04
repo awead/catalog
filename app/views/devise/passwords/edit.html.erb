@@ -1,29 +1,23 @@
-<%= content_tag :h1, t("devise.passwords.edit.heading") %>
+<%= content_tag :div, :class => "col-sm-12" do %>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put, :class => "form form-horizontal" }) do |f| %>
+  <%= content_tag :h1, t("devise.passwords.edit.heading") %>
   
-  <%= render_error_messages %>
-  
-  <%= f.hidden_field :reset_password_token %>
-
-  <%= content_tag :div, :class => "control-group" do %>
-    <%= f.label :password, :class => "control-label" %>
-    <%= content_tag :div, :class => "controls" do %>
-      <%= f.password_field :password, :autocomplete => "off" %>
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put, :class => "form-horizontal" }) do |f| %>
+    <%= render_error_messages %>
+    <%= f.hidden_field :reset_password_token %>
+    <%= content_tag :div, :class => "form-group" do %>
+      <%= f.label :password, :class => "col-sm-2 control-label" %>
+      <%= content_tag :div, :class => "col-sm-5" do %>
+        <%= f.password_field :password, :class => "form-control", :autocomplete => "off", :autofocus => true %>
+      <% end %>
     <% end %>
-  <% end %>
-
-  <%= content_tag :div, :class => "control-group" do %>
-    <%= f.label :password_confirmation, :class => "control-label" %>
-    <%= content_tag :div, :class => "controls" do %>
-      <%= f.password_field :password_confirmation, :autocomplete => "off" %>
+    <%= content_tag :div, :class => "form-group" do %>
+      <%= f.label :password_confirmation, :class => "col-sm-2 control-label" %>
+      <%= content_tag :div, :class => "col-sm-5" do %>
+        <%= f.password_field :password_confirmation, :class => "form-control", :autocomplete => "off" %>
+      <% end %>
     <% end %>
-  <% end %>
-
-  <%= content_tag :div, :class => "control-group" do %>
-    <%= content_tag :div, :class => "controls" do %>
-      <%= f.submit t("devise.passwords.edit.submit"), :class => "btn" %>
-    <% end %>
+    <%= f.submit t("devise.passwords.edit.submit"), :class => "btn btn-primary" %>
   <% end %>
 
 <% end %>

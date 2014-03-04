@@ -1,20 +1,16 @@
-<%= content_tag :h1, t("devise.passwords.new.heading") %>
+<%= content_tag :div, :class => "col-sm-12" do %>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => "form form-horizontal" }) do |f| %>
+  <%= content_tag :h1, t("devise.passwords.new.heading") %>
   
-  <%= render_error_messages %>
-
-  <%= content_tag :div, :class => "control-group" do %>
-    <%= f.label :email, :class => "control-label" %>
-    <%= content_tag :div, :class => "controls" do %>
-      <%= f.email_field :email, :autofocus => true %>
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => "form-horizontal" }) do |f| %>  
+    <%= render_error_messages %>
+    <%= content_tag :div, :class => "form-group" do %>
+      <%= f.label :email, :class => "col-sm-2 control-label" %>
+      <%= content_tag :div, :class => "col-sm-5" do %>
+        <%= f.email_field :email, :class => "form-control", :autofocus => true %>
+      <% end %>
     <% end %>
-  <% end %>
-
-  <%= content_tag :div, :class => "control-group" do %>
-    <%= content_tag :div, :class => "controls" do %>
-      <%= f.submit t("devise.passwords.new.submit"), :class => "btn" %>
-    <% end %>
+    <%= f.submit t("devise.passwords.new.submit"), :class => "btn btn-primary" %>
   <% end %>
 
 <% end %>

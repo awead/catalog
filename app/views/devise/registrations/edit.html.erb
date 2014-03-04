@@ -1,60 +1,60 @@
-<%= content_tag :h1, t("devise.edit.heading") %>
+<%= content_tag :div, :class => "col-sm-12" do %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal" }) do |f| %>
+  <%= content_tag :h1, t("devise.edit.heading") %>
 
-  <%= render_error_messages %>
-  <%= render_waiting_on_confirmation %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal" }) do |f| %>
 
-  <%= content_tag :fieldset do %>
+    <%= render_error_messages %>
+    <%= render_waiting_on_confirmation %>
 
-    <%= content_tag :legend, t("devise.edit.email_legend") %>
+    <%= content_tag :fieldset do %>
 
-    <%= content_tag :div, :class => "control-group" do %>
-      <%= f.label :email, :class => "control-label" %>
-      <%= content_tag :div, :class => "controls" do %>
-        <%= f.email_field :email, :autofocus => true %>
+      <%= content_tag :legend, t("devise.edit.email_legend") %>
+
+      <%= content_tag :div, :class => "form-group" do %>
+        <%= f.label :email, :class => "col-sm-2 control-label" %>
+        <%= content_tag :div, :class => "col-sm-5" do %>
+          <%= f.email_field :email, :class => "form-control", :autofocus => true %>
+        <% end %>
       <% end %>
+
     <% end %>
 
-  <% end %>
+    <%= content_tag :fieldset do %>
 
-  <%= content_tag :fieldset do %>
+      <%= content_tag :legend, t("devise.edit.password_legend") %>
+      <%= content_tag :p, t("devise.edit.password_description") %>
 
-    <%= content_tag :legend, t("devise.edit.password_legend") %>
-    <%= content_tag :p, t("devise.edit.password_description") %>
-
-    <%= content_tag :div, :class => "control-group" do %>
-      <%= f.label :password, :class => "control-label" %>
-      <%= content_tag :div, :class => "controls" do %>
-        <%= f.password_field :password, :autocomplete => "off" %>
+      <%= content_tag :div, :class => "form-group" do %>
+        <%= f.label :password, :class => "col-sm-2 control-label" %>
+        <%= content_tag :div, :class => "col-sm-5" do %>
+          <%= f.password_field :password, :class => "form-control", :autocomplete => "off" %>
+        <% end %>
       <% end %>
+
+      <%= content_tag :div, :class => "form-group" do %>
+        <%= f.label :password_confirmation, :class => "col-sm-2 control-label" %>
+        <%= content_tag :div, :class => "col-sm-5" do %>
+          <%= f.password_field :password_confirmation, :class => "form-control", :autocomplete => "off" %>
+        <% end %>
+      <% end %>
+
     <% end %>
 
-    <%= content_tag :div, :class => "control-group" do %>
-      <%= f.label :password_confirmation, :class => "control-label" %>
-      <%= content_tag :div, :class => "controls" do %>
-        <%= f.password_field :password_confirmation, :autocomplete => "off" %>
+    <%= content_tag :fieldset do %>
+
+      <%= content_tag :legend, t("devise.edit.confirmation_legend")%>
+      <%= content_tag :p, t("devise.edit.confirmation_description") %>
+
+      <%= content_tag :div, :class => "form-group" do %>
+        <%= f.label :current_password, :class => "col-sm-2 control-label" %>
+        <%= content_tag :div, :class => "col-sm-5" do %>
+          <%= f.password_field :current_password, :class => "form-control", :autocomplete => "off" %>
+        <% end %>
       <% end %>
-    <% end %>
 
-  <% end %>
+      <%= f.submit t("devise.edit.submit"), :class => "btn btn-primary" %>
 
-  <%= content_tag :fieldset do %>
-
-    <%= content_tag :legend, t("devise.edit.confirmation_legend")%>
-    <%= content_tag :p, t("devise.edit.confirmation_description") %>
-
-    <%= content_tag :div, :class => "control-group" do %>
-      <%= f.label :current_password, :class => "control-label" %>
-      <%= content_tag :div, :class => "controls" do %>
-        <%= f.password_field :current_password, :autocomplete => "off" %>
-      <% end %>
-    <% end %>
-
-    <%= content_tag :div, :class => "control-group" do %>
-      <%= content_tag :div, :class => "controls" do %>
-        <%= f.submit t("devise.edit.submit"), :class => "btn" %>
-      <% end %>
     <% end %>
 
   <% end %>
