@@ -1,12 +1,3 @@
-<%= content_tag :div, :class => "row-fluid" do %> 
-  <%= render "sort_and_per_page" %>
-<% end %>
-<%= content_tag :div, :class => "row-fluid" do %>
-  <%= render "results_pagination" %>
-<% end %>
-
+<%= render "sort_and_per_page" %>
 <%= render_document_index %>
-  
-<%= content_tag :div, :class => "row-fluid" do %>
-  <%= render "results_pagination" %>
-<% end %>
+<%= render "results_pagination" %>
