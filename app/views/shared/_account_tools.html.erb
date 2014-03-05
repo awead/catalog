@@ -1,12 +1,4 @@
 <%= content_tag :li, :class => "dropdown" do %>
   <%= link_to t("account").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown"} %>
-  <%= content_tag :ul, :class => "dropdown-menu" do %>
-    <%= content_tag :li, link_to(t("blacklight.header_links.search_history"), search_history_path) %>
-    <%= content_tag :li, link_to(t("blacklight.header_links.bookmarks"), bookmarks_path) if render_bookmarks_control? %>
-    <%= content_tag :li, link_to(t("blacklight.header_links.saved_searches"), saved_searches_path) if has_user_authentication_provider? and current_user %>
-    <%= content_tag :li, link_to(t("edit"), edit_user_registration_path) if current_user %>
-    <%= content_tag :li, nil, :class => "divider" %>
-    <%= render_login_or_logout %>
-    <%= render_devise_links unless defined?(devise_mapping).nil? %>
-  <% end %>
+  <%= render "shared/account_tools_list" %>
 <% end %>

@@ -28,8 +28,8 @@
 
   <%= content_tag :div, :class => "col-lg-3 col-md-4 col-sm-5" do %>
     <%= content_tag :span, :class => "block" do %>
-      <%= content_tag :button, t("more_options"), :class => "btn btn-primary search-btn" %>
-      <%= content_tag :button, t("account_login"), :class => "btn btn-primary search-btn" %>
+      <%= link_to t("more_options"), advanced_search_path, :class => "btn btn-primary search-btn" %>
+      <%= render_front_page_account_tools %>
     <% end %>
   <% end %>
 <% end %>
