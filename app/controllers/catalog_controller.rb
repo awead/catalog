@@ -48,7 +48,7 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.
-    config.add_facet_field solr_name("format",     :facetable), :label => "Format",             :limit => 20
+    config.add_facet_field solr_name("format",     :facetable), :label => "Format",             :limit => 20, :collapse => false
     config.add_facet_field solr_name("collection", :facetable), :label => "Collection Name",    :limit => 20
     config.add_facet_field solr_name("material",   :facetable), :label => "Archival Material",  :limit => 20
     config.add_facet_field solr_name("name",       :facetable), :label => "Name",               :limit => 20
@@ -197,7 +197,7 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("oclc",         :displayable),  :label => "OCLC No"
  
     # Fields specific to ead components
-    config.add_show_field solr_name("scopecontent",      :displayable), :label => "Scope and Content", :itemprop => "description"
+    config.add_show_field solr_name("scopecontent",      :displayable), :label => "Scope and Contents", :itemprop => "description"
     config.add_show_field solr_name("separatedmaterial", :displayable), :label => "Separated Material"
     config.add_show_field solr_name("accessrestrict",    :displayable), :label => "Access Restrictions"
     config.add_show_field solr_name("accruals",          :displayable), :label => "Accruals"
