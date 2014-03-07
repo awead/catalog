@@ -275,4 +275,9 @@ describe "EAD display" do
     end
   end
 
+  it "should display the list view of components' archival material type in parenthesis" do
+    visit catalog_path("ARC-0037/ref2214")
+    page.should have_content("(Moving Images)")
+  end
+
 end
