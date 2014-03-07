@@ -73,16 +73,16 @@ describe "EAD display" do
     page.should have_content("Biographical Note")
   end
 
-  it "should show Related materials and accruals (BL-115)" do
+  it "should show accruals under Colection History (BL-418)" do
     visit catalog_path("ARC-0006")
-    click_link "Description"
-    page.should have_content("Related materials providing content on Alan Freed may be found in the following collections")
+    click_link "Collection History"
+    page.should have_content("Accruals to the collection are located in Series VII.")
   end
 
-  it "should show separated materials within Description" do
+  it "should show separated materials within Collection History (BL-418)" do
     visit catalog_path("ARC-0003")
-    click_link "Description"
-    page.should have_content("Some print and audiovisual materials have been transferred to the library collection")
+    click_link "Collection History"
+    page.should have_content("Some print and audiovisual materials have been transferred to the library collection.")
   end
 
   it "should show access restrictions within Access and Use" do
@@ -206,7 +206,8 @@ describe "EAD display" do
       page.should have_content("Size:")
       page.should have_content("Collection Number:")
       page.should have_content("Language(s):")
-      page.should have_content("Processing Information:")
+      page.should have_content("Abstract:")
+      page.should have_content("Finding Aid Permalink:")
     end
     page.should_not have_content("Colletion Overview")
   end
@@ -217,10 +218,11 @@ describe "EAD display" do
     page.should have_content("Administrative History")
     visit catalog_path("ARC-0161")
     click_link "Description"
-    page.should have_content("Collection Overview")
     page.should have_content("Biographical Note")
-    page.should have_content("Related Materials")
     page.should have_content("Bibliography")
+    visit catalog_path("ARC-0001")
+    click_link "Description"
+    page.should have_content("Scope and Contents note")
   end
 
   it "should display fields in the Collection History tab" do
@@ -236,16 +238,14 @@ describe "EAD display" do
     click_link "Access and Use"
     page.should have_content("Access Restrictions")
     page.should have_content("Use Restrictions")
-    page.should have_content("Existence and Location of Originals")
-    page.should have_content("Preferred Citation")
   end
 
   it "should display headings" do
     visit catalog_path("ARC-0003")
     click_link "Find More"
-    page.should have_content("Name:")
+    page.should have_content("Names:")
     page.should have_content("Subjects:")
-    page.should have_content("Genre:")
+    page.should have_content("Formats:")
   end
 
   it "should have a tab for searchign within the collection" do

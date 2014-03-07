@@ -15,27 +15,29 @@
       <div class="tab-pane active" id="summary">
         <legend>Summary</legend>
         <dl id="geninfo" class="dl-horizontal">
+          <dt>Collection Number:</dt>
+          <dd><xsl:apply-templates select="//ead:eadid"/></dd>
           <dt>Dates:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unitdate"/></dd>
           <dt>Size:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:physdesc/ead:extent"/></dd>
-          <dt>Collection Number:</dt>
-          <dd><xsl:apply-templates select="//ead:eadid"/></dd>
           <dt>Language(s):</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:langmaterial"/></dd>
-          <dt>Processing Information:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:processinfo/ead:p"/></dd>
+          <dt>Citation:</dt>
+          <dd><xsl:apply-templates select="//ead:archdesc/ead:prefercite/ead:p"/></dd>
+          <dt>Abstract:</dt>
+          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></dd>
+          <dt>Finding Aid Permalink:</dt>
+          <dd><xsl:call-template name="permalink"/></dd>
         </dl>        
       </div>
 
       <!-- Description tab -->
       <div class="tab-pane" id="description">
-        <legend>Collection Overview</legend>
-        <p><span itemprop="description"><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></span></p>
+        <xsl:apply-templates select="//ead:archdesc/ead:scopecontent"/>
         <div id="bioghist">
           <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
         </div>
-        <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
         <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
       </div>
 
@@ -43,15 +45,15 @@
       <div class="tab-pane" id="history">
         <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
         <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
         <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
+        <xsl:apply-templates select="//ead:archdesc/ead:processinfo"/>
       </div>
 
       <!-- Access and Use tab -->
       <div class="tab-pane" id="restrictions">
         <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict"/>
         <xsl:apply-templates select="//ead:archdesc/ead:userestrict"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:prefercite"/>
       </div>
                
     </xsl:template>
@@ -296,6 +298,11 @@
       <xsl:text>[</xsl:text>
       <xsl:value-of select="1+count(preceding-sibling::*)"/>
       <xsl:text>]</xsl:text>
+    </xsl:template>
+
+    <xsl:template name="permalink">
+      <xsl:variable name="eadid" select="//ead:eadid"/>
+      <a href="http://catalog.rockhall.com/catalog/{$eadid}">http://catalog.rockhall.com/catalog/<xsl:value-of select="$eadid" /></a>
     </xsl:template>
 
 </xsl:stylesheet>
