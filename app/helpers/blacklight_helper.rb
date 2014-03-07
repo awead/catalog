@@ -60,7 +60,7 @@ module BlacklightHelper
     label ||= opts[:label].call(doc, opts) if opts[:label].instance_of? Proc
     label ||= opts[:label] if opts[:label].is_a? String
     label ||= doc.id
-    render_field_value label
+    label.is_a?(Array) ? render_field_value(label.first.html_safe) : render_field_value(label.html_safe)
   end
 
 end
