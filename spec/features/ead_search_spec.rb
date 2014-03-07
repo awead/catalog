@@ -77,4 +77,12 @@ describe "EAD searching" do
     end
   end
 
+  it "should link to other ead with the same subject heading" do
+    visit catalog_path("ARC-0003")
+    click_link("Find More")
+    click_link("Haley, Bill, 1925-1981")
+    page.should have_content("Jimmy Baynes Collection")
+    page.should have_content("Alan Freed Collection")
+  end
+
 end
