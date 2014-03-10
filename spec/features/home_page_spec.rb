@@ -8,7 +8,7 @@ describe "Home page" do
 
   it "should have a search banner" do
     within(:css, "#search_banner") do
-      page.should have_content("Search...")
+      page.should have_content("Search")
       page.should have_content("Advanced Search")
       page.should have_content("Account Login")
     end

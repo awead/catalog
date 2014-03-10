@@ -40,7 +40,7 @@ $line-height-base: 1.36;
 // Bootstrap overrides
 
 h1, h2, h3 {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .navbar-inverse { 
@@ -55,6 +55,12 @@ h1, h2, h3 {
   border-bottom-color: $gray-light;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+}
+
+.top-row {
+  @extend .navbar;
+  @extend .navbar-default;
+  margin-bottom: 0px;
 }
 
 a.glyphicon {
@@ -122,6 +128,10 @@ a.glyphicon {
   margin-bottom: 2px;
 }
 
+.front-search {
+  margin-top: 7px;
+}
+
 #header {
 
   background-image: asset-url("header_tile_bg.png");
@@ -156,12 +166,19 @@ a.glyphicon {
 
 
 #main {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #footer {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 0px;
+}
+
+#front_page_search {
+  .input-group-addon {
+    background-color: $catalog-red;
+    border-color: $catalog-darker-red;
+  }
 }
 
 // General information section of the finding aid display needs more room
