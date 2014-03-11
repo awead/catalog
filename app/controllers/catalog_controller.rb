@@ -12,14 +12,14 @@ class CatalogController < ApplicationController
       :qt => "search",
       :rows => 10,
       ("hl.fl").to_sym => "heading_ssm, author_ssm, publisher_ssm, collection_ssm, location_ssm",
-      ("hl.simple.pre").to_sym => '<span class="label label-info">',
+      ("hl.simple.pre").to_sym => '<span class="highlight">',
       ("hl.simple.post").to_sym => "</span>",
       :hl => true
     }
 
     config.default_document_solr_params = {
       ("hl.fl").to_sym => "title_ssm, heading_ssm, author_ssm, publisher_ssm, collection_ssm, location_ssm",
-      ("hl.simple.pre").to_sym => '<span class="label label-info">',
+      ("hl.simple.pre").to_sym => '<span class="highlight">',
       ("hl.simple.post").to_sym => "</span>",
       :hl => true
     }

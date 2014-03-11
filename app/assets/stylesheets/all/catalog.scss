@@ -15,6 +15,7 @@ $component-c3:        lighten(#000, 90%);
 $component-c4:        lighten(#000, 95%);
 $component-c5:        lighten(#000, 97%);
 $component-c6:        lighten(#000, 100%);
+$label-highlight-bg:  #FFFF00;
 
 // Asign bootstrap's colors to ours
 $brand-primary:                 $catalog-red;
@@ -135,6 +136,18 @@ a.glyphicon {
 .alert {
   margin-top: 10px;
   margin-bottom: 0px;
+}
+
+.highlight {
+  @include label-variant($label-highlight-bg);
+  color: inherit;
+  display: inline;
+  padding: .2em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
 }
 
 #header {
