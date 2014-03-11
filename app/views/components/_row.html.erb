@@ -4,10 +4,10 @@
     :id => component.id, 
     :data => { :row => component_row_for_index(index), :ref => component.get(Solrizer.solr_name("ref", :stored_sortable)) } do 
   %>
+    <%= content_tag :td, render_link_to_component(component) %>
     <%= content_tag :td do %>
-      <%= render_link_to_component(component) %>
+      <%= render_component_location(component) %>
       <%= render_digital_label(component) %>
     <% end %>
-    <%= content_tag :td, render_component_location(component) %>
   <% end %>
 <% end %>
