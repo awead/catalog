@@ -6,6 +6,7 @@
 $(document).ready(returnStatus);
 $(document).ready(returnHoldings);
 
+// Button for loading more components
 $(document).on('click', '#show_more_components', function(event) {
   addMoreComponents(event)
 });
@@ -51,6 +52,9 @@ $(document).ready(function() {
       // set this to empty so it doesn't jump to the anchor
       window.location.hash = "";
   })
+
+  // Tooltips
+  $('.search-btn').tooltip();
 
 });
 

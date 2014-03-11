@@ -48,3 +48,6 @@ en:
       heading: "Sign in"
       submit: "Sign in"
       remember: "Remember me"
+
+  tooltip:
+    account_login: "Login to save your bookmarks and search history"

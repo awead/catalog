@@ -26,7 +26,9 @@ module ApplicationHelper
     if current_user
       render "shared/front_page_account_tools" if has_user_authentication_provider?
     else
-      link_to t("account_login"), new_user_session_path, :class => "btn btn-primary search-btn"
+      link_to t("account_login"), new_user_session_path, :class => "btn btn-primary search-btn",
+              :data => { :toggle => "tooltip", :placement => "bottom" },
+              :title => t("tooltip.account_login")
     end
   end
 
