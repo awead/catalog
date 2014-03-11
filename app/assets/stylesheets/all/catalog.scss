@@ -75,6 +75,7 @@ a.glyphicon {
 
 .nav-tabs.nav-stacked {
   border-bottom: 0;
+  margin-bottom: 10px;
 }
 .nav-tabs.nav-stacked > li > a {
   border: 1px solid #ddd;
@@ -149,6 +150,10 @@ a.glyphicon {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
+}
+
+.breadcrumb {
+  margin-bottom: 10px;
 }
 
 #header {
