@@ -66,15 +66,46 @@ module NavbarHelper
     end
   end
 
+  def render_previous_document_mobile_link
+    if @previous_document
+      link_to url_for_document(@previous_document),
+              search_session_params(search_session[:counter].to_i - 1).merge(:class => "navbar-toggle previous", :rel => 'prev') do
+        content_tag :span, :class => "glyphicon glyphicon-circle-arrow-left white" do
+          content_tag :span, "Previous record", :class => "sr-only"
+        end
+      end
+    end
+  end
+
   def render_next_document_link
     if @next_document
       content_tag :li, link_to_next_document(@next_document)
     end
   end
 
+  def render_next_document_mobile_link
+    if @next_document
+      link_to url_for_document(@next_document), 
+              search_session_params(search_session[:counter].to_i + 1).merge(:class => "navbar-toggle next", :rel => 'next') do
+        content_tag :span, :class => "glyphicon glyphicon-circle-arrow-right white" do
+          content_tag :span, "Next record", :class => "sr-only"
+        end
+      end
+    end
+  end
+
   def render_item_entry_info
     if @previous_document || @next_document
       content_tag :li, item_page_entry_info, :class => "navbar-text"
+    end
+  end
+
+  def render_mobile_link_back_to_catalog
+    query_params = current_search_session.try(:query_params) || {}
+    link_to url_for(query_params), :class => "navbar-toggle" do
+      content_tag :span, :class => "glyphicon glyphicon-circle-arrow-up white" do
+        content_tag :span, "Back to search", :class => "sr-only"
+      end
     end
   end
 
