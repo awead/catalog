@@ -1,26 +1,31 @@
 <%= render "shared/header" %>
 <%= content_tag :nav, :class => "navbar navbar-inverse navbar-static-top", :role => "navigation" do %>
   <%= content_tag :div, :class => "container navbar-container" do %> 
+    
     <!-- Toggle button to show menu on mobile device -->
     <%= content_tag :div, :class => "navbar-header" do %>
-      <%= content_tag :button, :type => "button", :class => "navbar-toggle",
-                      :data => { :toggle => "collapse", :target => "#catalog_navbar" } do %>
+      
+      <%= content_tag :button, :type => "button", :class => "navbar-toggle", :data => { :toggle => "collapse", :target => "#catalog_navbar" } do %>
         <%= content_tag :span, "Toggle navigation", :class => "sr-only" %>
         <%= content_tag :span, nil, :class => "glyphicon glyphicon-question-sign white" %>
       <% end %>
 
+      <% if show_facet_toggle? %>
+        <%= content_tag :button, :type => "button", :class => "navbar-toggle", :data => { :toggle => "collapse", :target => "#facet-panel-collapse" } do %>
+          <%= content_tag :span, "Toggle facets", :class => "sr-only" %>
+          <%= content_tag :span, nil, :class => "glyphicon glyphicon-list white" %>
+        <% end %>
+      <% end %>
+
       <% if params[:action].match("show") %>
-        
-        <%= content_tag :button, :type => "button", :class => "navbar-toggle",
-                        :data => { :toggle => "collapse", :target => "#record_controls" } do %>
+        <%= content_tag :button, :type => "button", :class => "navbar-toggle", :data => { :toggle => "collapse", :target => "#record_controls" } do %>
           <%= content_tag :span, "More information", :class => "sr-only" %>
           <%= content_tag :span, nil, :class => "glyphicon glyphicon-info-sign white" %>
         <% end %>
-        
+       
         <%= render_next_document_mobile_link %>
         <%= render_mobile_link_back_to_catalog %>
         <%= render_previous_document_mobile_link %>
-
       <% end %>
 
     <% end %>
@@ -33,5 +38,6 @@
         <%= render :partial => "/user_util_links" %>
       <% end %>
     <% end %>
+
   <% end %>
 <% end %>

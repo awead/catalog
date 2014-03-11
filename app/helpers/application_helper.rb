@@ -60,6 +60,10 @@ module ApplicationHelper
     params[:controller].match("catalog") && params[:action].match("index") && !has_search_parameters?
   end
 
+  def show_facet_toggle?
+    params[:action].match("index") && params[:controller].match("catalog")
+  end
+
   def render_facets
     render "catalog/facets"
   end
