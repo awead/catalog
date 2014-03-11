@@ -26,8 +26,12 @@
     <% end %>
 
     <%= content_tag :div, :class => "collapse navbar-collapse", :id => "catalog_navbar" do %>
-      <%= render_search_bar %>
-      <%= render :partial => "/user_util_links" %>      
+      <%= content_tag :div, :class => "col-lg-8 col-md-7 col-sm-6" do %>
+        <%= render_search_bar %>
+      <% end %>
+      <%= content_tag :div, :class => "col-lg-4 col-md-5 col-sm-6" do %>
+        <%= render :partial => "/user_util_links" %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

@@ -32,6 +32,30 @@ module ApplicationHelper
     end
   end
 
+  def search_form_class
+    if front_page?
+      "form front-search"
+    else
+      "navbar-form navbar-left"
+    end
+  end
+
+  def search_form_id
+    if front_page?
+      "front_page_search"
+    else
+      "search_bar"
+    end
+  end
+
+  def search_form_button_class
+    if front_page?
+      "btn btn-primary search-btn"
+    else
+      "btn search-btn"
+    end
+  end
+
   def front_page?
     params[:controller].match("catalog") && params[:action].match("index") && !has_search_parameters?
   end
