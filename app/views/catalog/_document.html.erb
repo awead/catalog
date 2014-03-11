@@ -1,5 +1,6 @@
 <%= content_tag :div, :class => "row" do %>
-  <%= content_tag :div, :class => "media col-sm-10 index-result", :id => document.id,
+  <%= render_index_doc_actions document, :wrapping_class => "documentFunctions col-sm-2 col-sm-push-10" %>
+  <%= content_tag :div, :class => "media col-sm-10 col-sm-pull-2 index-result", :id => document.id,
         :itemscope => true, :itemtype => document.itemtype,
         :data => { :isbn => document.get(Solrizer.solr_name("isbn", :displayable)), :oclc => document.get(Solrizer.solr_name("oclc", :displayable)) } do %>
     <%= render_document_partial document, :thumbnail, :document_counter => document_counter %>
@@ -9,5 +10,4 @@
       <%= render_document_partial document, :index, :document_counter => document_counter %>
     <% end %>
   <% end %>
-  <%= render_index_doc_actions document, :wrapping_class => "documentFunctions col-sm-2" %>
 <% end %>
