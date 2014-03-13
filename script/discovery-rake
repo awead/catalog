@@ -1,17 +1,23 @@
 #!/bin/bash
 # Discovery rake script
 #
+# Exports discoverable content from Hydra to our production and
+# development blacklight solr indexes
+#
 # Adam Wead
 # Rock and Roll Hall of Fame
+# --------------------------------------------------------------
 
 # Config
-
 APPDIR="/var/www/rails/hydra_rock"
 ENV="production"
+DEVURL="http://bernie.rockhall.org:8985/solr/blacklight-dev"
 
+# Begin
 source ~/.bash_profile
 cd $APPDIR
-source ./.rvmrc
 export RAILS_ENV=${ENV}
-rake rockhall:discovery
+bundle exec rake rockhall:discovery
+export URL=${DEVURL}
+bundle exec rake rockhall:discovery
 exit 0;
