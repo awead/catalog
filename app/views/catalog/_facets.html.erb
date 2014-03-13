@@ -1,12 +1,4 @@
 <%= content_tag :div, :id => "facets", :class => "facets sidenav" do %>
-  
-  <% if front_page? %>
-    <%= content_tag :button, :type => "button", :class => "facets-toggle", :data => { :toggle => "collapse", :target => "#facet-panel-collapse" } do %>
-      <%= content_tag :span, "Toggle facets", :class => "sr-only" %>
-      <%= content_tag :span, nil, :class => "glyphicon glyphicon-list" %>
-    <% end %>
-    <%= content_tag :h1, t('blacklight.search.facets.title')  %>
-  <% end %>
 
   <%= content_tag :div, :id => "facet-panel-collapse", :class => "collapse panel-group" do %>
     <%= render_facet_partials %>

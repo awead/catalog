@@ -30,6 +30,7 @@ $navbar-height: 40px;
 $font-size-base: 13px;
 $headings-line-height: 1;
 $line-height-base: 1.36;
+$default-border-radius: 4px;
 
 // -----------------------------------------------------
 // Heere begineth the sass
@@ -59,9 +60,7 @@ h1, h2, h3 {
 }
 
 .top-row {
-  @extend .navbar;
-  @extend .navbar-default;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 a.glyphicon {
@@ -84,10 +83,10 @@ a.glyphicon {
           border-radius: 0;
 }
 .nav-tabs.nav-stacked > li:first-child > a {
-  @include border-top-radius(4px);
+  @include border-top-radius($default-border-radius);
 }
 .nav-tabs.nav-stacked > li:last-child > a {
-  @include border-bottom-radius(4px);
+  @include border-bottom-radius($default-border-radius);
 }
 .nav-tabs.nav-stacked > li > a:hover {
   border-color: #ddd;
@@ -118,7 +117,7 @@ a.glyphicon {
   background-color: #000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
+  border-radius: $default-border-radius;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
@@ -156,6 +155,29 @@ a.glyphicon {
   margin-bottom: 10px;
 }
 
+// because visible-xs adds a line break
+.front-page-toggle {
+  @media (min-width: $screen-sm){
+    display: none;
+  }
+}
+
+.input-group-addon {
+  padding: 3px 12px;
+}
+
+.carousel-control {
+  border-radius: $default-border-radius;
+}
+
+.carousel-inner {
+  img {
+    border-radius: $default-border-radius;
+  }
+}
+
+
+
 #header {
 
   background-image: asset-url("header_tile_bg.png");
@@ -164,19 +186,9 @@ a.glyphicon {
   .banner {
     background-repeat:no-repeat;
     background-position: center center;
-    @media (min-width: $screen-lg) {
-      background-image: asset-url("header-lg.jpg");
-      height: 102px;
-      width: 100%;
-    }
-    @media (min-width: $screen-md) and (max-width: $screen-lg) {
-      background-image: asset-url("header-md.jpg");
-      height: 76px;
-      width: 100%;
-    }
-    @media (min-width: $screen-sm) and (max-width: $screen-md) {
-      background-image: asset-url("header-sm.jpg");
-      height: 64px;
+    @media (min-width: $screen-sm){
+      background-image: asset-url("header-xs.jpg");
+      height: 46px;
       width: 100%;
     }
     @media (max-width: $screen-sm) {
@@ -203,6 +215,11 @@ a.glyphicon {
     border-color: $catalog-darker-red;
   }
 }
+
+#carousel-example-generic {
+  margin-bottom: 10px;
+}
+
 
 // General information section of the finding aid display needs more room
 @media (min-width: 768px) {
@@ -255,7 +272,7 @@ a.glyphicon {
 #player {
   background: black;
   cursor: pointer;
-  -moz-outline-radius: 4px;
+  -moz-outline-radius: $default-border-radius;
   margin: 0 auto;
   margin-top: 12px;
 
@@ -316,35 +333,35 @@ div.component {
     background-color: $component-c1;
     border-color: darken($component-c1, 50%);
     box-shadow: inset 0 1px 0 darken($component-c1, 100%);
-    border-radius: 4px;
+    border-radius: $default-border-radius;
     -webkit-box-shadow: inset 0 1px 0 darken($component-c1, 10%);
   }
   &.c02 {
     background-color: $component-c2;
     border-color: darken($component-c2, 50%);
     box-shadow: inset 0 1px 0 darken($component-c2, 100%);
-    border-radius: 4px;
+    border-radius: $default-border-radius;
     -webkit-box-shadow: inset 0 1px 0 darken($component-c2, 10%);
   }
   &.c03 {
     background-color: $component-c3;
     border-color: darken($component-c3, 50%);
     box-shadow: inset 0 1px 0 darken($component-c3, 100%);
-    border-radius: 4px;
+    border-radius: $default-border-radius;
     -webkit-box-shadow: inset 0 1px 0 darken($component-c3, 10%);
   }
   &.c04 {
     background-color: $component-c4;
     border-color: darken($component-c4, 50%);
     box-shadow: inset 0 1px 0 darken($component-c4, 100%);
-    border-radius: 4px;
+    border-radius: $default-border-radius;
     -webkit-box-shadow: inset 0 1px 0 darken($component-c4, 10%);
   }
   &.c05 {
     border: 1px solid $component-c5;
     border-color: darken($component-c5, 50%);
     box-shadow: inset 0 1px 0 darken($component-c5, 100%);
-    border-radius: 4px;
+    border-radius: $default-border-radius;
     -webkit-box-shadow: inset 0 1px 0 darken($component-c5, 10%);
   }
 }

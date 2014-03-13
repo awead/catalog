@@ -1,17 +1,20 @@
 <%= content_tag :div, :class => "row top-row", :id => "search_banner" do %>
-  
-  <%= content_tag :div, :class => "col-lg-2 col-md-2 col-sm-2" do %>
-    <%= content_tag :h1, "Search" %>
-  <% end %>
 
-  <%= content_tag :div, :class => "col-lg-7 col-md-6 col-sm-5" do %>
+  <%= content_tag :div, :class => "col-lg-9 col-md-8 col-sm-7" do %>
     <%= render_search_bar %>
   <% end %>
 
   <%= content_tag :div, :class => "col-lg-3 col-md-4 col-sm-5" do %>
-    <%= content_tag :span, :class => "block front-search" do %>
+    <%= content_tag :span, :class => "block front-search pull-right" do %>
+
       <%= link_to t("more_options"), advanced_search_path, :class => "btn btn-primary search-btn" %>
       <%= render_front_page_account_tools %>
+
+      <%= content_tag :button, :type => "button", :class => "btn btn-primary search-btn front-page-toggle", :data => { :toggle => "collapse", :target => "#facet-panel-collapse" } do %>
+        <%= content_tag :span, "Toggle facets", :class => "sr-only" %>
+        <%= content_tag :span, nil, :class => "glyphicon glyphicon-list" %>
+      <% end %>
+
     <% end %>
   <% end %>
 <% end %>

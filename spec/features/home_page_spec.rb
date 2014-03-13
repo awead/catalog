@@ -16,7 +16,7 @@ describe "Home page" do
 
   it "should have a column for browsing facets" do
     within(:css, "#sidebar") do
-      page.should have_content("Browse")
+      page.should_not have_content("Browse")
     end
   end
 
@@ -31,7 +31,7 @@ describe "Home page" do
 
   it "should have links for discovering content" do
     within(:css, "#content") do
-      page.should have_content("Discover")
+      page.should_not have_content("Discover")
       page.should have_content("Resources")
       page.should have_content("User Guides")
     end
