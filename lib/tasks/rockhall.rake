@@ -69,12 +69,23 @@ namespace :marc do
     job.write_out
   end
 
-  desc "Index marc record fixtures, or provide a file via MARC_FILE"
+  desc "Index marc record fixtures (default), or by file or directory, specified by MARC_FILE="
   task :index => :environment do
     ENV['CONFIG_PATH'] = locate_path("vendor", "SolrMarc", "config-#{::Rails.env}.properties")
     ENV['SOLRMARC_JAR_PATH'] = locate_path("vendor", "SolrMarc", "SolrMarc.jar")
     ENV['MARC_FILE'] ||= "spec/fixtures/marc/rrhof.mrc"
-    Rake::Task["solr:marc:index"].invoke
+    ENV['MARC_FILE'] ||= "spec/fixtures/marc/rrhof.mrc"
+    
+    if File.directory?(ENV['MARC_FILE'])
+      Dir.glob(File.join(ENV['MARC_FILE'],"*.mrc")).each do |file|
+        print "Indexing #{File.basename(file)}: "
+        ENV['MARC_FILE'] = file
+        `bundle exec rake solr:marc:index`
+      end
+    else
+      Rake::Task["solr:marc:index"].invoke
+    end
+
   end
 
   desc "Return the info on our marc index environment"
