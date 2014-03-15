@@ -1,6 +1,7 @@
 require "fileutils"
 require "solr_ead"
 require "rockhall"
+require "colorize"
 
 namespace :rockhall do
 namespace :ead do
@@ -8,54 +9,51 @@ namespace :ead do
   desc "Index ead into solr and create both html and json"
   task :index => :environment do
     ENV['EAD'] = "spec/fixtures/ead" unless ENV['EAD']
-    indexer = SolrEad::Indexer.new(:document=>Rockhall::Ead::Document, :component=>Rockhall::Ead::Component)
+    indexer = Rockhall::Ead::Indexer.new(:document=>Rockhall::Ead::Document, :component=>Rockhall::Ead::Component)
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
         print "Indexing #{File.basename(file)}: "
         begin
-          indexer.update(file)
-          Rockhall::Ead::Indexing.ead_to_html(file)
-          Rockhall::Ead::Indexing.toc_to_json(File.new(file))
+          indexer.update file
+          Rockhall::Ead::Converter.new(file).convert
           FileUtils.cp(file, Rails.configuration.rockhall_config[:ead_path])
-          print "done.\n"
+          puts "done.".colorize(:green)
         rescue
-          print "failed!\n"
+          puts "failed.".colorize(:red)  
         end
       end
     else
-      indexer.update(ENV['EAD'])
-      Rockhall::Ead::Indexing.ead_to_html(ENV['EAD'])
-      Rockhall::Ead::Indexing.toc_to_json(File.new(ENV['EAD']))
+      indexer.update ENV['EAD']
+      Rockhall::Ead::Converter.new(ENV['EAD']).convert
       FileUtils.cp(ENV['EAD'], Rails.configuration.rockhall_config[:ead_path])
     end
   end
 
-  desc "Convert ead to html only"
-  task :to_html => :environment do
+  desc "Convert ead to html and json"
+  task :convert => :environment do
     ENV['EAD'] = "spec/fixtures/ead" unless ENV['EAD']
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
-        puts "Converting #{File.basename(file)} to html"
-        Rockhall::Ead::Indexing.ead_to_html(file) if File.extname(file).match("xml$")
+        puts "Converting #{File.basename(file)}"
+        Rockhall::Ead::Converter.new(file).convert if File.extname(file).match("xml$")
       end
     else
-      Rockhall::Ead::Indexing.ead_to_html(ENV['EAD'])
+      Rockhall::Ead::Converter.new(ENV['EAD']).convert
     end
   end
 
-  desc "Convert ead to json only"
-  task :to_json => :environment do
+  desc "Update with data from AT"
+  task :atk_update => :environment do 
     ENV['EAD'] = "spec/fixtures/ead" unless ENV['EAD']
     if File.directory?(ENV['EAD'])
       Dir.glob(File.join(ENV['EAD'],"*")).each do |file|
-        puts "Converting #{File.basename(file)} to json"
-        Rockhall::Ead::Indexing.toc_to_json(File.new(file))
+        puts "Updating #{File.basename(file)} with additional data from AT"
+        Rockhall::Ead::Indexing.atk_update(file) if File.extname(file).match("xml$")
       end
     else
-      Rockhall::Ead::Indexing.toc_to_json(File.new(ENV['EAD']))
+      Rockhall::Ead::Indexing.atk_update(ENV['EAD'])
     end
   end
-
 
 end
 
