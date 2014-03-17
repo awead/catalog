@@ -12,8 +12,10 @@
     <div class="item active">
       <%= image_tag "slides/example-slide-1.jpg" %>
       <div class="carousel-caption">
-        <%= content_tag :h3, "First slide label" %>
-        <%= content_tag :p, "Nulla vitae elit libero, a pharetra augue mollis interdum." %>
+        <%= content_tag :h3, "Postcard from Patti Smith to her family, sent from Ohio, Jan. 1976" %>
+        <%= content_tag :p do %>
+          <%= link_to "From the Patti Smith Collection", "http://catalog.rockhall.com/catalog/ARC-0290/ref34" %>
+        <% end %>
       </div>
     </div>
     <div class="item">
