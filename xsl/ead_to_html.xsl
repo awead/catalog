@@ -68,8 +68,8 @@
     <!-- EAD headings -->
     <xsl:template match="ead:head">
       <xsl:choose>
-        <xsl:when test="parent::ead:chronlist"><h5><xsl:apply-templates/></h5></xsl:when>
-        <xsl:when test="parent::ead:list"><h5><xsl:apply-templates/></h5></xsl:when>
+        <xsl:when test="parent::ead:chronlist"><h4><xsl:apply-templates/></h5></xsl:when>
+        <xsl:when test="parent::ead:list"><h4><xsl:apply-templates/></h5></xsl:when>
         <xsl:when test="ancestor::ead:c"><h5><xsl:apply-templates/></h5></xsl:when>
         <xsl:otherwise><legend><xsl:apply-templates/></legend></xsl:otherwise>
       </xsl:choose>
