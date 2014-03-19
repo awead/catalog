@@ -221,6 +221,7 @@
         author_teim^100
         oclc_tim
         accession_tim
+        id
         text
       </str>
       <str name="pf">

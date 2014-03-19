@@ -260,3 +260,29 @@ Set getRockhallCallNumber(Record record) {
 
 }
 
+// Retrieves the OCLC number from 035a field
+public String getOclcNumber(Record record) {
+
+  Set fields035a  = indexer.getFieldList(record, "035a");
+  String oclc  = null;
+
+  // Check our first option, and find the first 035a that
+  // starts with "(OCoLC)"
+  if (fields035a != null) {
+    for ( String s : fields035a ) {
+      if (s.startsWith("(OCoLC)")) {
+        oclc = s.substring(7);
+        break;
+      }
+    }
+  }
+
+  
+  if ( oclc != null ) {
+    return oclc;
+  }
+  else {
+    return null;
+  }
+
+}
