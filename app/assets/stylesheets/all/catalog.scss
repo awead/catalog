@@ -26,7 +26,7 @@ $dropdown-link-hover-bg:        $catalog-light-red;
 $dropdown-link-hover-color:     #ffffff;
 
 // Other settings
-$navbar-height: 40px;
+$navbar-height: 42px;
 $font-size-base: 13px;
 $headings-line-height: 1;
 $line-height-base: 1.36;
@@ -181,20 +181,20 @@ a.glyphicon {
 
 #header {
 
-  background-image: asset-url("header_tile_bg.png");
+  background-image: asset-url("header-tile.png");
   background-repeat: repeat-x;
   
   .banner {
     background-repeat:no-repeat;
     background-position: center center;
     @media (min-width: $screen-sm){
-      background-image: asset-url("header-xs.jpg");
-      height: 46px;
+      background-image: asset-url("header.png");
+      height: 68px;
       width: 100%;
     }
     @media (max-width: $screen-sm) {
-      background-image: asset-url("header-xs.jpg");
-      height: 46px;
+      background-image: asset-url("header-mobile.png");
+      height: 68px;
       width: 100%;
     }
   }
