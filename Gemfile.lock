@@ -276,7 +276,7 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
-    thread_safe (0.3.0)
+    thread_safe (0.2.0)
       atomic (>= 1.1.7, < 2)
     tilt (1.4.1)
     timers (1.1.0)
