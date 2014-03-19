@@ -68,4 +68,9 @@ describe "Bib. searching" do
     end
   end
 
+  it "should indexed items according to their OCLC number and not their own Skyriver number (BL-332)" do
+    execute_search "784125234"
+    page.should have_content("'Rock on' : women, ageing and popular music / edited by Ros Jennings, Abigail Gardner")
+  end
+
 end

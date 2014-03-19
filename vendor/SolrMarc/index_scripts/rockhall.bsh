@@ -97,50 +97,61 @@ Set getInnovativeId(Record record, String fieldSpec)
 
 }
 
-/*
- Determines the id of a marc record from the following fields, in order.  First successful
- match is returned.
 
-   1. First 001 that does not begin with "sky"
-   2. First 907a
-   3. First 035a
-   4. No id found, so null is returned
+/*
+  Determines the id of a marc record from the following fields, in order.  First successful
+  match is returned.
+   
+    1. First 035a, with "(OCoLC)" removed 
+    2. First 001 that does not begin with "sky"
+    3. First 907a
+
+  If no match is found, null is returned and Solr will barf because the record has no unique
+  id.
 */
 public String getRockhallId(Record record) {
 
-  Set fields001  = indexer.getFieldList(record, "001");
-  String alt1    = indexer.getFirstFieldVal(record, "907a");
-  String alt2    = indexer.getFirstFieldVal(record, "035a");
-  String f001    = null;
+  Set fields001   = indexer.getFieldList(record, "001");
+  Set fields035a  = indexer.getFieldList(record, "035a");
+  String option1  = null;
+  String option2  = null;
+  String option3  = indexer.getFirstFieldVal(record, "907a");
 
-  // Find first 001 that doesn't begin with "sky"
-  if (fields001 != null) {
-    for ( String s : fields001 ) {
-      if ( !s.startsWith("sky")) {
-        f001 = s;
+  // Check our first option, and find the first 035a that
+  // starts with "(OCoLC)"
+  if (fields035a != null) {
+    for ( String s : fields035a ) {
+      if (s.startsWith("(OCoLC)")) {
+        option1 = s.substring(7);
         break;
       }
     }
   }
 
-  if ( f001 != null) {
-    return f001;
+  // Check our second option, and find the
+  // first 001 that doesn't begin with "sky"
+  if (fields001 != null) {
+    for ( String s : fields001 ) {
+      if ( !s.startsWith("sky")) {
+        option2 = s;
+        break;
+      }
+    }
+  }
+
+  if ( option1 != null ) {
+    return option1;
+  }
+  else if ( option2 != null) {
+    return option2;
+  }
+  else if (option3 != null) {
+    int strLen = option3.length();
+    int lastIdx = strLen - 1;
+    return option3.substring(1, lastIdx);
   }
   else {
-
-    if (alt1 != null) {
-      int strLen = alt1.length();
-      int lastIdx = strLen - 1;
-      return alt1.substring(1, lastIdx);
-    }
-    else if (alt2 != null) {
-      int strLen = alt2.length();
-      int lastIdx = strLen - 1;
-      return alt2.substring(1, lastIdx);
-    }
-    else {
-      return null;
-    }
+    return null;
   }
 
 }
