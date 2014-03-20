@@ -1,51 +1,15 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-  </ol>
-
+<%= content_tag :div, :id => "catalog_carousel", :class => "carousel slide", :data => { :ride => "carousel" }  do %>
+  
   <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag "slides/example-slide-1.jpg" %>
-      <div class="carousel-caption">
-        <%= content_tag :h3, "Postcard from Patti Smith to her family, sent from Ohio, Jan. 1976" %>
-        <%= content_tag :p do %>
-          <%= link_to "From the Patti Smith Collection", "http://catalog.rockhall.com/catalog/ARC-0290/ref34" %>
-        <% end %>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag "slides/example-slide-2.jpg" %>
-      <div class="carousel-caption">
-        <%= content_tag :h3, "Second slide label" %>
-        <%= content_tag :p, "Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag "slides/example-slide-3.jpg" %>
-      <div class="carousel-caption">
-        <%= content_tag :h3, "Third slide label" %>
-        <%= content_tag :p, "Praesent commodo cursus magna, vel scelerisque nisl consectetur." %>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag "slides/example-slide-4.jpg" %>
-      <div class="carousel-caption">
-        <%= content_tag :h3, "Fourth slide label" %>
-        <%= content_tag :p, "In vino veritas et post hoc ergo propter hoc." %>
-      </div>
-    </div>
-  </div>
+  <%= content_tag :div, :class => "carousel-inner" do %>
+    <%= render_slides %>
+  <% end %>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div>
+  <%= link_to "#catalog_carousel", :class => "left carousel-control", :data => { :slide => "prev" } do %>
+    <%= content_tag :span, nil, :class => "glyphicon glyphicon-chevron-left" %>
+  <% end %>
+  <%= link_to "#catalog_carousel", :class => "right carousel-control", :data => { :slide => "next" } do %>
+    <%= content_tag :span, nil, :class => "glyphicon glyphicon-chevron-right" %>
+  <% end %>
+<% end %>
