@@ -280,4 +280,9 @@ describe "EAD display" do
     page.should have_content("(Moving Images)")
   end
 
+  it "should display heading field for archival items (BL-422)" do
+    visit catalog_path("ARC-0105/ref61")
+    page.should have_content("1985-1990")
+  end
+
 end

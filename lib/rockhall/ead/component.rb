@@ -53,23 +53,27 @@ class Rockhall::Ead::Component < SolrEad::Component
   end
 
   def heading_display solr_doc
-    if self.title.first.blank?
-      self.term_to_html("unitdate") unless self.unitdate.empty?
+    if solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)].nil?
+      component_title_for_heading
     else
-      title_for_heading(solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)]) unless solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)].nil?
+      heading_elements(solr_doc).join(" >> ")
     end
   end
 
-  def title_for_heading parent_titles = Array.new
-    if parent_titles.length > 0
-      [parent_titles, self.term_to_html("title")].join(" >> ")
-    else
-      self.term_to_html("title")
-    end
+  def heading_elements solr_doc
+    solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)] + [component_title_for_heading]
   end
 
   def collection_name solr_doc
     solr_doc[Solrizer.solr_name("collection", :facetable)].strip
+  end
+
+  def component_title_for_heading
+    if self.title.first.blank?
+      self.unitdate.empty? ? "[No title]" : self.term_to_html("unitdate")
+    else
+      self.term_to_html("title")
+    end
   end
 
 end

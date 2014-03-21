@@ -19,7 +19,7 @@
   <% end %>
 
   <!-- the current component title -->
-  <%= content_tag :li, @component.get(Solrizer.solr_name("title", :displayable)).html_safe, :class => "active" %>
+  <%= content_tag :li, render_component_title, :class => "active" %>
 <% end %>
 
 
