@@ -5,10 +5,9 @@
 // -----------------------------------------------------
 
 // Defing our reds and other colors
-$catalog-darker-red:  #1f0101;
-$catalog-dark-red:    #7d0e0e;
-$catalog-red:         #590000;
-$catalog-light-red:   #ac1313;
+$catalog-red:         rgb(133, 0, 6); 
+$catalog-darker-red:  darken($catalog-red, 30%);
+$catalog-light-red:   lighten($catalog-red, 10%);
 $component-c1:        lighten(#000, 65%);
 $component-c2:        lighten(#000, 80%);
 $component-c3:        lighten(#000, 90%);
@@ -33,14 +32,16 @@ $line-height-base: 1.36;
 $default-border-radius: 4px;
 
 // -----------------------------------------------------
-// Heere begineth the sass
+// Imports
 // -----------------------------------------------------
 
 @import "bootstrap";
 @import "blacklight/blacklight";
 @import "blacklight_advanced_search";
 
+// -----------------------------------------------------
 // Bootstrap overrides
+// ----------------------------------------------------- 
 
 h1, h2, h3 {
   margin-top: 4px;
@@ -60,10 +61,6 @@ h1, h2, h3 {
   border-bottom-width: 1px;
 }
 
-.top-row {
-  margin-bottom: 10px;
-}
-
 a.glyphicon {
   color: inherit;
   &:hover {
@@ -71,8 +68,7 @@ a.glyphicon {
   }
 }
 
-// Bootstrap v2 styled stacked nav tabs
-
+// Bootstrap v2-styled stacked nav tabs
 .nav-tabs.nav-stacked {
   border-bottom: 0;
   margin-bottom: 10px;
@@ -93,12 +89,31 @@ a.glyphicon {
   border-color: #ddd;
   z-index: 2;
 }
-
 .nav-stacked > li + li {
   margin-top: 0px;
 }
 
-// Get sassy here....
+.carousel-control {
+  border-radius: $default-border-radius;
+}
+
+.carousel-inner {
+  img {
+    border-radius: $default-border-radius;
+  }
+}
+
+.carousel {
+  margin-bottom: 10px;
+}
+
+// -----------------------------------------------------
+// Some of our own sassiness
+// ----------------------------------------------------- 
+
+.top-row {
+  margin-bottom: 10px;
+}
 
 .inline {
   display: inline;
@@ -156,218 +171,11 @@ a.glyphicon {
   margin-bottom: 10px;
 }
 
-// because visible-xs adds a line break
-.front-page-toggle {
-  @media (min-width: $screen-sm){
-    display: none;
-  }
-}
-
 .input-group-addon {
   padding: 3px 12px;
 }
 
-.carousel-control {
-  border-radius: $default-border-radius;
-}
-
-.carousel-inner {
-  img {
-    border-radius: $default-border-radius;
-  }
-}
-
-
-
-#header {
-
-  background-image: asset-url("header-tile.png");
-  background-repeat: repeat-x;
-  
-  .banner {
-    background-repeat:no-repeat;
-    background-position: center center;
-    @media (min-width: $screen-sm){
-      background-image: asset-url("header.png");
-      height: 68px;
-      width: 100%;
-    }
-    @media (max-width: $screen-sm) {
-      background-image: asset-url("header-mobile.png");
-      height: 68px;
-      width: 100%;
-    }
-  }
-
-}
-
-#main {
-  margin-top: 10px;
-}
-
-#footer {
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-#front_page_search {
-  .input-group-addon {
-    background-color: $catalog-red;
-    border-color: $catalog-darker-red;
-  }
-}
-
-#carousel-example-generic {
-  margin-bottom: 10px;
-}
-
-
-// General information section of the finding aid display needs more room
-@media (min-width: 768px) {
-  #geninfo.dl-horizontal dt {
-    float: left;
-    width: 200px;
-    clear: left;
-    text-align: right;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  #geninfo.dl-horizontal dd {
-    margin-left: 220px;
-  }
-  #geninfo.dl-horizontal dd:before, .dl-horizontal dd:after {
-    content: " ";
-    display: table; }
-  #geninfo.dl-horizontal dd:after {
-    clear: both;
-  } 
-}
-
-// Mobile screen
-
-@media (max-width: $screen-sm) {
-  .navbar-default {
-    margin-bottom: 20px;
-    min-height: 5px;
-  }
-  .navbar-inverse {
-    margin-bottom: 0px;
-  }
-  #main{
-    margin-top: 0px;
-  }
-  .top-row {
-    margin-bottom: 0px;
-  }
-}
-
-// Video player
-
-#video_box {
-  background: #000;
-  padding: 10px 0px 10px 0px; }
-
-/* player container */
-
-#player {
-  background: black;
-  cursor: pointer;
-  -moz-outline-radius: $default-border-radius;
-  margin: 0 auto;
-  margin-top: 12px;
-
-  @media (min-width: $screen-lg) {
-    width: #{16 * 22}px;
-    height: #{10 * 22}px;
-  }
-
-  @media (max-width: $screen-lg) {
-    width: #{16 * 11}px;
-    height: #{10 * 11}px;
-  }
-
-}
-
-/* playlist */
-
-#playlist {
-  margin: 0 auto;
-  margin-top: 5px;
-  width: 550px;
-  div {
-    float: left;
-    color: #fff;
-    background-color: #333;
-    text-align: center;
-    width: 180px;
-    height: 16px;
-    padding: 5px 0px;
-    font-size: 14px;
-    margin-right: 5px;
-    cursor: pointer;
-    &:last-child {
-      margin-right: 0; }
-    &:hover {
-      background-color: #666; }
-    &.playing, &.paused {
-      background-color: #fff;
-      color: #000; }
-    &:active {
-      cursor: default;
-      background-color: #ededed;
-      color: #444; } } }
-
-/* playlist item */
-
-/* mouseover state */
-
-/* clicked state */
-
-/* active item */
-
-// Full finding aid display
-
-div.component {
-  padding: 10px;
-  &.c01 {
-    background-color: $component-c1;
-    border-color: darken($component-c1, 50%);
-    box-shadow: inset 0 1px 0 darken($component-c1, 100%);
-    border-radius: $default-border-radius;
-    -webkit-box-shadow: inset 0 1px 0 darken($component-c1, 10%);
-  }
-  &.c02 {
-    background-color: $component-c2;
-    border-color: darken($component-c2, 50%);
-    box-shadow: inset 0 1px 0 darken($component-c2, 100%);
-    border-radius: $default-border-radius;
-    -webkit-box-shadow: inset 0 1px 0 darken($component-c2, 10%);
-  }
-  &.c03 {
-    background-color: $component-c3;
-    border-color: darken($component-c3, 50%);
-    box-shadow: inset 0 1px 0 darken($component-c3, 100%);
-    border-radius: $default-border-radius;
-    -webkit-box-shadow: inset 0 1px 0 darken($component-c3, 10%);
-  }
-  &.c04 {
-    background-color: $component-c4;
-    border-color: darken($component-c4, 50%);
-    box-shadow: inset 0 1px 0 darken($component-c4, 100%);
-    border-radius: $default-border-radius;
-    -webkit-box-shadow: inset 0 1px 0 darken($component-c4, 10%);
-  }
-  &.c05 {
-    border: 1px solid $component-c5;
-    border-color: darken($component-c5, 50%);
-    box-shadow: inset 0 1px 0 darken($component-c5, 100%);
-    border-radius: $default-border-radius;
-    -webkit-box-shadow: inset 0 1px 0 darken($component-c5, 10%);
-  }
-}
-
-// Make the submit link within the Refworks form
+// Makes the submit link within the Refworks form
 // appear the same as the other elements in the dropdown navbar
 .refworks {
   form {
@@ -390,4 +198,225 @@ div.component {
       color: $dropdown-link-hover-color;
     }
   }
+}
+
+#header {
+
+  background-image: asset-url("header-tile.png");
+  background-repeat: repeat-x;
+  
+  .banner {
+    background-repeat:no-repeat;
+    background-position: center center;
+    
+  }
+
+}
+
+#main {
+  margin-top: 10px;
+}
+
+#footer {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#front_page_search {
+  .input-group-addon {
+    background-color: $catalog-red;
+    border-color: $catalog-darker-red;
+  }
+}
+
+#video_box {
+  background: #000;
+  padding: 10px 0px 10px 0px; }
+
+#player {
+  background: black;
+  cursor: pointer;
+  -moz-outline-radius: $default-border-radius;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+#playlist {
+
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 550px;
+  
+  div {
+
+    float: left;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+    width: 180px;
+    height: 16px;
+    padding: 5px 0px;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+    
+    &:last-child {
+      margin-right: 0; 
+    }
+    
+    &:hover {
+      background-color: #666;
+    }
+    
+    &.playing, &.paused {
+      background-color: #fff;
+      color: #000;
+    }
+    
+    &:active {
+      cursor: default;
+      background-color: #ededed;
+      color: #444; 
+    
+    }
+  }
+}
+
+// Grey backgrounds in the full finding aid display
+
+div.component {
+  
+  padding: 10px;
+  
+  &.c01 {
+    background-color: $component-c1;
+    border-color: darken($component-c1, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c1, 100%);
+    border-radius: $default-border-radius;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c1, 10%);
+  }
+  
+  &.c02 {
+    background-color: $component-c2;
+    border-color: darken($component-c2, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c2, 100%);
+    border-radius: $default-border-radius;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c2, 10%);
+  }
+  
+  &.c03 {
+    background-color: $component-c3;
+    border-color: darken($component-c3, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c3, 100%);
+    border-radius: $default-border-radius;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c3, 10%);
+  }
+  
+  &.c04 {
+    background-color: $component-c4;
+    border-color: darken($component-c4, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c4, 100%);
+    border-radius: $default-border-radius;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c4, 10%);
+  }
+  
+  &.c05 {
+    border: 1px solid $component-c5;
+    border-color: darken($component-c5, 50%);
+    box-shadow: inset 0 1px 0 darken($component-c5, 100%);
+    border-radius: $default-border-radius;
+    -webkit-box-shadow: inset 0 1px 0 darken($component-c5, 10%);
+  }
+
+}
+
+// -----------------------------------------------------
+// Media stylings
+// ----------------------------------------------------- 
+
+@media (min-width: $screen-sm) {
+
+  // because visible-xs adds a line break
+  .front-page-toggle {
+    display: none;
+  }
+
+  #header {
+    .banner {
+      background-image: asset-url("header.png");
+      height: 68px;
+      width: 100%;
+    }
+  }
+
+  #geninfo.dl-horizontal dt {
+    float: left;
+    width: 200px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  #geninfo.dl-horizontal dd {
+    margin-left: 220px;
+  }
+  
+  #geninfo.dl-horizontal dd:before, .dl-horizontal dd:after {
+    content: " ";
+    display: table; 
+  }
+  
+  #geninfo.dl-horizontal dd:after {
+    clear: both;
+  }
+
+}
+
+@media (max-width: $screen-sm) {
+
+  .navbar-default {
+    margin-bottom: 20px;
+    min-height: 5px;
+  }
+  
+  .navbar-inverse {
+    margin-bottom: 0px;
+  }
+  
+  .top-row {
+    margin-bottom: 0px;
+  }
+
+  #main{
+    margin-top: 0px;
+  }
+
+  #header {
+    .banner {
+      background-image: asset-url("header-mobile.png");
+      height: 68px;
+      width: 100%;
+    }
+  }
+
+}
+
+@media (min-width: $screen-lg) {
+  
+  #player {
+    width: #{16 * 22}px;
+    height: #{10 * 22}px;
+  }
+
+}
+
+@media (max-width: $screen-lg) {
+  
+  #player {
+    width: #{16 * 11}px;
+    height: #{10 * 11}px;
+  }
+
 }
