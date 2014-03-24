@@ -1,26 +1,13 @@
-    <% # container for a single doc -%>
-    <div class="document <%= render_document_class document %>">
-
-      <% # header bar for doc items in index view -%>
-      <div class="documentHeader">
-
-        <% # bookmark/folder functions for items/docs -%>
-        <%= render_index_doc_actions document %>
-
-        <% # main title container for doc partial view -%>
-        <div class="yui-u">
-
-          <h3 class="index_title">
-            <%= document_counter + 1 + @response.params[:start].to_i %>.
-            <%= document_icon document %>
-            <%= link_to_document document, :label=>document_show_link_field, :counter => (document_counter + 1 + @response.params[:start].to_i) %>
-          </h3>
-        </div>
-      </div>
-
-      <% # main container for doc partial view -%>
+<%= content_tag :div, :class => "row" do %>
+  <%= render_index_doc_actions document, :wrapping_class => "documentFunctions col-sm-2 col-sm-push-10" %>
+  <%= content_tag :div, :class => "media col-sm-10 col-sm-pull-2 index-result", :id => document.id,
+        :itemscope => true, :itemtype => document.itemtype,
+        :data => { :isbn => document.get(Solrizer.solr_name("isbn", :displayable)), :oclc => document.get(Solrizer.solr_name("oclc", :displayable)) } do %>
+    <%= render_document_partial document, :thumbnail, :document_counter => document_counter %>
+    <%= content_tag :div, :class => "media-body" do %>
+      <%= render :partial => 'document_header', :locals => { :document => document, :document_counter => document_counter } %>
       <%= show_holdings document %>
-
-      <%= render_document_partial document, :index %>
-
-    </div>
+      <%= render_document_partial document, :index, :document_counter => document_counter %>
+    <% end %>
+  <% end %>
+<% end %>

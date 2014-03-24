@@ -1,0 +1,6 @@
+<%= content_tag :div, :class => "btn-group" do %>
+  <%= content_tag :button, :class => "btn btn-default dropdown-toggle", :type => "button", :data => { :toggle => "dropdown" } do %>
+    <%= link_to t("account").html_safe, "#" %>
+  <% end %>
+  <%= render "shared/account_tools_list" %>
+<% end %>

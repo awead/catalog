@@ -1,0 +1,14 @@
+<div class="row-fluid span12">
+  <%= render_index_doc_actions @document, :wrapping_class => "documentFunctions row-fluid" %>
+  <%= show_holdings @document, {:full => TRUE} %>
+</div>
+
+<!-- google books -->
+<%= content_tag :div, nil, :class => "media row-fluid", :id => "show_gb" %>
+
+<% unless @document.more_like_this.empty? %>
+  <ul class="nav nav-list">
+  <li class="nav-header">More Like This</li>
+    <%= render :collection => @document.more_like_this, :partial => 'show_more_like_this', :as => :document %>
+  </ul>
+<% end %>

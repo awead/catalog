@@ -1,0 +1,4 @@
+<%= content_tag :li, :class => "dropdown" do %>
+  <%= link_to t("account").html_safe, "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown"} %>
+  <%= render "shared/account_tools_list" %>
+<% end %>

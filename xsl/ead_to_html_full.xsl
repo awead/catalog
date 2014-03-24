@@ -10,60 +10,53 @@
 
     <!-- Creates the html partial of the finding aid -->
     <xsl:template match="/">
-      <div id="ead_body">
 
-        <!-- General information section displays fields from archdesc in horizontal format using <dl> -->
-        <h2 id="geninfo">General Information</h2>
-        <dl class="defList">
-          <dt>Title:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unittitle"/></dd>
+      <legend>Summary</legend>
+        <dl id="geninfo" class="dl-horizontal">
+          <dt>Collection Number:</dt>
+          <dd><xsl:apply-templates select="//ead:eadid"/></dd>
           <dt>Dates:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:unitdate"/></dd>
-          <dt>Extent:</dt>
+          <dt>Size:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:physdesc/ead:extent"/></dd>
-          <dt>Language:</dt>
+          <dt>Language(s):</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:langmaterial"/></dd>
-          <dt>Processing Information:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:processinfo/ead:p"/></dd>
-          <dt>Preferred Citation:</dt>
+          <dt>Citation:</dt>
           <dd><xsl:apply-templates select="//ead:archdesc/ead:prefercite/ead:p"/></dd>
+          <dt>Abstract:</dt>
+          <dd><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></dd>
+          <dt>Finding Aid Permalink:</dt>
+          <dd><xsl:call-template name="permalink"/></dd>
         </dl>
+      
+      <xsl:apply-templates select="//ead:archdesc/ead:scopecontent"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:processinfo"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict"/>
+      <xsl:apply-templates select="//ead:archdesc/ead:userestrict"/>
 
-        <!-- Other sections of archdesc are displayed in paragraph format -->
-        <h2 id="abstract">Collection Overview</h2>
-        <p><xsl:apply-templates select="//ead:archdesc/ead:did/ead:abstract"/></p>
-        <xsl:apply-templates select="//ead:archdesc/ead:bioghist"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:bibliography"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:accruals"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:separatedmaterial"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:originalsloc"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:relatedmaterial"/>
-        <xsl:apply-templates select="//ead:archdesc/ead:custodhist"/>
-        <h2 id="userestrict">Restrictions</h2>
-        <h4>Use</h4>
-        <xsl:apply-templates select="//ead:archdesc/ead:userestrict/ead:p"/>
-        <h4>Access</h4>
-        <xsl:apply-templates select="//ead:archdesc/ead:accessrestrict/ead:p"/>
-        
-        <h2 id="subjects">Subjects</h2>
-        <p>Click on the links below to see more items in the catalog on these topics.</p>
-        <dl class="defList block">
-          <dt>Name:</dt>
-          <dd>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:persname"/>
-            <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:corpname"/>
-          </dd>
-          <dt>Genre:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:genreform"/></dd>
-          <dt>Topic:</dt>
-          <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:subject"/></dd>
-        </dl>
-
-        <h2 id="inventory">Collection Inventory</h2>
-        <div id="dsc">
-          <xsl:apply-templates select="//ead:archdesc/ead:dsc"/>
-        </div>
-
+      <legend>Subject Headings</legend>
+      <p>Click on the links below to see more items in the catalog on these topics.</p>
+      <dl class="dl-horizontal">
+        <dt>Names:</dt>
+        <dd>
+          <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:persname"/>
+          <xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:corpname"/>
+        </dd>
+        <dt>Subjects:</dt>
+        <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:subject"/></dd>
+        <dt>Formats:</dt>
+        <dd><xsl:apply-templates select="//ead:archdesc/ead:controlaccess/ead:genreform"/></dd>
+      </dl>
+      
+      <legend>Contents</legend>
+      <div id="dsc">
+        <xsl:apply-templates select="//ead:archdesc/ead:dsc"/>
       </div>
 
     </xsl:template>
@@ -82,7 +75,7 @@
         <xsl:when test="parent::ead:chronlist"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="parent::ead:list"><h4><xsl:apply-templates/></h4></xsl:when>
         <xsl:when test="ancestor::ead:c"><h5><xsl:apply-templates/></h5></xsl:when>
-        <xsl:otherwise><h2 id="{$id}"><xsl:apply-templates/></h2></xsl:otherwise>
+        <xsl:otherwise><legend id="{$id}"><xsl:apply-templates/></legend></xsl:otherwise>
       </xsl:choose>
     </xsl:template>
 
@@ -106,11 +99,11 @@
     <xsl:template match="ead:c">
       <xsl:variable name="id" select="@id"/>
       <xsl:variable name="depth" select="count(ancestor::ead:c) + 1"/>
-      <div id="{$id}" class="component_part clearfix c0{$depth}">
+      <div id="{$id}" class="component c0{$depth}">
 
         <!-- Each field in the component gets formatted here -->
-        <h3><xsl:apply-templates select="ead:did/ead:unittitle"/><xsl:if test="ead:did/ead:unittitle != '' and ead:did/ead:unitdate">, </xsl:if><xsl:apply-templates select="ead:did/ead:unitdate"/></h3>
-        <dl class="defList">
+        <h4><xsl:apply-templates select="ead:did/ead:unittitle"/><xsl:if test="ead:did/ead:unittitle != '' and ead:did/ead:unitdate">, </xsl:if><xsl:apply-templates select="ead:did/ead:unitdate"/></h4>
+        <dl class="dl-horizontal">
 
           <!-- container field -->
           <xsl:apply-templates select="ead:did/ead:container"/>
@@ -185,7 +178,7 @@
 
     <!-- bioghist bits... -->
     <xsl:template match="ead:chronlist">
-      <dl class="defList"><xsl:apply-templates/></dl>
+      <dl class="dl-horizontal"><xsl:apply-templates/></dl>
     </xsl:template>
 
     <xsl:template match="ead:chronitem/ead:date">
@@ -216,19 +209,19 @@
     <!-- Subject headings -->
     <xsl:template match="ead:controlaccess/ead:persname">
       <xsl:variable name="value" select="self::ead:persname"/>
-      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></span>
+      <span class="block"><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
     <xsl:template match="ead:controlaccess/ead:corpname">
       <xsl:variable name="value" select="self::ead:corpname"/>
-      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></span>
+      <span class="block"><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[name_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
     <xsl:template match="ead:controlaccess/ead:genreform">
       <xsl:variable name="value" select="self::ead:genreform"/>
-      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[genre_facet][]={$value}"><xsl:apply-templates/></a></span>
+      <span class="block"><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[genre_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
     <xsl:template match="ead:controlaccess/ead:subject">
       <xsl:variable name="value" select="self::ead:subject"/>
-      <span><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[subject_facet][]={$value}"><xsl:apply-templates/></a></span>
+      <span class="block"><a href="RAILS_RELATIVE_URL_ROOT/catalog?f[subject_facet][]={$value}"><xsl:apply-templates/></a></span>
     </xsl:template>
 
     <!-- empty template to skip unitdate since it's dealt with in unittitle
@@ -302,6 +295,11 @@
       <xsl:text>[</xsl:text>
       <xsl:value-of select="1+count(preceding-sibling::*)"/>
       <xsl:text>]</xsl:text>
+    </xsl:template>
+
+    <xsl:template name="permalink">
+      <xsl:variable name="eadid" select="//ead:eadid"/>
+      <a href="http://catalog.rockhall.com/catalog/{$eadid}">http://catalog.rockhall.com/catalog/<xsl:value-of select="$eadid" /></a>
     </xsl:template>
 
 </xsl:stylesheet>

@@ -2,16 +2,12 @@
 nohup.out
 
 *.sqlite3
+*.sqlite3-journal
 *.log
 *~
 *.swp
 
 rerun.txt
-
-vendor/plugins/*
-vendor/plugins/blacklight/*
-
-lib/solrmarc.log*
 
 public/plugin_assets
 public/plugin_assets/
@@ -19,7 +15,7 @@ public/assets
 public/*.xml
 public/*.xml.gz
 
-tmp/*
+tmp
 
 .sass-cache/*
 test/data/ead/*
@@ -35,7 +31,9 @@ public/fa/*.html
 public/fa/*.xml
 public/fa/*.json
 
+vendor/SolrMarc/solrmarc.log*
+
 .bundle
-bin
 .rvmrc
 .ruby-gemset
+jetty

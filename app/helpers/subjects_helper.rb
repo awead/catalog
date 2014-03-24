@@ -4,13 +4,13 @@ module SubjectsHelper
 
   # Main method for rendering our subhect headings for display in MARC records
   def render_subjects args, results = Array.new
-    if args[:document]["marc_display"]
-      format_subjects(args[:document]["marc_display"]).each do |line|
+    if args[:document]["marc_ss"]
+      format_subjects(args[:document]["marc_ss"]).each do |line|
         results << subject_array_to_links(line)
       end
-    elsif @document["subject_display"]
+    elsif args[:document][Solrizer.solr_name("subject", :displayable)]
       # We use the same method for ead for any document that has subjects listed as Term1--term2--term3
-      format_ead_subjects(@document["subject_display"]).each do |line|
+      format_ead_subjects(args[:document][Solrizer.solr_name("subject", :displayable)]).each do |line|
         results << subject_array_to_links(line)
       end
     end
@@ -19,19 +19,21 @@ module SubjectsHelper
 
   # Main method for rendering our subhect headings for display in finding aids
   def render_ead_subjects results = Array.new
-    if @document["subject_display"]
-      format_ead_subjects(@document["subject_display"]).each do |line|
+    if @document[Solrizer.solr_name("subject", :displayable)]
+      format_ead_subjects(@document[Solrizer.solr_name("subject", :displayable)]).each do |line|
         results << subject_array_to_links(line)
       end
     end
     return results.join(field_value_separator).html_safe
   end
 
+  private
+
   # Creates the multipl links within a single heading
   def subject_array_to_links array, results = Array.new
     links = format_subject_links(array)
     links.each do |text, terms|
-      results << subject_facet_link(text, terms)
+      results << subject_facet_link(tag_value_with_property(text,"keywords"), terms)
     end
     return results.join("--")
   end
@@ -41,17 +43,15 @@ module SubjectsHelper
   # we roll our own paramters hash.
   def subject_facet_link text, terms
     if terms.count == 1
-      facet_link text, "subject_facet"
+      facet_link text, Solrizer.solr_name("subject", :facetable)
     else
       new_params = Hash.new
       new_params[:action] = "index"
 
-      # {"f"=>{"subject_facet"=>["Inductee", "Rock musicians"]}}
+      # {"f"=>{Solrizer.solr_name("subject", :facetable)=>["Inductee", "Rock musicians"]}}
       new_params[:f] = Hash.new
-      new_params[:f]["subject_facet"] = terms
-      link_to(text, 
-            new_params, 
-            :class=>"facet_select label")
+      new_params[:f][Solrizer.solr_name("subject", :facetable)] = terms
+      link_to text, new_params
     end    
   end
 
@@ -97,7 +97,7 @@ module SubjectsHelper
     return results
   end
 
-  # Takes the marc xml from marc_display and returns a 2D array of all our subjects
+  # Takes the marc xml from marc_ss and returns a 2D array of all our subjects
   # formatted accordingly.  Fields in the subjects array are returned as arrays
   # of strings for each subfield, while fields in the namedsubjects array have their
   # a-d subfields joined into one string and all other subfields as individual strings.
@@ -145,6 +145,5 @@ module SubjectsHelper
     end
     return results
   end  
-
 
 end

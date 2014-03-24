@@ -1,0 +1,17 @@
+<%= content_tag :div, :class => "col-xs-12" do %>
+  <%= render "shared/slideshow" %>
+<% end %>
+<%= content_tag :div, :class => "col-xs-6" do %>
+  <%= content_tag :h3, "Resources" %>
+  <span class="block"><%= link_to "Archival Collections", "http://library.rockhall.com/content.php?pid=290460&sid=2408927", :target => "_blank" %></span>
+  <span class="block"><%= link_to "Research Guides", "http://library.rockhall.com/content.php?pid=290460&sid=2495625", :target => "_blank" %></span>
+  <span class="block"><%= link_to "Databases", "http://library.rockhall.com/content.php?pid=290460&sid=2393699", :target => "_blank" %></span>
+  <span class="block"><%= link_to "Rockhall.com", "http://rockhall.com", :target => "_blank" %></span>
+<% end %>
+<%= content_tag :div, :class => "col-xs-6" do %>
+  <%= content_tag :h3, "User Guides" %>
+  <span class="block"><%= link_to "Using the Catalog", "http://library.rockhall.com/content.php?pid=293666&sid=2422823", :target => "_blank" %></span>
+  <span class="block"><%= link_to "Using Archives", "http://www2.archivists.org/usingarchives", :target => "_blank" %></span>
+  <span class="block"><%= link_to "Access", "http://library.rockhall.com/access", :target => "_blank" %></span>
+  <span class="block"><%= link_to "Contact Us", "http://library.rockhall.com/contact", :target => "_blank" %></span>
+<% end %>

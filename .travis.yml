@@ -3,6 +3,3 @@ rvm:
   - 2.0.0
 notifications:
   irc: "irc.freenode.org#rockhalldev"
-branches:
-  only:
-    - r13

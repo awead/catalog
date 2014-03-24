@@ -1,19 +1,32 @@
-<h2>Sign in</h2>
+<%= content_tag :div, :class => "col-sm-12" do %>
 
-<p>Create an account to save and export your searches.</p>
+  <%= content_tag :h2, t("devise.sessions.heading") %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form-horizontal" }) do |f| %>
+    <%= content_tag :div, :class => "form-group" do %>
+      <%= f.label :email, :class => "col-sm-2 control-label" %>
+      <%= content_tag :div, :class => "col-sm-5" do %>
+        <%= f.email_field :email, :class => "form-control", :autofocus => true %>
+      <% end %>
+    <% end %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <%= content_tag :div, :class => "form-group" do %>
+      <%= f.label :password, :class => "col-sm-2 control-label" %>
+      <%= content_tag :div, :class => "col-sm-5" do %>
+        
+        <%= f.password_field :password, :class => "form-control", :autocomplete => "off" %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+        <% if devise_mapping.rememberable? %>
+          <%= content_tag :label, :class => "checkbox" do %>
+            <%= f.check_box :remember_me %> <%= t("devise.sessions.remember") %>
+          <% end %>
+        <% end %>
 
-  <div><%= f.submit "Sign in" %></div>
+      <% end %>
+    <% end %>
+
+    <%= f.submit t("devise.sessions.submit"), :class => "btn btn-primary" %>
+
+  <% end %>
+
 <% end %>
-
-<%= render :partial => "devise/shared/links" %>

@@ -15,8 +15,8 @@ describe MarcFile do
 
     it "should return an array of marc xml documents" do
       result = @file.get_records
-      result.first["marc_display"].should_not be_nil
-      result.first["marc_display"].should be_kind_of(String)
+      result.first["marc_ss"].should_not be_nil
+      result.first["marc_ss"].should be_kind_of String
       result.length.should == 83
     end
 

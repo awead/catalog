@@ -1,0 +1,5 @@
+<%= content_tag :h4, :class => "media-heading" do %>
+  <% counter = document_counter_with_offset(document_counter) %>
+  <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
+  <%= link_to_document document, :label=>document_show_link_field(document), :counter => counter %>
+<% end %>

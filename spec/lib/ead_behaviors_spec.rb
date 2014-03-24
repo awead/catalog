@@ -1,10 +1,10 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
-describe Rockhall::EadBehaviors do
+describe Rockhall::Ead::Behaviors do
 
   before(:all) do
     class TestClass
-      include Rockhall::EadBehaviors
+      include Rockhall::Ead::Behaviors
     end
     @test = TestClass.new
   end
@@ -92,6 +92,9 @@ describe Rockhall::EadBehaviors do
       @test.get_language_from_code("fre").should == "French"
       @test.get_language_from_code("eng").should == "English"
       @test.get_language_from_code("spa").should == "Spanish"
+    end
+    it "should return 'None' if it does not match any code" do
+      @test.get_language_from_code("xxx").should be_nil
     end
   end
 

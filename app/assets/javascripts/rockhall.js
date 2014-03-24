@@ -6,6 +6,10 @@
 $(document).ready(returnStatus);
 $(document).ready(returnHoldings);
 
+// Button for loading more components
+$(document).on('click', '#show_more_components', function(event) {
+  addMoreComponents(event)
+});
 
 //
 // Anonymous fuctions
@@ -37,45 +41,22 @@ $(document).ready(function() {
     }
   });
 
-});
+  // Javascript to enable link to tab
+  var url = document.location.toString();
+  if (url.match('#')) {
+    $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+  } 
 
-// Highlihght and scroll to any archival items
-$(document).ready(function() {
+  // Change hash for page-reload
+  $('.nav-tabs a').on('shown', function (e) {
+      // set this to empty so it doesn't jump to the anchor
+      window.location.hash = "";
+  })
 
-  var parameters = window.location.href.split("/");
-  var ref = parameters[parameters.length-1];
-
-  if (ref.match(/ref/)) {
-    $("#"+ref).css("background-color", "yellow");
-    $("html, body").animate({ scrollTop: $("#"+ref).offset().top }, 1000);
-  }
-  
-});
-
-// Open ead components and load child documents
-$(document).on("click", '.next_component_button', function(event) {
-
-  var waiting = $(this).attr("id")+"-waiting";
-  var parent  = $(this).parent("div").attr("id");
-  $(this).toggleClass("hidden");
-  $("#"+waiting).toggleClass("hidden");
-  $.get(this, function(data) {
-    $("#"+parent).slideDown("normal", function() { $(this).append(data); } );
-    $("#"+waiting).toggleClass("hidden");
-  });
-  event.preventDefault();
+  // Tooltips
+  $('.search-btn').tooltip();
 
 });
-
-// Close and EAD component and remove docs from the DOM
-$(document).on("click", '.close_component_button', function(event) {
-  var parent  = $(this).parent("div").attr("id");
-  var open    = $(this).attr("id").replace("close","open");
-  $("#"+parent+"-list").slideUp("normal", function() { $(this).remove(); } );
-  $("#"+open).toggleClass("hidden");
-  $(this).remove();
-});
-
 
 //
 // Named functions
@@ -92,7 +73,13 @@ function returnStatus() {
         $('#'+id).append("Unknown");
       },
       success: function(data){
-        $('#'+id).replaceWith(data);
+        if (data === 'Copies Available') {
+          $('#'+id).toggleClass('label-success');
+        }
+        else {
+          $('#'+id).toggleClass('label-warning');
+        }
+        $('#'+id).text(data);
       }
     });
 
@@ -134,4 +121,34 @@ function setAllBookmarksCheckbox() {
     $("input#toggle_all_bookmarks").prop("checked", false);
     $("label#toggle_all_bookmarks").text("Select all");
   }
+}
+
+function addMoreComponents(event) {
+
+  var start = $('#inventory_table tr').last().data('row') + 1;
+  var ead = $('#inventory_table').data('ead');
+  var ref = $('#inventory_table').data('ref');
+  var url;
+
+  if ( ref === undefined || ref === null )  {
+    url = ROOT_PATH+'components/'+ead+'?start='+start;
+  }
+  else {
+    url = ROOT_PATH+'components/'+ead+'/'+ref+'?start='+start;
+  }
+
+  var jqxhr = $.get(url)
+      .done(function(data) {
+        if (data != '') {
+          $('table#inventory_table tbody').append(data);
+          if ( $('#inventory_table tr').last().data('row') + 1 === $('#inventory_table').data('numfound') )
+            $('#show_more_components').toggleClass('hidden');
+        }
+      })
+      .fail(function(jqXHR, textStatus, errorThrown) {
+        var msg = '<tr class="alert alert-error"><td colspan="2">Error retrieving additionl components: '+errorThrown+'</td></tr>'
+        $('#inventory_table').append(msg);
+      });
+
+  event.preventDefault();
 }

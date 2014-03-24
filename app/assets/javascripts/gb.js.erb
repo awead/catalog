@@ -1,0 +1,109 @@
+// Query Googlebooks for stuff
+
+$(document).ready(function() {
+
+  var queries = [];
+
+  // Get cover images in the show view
+  if ( $('dd.blacklight-isbn_ssm span').get(0) ) {
+    $.each($('dd.blacklight-isbn_ssm span'), function(index,value) {
+      queries.push(gbUrl('isbn',value.textContent));
+    });
+  }
+  if ( $('dd.blacklight-oclc_ssm').get(0) && $('#show_gb').children()[0] === undefined ) {
+    $.each($('dd.blacklight-oclc_ssm').html().split("<br>"), function(index,value) {
+      queries.push(gbUrl('oclc',value));
+    });
+  }
+
+  if (queries.length > 0)
+    getGbData(queries);
+
+
+  // Get cover images in the index view
+  if ($('.index-result').get(0)) {
+    $.each($('.index-result'), function() {
+      var queries = [];
+      if ($(this).data('isbn')) {
+        $.each($(this).data('isbn').toString().split(', '), function() {
+          queries.push(gbUrl('isbn',this));
+        });
+      }
+      if ($(this).data('oclc')) {
+        $.each($(this).data('oclc').toString().split(', '), function() {
+          queries.push(gbUrl('oclc',this));
+        });
+      }
+      if (queries.length > 0)
+        getGbDataWithId(queries, $(this).attr('id'));
+    });
+  }
+
+});
+
+
+// https://www.googleapis.com/books/v1/volumes?q=isbn:9781409428411&key=AIzaSyDX1SMk2MPTPA8mJbcfFCzhjUoi7d-UjRw
+function gbUrl(field, search) {
+  return 'https://www.googleapis.com/books/v1/volumes?q='+field+':'+search+'&key=AIzaSyDX1SMk2MPTPA8mJbcfFCzhjUoi7d-UjRw'
+}
+
+function getGbData(queries) {
+  $.each(queries, function(index,url) {
+    $.getJSON(url).done(function(data) {
+      processGbData(data)
+    });
+  });
+}
+
+function getGbDataWithId(queries, id) {
+  $.each(queries, function(index,url) {
+    $.getJSON(url).done(function(data) {
+      processGbDataForIndex(data, id)
+    });
+  });
+}
+
+function processGbData(data) {
+  if ( data.totalItems > 0 && $('#show_gb').children().length == 0 ) {
+    $('div#show_gb').prepend(showGb(data));
+  }
+}
+
+function processGbDataForIndex(data, id) {
+  if (data.totalItems > 0 && $('#'+id+' .thumbnail').hasClass('default')) {
+    $('#'+id+' .thumbnail').html(indexGb(data));
+    $('#'+id+' .thumbnail').toggleClass('default');
+  }
+}
+
+function showGb(data) {
+  var html;
+  var src;
+
+  if ( data.items[0].volumeInfo.imageLinks === undefined ) {
+    src = '<%= asset_path("icons/book.png") %>'
+  }
+  else {
+    src = data.items[0].volumeInfo.imageLinks.thumbnail;
+  }
+
+  html = '<a class="pull-left" target="_blank" href="'+data.items[0].volumeInfo.previewLink+'">'+
+         '<img class="media-object" src="'+src+'"/></a>'+
+         '<div class="media-body">View this item on Google Books</div>';
+  return html;
+}
+
+function indexGb(data) {
+  var html;
+  var src;
+
+  if ( data.items[0].volumeInfo.imageLinks === undefined ) {
+    src = '<%= asset_path("icons/book.png") %>'
+  }
+  else {
+    src = data.items[0].volumeInfo.imageLinks.smallThumbnail;
+  }
+
+  html = '<img class="media-object" src="'+src+'"/>';
+  return html;
+}

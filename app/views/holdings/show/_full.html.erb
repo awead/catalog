@@ -1,7 +1,15 @@
-<h3>Holdings</h3>
-<table>
-<tr><th>Location</th><th>Call Number</th><th>Availability</th></tr>
-<% @holdings.each do |h| %>
- <tr><td><%= h.html_safe %></td></tr>
+<%= content_tag :div, :class => "row-fluid" do %>
+  <%= content_tag :h3, "Holdings" %>
+  <%= content_tag :table, :class => "table table-condensed" do %>
+    <%= content_tag :tr do %>
+      <%= content_tag :th, "Location"     %>
+      <%= content_tag :th, "Call Number"  %>
+      <%= content_tag :th, "Availability" %>
+    <% end %>
+    <% @holdings.each do |h| %>
+      <%= content_tag :tr do %>  
+        <%= content_tag :td, h.html_safe %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>
-</table>

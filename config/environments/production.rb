@@ -18,7 +18,7 @@ Catalog::Application.configure do
   config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.js_compressor = :uglifier
 
   # Falling back to assets pipeline
   #
@@ -30,7 +30,7 @@ Catalog::Application.configure do
   # out.  Note, not using asset pipeline in production is best (ie. setting to false),
   # but sometimes certain css files won't compile so we'll set this to true and allow
   # asset pipeline in production just so things will work.
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -68,6 +68,9 @@ Catalog::Application.configure do
 
   # ActionMailer configuration
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { :host => "localhost" }  
+  config.action_mailer.delivery_method = :smtp
+
 
   # Enable threaded mode
   # config.threadsafe!
@@ -79,9 +82,7 @@ Catalog::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  # Log the query plan for queries taking more than this (works
-  # with SQLite, MySQL, and PostgreSQL)
-  # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.eager_load = true
 end
 
 # Production email settings

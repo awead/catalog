@@ -1,0 +1,15 @@
+<%= content_tag :div, :id => "catalog_carousel", :class => "carousel slide", :data => { :ride => "carousel" }  do %>
+  
+  <!-- Wrapper for slides -->
+  <%= content_tag :div, :class => "carousel-inner" do %>
+    <%= render_slides %>
+  <% end %>
+
+  <!-- Controls -->
+  <%= link_to "#catalog_carousel", :class => "left carousel-control", :data => { :slide => "prev" } do %>
+    <%= content_tag :span, nil, :class => "glyphicon glyphicon-chevron-left" %>
+  <% end %>
+  <%= link_to "#catalog_carousel", :class => "right carousel-control", :data => { :slide => "next" } do %>
+    <%= content_tag :span, nil, :class => "glyphicon glyphicon-chevron-right" %>
+  <% end %>
+<% end %>

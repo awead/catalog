@@ -1,28 +1,11 @@
-<%= hide_component_button %>
-
-<div id="<%= render_list_id %>">
-  <% documents.each do |document| %>
-    <div id="<%= document["ref_id"] %>" class="component_part c0<%= document["component_level_i"] %>">
-
-    <h5>
-      <span>
-        <%= comma_list( [document["title_display"], document["unitdate_display"]] ) %>
-      </span>
-    </h5>
-
-    <dl>
-      <% document_show_fields.each do |solr_fname, field| -%>
-        <% if should_display_show_field? document, field %>
-          <% if should_display_component_field? field.field %>
-            <dt class="blacklight-<%= solr_fname.parameterize %>"><%= render_document_show_field_label :field => solr_fname %></dt>
-            <dd class="blacklight-<%= solr_fname.parameterize %>"><%= render_document_show_field_value :document => document, :field => solr_fname %></dd>
-          <% end %>
-        <% end -%>
-      <% end -%>
-    </dl>
-
-    <%= continue_components(document) %>
-    
-    </div>
+<%= content_tag :table, :id => "inventory_table", 
+      :class => "table table-condensed table-striped table-hover",
+      :data => {:ead => params[:id], :ref => params[:ref], :numfound => @numfound} do %>
+  <%= content_tag :tr do %>
+    <%= content_tag :th, "Item" %>
+    <%= content_tag :th, "Materials" %>
   <% end %>
-</div>
+  <%= render_component_rows %>
+<% end %>
+
+<%= render_show_more_components_button %>

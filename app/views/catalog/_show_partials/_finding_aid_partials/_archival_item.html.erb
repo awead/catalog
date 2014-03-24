@@ -1,0 +1,36 @@
+<%= content_tag :div, :class => "visible-print" do %>
+  <%= render_finding_aid_header %>
+  <%= content_tag :legend, "Contents" %>
+<% end %>
+
+<%= content_tag :ul, :class => "breadcrumb" do %>
+  <!-- Link to collection -->
+  <%= content_tag :li do %>
+    <%= tag_value_is_part_of render_collection_breadcrumb_link %>
+  <% end %>
+  
+  <!-- additional links to parent components -->
+  <% unless @component.get(Solrizer.solr_name("parent_unittitles", :displayable)).nil? %>
+    <% @component[Solrizer.solr_name("parent_unittitles", :displayable)].each_index do |index| %>
+      <%= content_tag :li do %>
+        <%= tag_value_is_part_of render_parent_title_breadcrumb_link(index) %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <!-- the current component title -->
+  <%= content_tag :li, render_component_title, :class => "active" %>
+<% end %>
+
+
+<%= render_parent_component_title %>
+<%= render_parent_component_detail %>
+
+<%= content_tag :div, :class => component_offset_class do %>
+  <%= content_tag :h4 do %>
+    <%= render_component_title %>
+  <% end %>
+  <%= render_archival_item_detail %>
+<% end %>
+
+<%= render_inventory_table if component_has_children? %>

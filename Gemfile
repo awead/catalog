@@ -1,42 +1,45 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~>3.2.15'
+gem 'rails', '~>4.0.0'
 
-gem 'blacklight', '~> 3.8.2'
-gem 'sqlite3'
-gem 'sanitize'
-gem 'json'
-gem 'sass-rails'
-gem 'devise', '< 3.0.0'
+gem 'blacklight', '~>5.1.0'
+gem 'blacklight-marc'
+gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
+gem 'blacklight_advanced_search'
+gem 'bootstrap-sass'
+gem 'devise'
 gem 'devise-guests'
-gem 'blacklight_highlight'
-gem 'blacklight-sitemap', :path=> 'gems/blacklight-sitemap'
+gem 'googlebooks'
+gem 'jquery-rails'
+gem 'json'
 gem 'ruby-ntlm'
-gem 'solr_ead', '=0.4.5'
+gem 'sanitize'
+gem 'sass', '~> 3.2'
+gem 'sass-rails', '~> 4.0.2'
+gem 'solr_ead'
+gem 'sqlite3'
 gem 'therubyracer'
-
-# jQuery 1.9 breaks checkbox_submit.js functions
-# using jquery-rails versions prior to 2.2 keeps us to jQuery 1.8
-gem 'jquery-rails', '< 2.2.0'
-
-group :assets do
-  gem 'coffee-rails'
-  gem 'uglifier'
-  gem 'compass-rails'
-  gem 'compass-susy-plugin', :require => 'susy'
-end
+gem 'uglifier'
+gem 'unicode'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.12.2'
-  gem 'webrat'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'coffee-rails'
   gem 'database_cleaner'
   gem 'debugger'
+  gem 'guard-rspec', :require => false
+  gem 'jettywrapper'
   gem 'pry'
+  gem 'rspec-rails'
+  gem 'terminal-notifier-guard'
+  gem 'webmock', :require => false
+  gem 'webrat'
 end
 
-group :cucumber do
+group :test do
   gem 'capybara'
-  gem 'cucumber-rails'
-  gem 'selenium-webdriver'
+  gem 'cucumber-rails', :require => false
   gem 'launchy'
+  gem 'selenium-webdriver'
 end

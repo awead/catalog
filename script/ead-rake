@@ -13,6 +13,6 @@ cd $APPDIR
 for f in $@
 do
   export FILE=$f
-  rake solr:ead:index
+  bundle exec rake solr:ead:index
 done
 exit 0;

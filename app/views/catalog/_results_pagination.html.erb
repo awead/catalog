@@ -1,0 +1,7 @@
+<% if @response.total_pages > 1 %>
+  <%= content_tag :div, :class => "col-sm-12 text-center" do %>
+    <%= content_tag :div, :class => "pagination pagination-centered" do %>
+      <%= paginate @response, :outer_window => 2, :theme => 'blacklight' %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -5,6 +5,12 @@
 require File.expand_path('../config/application', __FILE__)
 
 Catalog::Application.load_tasks
+
+desc "Run Travis"
+task :ci => ["rockhall:dev:ci"]
+Rake::Task[:default].prerequisites.clear
+task :default => [:ci]
+
 require 'blacklight-sitemap'
 Rake::BlacklightSitemapTask.new do |sm|
   # below are configuration options with their default values shown.

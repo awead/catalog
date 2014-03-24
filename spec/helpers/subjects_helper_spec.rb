@@ -9,7 +9,7 @@ describe SubjectsHelper do
     @test = TestClass.new
   end
 
-  describe ":format_subjects" do
+  describe "#format_subjects" do
     it "should return an 2d array of formatted fields" do
       results = format_subjects marc_fixture("601137822.mrc").to_xml.to_s
       results.should include(["Rock musicians", "United States"])
@@ -38,7 +38,7 @@ describe SubjectsHelper do
 
   end
 
-  describe ":format_subject_links" do
+  describe "#format_subject_links" do
 
     it "should return a hash of terms and their query terms" do
       results = format_subject_links [ "Rock Musicians", "England", "Biography" ]
@@ -50,7 +50,7 @@ describe SubjectsHelper do
 
   end
 
-  describe ":format_ead_subjects" do
+  describe "#format_ead_subjects" do
 
     it "should return a 2D array of subject terms from a solr array" do
       a = ["Disc jockeys", "Music trade--United States", "Radio personalities", "Rock concerts", "Rock music--To 1961", "Rock music--United States"]
@@ -58,8 +58,6 @@ describe SubjectsHelper do
       r.first.should == ["Disc jockeys"]
       r.last.should  == ["Rock music", "United States"]
     end
-
-
 
   end
 

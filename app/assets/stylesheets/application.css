@@ -1,7 +1,9 @@
 /*      
  * application.css 
  *
- * Manifest file that compiles all included scss and css files under ./all into one big css file.
+ * Manifest file that compiles all included scss and css files under ./all into one big css file,
+ * as well as additional css files from the vendor directory.
+ *
  * This manifest is for all css except any stylings used specifically for printing.  That will
  * be under ./print instead and is not included here.
  *

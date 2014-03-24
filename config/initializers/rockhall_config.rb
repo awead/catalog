@@ -15,5 +15,8 @@ config[:rtmp_url] = RH_CONFIG['rtmp_url']
 # Local networks
 config[:local_networks] = RH_CONFIG['local_networks']
 
+# Maximum number of components to return before "more" link
+config[:max_components] = RH_CONFIG['max_components']
+
 # Pin our hash to the global Rails configuration
 Rails.configuration.rockhall_config = config

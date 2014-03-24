@@ -1,0 +1,6 @@
+<%= content_tag :div, :id => "error_explanation", :class => "alert alert-warning" do %>
+  <%= content_tag :h4, sentence %>
+  <%= content_tag :ul do %>
+    <%= messages.html_safe %>
+  <% end %>
+<% end %>

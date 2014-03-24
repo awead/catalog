@@ -1,16 +1,12 @@
-<% # show checkbox for bookmarking all items on the page %>
-<div class="documentFunctions">
-  <%= check_box_tag "toggle_all_bookmarks" %>
-  <%= label_tag "Select All", nil, :class => "toggle_bookmark", :id => "toggle_all_bookmarks" %>
-</div>
-
-<% # container for all documents in index view -%>
-<div id="documents">
-  <% if Rails.version > "3.2.0" %>
-    <%= render @document_list, :as => :document %>
-  <% else %>
-    <% @document_list.each_with_index do |document, document_counter| %>
-      <%= render :partial => document.to_partial_path, :locals => { :document => document, :document_counter => document_counter } %>
+<%= content_tag :div, :class => "row" do %>
+  <%= content_tag :div, :class => "col-sm-2 col-sm-offset-10" do %>
+    <%= content_tag :label, :class => "checkbox" do %>
+      <%= check_box_tag "toggle_all_bookmarks" %>
+      <%= content_tag :span, "Select All" %>
     <% end %>
   <% end %>
-</div>
+<% end %>
+
+<%= content_tag :div, :id => "documents" do %>
+  <%= render documents, :as => :document %>
+<% end %>

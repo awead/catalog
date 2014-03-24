@@ -13,23 +13,18 @@ class HoldingsController < ApplicationController
   # params[:type] = "full"
   def show
     @holdings = Rockhall::Innovative.get_holdings(params[:id])
-
-    if @holdings.join(" ").match("LIB USE ONLY")
-      @status = "Copies Available"
-    elsif @holdings.first.match("unknown")
-      @status = @holdings.first.capitalize
-    else
-      @status = "Not available"
-    end
-
-    if params[:type] == "full"
-      render :partial => "holdings/show/full"
-    else
-      render :partial => "holdings/show/brief"
-    end
+    @status = get_status_from_holdings
+    params[:type] == "full" ? render(:partial => "holdings/show/full") : render(:partial => "holdings/show/brief")
   end
 
-
-
+  def get_status_from_holdings
+    if @holdings.join(" ").match("LIB USE ONLY")
+      "Copies Available"
+    elsif @holdings.first.match("unknown")
+      @holdings.first.capitalize
+    else
+      "Not available"
+    end
+  end
 
 end

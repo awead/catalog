@@ -1,0 +1,22 @@
+<%= content_tag :div, :class => "tab-pane", :id => "subjects" do %>
+  <%= content_tag :legend, "Subject Headings", :id => "subjects" %>
+  <%= content_tag :p, "Click on the links below to see more items in the catalog on these topics." %>
+  <%= content_tag :dl, :class => "dl-horizontal" do %>
+    <% if @document[Solrizer.solr_name("contributors", :displayable)] %>
+      <%= content_tag :dt, "Names:" %>
+      <%= content_tag :dd do %>
+        <%= render_facet_link({:document => @document, :field => Solrizer.solr_name("contributors", :displayable) }) %>
+      <% end %>
+    <% end %>
+    <% if @document[Solrizer.solr_name("subject", :displayable)] %>
+      <%= content_tag :dt, "Subjects:" %>
+      <%= content_tag :dd, render_ead_subjects %>
+    <% end %>
+    <% if @document[Solrizer.solr_name("genre", :displayable)] %>
+      <%= content_tag :dt, "Formats:" %>
+      <%= content_tag :dd do %>
+        <%= render_facet_link({:document => @document, :field => Solrizer.solr_name("genre", :displayable) }) %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,6 @@
+<% if query_has_constraints? %>
+  <%= content_tag :div, :id => "appliedParams", :class => "clearfix constraints-container" do %>
+    <%= content_tag :span, t("blacklight.search.filters.title"), :class => "constraints-label" %>
+    <%= render_constraints(params) %>
+  <% end %>
+<% end %>

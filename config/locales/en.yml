@@ -1,5 +1,54 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# Catalog locale file
 
 en:
-  hello: "Hello world"
+  start_over: 'Start Over'
+  account: 'Account <b class="caret"></b>'
+  account_login: 'Account Login'
+  user_registration: 'Account settings'
+  print: '<span class="glyphicon glyphicon-print"></span> Print'
+  export: '<span class="glyphicon glyphicon-export"></span> Export <b class="caret"></b>'
+  view: '<span class="glyphicon glyphicon-eye-open"></span> View <b class="caret"></b>'
+  check_nearby: 'Check nearby libraries'
+  archivist_view: 'EAD'
+  full_finding_aid: 'Full'
+  finding_aid: 'Default'
+  bookmarks: 'Bookmarks <b class="caret"></b>'
+  edit: 'Edit'
+  more_options: 'Advanced Search'
+  advanced:
+    page_title: 'Advanced Search'
+    header: 'Advanced Search Options'
+  zero_results:
+    see_collection: 'View all items in this collection'
+  email: '<span class="glyphicon glyphicon-envelope"></span> Email'
+  show_more: 'Show more'
+  search_placeholder: 'Search...'
+
+  devise:
+    passwords:
+      new:
+        heading: "Forgot your password?"
+        submit: "Send me reset instructions"
+      edit:
+        heading: "Create new password"
+        submit: "Submit"
+    registrations:
+      heading: "Sign up"
+      description: "By signing up, you can save your searches and export them later if needed. We will never disclose your email to anyone for any reason."
+      submit: "Create account"
+    edit:
+      heading: "Update Account"
+      waiting: "Currently waiting confirmation for %{resource.unconfirmed_email}"
+      email_legend: "Update your email"
+      password_legend: "Change your password"
+      password_description: "Leave this blank if you do not want to change it"
+      confirmation_legend: "Confirm changes"
+      confirmation_description: "Enter your current password to make any changes to your account"
+      submit: "Update"
+    sessions:
+      heading: "Sign in"
+      submit: "Sign in"
+      remember: "Remember me"
+
+  tooltip:
+    account_login: "Login to save your bookmarks and search history"

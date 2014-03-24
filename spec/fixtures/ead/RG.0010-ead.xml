@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Complete" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>RG-0010</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Rock and Roll Hall of Fame Foundation Records
+                    <num>RG.0010</num>
+                </titleproper>
+                <titleproper type="filing">Rock and Roll Hall of Fame Foundation Records</titleproper>
+                <author>Finding aid prepared by Jennie Thomas, Head Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>December 5, 2013</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2013-12-05T14:23-0500</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="recordgrp">
+        <did>
+            <unittitle>Rock and Roll Hall of Fame Foundation Records</unittitle>
+            <unitid>RG.0010</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>122.76 Linear feet</extent>
+                <extent>(17 records cartons, 8 Hollinger boxes, 4 half Hollinger boxes, 1 oversize box, 4 flat files, 24 sections of audiovisual materials)</extent>
+            </physdesc>
+            <unitdate>1986-2013, undated</unitdate>
+            <langmaterial id="ref53" label="Language of Materials">English</langmaterial>
+            <abstract id="ref51" label="Collection Overview">The Rock and Roll Hall of Fame Foundation Records currently consists of published programs and digital video files for the annual Hall of Fame induction ceremonies from 1986 to 2013. Additional materials related to the history of the Foundation, the induction ceremonies, and related programming exist but are not described here nor are they available to the public at this time.</abstract>
+            <origination label="creator">
+                <corpname rules="aacr" source="naf">Rock and Roll Hall of Fame and Museum</corpname>
+            </origination>
+            <origination label="creator">
+                <corpname rules="aacr" source="naf">Rock and Roll Hall of Fame Foundation</corpname>
+            </origination>
+        </did>
+        <separatedmaterial id="ref57">
+            <head>Separated Materials</head>
+            <p>Duplicate copies of publications have been transferred to the library collection. Please search for the "Rock and Roll Hall of Fame Foundation" in the library catalog for a list of relevant titles. If you are unable to find what you are looking for, consult the Library and Archives staff to ensure these materials are available.</p>
+        </separatedmaterial>
+        <userestrict id="ref56">
+            <head>Use Restrictions</head>
+            <p>Copyright held by the Rock and Roll Hall of Fame Foundation, Inc.</p>
+        </userestrict>
+        <processinfo id="ref55">
+            <head>Processing Information</head>
+            <p>Processed by Jennie Thomas, Head Archivist. Completed December 5, 2013. Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <prefercite id="ref54">
+            <head>Preferred Citation</head>
+            <p>[Identification of Item], Rock and Roll Hall of Fame Foundation Records, Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <custodhist id="ref52">
+            <head>Custodial History</head>
+            <p>The Rock and Roll Hall of Fame Foundation Records were received by the Rock and Roll Hall of Fame and Museum, Inc., as gifts from the Foundation between 2009 and 2013.</p>
+        </custodhist>
+        <bioghist id="ref50">
+            <head>Administrative History</head>
+            <p>In 1983, a small group of music industry professionals led by Atlantic Records Founder and Chairman Ahmet Ertegun and including Rolling Stone magazine publisher Jann Wenner, attorneys Allen Grubman and Suzan Evans, manager Jon Landau, and record executives Seymour Stein and Bob Krasnow set out to establish an organization to “recognize the people who have created this music which has become the most popular music of our time.” Ertegun approached the heads of various record companies with his idea, spearheading the formation of the non-profit organization that would eventually become the Rock and Roll Hall of Fame Foundation.</p>
+            <p>In 1986, the Foundation held the first annual Rock and Roll Hall of Fame Induction Ceremony at the Waldorf-Astoria Grand Ballroom in New York City. The same year, the Foundation selected Cleveland as the permanent home of the Rock and Roll Hall of Fame and Museum, which opened in September 1995. In 2006, Joel Peresman, a music industry veteran and former chief of Concerts and Entertainment at Madison Square Garden, became President and CEO of the Rock and Roll Hall of Fame Foundation. Under Peresman’s leadership, the Foundation announced the return of the Rock and Roll Hall of Fame Induction Ceremonies to Cleveland in 2009 and every three years thereafter.</p>
+            <p>The Foundation also staged the Rock and Roll Hall of Fame 25th Anniversary concerts on October 29 and 30, 2009, at Madison Square Garden in New York City. These historic shows and their broadcast on HBO helped fund the first-ever endowment for the Rock and Roll Hall of Fame and Museum in Cleveland.</p>
+            <p>In addition to these projects, the Foundation provided an $8 million gift in 2008 to the Museum’s Capital Campaign, which was used to build the Library and Archives in downtown Cleveland and funded the 2010-2011 redesign of the Museum interior. The Foundation also provides funding for Museum capital projects on an on-going basis and continues to be the largest single contributor to the Museum. Beyond funding, the Rock and Roll Hall of Fame Foundation leverages its presence in one of the world’s major cultural and philanthropic centers to provide increased exposure for the Museum mission, connections to artists and philanthropists, and other partnerships to advance the Rock and Roll Hall of Fame and Museum’s cultural preservation initiatives.</p>
+            <p>The Hall of Fame annually inducts a new class of individuals under one of four categories: Performer, Ahmet Ertegun Award, Early Influence, and Award for Musical Excellence. Artists become eligible for induction as a Performer 25 years after the release of their first record. Criteria include the influence and significance of the artists’ contributions to the development and perpetuation of rock and roll. The Foundation’s nominating committee selects nominees each year in the Performer category. Ballots are then sent to an international voting body of more than 600 artists, historians and members of the music industry. Those performers who receive the highest number of votes--and more than 50 percent of the vote--are inducted. The Foundation generally inducts five to seven performers each year.</p>
+            <p>The Ahmet Ertegun Award was introduced in 2011. Previously known as the Non-Performer category, the Award inducts songwriters, producers, disc jockeys, record executives, journalists and other industry professionals who have had a major influence on the development of rock and roll.</p>
+            <p>Early Influences include artists whose music predated rock and roll but had an impact on the evolution of rock and roll and inspired rock’s leading artists. A special selection committee elects the inductees in the Ahmet Ertegun Award and Early Influences categories.</p>
+            <p>The Award for Musical Excellence category was introduced in 2000. In 2011, the Sidemen category was folded into the Award for Musical Excellence. It honors those musicians, producers and others who have spent their careers out of the spotlight working with major artists on various parts of their recording and live careers. Though they often play a key role in the creation of memorable music, the public rarely knows them by name. A separate committee selects the inductees in this category.</p>
+            <list numeration="lowerroman" type="ordered">
+                <head>Sources</head>
+                <item>"About the Foundation." Rock and Roll Hall of Fame and Museum. Accessed December 5, 2013. http://rockhall.com/visit-the-museum/learn/the-rock-and-roll-hall-of-fame/.</item>
+                <item>"Induction Process." Rock and Roll Hall of Fame and Museum. Accessed December 5, 2013. http://rockhall.com/inductees/induction-process/.</item>
+            </list>
+        </bioghist>
+        <accessrestrict id="ref2">
+            <head>Access Restrictions</head>
+            <p>The bulk of the Rock and Roll Hall of Fame Foundation Records is currently CLOSED. The materials listed in this finding aid are what is currently available for use by the public. Please direct any inquiries to the Library and Archives staff.</p>
+        </accessrestrict>
+        <controlaccess>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1986</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1987</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1988</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1989</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1990</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1991</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1992</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1993</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1994</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1995</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1996</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1997</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1998</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 1999</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2000</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2001</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2002</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2003</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2004</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2005</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2006</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2007</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2008</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2009</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2010</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2011</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2012</subject>
+            <subject source="local">Annual induction ceremony (Rock and Roll Hall of Fame Foundation). 2013</subject>
+            <subject source="lcsh">Concert programs</subject>
+            <genreform source="lcsh">Digital video</genreform>
+            <subject source="lcsh">Filmed performances</subject>
+            <subject source="local">Inductee</subject>
+            <subject source="lcsh">Rock music--History and criticism</subject>
+            <subject source="lcsh">Rock music--Writing and publishing</subject>
+            <subject source="lcsh">Rock musicians</subject>
+        </controlaccess>
+        <dsc>
+            <c id="ref1" level="subgrp">
+                <did>
+                    <unittitle>Subgroup 1: Annual Induction Ceremonies</unittitle>
+                    <langmaterial>
+                        <language langcode="eng"/>
+                    </langmaterial>
+                    <physdesc>
+                        <extent>0.83 Linear feet</extent>
+                        <extent>(2 Hollinger boxes, 349 digital videos)</extent>
+                    </physdesc>
+                    <unitdate>1986-2013</unitdate>
+                </did>
+                <scopecontent id="ref47">
+                    <head>Scope and Contents</head>
+                    <p>Subgroup 1: Annual Induction Ceremonies consists of published programs and digital video files for the annual Hall of Fame induction ceremonies from 1986 to 2013.</p>
+                </scopecontent>
+                <accessrestrict id="ref46">
+                    <head>Access Restrictions</head>
+                    <p>Some of the materials in this subgroup are CLOSED, as they have not yet been processed.</p>
+                </accessrestrict>
+                <c id="ref12" level="collection">
+                    <did>
+                        <unittitle>Series I: Programs</unittitle>
+                        <langmaterial>
+                            <language langcode="eng"/>
+                        </langmaterial>
+                        <unitdate>1986-2013</unitdate>
+                    </did>
+                    <scopecontent id="ref48">
+                        <head>Scope and Contents</head>
+                        <p>Series I: Programs contains a copy of the printed program published each year for the annual induction ceremony by the Rock and Roll Hall of Fame Foundation. The programs include profiles of the year's Hall of Fame inductees and discuss the development of related music scenes and genres. Duplicate copies for the majority of the programs are available for perusal in both the Library and Archives Reading Rooms. Select the Event/Series facet "Annual induction ceremony (Rock and Roll Hall of Fame Foundation)" in the online catalog for a list of available programs and their location.</p>
+                    </scopecontent>
+                </c>
+                <c id="ref42" level="series">
+                    <did>
+                        <unittitle>Series II: Digital Video</unittitle>
+                        <unitdate>1986-2013</unitdate>
+                    </did>
+                    <scopecontent id="ref49">
+                        <head>Scope and Contents</head>
+                        <p>Series II: Digital Video includes a digital video file for each video tape that was created in the process of filming the annual induction ceremonies, spanning 1986 to 2013. These files in some cases include not only the edited master files but different camera angles filmed during the course of the ceremony. Please note that not all files are currently available in the online catalog and, those that are, are only available to view on site.</p>
+                    </scopecontent>
+                </c>
+            </c>
+        </dsc>
+    </archdesc>
+</ead>

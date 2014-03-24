@@ -1,13 +1,5 @@
 module MarcHelper
 
-  def document_heading
-    if @document[blacklight_config.show.heading] 
-      @document[blacklight_config.show.heading].kind_of?(Array) ? @document[blacklight_config.show.heading].first : @document[blacklight_config.show.heading]
-    else
-      @document.id
-    end
-  end
-
   def render_external_link args, results = Array.new
     begin
       value = args[:document][args[:field]]
@@ -31,17 +23,8 @@ module MarcHelper
   end
 
   def render_facet_link args, results = Array.new
-    begin
-      value = args[:document][args[:field]]
-      if value.is_a? Array
-        value.each do |text|
-          results << facet_link(text, blacklight_config.show_fields[args[:field]][:facet])
-        end
-      else
-        results << facet_link(value, blacklight_config.show_fields[args[:field]][:facet])
-      end
-    rescue
-      return nil
+    get_values_for_field(args).each do |text|
+      results << facet_link(text, blacklight_config.show_fields[args[:field]][:facet])
     end
     return results.join(field_value_separator).html_safe
   end
@@ -49,13 +32,7 @@ module MarcHelper
   # Renders a link for a given term and facet.  The content of term is used for the 
   # text of the link and facet is the solr field to facet on.
   def facet_link term, facet
-    link_to(term, 
-            add_facet_params_and_redirect(facet, remove_highlighting(term)), 
-            :class=>"facet_select label")
-  end
-
-  def remove_highlighting text
-    sanitize text, :tags => "a"
+    link_to term, search_action_path(add_facet_params(facet, Sanitize.clean(term), {}))
   end
 
   def render_search_link args, results = Array.new
@@ -70,26 +47,30 @@ module MarcHelper
   # it redendered by Rails instead.
   def render_call_number args, results = Array.new
     locations = ["rx", "rhlrr", "rharr", "rhs2", "rhs2o", "rhs3"]
-    if args[:document]["marc_display"]
-      MARC::XMLReader.new(StringIO.new(args[:document]["marc_display"])).first.find_all {|f| f.tag == '945'}.each do |field|
+    if args[:document]["marc_ss"]
+      MARC::XMLReader.new(StringIO.new(args[:document]["marc_ss"])).first.find_all {|f| f.tag == '945'}.each do |field|
         results << field['a'] if locations.include?(field['l'].strip)
       end
     end
     return results.join(field_value_separator).html_safe
   end
 
-  def field_value_separator
-    '<br/>'
+  def document_format_to_filename document = @document
+    if document.get(Solrizer.solr_name("format", :displayable)).nil?
+      "icons/unknown.png"
+    else
+      "icons/"+ document.get(Solrizer.solr_name("format", :displayable)).downcase.gsub(/\s/,"_") + ".png"
+    end
   end
 
-  def document_icon doc, result = String.new
-    if doc.get("format").nil?
-      result << image_tag("icons/unknown.png")
+  private 
+
+  def get_values_for_field args
+    if args[:field_config] and args[:field_config].highlight and args[:document].has_highlight_field?(args[:field_config].field)
+      args[:document].highlight_field(args[:field_config].field).map { |x| x.html_safe } if args[:document].has_highlight_field? args[:field_config].field
     else
-      filename = doc.get("format").downcase.gsub(/\s/,"_")
-      result << image_tag("icons/#{filename}.png")
+      args[:document].get(args[:field], :sep => nil) if args[:field]
     end
-    return result.html_safe
   end
 
 end
