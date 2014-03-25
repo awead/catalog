@@ -1,37 +1,46 @@
 require "nokogiri"
 
 # These are class methods used when indexing ead xml into solr.
-module Rockhall::Ead::Indexing
+class Rockhall::Ead::Converter
+
+  attr_accessor :xsl, :full_xsl, :file, :id
+
+  def initialize file
+    raise "Invalid ead id for file" unless valid_ead?(file)
+    self.xsl      = Nokogiri::XSLT(File.read(File.join(Rails.root, "xsl", "ead_to_html.xsl")))
+    self.full_xsl = Nokogiri::XSLT(File.read(File.join(Rails.root, "xsl", "ead_to_html_full.xsl")))
+    self.file     = file
+    self.id       = ead_from_file(file)
+  end
+
+  def convert
+    ead_to_html
+    toc_to_json
+  end
 
   # Converts an ead xml file into two html files.  One is for the the default display in
   # Blacklight, which is just the archdesc section of the ead.  The second html file is
   # for the optional display of the entire finding aid.
-  def self.ead_to_html(file)
-    self.default_html(file)
-    self.full_html(file)
+  def ead_to_html
+    default_html
+    full_html
   end
 
-  def self.default_html(file)
-    xsl_file = File.join(Rails.root, "xsl", "ead_to_html.xsl")
-    xsl = Nokogiri::XSLT(File.read(xsl_file))
+  def default_html
     html = Nokogiri(File.read(file))
-    id = get_eadid_from_file(file)
     dst = File.join(Rails.root, "public", "fa", (id+".html"))
     File.open(dst, "w") { |f| f << cleanup_xml(xsl.apply_to(html).to_s) }
   end
 
-  def self.full_html(file)
-    xsl_file = File.join(Rails.root, "xsl", "ead_to_html_full.xsl")
-    xsl = Nokogiri::XSLT(File.read(xsl_file))
+  def full_html
     html = Nokogiri(File.read(file))
-    id = get_eadid_from_file(file)
     dst = File.join(Rails.root, "public", "fa", (id+"_full.html"))
-    File.open(dst, "w") { |f| f << cleanup_xml(xsl.apply_to(html).to_s) }
+    File.open(dst, "w") { |f| f << cleanup_xml(full_xsl.apply_to(html).to_s) }
   end
 
   # AT's process of exporting ead xml sometimes creates some bad characters.  We need
   # to convert them here.
-  def self.cleanup_xml(results)
+  def cleanup_xml results
     results.gsub!(/<title/,"<span")
     results.gsub!(/<\/title/,"</span")
     results.gsub!(/&lt;title/,"<span")
@@ -50,31 +59,25 @@ module Rockhall::Ead::Indexing
   # to navigate the collection inventory.
   #
   # Uses the CollectionTree to reassemble each component into its correct hierarchy.
-  def self.toc_to_json(file)
-    id = get_eadid_from_file(file)
+  def toc_to_json
     inventory = Rockhall::Ead::Inventory.new(id)
-    #if inventory.depth > 1
-      toc_dst = File.join(Rails.root, "public", "fa", (id + "_toc.json"))
-      File.open(toc_dst, "w") { |f| f << inventory.tree.to_json }
-    #end
+    toc_dst = File.join(Rails.root, "public", "fa", (id + "_toc.json"))
+    File.open(toc_dst, "w") { |f| f << inventory.tree.to_json }
   end
 
-  # Queries an xml file and returns the value for eadid
-  def self.get_eadid_from_file(file)
-    file = File.new(file) if file.is_a?(String)
-    id = Rockhall::Ead::Document.from_xml(Nokogiri::XML(file)).eadid.first
-    raise "Found no eadid in #{File.basename(file)}" if id.nil?
-    if valid_ead?(id)
-      return id
+  private
+
+  def valid_ead? file
+    if ead_from_file(file).match(/[A-Z]{2,3}-[0-9]{4,4}/)
+      return true
     else
-      raise "ID is not in the correct format: #{id}"
+      return false
     end
   end
 
-  # Returns true if the given id is formatted correctly
-  def self.valid_ead?(id)
-    id.match(/[A-Z]{2,3}-[0-9]{4,4}/) ? true : false
+  def ead_from_file file
+    f = File.new(file)
+    Rockhall::Ead::Document.from_xml(Nokogiri::XML(f)).eadid.first
   end
-
 
 end

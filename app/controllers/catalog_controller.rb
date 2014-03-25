@@ -99,11 +99,11 @@ class CatalogController < ApplicationController
                                                                           :helper_method => :render_facet_link,
                                                                           :highlight => true
 
-    config.add_index_field solr_name("location",          :displayable),  :label => "Location",
+    config.add_index_field solr_name("location",          :displayable),  :label => "Container",
                                                                           :highlight => true
 
     config.add_index_field solr_name("material",          :displayable),  :label => "Archival Material",
-                                                                          :highlight => true                                                                      
+                                                                          :highlight => true
 
     # ------------------------------------------------------------------------------------------
     #
@@ -219,11 +219,13 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("print_run",         :displayable), :label => "Limited Print Run"
     config.add_show_field solr_name("dimensions",        :displayable), :label => "Dimensions"
 
-    config.add_show_field solr_name("location",          :displayable), :label     => "Location",
+    config.add_show_field solr_name("location",          :displayable), :label     => "Container",
                                                                         :highlight => true
 
     config.add_show_field solr_name("material",          :displayable), :label          => "Archival Material",
                                                                         :highlight      => true
+    
+    config.add_show_field solr_name("shelf",             :displayable), :label => "Location"
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

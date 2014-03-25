@@ -336,6 +336,7 @@
         resource_url_ssm,
         scopecontent_ssm,
         separatedmaterial_ssm,
+        shelf_ssm
         subject_ssm,
         title_ssm,
         unitdate_ssm,
@@ -490,6 +491,7 @@
         resource_url_ssm,
         scopecontent_ssm,
         separatedmaterial_ssm,
+        shelf_ssm,
         subject_ssm,
         title_ssm,
         unitdate_ssm,
