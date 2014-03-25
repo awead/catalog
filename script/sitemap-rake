@@ -11,7 +11,5 @@ ENV="production"
 
 source ~/.bash_profile
 cd $APPDIR
-source ./.rvmrc
 export RAILS_ENV=${ENV}
 bundle exec rake blacklight:sitemap
-exit 0;
