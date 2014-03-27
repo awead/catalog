@@ -55,6 +55,10 @@ $(document).ready(function() {
 
   // Tooltips
   $('.search-btn').tooltip();
+  
+  // Dropdown + Tooltips
+  $('.account-dropdown').dropdown();
+  $('.account-dropdown').tooltip();
 
 });
 
