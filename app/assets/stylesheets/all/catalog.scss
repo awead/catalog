@@ -208,7 +208,8 @@ a.glyphicon {
   .banner {
     background-repeat:no-repeat;
     background-position: center center;
-    
+    display:block;
+    text-indent:-9999px;
   }
 
 }
