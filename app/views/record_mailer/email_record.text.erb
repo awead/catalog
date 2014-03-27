@@ -1,8 +1,8 @@
-You've requested information about these items to be emailed to you:
+You have requested information about these items to be emailed to you:
 
 <% @documents.each do |document| %>
-  Title: <%= document["heading_display"] %>
-  <%= t('blacklight.email.text.url', :url =>polymorphic_path(document, {:only_path => false}.merge(@url_gen_params))) %>
+  Title: <%= document.get Solrizer.solr_name("heading", :displayable) %>
+  <%= t("blacklight.email.text.url", :url =>polymorphic_path(document, {:only_path => false}.merge(@url_gen_params))) %>
 <% end %>
 
-<%= t('blacklight.email.text.message', :message => @message) %>
+<%= t("blacklight.email.text.message", :message => @message) %>
