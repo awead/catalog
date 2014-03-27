@@ -47,6 +47,11 @@ h1, h2, h3 {
   margin-top: 4px;
 }
 
+legend {
+  margin-top: 17px;
+  margin-bottom: 4px;
+}
+
 .navbar-inverse { 
   @include gradient-vertical($catalog-darker-red, $catalog-red);
   border-bottom-color: $catalog-darker-red;
@@ -227,6 +232,12 @@ a.glyphicon {
   .input-group-addon {
     background-color: $catalog-red;
     border-color: $catalog-darker-red;
+  }
+}
+
+#inventory {
+  legend {
+    border: none;
   }
 }
 
