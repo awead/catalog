@@ -222,6 +222,10 @@
         oclc_tim
         accession_tim
         id
+        issn_tim
+        isbn_tim
+        upc_tim
+        pubnum_tim  
         text
       </str>
       <str name="pf">
