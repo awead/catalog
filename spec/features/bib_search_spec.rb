@@ -73,4 +73,14 @@ describe "Bib. searching" do
     page.should have_content("'Rock on' : women, ageing and popular music / edited by Ros Jennings, Abigail Gardner")
   end
 
+  it "should search on ISBN numbers" do
+    execute_search "9780312254643"
+    page.should have_content("All we are saying : the last major interview with John Lennon and Yoko Ono")
+  end
+
+  it "should search on UPC numbers" do
+    execute_search "884088396206"
+    page.should have_content("December 8, 1980 : the day John Lennon died / Keith Elliot Greenberg")
+  end
+
 end
