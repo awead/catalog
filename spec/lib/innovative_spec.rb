@@ -20,10 +20,10 @@ describe Rockhall::Innovative do
       it "should return a partial html table with holdings information" do
         Rails.configuration.rockhall_config[:opac_ip] = "129.22.104.30"
         status = Rockhall::Innovative.get_holdings("b3386820")
-        status.should be_a_kind_of(Array)
+        expect(status).to be_a_kind_of(Array)
         status.each do |html|
-          html.should be_a_kind_of(String)
-          html.should match(/<td>/)
+          expect(html).to be_a_kind_of(String)
+          expect(html).to match(/<td>/)
         end
       end
 
@@ -32,13 +32,13 @@ describe Rockhall::Innovative do
     it "should return 'unknown' for non-existent items" do
       Rails.configuration.rockhall_config[:opac_ip] = "0.0.0.0"
       status = Rockhall::Innovative.get_holdings("b3386820")
-      status.first.should == 'unknown'
+      expect(status.first).to eq('unknown')
     end
 
     it "should return 'unknown if the host is down" do
       Rails.configuration.rockhall_config[:opac_ip] = "1.2.3.4"
       status = Rockhall::Innovative.get_holdings("b3386820")
-      status.first.should == 'unknown'
+      expect(status.first).to eq('unknown')
     end
 
   end
@@ -61,7 +61,7 @@ describe Rockhall::Innovative do
       it "should return the html document from III's opac" do
         Rails.configuration.rockhall_config[:opac_ip] = "129.22.104.30"
         html = Rockhall::Innovative.query_iii("b3311377")
-        html.should be_a_kind_of(Nokogiri::HTML::Document)
+        expect(html).to be_a_kind_of(Nokogiri::HTML::Document)
       end
 
     end
@@ -69,7 +69,7 @@ describe Rockhall::Innovative do
     it "should return return null if the host is down" do
       Rails.configuration.rockhall_config[:opac_ip] = "1.2.3.4"
       html = Rockhall::Innovative.query_iii("b3311377")
-      html.should be_nil
+      expect(html).to be_nil
 
     end
 
@@ -79,7 +79,7 @@ describe Rockhall::Innovative do
     it "should return a url for a given id" do
       Rails.configuration.rockhall_config[:opac_ip] = "0.0.0.0"
       link = Rockhall::Innovative.link("foo")
-      link.should == "http://0.0.0.0/record=foo"
+      expect(link).to eq("http://0.0.0.0/record=foo")
     end
   end
 

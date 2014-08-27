@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SubjectsHelper do
+describe SubjectsHelper, :type => :helper do
   
   before(:all) do
     class TestClass
@@ -12,9 +12,9 @@ describe SubjectsHelper do
   describe "#format_subjects" do
     it "should return an 2d array of formatted fields" do
       results = format_subjects marc_fixture("601137822.mrc").to_xml.to_s
-      results.should include(["Rock musicians", "United States"])
-      results.should include(["Lennon, John, 1940-1980", "Assassination"])
-      results.should include(["Inductee"])
+      expect(results).to include(["Rock musicians", "United States"])
+      expect(results).to include(["Lennon, John, 1940-1980", "Assassination"])
+      expect(results).to include(["Inductee"])
     end
   end
 
@@ -25,7 +25,7 @@ describe SubjectsHelper do
         MARC::Subfield.new('a', 'Lennon, John, '),
         MARC::Subfield.new('d', '1940-1980 '),
         MARC::Subfield.new('x', 'Assassination. '))
-      subject_field_with_name(field).should == [ "Lennon, John, 1940-1980", "Assassination"] 
+      expect(subject_field_with_name(field)).to eq([ "Lennon, John, 1940-1980", "Assassination"]) 
     end
 
     it "should return an array of subfields" do
@@ -33,7 +33,7 @@ describe SubjectsHelper do
         MARC::Subfield.new('a', 'Rock musicians '),
         MARC::Subfield.new('z', 'England '),
         MARC::Subfield.new('v', 'Biography'))
-      subject_field_without_name(field).should == [ "Rock musicians", "England", "Biography" ]
+      expect(subject_field_without_name(field)).to eq([ "Rock musicians", "England", "Biography" ])
     end
 
   end
@@ -42,10 +42,10 @@ describe SubjectsHelper do
 
     it "should return a hash of terms and their query terms" do
       results = format_subject_links [ "Rock Musicians", "England", "Biography" ]
-      results.should be_kind_of(Hash)
-      results["Rock Musicians"].should == [ "Rock Musicians" ]
-      results["England"].should        == [ "Rock Musicians", "England" ]
-      results["Biography"].should      == [ "Rock Musicians", "England", "Biography" ]
+      expect(results).to be_kind_of(Hash)
+      expect(results["Rock Musicians"]).to eq([ "Rock Musicians" ])
+      expect(results["England"]).to        eq([ "Rock Musicians", "England" ])
+      expect(results["Biography"]).to      eq([ "Rock Musicians", "England", "Biography" ])
     end
 
   end
@@ -55,8 +55,8 @@ describe SubjectsHelper do
     it "should return a 2D array of subject terms from a solr array" do
       a = ["Disc jockeys", "Music trade--United States", "Radio personalities", "Rock concerts", "Rock music--To 1961", "Rock music--United States"]
       r = format_ead_subjects(a)
-      r.first.should == ["Disc jockeys"]
-      r.last.should  == ["Rock music", "United States"]
+      expect(r.first).to eq(["Disc jockeys"])
+      expect(r.last).to  eq(["Rock music", "United States"])
     end
 
   end

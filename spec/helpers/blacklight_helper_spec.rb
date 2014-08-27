@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe BlacklightHelper do
+describe BlacklightHelper, :type => :helper do
 
   include ERB::Util
   include BlacklightHelper
@@ -14,7 +14,7 @@ describe BlacklightHelper do
   end
 
   before(:each) do
-    helper.stub(:search_action_url) do |*args|
+    allow(helper).to receive(:search_action_url) do |*args|
       catalog_index_url *args
     end
   end
@@ -32,20 +32,20 @@ describe BlacklightHelper do
     end
 
     it "should build a link tag to catalog using session[:search] for query params" do
-      helper.stub(:current_search_session).and_return double(:query_params => @query_params)
+      allow(helper).to receive(:current_search_session).and_return double(:query_params => @query_params)
       tag = helper.link_back_to_catalog
-      tag.should =~ /q=query/
-      tag.should =~ /f=facets/
-      tag.should =~ /per_page=10/
-      tag.should =~ /page=2/
+      expect(tag).to match(/q=query/)
+      expect(tag).to match(/f=facets/)
+      expect(tag).to match(/per_page=10/)
+      expect(tag).to match(/page=2/)
     end
 
     it "should build a link tag to bookmarks using session[:search] for query params" do
-      helper.stub(:current_search_session).and_return double(:query_params => @bookmarks_query_params)
+      allow(helper).to receive(:current_search_session).and_return double(:query_params => @bookmarks_query_params)
       tag = helper.link_back_to_catalog
-      tag.should =~ /Back to Bookmarks/
-      tag.should =~ /\/bookmarks/
-      tag.should =~ /page=2/
+      expect(tag).to match(/Back to Bookmarks/)
+      expect(tag).to match(/\/bookmarks/)
+      expect(tag).to match(/page=2/)
     end
   end
 
@@ -56,12 +56,12 @@ describe BlacklightHelper do
 
     it "should consist of the show heading field when available" do
      Solrizer.insert_field(@document, "heading", "A Fake Document", :displayable) 
-     document_heading.should == "A Fake Document"
+     expect(document_heading).to eq("A Fake Document")
     end
 
     it "should fallback on the document id if no title is available" do
       @document = SolrDocument.new(:id => '123456')
-      document_heading.should == '123456'
+      expect(document_heading).to eq('123456')
     end
   end
 

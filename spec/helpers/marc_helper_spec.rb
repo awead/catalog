@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe MarcHelper do
+describe MarcHelper, :type => :helper do
 
   describe "#document_format_to_filename" do
 
