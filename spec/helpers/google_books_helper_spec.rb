@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe GoogleBooksHelper do
+describe GoogleBooksHelper, :type => :helper do
 
   include Devise::TestHelpers
 

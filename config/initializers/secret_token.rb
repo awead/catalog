@@ -5,3 +5,4 @@
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 Catalog::Application.config.secret_token = 'e2e6ccb71ed8cef4f7246773cb3940131c927ab32fcf76283afe16349a8673e16be099d880fecde2b26716d415a2d4dda119db36fb1c7aa30cf96999de1e6b37'
+Catalog::Application.config.secret_key_base = 'itsasecret'

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe HoldingsHelper  do
+describe HoldingsHelper, :type => :helper  do
 
   def marc_document doc = SolrDocument.new
     Solrizer.insert_field(doc, "innovative", "foo", :displayable)

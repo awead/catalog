@@ -7,7 +7,7 @@ gem 'blacklight', '~>5.1.0'
 gem 'blacklight-marc'
 gem 'blacklight-sitemap', :github => 'awead/blacklight-sitemap'
 gem 'blacklight_advanced_search'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '< 3.2'
 gem 'colorize'
 gem 'devise'
 gem 'devise-guests'
@@ -26,13 +26,13 @@ gem 'uglifier'
 gem 'unicode'
 
 group :development, :test do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  gem 'byebug', :require => false
+  gem 'capybara'
   gem 'coffee-rails'
   gem 'database_cleaner'
-  gem 'debugger'
   gem 'guard-rspec', :require => false
   gem 'jettywrapper'
+  gem 'launchy'
   gem 'pry'
   gem 'rspec-rails'
   gem 'terminal-notifier-guard'
@@ -40,9 +40,7 @@ group :development, :test do
   gem 'webrat'
 end
 
-group :test do
-  gem 'capybara'
-  gem 'cucumber-rails', :require => false
-  gem 'launchy'
-  gem 'selenium-webdriver'
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end

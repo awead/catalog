@@ -8,7 +8,7 @@ describe Rockhall::Ead::Inventory do
 
   describe "::initialize" do
     it "should have accessors" do
-      @inventory.id.should == "ARC-0005"
+      expect(@inventory.id).to eq("ARC-0005")
     end
   end
 

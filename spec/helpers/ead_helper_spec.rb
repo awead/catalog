@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe EadHelper do
+describe EadHelper, :type => :helper do
 
   include Devise::TestHelpers
 

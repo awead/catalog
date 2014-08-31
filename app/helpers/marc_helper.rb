@@ -32,7 +32,7 @@ module MarcHelper
   # Renders a link for a given term and facet.  The content of term is used for the 
   # text of the link and facet is the solr field to facet on.
   def facet_link term, facet
-    link_to term, search_action_path(add_facet_params(facet, Sanitize.clean(term), {}))
+    link_to term.html_safe, search_action_path(add_facet_params(facet, Sanitize.clean(term), {}))
   end
 
   def render_search_link args, results = Array.new

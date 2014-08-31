@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BookmarksHelper do
+describe BookmarksHelper, :type => :helper do
 
   include Devise::TestHelpers
 

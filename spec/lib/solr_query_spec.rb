@@ -7,8 +7,8 @@ describe Rockhall::Solr::Query do
   end
 
   it "defines all the parameters for a solr query" do
-    @query.q.should == "foo"
-    @query.fl.should == "id"
+    expect(@query.q).to eq("foo")
+    expect(@query.fl).to eq("id")
   end
 
 end
